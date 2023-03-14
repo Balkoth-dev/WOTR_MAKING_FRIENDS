@@ -75,6 +75,7 @@
 </ItemGroup>
   
 <ItemGroup>
+  <None Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\BlueprintCore.dll" />
   <None Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\WOTR_MAKING_FRIENDS.dll" />
 </ItemGroup>
    <!-- DLL Merging -->
