@@ -30,7 +30,7 @@
 <ItemGroup>
  	  <!-- Wrath Assemblies -->
 	    <Reference Include="Assembly-CSharp">
-      <HintPath>$(SolutionDir)lib\Assembly-CSharp_public.dll</HintPath>
+      <HintPath>$(SolutionDir)lib\Assembly-CSharp.dll</HintPath>
   </Reference>
  	  <Reference Include="Assembly-CSharp-firstpass.dll">
  		  <HintPath>$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
@@ -71,7 +71,6 @@
   
 <ItemGroup>
   <Folder Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\" />
-  <Folder Include="lib\" />
 </ItemGroup>
   
 <ItemGroup>
@@ -90,26 +89,18 @@
 	  <ILRepack OutputType="Dll" MainAssembly="WOTR_MAKING_FRIENDS.dll" OutputAssembly="@(OutputAssembly)" InputAssemblies="@(InputAssemblies)" WorkingDirectory="$(OutputPath)" />
 	</Target>
 
-  <!-- Publicize Target -->
+  <!-- Generates Assembly-CSharp_public.dll -->
   <Target Name="Publicize" AfterTargets="Clean">
     <ItemGroup>
       <Assemblies Include="$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp.dll" />
-      <PublicAssembly Include="$(SolutionDir)\lib\Assembly-CSharp_public.dll" />
-      <RenamedAssembly Include="$(SolutionDir)\lib\Assembly-CSharp.dll" />
+      <PublicAssembly Include="$(SolutionDir)lib\Assembly-CSharp_public.dll" />
+      <RenamedAssembly Include="$(SolutionDir)lib\Assembly-CSharp.dll" />
     </ItemGroup>
 
     <RemoveDir Directories="$(SolutionDir)lib/" />
     <PublicizeTask InputAssemblies="@(Assemblies)" OutputDir="$(SolutionDir)lib/" />
+    <!-- ILRepack requires the assembly name match the reference so remove _public -->
     <Move SourceFiles="@(PublicAssembly)" DestinationFiles="@(RenamedAssembly)" />
-  </Target>
-  
-    <Target Name="Publicize" AfterTargets="Clean">
-    <ItemGroup>
-      <!-- Use $(KingmakerPath)\Kingmaker_Data\Managed\Assembly-CSharp.dll for Kingmaker -->
-      <Assemblies Include="$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp.dll" />
-    </ItemGroup>
-
-    <PublicizeTask InputAssemblies="@(Assemblies)" OutputDir="$(SolutionDir)lib/" />
   </Target>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -117,4 +108,16 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <OutputPath>bin\Debug\WOTR_MAKING_FRIENDS</OutputPath>
   </PropertyGroup>
+  
+  <Target Name="Deploy" AfterTargets="ILRepack">
+    <ItemGroup>
+      <Assembly Include="$(OutputPath)\$(AssemblyName).dll" />
+      <ModConfig Include="$(OutputPath)\Info.json" />
+      <Assets Include="$(OutputPath)\*_assets" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(Assembly)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
+    <Copy SourceFiles="@(ModConfig)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
+    <Copy SourceFiles="@(Assets)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
+  </Target>
 </Project>
