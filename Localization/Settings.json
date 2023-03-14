@@ -1,0 +1,26 @@
+[
+  {
+    "Key": "wotr-making-friends.settings.title",
+    "enGB": "Making Friends"
+  },
+  {
+    "Key": "wotr-making-friends.patchessubheader.value",
+    "enGB": "Patches (Restart Required)"
+  },
+  {
+    "Key": "wotr-making-friends.aeongazepatch.description",
+    "enGB": "Keep Aeon Gazes"
+  },
+  {
+    "Key": "wotr-making-friends.aeongazepatch.longDescription",
+    "enGB": "RESTART REQUIRED!\nAllows you to keep your Aeon gazes when going into the Devil mythic path. You may need to respec if you are unable to use the gazes correctly."
+  },
+  {
+    "Key": "wotr-making-friends.hellsauthoritypatch.description",
+    "enGB": "Early Hell's Authority"
+  },
+  {
+    "Key": "wotr-making-friends.hellsauthoritypatch.longDescription",
+    "enGB": "RESTART REQUIRED!\nHell's Authority starts at MR8 instead of MR10."
+  }
+]
