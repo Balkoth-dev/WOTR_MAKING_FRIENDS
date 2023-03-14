@@ -23,7 +23,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Brokenevent.ILStrip.CLI" Version="1.1.4" />
-    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.18.2" />
+    <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" />
     <PackageReference Include="WW-Blueprint-Core" Version="2.8.0" />
   </ItemGroup>
   
@@ -151,4 +151,5 @@
     <Copy SourceFiles="@(Strings)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
     <Copy SourceFiles="@(Assets)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
   </Target>
+  <ProjectExtensions><VisualStudio><UserProperties bin_4debug_4wotr_3making_3friends_4net472_4info_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

@@ -25,12 +25,12 @@ namespace WOTR_MAKING_FRIENDS.Settings
             catch (Exception ex)
             {
                 Main.Log(ex.ToString());
-                return default(T);
+                return default;
             }
         }
         private static string GetKey(string partialKey)
         {
-            Regex rgx = new Regex("[^a-z0-9-]");
+            Regex rgx = new("[^a-z0-9-]");
             partialKey = rgx.Replace(partialKey.ToLower(), "");
             return $"{RootKey}.{partialKey}";
         }
@@ -121,7 +121,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             }
             private static string GetKey(string partialKey)
             {
-                Regex rgx = new Regex("[^a-z0-9-]");
+                Regex rgx = new("[^a-z0-9-]");
                 partialKey = rgx.Replace(partialKey.ToLower(), "");
                 return $"{RootKey}.{partialKey}";
             }
