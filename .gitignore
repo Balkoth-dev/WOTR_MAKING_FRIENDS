@@ -363,7 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #lib
-lib/
+lib/*
 
 #dll
 *.dll
