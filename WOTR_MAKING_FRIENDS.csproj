@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\Settings\makingfriends.png" />
     <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Info.json" />
   </ItemGroup>
 
@@ -68,10 +69,6 @@
  		  <HintPath>$(WrathPath)\Wrath_Data\Managed\UnityModManager\UnityModManager.dll</HintPath>
  	  </Reference>
    </ItemGroup>
-  
-<ItemGroup>
-  <Folder Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\" />
-</ItemGroup>
   
 <ItemGroup>
   <None Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\WOTR_MAKING_FRIENDS.dll" />

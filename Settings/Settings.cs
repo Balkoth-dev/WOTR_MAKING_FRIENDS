@@ -49,7 +49,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
 
             // Load Localizations
             LocalizationTool.LoadEmbeddedLocalizationPacks(
-              "Localization.Settings.json");
+              "WOTR_MAKING_FRIENDS.Localization.Settings.json");
 
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
@@ -60,11 +60,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             private static readonly SettingsBuilder sb = SettingsBuilder.New(RootKey, GetString("title"));
             public static void Initialize()
             {
-                sb.AddImage(ResourcesLibrary.TryGetResource<Sprite>("assets/Settings/makingfriends.png"), height: 200, imageScale: 0.75f);
-
-                CreateSubHeader("patchessubheader");
-                CreateToggle("aeongazepatch", true);
-                CreateToggle("hellsauthoritypatch", true);
+                sb.AddImage(ResourcesLibrary.TryGetResource<Sprite>("Assets/Settings/makingfriends.png"), height: 512);
 
                 ModMenu.ModMenu.AddSettings(sb);
             }
