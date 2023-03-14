@@ -31,7 +31,6 @@
  	  <!-- Wrath Assemblies -->
 	    <Reference Include="Assembly-CSharp">
       <HintPath>$(SolutionDir)lib\Assembly-CSharp_public.dll</HintPath>
-      <Private>False</Private>
   </Reference>
  	  <Reference Include="Assembly-CSharp-firstpass.dll">
  		  <HintPath>$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
