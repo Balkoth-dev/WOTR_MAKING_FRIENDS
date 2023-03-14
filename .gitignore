@@ -367,3 +367,6 @@ lib/*
 
 #dll
 *.dll
+
+#tools
+tools/*
