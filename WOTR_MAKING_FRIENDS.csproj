@@ -75,7 +75,6 @@
 </ItemGroup>
   
 <ItemGroup>
-  <None Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\BlueprintCore.dll" />
   <None Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\WOTR_MAKING_FRIENDS.dll" />
 </ItemGroup>
    <!-- DLL Merging -->
@@ -118,38 +117,4 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <OutputPath>bin\Debug\WOTR_MAKING_FRIENDS</OutputPath>
   </PropertyGroup>
-  <!-- Minimizes the assembly size -->
-  <Target Name="ILStrip" AfterTargets="ILRepack">
-    <ItemGroup>
-      <LocalAssembly Include="$(AssemblyName).dll" />
-      <ILStrip Include="&quot;$(SolutionDir)\tools\ILStrip.CLI\BrokenEvent.ILStrip.CLI.exe&quot;" />
-
-      <!-- BlueprintCore Entry Points -->
-      <Entry Include="BlueprintCore.Utils.Assets.AssetTool/AssetBundle_Patch" />
-      <Entry Include="BlueprintCore.Utils.Assets.AssetTool/BlueprintsCaches_Patch" />
-      <Entry Include="BlueprintCore.Utils.Assets.AssetTool/BundlesLoadService_Patch" />
-      <Entry Include="BlueprintCore.Utils.LocalizationTool/LocalizationManager_Patch" />
-      <Entry Include="BlueprintCore.UnitParts.Replacements.UnitPartBuffSuppressFixed/Buff_OnAttach_Suppression_Patch" />
-
-      <!-- Replace with Your Mod Entry Points -->
-      <Entry Include="BlueprintCoreTutorial.Main" />
-      <Entry Include="BlueprintCoreTutorial.Main/BlueprintsCaches_Patch" />
-    </ItemGroup>
-
-    <Exec WorkingDirectory="$(OutputPath)" Command="@(ILStrip) @(LocalAssembly) @(LocalAssembly) -e @(Entry, ' -e ')" />
-  </Target>
-  <!-- Automatic Deployment Setup -->
-  <Target Name="DeployMod" AfterTargets="ILStrip">
-    <ItemGroup>
-      <Assembly Include="$(OutputPath)\WOTR_MAKING_FRIENDS.dll" />
-      <ModConfig Include="$(OutputPath)\Info.json" />
-      <Assets Include="$(OutputPath)\*_assets" />
-    </ItemGroup>
-
-    <Copy SourceFiles="@(Assembly)" DestinationFolder="$(WrathPath)\Mods\WOTR_MAKING_FRIENDS" />
-    <Copy SourceFiles="@(ModConfig)" DestinationFolder="$(WrathPath)\Mods\WOTR_MAKING_FRIENDS" />
-    <Copy SourceFiles="@(Strings)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
-    <Copy SourceFiles="@(Assets)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
-  </Target>
-  <ProjectExtensions><VisualStudio><UserProperties bin_4debug_4wotr_3making_3friends_4net472_4info_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>
