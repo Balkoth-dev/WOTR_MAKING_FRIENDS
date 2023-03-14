@@ -72,6 +72,7 @@
   
 <ItemGroup>
   <Folder Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\" />
+  <Folder Include="lib\" />
 </ItemGroup>
   
 <ItemGroup>
