@@ -34,6 +34,7 @@ using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
+using static WOTR_MAKING_FRIENDS.Spells.SummonMonsterAbilities;
 
 namespace WOTR_MAKING_FRIENDS.Spells
 {
@@ -49,21 +50,6 @@ namespace WOTR_MAKING_FRIENDS.Spells
         internal static class Refs
         {
             internal static readonly BlueprintSummonPoolReference summonerPoolRef = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool);
-        }
-        public static class SummonAbility
-        {
-            public static string guid;
-            /// <summary>
-            /// By default, summons use the Evil monster, this needs to be filled while the good monster does not.
-            /// </summary>
-            public static BlueprintUnitReference defaultMonster;
-            public static BlueprintUnitReference goodMonster;
-            public static BlueprintUnitReference summonBuff;
-            public static BlueprintUnitReference summonPool;
-            public static BlueprintUnitReference numberOfSummons;
-            public static BlueprintUnitReference durationRate;
-            public static BlueprintUnitReference goodBuff;
-            public static BlueprintUnitReference evilBuff;
         }
         internal static class SummonBlueprints
         {
@@ -142,49 +128,49 @@ namespace WOTR_MAKING_FRIENDS.Spells
 
         }
 
-        public static void AddAbilityEffectRunActionsToSummon(string summonGUID, BlueprintUnitReference evilMonster, BlueprintBuffReference summonedCreatureBuff = null, BlueprintSummonPoolReference summonPoolReferenceType = null, BlueprintUnitReference goodMonster = null, DiceType diceType = DiceType.One, DurationRate durationRate = DurationRate.Rounds)
+        public static void AddAbilityEffectRunActionsToSummon(SummonAbility summonAbility)
         {
-            AbilityConfigurator.For(summonGUID)
+            AbilityConfigurator.For(summonAbility.guid)
                 .AddAbilityEffectRunAction(
-                     actions: CreateSummonMonsterConditional(evilMonster, summonedCreatureBuff, summonPoolReferenceType, goodMonster, diceType, durationRate)
+                     actions: CreateSummonMonsterConditional(summonAbility)
                 )
                 .Configure();
         }
 
-        public static ActionList CreateSummonMonsterConditional(BlueprintUnitReference evilMonster, BlueprintBuffReference summonedCreatureBuff, BlueprintSummonPoolReference summonPoolReferenceType, BlueprintUnitReference goodMonster = null, DiceType diceType = DiceType.One, DurationRate durationRate = DurationRate.Rounds)
+        public static ActionList CreateSummonMonsterConditional(SummonAbility summonAbility)
         {
-            if(goodMonster == null)
+            if(summonAbility.goodMonster == null)
             {
-                goodMonster = evilMonster;
+                summonAbility.goodMonster = summonAbility.defaultMonster;
             }
             return ActionsBuilder.New()
-                .Add<ContextActionClearSummonPool>(c => { c.m_SummonPool = summonPoolReferenceType; })
+                .Add<ContextActionClearSummonPool>(c => { c.m_SummonPool = summonAbility.summonPool; })
                 .Conditional(
                     ConditionsBuilder.New().Alignment(AlignmentComponent.Evil, true, false),
-                    CreateSummonMonster(evilMonster, summonedCreatureBuff, summonPoolReferenceType, diceType, durationRate),
-                    CreateSummonMonster(goodMonster, summonedCreatureBuff, summonPoolReferenceType, diceType, durationRate)
+                    CreateSummonMonster(summonAbility, summonAbility.defaultMonster),
+                    CreateSummonMonster(summonAbility, summonAbility.goodMonster)
                     )
                 .Build();
         }
 
-        public static ActionList CreateSummonMonster(BlueprintUnitReference monster, BlueprintBuffReference summonedCreatureBuff, BlueprintSummonPoolReference summonPoolReferenceType, DiceType diceType = DiceType.One, DurationRate durationRate = DurationRate.Rounds)
+        public static ActionList CreateSummonMonster(SummonAbility summonAbility, BlueprintUnitReference monster)
         {
-            var contextDice = ContextDice.Value(diceType,null,ContextValues.Rank(AbilityRankType.ProjectilesCount));
-            var contextDuration = ContextDuration.Variable(ContextValues.Rank(),durationRate, true);
+            var contextDice = ContextDice.Value(summonAbility.numberOfSummons, null,ContextValues.Rank(AbilityRankType.ProjectilesCount));
+            var contextDuration = ContextDuration.Variable(ContextValues.Rank(), summonAbility.durationRate, true);
 
             var summonedBuff = ActionsBuilder
                 .New()
-                .ApplyBuffPermanent(summonedCreatureBuff, null, null, null, true)
+                .ApplyBuffPermanent(summonAbility.summonBuff, null, null, null, true)
                 .Conditional
                     (
                     ConditionsBuilder.New().Alignment(AlignmentComponent.Evil,true,false),
-                    ActionsBuilder.New().ApplyBuffPermanent(BuffRefs.SummonMonsterCelestialBuffII.Cast<BlueprintBuffReference>().Reference, null, null, null, true),
-                    ActionsBuilder.New().ApplyBuffPermanent(BuffRefs.SummonMonsterFiendishBuffII.Cast<BlueprintBuffReference>().Reference, null, null, null, true)
+                    ActionsBuilder.New().ApplyBuffPermanent(summonAbility.evilBuff, null, null, null, true),
+                    ActionsBuilder.New().ApplyBuffPermanent(summonAbility.goodBuff, null, null, null, true)
                     )
                 .Build();
             
             return ActionsBuilder.New()
-                .SpawnMonsterUsingSummonPool(contextDice, contextDuration, monster, summonPoolReferenceType, summonedBuff,false,false)
+                .SpawnMonsterUsingSummonPool(contextDice, contextDuration, monster, summonAbility.summonPool, summonedBuff,false,false)
                 .Build();
         }
 
@@ -198,23 +184,10 @@ namespace WOTR_MAKING_FRIENDS.Spells
             CreateSummonerPoolContextAction();
             CreateSummonerSummonMonsterSpells();
 
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonISingle, UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIISingle, UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIId3, UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.D3, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIIISingle, UnitRefs.MonitorLizardSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIIId3, UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.D3, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIVSingle, UnitRefs.DireWolfSummon.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIVd3, UnitRefs.MonitorLizardSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.D3, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVSingle, UnitRefs.RedcapSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, UnitRefs.AzataBralaniSummoned.Cast<BlueprintUnitReference>().Reference, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVd3, UnitRefs.DireWolfSummon.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.D3, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVISingle, UnitRefs.SoulEaterSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, UnitRefs.AxiomiteSummoned.Cast<BlueprintUnitReference>().Reference, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVId3, UnitRefs.RedcapSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, UnitRefs.AzataBralaniSummoned.Cast<BlueprintUnitReference>().Reference, DiceType.D3, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVIISingle, UnitRefs.BogeymanSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterVI_IX.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVIId3, UnitRefs.SoulEaterSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterVI_IX.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, UnitRefs.AxiomiteSummoned.Cast<BlueprintUnitReference>().Reference, DiceType.D3, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVIIISingle, UnitRefs.FrostGiantSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterVI_IX.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, UnitRefs.MonadicDevaSummoned.Cast<BlueprintUnitReference>().Reference, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonVIIId3, UnitRefs.BogeymanSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterVI_IX.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, null, DiceType.D3, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIXSingle, UnitRefs.ThanadaemonSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterVI_IX.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, UnitRefs.AzataGhaelSummoned.Cast<BlueprintUnitReference>().Reference, DiceType.One, DurationRate.Minutes);
-            AddAbilityEffectRunActionsToSummon(GetGUID.SummonerSummonIXd3, UnitRefs.FrostGiantSummoned.Cast<BlueprintUnitReference>().Reference, BuffRefs.SummonedCreatureSpawnMonsterVI_IX.Cast<BlueprintBuffReference>().Reference, Refs.summonerPoolRef, UnitRefs.MonadicDevaSummoned.Cast<BlueprintUnitReference>().Reference, DiceType.D3, DurationRate.Minutes);
+            foreach(var ability in summonAbilities)
+            {
+                AddAbilityEffectRunActionsToSummon(ability);
+            }
 
             CreateSummonMonsterBase(GetGUID.SummonerSummonMonsterIIBase,new() { GetGUID.SummonerSummonIISingle, GetGUID.SummonerSummonIId3 });
             CreateSummonMonsterBase(GetGUID.SummonerSummonMonsterIIIBase, new() { GetGUID.SummonerSummonIIISingle, GetGUID.SummonerSummonIIId3 });
