@@ -10,12 +10,15 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using WOTR_MAKING_FRIENDS.CharacterClass;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Settings
 {
     public static class Settings
     {
         public static readonly string RootKey = "wotr-making-friends.settings";
+        public static readonly string PartialKey = "wotr-making-friends";
         public static T GetSetting<T>(string key)
         {
             try
@@ -49,10 +52,14 @@ namespace WOTR_MAKING_FRIENDS.Settings
 
             // Load Localizations
             LocalizationTool.LoadEmbeddedLocalizationPacks(
-              "WOTR_MAKING_FRIENDS.Localization.Settings.json");
+              "WOTR_MAKING_FRIENDS.Localization.Settings.json",
+              "WOTR_MAKING_FRIENDS.Localization.SummonerClass.json",
+              "WOTR_MAKING_FRIENDS.Localization.SummonerSpellbook.json");
 
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
+
+            SummonerClass.CreateSummonerClass();
         }
         class SettingsUI
         {
@@ -60,7 +67,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             private static readonly SettingsBuilder sb = SettingsBuilder.New(RootKey, GetString("title"));
             public static void Initialize()
             {
-                sb.AddImage(ResourcesLibrary.TryGetResource<Sprite>("Assets/Settings/makingfriends.png"), height: 512);
+                sb.AddImage(AssetLoader.LoadInternal("Settings", "makingfriends.png", 200, 200), 200);
 
                 ModMenu.ModMenu.AddSettings(sb);
             }

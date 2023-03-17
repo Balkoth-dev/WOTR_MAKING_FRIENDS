@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <None Remove="Localization\Settings.json" />
+    <None Remove="Localization\SummonerClass.json" />
+    <None Remove="Localization\SummonerSpellbook.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +18,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\Settings.json" />
+    <EmbeddedResource Include="Localization\SummonerSpellbook.json" />
+    <EmbeddedResource Include="Localization\SummonerClass.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,7 +64,10 @@
     <Reference Include="ModMenu">
       <HintPath>$(WrathPath)\Mods\ModMenu\ModMenu.dll</HintPath>
     </Reference>
-
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(WrathPath)\Wrath_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
  	  <!-- UMM & Harmony -->
  	  <Reference Include="0Harmony">
  		  <HintPath>$(WrathPath)\Wrath_Data\Managed\UnityModManager\0Harmony.dll</HintPath>
@@ -72,6 +79,10 @@
   
 <ItemGroup>
   <None Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\WOTR_MAKING_FRIENDS.dll" />
+</ItemGroup>
+  
+<ItemGroup>
+  <Folder Include="GetClasses\" />
 </ItemGroup>
    <!-- DLL Merging -->
 	<Target Name="ILRepack" AfterTargets="Build">
@@ -110,11 +121,11 @@
     <ItemGroup>
       <Assembly Include="$(OutputPath)\$(AssemblyName).dll" />
       <ModConfig Include="$(OutputPath)\Info.json" />
-      <Assets Include="$(OutputPath)\*_assets" />
+      <Assets Include="$(OutputPath)\Assets\*.*" />
     </ItemGroup>
 
     <Copy SourceFiles="@(Assembly)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
     <Copy SourceFiles="@(ModConfig)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
-    <Copy SourceFiles="@(Assets)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
+    <Copy SourceFiles="@(Assets)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)\Assets" />
   </Target>
 </Project>
