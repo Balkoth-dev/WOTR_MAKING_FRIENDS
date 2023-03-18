@@ -1,0 +1,182 @@
+﻿using BlueprintCore.Actions.Builder;
+using BlueprintCore.Actions.Builder.BasicEx;
+using BlueprintCore.Actions.Builder.ContextEx;
+using BlueprintCore.Blueprints.Configurators;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
+using BlueprintCore.Blueprints.References;
+using BlueprintCore.Conditions.Builder;
+using BlueprintCore.Conditions.Builder.ContextEx;
+using BlueprintCore.Conditions.Builder.NewEx;
+using BlueprintCore.Utils;
+using BlueprintCore.Utils.Types;
+using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Spells;
+using Kingmaker.Craft;
+using Kingmaker.Designers.EventConditionActionSystem;
+using Kingmaker.Designers.Mechanics.Recommendations;
+using Kingmaker.ElementsSystem;
+using Kingmaker.Enums;
+using Kingmaker.Localization;
+using Kingmaker.RuleSystem;
+using Kingmaker.UnitLogic.Abilities;
+using Kingmaker.UnitLogic.Abilities.Blueprints;
+using Kingmaker.UnitLogic.Abilities.Components;
+using Kingmaker.UnitLogic.Buffs.Blueprints;
+using Kingmaker.UnitLogic.Buffs.Components;
+using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.UnitLogic.Mechanics.Components;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
+using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
+using static Kingmaker.Visual.Animation.Kingmaker.Actions.UnitAnimationActionCastSpell;
+using static WOTR_MAKING_FRIENDS.Spells.SummonAbilities;
+using static WOTR_MAKING_FRIENDS.Spells.SummonVariants;
+
+namespace WOTR_MAKING_FRIENDS.Spells
+{
+    public class CreateSummonSpells
+    {
+        
+        internal static class InternalString
+        {
+            internal const string a = "";
+            internal const string SummonerPool = "SummonerPool";
+            internal static readonly LocalizedString SummonMonsterSpellbookName = Helpers.ObtainString(a + ".Name");
+        }
+        internal static class Refs
+        {
+            internal static readonly BlueprintSummonPoolReference summonerPoolRef = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool);
+        }
+        
+        public static BlueprintSummonPool CreateSummonerPoolContextAction()
+        {
+            return SummonPoolConfigurator.New(InternalString.SummonerPool, GetGUID.SummonerPool).Configure();
+        }
+
+        public static void AddAbilityEffectRunActionsToSummon(SummonAbility summonAbility)
+        {
+            var summonSpell =
+            AbilityConfigurator.New(summonAbility.name, summonAbility.guid)
+                .SetIsFullRoundAction(summonAbility.isFullRound)
+                .SetActionType(summonAbility.actionType)
+                .SetIcon(summonAbility.m_icon)
+                .SetDisplayName(summonAbility.m_DisplayName)
+                .SetDescription(summonAbility.m_Description)
+                .SetType(AbilityType.Spell)
+                .SetCanTargetPoint(true)
+                .SetCanTargetSelf(true)
+                .SetRange(AbilityRange.Close)
+                .SetAnimation(CastAnimationStyle.Point)
+                .SetAvailableMetamagic(Metamagic.Quicken, Metamagic.Extend, Metamagic.Heighten, Metamagic.Reach, Metamagic.CompletelyNormal)
+                .SetLocalizedDuration(summonAbility.localizationDuration)
+                .AddAbilityEffectRunAction(
+                     actions: CreateSummonMonsterConditional(summonAbility)
+                )
+                .AddContextRankConfig(summonAbility.contextRankConfig)
+                .AddSpellDescriptorComponent(SpellDescriptor.Summoning);
+
+            foreach(var spellList in summonAbility.spellListComponents)
+            {
+                summonSpell.AddSpellListComponent(summonAbility.spellLevel, spellList);
+            };
+
+            if(summonAbility.numberOfSummons > DiceType.One)
+            {
+                string[] featureList =
+                    { 
+                        FeatureRefs.SuperiorSummoning.Cast<BlueprintBuffReference>().Reference.ToString(), 
+                        FeatureRefs.BloodlineAbyssalAddedSummonings.Cast<BlueprintBuffReference>().Reference.ToString()
+                    };
+                summonSpell.AddContextRankConfig(ContextRankConfigs.FeatureList(featureList, true, AbilityRankType.ProjectilesCount));
+                summonSpell.AddToAvailableMetamagic(Metamagic.Maximize, Metamagic.Empower);
+            }
+
+            summonSpell.Configure();
+        }
+
+        public static ActionList CreateSummonMonsterConditional(SummonAbility summonAbility)
+        {
+            if(summonAbility.goodMonster == null)
+            {
+                summonAbility.goodMonster = summonAbility.defaultMonster;
+            }
+            return ActionsBuilder.New()
+                .Add<ContextActionClearSummonPool>(c => { c.m_SummonPool = summonAbility.summonPool; })
+                .Conditional(
+                    ConditionsBuilder.New().Alignment(AlignmentComponent.Evil, true, false),
+                    CreateSummonMonster(summonAbility, summonAbility.defaultMonster),
+                    CreateSummonMonster(summonAbility, summonAbility.goodMonster)
+                    )
+                .Build();
+        }
+
+        public static ActionList CreateSummonMonster(SummonAbility summonAbility, BlueprintUnitReference monster)
+        {
+
+            var contextDice = summonAbility.numberOfSummons != DiceType.One
+                              ? ContextDice.Value(summonAbility.numberOfSummons, null, ContextValues.Rank(AbilityRankType.ProjectilesCount))
+                              : ContextDice.Value(summonAbility.numberOfSummons);
+
+            var contextDuration = ContextDuration.Variable(ContextValues.Rank(), summonAbility.durationRate, true);
+
+            var summonedBuff = ActionsBuilder
+                .New()
+                .ApplyBuffPermanent(summonAbility.summonBuff, null, null, null, true)
+                .Conditional
+                    (
+                    ConditionsBuilder.New().Alignment(AlignmentComponent.Evil,true,false),
+                    ActionsBuilder.New().ApplyBuffPermanent(summonAbility.evilBuff, null, null, null, true),
+                    ActionsBuilder.New().ApplyBuffPermanent(summonAbility.goodBuff, null, null, null, true)
+                    )
+                .Build();
+            
+            return ActionsBuilder.New()
+                .SpawnMonsterUsingSummonPool(contextDice, contextDuration, monster, summonAbility.summonPool, summonedBuff,false,false)
+                .Build();
+        }
+
+        public static void CreateSummonMonsterBase(SummonAbilityBase summonAbilityBase)
+        {
+            AbilityConfigurator.New(summonAbilityBase.name, summonAbilityBase.guid)
+                .SetIcon(summonAbilityBase.m_icon)
+                .SetDisplayName(summonAbilityBase.m_DisplayName)
+                .SetDescription(summonAbilityBase.m_Description)
+                .SetLocalizedDuration(summonAbilityBase.localizationDuration)
+                .SetActionType(summonAbilityBase.actionType)
+                .SetIsFullRoundAction(summonAbilityBase.isFullRound)
+                .SetHasVariants(true)
+                .Configure();
+        }
+
+        public static void CreateSpells()
+        {
+            CreateSummonerPoolContextAction();
+
+            BuffConfigurator.New("dummyBuff", GetGUID.DummyBuff).Configure();
+            
+            foreach (SummonAbilityBase baseAbility in summonBaseAbilities)
+            {
+                CreateSummonMonsterBase(baseAbility);
+            }
+
+            foreach (SummonAbility ability in summonAbilities)
+            {
+                AddAbilityEffectRunActionsToSummon(ability);
+                if(ability.summonSpellBaseGuid != null)
+                {
+                    AbilityConfigurator.For(ability.summonSpellBaseGuid).AddAbilityVariants(new (){ability.guid}).Configure();
+                }
+            }
+
+        }
+
+    }
+}

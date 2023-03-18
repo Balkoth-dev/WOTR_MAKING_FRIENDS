@@ -42,7 +42,8 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSummonVIIISingle = "ec59477f-94ed-4650-ba16-9b1036eb5ab5";
         internal const string SummonerSummonVIIId3 = "9b67cef9-f5f8-468d-b1ed-ac2fbad4c9b3";
         internal const string SummonerSummonIXSingle = "c0bfbf69-8155-419b-9103-ddf105f61a1a";
-        internal const string SummonerSummonIXd3 = "81507841-eccf-47db-9bcd-d596dfd169dc";
+        internal const string SummonerSummonIXd3 = "81507841-eccf-47db-9bcd-d596dfd169dc"; 
+        internal const string SummonerSummonMonsterIBase = "4ce635e0-fc60-4799-95f6-d46fc9b682d8";
         internal const string SummonerSummonMonsterIIBase = "eba936a4-7f18-4420-ac3b-a45b02a1f9fe";
         internal const string SummonerSummonMonsterIIIBase = "3025d70a-7a07-4bef-9995-ef5457f2edc1";
         internal const string SummonerSummonMonsterIVBase = "6be76fa5-40cb-4154-913b-286a1b67f29e";
@@ -51,6 +52,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSummonMonsterVIIBase = "ccdd0ed1-ef2a-4d90-8711-9aa4ea1388ca";
         internal const string SummonerSummonMonsterVIIIBase = "bc9a0a31-707b-4011-99b1-e5ae3f2072a7";
         internal const string SummonerSummonMonsterIXBase = "7067b57a-2eed-4561-aa5a-0a2767500e6e";
+        #endregion
+
+        #region Buffs
+        internal const string DummyBuff = "8d03ce95-b4ed-4ec2-b9b2-c535325956f0";
         #endregion
 
         public static string GUIDByName(string s)

@@ -111,7 +111,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SpellLevelList spelllist = new SpellLevelList(1);
             spelllist.m_Spells = new()
             {
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonISingle)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIBase)
             };
             return spelllist;
         }
@@ -207,7 +207,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static BlueprintSpellbook CreateSpellBook()
         {
-            SummonMonster.CreateSummonSpells();
+            CreateSummonSpells.CreateSpells();
             ConfigureSpellSlotsTable();
             ConfigureSpellsKnownTable();
             CreateSpellList();
