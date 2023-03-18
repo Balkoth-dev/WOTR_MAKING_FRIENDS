@@ -5,6 +5,7 @@ using Kingmaker.UnitLogic.Mechanics;
 using System.Collections.Generic;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 
 namespace WOTR_MAKING_FRIENDS.Spells
@@ -114,6 +115,15 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     m_DisplayName = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_Icon
+                },
+                new SummonAbilityBase()
+                {
+                    guid = GetGUID.SummonMinorMonsterBase,
+                    name = "SummonMinorMonsterBase",
+                    localizationDuration = Duration.RoundPerLevel,
+                    m_DisplayName = Helpers.ObtainString("summonminormonsterbase.name"),
+                    m_Description = Helpers.ObtainString("summonminormonsterbase.description"),
+                    m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon
                 },
             };
     }

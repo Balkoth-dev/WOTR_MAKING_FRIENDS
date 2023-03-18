@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.CharacterClass;
+using WOTR_MAKING_FRIENDS.Spells;
+using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Settings
@@ -54,11 +56,15 @@ namespace WOTR_MAKING_FRIENDS.Settings
             LocalizationTool.LoadEmbeddedLocalizationPacks(
               "WOTR_MAKING_FRIENDS.Localization.Settings.json",
               "WOTR_MAKING_FRIENDS.Localization.SummonerClass.json",
-              "WOTR_MAKING_FRIENDS.Localization.SummonerSpellbook.json");
+              "WOTR_MAKING_FRIENDS.Localization.SummonerSpellbook.json",
+              "WOTR_MAKING_FRIENDS.Localization.Spells.json",
+              "WOTR_MAKING_FRIENDS.Localization.Units.json");
 
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
 
+            CreateUnits.CreateAllUnits();
+            CreateSummonSpells.CreateSpells();
             SummonerClass.CreateSummonerClass();
         }
         class SettingsUI

@@ -61,6 +61,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
             return SummonPoolConfigurator.New(InternalString.SummonerPool, GetGUID.SummonerPool).Configure();
         }
 
+        public static Dictionary<string, List<Blueprint<BlueprintAbilityReference>>> baseSummonSpells = new();
+
         public static void AddAbilityEffectRunActionsToSummon(SummonAbility summonAbility)
         {
             var summonSpell =
@@ -108,14 +110,18 @@ namespace WOTR_MAKING_FRIENDS.Spells
             {
                 summonAbility.goodMonster = summonAbility.defaultMonster;
             }
-            return ActionsBuilder.New()
-                .Add<ContextActionClearSummonPool>(c => { c.m_SummonPool = summonAbility.summonPool; })
+            var summonMonsterConditional = ActionsBuilder.New()
                 .Conditional(
                     ConditionsBuilder.New().Alignment(AlignmentComponent.Evil, true, false),
                     CreateSummonMonster(summonAbility, summonAbility.defaultMonster),
                     CreateSummonMonster(summonAbility, summonAbility.goodMonster)
-                    )
-                .Build();
+                    );
+            if(summonAbility.summonPool != null)
+            {
+                summonMonsterConditional
+                .Add<ContextActionClearSummonPool>(c => { c.m_SummonPool = summonAbility.summonPool; });
+            }
+            return summonMonsterConditional.Build();
         }
 
         public static ActionList CreateSummonMonster(SummonAbility summonAbility, BlueprintUnitReference monster)
@@ -137,10 +143,20 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     ActionsBuilder.New().ApplyBuffPermanent(summonAbility.goodBuff, null, null, null, true)
                     )
                 .Build();
-            
-            return ActionsBuilder.New()
-                .SpawnMonsterUsingSummonPool(contextDice, contextDuration, monster, summonAbility.summonPool, summonedBuff,false,false)
-                .Build();
+
+
+            var summonMonster = ActionsBuilder.New();
+
+            if (summonAbility.summonPool == null)
+            {
+                summonMonster.SpawnMonsterUsingSummonPool(contextDice, contextDuration, monster, summonAbility.summonPool, summonedBuff, false, false);
+            }
+            else
+            {
+                summonMonster.SpawnMonster(contextDice, contextDuration, monster, summonedBuff, false, false);
+            }
+
+            return summonMonster.Build();
         }
 
         public static void CreateSummonMonsterBase(SummonAbilityBase summonAbilityBase)
@@ -170,12 +186,17 @@ namespace WOTR_MAKING_FRIENDS.Spells
             foreach (SummonAbility ability in summonAbilities)
             {
                 AddAbilityEffectRunActionsToSummon(ability);
-                if(ability.summonSpellBaseGuid != null)
+                if (!baseSummonSpells.ContainsKey(ability.summonSpellBaseGuid))
                 {
-                    AbilityConfigurator.For(ability.summonSpellBaseGuid).AddAbilityVariants(new (){ability.guid}).Configure();
+                    baseSummonSpells[ability.summonSpellBaseGuid] = new List<Blueprint<BlueprintAbilityReference>>();
                 }
+                baseSummonSpells[ability.summonSpellBaseGuid].Add(ability.guid);
             }
 
+            foreach(var baseSummonSpell in baseSummonSpells)
+            {
+                AbilityConfigurator.For(baseSummonSpell.Key).AddAbilityVariants(baseSummonSpell.Value).Configure();
+            }
         }
 
     }

@@ -7,8 +7,10 @@
 
   <ItemGroup>
     <None Remove="Localization\Settings.json" />
+    <None Remove="Localization\Spells.json" />
     <None Remove="Localization\SummonerClass.json" />
     <None Remove="Localization\SummonerSpellbook.json" />
+    <None Remove="Localization\Units.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +20,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\Settings.json" />
+    <EmbeddedResource Include="Localization\Units.json" />
+    <EmbeddedResource Include="Localization\Spells.json" />
     <EmbeddedResource Include="Localization\SummonerSpellbook.json" />
     <EmbeddedResource Include="Localization\SummonerClass.json" />
   </ItemGroup>

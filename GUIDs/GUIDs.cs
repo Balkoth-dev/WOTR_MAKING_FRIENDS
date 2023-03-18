@@ -25,7 +25,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerPool = "e3640f25-ed1e-4a6b-933a-380dd008839d";
         #endregion
 
-        #region SummonMonsterSpells
+        #region SummonSpells
         internal const string SummonerSummonISingle = "58f97608-4475-4d0b-9e6c-39bda1cef0ba";
         internal const string SummonerSummonIISingle = "f1e622c1-e19b-494e-a5a3-011c1604f9c5";
         internal const string SummonerSummonIId3 = "df8954da-f9d6-4958-9135-74f20350766d";
@@ -42,7 +42,12 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSummonVIIISingle = "ec59477f-94ed-4650-ba16-9b1036eb5ab5";
         internal const string SummonerSummonVIIId3 = "9b67cef9-f5f8-468d-b1ed-ac2fbad4c9b3";
         internal const string SummonerSummonIXSingle = "c0bfbf69-8155-419b-9103-ddf105f61a1a";
-        internal const string SummonerSummonIXd3 = "81507841-eccf-47db-9bcd-d596dfd169dc"; 
+        internal const string SummonerSummonIXd3 = "81507841-eccf-47db-9bcd-d596dfd169dc";
+        internal const string SummonMinorMonsterRedPanda = "82d8df93-3f8a-4aef-8fc2-109a7c9eecb2";
+        internal const string SummonMinorMonsterCat = "26949fdf-27f1-4dcb-ada6-7869beab3359";
+        #endregion
+
+        #region SummonBaseSpells
         internal const string SummonerSummonMonsterIBase = "4ce635e0-fc60-4799-95f6-d46fc9b682d8";
         internal const string SummonerSummonMonsterIIBase = "eba936a4-7f18-4420-ac3b-a45b02a1f9fe";
         internal const string SummonerSummonMonsterIIIBase = "3025d70a-7a07-4bef-9995-ef5457f2edc1";
@@ -51,11 +56,17 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSummonMonsterVIBase = "d614bb32-51b5-4bd8-9858-ced3f09b42b7";
         internal const string SummonerSummonMonsterVIIBase = "ccdd0ed1-ef2a-4d90-8711-9aa4ea1388ca";
         internal const string SummonerSummonMonsterVIIIBase = "bc9a0a31-707b-4011-99b1-e5ae3f2072a7";
-        internal const string SummonerSummonMonsterIXBase = "7067b57a-2eed-4561-aa5a-0a2767500e6e";
+        internal const string SummonerSummonMonsterIXBase = "7067b57a-2eed-4561-aa5a-0a2767500e6e"; 
+        internal const string SummonMinorMonsterBase = "efdb8a42-3bc3-4df9-b44e-310e502fc3b0";
         #endregion
 
         #region Buffs
         internal const string DummyBuff = "8d03ce95-b4ed-4ec2-b9b2-c535325956f0";
+        #endregion
+
+        #region Units
+        internal const string RedPandaSummon = "05708f21-cb8d-46ee-8f4e-d4bd5a5eedc8";
+        internal const string CatSummon = "83bc2bbd-28b9-4dda-8102-9ebc21c730a3";
         #endregion
 
         public static string GUIDByName(string s)

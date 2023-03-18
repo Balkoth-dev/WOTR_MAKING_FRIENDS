@@ -453,7 +453,29 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
                 contextRankConfig = ContextRankConfigs.CharacterLevel()
-            }
+            },
+
+            new SummonAbility
+            {
+                name = "SummonMinorMonsterRedPanda",
+                guid = GetGUID.SummonMinorMonsterRedPanda,
+                summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
+                spellLevel = 1,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.RedPandaSummon),
+                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                numberOfSummons = DiceType.D3,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                goodBuff = BuffRefs.SummonMonsterCelestialBuffI.Cast<BlueprintBuffReference>().Reference,
+                evilBuff = BuffRefs.SummonMonsterFiendishBuffI.Cast<BlueprintBuffReference>().Reference,
+                m_DisplayName = Helpers.ObtainString("summonminormonsterredpanda.Name"),
+                m_Description = Helpers.ObtainString("summonminormonsterredpanda.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = false,
+                m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
         };
 
     }
