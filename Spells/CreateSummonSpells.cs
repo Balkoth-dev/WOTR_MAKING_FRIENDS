@@ -2,6 +2,8 @@
 using BlueprintCore.Actions.Builder.BasicEx;
 using BlueprintCore.Actions.Builder.ContextEx;
 using BlueprintCore.Blueprints.Configurators;
+using BlueprintCore.Blueprints.Configurators.Items.Equipment;
+using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
@@ -12,6 +14,7 @@ using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes.Spells;
+using Kingmaker.Blueprints.Items.Equipment;
 using Kingmaker.Craft;
 using Kingmaker.Designers.EventConditionActionSystem;
 using Kingmaker.Designers.Mechanics.Recommendations;
@@ -63,6 +66,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
 
         public static Dictionary<string, List<Blueprint<BlueprintAbilityReference>>> baseSummonSpells = new();
 
+        internal static int[] scrollCost = {25, 150, 375, 700, 1125, 1650, 2275, 3000, 3825};
+        internal static BlueprintItemEquipmentUsable summonMonsterISingleScroll = ItemEquipmentUsableRefs.ScrollOfSummonMonsterISingle.Reference.Get();
         public static void AddAbilityEffectRunActionsToSummon(SummonAbility summonAbility)
         {
             var summonSpell =
@@ -89,6 +94,12 @@ namespace WOTR_MAKING_FRIENDS.Spells
             {
                 summonSpell.AddSpellListComponent(summonAbility.spellLevel, spellList);
             };
+            
+            if(summonAbility.craftingComponent)
+            {
+                summonSpell.AddCraftInfoComponent(null, null, ComponentMerge.Replace, null, CraftSpellType.Summon_Polymorph);
+                CreateSummonScroll(summonAbility);
+            }
 
             if(summonAbility.numberOfSummons > DiceType.One)
             {
@@ -97,11 +108,22 @@ namespace WOTR_MAKING_FRIENDS.Spells
                         FeatureRefs.SuperiorSummoning.Cast<BlueprintBuffReference>().Reference.ToString(), 
                         FeatureRefs.BloodlineAbyssalAddedSummonings.Cast<BlueprintBuffReference>().Reference.ToString()
                     };
-                summonSpell.AddContextRankConfig(ContextRankConfigs.FeatureList(featureList, true, AbilityRankType.ProjectilesCount));
+                summonSpell.AddContextRankConfig(ContextRankConfigs.FeatureList(featureList, false, AbilityRankType.ProjectilesCount));
                 summonSpell.AddToAvailableMetamagic(Metamagic.Maximize, Metamagic.Empower);
             }
 
             summonSpell.Configure();
+        }
+
+        private static void CreateSummonScroll(SummonAbility summonAbility)
+        {
+            var summonScroll = BlueprintConfigurator<BlueprintItemEquipmentUsable>.New(summonAbility.name + "Scroll", GetGUID.GUIDByName(summonAbility.name + "Scroll"))
+                .CopyFrom(summonMonsterISingleScroll)
+                .Configure();
+            summonScroll.m_Ability = BlueprintTool.GetRef<BlueprintAbilityReference>(summonAbility.guid);
+            summonScroll.m_Cost = scrollCost[summonAbility.spellLevel];
+            summonScroll.m_DisplayNameText = Helpers.ObtainString(summonAbility.name + "Scroll.Name");
+            summonScroll.m_Icon = summonMonsterISingleScroll.m_Icon;
         }
 
         public static ActionList CreateSummonMonsterConditional(SummonAbility summonAbility)

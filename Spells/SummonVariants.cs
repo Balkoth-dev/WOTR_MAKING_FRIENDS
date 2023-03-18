@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
             /// <summary> Duration that the player sees, shows on the ability. </summary>
             internal Duration localizationDuration;
             /// <summary> Action type used to for the ability. If IsFullRound true, it will use that instead. </summary>
-            internal CommandType actionType;
+            internal CommandType actionType = CommandType.Standard;
             /// <summary> Name of the ability that is shown to the player. </summary>
             internal LocalizedString m_DisplayName;
             /// <summary> Description of the ability that is shown to the player. </summary>
@@ -121,6 +121,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     guid = GetGUID.SummonMinorMonsterBase,
                     name = "SummonMinorMonsterBase",
                     localizationDuration = Duration.RoundPerLevel,
+                    isFullRound = true,
                     m_DisplayName = Helpers.ObtainString("summonminormonsterbase.name"),
                     m_Description = Helpers.ObtainString("summonminormonsterbase.description"),
                     m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon

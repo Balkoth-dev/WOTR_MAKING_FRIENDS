@@ -58,6 +58,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
               "WOTR_MAKING_FRIENDS.Localization.SummonerClass.json",
               "WOTR_MAKING_FRIENDS.Localization.SummonerSpellbook.json",
               "WOTR_MAKING_FRIENDS.Localization.Spells.json",
+              "WOTR_MAKING_FRIENDS.Localization.Scrolls.json",
               "WOTR_MAKING_FRIENDS.Localization.Units.json");
 
             SettingsUI.Initialize();

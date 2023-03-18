@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.References;
+using Kingmaker.Armies.TacticalCombat.LeaderSkills;
 using Kingmaker.EntitySystem.Entities;
 using Kingmaker.Localization;
 using System;
@@ -20,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                 var unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
                     .CopyFrom(newUnit.copiedUnit)
                     .SetDisplayName(newUnit.m_DisplayName)
-                    .SetLocalizedName(newUnit.m_DisplayName.Shared)
+                    .SetLocalizedName(new SharedStringAsset() { String = newUnit.m_DisplayName })
                     .SetStrength(newUnit.strength)
                     .SetDexterity(newUnit.dexterity)
                     .SetConstitution(newUnit.constitution)
@@ -28,11 +29,10 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetWisdom(newUnit.wisdom)
                     .SetCharisma(newUnit.charisma)
                     .SetPortrait(null)
-                    .SetSize(newUnit.size);
-                    //.AddChangeUnitSize(null,BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Skip,newUnit.size,-1,Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize.ChangeType.Delta);
-
-                if (newUnit.prefabLink != null)
-                    unitConfigured.SetPrefab(newUnit.prefabLink);
+                    .SetSize(newUnit.size)
+                    .SetAddFacts(newUnit.blueprintUnitFactReferences);
+                if (newUnit.prefab != null)
+                    unitConfigured.SetPrefab(newUnit.prefab);
 
                     unitConfigured.Configure();
             }

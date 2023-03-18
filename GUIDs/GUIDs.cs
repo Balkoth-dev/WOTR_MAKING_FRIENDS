@@ -69,6 +69,11 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string CatSummon = "83bc2bbd-28b9-4dda-8102-9ebc21c730a3";
         #endregion
 
+        #region Scrolls
+        internal const string SummonMinorMonsterRedPandaScroll = "ba4e69ee-5363-4f30-8ec7-f895a738473d";
+        internal const string SummonMinorMonsterCatScroll = "ba3f996c-f236-4afe-916d-166c37ba6c4e";
+        #endregion
+
         public static string GUIDByName(string s)
         {
             var fieldInfo = typeof(GetGUID).GetField(s, BindingFlags.NonPublic | BindingFlags.Static);

@@ -10,6 +10,7 @@ using Kingmaker.ResourceLinks;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.Visual.Critters;
 using System.Collections.Generic;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -31,7 +32,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             /// <summary> Unit to copy from. Helpful for body/brain/etc. </summary>
             internal BlueprintUnitReference copiedUnit;
             /// <summary> Model used for the unit. Leave null if same as copied unit. </summary>
-            internal AssetLink<UnitViewLink> prefabLink;
+            internal AssetLink<UnitViewLink> prefab;
             internal Size size;
             internal int strength;
             internal int dexterity;
@@ -39,6 +40,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             internal int intelligence;
             internal int wisdom;
             internal int charisma;
+            internal Blueprint<BlueprintUnitFactReference>[] blueprintUnitFactReferences;
         };
 
         public static NewUnit[] newUnits =
@@ -49,15 +51,41 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "RedPandaSummon",
                     m_DisplayName = Helpers.ObtainString("RedPandaSummon.Name"),
                     copiedUnit = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
-                    prefabLink = UnitRefs.RedPandaFamiliar.Reference.Get().Prefab,
+                    prefab = UnitRefs.RedPandaFamiliar.Reference.Get().Prefab,
                     size = Size.Tiny,
                     strength = 8,
                     dexterity = 16,
                     constitution = 11,
                     intelligence = 2,
                     wisdom = 13,
-                    charisma = 5
+                    charisma = 5,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[] 
+                                                  {
+                                                    FeatureRefs.TripDefenseFourLegs.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.CatSummon,
+                    name = "CatSummon",
+                    m_DisplayName = Helpers.ObtainString("CatSummon.Name"),
+                    copiedUnit = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
+                    prefab = UnitRefs.CatFamiliar.Reference.Get().Prefab,
+                    size = Size.Tiny,
+                    strength = 3,
+                    dexterity = 15,
+                    constitution = 8,
+                    intelligence = 2,
+                    wisdom = 12,
+                    charisma = 7,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.TripDefenseFourLegs.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
                 }
             };
+
     }
 }

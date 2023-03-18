@@ -1,0 +1,26 @@
+[
+  {
+    "Key": "wotr-making-friends.summonminormonsterbase.name",
+    "enGB": "Summon Minor Monster"
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonsterbase.description",
+    "enGB": "This spell functions as summon monster I, except you can summon 1d3 Tiny or smaller animals, The summoned animals must all be the same type of creature. As with animals summoned with summon monster I, you apply one alignment-appropriate template to these animals."
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonsterredpanda.name",
+    "enGB": "Summon 1d3 Red Pandas"
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonsterredpanda.description",
+    "enGB": "This spell functions as summon monster I, except you can summon 1d3 red pandas, As with animals summoned with summon monster I, you apply one alignment-appropriate template to these animals."
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonstercat.name",
+    "enGB": "Summon 1d3 Cats"
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonstercat.description",
+    "enGB": "This spell functions as summon monster I, except you can summon 1d3 cats, As with animals summoned with summon monster I, you apply one alignment-appropriate template to these animals."
+  }
+]

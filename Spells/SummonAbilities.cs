@@ -54,6 +54,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
             internal int spellLevel;
             /// <summary>  IsFullRound true, it will use that instead of the action type. </summary>
             internal bool isFullRound;
+            /// <summary>  Adds a crafting component to the spell. Defaulted to true, turn to false if creating an ability instead. </summary>
+            internal bool craftingComponent = true;
             /// <summary> By default, summons use the Evil monster, this needs to be filled while the good monster does not. </summary>
             internal BlueprintUnitReference defaultMonster;
             /// <summary> Optional summon if a summon has a variant based on the alignment of the caster. Do not set if you only want the spell to summon a specific monster. </summary>
@@ -114,7 +116,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 actionType = CommandType.Standard,
                 m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -135,7 +138,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -156,7 +160,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -177,7 +182,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -198,7 +204,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -219,7 +226,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIVSingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -240,7 +248,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIVd3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -262,7 +271,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVSingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -283,7 +293,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVd3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -305,7 +316,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -327,7 +339,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -346,7 +359,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -368,7 +382,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -389,7 +404,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVIIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -409,7 +425,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterVIIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -431,7 +448,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIXSingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -454,7 +472,6 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
                 contextRankConfig = ContextRankConfigs.CharacterLevel()
             },
-
             new SummonAbility
             {
                 name = "SummonMinorMonsterRedPanda",
@@ -462,7 +479,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
                 spellLevel = 1,
                 defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.RedPandaSummon),
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -471,7 +488,28 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_DisplayName = Helpers.ObtainString("summonminormonsterredpanda.Name"),
                 m_Description = Helpers.ObtainString("summonminormonsterredpanda.Description"),
                 actionType = CommandType.Standard,
-                isFullRound = false,
+                isFullRound = true,
+                m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonMinorMonsterCat",
+                guid = GetGUID.SummonMinorMonsterCat,
+                summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
+                spellLevel = 1,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CatSummon),
+                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                numberOfSummons = DiceType.D3,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                goodBuff = BuffRefs.SummonMonsterCelestialBuffI.Cast<BlueprintBuffReference>().Reference,
+                evilBuff = BuffRefs.SummonMonsterFiendishBuffI.Cast<BlueprintBuffReference>().Reference,
+                m_DisplayName = Helpers.ObtainString("SummonMinorMonsterCat.Name"),
+                m_Description = Helpers.ObtainString("SummonMinorMonsterCat.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
                 m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
                 contextRankConfig = ContextRankConfigs.CasterLevel()

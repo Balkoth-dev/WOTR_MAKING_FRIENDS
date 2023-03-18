@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Localization\Scrolls.json" />
     <None Remove="Localization\Settings.json" />
     <None Remove="Localization\Spells.json" />
     <None Remove="Localization\SummonerClass.json" />
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\Settings.json" />
+    <EmbeddedResource Include="Localization\Scrolls.json" />
     <EmbeddedResource Include="Localization\Units.json" />
     <EmbeddedResource Include="Localization\Spells.json" />
     <EmbeddedResource Include="Localization\SummonerSpellbook.json" />
