@@ -84,6 +84,27 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.TripDefenseFourLegs.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference
                                                   }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.CacodaemonSummon,
+                    name = "CacodaemonSummon",
+                    m_DisplayName = Helpers.ObtainString("CacodaemonSummon.Name"),
+                    copiedUnit = UnitRefs.GibrilethSummon.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 12,
+                    dexterity = 11,
+                    constitution = 13,
+                    intelligence = 8,
+                    wisdom = 13,
+                    charisma = 12,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.TripImmune.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.DemonPlagueFeature.Cast<BlueprintUnitFactReference>().Reference,
+                                                    UnitFactRefs.NaturalArmor4.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
                 }
             };
 

@@ -121,7 +121,9 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SpellLevelList spelllist = new SpellLevelList(2);
             spelllist.m_Spells = new()
             {
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIIBase)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIIBase),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonCacodaemon),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonSwarm)
             };
             return spelllist;
         }
@@ -139,7 +141,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SpellLevelList spelllist = new SpellLevelList(4);
             spelllist.m_Spells = new()
             {
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIVBase)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIVBase),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonCacodaemonGreater)
             };
             return spelllist;
         }

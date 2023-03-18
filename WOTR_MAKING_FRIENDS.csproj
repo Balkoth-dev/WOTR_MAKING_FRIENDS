@@ -21,9 +21,9 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\Settings.json" />
-    <EmbeddedResource Include="Localization\Scrolls.json" />
-    <EmbeddedResource Include="Localization\Units.json" />
     <EmbeddedResource Include="Localization\Spells.json" />
+    <EmbeddedResource Include="Localization\Units.json" />
+    <EmbeddedResource Include="Localization\Scrolls.json" />
     <EmbeddedResource Include="Localization\SummonerSpellbook.json" />
     <EmbeddedResource Include="Localization\SummonerClass.json" />
   </ItemGroup>

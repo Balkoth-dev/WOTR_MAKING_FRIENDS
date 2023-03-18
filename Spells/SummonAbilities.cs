@@ -470,7 +470,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_icon = AbilityRefs.SummonMonsterIXd3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
-                contextRankConfig = ContextRankConfigs.CharacterLevel()
+                contextRankConfig = ContextRankConfigs.CharacterLevel(),
+                craftingComponent = false
             },
             new SummonAbility
             {
@@ -479,7 +480,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
                 spellLevel = 1,
                 defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.RedPandaSummon),
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -500,7 +501,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
                 spellLevel = 1,
                 defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CatSummon),
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -511,6 +512,60 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 actionType = CommandType.Standard,
                 isFullRound = true,
                 m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonCacodaemon",
+                guid = GetGUID.SummonCacodaemon,
+                spellLevel = 2,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CacodaemonSummon),
+                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonCacodaemon.Name"),
+                m_Description = Helpers.ObtainString("SummonCacodaemon.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.SummonMonsterIISingle.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonCacodaemonGreater",
+                guid = GetGUID.SummonCacodaemonGreater,
+                spellLevel = 4,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CacodaemonSummon),
+                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference,
+                numberOfSummons = DiceType.D4,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonCacodaemonGreater.Name"),
+                m_Description = Helpers.ObtainString("SummonCacodaemonGreater.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.SummonMonsterIVSingle.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonSwarm",
+                guid = GetGUID.SummonSwarm,
+                spellLevel = 2,
+                defaultMonster = UnitRefs.CR1_SpiderSwarm.Cast<BlueprintUnitReference>().Reference,
+                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonSwarm.Name"),
+                m_Description = Helpers.ObtainString("SummonSwarm.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.SummonMonsterIISingle.Reference.Get().m_Icon,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },

@@ -1,10 +1,50 @@
 [
   {
-    "Key": "wotr-making-friends.summonminormonsterredpandascroll.name",
+    "Key": "wotr-making-friends.summonminormonsterbase.name",
+    "enGB": "Summon Minor Monster"
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonsterbase.description",
+    "enGB": "This spell functions as summon monster I, except you can summon 1d3 Tiny or smaller animals, The summoned animals must all be the same type of creature. As with animals summoned with summon monster I, you apply one alignment-appropriate template to these animals."
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonsterredpanda.name",
     "enGB": "Summon 1d3 Red Pandas"
   },
   {
-    "Key": "wotr-making-friends.summonminormonstercatscroll.name",
+    "Key": "wotr-making-friends.summonminormonsterredpanda.description",
+    "enGB": "This spell functions as summon monster I, except you can summon 1d3 red pandas, As with animals summoned with summon monster I, you apply one alignment-appropriate template to these animals."
+  },
+  {
+    "Key": "wotr-making-friends.summonminormonstercat.name",
     "enGB": "Summon 1d3 Cats"
   },
+  {
+    "Key": "wotr-making-friends.summonminormonstercat.description",
+    "enGB": "This spell functions as summon monster I, except you can summon 1d3 cats, As with animals summoned with summon monster I, you apply one alignment-appropriate template to these animals."
+  },
+  {
+    "Key": "wotr-making-friends.summoncacodaemon.name",
+    "enGB": "Summon Cacodaemon"
+  },
+  {
+    "Key": "wotr-making-friends.summoncacodaemon.description",
+    "enGB": "This spell functions like summon monster, except it summons a single cacodaemon."
+  },
+  {
+    "Key": "wotr-making-friends.summoncacodaemongreater.name",
+    "enGB": "Summon Cacodaemon, Greater"
+  },
+  {
+    "Key": "wotr-making-friends.summoncacodaemongreater.description",
+    "enGB": "This spell functions like summon cacodaemon, except that it summons 1d4 cacodaemons."
+  },
+  {
+    "Key": "wotr-making-friends.summonswarm.name",
+    "enGB": "Summon Swarm"
+  },
+  {
+    "Key": "wotr-making-friends.summonswarm.description",
+    "enGB": "You summon a swarm of spiders, which attack all other creatures within its area. (You may summon the swarm so that it shares the area of other creatures.) If no living creatures are within its area, the swarm attacks or pursues the nearest creature as best it can. The caster has no control over its target or direction of travel."
+  }
 ]

@@ -58,6 +58,9 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSummonMonsterVIIIBase = "bc9a0a31-707b-4011-99b1-e5ae3f2072a7";
         internal const string SummonerSummonMonsterIXBase = "7067b57a-2eed-4561-aa5a-0a2767500e6e"; 
         internal const string SummonMinorMonsterBase = "efdb8a42-3bc3-4df9-b44e-310e502fc3b0";
+        internal const string SummonCacodaemon = "37773912-9619-4c64-905b-74648ca45f98"; 
+        internal const string SummonCacodaemonGreater = "c2390e92-4723-4749-a566-62606edcd9cc";
+        internal const string SummonSwarm = "c7693c79-3508-4949-a612-491594d81570";
         #endregion
 
         #region Buffs
@@ -67,11 +70,16 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         #region Units
         internal const string RedPandaSummon = "05708f21-cb8d-46ee-8f4e-d4bd5a5eedc8";
         internal const string CatSummon = "83bc2bbd-28b9-4dda-8102-9ebc21c730a3";
+        internal const string CacodaemonSummon = "8b55d06c-804d-4f32-86aa-a45d82bb6b6f";
         #endregion
 
         #region Scrolls
         internal const string SummonMinorMonsterRedPandaScroll = "ba4e69ee-5363-4f30-8ec7-f895a738473d";
         internal const string SummonMinorMonsterCatScroll = "ba3f996c-f236-4afe-916d-166c37ba6c4e";
+        internal const string SummonCacodaemonScroll = "c6cfc201-a153-4ff8-a2ef-813f0ebe11dc"; 
+        internal const string SummonCacodaemonGreaterScroll = "f86b9a84-ec10-483a-9f1f-27db701b8fb2";
+        internal const string SummonSwarmScroll = "e846b0a1-0654-4385-8115-e910290ab0f4";
+
         #endregion
 
         public static string GUIDByName(string s)

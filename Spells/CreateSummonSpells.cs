@@ -149,7 +149,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
         public static ActionList CreateSummonMonster(SummonAbility summonAbility, BlueprintUnitReference monster)
         {
 
-            var contextDice = summonAbility.numberOfSummons != DiceType.One
+            var contextDice = summonAbility.numberOfSummons > DiceType.One
                               ? ContextDice.Value(summonAbility.numberOfSummons, null, ContextValues.Rank(AbilityRankType.ProjectilesCount))
                               : ContextDice.Value(summonAbility.numberOfSummons);
 
@@ -208,11 +208,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
             foreach (SummonAbility ability in summonAbilities)
             {
                 AddAbilityEffectRunActionsToSummon(ability);
-                if (!baseSummonSpells.ContainsKey(ability.summonSpellBaseGuid))
+                if (ability.summonSpellBaseGuid != null)
                 {
-                    baseSummonSpells[ability.summonSpellBaseGuid] = new List<Blueprint<BlueprintAbilityReference>>();
+                    if (!baseSummonSpells.ContainsKey(ability.summonSpellBaseGuid))
+                    {
+                        baseSummonSpells[ability.summonSpellBaseGuid] = new List<Blueprint<BlueprintAbilityReference>>();
+                    }
+                    baseSummonSpells[ability.summonSpellBaseGuid].Add(ability.guid);
                 }
-                baseSummonSpells[ability.summonSpellBaseGuid].Add(ability.guid);
             }
 
             foreach(var baseSummonSpell in baseSummonSpells)

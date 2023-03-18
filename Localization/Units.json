@@ -6,5 +6,9 @@
   {
     "Key": "wotr-making-friends.catsummon.name",
     "enGB": "Cat"
+  },
+  {
+    "Key": "wotr-making-friends.cacodaemonsummon.name",
+    "enGB": "Cacodaemon"
   }
 ]
