@@ -110,5 +110,45 @@
   {
     "Key": "wotr-making-friends.summondraconicallywhite.description",
     "enGB": "Your draconic ally will cast Form of The Dragon I: White, including their cold breath weapon."
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonbase.name",
+    "enGB": "Summon Lesser Demon"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonbase.description",
+    "enGB": "This spell functions like summon monster, except it allows you to summon a single brimorak, one incubus, 1d3 schir demons, or 1d4 vermlek demons."
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonbrimorak.name",
+    "enGB": "Summon Brimorak"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonbrimorak.description",
+    "enGB": "This spell functions like summon monster, except it allows you to summon a single brimorak."
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonincubus.name",
+    "enGB": "Summon Incubus"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonincubus.description",
+    "enGB": "This spell functions like summon monster, except it allows you to summon a single incubus."
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonschir.name",
+    "enGB": "Summon 1d3 Schirs"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonschir.description",
+    "enGB": "This spell functions like summon monster, except it allows you to summon 1d3 schir demons."
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonvermlek.name",
+    "enGB": "Summon 1d4 Vermleks"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonvermlek.description",
+    "enGB": "This spell functions like summon monster, except it allows you to summon 1d4 vermlek demons."
   }
 ]

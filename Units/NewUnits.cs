@@ -35,13 +35,13 @@ namespace WOTR_MAKING_FRIENDS.Units
             internal AssetLink<UnitViewLink> prefab;
             /// <summary> Portrait used for the unit. Leave null if same as copied unit. </summary>
             internal Blueprint<BlueprintPortraitReference> portrait;
-            internal Size size;
-            internal int strength;
-            internal int dexterity;
-            internal int constitution;
-            internal int intelligence;
-            internal int wisdom;
-            internal int charisma;
+            internal Size? size;
+            internal int? strength;
+            internal int? dexterity;
+            internal int? constitution;
+            internal int? intelligence;
+            internal int? wisdom;
+            internal int? charisma;
             internal Blueprint<BlueprintUnitFactReference>[] blueprintUnitFactReferences;
         };
 
@@ -254,6 +254,30 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
                                                     AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.LesserDemonSummonBrimorak,
+                    name = "LesserDemonSummonBrimorak",
+                    copiedUnit = UnitRefs.CR5_BrimorakStandard.Cast<BlueprintUnitReference>().Reference
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.LesserDemonSummonIncubus,
+                    name = "LesserDemonSummonIncubus",
+                    copiedUnit = UnitRefs.CR6_IncubusStandard.Cast<BlueprintUnitReference>().Reference
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.LesserDemonSummonSchir,
+                    name = "LesserDemonSummonSchir",
+                    copiedUnit = UnitRefs.CR4_SchirStandard.Cast<BlueprintUnitReference>().Reference
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.LesserDemonSummonVermlek,
+                    name = "LesserDemonSummonVermlek",
+                    copiedUnit = UnitRefs.CR3_VermlekStandard.Cast<BlueprintUnitReference>().Reference
                 }
             };
 

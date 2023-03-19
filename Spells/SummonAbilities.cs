@@ -737,6 +737,90 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            new SummonAbility
+            {
+                name = "SummonLesserDemonBrimorak",
+                guid = GetGUID.SummonLesserDemonBrimorak,
+                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
+                spellLevel = 4,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonBrimorak),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonLesserDemonBrimorak.Name"),
+                m_Description = Helpers.ObtainString("SummonLesserDemonBrimorak.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.DemonicFormIBrimorak.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonLesserDemonIncubus",
+                guid = GetGUID.SummonLesserDemonIncubus,
+                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
+                spellLevel = 4,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonIncubus),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonLesserDemonIncubus.Name"),
+                m_Description = Helpers.ObtainString("SummonLesserDemonIncubus.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.DemonicFormIBabau.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonLesserDemonSchir",
+                guid = GetGUID.SummonLesserDemonSchir,
+                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
+                spellLevel = 4,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonSchir),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.D3,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonLesserDemonSchir.Name"),
+                m_Description = Helpers.ObtainString("SummonLesserDemonSchir.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.DemonicFormISchir.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonLesserDemonVermlek",
+                guid = GetGUID.SummonLesserDemonVermlek,
+                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
+                spellLevel = 4,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonVermlek),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.D4,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonLesserDemonVermlek.Name"),
+                m_Description = Helpers.ObtainString("SummonLesserDemonVermlek.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.DemonicFormIIDerakni.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
         };
     }
 }

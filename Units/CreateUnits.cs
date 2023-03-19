@@ -22,6 +22,8 @@ using Kingmaker.EntitySystem.Persistence.Versioning;
 using BlueprintCore.Actions.Builder;
 using Kingmaker.AI.Blueprints;
 using BlueprintCore.Utils;
+using Kingmaker.UnitLogic.FactLogic;
+using Kingmaker.Blueprints.Classes.Experience;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -31,27 +33,28 @@ namespace WOTR_MAKING_FRIENDS.Units
         {
             foreach (NewUnit newUnit in newUnits)
             {
+                var copiedUnit = BlueprintTool.Get<BlueprintUnit>(newUnit.copiedUnit.ToString());
 
                 var unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
                     .CopyFrom(newUnit.copiedUnit)
-                    .SetDisplayName(newUnit.m_DisplayName)
-                    .SetLocalizedName(new SharedStringAsset() { String = newUnit.m_DisplayName })
-                    .SetStrength(newUnit.strength)
-                    .SetDexterity(newUnit.dexterity)
-                    .SetConstitution(newUnit.constitution)
-                    .SetIntelligence(newUnit.intelligence)
-                    .SetWisdom(newUnit.wisdom)
-                    .SetCharisma(newUnit.charisma)
-                    .SetSize(newUnit.size)
+                    .CopyFrom(newUnit.copiedUnit, c => c is AddClassLevels or AddFacts or Experience)
+                    .SetLocalizedName(new SharedStringAsset() { String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String })
                     .AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference)
                     .AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference)
-                    .SetAddFacts(newUnit.blueprintUnitFactReferences);
+                    .AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid })
+                    .SetDisplayName(newUnit.m_DisplayName ?? copiedUnit.m_DisplayName)
+                    .SetPrefab(newUnit.prefab ?? copiedUnit.Prefab)
+                    .SetPortrait(newUnit.portrait ?? copiedUnit.m_Portrait)
+                    .SetStrength(newUnit.strength ?? copiedUnit.Strength)
+                    .SetDexterity(newUnit.dexterity ?? copiedUnit.Dexterity)
+                    .SetConstitution(newUnit.constitution ?? copiedUnit.Constitution)
+                    .SetIntelligence(newUnit.intelligence ?? copiedUnit.Intelligence)
+                    .SetWisdom(newUnit.wisdom ?? copiedUnit.Wisdom)
+                    .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
+                    .SetSize(newUnit.size ?? copiedUnit.Size);
 
-                if (newUnit.prefab != null)
-                    unitConfigured.SetPrefab(newUnit.prefab);
-
-                if (newUnit.portrait != null)
-                    unitConfigured.SetPortrait(newUnit.portrait);
+                if(newUnit.blueprintUnitFactReferences != null)
+                unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
 
                 unitConfigured.Configure();
             }
@@ -94,7 +97,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .RemoveComponents(components => components is AddClassLevels)
                     .AddClassLevels(null, CharacterClassRefs.DragonClass.Cast<BlueprintCharacterClassReference>().Reference, false, 2, StatType.Unknown, null, StatType.Constitution)
                     .SetAlignment(Alignment.NeutralGood)
-                    .AddUnitUpgraderComponent(null, ComponentMerge.Replace, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid })
                     .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.DraconicAllyBrain))
                     .Configure();
             }

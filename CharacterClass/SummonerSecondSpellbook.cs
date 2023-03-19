@@ -143,7 +143,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             spelllist.m_Spells = new()
             {
                 BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIVBase),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonCacodaemonGreater)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonCacodaemonGreater),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonLesserDemonBase)
             };
             return spelllist;
         }

@@ -46,5 +46,21 @@
   {
     "Key": "wotr-making-friends.summondraconicallywhitescroll.name",
     "enGB": "Scroll of Draconic Ally White"
-  }
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonbrimorakscroll.name",
+    "enGB": "Scroll of Summon Brimorak"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonincubusscroll.name",
+    "enGB": "Scroll of Summon Incubus"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonschirscroll.name",
+    "enGB": "Scroll of Summon 1d3 Schirs"
+  },
+  {
+    "Key": "wotr-making-friends.summonlesserdemonvermlekscroll.name",
+    "enGB": "Scroll of Summon 1d4 Vermleks"
+  },
 ]

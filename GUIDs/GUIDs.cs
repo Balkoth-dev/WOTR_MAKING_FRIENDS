@@ -53,6 +53,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonDraconicAllyGreen = "97587dd7-bf19-4e0e-8514-44c5bfa1fd90";
         internal const string SummonDraconicAllySilver = "62dd691c-718e-4ae0-bc31-077972e3fdaa";
         internal const string SummonDraconicAllyWhite = "4ef61783-c502-4cbd-bf5f-950d8a99e023";
+        internal const string SummonLesserDemonBrimorak = "3768bd5f-f3d2-483e-8bd3-6e20d0d82be0";
+        internal const string SummonLesserDemonIncubus = "5d2d0176-f7a0-4477-965a-db03f62306c8";
+        internal const string SummonLesserDemonSchir = "3f821dc5-07af-4923-bc4c-bfa8c5422951";
+        internal const string SummonLesserDemonVermlek = "2444e0c4-e1d3-4f3b-8c12-6db5151a66b4";
         #endregion
 
         #region Scrolls
@@ -68,6 +72,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonDraconicAllyGreenScroll = "c3cb19b6-3bb1-476f-abce-45744d7048b4";
         internal const string SummonDraconicAllySilverScroll = "87a94657-105b-4c1e-9ce8-83f24e6c4de8";
         internal const string SummonDraconicAllyWhiteScroll = "792330f6-433c-4009-8e83-5c04ad1a6076";
+        internal const string SummonLesserDemonBrimorakScroll = "62e395b0-b369-4ae0-86f2-061fd7cc3776";
+        internal const string SummonLesserDemonIncubusScroll = "a1596f71-cafe-4dc1-b446-3df3a7841ea2";
+        internal const string SummonLesserDemonSchirScroll = "689cac98-0941-4d25-b026-57b217a34962";
+        internal const string SummonLesserDemonVermlekScroll = "1b7e40d1-1020-43ea-93d0-76d1d50f6990";
 
         #region SummonBaseSpells
         internal const string SummonerSummonMonsterIBase = "4ce635e0-fc60-4799-95f6-d46fc9b682d8";
@@ -83,6 +91,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonCacodaemon = "37773912-9619-4c64-905b-74648ca45f98"; 
         internal const string SummonCacodaemonGreater = "c2390e92-4723-4749-a566-62606edcd9cc";
         internal const string SummonDraconicAllyBase = "60c4ff4a-9dcb-494d-b185-00aff8d97433";
+        internal const string SummonLesserDemonBase = "6d8aeb90-d871-4e16-8fcd-0232f94307e9";
         #endregion
 
         #region Buffs
@@ -100,6 +109,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string DraconicAllySummonGreen = "3ed505bd-99a0-49fb-8a6a-3f45b474b53b";
         internal const string DraconicAllySummonSilver = "dbe9ed58-d8fa-4156-a63c-490991edddf5";
         internal const string DraconicAllySummonWhite = "eef33a84-0e39-4b54-8c44-3538a5de08bb";
+        internal const string LesserDemonSummonBrimorak = "0ac343aa-71de-4130-a8e5-b8898501226a";
+        internal const string LesserDemonSummonIncubus = "16a8ae6f-c574-4997-bb40-0551ea997083";
+        internal const string LesserDemonSummonSchir = "6e77aa51-8f44-4eee-9da1-3439f730e93b";
+        internal const string LesserDemonSummonVermlek = "46549747-fee4-4629-a661-a6a3deea74dd";
         #endregion
 
         #endregion

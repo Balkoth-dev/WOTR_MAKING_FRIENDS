@@ -135,6 +135,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     m_DisplayName = Helpers.ObtainString("SummonDraconicAllyBase.name"),
                     m_Description = Helpers.ObtainString("SummonDraconicAllyBase.description"),
                     m_icon = AbilityRefs.FormOfTheDragonI.Reference.Get().m_Icon
+                },
+                new SummonAbilityBase()
+                {
+                    guid = GetGUID.SummonLesserDemonBase,
+                    name = "SummonLesserDemonBase",
+                    localizationDuration = Duration.RoundPerLevel,
+                    isFullRound = true,
+                    m_DisplayName = Helpers.ObtainString("SummonLesserDemonBase.name"),
+                    m_Description = Helpers.ObtainString("SummonLesserDemonBase.description"),
+                    m_icon = AbilityRefs.DemonicFormI.Reference.Get().m_Icon
                 }
             };
     }
