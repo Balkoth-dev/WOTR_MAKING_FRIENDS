@@ -10,5 +10,9 @@
   {
     "Key": "wotr-making-friends.cacodaemonsummon.name",
     "enGB": "Cacodaemon"
+  },
+  {
+    "Key": "wotr-making-friends.draconicallysummon.name",
+    "enGB": "Draconic Ally"
   }
 ]

@@ -132,7 +132,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SpellLevelList spelllist = new SpellLevelList(3);
             spelllist.m_Spells = new()
             {
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIIIBase)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIIIBase),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonDraconicAllyBase)
             };
             return spelllist;
         }

@@ -41,7 +41,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 using static Kingmaker.Visual.Animation.Kingmaker.Actions.UnitAnimationActionCastSpell;
 using static WOTR_MAKING_FRIENDS.Spells.SummonAbilities;
-using static WOTR_MAKING_FRIENDS.Spells.SummonVariants;
+using static WOTR_MAKING_FRIENDS.Spells.SummonBase;
 
 namespace WOTR_MAKING_FRIENDS.Spells
 {
@@ -99,9 +99,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
             {
                 summonSpell.AddCraftInfoComponent(null, null, ComponentMerge.Replace, null, CraftSpellType.Summon_Polymorph);
                 CreateSummonScroll(summonAbility);
-            }
+            };
 
-            if(summonAbility.numberOfSummons > DiceType.One)
+            if (summonAbility.materialComponent != null)
+            {
+                summonSpell.SetMaterialComponent(summonAbility.materialComponent);
+            };
+
+            if (summonAbility.numberOfSummons > DiceType.One)
             {
                 string[] featureList =
                     { 
@@ -110,7 +115,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     };
                 summonSpell.AddContextRankConfig(ContextRankConfigs.FeatureList(featureList, false, AbilityRankType.ProjectilesCount));
                 summonSpell.AddToAvailableMetamagic(Metamagic.Maximize, Metamagic.Empower);
-            }
+            };
 
             summonSpell.Configure();
         }
@@ -157,14 +162,30 @@ namespace WOTR_MAKING_FRIENDS.Spells
 
             var summonedBuff = ActionsBuilder
                 .New()
-                .ApplyBuffPermanent(summonAbility.summonBuff, null, null, null, true)
                 .Conditional
                     (
                     ConditionsBuilder.New().Alignment(AlignmentComponent.Evil,true,false),
                     ActionsBuilder.New().ApplyBuffPermanent(summonAbility.evilBuff, null, null, null, true),
                     ActionsBuilder.New().ApplyBuffPermanent(summonAbility.goodBuff, null, null, null, true)
-                    )
-                .Build();
+                    );
+
+            if(summonAbility.summonBuff != null)
+            {
+                foreach(var buff in summonAbility.summonBuff)
+                {
+                    summonedBuff.ApplyBuffPermanent(buff, null, null, null, true);
+                }
+            }
+
+            if (summonAbility.blueprintUnitFactReferences != null)
+            {
+                foreach (var unitFactRef in summonAbility.blueprintUnitFactReferences)
+                {
+                    summonedBuff.AddFact(unitFactRef,null);
+                }
+            }
+
+            summonedBuff.Build();
 
 
             var summonMonster = ActionsBuilder.New();

@@ -10,7 +10,7 @@ using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 
 namespace WOTR_MAKING_FRIENDS.Spells
 {
-    public static class SummonVariants
+    public static class SummonBase
     {
 
         public class SummonAbilityBase
@@ -126,6 +126,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     m_Description = Helpers.ObtainString("summonminormonsterbase.description"),
                     m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon
                 },
+                new SummonAbilityBase()
+                {
+                    guid = GetGUID.SummonDraconicAllyBase,
+                    name = "SummonDraconicAllyBase",
+                    localizationDuration = Duration.RoundPerLevel,
+                    isFullRound = true,
+                    m_DisplayName = Helpers.ObtainString("SummonDraconicAllyBase.name"),
+                    m_Description = Helpers.ObtainString("SummonDraconicAllyBase.description"),
+                    m_icon = AbilityRefs.FormOfTheDragonI.Reference.Get().m_Icon
+                }
             };
     }
 }

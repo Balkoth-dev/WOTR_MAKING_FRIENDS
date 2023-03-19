@@ -18,6 +18,10 @@ using Kingmaker.EntitySystem.Stats;
 using Kingmaker.UnitLogic.Class.LevelUp.Actions;
 using Kingmaker.Blueprints;
 using Kingmaker.Items;
+using Kingmaker.EntitySystem.Persistence.Versioning;
+using BlueprintCore.Actions.Builder;
+using Kingmaker.AI.Blueprints;
+using BlueprintCore.Utils;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -27,6 +31,7 @@ namespace WOTR_MAKING_FRIENDS.Units
         {
             foreach (NewUnit newUnit in newUnits)
             {
+
                 var unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
                     .CopyFrom(newUnit.copiedUnit)
                     .SetDisplayName(newUnit.m_DisplayName)
@@ -37,11 +42,16 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(newUnit.intelligence)
                     .SetWisdom(newUnit.wisdom)
                     .SetCharisma(newUnit.charisma)
-                    .SetPortrait(null)
                     .SetSize(newUnit.size)
+                    .AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference)
+                    .AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference)
                     .SetAddFacts(newUnit.blueprintUnitFactReferences);
+
                 if (newUnit.prefab != null)
                     unitConfigured.SetPrefab(newUnit.prefab);
+
+                if (newUnit.portrait != null)
+                    unitConfigured.SetPortrait(newUnit.portrait);
 
                 unitConfigured.Configure();
             }
@@ -51,6 +61,7 @@ namespace WOTR_MAKING_FRIENDS.Units
         internal static void AdjustUnits()
         {
             AdjustCacodaemon();
+            AdjustDraconicAllies();
         }
         internal static void AdjustCacodaemon()
         {
@@ -63,6 +74,30 @@ namespace WOTR_MAKING_FRIENDS.Units
                 .SetAlignment(Alignment.NeutralEvil)
                 .SetBody(new BlueprintUnit.UnitBody() { PrimaryHand = ItemWeaponRefs.Bite1d4.Cast<BlueprintItemWeaponReference>().Reference })
                 .Configure();
+        }
+        internal static void AdjustDraconicAllies()
+        {
+            string[] draconicAllies = 
+                { 
+                    GetGUID.DraconicAllySummonBlack, 
+                    GetGUID.DraconicAllySummonBlue, 
+                    GetGUID.DraconicAllySummonBrass, 
+                    GetGUID.DraconicAllySummonGreen, 
+                    GetGUID.DraconicAllySummonRed, 
+                    GetGUID.DraconicAllySummonSilver, 
+                    GetGUID.DraconicAllySummonWhite
+                };
+
+            foreach (var guid in draconicAllies)
+            {
+                UnitConfigurator.For(guid)
+                    .RemoveComponents(components => components is AddClassLevels)
+                    .AddClassLevels(null, CharacterClassRefs.DragonClass.Cast<BlueprintCharacterClassReference>().Reference, false, 2, StatType.Unknown, null, StatType.Constitution)
+                    .SetAlignment(Alignment.NeutralGood)
+                    .AddUnitUpgraderComponent(null, ComponentMerge.Replace, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid })
+                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.DraconicAllyBrain))
+                    .Configure();
+            }
         }
     }
 }

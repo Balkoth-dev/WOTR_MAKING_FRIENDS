@@ -10,7 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using WOTR_MAKING_FRIENDS.AiActions;
+using WOTR_MAKING_FRIENDS.Brains;
 using WOTR_MAKING_FRIENDS.CharacterClass;
+using WOTR_MAKING_FRIENDS.Features;
 using WOTR_MAKING_FRIENDS.Spells;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
@@ -64,6 +67,9 @@ namespace WOTR_MAKING_FRIENDS.Settings
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
 
+            CreateFeatures.CreateAllFeatures();
+            CreateAiActions.CreateAllAiActions();
+            CreateBrains.CreateAllBrains();
             CreateUnits.CreateAllUnits();
             CreateSummonSpells.CreateSpells();
             SummonerClass.CreateSummonerClass();

@@ -63,7 +63,9 @@ namespace WOTR_MAKING_FRIENDS.Spells
             /// <summary> Summon pool used by the ability. Various uses, mainly used for when the ability only has one summon at a time. </summary>
             internal BlueprintSummonPoolReference summonPool;
             /// <summary> The default summon buff. As far as I can tell it's used for the effects cast when they are summoned. </summary>
-            internal BlueprintBuffReference summonBuff;
+            internal BlueprintBuffReference[] summonBuff;
+            /// <summary> Adds additional unit facts to the summon. In example the breath attacks for Draconic Ally. </summary>
+            internal Blueprint<BlueprintUnitFactReference>[] blueprintUnitFactReferences;
             /// <summary> If the user is good/neutral, this adds another buff. Usually used for adding the celestial template. </summary>
             internal BlueprintBuffReference goodBuff;
             /// <summary> If the user is evil, this adds another buff. Usually used for adding the fiendish template. </summary>
@@ -86,6 +88,9 @@ namespace WOTR_MAKING_FRIENDS.Spells
             internal Sprite m_icon;
             /// <summary> Context Rank Config that will determine what the summon's duration is based off of.</summary>
             internal ContextRankConfig contextRankConfig;
+            /// <summary> Material Component </summary>
+            internal BlueprintAbility.MaterialComponentData materialComponent;
+
             public SummonAbility()
             {
                 goodBuff = BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.DummyBuff);
@@ -104,7 +109,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIBase,
                 spellLevel = 1,
                 defaultMonster = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -126,7 +131,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIBase,
                 spellLevel = 2,
                 defaultMonster = UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -148,7 +153,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIBase,
                 spellLevel = 2,
                 defaultMonster = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -170,7 +175,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIIBase,
                 spellLevel = 3,
                 defaultMonster = UnitRefs.MonitorLizardSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -192,7 +197,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIIBase,
                 spellLevel = 3,
                 defaultMonster = UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -214,7 +219,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIVBase,
                 spellLevel = 4,
                 defaultMonster = UnitRefs.DireWolfSummon.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -236,7 +241,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIVBase,
                 spellLevel = 4,
                 defaultMonster = UnitRefs.MonitorLizardSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -259,7 +264,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 5,
                 defaultMonster = UnitRefs.RedcapSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AzataBralaniSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -281,7 +286,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVBase,
                 spellLevel = 5,
                 defaultMonster = UnitRefs.DireWolfSummon.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -304,7 +309,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 6,
                 defaultMonster = UnitRefs.SoulEaterSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AxiomiteSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -327,7 +332,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 6,
                 defaultMonster = UnitRefs.RedcapSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AzataBralaniSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -349,7 +354,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVIIBase,
                 spellLevel = 7,
                 defaultMonster = UnitRefs.BogeymanSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -370,7 +375,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 7,
                 defaultMonster = UnitRefs.SoulEaterSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AxiomiteSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -393,7 +398,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 8,
                 defaultMonster = UnitRefs.FrostGiantSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.MonadicDevaSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -415,7 +420,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 8,
                 defaultMonster = UnitRefs.BogeymanSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = null,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -436,7 +441,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 9,
                 defaultMonster = UnitRefs.ThanadaemonSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AzataGhaelSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
@@ -459,7 +464,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellLevel = 9,
                 defaultMonster = UnitRefs.FrostGiantSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.MonadicDevaSummoned.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
                 summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
@@ -480,7 +485,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
                 spellLevel = 1,
                 defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.RedPandaSummon),
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -501,7 +506,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
                 spellLevel = 1,
                 defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CatSummon),
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -521,7 +526,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 guid = GetGUID.SummonCacodaemon,
                 spellLevel = 2,
                 defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CacodaemonSummon),
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -539,7 +544,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 guid = GetGUID.SummonCacodaemonGreater,
                 spellLevel = 4,
                 defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CacodaemonSummon),
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.D4,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -557,7 +562,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 guid = GetGUID.SummonSwarm,
                 spellLevel = 2,
                 defaultMonster = UnitRefs.CR1_SpiderSwarm.Cast<BlueprintUnitReference>().Reference,
-                summonBuff = BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
@@ -569,7 +574,169 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            new SummonAbility
+            {
+                name = "SummonDraconicAllyBlack",
+                guid = GetGUID.SummonDraconicAllyBlack,
+                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
+                spellLevel = 3,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonBlack),
+                summonBuff = new BlueprintBuffReference[]{ 
+                    BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonIBlackBuff.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.TenMinutes,
+                localizationDuration = Duration.TenMinutesPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonDraconicAllyBlack.Name"),
+                m_Description = Helpers.ObtainString("SummonDraconicAllyBlack.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.FormOfTheDragonIBlack.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel(),
+                materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
+            },
+            new SummonAbility
+            {
+                name = "SummonDraconicAllyBlue",
+                guid = GetGUID.SummonDraconicAllyBlue,
+                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
+                spellLevel = 3,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonBlue),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonIBlueBuff.Cast<BlueprintBuffReference>().Reference,
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.TenMinutes,
+                localizationDuration = Duration.TenMinutesPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonDraconicAllyBlue.Name"),
+                m_Description = Helpers.ObtainString("SummonDraconicAllyBlue.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.FormOfTheDragonIBlue.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel(),
+                materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
+            },
+            new SummonAbility
+            {
+                name = "SummonDraconicAllyBrass",
+                guid = GetGUID.SummonDraconicAllyBrass,
+                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
+                spellLevel = 3,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonBrass),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonIBrassBuff.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.TenMinutes,
+                localizationDuration = Duration.TenMinutesPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonDraconicAllyBrass.Name"),
+                m_Description = Helpers.ObtainString("SummonDraconicAllyBrass.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.FormOfTheDragonIBrass.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel(),
+                materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
+            },
+            new SummonAbility
+            {
+                name = "SummonDraconicAllyGreen",
+                guid = GetGUID.SummonDraconicAllyGreen,
+                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
+                spellLevel = 3,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonGreen),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonIGreenBuff.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.TenMinutes,
+                localizationDuration = Duration.TenMinutesPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonDraconicAllyGreen.Name"),
+                m_Description = Helpers.ObtainString("SummonDraconicAllyGreen.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.FormOfTheDragonIGreen.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel(),
+                materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
+            },
+            new SummonAbility
+            {
+                name = "SummonDraconicAllyRed",
+                guid = GetGUID.SummonDraconicAllyRed,
+                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
+                spellLevel = 3,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonRed),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonIRedBuff.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.TenMinutes,
+                localizationDuration = Duration.TenMinutesPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonDraconicAllyRed.Name"),
+                m_Description = Helpers.ObtainString("SummonDraconicAllyRed.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.FormOfTheDragonIRed.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel(),
+                materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
+            },
+            new SummonAbility
+            {
+                name = "SummonDraconicAllySilver",
+                guid = GetGUID.SummonDraconicAllySilver,
+                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
+                spellLevel = 3,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonSilver),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonISilverBuff.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonISilverBreathWeaponBuff.Cast<BlueprintBuffReference>().Reference,
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.TenMinutes,
+                localizationDuration = Duration.TenMinutesPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonDraconicAllySilver.Name"),
+                m_Description = Helpers.ObtainString("SummonDraconicAllySilver.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.FormOfTheDragonISilver.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel(),
+                materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
+            },
+            new SummonAbility
+            {
+                name = "SummonDraconicAllyWhite",
+                guid = GetGUID.SummonDraconicAllyWhite,
+                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
+                spellLevel = 3,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonWhite),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
+                    BuffRefs.FormOfTheDragonIWhiteBuff.Cast<BlueprintBuffReference>().Reference
+                },
+                blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[] { AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.TenMinutes,
+                localizationDuration = Duration.TenMinutesPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonDraconicAllyWhite.Name"),
+                m_Description = Helpers.ObtainString("SummonDraconicAllyWhite.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.FormOfTheDragonIWhite.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel(),
+                materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
+            },
         };
-
     }
 }

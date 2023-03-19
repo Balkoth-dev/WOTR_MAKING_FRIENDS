@@ -18,5 +18,33 @@
   {
     "Key": "wotr-making-friends.summonswarmscroll.name",
     "enGB": "Scroll of Summon Swarm"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyblackscroll.name",
+    "enGB": "Scroll of Draconic Ally Black"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallybluescroll.name",
+    "enGB": "Scroll of Draconic Ally Blue"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallybrassscroll.name",
+    "enGB": "Scroll of Draconic Ally Brass"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyredscroll.name",
+    "enGB": "Scroll of Draconic Ally Red"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallygreenscroll.name",
+    "enGB": "Scroll of Draconic Ally Green"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallysilverscroll.name",
+    "enGB": "Scroll of Draconic Ally Silver"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallywhitescroll.name",
+    "enGB": "Scroll of Draconic Ally White"
   }
 ]

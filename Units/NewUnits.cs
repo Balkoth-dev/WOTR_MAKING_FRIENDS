@@ -33,6 +33,8 @@ namespace WOTR_MAKING_FRIENDS.Units
             internal BlueprintUnitReference copiedUnit;
             /// <summary> Model used for the unit. Leave null if same as copied unit. </summary>
             internal AssetLink<UnitViewLink> prefab;
+            /// <summary> Portrait used for the unit. Leave null if same as copied unit. </summary>
+            internal Blueprint<BlueprintPortraitReference> portrait;
             internal Size size;
             internal int strength;
             internal int dexterity;
@@ -104,6 +106,153 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.DemonPlagueFeature.Cast<BlueprintUnitFactReference>().Reference,
                                                     UnitFactRefs.NaturalArmor4.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.DraconicAllySummonBlack,
+                    name = "DraconicAllySummonBlack",
+                    m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 7,
+                    dexterity = 15,
+                    constitution = 13,
+                    intelligence = 10,
+                    wisdom = 12,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToParalysis.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.FormOfTheDragonIBlackBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.DraconicAllySummonBlue,
+                    name = "DraconicAllySummonBlue",
+                    m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 7,
+                    dexterity = 15,
+                    constitution = 13,
+                    intelligence = 10,
+                    wisdom = 12,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToParalysis.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.FormOfTheDragonIBlueBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.DraconicAllySummonBrass,
+                    name = "DraconicAllySummonBrass",
+                    m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 7,
+                    dexterity = 15,
+                    constitution = 13,
+                    intelligence = 10,
+                    wisdom = 12,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToParalysis.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.FormOfTheDragonIBrassBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.DraconicAllySummonGreen,
+                    name = "DraconicAllySummonGreen",
+                    m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 7,
+                    dexterity = 15,
+                    constitution = 13,
+                    intelligence = 10,
+                    wisdom = 12,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToParalysis.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.FormOfTheDragonIGreenBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.DraconicAllySummonRed,
+                    name = "DraconicAllySummonRed",
+                    m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 7,
+                    dexterity = 15,
+                    constitution = 13,
+                    intelligence = 10,
+                    wisdom = 12,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToParalysis.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.FormOfTheDragonIGoldBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.DraconicAllySummonSilver,
+                    name = "DraconicAllySummonSilver",
+                    m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 7,
+                    dexterity = 15,
+                    constitution = 13,
+                    intelligence = 10,
+                    wisdom = 12,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToParalysis.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.DraconicAllySummonWhite,
+                    name = "DraconicAllySummonWhite",
+                    m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Tiny,
+                    strength = 7,
+                    dexterity = 15,
+                    constitution = 13,
+                    intelligence = 10,
+                    wisdom = 12,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToParalysis.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToSleep.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 }
             };

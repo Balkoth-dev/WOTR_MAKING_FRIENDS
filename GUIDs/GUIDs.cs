@@ -45,7 +45,29 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSummonIXd3 = "81507841-eccf-47db-9bcd-d596dfd169dc";
         internal const string SummonMinorMonsterRedPanda = "82d8df93-3f8a-4aef-8fc2-109a7c9eecb2";
         internal const string SummonMinorMonsterCat = "26949fdf-27f1-4dcb-ada6-7869beab3359";
+        internal const string SummonSwarm = "c7693c79-3508-4949-a612-491594d81570";
+        internal const string SummonDraconicAllyBlack = "4afa7d01-8986-4aa3-b5da-b32351b8bd06";
+        internal const string SummonDraconicAllyBlue = "f60b4d4f-8e9b-49d5-b8ba-ebb2af1bdf07";
+        internal const string SummonDraconicAllyBrass = "15c2bb0d-1694-45ac-aba9-e50ccd3d935a";
+        internal const string SummonDraconicAllyRed = "d0c6473f-99d2-4201-9eff-4c62d7d3dd39";
+        internal const string SummonDraconicAllyGreen = "97587dd7-bf19-4e0e-8514-44c5bfa1fd90";
+        internal const string SummonDraconicAllySilver = "62dd691c-718e-4ae0-bc31-077972e3fdaa";
+        internal const string SummonDraconicAllyWhite = "4ef61783-c502-4cbd-bf5f-950d8a99e023";
         #endregion
+
+        #region Scrolls
+        internal const string SummonMinorMonsterRedPandaScroll = "ba4e69ee-5363-4f30-8ec7-f895a738473d";
+        internal const string SummonMinorMonsterCatScroll = "ba3f996c-f236-4afe-916d-166c37ba6c4e";
+        internal const string SummonCacodaemonScroll = "c6cfc201-a153-4ff8-a2ef-813f0ebe11dc";
+        internal const string SummonCacodaemonGreaterScroll = "f86b9a84-ec10-483a-9f1f-27db701b8fb2";
+        internal const string SummonSwarmScroll = "e846b0a1-0654-4385-8115-e910290ab0f4";
+        internal const string SummonDraconicAllyBlackScroll = "2fea3faf-c2ce-47de-b869-4dbe6abf7fd9";
+        internal const string SummonDraconicAllyBlueScroll = "eb353d09-bd28-449f-b069-2de06cc79254";
+        internal const string SummonDraconicAllyBrassScroll = "af8128b7-29bf-4fde-aae6-cf121d32a8f7";
+        internal const string SummonDraconicAllyRedScroll = "f7aa417f-ddcf-4d57-8e0d-e2e6c5d8a11e";
+        internal const string SummonDraconicAllyGreenScroll = "c3cb19b6-3bb1-476f-abce-45744d7048b4";
+        internal const string SummonDraconicAllySilverScroll = "87a94657-105b-4c1e-9ce8-83f24e6c4de8";
+        internal const string SummonDraconicAllyWhiteScroll = "792330f6-433c-4009-8e83-5c04ad1a6076";
 
         #region SummonBaseSpells
         internal const string SummonerSummonMonsterIBase = "4ce635e0-fc60-4799-95f6-d46fc9b682d8";
@@ -60,7 +82,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonMinorMonsterBase = "efdb8a42-3bc3-4df9-b44e-310e502fc3b0";
         internal const string SummonCacodaemon = "37773912-9619-4c64-905b-74648ca45f98"; 
         internal const string SummonCacodaemonGreater = "c2390e92-4723-4749-a566-62606edcd9cc";
-        internal const string SummonSwarm = "c7693c79-3508-4949-a612-491594d81570";
+        internal const string SummonDraconicAllyBase = "60c4ff4a-9dcb-494d-b185-00aff8d97433";
         #endregion
 
         #region Buffs
@@ -71,15 +93,31 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string RedPandaSummon = "05708f21-cb8d-46ee-8f4e-d4bd5a5eedc8";
         internal const string CatSummon = "83bc2bbd-28b9-4dda-8102-9ebc21c730a3";
         internal const string CacodaemonSummon = "8b55d06c-804d-4f32-86aa-a45d82bb6b6f";
+        internal const string DraconicAllySummonBlack = "2307787d-f9bb-4497-87c6-aa4b49b6a29b";
+        internal const string DraconicAllySummonBlue = "ac568e29-e48d-4642-93bd-45870e59e463";
+        internal const string DraconicAllySummonBrass = "14adba4d-4ae6-4a4f-9e76-9ee3e84f79f6";
+        internal const string DraconicAllySummonRed = "a6afc228-3b19-4b96-bc02-6eeff5fca9c6";
+        internal const string DraconicAllySummonGreen = "3ed505bd-99a0-49fb-8a6a-3f45b474b53b";
+        internal const string DraconicAllySummonSilver = "dbe9ed58-d8fa-4156-a63c-490991edddf5";
+        internal const string DraconicAllySummonWhite = "eef33a84-0e39-4b54-8c44-3538a5de08bb";
         #endregion
 
-        #region Scrolls
-        internal const string SummonMinorMonsterRedPandaScroll = "ba4e69ee-5363-4f30-8ec7-f895a738473d";
-        internal const string SummonMinorMonsterCatScroll = "ba3f996c-f236-4afe-916d-166c37ba6c4e";
-        internal const string SummonCacodaemonScroll = "c6cfc201-a153-4ff8-a2ef-813f0ebe11dc"; 
-        internal const string SummonCacodaemonGreaterScroll = "f86b9a84-ec10-483a-9f1f-27db701b8fb2";
-        internal const string SummonSwarmScroll = "e846b0a1-0654-4385-8115-e910290ab0f4";
+        #endregion
 
+        #region Brains
+        internal const string DraconicAllyBrain = "2925d1a3-32c9-4a99-b91d-7a33c99f409c";
+        #endregion
+
+        #region Features
+        #endregion
+
+        #region AiAttackAction
+        internal const string FormOfTheDragonIGoldAiAction = "9e59a228-bcba-49fa-94b1-fc8ade153d66";
+        internal const string FormOfTheDragonISilverAiAction = "d3ab9fd6-21bf-4465-acf1-2e45b76c00b9";
+        internal const string FormOfTheDragonIBlackAiAction = "120a9307-126e-47a5-8080-5d824bfde625";
+        internal const string FormOfTheDragonIBlueAiAction = "d5fa40a9-e3d7-425f-851f-9e3b4da56cbe";
+        internal const string FormOfTheDragonIBrassAiAction = "e33e9f75-a4d7-479b-a15f-a124ed5020f8";
+        internal const string FormOfTheDragonIGreenAiAction = "127f0d59-7e86-4b90-8f52-9099e6f71ec9";
         #endregion
 
         public static string GUIDByName(string s)

@@ -46,5 +46,69 @@
   {
     "Key": "wotr-making-friends.summonswarm.description",
     "enGB": "You summon a swarm of spiders, which attack all other creatures within its area. (You may summon the swarm so that it shares the area of other creatures.) If no living creatures are within its area, the swarm attacks or pursues the nearest creature as best it can. The caster has no control over its target or direction of travel."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallybase.name",
+    "enGB": "Draconic Ally"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallybase.description",
+    "enGB": "You create a semi-living intelligent draconic servant that loyally obeys and serves you. Treat this servant as a pseudodragon with all of the abilities of Form of the Dragon I. They keep their breath weapon, dealing 6d8 damage depending on the type of dragon chosen."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyblack.name",
+    "enGB": "Draconic Ally Black"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyblack.description",
+    "enGB": "Your draconic ally will cast Form of The Dragon I: Black, including their acid breath weapon."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyblue.name",
+    "enGB": "Draconic Ally Blue"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyblue.description",
+    "enGB": "Your draconic ally will cast Form of The Dragon I: Blue, including their lightning breath weapon."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallybrass.name",
+    "enGB": "Draconic Ally Brass"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallybrass.description",
+    "enGB": "Your draconic ally will cast Form of The Dragon I: Brass, including their fire breath weapon."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyred.name",
+    "enGB": "Draconic Ally Red"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallyred.description",
+    "enGB": "Your draconic ally will cast Form of The Dragon I: Red, including their fire breath weapon."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallygreen.name",
+    "enGB": "Draconic Ally Green"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallygreen.description",
+    "enGB": "Your draconic ally will cast Form of The Dragon I: Green, including their acid breath weapon."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallysilver.name",
+    "enGB": "Draconic Ally Silver"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallysilver.description",
+    "enGB": "Your draconic ally will cast Form of The Dragon I: Silver, including their cold breath weapon."
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallywhite.name",
+    "enGB": "Draconic Ally White"
+  },
+  {
+    "Key": "wotr-making-friends.summondraconicallywhite.description",
+    "enGB": "Your draconic ally will cast Form of The Dragon I: White, including their cold breath weapon."
   }
 ]
