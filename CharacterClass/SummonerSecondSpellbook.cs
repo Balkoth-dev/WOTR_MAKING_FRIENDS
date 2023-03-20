@@ -155,7 +155,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             spelllist.m_Spells = new()
             {
                 BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterVBase),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonReleaseTheHounds)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonReleaseTheHounds),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonErinyes)
             };
             return spelllist;
         }

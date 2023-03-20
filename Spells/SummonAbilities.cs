@@ -867,6 +867,26 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            new SummonAbility
+            {
+                name = "SummonErinyes",
+                guid = GetGUID.SummonErinyes,
+                spellLevel = 5,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.ErinyesSummon),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.One,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonErinyes.Name"),
+                m_Description = Helpers.ObtainString("SummonErinyes.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.HellsDecreeAbilityMagicConjuration.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
         };
     }
 }

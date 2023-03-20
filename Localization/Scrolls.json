@@ -70,5 +70,9 @@
   {
     "Key": "wotr-making-friends.summonreleasethehoundsscroll.name",
     "enGB": "Scroll of Release The Hounds"
+  },
+  {
+    "Key": "wotr-making-friends.summonerinyesscroll.name",
+    "enGB": "Scroll of Summon Erinyes"
   }
 ]

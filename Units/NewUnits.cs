@@ -316,6 +316,12 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.TrippingBite.Cast<BlueprintUnitFactReference>().Reference,
                                                     BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.ReleaseTheHoundsDamageAreaBuff)
                                                   }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.ErinyesSummon,
+                    name = "ErinyesSummon",
+                    copiedUnit = UnitRefs.CR8_ErinyesDevilStandard.Cast<BlueprintUnitReference>().Reference
                 }
             };
 

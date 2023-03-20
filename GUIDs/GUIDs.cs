@@ -59,6 +59,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonLesserDemonVermlek = "2444e0c4-e1d3-4f3b-8c12-6db5151a66b4";
         internal const string SummonStampede = "ad0068c8-d98f-46f8-9bf5-09197f3f2654";
         internal const string SummonReleaseTheHounds = "e49f0f4e-2b46-4a3c-9db8-877db748ca7f";
+        internal const string SummonErinyes = "a474c92e-e29d-4a59-93ea-7b98cbc394c8";
         #endregion
 
         #region Scrolls
@@ -80,6 +81,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonLesserDemonVermlekScroll = "1b7e40d1-1020-43ea-93d0-76d1d50f6990";
         internal const string SummonStampedeScroll = "4e6a4fc4-405f-4955-ad64-1e99defb2adc";
         internal const string SummonReleaseTheHoundsScroll = "e212b381-468e-4bd2-9978-5f6c0cbbf4a9";
+        internal const string SummonErinyesScroll = "f8914484-63b1-4fe1-a81f-2a95ee1f28d0";
 
         #region SummonBaseSpells
         internal const string SummonerSummonMonsterIBase = "4ce635e0-fc60-4799-95f6-d46fc9b682d8";
@@ -119,6 +121,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string LesserDemonSummonVermlek = "46549747-fee4-4629-a661-a6a3deea74dd";
         internal const string StampedeSummonHorse = "0bf91385-0e7d-4c93-8e70-8e8ca224139a";
         internal const string ReleaseTheHoundsWolf = "4184e23f-9d4c-49ed-9187-24d1e55282e8";
+        internal const string ErinyesSummon = "a9ee0d42-4c0a-4272-b1d2-bd9375a5d8fd";
         #endregion
 
         #endregion
