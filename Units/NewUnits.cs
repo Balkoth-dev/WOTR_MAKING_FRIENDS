@@ -278,6 +278,44 @@ namespace WOTR_MAKING_FRIENDS.Units
                     guid = GetGUID.LesserDemonSummonVermlek,
                     name = "LesserDemonSummonVermlek",
                     copiedUnit = UnitRefs.CR3_VermlekStandard.Cast<BlueprintUnitReference>().Reference
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.StampedeSummonHorse,
+                    name = "StampedeSummonHorse",
+                    copiedUnit = UnitRefs.HorseSummoned.Cast<BlueprintUnitReference>().Reference,
+                    size = Size.Fine,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.TripImmunityFeature.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference,
+                                                    UnitFactRefs.ReducedReach.Cast<BlueprintUnitFactReference>().Reference,
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.StampedeTrampleDamageImmunityBuff),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.StampedeTrampleDamageAreaBuff)
+                                                  }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.ReleaseTheHoundsWolf,
+                    name = "ReleaseTheHoundsWolf",
+                    copiedUnit = UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference,
+                    m_DisplayName = Helpers.ObtainString("ReleaseTheHoundsWolf.Name"),
+                    size = Size.Fine,
+                    strength = 20,
+                    dexterity = 13,
+                    constitution = 18,
+                    intelligence = 9,
+                    wisdom = 13,
+                    charisma = 10,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.TripDefenseFourLegs.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.FireVulnerability.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ColdImmunity.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.TrippingBite.Cast<BlueprintUnitFactReference>().Reference,
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.ReleaseTheHoundsDamageAreaBuff)
+                                                  }
                 }
             };
 

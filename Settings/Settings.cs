@@ -17,6 +17,8 @@ using WOTR_MAKING_FRIENDS.Features;
 using WOTR_MAKING_FRIENDS.Spells;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
+using WOTR_MAKING_FRIENDS.Abilities;
+using WOTR_MAKING_FRIENDS.Buffs;
 
 namespace WOTR_MAKING_FRIENDS.Settings
 {
@@ -68,6 +70,8 @@ namespace WOTR_MAKING_FRIENDS.Settings
             Main.Log("Settings Initialized");
 
             CreateFeatures.CreateAllFeatures();
+            CreateBuffs.CreateAllBuffs();
+            CreateAbilities.CreateAllAbilities();
             CreateAiActions.CreateAllAiActions();
             CreateBrains.CreateAllBrains();
             CreateUnits.CreateAllUnits();

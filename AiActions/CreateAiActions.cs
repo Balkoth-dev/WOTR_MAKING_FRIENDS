@@ -16,6 +16,8 @@ namespace WOTR_MAKING_FRIENDS.AiActions
     class CreateAiActions
     {
         internal static readonly BlueprintAiCastSpell redDragonWoundWorm_BreathAIAction = BlueprintTool.Get<BlueprintAiCastSpell>("c7ea84c0eda8155499bb5005103504cf");
+        public static readonly BlueprintAiCastSpell chargeAiAction = BlueprintTool.Get<BlueprintAiCastSpell>("05003725a881c10419530387b6de5c9a");
+
         public static void CreateAllAiActions()
         {
             FormOfTheDragonIGoldAiAction();
@@ -25,6 +27,7 @@ namespace WOTR_MAKING_FRIENDS.AiActions
             FormOfTheDragonIBrassAiAction();
             FormOfTheDragonIGreenAiAction();
         }
+
         public static void FormOfTheDragonIGoldAiAction()
         {
             var aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIGoldAiAction", GetGUID.FormOfTheDragonIGoldAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();

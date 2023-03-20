@@ -37,7 +37,7 @@
   },
   {
     "Key": "wotr-making-friends.summoncacodaemongreater.description",
-    "enGB": "This spell functions like summon cacodaemon, except that it summons 1d4 cacodaemons."
+    "enGB": "This spell functions like summon cacodaemon, except that it summons 1d4+1 cacodaemons."
   },
   {
     "Key": "wotr-making-friends.summonswarm.name",
@@ -145,10 +145,26 @@
   },
   {
     "Key": "wotr-making-friends.summonlesserdemonvermlek.name",
-    "enGB": "Summon 1d4 Vermleks"
+    "enGB": "Summon 1d4+1 Vermleks"
   },
   {
     "Key": "wotr-making-friends.summonlesserdemonvermlek.description",
-    "enGB": "This spell functions like summon monster, except it allows you to summon 1d4 vermlek demons."
+    "enGB": "This spell functions like summon monster, except it allows you to summon 1d4+1 vermlek demons."
+  },
+  {
+    "Key": "wotr-making-friends.summonstampede.name",
+    "enGB": "Summon Stampede"
+  },
+  {
+    "Key": "wotr-making-friends.summonstampede.description",
+    "enGB": "This spell functions like summon monster, except it summons 1d4+4 horses. These horses do not attack enemies, but move about the battlefield.\nAny creatures caught in the herd’s path take 4d6+9 points of bludgeoning damage at the start of their turn as they are trampled beneath dozens of animals’ hooves."
+  },
+  {
+    "Key": "wotr-making-friends.summonreleasethehounds.name",
+    "enGB": "Release The Hounds"
+  },
+  {
+    "Key": "wotr-making-friends.summonreleasethehounds.description",
+    "enGB": "This spell functions like summon monster, except it summons 1d4+4 frost wolves. These wolves do not attack enemies, but move about the battlefield.\nAny enemies caught in the pack’s path take 3d6 points of cold damage at the start of their turn and may become prone (DC 20 Reflex) as the wolves attack their prey."
   }
 ]

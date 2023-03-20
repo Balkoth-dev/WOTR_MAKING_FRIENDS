@@ -74,6 +74,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
             AbilityConfigurator.New(summonAbility.name, summonAbility.guid)
                 .SetIsFullRoundAction(summonAbility.isFullRound)
                 .SetActionType(summonAbility.actionType)
+                .SetIsFullRoundAction(summonAbility.isFullRound)
                 .SetIcon(summonAbility.m_icon)
                 .SetDisplayName(summonAbility.m_DisplayName)
                 .SetDescription(summonAbility.m_Description)
@@ -197,6 +198,19 @@ namespace WOTR_MAKING_FRIENDS.Spells
             else
             {
                 summonMonster.SpawnMonster(contextDice, contextDuration, monster, summonedBuff, false, false);
+            }
+
+            if (summonAbility.numberOfBonusSummons > 0)
+            {
+                contextDice = ContextDice.Value(DiceType.Zero,9,summonAbility.numberOfBonusSummons);
+                if (summonAbility.summonPool == null)
+                {
+                    summonMonster.SpawnMonsterUsingSummonPool(contextDice, contextDuration, monster, summonAbility.summonPool, summonedBuff, false, false);
+                }
+                else
+                {
+                    summonMonster.SpawnMonster(contextDice, contextDuration, monster, summonedBuff, false, false);
+                }
             }
 
             return summonMonster.Build();

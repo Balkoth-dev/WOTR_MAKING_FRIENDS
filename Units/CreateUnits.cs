@@ -37,7 +37,7 @@ namespace WOTR_MAKING_FRIENDS.Units
 
                 var unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
                     .CopyFrom(newUnit.copiedUnit)
-                    .CopyFrom(newUnit.copiedUnit, c => c is AddClassLevels or AddFacts or Experience)
+                    .CopyFrom(newUnit.copiedUnit, c => c is not null)
                     .SetLocalizedName(new SharedStringAsset() { String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String })
                     .AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference)
                     .AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference)
@@ -65,7 +65,19 @@ namespace WOTR_MAKING_FRIENDS.Units
         {
             AdjustCacodaemon();
             AdjustDraconicAllies();
+            AdjustStampedeSummonHorse();
+            AdjustReleaseTheHoundsWolf();
         }
+
+        private static void AdjustReleaseTheHoundsWolf()
+        {
+            UnitConfigurator.For(GetGUID.ReleaseTheHoundsWolf)
+                    .RemoveComponents(components => components is AddClassLevels)
+                    .AddClassLevels(null, CharacterClassRefs.AnimalClass.Cast<BlueprintCharacterClassReference>().Reference, null, 6, StatType.Unknown, null, StatType.Constitution)
+                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.StampedeHorseBrain))
+                    .Configure();
+        }
+
         internal static void AdjustCacodaemon()
         {
             UnitConfigurator.For(GetGUID.CacodaemonSummon)
@@ -100,6 +112,13 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.DraconicAllyBrain))
                     .Configure();
             }
+        }
+
+        private static void AdjustStampedeSummonHorse()
+        {
+            UnitConfigurator.For(GetGUID.StampedeSummonHorse)
+                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.StampedeHorseBrain))
+                    .Configure();
         }
     }
 }

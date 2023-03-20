@@ -61,6 +61,14 @@
   },
   {
     "Key": "wotr-making-friends.summonlesserdemonvermlekscroll.name",
-    "enGB": "Scroll of Summon 1d4 Vermleks"
+    "enGB": "Scroll of Summon 1d4+1 Vermleks"
   },
+  {
+    "Key": "wotr-making-friends.summonstampedescroll.name",
+    "enGB": "Scroll of Summon Stampede"
+  },
+  {
+    "Key": "wotr-making-friends.summonreleasethehoundsscroll.name",
+    "enGB": "Scroll of Release The Hounds"
+  }
 ]

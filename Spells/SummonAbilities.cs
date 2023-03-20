@@ -74,6 +74,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
             internal List<BlueprintSpellListReference> spellListComponents;
             /// <summary> DiceType that determines the amount of summons. </summary>
             internal DiceType numberOfSummons;
+            /// <summary> Number of bonus summons. Such as for spells that summon 1d4+1 monsters. </summary>
+            internal int numberOfBonusSummons;
             /// <summary> DurationRate used to determined how many rounds/minutes/etc. are used per context rate. </summary>
             internal DurationRate durationRate;
             /// <summary> Duration that the player sees, shows on the ability. </summary>
@@ -551,6 +553,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 m_DisplayName = Helpers.ObtainString("SummonCacodaemonGreater.Name"),
                 m_Description = Helpers.ObtainString("SummonCacodaemonGreater.Description"),
                 actionType = CommandType.Standard,
+                numberOfBonusSummons = 1,
                 isFullRound = true,
                 m_icon = AbilityRefs.SummonMonsterIVSingle.Reference.Get().m_Icon,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
@@ -811,6 +814,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
                 numberOfSummons = DiceType.D4,
+                numberOfBonusSummons = 1,
                 durationRate = DurationRate.Rounds,
                 localizationDuration = Duration.RoundPerLevel,
                 m_DisplayName = Helpers.ObtainString("SummonLesserDemonVermlek.Name"),
@@ -818,6 +822,48 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 actionType = CommandType.Standard,
                 isFullRound = true,
                 m_icon = AbilityRefs.DemonicFormIIDerakni.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonStampede",
+                guid = GetGUID.SummonStampede,
+                spellLevel = 4,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.StampedeSummonHorse),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.D4,
+                numberOfBonusSummons = 4,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonStampede.Name"),
+                m_Description = Helpers.ObtainString("SummonStampede.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.MountTargetAbility.Reference.Get().m_Icon,
+                spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
+                contextRankConfig = ContextRankConfigs.CasterLevel()
+            },
+            new SummonAbility
+            {
+                name = "SummonReleaseTheHounds",
+                guid = GetGUID.SummonReleaseTheHounds,
+                spellLevel = 5,
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.ReleaseTheHoundsWolf),
+                summonBuff = new BlueprintBuffReference[]{
+                    BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+                },
+                numberOfSummons = DiceType.D4,
+                numberOfBonusSummons = 4,
+                durationRate = DurationRate.Rounds,
+                localizationDuration = Duration.RoundPerLevel,
+                m_DisplayName = Helpers.ObtainString("SummonReleaseTheHounds.Name"),
+                m_Description = Helpers.ObtainString("SummonReleaseTheHounds.Description"),
+                actionType = CommandType.Standard,
+                isFullRound = true,
+                m_icon = AbilityRefs.BalefulPolymorph.Reference.Get().m_Icon,
                 spellListComponents = new() { BlueprintTool.GetRef<BlueprintSpellListReference>(GetGUID.SummonerSecondSpellbookSpellList) },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },

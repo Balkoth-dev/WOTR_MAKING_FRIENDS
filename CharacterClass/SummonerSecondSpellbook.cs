@@ -144,7 +144,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             {
                 BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterIVBase),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonCacodaemonGreater),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonLesserDemonBase)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonLesserDemonBase),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonStampede)
             };
             return spelllist;
         }
@@ -153,7 +154,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SpellLevelList spelllist = new SpellLevelList(5);
             spelllist.m_Spells = new()
             {
-                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterVBase)
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonerSummonMonsterVBase),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(GetGUID.SummonReleaseTheHounds)
             };
             return spelllist;
         }

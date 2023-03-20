@@ -57,6 +57,8 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonLesserDemonIncubus = "5d2d0176-f7a0-4477-965a-db03f62306c8";
         internal const string SummonLesserDemonSchir = "3f821dc5-07af-4923-bc4c-bfa8c5422951";
         internal const string SummonLesserDemonVermlek = "2444e0c4-e1d3-4f3b-8c12-6db5151a66b4";
+        internal const string SummonStampede = "ad0068c8-d98f-46f8-9bf5-09197f3f2654";
+        internal const string SummonReleaseTheHounds = "e49f0f4e-2b46-4a3c-9db8-877db748ca7f";
         #endregion
 
         #region Scrolls
@@ -76,6 +78,8 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonLesserDemonIncubusScroll = "a1596f71-cafe-4dc1-b446-3df3a7841ea2";
         internal const string SummonLesserDemonSchirScroll = "689cac98-0941-4d25-b026-57b217a34962";
         internal const string SummonLesserDemonVermlekScroll = "1b7e40d1-1020-43ea-93d0-76d1d50f6990";
+        internal const string SummonStampedeScroll = "4e6a4fc4-405f-4955-ad64-1e99defb2adc";
+        internal const string SummonReleaseTheHoundsScroll = "e212b381-468e-4bd2-9978-5f6c0cbbf4a9";
 
         #region SummonBaseSpells
         internal const string SummonerSummonMonsterIBase = "4ce635e0-fc60-4799-95f6-d46fc9b682d8";
@@ -113,15 +117,32 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string LesserDemonSummonIncubus = "16a8ae6f-c574-4997-bb40-0551ea997083";
         internal const string LesserDemonSummonSchir = "6e77aa51-8f44-4eee-9da1-3439f730e93b";
         internal const string LesserDemonSummonVermlek = "46549747-fee4-4629-a661-a6a3deea74dd";
+        internal const string StampedeSummonHorse = "0bf91385-0e7d-4c93-8e70-8e8ca224139a";
+        internal const string ReleaseTheHoundsWolf = "4184e23f-9d4c-49ed-9187-24d1e55282e8";
         #endregion
 
         #endregion
 
         #region Brains
         internal const string DraconicAllyBrain = "2925d1a3-32c9-4a99-b91d-7a33c99f409c";
+        internal const string StampedeHorseBrain = "227d9dde-a9d4-403f-97ec-d5b9dd11ad85";
         #endregion
 
         #region Features
+        #endregion
+
+        #region Abilities
+        #endregion
+
+        #region Buffs
+        internal const string StampedeTrampleDamageImmunityBuff = "7b7ac3bf-155e-46eb-a9f9-e8f7f48b835f";
+        internal const string StampedeTrampleDamageBuff = "310fadd7-d5dc-4ae8-9ac9-08555c261d13";
+        internal const string StampedeTrampleDamageAreaBuff = "25b21f62-a570-4e51-b774-947ba1aba0d6";
+        internal const string StampedeTrampleDamageAreaEffect = "780833a7-750c-4390-86a1-ca8d253dd74a";
+        internal const string ReleaseTheHoundsDamageBuff = "c45d930f-f8ac-402f-9dbd-00bfd729acb8";
+        internal const string ReleaseTheHoundsDamageAreaBuff = "f6e14336-9c39-46ca-b287-8041e7d445ca";
+        internal const string ReleaseTheHoundsDamageBuffAreaBuff = "75331a64-5dc5-4b41-8211-6aa40fc17fec";
+        internal const string ReleaseTheHoundsDamageAreaEffect = "40fa7a1e-aa6b-4c96-93e9-e2c8746c80eb";
         #endregion
 
         #region AiAttackAction
@@ -131,6 +152,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string FormOfTheDragonIBlueAiAction = "d5fa40a9-e3d7-425f-851f-9e3b4da56cbe";
         internal const string FormOfTheDragonIBrassAiAction = "e33e9f75-a4d7-479b-a15f-a124ed5020f8";
         internal const string FormOfTheDragonIGreenAiAction = "127f0d59-7e86-4b90-8f52-9099e6f71ec9";
+        internal const string StampedeTrampleAiAction = "c5cf87eb-d612-46b0-bae7-58517342e6e0";
         #endregion
 
         public static string GUIDByName(string s)
