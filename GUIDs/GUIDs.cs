@@ -13,6 +13,11 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         #endregion
 
         #region SummonerSpellbooks
+        internal const string SummonerSpellbook = "c3551c3d-6f07-429a-803e-9bf05de50159";
+        internal const string SummonerSpellbookSpellsPerDay = "02989c3d-fe1b-493a-808d-3c32d2302aa0";
+        internal const string SummonerSpellbookSpellsKnown = "36764400-fd9e-4d89-b65e-02735c5bc158";
+        internal const string SummonerSpellbookSpellList = "c70ef362-eefc-423f-bac6-0d359621a55e";
+        internal const string SummonerSpellbookSpellBook = "ab9ba57c-7129-4c0d-be2c-3db18ca306f0";
         internal const string SummonerSecondSpellbook = "485df9e2-81b0-4b7f-9de4-1dfb6b8f1e29";
         internal const string SummonerSecondSpellbookSpellsPerDay = "f1b11330-0b22-4bb4-8df9-1335137ad13e";
         internal const string SummonerSecondSpellbookSpellsKnown = "eb628df9-2eec-4b1a-865f-636363696a61";
@@ -61,6 +66,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonStampede = "ad0068c8-d98f-46f8-9bf5-09197f3f2654";
         internal const string SummonReleaseTheHounds = "e49f0f4e-2b46-4a3c-9db8-877db748ca7f";
         internal const string SummonErinyes = "a474c92e-e29d-4a59-93ea-7b98cbc394c8";
+        internal const string SummonMeladaemon = "a748d90c-6581-4fb3-a1ff-4dea7f83d452";
         #endregion
 
         #region Scrolls
@@ -83,6 +89,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonStampedeScroll = "4e6a4fc4-405f-4955-ad64-1e99defb2adc";
         internal const string SummonReleaseTheHoundsScroll = "e212b381-468e-4bd2-9978-5f6c0cbbf4a9";
         internal const string SummonErinyesScroll = "f8914484-63b1-4fe1-a81f-2a95ee1f28d0";
+        internal const string SummonMeladaemonScroll = "ad31d87b-2f18-47bb-a7cd-b34a2f6a7214";
 
         #region SummonBaseSpells
         internal const string SummonerSummonMonsterIBase = "4ce635e0-fc60-4799-95f6-d46fc9b682d8";
@@ -123,6 +130,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string StampedeSummonHorse = "0bf91385-0e7d-4c93-8e70-8e8ca224139a";
         internal const string ReleaseTheHoundsWolf = "4184e23f-9d4c-49ed-9187-24d1e55282e8";
         internal const string ErinyesSummon = "a9ee0d42-4c0a-4272-b1d2-bd9375a5d8fd";
+        internal const string MeladaemonSummon = "29811bf1-65c0-4118-a84a-ff49b62783d5";
         #endregion
 
         #endregion
@@ -130,6 +138,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         #region Brains
         internal const string DraconicAllyBrain = "2925d1a3-32c9-4a99-b91d-7a33c99f409c";
         internal const string StampedeHorseBrain = "227d9dde-a9d4-403f-97ec-d5b9dd11ad85";
+        internal const string MeladaemonBrain = "04817713-e8b1-4a24-9556-79f6a3fc9fe3";
         #endregion
 
         #region Features

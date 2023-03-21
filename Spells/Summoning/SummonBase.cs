@@ -8,7 +8,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 
-namespace WOTR_MAKING_FRIENDS.Spells
+namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
     public static class SummonBase
     {
@@ -135,7 +135,19 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     isFullRound = true,
                     m_DisplayName = Helpers.ObtainString("summonminormonsterbase.name"),
                     m_Description = Helpers.ObtainString("summonminormonsterbase.description"),
-                    m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
+                    spellListComponents = new() {
+                        { CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.BardClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
+                        { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
+                        { GetGUID.SummonerSpellbookSpellList, 1 },
+                    }
                 },
                 new SummonAbilityBase()
                 {
@@ -145,7 +157,15 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     isFullRound = true,
                     m_DisplayName = Helpers.ObtainString("SummonDraconicAllyBase.name"),
                     m_Description = Helpers.ObtainString("SummonDraconicAllyBase.description"),
-                    m_icon = AbilityRefs.FormOfTheDragonI.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.FormOfTheDragonI.Reference.Get().m_Icon,
+                    spellListComponents = new() {
+                        { CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+                        { CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+                        { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+                        { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+                        { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                    }
                 },
                 new SummonAbilityBase()
                 {
@@ -155,7 +175,17 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     isFullRound = true,
                     m_DisplayName = Helpers.ObtainString("SummonLesserDemonBase.name"),
                     m_Description = Helpers.ObtainString("SummonLesserDemonBase.description"),
-                    m_icon = AbilityRefs.DemonicFormI.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.DemonicFormI.Reference.Get().m_Icon,
+                    spellListComponents = new() {
+                        { CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 5 },
+                        { CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 5 },
+                        { CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 5 },
+                        { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
+                        { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
+                        { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
+                        { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
+                        { GetGUID.SummonerSpellbookSpellList, 4 },
+                    }
                 }
             };
     }

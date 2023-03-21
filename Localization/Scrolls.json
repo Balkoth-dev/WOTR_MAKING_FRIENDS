@@ -74,5 +74,9 @@
   {
     "Key": "wotr-making-friends.summonerinyesscroll.name",
     "enGB": "Scroll of Summon Erinyes"
+  },
+  {
+    "Key": "wotr-making-friends.summonmeladaemonscroll.name",
+    "enGB": "Scroll of Summon Meladaemon"
   }
 ]

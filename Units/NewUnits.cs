@@ -103,6 +103,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
                                                     FeatureRefs.TripImmune.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeDaemon.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeEvil.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.DemonPlagueFeature.Cast<BlueprintUnitFactReference>().Reference,
                                                     UnitFactRefs.NaturalArmor4.Cast<BlueprintUnitFactReference>().Reference
@@ -322,7 +324,41 @@ namespace WOTR_MAKING_FRIENDS.Units
                     guid = GetGUID.ErinyesSummon,
                     name = "ErinyesSummon",
                     copiedUnit = UnitRefs.CR8_ErinyesDevilStandard.Cast<BlueprintUnitReference>().Reference
-                }
+                },
+                new NewUnit()
+                {
+                    guid = GetGUID.MeladaemonSummon,
+                    name = "MeladaemonSummon",
+                    copiedUnit = UnitRefs.CR7_Werewolf.Cast<BlueprintUnitReference>().Reference,
+                    m_DisplayName = Helpers.ObtainString("MeladaemonSummon.Name"),
+                    size = Size.Large,
+                    strength = 22,
+                    dexterity = 22,
+                    constitution = 21,
+                    intelligence = 21,
+                    wisdom = 17,
+                    charisma = 18,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    FeatureRefs.DRGood10.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeDaemon.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeEvil.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.AcidImmunity.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToCritical.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToDeathEffects.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToDisease.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ImmunityToPoison.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ColdResistance10.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.ElectricityResistance10.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.FireResistance10.Cast<BlueprintUnitFactReference>().Reference,
+                                                    FeatureRefs.SpellResistance10plusCR.Cast<BlueprintUnitFactReference>().Reference,
+                                                    BuffRefs.SeeInvisibilitytBuff.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.UnholyBlight.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.HorridWilting.Cast<BlueprintUnitFactReference>().Reference,
+                                                    AbilityRefs.WavesOfFatigue.Cast<BlueprintUnitFactReference>().Reference
+                                                  }
+                },
             };
 
     }

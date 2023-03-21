@@ -42,10 +42,10 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 using static Kingmaker.Visual.Animation.Kingmaker.Actions.UnitAnimationActionCastSpell;
-using static WOTR_MAKING_FRIENDS.Spells.SummonAbilities;
-using static WOTR_MAKING_FRIENDS.Spells.SummonBase;
+using static WOTR_MAKING_FRIENDS.Spells.Summoning.SummonAbilities;
+using static WOTR_MAKING_FRIENDS.Spells.Summoning.SummonBase;
 
-namespace WOTR_MAKING_FRIENDS.Spells
+namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
     public class CreateSummonSpells
     {
@@ -233,6 +233,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
         public static void CreateSummoningSpells()
         {
             float count = 0;
+            float uniqueCount = 0;
 
             foreach (SummonAbilityBase baseAbility in summonBaseAbilities)
             {
@@ -255,9 +256,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     baseSummonSpells[ability.summonSpellBaseGuid].Add(ability.guid);
                 }
                 count++;
+                if(!ability.name.Contains("SummonerSummon"))
+                {
+                    uniqueCount++;
+                }
             }
 
-            Main.Log(count + " total summoning spells created.");
+            Main.Log(count + " total summoning spells created, including base.");
+            Main.Log(uniqueCount + " unique summoning spells created.");
 
             foreach (var baseSummonSpell in baseSummonSpells)
             {

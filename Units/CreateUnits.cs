@@ -71,6 +71,23 @@ namespace WOTR_MAKING_FRIENDS.Units
             AdjustDraconicAllies();
             AdjustStampedeSummonHorse();
             AdjustReleaseTheHoundsWolf();
+            AdjustMeladaemon();
+        }
+
+        private static void AdjustMeladaemon()
+        {
+            UnitConfigurator.For(GetGUID.MeladaemonSummon)
+                .AddChangeUnitSize(null, ComponentMerge.Replace, Size.Large, 1, ChangeType.Value)
+                .RemoveComponents(components => components is AddClassLevels)
+                .AddClassLevels(null, CharacterClassRefs.OutsiderClass.Cast<BlueprintCharacterClassReference>().Reference, null, 14, StatType.Unknown, null, StatType.Constitution)
+                .SetAlignment(Alignment.NeutralEvil)
+                .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.MeladaemonBrain))
+                .SetBody(new BlueprintUnit.UnitBody() { 
+                    PrimaryHand = ItemWeaponRefs.Bite2d6.Cast<BlueprintItemWeaponReference>().Reference, 
+                    m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.Claw2d6.Cast<BlueprintItemWeaponReference>().Reference,
+                                                                             ItemWeaponRefs.Claw2d6.Cast<BlueprintItemWeaponReference>().Reference} }
+                    )
+                .Configure();
         }
 
         private static void AdjustReleaseTheHoundsWolf()

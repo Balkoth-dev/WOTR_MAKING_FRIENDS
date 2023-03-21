@@ -67,7 +67,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             var area = AbilityAreaEffectConfigurator.New("StampedeTrampleDamageAreaEffect", GetGUID.StampedeTrampleDamageAreaEffect)
                 .SetAffectEnemies(true)
                 .SetTargetType(BlueprintAbilityAreaEffect.TargetType.Any)
-                .SetSize(10.Feet())
+                .SetSize(2.Feet())
                 .SetShape(AreaEffectShape.Cylinder)
                 .AddAbilityAreaEffectRunAction(
                         unitEnter: ActionsBuilder.New().ApplyBuff(buff: damageBuff, ContextDuration.Fixed(1, rate: DurationRate.Days)).Build(),
@@ -105,7 +105,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             var area = AbilityAreaEffectConfigurator.New("ReleaseTheHoundsDamageAreaEffect", GetGUID.ReleaseTheHoundsDamageAreaEffect)
                 .SetAffectEnemies(true)
                 .SetTargetType(BlueprintAbilityAreaEffect.TargetType.Any)
-                .SetSize(8.Feet())
+                .SetSize(1.Feet())
                 .SetShape(AreaEffectShape.Cylinder)
                 .AddAbilityAreaEffectRunAction(
                         unitEnter: ActionsBuilder.New().ApplyBuff(buff: damageBuff, ContextDuration.Fixed(1, rate: DurationRate.Days)).Build(),

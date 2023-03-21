@@ -18,5 +18,9 @@
   {
     "Key": "wotr-making-friends.releasethehoundswolf.name",
     "enGB": "Winter Wolf"
+  },
+  {
+    "Key": "wotr-making-friends.meladaemonsummon.name",
+    "enGB": "Meladaemon"
   }
 ]

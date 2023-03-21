@@ -174,5 +174,13 @@
   {
     "Key": "wotr-making-friends.summonerinyes.description",
     "enGB": "This spell functions like summon monster, except it summons an Erinyes devil."
+  },
+  {
+    "Key": "wotr-making-friends.summonmeladaemon.name",
+    "enGB": "Summon Meladaemon"
+  },
+  {
+    "Key": "wotr-making-friends.summonmeladaemon.description",
+    "enGB": "This spell functions like summon monster, except it summons a Meladaemon."
   }
 ]

@@ -14,7 +14,7 @@ using WOTR_MAKING_FRIENDS.AiActions;
 using WOTR_MAKING_FRIENDS.Brains;
 using WOTR_MAKING_FRIENDS.CharacterClass;
 using WOTR_MAKING_FRIENDS.Features;
-using WOTR_MAKING_FRIENDS.Spells;
+using WOTR_MAKING_FRIENDS.Spells.Summoning;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
 using WOTR_MAKING_FRIENDS.Abilities;

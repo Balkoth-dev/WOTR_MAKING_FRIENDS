@@ -31,12 +31,12 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(InternalString.SummonerClass, GetGUID.SummonerClass).Configure();
 
             var summonerProgression = SummonerProgression.Initialize();
-            var arcanistSpellbook = SpellbookRefs.ArcanistSpellbook.Reference.Get();
+            var summonerSpellbook = SummonerSpellbook.CreateSpellBook();
 
             CharacterClassConfigurator.For(GetGUID.SummonerClass)
                 .SetLocalizedName(InternalString.SummonerClassName)
                 .SetLocalizedDescription(InternalString.SummonerClassDescription)
-                .SetSpellbook(arcanistSpellbook)
+                .SetSpellbook(summonerSpellbook)
                 .SetProgression(summonerProgression)
                 .SetSkillPoints(1)
                 .SetHitDie(DiceType.D8)

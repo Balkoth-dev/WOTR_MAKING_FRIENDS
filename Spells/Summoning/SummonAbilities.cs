@@ -14,7 +14,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 
-namespace WOTR_MAKING_FRIENDS.Spells
+namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
 	public static class SummonAbilities
 	{
@@ -454,7 +454,18 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+				spellListComponents = new() {
+					{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.BardClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
+					{ GetGUID.SummonerSpellbookSpellList, 1 },
+				},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -474,7 +485,18 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+				spellListComponents = new() {
+					{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.BardClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
+					{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
+					{ GetGUID.SummonerSpellbookSpellList, 1 },
+				},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -491,7 +513,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.SummonMonsterIISingle.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+				spellListComponents = new() {
+					{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 2 },
+					{ GetGUID.SummonerSpellbookSpellList, 2 },
+				},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -509,7 +540,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				numberOfBonusSummons = 1,
 				isFullRound = true,
 				m_icon = AbilityRefs.SummonMonsterIVSingle.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+				spellListComponents = new() {
+					{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 4 },
+					{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 4 },
+					{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 4 },
+					{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 4 },
+					{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 4 },
+					{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 4 },
+					{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 4 },
+					{ GetGUID.SummonerSpellbookSpellList, 3 },
+				},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -526,7 +566,18 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.SummonMonsterIISingle.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+				spellListComponents = new() {
+					{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.BardClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.DruidClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.HunterClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.ShamanClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 2 },
+					{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 2 },
+					{ GetGUID.SummonerSpellbookSpellList, 2 },
+				},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -548,7 +599,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.FormOfTheDragonIBlack.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+						{ GetGUID.SummonerSpellbookSpellList, 3 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel(),
 				materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
 			},
@@ -571,7 +629,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.FormOfTheDragonIBlue.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+						{ GetGUID.SummonerSpellbookSpellList, 3 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel(),
 				materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
 			},
@@ -594,7 +659,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.FormOfTheDragonIBrass.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+						{ GetGUID.SummonerSpellbookSpellList, 3 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel(),
 				materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
 			},
@@ -617,7 +689,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.FormOfTheDragonIGreen.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+						{ GetGUID.SummonerSpellbookSpellList, 3 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel(),
 				materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
 			},
@@ -640,7 +719,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.FormOfTheDragonIRed.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+						{ GetGUID.SummonerSpellbookSpellList, 3 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel(),
 				materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
 			},
@@ -664,7 +750,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.FormOfTheDragonISilver.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+						{ GetGUID.SummonerSpellbookSpellList, 3 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel(),
 				materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
 			},
@@ -688,7 +781,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.FormOfTheDragonIWhite.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
+						{ GetGUID.SummonerSpellbookSpellList, 3 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel(),
 				materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
 			},
@@ -709,7 +809,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.DemonicFormIBrimorak.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
+						{ GetGUID.SummonerSpellbookSpellList, 4 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -729,7 +838,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.DemonicFormIBabau.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
+						{ GetGUID.SummonerSpellbookSpellList, 4 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -749,7 +867,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.DemonicFormISchir.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
+						{ GetGUID.SummonerSpellbookSpellList, 4 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -770,7 +897,16 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.DemonicFormIIDerakni.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
+						{ GetGUID.SummonerSpellbookSpellList, 4 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -790,7 +926,14 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.MountTargetAbility.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 6 },
+						{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 6 },
+						{ CharacterClassRefs.DruidClass.Reference.Guid.ToString(), 6 },
+						{ CharacterClassRefs.HunterClass.Reference.Guid.ToString(), 6 },
+						{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 6 },
+						{ GetGUID.SummonerSpellbookSpellList, 4 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -810,7 +953,18 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.BalefulPolymorph.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.BardClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.DruidClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.HunterClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.ShamanClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
+						{ GetGUID.SummonerSpellbookSpellList, 5 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 			new SummonAbility
@@ -829,7 +983,45 @@ namespace WOTR_MAKING_FRIENDS.Spells
 				actionType = CommandType.Standard,
 				isFullRound = true,
 				m_icon = AbilityRefs.HellsDecreeAbilityMagicConjuration.Reference.Get().m_Icon,
-				spellListComponents = new() { },
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.BardClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
+						{ GetGUID.SummonerSpellbookSpellList, 5 },
+					},
+				contextRankConfig = ContextRankConfigs.CasterLevel()
+			},
+			new SummonAbility
+			{
+				name = "SummonMeladaemon",
+				guid = GetGUID.SummonMeladaemon,
+				defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.MeladaemonSummon),
+				summonBuff = new BlueprintBuffReference[]{
+					BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
+				},
+				numberOfSummons = DiceType.One,
+				durationRate = DurationRate.Rounds,
+				localizationDuration = Duration.RoundPerLevel,
+				m_DisplayName = Helpers.ObtainString("SummonMeladaemon.Name"),
+				m_Description = Helpers.ObtainString("SummonMeladaemon.Description"),
+				actionType = CommandType.Standard,
+				isFullRound = true,
+				m_icon = AbilityRefs.WavesOfFatigue.Reference.Get().m_Icon,
+					spellListComponents = new() {
+						{ CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 8 },
+						{ CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 8 },
+						{ CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 8 },
+						{ CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 8 },
+						{ CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 8 },
+						{ CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 8 },
+						{ GetGUID.SummonerSpellbookSpellList, 6 },
+					},
 				contextRankConfig = ContextRankConfigs.CasterLevel()
 			},
 		};
