@@ -24,6 +24,7 @@ using Kingmaker.AI.Blueprints;
 using BlueprintCore.Utils;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.Blueprints.Classes.Experience;
+using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -35,10 +36,13 @@ namespace WOTR_MAKING_FRIENDS.Units
             {
                 var copiedUnit = BlueprintTool.Get<BlueprintUnit>(newUnit.copiedUnit.ToString());
 
+                var sharedStringAsset = ScriptableObject.CreateInstance<SharedStringAsset>();
+                sharedStringAsset.String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String;
+
                 var unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
                     .CopyFrom(newUnit.copiedUnit)
                     .CopyFrom(newUnit.copiedUnit, c => c is not null)
-                    .SetLocalizedName(new SharedStringAsset() { String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String })
+                    .SetLocalizedName(sharedStringAsset)
                     .AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference)
                     .AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference)
                     .AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid })
@@ -54,7 +58,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetSize(newUnit.size ?? copiedUnit.Size);
 
                 if(newUnit.blueprintUnitFactReferences != null)
-                unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
+                    unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
 
                 unitConfigured.Configure();
             }

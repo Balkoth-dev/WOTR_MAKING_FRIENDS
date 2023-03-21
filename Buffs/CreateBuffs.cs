@@ -33,9 +33,15 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         internal static readonly BlueprintAbility iceBody = BlueprintTool.Get<BlueprintAbility>("89778dc261fe6094bb2445cb389842d2");
         public static void CreateAllBuffs()
         {
+            CreateDummyBuff();
             StampedeTrampleDamageImmunityBuff();
             StampedeAttackBuff();
             ReleaseTheHoundsBuff();
+        }
+
+        private static void CreateDummyBuff()
+        {
+            BuffConfigurator.New("dummyBuff", GetGUID.DummyBuff).Configure();
         }
 
         public static void StampedeTrampleDamageImmunityBuff()

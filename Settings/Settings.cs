@@ -19,6 +19,7 @@ using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
 using WOTR_MAKING_FRIENDS.Abilities;
 using WOTR_MAKING_FRIENDS.Buffs;
+using WOTR_MAKING_FRIENDS.SummonPools;
 
 namespace WOTR_MAKING_FRIENDS.Settings
 {
@@ -69,14 +70,15 @@ namespace WOTR_MAKING_FRIENDS.Settings
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
 
+            SummonerClass.CreateSummonerClass();
             CreateFeatures.CreateAllFeatures();
             CreateBuffs.CreateAllBuffs();
             CreateAbilities.CreateAllAbilities();
             CreateAiActions.CreateAllAiActions();
             CreateBrains.CreateAllBrains();
             CreateUnits.CreateAllUnits();
-            CreateSummonSpells.CreateSpells();
-            SummonerClass.CreateSummonerClass();
+            CreateSummonPools.CreateAllSummonPools();
+            CreateSummonSpells.CreateSummoningSpells();
         }
         class SettingsUI
         {

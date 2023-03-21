@@ -1,4 +1,5 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators;
+﻿using BlueprintCore.Blueprints.Configurators.AI;
+using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Utils;
 using Kingmaker.AI.Blueprints;
 using Kingmaker.Blueprints;
@@ -21,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
             DraconicAllyBrain();
             StampedeHorseBrain();
         }
-
+        
         private static void DraconicAllyBrain()
         {
             var brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.DraconicAllyBrain).Configure();

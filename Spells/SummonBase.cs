@@ -31,6 +31,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
             internal Sprite m_icon;
             /// <summary>  IsFullRound true, it will use that instead of the action type. </summary>
             internal bool isFullRound;
+            /// <summary> List of spell list components. This is grouped up because an ability can belong to multiple spell lists. </summary>
+            internal Dictionary<string, int> spellListComponents;
         };
 
         public static SummonAbilityBase[] summonBaseAbilities =
@@ -42,7 +44,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterISingle.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,1 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -51,7 +54,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIIBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterIIBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterIIBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,2 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -60,7 +64,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIIIBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterIIIBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterIIIBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,3 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -69,7 +74,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIVBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIVBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterIVBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterIVBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,4 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -78,7 +84,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterVBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterVBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,5 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -87,7 +94,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVIBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterVIBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterVIBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,6 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -96,7 +104,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVIIBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterVIIBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterVIIBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,7 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -105,7 +114,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVIIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVIIIBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterVIIIBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterVIIIBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,8 } }
                 },
                 new SummonAbilityBase()
                 {
@@ -114,7 +124,8 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_Description,
-                    m_icon = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_Icon
+                    m_icon = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_Icon,
+                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,9 } }
                 },
                 new SummonAbilityBase()
                 {

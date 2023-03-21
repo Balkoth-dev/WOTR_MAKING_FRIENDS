@@ -34,6 +34,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentPatches
                     Main.Log(caster.CharacterName);
                     Main.Log(__instance.AbilityContext.MaybeCaster.CharacterName);
                     Main.Log((__instance.AbilityContext.MaybeCaster == caster) ? "True":"False");
+                    Main.Log(pool.Blueprint.AssetGuid.m_Guid.ToString());
 
                     if (__instance.AbilityContext.MaybeCaster == caster)
                     {

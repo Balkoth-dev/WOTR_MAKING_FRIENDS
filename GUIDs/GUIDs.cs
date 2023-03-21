@@ -23,6 +23,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
 
         #region
         internal const string SummonerPool = "e3640f25-ed1e-4a6b-933a-380dd008839d";
+        internal const string DraconicAllyPool = "f2754c34-dbf6-492f-bb69-b0e46ae8168b";
         #endregion
 
         #region SummonSpells

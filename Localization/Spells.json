@@ -53,7 +53,7 @@
   },
   {
     "Key": "wotr-making-friends.summondraconicallybase.description",
-    "enGB": "You create a semi-living intelligent draconic servant that loyally obeys and serves you. Treat this servant as a pseudodragon with all of the abilities of Form of the Dragon I. They keep their breath weapon, dealing 6d8 damage depending on the type of dragon chosen."
+    "enGB": "You create a semi-living intelligent draconic servant that loyally obeys and serves you. Treat this servant as a pseudodragon with all of the abilities of Form of the Dragon I. They keep their breath weapon, dealing 6d8 damage depending on the type of dragon chosen. You may only summon one draconic ally at a time."
   },
   {
     "Key": "wotr-making-friends.summondraconicallyblack.name",
@@ -165,7 +165,7 @@
   },
   {
     "Key": "wotr-making-friends.summonreleasethehounds.description",
-    "enGB": "This spell functions like summon monster, except it summons 1d4+4 frost wolves. These wolves do not attack enemies, but move about the battlefield.\nAny enemies caught in the pack’s path take 3d6 points of cold damage at the start of their turn and may become prone (DC 20 Reflex) as the wolves attack their prey."
+    "enGB": "This spell functions like summon monster, except it summons 1d4+4 frost wolves. These wolves do not attack enemies, but move about the battlefield.\nAny enemies caught in the pack’s path take 3d6 points of cold damage at the start of their turn and may become prone (DC 20 Reflex)."
   },
   {
     "Key": "wotr-making-friends.summonerinyes.name",
