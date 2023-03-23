@@ -15,6 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\Abilities\BlackTentacles.png" />
+    <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\Abilities\BlackTentaclesScroll.png" />
     <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\Settings\makingfriends.png" />
     <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Info.json" />
   </ItemGroup>

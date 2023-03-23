@@ -177,7 +177,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             spelllist.m_Spells = new()
             {
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.AcidPit.ToString()),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.DimensionDoor.ToString()),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.DimensionDoorBase.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.EnlargePersonMass.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.InvisibilityGreater.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ObsidianFlow.ToString()),
@@ -185,6 +185,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ReducePersonMass.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Stoneskin.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.SummonMonsterVBase.ToString()),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ElementalWallFireAbility.ToString()),
             };
             return spelllist;
         }

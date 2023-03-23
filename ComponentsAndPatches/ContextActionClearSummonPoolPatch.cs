@@ -15,7 +15,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WOTR_MAKING_FRIENDS.ComponentPatches
+namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
 {
     [HarmonyPatch(typeof(ContextActionClearSummonPool), "RunAction")]
     public class ContextActionClearSummonPoolPatch

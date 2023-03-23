@@ -69,6 +69,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonMeladaemon = "a748d90c-6581-4fb3-a1ff-4dea7f83d452";
         #endregion
 
+        #region Spells
+        internal const string BlackTentaclesSpell = "22e44d47-556f-4f5b-8ed4-7363dc7d2f83";
+        #endregion
+
         #region Scrolls
         internal const string SummonMinorMonsterRedPandaScroll = "ba4e69ee-5363-4f30-8ec7-f895a738473d";
         internal const string SummonMinorMonsterCatScroll = "ba3f996c-f236-4afe-916d-166c37ba6c4e";
@@ -156,6 +160,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string ReleaseTheHoundsDamageAreaBuff = "f6e14336-9c39-46ca-b287-8041e7d445ca";
         internal const string ReleaseTheHoundsDamageBuffAreaBuff = "75331a64-5dc5-4b41-8211-6aa40fc17fec";
         internal const string ReleaseTheHoundsDamageAreaEffect = "40fa7a1e-aa6b-4c96-93e9-e2c8746c80eb";
+        internal const string BlackTentaclesBuff = "618ac21a-a0c8-4f76-a1b5-27893cccc63a";
         #endregion
 
         #region AiAttackAction
@@ -168,6 +173,13 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string StampedeTrampleAiAction = "c5cf87eb-d612-46b0-bae7-58517342e6e0";
         #endregion
 
+        #region Fx
+        internal const string BlackTentaclesFx = "8f1d08da-42bd-4e9c-becd-1c88e7a2daf5";
+        #endregion
+
+        #region 
+        internal const string BlackTentaclesAreaEffect = "96d8224c-482e-4c22-95b0-d8c0cff5a9a3";
+        #endregion
         public static string GUIDByName(string s)
         {
             var fieldInfo = typeof(GetGUID).GetField(s, BindingFlags.NonPublic | BindingFlags.Static);
