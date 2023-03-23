@@ -71,6 +71,8 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
 
         #region Spells
         internal const string BlackTentaclesSpell = "22e44d47-556f-4f5b-8ed4-7363dc7d2f83";
+        internal const string InfernalHealingSpell = "c12504ef-576c-4d5e-9bd5-4940c94c78f9";
+        internal const string GreaterInfernalHealingSpell = "dec783bf-05d0-4c4c-a676-9c92e0a25617";
         #endregion
 
         #region Scrolls

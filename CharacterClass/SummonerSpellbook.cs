@@ -41,7 +41,6 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             SpellsTableConfigurator.New(InternalString.SummonerSpellbookName + "SpellsPerDayTable", GetGUID.SummonerSpellbookSpellsPerDay)
                 .SetLevels(new SpellsLevelEntry[] {
-                        CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,1),
                         CreateSpellLevelEntry(0,2),
                         CreateSpellLevelEntry(0,3),
@@ -70,7 +69,6 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             SpellsTableConfigurator.New(InternalString.SummonerSpellbook + ".SpellKnownTable", GetGUID.SummonerSpellbookSpellsKnown)
                 .SetLevels(new SpellsLevelEntry[] {
-                        CreateSpellLevelEntry(4),
                         CreateSpellLevelEntry(4,2),
                         CreateSpellLevelEntry(5,3),
                         CreateSpellLevelEntry(6,4),
@@ -103,7 +101,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.AcidSplash.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Daze.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Guidance.ToString()),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.DayLight.ToString()),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.MageLight.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Resistance.ToString())
             };
             return spelllist;
@@ -143,6 +141,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.OwlsWisdom.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ProtectionFromArrows.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ProtectionFromAlignmentCommunal.ToString()),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.RayOfSickening.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ResistEnergy.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.SeeInvisibility.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.SummonMonsterIIBase.ToString())

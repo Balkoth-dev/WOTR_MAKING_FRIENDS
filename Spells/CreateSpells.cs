@@ -36,7 +36,9 @@ namespace WOTR_MAKING_FRIENDS.Spells
         {
             CreateSummonSpells.CreateSummoningSpells();
             BlackTentacles.CreateBlackTentaclesSpell();
-            }
+            InfernalHealing.CreateInfernalHealing();
+            InfernalHealing.CreateGreaterInfernalHealing();
+        }
 
 
     }
