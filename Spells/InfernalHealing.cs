@@ -57,6 +57,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         {
             var spell = AbilityConfigurator.New(InternalString.InfernalHealingSpellName, GetGUID.InfernalHealingSpell)
                 .CopyFrom(AbilityRefs.CureLightWounds)
+                .SetDisplayName(InternalString.InfernalHealingNameSpellName)
+                .SetDescription(InternalString.InfernalHealingNameSpellDescription)
                 .AddActionsOnBuffApply(
                 ActionsBuilder.New()
                 .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing1.Cast<BlueprintBuffReference>().Reference, 60)
@@ -76,6 +78,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         {
             var spell = AbilityConfigurator.New(InternalString.GreaterInfernalHealingSpellName, GetGUID.GreaterInfernalHealingSpell)
                 .CopyFrom(AbilityRefs.CureLightWounds)
+                .SetDisplayName(InternalString.GreaterInfernalHealingNameSpellName)
+                .SetDescription(InternalString.GreaterInfernalHealingNameSpellDescription)
                 .AddActionsOnBuffApply(
                 ActionsBuilder.New()
                 .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing4.Cast<BlueprintBuffReference>().Reference, 60)

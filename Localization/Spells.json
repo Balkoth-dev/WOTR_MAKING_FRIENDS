@@ -197,7 +197,7 @@
   },
   {
     "Key": "wotr-making-friends.infernalhealingspell.description",
-    "enGB": "You anoint a wounded creature with devil’s blood or unholy water, giving it fast healing 1. This ability cannot repair damage caused by silver weapons, good-aligned weapons, or spells or effects with the good descriptor. The target detects as evil for the duration of the spell and can sense the evil of the magic, though this has no long-term effect on the target’s alignment."
+    "enGB": "You anoint a wounded creature with devil’s blood or unholy water, giving it fast healing 1."
   },
   {
     "Key": "wotr-making-friends.greaterinfernalhealingspell.name",
@@ -205,6 +205,14 @@
   },
   {
     "Key": "wotr-making-friends.greaterinfernalhealingspell.description",
-    "enGB": "You anoint a wounded creature with devil’s blood or unholy water, giving it fast healing 4. This ability cannot repair damage caused by silver weapons, good-aligned weapons, or spells or effects with the good descriptor. The target detects as evil for the duration of the spell and can sense the evil of the magic, though this has no long-term effect on the target’s alignment."
+    "enGB": "You anoint a wounded creature with devil’s blood or unholy water, giving it fast healing 4."
+  },
+  {
+    "Key": "wotr-making-friends.overstimulatespell.name",
+    "enGB": "Overstimulate"
+  },
+  {
+    "Key": "wotr-making-friends.overstimulatespell.description",
+    "enGB": "You deprive a creature of the blissful oblivion of unconsciousness, either to keep it going despite grievous injuries or to prolong its suffering. For the duration of the spell, the target gains the ferocity ability, allowing it to remain conscious and continue fighting even if its hit point total is below 0. The target is still staggered and loses 1 hit point each round, and the target still dies when its hit point total reaches a negative amount equal to its Constitution score."
   }
 ]

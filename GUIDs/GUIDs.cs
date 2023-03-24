@@ -73,6 +73,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string BlackTentaclesSpell = "22e44d47-556f-4f5b-8ed4-7363dc7d2f83";
         internal const string InfernalHealingSpell = "c12504ef-576c-4d5e-9bd5-4940c94c78f9";
         internal const string GreaterInfernalHealingSpell = "dec783bf-05d0-4c4c-a676-9c92e0a25617";
+        internal const string OverstimulateSpell = "a04b5c9d-91ea-43c9-beb0-0b85fb65d1d8";
         #endregion
 
         #region Scrolls
@@ -114,9 +115,6 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonLesserDemonBase = "6d8aeb90-d871-4e16-8fcd-0232f94307e9";
         #endregion
 
-        #region Buffs
-        internal const string DummyBuff = "8d03ce95-b4ed-4ec2-b9b2-c535325956f0";
-        #endregion
 
         #region Units
         internal const string RedPandaSummon = "05708f21-cb8d-46ee-8f4e-d4bd5a5eedc8";
@@ -162,6 +160,8 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string ReleaseTheHoundsDamageAreaBuff = "f6e14336-9c39-46ca-b287-8041e7d445ca";
         internal const string ReleaseTheHoundsDamageBuffAreaBuff = "75331a64-5dc5-4b41-8211-6aa40fc17fec";
         internal const string ReleaseTheHoundsDamageAreaEffect = "40fa7a1e-aa6b-4c96-93e9-e2c8746c80eb";
+        internal const string DummyBuff = "8d03ce95-b4ed-4ec2-b9b2-c535325956f0";
+        internal const string OverstimulateBuff = "05147ea5-8183-4c63-a3b0-47eb4af7fa32";
         internal const string BlackTentaclesBuff = "618ac21a-a0c8-4f76-a1b5-27893cccc63a";
         #endregion
 
