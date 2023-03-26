@@ -19,9 +19,7 @@ namespace WOTR_MAKING_FRIENDS.Features
     {
         public static void CreateAllFeatures()
         {
-        }
-        public static void AddDynamicBreathWeapon()
-        {
+            EidolonLifeLink.CreateEidolonLifeLink();
         }
     }
 }

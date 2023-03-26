@@ -146,9 +146,14 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         #endregion
 
         #region Features
+        internal const string SummonerLifeLinkFeature = "36141547-3a7e-4da7-8789-733938ff4ee5";
         #endregion
 
         #region Abilities
+        #endregion
+
+        #region ActivatableAbilities
+        internal const string SummonerLifeLinkActivatableAbility = "5e08e283-da1d-4d32-b38c-c3df77d72244";
         #endregion
 
         #region Buffs
@@ -163,6 +168,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string DummyBuff = "8d03ce95-b4ed-4ec2-b9b2-c535325956f0";
         internal const string OverstimulateBuff = "05147ea5-8183-4c63-a3b0-47eb4af7fa32";
         internal const string BlackTentaclesBuff = "618ac21a-a0c8-4f76-a1b5-27893cccc63a";
+        internal const string SummonerLifeLinkBuff = "f0f0f207-bb8e-4419-b058-937fa0ffb16b";
         #endregion
 
         #region AiAttackAction

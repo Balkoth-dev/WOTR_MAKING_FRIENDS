@@ -37,6 +37,8 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             SummonStampedeBuffs.CreateStampedeAttackBuff();
             ReleaseTheHoundsBuffs.CreateReleaseTheHoundsBuff();
             BlackTentaclesBuffs.CreateBlackTentaclesBuff();
+            OverstimulateBuff.CreateOverstimulateBuff();
+            SummonerLifeLinkBuff.CreateSummonerLifeLinkBuff();
         }
 
         private static void CreateDummyBuff()

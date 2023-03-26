@@ -38,6 +38,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
             BlackTentacles.CreateBlackTentaclesSpell();
             InfernalHealing.CreateInfernalHealing();
             InfernalHealing.CreateGreaterInfernalHealing();
+            Overstimulate.CreateOverstimulate();
         }
 
 

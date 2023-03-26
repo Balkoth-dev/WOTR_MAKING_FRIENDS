@@ -41,8 +41,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             { CharacterClassRefs.RangerClass.Reference.Guid.ToString(), 2 },
             { CharacterClassRefs.ShamanClass.Reference.Guid.ToString(), 2 },
             { CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
+            { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 2 },
+            { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 2 },
             { GetGUID.SummonerSpellbookSpellList, 2 }
         };
         public static void CreateOverstimulate()
