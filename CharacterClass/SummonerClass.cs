@@ -12,7 +12,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
-    class SummonerClass
+    internal class SummonerClass
     {
         private static class InternalString
         {
@@ -24,8 +24,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(InternalString.SummonerClass, GetGUID.SummonerClass).Configure();
 
-            var summonerProgression = SummonerProgression.Initialize();
-            var summonerSpellbook = SummonerSpellbook.CreateSpellBook();
+            BlueprintProgression summonerProgression = SummonerProgression.Initialize();
+            Kingmaker.Blueprints.Classes.Spells.BlueprintSpellbook summonerSpellbook = SummonerSpellbook.CreateSpellBook();
 
             CharacterClassConfigurator.For(GetGUID.SummonerClass)
                 .SetLocalizedName(InternalString.SummonerClassName)

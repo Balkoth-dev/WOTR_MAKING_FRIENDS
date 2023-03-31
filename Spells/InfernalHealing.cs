@@ -11,7 +11,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
-    class InfernalHealing
+    internal class InfernalHealing
     {
         private static class InternalString
         {
@@ -50,7 +50,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         };
         public static void CreateInfernalHealing()
         {
-            var spell = AbilityConfigurator.New(InternalString.InfernalHealingSpellName, GetGUID.InfernalHealingSpell)
+            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.InfernalHealingSpellName, GetGUID.InfernalHealingSpell)
                 .CopyFrom(AbilityRefs.CureLightWounds)
                 .SetDisplayName(InternalString.InfernalHealingNameSpellName)
                 .SetDescription(InternalString.InfernalHealingNameSpellDescription)
@@ -62,7 +62,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             if (infernalHealingSpellListComponents != null)
             {
-                foreach (var spellList in infernalHealingSpellListComponents)
+                foreach (KeyValuePair<string, int> spellList in infernalHealingSpellListComponents)
                 {
                     spell.AddToSpellList(spellList.Value, BlueprintTool.GetRef<BlueprintSpellListReference>(spellList.Key), true);
                 }
@@ -71,7 +71,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         }
         public static void CreateGreaterInfernalHealing()
         {
-            var spell = AbilityConfigurator.New(InternalString.GreaterInfernalHealingSpellName, GetGUID.GreaterInfernalHealingSpell)
+            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.GreaterInfernalHealingSpellName, GetGUID.GreaterInfernalHealingSpell)
                 .CopyFrom(AbilityRefs.CureLightWounds)
                 .SetDisplayName(InternalString.GreaterInfernalHealingNameSpellName)
                 .SetDescription(InternalString.GreaterInfernalHealingNameSpellDescription)
@@ -83,7 +83,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             if (greaterInfernalHealingSpellListComponents != null)
             {
-                foreach (var spellList in greaterInfernalHealingSpellListComponents)
+                foreach (KeyValuePair<string, int> spellList in greaterInfernalHealingSpellListComponents)
                 {
                     spell.AddToSpellList(spellList.Value, BlueprintTool.GetRef<BlueprintSpellListReference>(spellList.Key), true);
                 }

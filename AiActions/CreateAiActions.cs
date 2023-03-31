@@ -7,7 +7,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.AiActions
 {
-    class CreateAiActions
+    internal class CreateAiActions
     {
         internal static readonly BlueprintAiCastSpell redDragonWoundWorm_BreathAIAction = BlueprintTool.Get<BlueprintAiCastSpell>("c7ea84c0eda8155499bb5005103504cf");
         public static readonly BlueprintAiCastSpell chargeAiAction = BlueprintTool.Get<BlueprintAiCastSpell>("05003725a881c10419530387b6de5c9a");
@@ -24,32 +24,32 @@ namespace WOTR_MAKING_FRIENDS.AiActions
 
         public static void FormOfTheDragonIGoldAiAction()
         {
-            var aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIGoldAiAction", GetGUID.FormOfTheDragonIGoldAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
+            BlueprintAiCastSpell aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIGoldAiAction", GetGUID.FormOfTheDragonIGoldAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
             aiAction.m_Ability = AbilityRefs.FormOfTheDragonIGoldBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference;
         }
         public static void FormOfTheDragonISilverAiAction()
         {
-            var aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonISilverAiAction", GetGUID.FormOfTheDragonISilverAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
+            BlueprintAiCastSpell aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonISilverAiAction", GetGUID.FormOfTheDragonISilverAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
             aiAction.m_Ability = AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference;
         }
         public static void FormOfTheDragonIBlackAiAction()
         {
-            var aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIBlackAiAction", GetGUID.FormOfTheDragonIBlackAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
+            BlueprintAiCastSpell aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIBlackAiAction", GetGUID.FormOfTheDragonIBlackAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
             aiAction.m_Ability = AbilityRefs.FormOfTheDragonIBlackBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference;
         }
         public static void FormOfTheDragonIBlueAiAction()
         {
-            var aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIBlueAiAction", GetGUID.FormOfTheDragonIBlueAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
+            BlueprintAiCastSpell aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIBlueAiAction", GetGUID.FormOfTheDragonIBlueAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
             aiAction.m_Ability = AbilityRefs.FormOfTheDragonIBlueBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference;
         }
         public static void FormOfTheDragonIBrassAiAction()
         {
-            var aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIBrassAiAction", GetGUID.FormOfTheDragonIBrassAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
+            BlueprintAiCastSpell aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIBrassAiAction", GetGUID.FormOfTheDragonIBrassAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
             aiAction.m_Ability = AbilityRefs.FormOfTheDragonIBrassBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference;
         }
         public static void FormOfTheDragonIGreenAiAction()
         {
-            var aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIGreenAiAction", GetGUID.FormOfTheDragonIGreenAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
+            BlueprintAiCastSpell aiAction = BlueprintConfigurator<BlueprintAiCastSpell>.New("FormOfTheDragonIGreenAiAction", GetGUID.FormOfTheDragonIGreenAiAction).CopyFrom(redDragonWoundWorm_BreathAIAction).Configure();
             aiAction.m_Ability = AbilityRefs.FormOfTheDragonIGreenBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference;
         }
     }

@@ -7,7 +7,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
-    class OverstimulateBuff
+    internal class OverstimulateBuff
     {
         private static class InternalString
         {

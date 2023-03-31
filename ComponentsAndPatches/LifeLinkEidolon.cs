@@ -2,9 +2,7 @@
 using Kingmaker.Blueprints.Facts;
 using Kingmaker.Designers;
 using Kingmaker.ElementsSystem;
-using Kingmaker.EntitySystem;
 using Kingmaker.EntitySystem.Entities;
-using Kingmaker.EntitySystem.Stats;
 using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules.Damage;
 using Kingmaker.UI.Models.Log;
@@ -32,53 +30,64 @@ namespace WOTR_MAKING_FRIENDS.ComponentsAndPatches
 
         public override void OnTurnOn()
         {
-            if (!this.Owner.IsPet && !this.Owner.IsReallyInFactPet)
+            if (!Owner.IsPet && !Owner.IsReallyInFactPet)
             {
                 return;
             }
             base.OnTurnOn();
-            this.Owner.State.Features.Infallible.Retain();
-            this.Owner.Stats.HitPoints.AddDependentComponent((EntityFactComponent)this.Runtime);
-            this.TryReduceDamage();
+            Owner.State.Features.Infallible.Retain();
+            Owner.Stats.HitPoints.AddDependentComponent(Runtime);
+            TryReduceDamage();
         }
 
         public override void OnTurnOff()
         {
             base.OnTurnOff();
-            this.Owner.State.Features.Infallible.Release();
-            this.Owner.Stats.HitPoints.RemoveDependentComponent((EntityFactComponent)this.Runtime);
+            Owner.State.Features.Infallible.Release();
+            Owner.Stats.HitPoints.RemoveDependentComponent(Runtime);
         }
 
         public void OnEventAboutToTrigger(RuleDealDamage evt)
         {
         }
 
-        public void OnEventDidTrigger(RuleDealDamage evt) => this.TryReduceDamage(evt);
+        public void OnEventDidTrigger(RuleDealDamage evt) => TryReduceDamage(evt);
 
         private void TryReduceDamage(RuleDealDamage evt = null)
         {
-            int ownerNum = Math.Min(1, (int)((double)(this.Owner.MaxHP * this.HealthPercent) * 0.00999999977648258));
-            Main.Log(this.Owner.HPLeft + " : " + ownerNum);
-            if (this.Owner.HPLeft > ownerNum)
+            int ownerNum = Math.Min(1, (int)(Owner.MaxHP * HealthPercent * 0.00999999977648258));
+            Main.Log(Owner.HPLeft + " : " + ownerNum);
+            if (Owner.HPLeft > ownerNum)
+            {
                 return;
-            GameHelper.DealDirectDamage(evt != null ? evt.Initiator : this.Owner, this.Owner.Master, this.Owner.Damage - ((int)(ModifiableValue)this.Owner.Stats.HitPoints - ownerNum));
-            this.Owner.Damage = (int)(ModifiableValue)this.Owner.Stats.HitPoints - ownerNum;
+            }
+
+            GameHelper.DealDirectDamage(evt != null ? evt.Initiator : Owner, Owner.Master, Owner.Damage - (Owner.Stats.HitPoints - ownerNum));
+            Owner.Damage = Owner.Stats.HitPoints - ownerNum;
         }
 
         public void HandleUnitFailedToDie(UnitEntityData unit)
         {
-            int damage = this.Owner.HPLeft - Math.Min(1, (int)((double)(this.Owner.MaxHP * this.HealthPercent) * 0.00999999977648258));
+            int damage = Owner.HPLeft - Math.Min(1, (int)(Owner.MaxHP * HealthPercent * 0.00999999977648258));
             if (damage <= 0)
+            {
                 return;
+            }
+
             using (ContextData<GameLogDisabled>.Request())
+            {
                 GameHelper.DealDirectDamage(unit, unit, damage);
+            }
         }
 
         public void HandleUnitHealthChanged(UnitEntityData unit, int previousTotalHP)
         {
-            if (this.Owner != (UnitDescriptor)unit)
+            if (Owner != unit)
+            {
                 return;
-            this.TryReduceDamage();
+            }
+
+            TryReduceDamage();
         }
     }
 }

@@ -10,7 +10,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
-    class SummonerLifeLinkBuff
+    internal class SummonerLifeLinkBuff
     {
         private static class InternalString
         {
@@ -20,12 +20,12 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         public static void CreateSummonerLifeLinkBuff()
         {
-            var applyLifeLink = ActionsBuilder.New().OnPets(ActionsBuilder.New()
+            Kingmaker.ElementsSystem.ActionList applyLifeLink = ActionsBuilder.New().OnPets(ActionsBuilder.New()
                                                             .ApplyBuffPermanent(GetGUID.SummonerLifeLinkBuff, isNotDispelable: true)
                                                             .Build(),
                                                             PetTypeExtensions.Eidolon).Build();
 
-            var disableLifeLink = ActionsBuilder.New().OnPets(ActionsBuilder.New()
+            Kingmaker.ElementsSystem.ActionList disableLifeLink = ActionsBuilder.New().OnPets(ActionsBuilder.New()
                                                             .RemoveBuff(GetGUID.SummonerLifeLinkBuff)
                                                             .Build(),
                                                             PetTypeExtensions.Eidolon).Build();

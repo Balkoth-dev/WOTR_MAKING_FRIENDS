@@ -12,7 +12,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
-    class BlackTentaclesBuffs
+    internal class BlackTentaclesBuffs
     {
         private static class InternalString
         {

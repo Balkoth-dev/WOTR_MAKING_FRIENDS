@@ -2,7 +2,7 @@
 
 namespace WOTR_MAKING_FRIENDS.Spells
 {
-    class CreateSpells
+    internal class CreateSpells
     {
         public static void CreateAllSpells()
         {

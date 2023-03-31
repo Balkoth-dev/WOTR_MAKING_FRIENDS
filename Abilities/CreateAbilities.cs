@@ -1,6 +1,6 @@
 ﻿namespace WOTR_MAKING_FRIENDS.Abilities
 {
-    class CreateAbilities
+    internal class CreateAbilities
     {
         public static void CreateAllAbilities()
         {

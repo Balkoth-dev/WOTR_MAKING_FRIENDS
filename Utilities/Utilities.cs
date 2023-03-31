@@ -10,7 +10,7 @@ using static UnityModManagerNet.UnityModManager;
 
 namespace WOTR_MAKING_FRIENDS.Utilities
 {
-    class AssetLoader
+    internal class AssetLoader
     {
         public static ModEntry ModEntry;
         public static Sprite LoadInternal(string folder, string file, int width = 64, int height = 64)
@@ -23,10 +23,10 @@ namespace WOTR_MAKING_FRIENDS.Utilities
             public static string icons_folder = "";
             public static Sprite Create(string filePath, int height = 64, int width = 64)
             {
-                var bytes = File.ReadAllBytes(icons_folder + filePath);
-                var texture = new Texture2D(height, width, TextureFormat.RGBA32, false);
+                byte[] bytes = File.ReadAllBytes(icons_folder + filePath);
+                Texture2D texture = new Texture2D(height, width, TextureFormat.RGBA32, false);
                 _ = texture.LoadImage(bytes);
-                var sprite = Sprite.Create(texture, new Rect(0, 0, height, width), new Vector2(0, 0));
+                Sprite sprite = Sprite.Create(texture, new Rect(0, 0, height, width), new Vector2(0, 0));
                 return sprite;
             }
         }
@@ -40,19 +40,19 @@ namespace WOTR_MAKING_FRIENDS.Utilities
 
         public static T CreateCopy<T>(T original, Action<T> init = null)
         {
-            var result = (T)ObjectDeepCopier.Clone(original);
+            T result = (T)ObjectDeepCopier.Clone(original);
             init?.Invoke(result);
             return result;
         }
         public static T Create<T>(Action<T> init = null) where T : new()
         {
-            var result = new T();
+            T result = new T();
             init?.Invoke(result);
             return result;
         }
         public static T GenericAction<T>(Action<T> init = null) where T : Kingmaker.ElementsSystem.GameAction, new()
         {
-            var result = (T)Kingmaker.ElementsSystem.Element.CreateInstance(typeof(T));
+            T result = (T)Kingmaker.ElementsSystem.Element.CreateInstance(typeof(T));
             init?.Invoke(result);
             return result;
         }
@@ -60,9 +60,9 @@ namespace WOTR_MAKING_FRIENDS.Utilities
         {
             try
             {
-                var partialKey = Settings.Settings.PartialKey;
+                string partialKey = Settings.Settings.PartialKey;
                 Regex rgx = new("[^a-z0-9-.]");
-                var key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
+                string key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
                 return LocalizationTool.GetString(key);
             }
             catch (Exception ex)

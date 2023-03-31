@@ -14,18 +14,18 @@ using static WOTR_MAKING_FRIENDS.Units.NewUnits;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
-    class CreateUnits
+    internal class CreateUnits
     {
         public static void CreateAllUnits()
         {
             foreach (NewUnit newUnit in newUnits)
             {
-                var copiedUnit = BlueprintTool.Get<BlueprintUnit>(newUnit.copiedUnit.ToString());
+                BlueprintUnit copiedUnit = BlueprintTool.Get<BlueprintUnit>(newUnit.copiedUnit.ToString());
 
-                var sharedStringAsset = ScriptableObject.CreateInstance<SharedStringAsset>();
+                SharedStringAsset sharedStringAsset = ScriptableObject.CreateInstance<SharedStringAsset>();
                 sharedStringAsset.String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String;
 
-                var unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
+                UnitConfigurator unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
                     .CopyFrom(newUnit.copiedUnit)
                     .CopyFrom(newUnit.copiedUnit, c => c is not null)
                     .SetLocalizedName(sharedStringAsset)
@@ -44,7 +44,9 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetSize(newUnit.size ?? copiedUnit.Size);
 
                 if (newUnit.blueprintUnitFactReferences != null)
+                {
                     unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
+                }
 
                 unitConfigured.Configure();
             }
@@ -112,7 +114,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     GetGUID.DraconicAllySummonWhite
                 };
 
-            foreach (var guid in draconicAllies)
+            foreach (string guid in draconicAllies)
             {
                 UnitConfigurator.For(guid)
                     .RemoveComponents(components => components is AddClassLevels)

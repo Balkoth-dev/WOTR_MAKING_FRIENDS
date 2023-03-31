@@ -3,7 +3,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
-    class CreateBuffs
+    internal class CreateBuffs
     {
         public static void CreateAllBuffs()
         {

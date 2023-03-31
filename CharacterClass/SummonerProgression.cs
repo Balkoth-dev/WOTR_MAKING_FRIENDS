@@ -5,7 +5,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
-    class SummonerProgression
+    internal class SummonerProgression
     {
         private static class Strings
         {
@@ -16,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SummonerProficiencies.Initialize();
             SummonerSecondSpellbook.Initialize();
 
-            var entries = LevelEntryBuilder.New()
+            LevelEntryBuilder entries = LevelEntryBuilder.New()
                     .AddEntry(1, GetGUID.SummonerProficiencies, GetGUID.SummonerSecondSpellbookFeat, GetGUID.SummonerLifeLinkFeature, GetGUID.FakeEidolonFeature);
 
             return ProgressionConfigurator.New(Strings.SummonerProgression, GetGUID.SummonerProgression)

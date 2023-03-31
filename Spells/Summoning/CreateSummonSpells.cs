@@ -40,7 +40,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         internal static BlueprintItemEquipmentUsable summonMonsterISingleScroll = ItemEquipmentUsableRefs.ScrollOfSummonMonsterISingle.Reference.Get();
         public static void CreateSummonAbility(SummonAbility summonAbility)
         {
-            var summonSpell =
+            AbilityConfigurator summonSpell =
             AbilityConfigurator.New(summonAbility.name, summonAbility.guid)
                 .SetIsFullRoundAction(summonAbility.isFullRound)
                 .SetActionType(summonAbility.actionType)
@@ -63,7 +63,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             if (summonAbility.spellListComponents != null)
             {
-                foreach (var spellList in summonAbility.spellListComponents)
+                foreach (KeyValuePair<string, int> spellList in summonAbility.spellListComponents)
                 {
                     if (summonAbility.summonSpellBaseGuid == null)
                     {
@@ -103,7 +103,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
         private static void CreateSummonScroll(SummonAbility summonAbility)
         {
-            var summonScroll = BlueprintConfigurator<BlueprintItemEquipmentUsable>.New(summonAbility.name + "Scroll", GetGUID.GUIDByName(summonAbility.name + "Scroll"))
+            BlueprintItemEquipmentUsable summonScroll = BlueprintConfigurator<BlueprintItemEquipmentUsable>.New(summonAbility.name + "Scroll", GetGUID.GUIDByName(summonAbility.name + "Scroll"))
                 .CopyFrom(summonMonsterISingleScroll)
                 .Configure();
             int maxSpellLevel = 0;
@@ -124,10 +124,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 summonAbility.goodMonster = summonAbility.defaultMonster;
             }
 
-            var summonMonsterConditional = ActionsBuilder.New();
+            ActionsBuilder summonMonsterConditional = ActionsBuilder.New();
 
             if (summonAbility.summonPool != null)
+            {
                 summonMonsterConditional.ClearSummonPool(summonAbility.summonPool);
+            }
 
             summonMonsterConditional.Conditional(
                 ConditionsBuilder.New().Alignment(AlignmentComponent.Evil, true, false),
@@ -141,13 +143,13 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         public static ActionList CreateSummonMonster(SummonAbility summonAbility, BlueprintUnitReference monster)
         {
 
-            var contextDice = summonAbility.numberOfSummons > DiceType.One
+            Kingmaker.UnitLogic.Mechanics.ContextDiceValue contextDice = summonAbility.numberOfSummons > DiceType.One
                               ? ContextDice.Value(summonAbility.numberOfSummons, null, ContextValues.Rank(AbilityRankType.ProjectilesCount))
                               : ContextDice.Value(summonAbility.numberOfSummons);
 
-            var contextDuration = ContextDuration.Variable(ContextValues.Rank(), summonAbility.durationRate, true);
+            Kingmaker.UnitLogic.Mechanics.ContextDurationValue contextDuration = ContextDuration.Variable(ContextValues.Rank(), summonAbility.durationRate, true);
 
-            var summonedBuff = ActionsBuilder
+            ActionsBuilder summonedBuff = ActionsBuilder
                 .New()
                 .Conditional
                     (
@@ -158,7 +160,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             if (summonAbility.summonBuff != null)
             {
-                foreach (var buff in summonAbility.summonBuff)
+                foreach (BlueprintBuffReference buff in summonAbility.summonBuff)
                 {
                     summonedBuff.ApplyBuffPermanent(buff, null, null, null, true);
                 }
@@ -166,7 +168,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             if (summonAbility.blueprintUnitFactReferences != null)
             {
-                foreach (var unitFactRef in summonAbility.blueprintUnitFactReferences)
+                foreach (Blueprint<BlueprintUnitFactReference> unitFactRef in summonAbility.blueprintUnitFactReferences)
                 {
                     summonedBuff.AddFact(unitFactRef, null);
                 }
@@ -175,7 +177,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             summonedBuff.Build();
 
 
-            var summonMonster = ActionsBuilder.New();
+            ActionsBuilder summonMonster = ActionsBuilder.New();
 
             summonMonster.SpawnMonsterUsingSummonPool(contextDice, contextDuration, monster, summonAbility.summonPool, summonedBuff, false, false);
 
@@ -190,7 +192,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
         public static void CreateSummonMonsterBase(SummonAbilityBase summonAbilityBase)
         {
-            var baseSummonSpell = AbilityConfigurator.New(summonAbilityBase.name, summonAbilityBase.guid)
+            AbilityConfigurator baseSummonSpell = AbilityConfigurator.New(summonAbilityBase.name, summonAbilityBase.guid)
                 .SetIcon(summonAbilityBase.m_icon)
                 .SetDisplayName(summonAbilityBase.m_DisplayName)
                 .SetDescription(summonAbilityBase.m_Description)
@@ -201,7 +203,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             if (summonAbilityBase.spellListComponents != null)
             {
-                foreach (var spellList in summonAbilityBase.spellListComponents)
+                foreach (KeyValuePair<string, int> spellList in summonAbilityBase.spellListComponents)
                 {
                     baseSummonSpell.AddToSpellList(spellList.Value, BlueprintTool.GetRef<BlueprintSpellListReference>(spellList.Key), true);
                 }
@@ -245,7 +247,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             Main.Log(count + " total summoning spells created, including base.");
             Main.Log(uniqueCount + " unique summoning spells created.");
 
-            foreach (var baseSummonSpell in baseSummonSpells)
+            foreach (KeyValuePair<string, List<Blueprint<BlueprintAbilityReference>>> baseSummonSpell in baseSummonSpells)
             {
                 AbilityConfigurator.For(baseSummonSpell.Key).AddAbilityVariants(baseSummonSpell.Value).Configure();
             }

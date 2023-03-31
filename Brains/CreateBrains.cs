@@ -6,7 +6,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.Brains
 {
-    class CreateBrains
+    internal class CreateBrains
     {
         internal static readonly BlueprintAiActionReference attackAiAction = BlueprintTool.Get<BlueprintAiAttack>("866ffa6c34000cd4a86fb1671f86c7d8").ToReference<BlueprintAiActionReference>();
         internal static readonly BlueprintAiActionReference vavakia_AiAction_Trample = BlueprintTool.Get<BlueprintAiCastSpell>("03464431e71d4d647ab3f659dcb52633").ToReference<BlueprintAiActionReference>();
@@ -23,7 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void DraconicAllyBrain()
         {
-            var brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.DraconicAllyBrain).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.DraconicAllyBrain).Configure();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 attackAiAction,
@@ -38,7 +38,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void StampedeHorseBrain()
         {
-            var brain = BlueprintConfigurator<BlueprintBrain>.New("StampedeHorseBrain", GetGUID.StampedeHorseBrain).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("StampedeHorseBrain", GetGUID.StampedeHorseBrain).Configure();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 followEnemyAiAction
@@ -47,7 +47,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void MeladaemonBrain()
         {
-            var brain = BlueprintConfigurator<BlueprintBrain>.New("MeladaemonBrain", GetGUID.MeladaemonBrain).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("MeladaemonBrain", GetGUID.MeladaemonBrain).Configure();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 attackAiAction,

@@ -45,14 +45,18 @@ namespace WOTR_MAKING_FRIENDS.Settings
     }
 
     [HarmonyPatch(typeof(BlueprintsCache), nameof(BlueprintsCache.Init))]
-    static class BlueprintsCache_Postfix
+    internal static class BlueprintsCache_Postfix
     {
-        static bool Initialized;
+        private static bool Initialized;
 
         [HarmonyPatch(nameof(BlueprintsCache.Init)), HarmonyPostfix]
-        static void Postfix()
+        private static void Postfix()
         {
-            if (Initialized) return;
+            if (Initialized)
+            {
+                return;
+            }
+
             Initialized = true;
 
             // Load Localizations
@@ -78,7 +82,8 @@ namespace WOTR_MAKING_FRIENDS.Settings
             CreateSummonPools.CreateAllSummonPools();
             CreateSpells.CreateAllSpells();
         }
-        class SettingsUI
+
+        private class SettingsUI
         {
             private static readonly string RootKey = Settings.RootKey;
             private static readonly SettingsBuilder sb = SettingsBuilder.New(RootKey, GetString("title"));
@@ -151,7 +156,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             }
             private static LocalizedString GetString(string key)
             {
-                var fullKey = GetKey(key);
+                string fullKey = GetKey(key);
                 return LocalizationTool.GetString(fullKey);
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace WOTR_MAKING_FRIENDS.Features
 {
-    class CreateFeatures
+    internal class CreateFeatures
     {
         public static void CreateAllFeatures()
         {

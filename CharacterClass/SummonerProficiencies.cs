@@ -7,7 +7,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
-    class SummonerProficiencies
+    internal class SummonerProficiencies
     {
         private static readonly string Proficiency = "SummonerProficiencies";
         private static readonly LocalizedString ProficiencyName = Helpers.ObtainString(Proficiency + ".Name");

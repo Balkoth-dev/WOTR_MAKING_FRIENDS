@@ -15,35 +15,41 @@ namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
         public int Bonus;
 
 
-        public override string GetCaption() => "Combat maneuver: " + this.Type.ToString();
+        public override string GetCaption() => "Combat maneuver: " + Type.ToString();
 
         public override void RunAction()
         {
 
-            if (this.Target.Unit == null)
+            if (Target.Unit == null)
+            {
                 return;
-            else if (this.Context.MaybeCaster == null)
+            }
+            else if (Context.MaybeCaster == null)
+            {
                 return;
+            }
 
-            var ruleCombatManeuver = new RuleCombatManeuver(this.Context.MaybeCaster, this.Target.Unit, this.Type);
+            RuleCombatManeuver ruleCombatManeuver = new RuleCombatManeuver(Context.MaybeCaster, Target.Unit, Type);
 
             ruleCombatManeuver.AdditionalBonus = Bonus;
 
             try
             {
-                ruleCombatManeuver.ReplaceAttackBonus = this.Context.Params.CasterLevel;
+                ruleCombatManeuver.ReplaceAttackBonus = Context.Params.CasterLevel;
             }
             catch (Exception e)
             {
                 Main.Log(e: e);
             }
 
-            if (this.Context.TriggerRule(ruleCombatManeuver).Success)
+            if (Context.TriggerRule(ruleCombatManeuver).Success)
             {
-                this.Success.Run();
+                Success.Run();
             }
             else
-                this.Failure.Run();
+            {
+                Failure.Run();
+            }
         }
     }
 }

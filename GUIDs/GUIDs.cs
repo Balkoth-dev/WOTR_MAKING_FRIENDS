@@ -191,7 +191,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         #endregion
         public static string GUIDByName(string s)
         {
-            var fieldInfo = typeof(GetGUID).GetField(s, BindingFlags.NonPublic | BindingFlags.Static);
+            FieldInfo fieldInfo = typeof(GetGUID).GetField(s, BindingFlags.NonPublic | BindingFlags.Static);
             if (fieldInfo != null && fieldInfo.FieldType == typeof(string))
             {
                 return (string)fieldInfo.GetValue(null);

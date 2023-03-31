@@ -9,7 +9,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features
 {
-    class FakeEidolonFeature
+    internal class FakeEidolonFeature
     {
         private static class InternalString
         {

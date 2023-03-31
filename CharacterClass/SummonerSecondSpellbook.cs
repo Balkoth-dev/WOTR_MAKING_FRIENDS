@@ -11,7 +11,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
-    class SummonerSecondSpellbook
+    internal class SummonerSecondSpellbook
     {
         private static class InternalString
         {
@@ -25,7 +25,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         // Taken from TTT-Core by Vek17
         public static SpellsLevelEntry CreateSpellLevelEntry(params int[] count)
         {
-            var entry = new SpellsLevelEntry
+            SpellsLevelEntry entry = new SpellsLevelEntry
             {
                 Count = count
             };
@@ -91,7 +91,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static SpellLevelList Create0thLevelSpells()
         {
-            var spelllist = new SpellLevelList(0);
+            SpellLevelList spelllist = new SpellLevelList(0);
             spelllist.m_Spells = new()
             {
 

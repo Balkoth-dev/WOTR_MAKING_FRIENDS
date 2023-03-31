@@ -3,7 +3,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.SummonPools
 {
-    class CreateSummonPools
+    internal class CreateSummonPools
     {
         internal static class InternalString
         {

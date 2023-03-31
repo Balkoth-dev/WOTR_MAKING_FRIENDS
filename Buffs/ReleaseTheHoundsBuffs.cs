@@ -19,14 +19,14 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
-    class ReleaseTheHoundsBuffs
+    internal class ReleaseTheHoundsBuffs
     {
         internal static readonly BlueprintAbility iceBody = BlueprintTool.Get<BlueprintAbility>("89778dc261fe6094bb2445cb389842d2");
         public static void CreateReleaseTheHoundsBuff()
         {
 
 
-            var conditionalDamage = ActionsBuilder.New()
+            Kingmaker.ElementsSystem.ActionList conditionalDamage = ActionsBuilder.New()
                 .Conditional(ConditionsBuilder.New()
                             .IsEnemy(),
                             ActionsBuilder.New().DealDamage(damageType: DamageTypes.Energy(type: DamageEnergyType.Cold), value: ContextDice.Value(DiceType.D6, diceCount: ContextValues.Constant(3)))
@@ -37,14 +37,14 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                       failed: ActionsBuilder.New().KnockdownTarget()).Build()
                             )).Build();
 
-            var damageBuff = BuffConfigurator.New("ReleaseTheHoundsDamageBuff", GetGUID.ReleaseTheHoundsDamageBuff)
+            BlueprintBuff damageBuff = BuffConfigurator.New("ReleaseTheHoundsDamageBuff", GetGUID.ReleaseTheHoundsDamageBuff)
                 .AddNewRoundTrigger(newRoundActions: conditionalDamage)
                 .SetStacking(StackingType.Rank)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
                 .AddContextRankConfig(component: ContextRankConfigs.BuffRank(GetGUID.ReleaseTheHoundsDamageBuff, min: 20))
                 .Configure();
 
-            var area = AbilityAreaEffectConfigurator.New("ReleaseTheHoundsDamageAreaEffect", GetGUID.ReleaseTheHoundsDamageAreaEffect)
+            BlueprintAbilityAreaEffect area = AbilityAreaEffectConfigurator.New("ReleaseTheHoundsDamageAreaEffect", GetGUID.ReleaseTheHoundsDamageAreaEffect)
                 .SetAffectEnemies(true)
                 .SetTargetType(BlueprintAbilityAreaEffect.TargetType.Any)
                 .SetSize(1.Feet())

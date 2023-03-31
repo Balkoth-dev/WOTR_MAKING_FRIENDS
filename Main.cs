@@ -21,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS
             {
                 modInfo = modEntry;
                 Log("Patching...");
-                var harmony = new Harmony(modEntry.Info.Id);
+                Harmony harmony = new Harmony(modEntry.Info.Id);
                 AssetLoader.ModEntry = modEntry;
                 harmony.PatchAll();
 

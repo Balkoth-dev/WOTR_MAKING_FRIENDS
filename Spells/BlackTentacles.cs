@@ -45,12 +45,12 @@ namespace WOTR_MAKING_FRIENDS.Spells
         };
         public static void CreateBlackTentaclesSpell()
         {
-            var sourceFx = "aa448b28b377b1c49b136d88fa346600";
-            var newFx = GetGUID.BlackTentaclesFx;
+            string sourceFx = "aa448b28b377b1c49b136d88fa346600";
+            string newFx = GetGUID.BlackTentaclesFx;
 
             AssetTool.RegisterDynamicPrefabLink(newFx, sourceFx, BlackTentaclesFx);
 
-            var grappleAction = ActionsBuilder.New()
+            ActionList grappleAction = ActionsBuilder.New()
                 .ApplyBuffPermanent(blackTentaclesBuff)
                 .Build();
 
@@ -66,7 +66,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     }
             };
 
-            var areaEffect = AbilityAreaEffectConfigurator.New(InternalString.BlackTentaclesAreaEffectName, GetGUID.BlackTentaclesAreaEffect)
+            BlueprintAbilityAreaEffect areaEffect = AbilityAreaEffectConfigurator.New(InternalString.BlackTentaclesAreaEffectName, GetGUID.BlackTentaclesAreaEffect)
               .SetAffectEnemies()
               .SetAggroEnemies()
               .SetSize(20.Feet())
@@ -82,7 +82,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
               .SetFx(newFx)
               .Configure();
 
-            var blackTentaclesSpell = AbilityConfigurator.New(InternalString.BlackTentaclesSpell, GetGUID.BlackTentaclesSpell)
+            AbilityConfigurator blackTentaclesSpell = AbilityConfigurator.New(InternalString.BlackTentaclesSpell, GetGUID.BlackTentaclesSpell)
                 .CopyFrom(AbilityRefs.SickeningEntanglement, c => c is not (AbilityEffectRunAction or AbilityAoERadius))
                 .SetDisplayName(InternalString.BlackTentaclesSpellName)
                 .SetDescription(InternalString.BlackTentaclesSpellDescription)
@@ -94,7 +94,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
 
             if (spellListComponents != null)
             {
-                foreach (var spellList in spellListComponents)
+                foreach (KeyValuePair<string, int> spellList in spellListComponents)
                 {
                     blackTentaclesSpell.AddToSpellList(spellList.Value, BlueprintTool.GetRef<BlueprintSpellListReference>(spellList.Key), true);
                 }

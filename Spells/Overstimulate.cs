@@ -14,7 +14,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
-    class Overstimulate
+    internal class Overstimulate
     {
         private static class InternalString
         {
@@ -42,7 +42,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         };
         public static void CreateOverstimulate()
         {
-            var spell = AbilityConfigurator.New(InternalString.OverstimulateSpell, GetGUID.OverstimulateSpell)
+            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.OverstimulateSpell, GetGUID.OverstimulateSpell)
                 .CopyFrom(AbilityRefs.Rage, c => c is null)
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddAbilityEffectRunAction(
@@ -53,7 +53,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             if (overstimulateSpellListComponents != null)
             {
-                foreach (var spellList in overstimulateSpellListComponents)
+                foreach (KeyValuePair<string, int> spellList in overstimulateSpellListComponents)
                 {
                     spell.AddToSpellList(spellList.Value, BlueprintTool.GetRef<BlueprintSpellListReference>(spellList.Key), true);
                 }

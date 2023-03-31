@@ -13,17 +13,20 @@ namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
     [HarmonyPatch(typeof(ContextActionClearSummonPool), "RunAction")]
     public class ContextActionClearSummonPoolPatch
     {
-        static bool Prefix(ContextActionClearSummonPool __instance)
+        private static bool Prefix(ContextActionClearSummonPool __instance)
         {
 
             ISummonPool pool = Game.Instance.SummonPools.GetPool(__instance.SummonPool);
             if (pool == null)
+            {
                 return false;
+            }
+
             foreach (UnitEntityData unit in pool.Units)
             {
                 try
                 {
-                    var caster = unit.Descriptor.GetFact(BlueprintRoot.Instance.SystemMechanics.SummonedUnitBuff) is Buff fact ? fact.Context.MaybeCaster : null;
+                    UnitEntityData caster = unit.Descriptor.GetFact(BlueprintRoot.Instance.SystemMechanics.SummonedUnitBuff) is Buff fact ? fact.Context.MaybeCaster : null;
                     Main.Log(caster.CharacterName);
                     Main.Log(__instance.AbilityContext.MaybeCaster.CharacterName);
                     Main.Log((__instance.AbilityContext.MaybeCaster == caster) ? "True" : "False");
@@ -46,7 +49,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
         [HarmonyPatch(typeof(ContextActionClearSummonPool), "RunAction")]
         public class ContextActionClearSummonPoolPostfix
         {
-            static void Postfix(ContextActionClearSummonPool __instance)
+            private static void Postfix(ContextActionClearSummonPool __instance)
             {
                 // Do nothing.
             }
