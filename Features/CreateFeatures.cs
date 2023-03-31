@@ -20,6 +20,7 @@ namespace WOTR_MAKING_FRIENDS.Features
         public static void CreateAllFeatures()
         {
             EidolonLifeLink.CreateEidolonLifeLink();
+            FakeEidolonFeature.CreateFakeEidolon();
         }
     }
 }

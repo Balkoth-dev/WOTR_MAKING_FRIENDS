@@ -37,7 +37,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         {
             internal const string OverstimulateBuff = "OverstimulateBuff";
             internal static LocalizedString OverstimulateSpellName = Helpers.ObtainString("OverstimulateSpell.Name");
-            internal static LocalizedString OverstimulateSpellDescription = Helpers.ObtainString("Overstimulate.Description");
+            internal static LocalizedString OverstimulateSpellDescription = Helpers.ObtainString("OverstimulateSpell.Description");
         }
         public static void CreateOverstimulateBuff()
         {

@@ -45,6 +45,9 @@ namespace WOTR_MAKING_FRIENDS.Features
                                               .SetDescription(InternalString.Description)
                                               .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.SummonerLifeLinkBuff))
                                               .SetIcon(AbilityRefs.OracleRevelationLifeLinkAbility.Cast<BlueprintAbilityReference>().Reference.Get().m_Icon)
+                                              .SetDeactivateIfOwnerUnconscious(true)
+                                              .SetDeactivateIfOwnerDisabled(true)
+                                              .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
                                               .Configure();
         }
     }

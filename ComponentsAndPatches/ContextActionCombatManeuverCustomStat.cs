@@ -29,15 +29,13 @@ namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
             public override void RunAction()
             {
 
-            if (this.Target.Unit == (UnitDescriptor)null)
+            if (this.Target.Unit == null)
                 return;
-            else if (this.Context.MaybeCaster == (UnitDescriptor)null)
+            else if (this.Context.MaybeCaster == null)
                 return;
 
-            Main.Log("1");
             var ruleCombatManeuver = new RuleCombatManeuver(this.Context.MaybeCaster, this.Target.Unit, this.Type);
 
-            Main.Log("2");
             ruleCombatManeuver.AdditionalBonus = Bonus;
 
             try
@@ -49,8 +47,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
                 Main.Log(e: e);
             }
 
-            Main.Log("4");
-            if (this.Context.TriggerRule<RuleCombatManeuver>(ruleCombatManeuver).Success)
+            if (this.Context.TriggerRule(ruleCombatManeuver).Success)
             {
                 this.Success.Run();
             }

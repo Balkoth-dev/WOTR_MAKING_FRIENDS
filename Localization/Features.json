@@ -5,6 +5,6 @@
   },
   {
     "Key": "wotr-making-friends.summonerlifelinkfeature.description",
-    "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, you may create a bond between yourself and your eidolon. Each {g|Encyclopedia:Combat_Round}round{/g} at the start of your turn, if the bonded creature is wounded for 5 or more {g|Encyclopedia:HP}hit points{/g} below its maximum hit points, it {g|Encyclopedia:Healing}heals{/g} 5 hit points and you take 5 hit points of {g|Encyclopedia:Damage}damage{/g}."
+    "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, you may create a bond between yourself and your eidolon. Whenever damage would kill your eidolon, you may take the damage instead."
   }
 ]
