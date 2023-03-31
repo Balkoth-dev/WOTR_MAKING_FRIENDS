@@ -1,10 +1,6 @@
-﻿using BlueprintCore.Utils;
-using HarmonyLib;
-using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.PubSubSystem;
+﻿using HarmonyLib;
 using System;
 using UnityModManagerNet;
-using WOTR_MAKING_FRIENDS.Settings;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS

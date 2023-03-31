@@ -1,13 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using Kingmaker.Blueprints.Items.Armors;
-using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 

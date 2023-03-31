@@ -1,15 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
-using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Items.Armors;
-using Kingmaker.Designers.Mechanics.Facts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.CharacterClass
@@ -22,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         }
         public static BlueprintProgression Initialize()
         {
-        SummonerProficiencies.Initialize();
+            SummonerProficiencies.Initialize();
             SummonerSecondSpellbook.Initialize();
 
             var entries = LevelEntryBuilder.New()

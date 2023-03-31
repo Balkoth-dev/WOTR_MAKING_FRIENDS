@@ -1,21 +1,12 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.References;
+﻿using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using BlueprintCore.Utils.Assets;
-using Kingmaker.AI.Blueprints;
 using Kingmaker.Blueprints;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
 using Kingmaker.ResourceLinks;
-using Kingmaker.UnitLogic.Buffs.Blueprints;
-using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.UnitLogic.Mechanics;
-using Kingmaker.Visual.Critters;
-using System.Collections.Generic;
-using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -61,7 +52,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     intelligence = 2,
                     wisdom = 13,
                     charisma = 5,
-                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[] 
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
                                                     FeatureRefs.TripDefenseFourLegs.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference

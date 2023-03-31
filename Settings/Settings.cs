@@ -1,26 +1,22 @@
 ﻿using BlueprintCore.Utils;
 using HarmonyLib;
-using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.Dungeon.Blueprints;
 using Kingmaker.Localization;
 using Kingmaker.UI;
 using ModMenu.Settings;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using UnityEngine;
+using WOTR_MAKING_FRIENDS.Abilities;
 using WOTR_MAKING_FRIENDS.AiActions;
 using WOTR_MAKING_FRIENDS.Brains;
+using WOTR_MAKING_FRIENDS.Buffs;
 using WOTR_MAKING_FRIENDS.CharacterClass;
 using WOTR_MAKING_FRIENDS.Features;
-using WOTR_MAKING_FRIENDS.Spells.Summoning;
+using WOTR_MAKING_FRIENDS.Spells;
+using WOTR_MAKING_FRIENDS.SummonPools;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
-using WOTR_MAKING_FRIENDS.Abilities;
-using WOTR_MAKING_FRIENDS.Buffs;
-using WOTR_MAKING_FRIENDS.SummonPools;
-using WOTR_MAKING_FRIENDS.Spells;
 
 namespace WOTR_MAKING_FRIENDS.Settings
 {

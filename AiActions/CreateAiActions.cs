@@ -3,12 +3,6 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.AI.Blueprints;
 using Kingmaker.Blueprints;
-using Kingmaker.UnitLogic.Abilities.Blueprints;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.AiActions

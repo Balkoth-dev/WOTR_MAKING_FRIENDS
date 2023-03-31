@@ -1,20 +1,14 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Classes;
+using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Kingmaker.Blueprints.Root;
+using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Localization;
+using Kingmaker.RuleSystem;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using Kingmaker.RuleSystem;
-using BlueprintCore.Blueprints.References;
-using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Blueprints;
-using Kingmaker.Blueprints.Root;
-using BlueprintCore.Utils;
-using Kingmaker.Blueprints.Classes.Spells;
-using Kingmaker.Localization;
 
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {

@@ -1,6 +1,5 @@
 ﻿using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Facts;
-using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Designers;
 using Kingmaker.ElementsSystem;
 using Kingmaker.EntitySystem;
@@ -10,7 +9,6 @@ using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules.Damage;
 using Kingmaker.UI.Models.Log;
 using Kingmaker.UnitLogic;
-using Kingmaker.UnitLogic.Mechanics;
 using System;
 using UnityEngine;
 
@@ -30,11 +28,11 @@ namespace WOTR_MAKING_FRIENDS.ComponentsAndPatches
       IGlobalSubscriber
     {
         [Tooltip("0 means 1 HP")]
-        public int HealthPercent = 1;
+        public int HealthPercent = 0;
 
         public override void OnTurnOn()
         {
-            if(!this.Owner.IsPet && !this.Owner.IsReallyInFactPet)
+            if (!this.Owner.IsPet && !this.Owner.IsReallyInFactPet)
             {
                 return;
             }
@@ -55,15 +53,16 @@ namespace WOTR_MAKING_FRIENDS.ComponentsAndPatches
         {
         }
 
-        public void OnEventDidTrigger(RuleDealDamage evt) => this.TryReduceDamage();
+        public void OnEventDidTrigger(RuleDealDamage evt) => this.TryReduceDamage(evt);
 
-        private void TryReduceDamage()
+        private void TryReduceDamage(RuleDealDamage evt = null)
         {
-            int num = Math.Min(1, (int)((double)(this.Owner.MaxHP * this.HealthPercent) * 0.00999999977648258));
-            if (this.Owner.HPLeft > num)
+            int ownerNum = Math.Min(1, (int)((double)(this.Owner.MaxHP * this.HealthPercent) * 0.00999999977648258));
+            Main.Log(this.Owner.HPLeft + " : " + ownerNum);
+            if (this.Owner.HPLeft > ownerNum)
                 return;
-            GameHelper.DealDirectDamage(this.Owner, this.Owner.Master, this.Owner.Damage-((int)(ModifiableValue)this.Owner.Stats.HitPoints - num));
-            this.Owner.Damage = (int)(ModifiableValue)this.Owner.Stats.HitPoints - num;
+            GameHelper.DealDirectDamage(evt != null ? evt.Initiator : this.Owner, this.Owner.Master, this.Owner.Damage - ((int)(ModifiableValue)this.Owner.Stats.HitPoints - ownerNum));
+            this.Owner.Damage = (int)(ModifiableValue)this.Owner.Stats.HitPoints - ownerNum;
         }
 
         public void HandleUnitFailedToDie(UnitEntityData unit)

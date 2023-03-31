@@ -6,14 +6,9 @@ using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
-using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
@@ -52,7 +47,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
-                .ApplyBuff(overstimulateBuff,ContextDuration.Variable(ContextValues.Rank(),DurationRate.Rounds,true))
+                .ApplyBuff(overstimulateBuff, ContextDuration.Variable(ContextValues.Rank(), DurationRate.Rounds, true))
                 .Build()
             );
 

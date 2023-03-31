@@ -1,14 +1,9 @@
 ﻿using BlueprintCore.Utils;
-using JetBrains.Annotations;
 using Kingmaker.Blueprints;
-using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Classes.Selection;
 using Kingmaker.Localization;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using static UnityModManagerNet.UnityModManager;
@@ -67,7 +62,7 @@ namespace WOTR_MAKING_FRIENDS.Utilities
             {
                 var partialKey = Settings.Settings.PartialKey;
                 Regex rgx = new("[^a-z0-9-.]");
-                var key = rgx.Replace(partialKey.ToLower()+seperator+name.ToLower(), "");
+                var key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
                 return LocalizationTool.GetString(key);
             }
             catch (Exception ex)

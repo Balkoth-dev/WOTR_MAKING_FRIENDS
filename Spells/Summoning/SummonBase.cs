@@ -1,7 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using Kingmaker.Localization;
-using Kingmaker.UnitLogic.Mechanics;
 using System.Collections.Generic;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;

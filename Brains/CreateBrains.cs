@@ -1,13 +1,7 @@
-﻿using BlueprintCore.Blueprints.Configurators.AI;
-using BlueprintCore.Blueprints.CustomConfigurators;
+﻿using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Utils;
 using Kingmaker.AI.Blueprints;
 using Kingmaker.Blueprints;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 
 namespace WOTR_MAKING_FRIENDS.Brains
@@ -26,11 +20,11 @@ namespace WOTR_MAKING_FRIENDS.Brains
             StampedeHorseBrain();
             MeladaemonBrain();
         }
-        
+
         private static void DraconicAllyBrain()
         {
             var brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.DraconicAllyBrain).Configure();
-            brain.m_Actions = new BlueprintAiActionReference[] 
+            brain.m_Actions = new BlueprintAiActionReference[]
             {
                 attackAiAction,
                 BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.FormOfTheDragonIGoldAiAction),

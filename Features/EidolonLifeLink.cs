@@ -4,11 +4,6 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
@@ -36,19 +31,19 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(InternalString.Description)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.SummonerLifeLinkActivatableAbility) })
                 .Configure();
-                               
+
         }
         public static void CreateEidolonLifeLinkActivatableAbility()
         {
-                ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.SummonerLifeLinkActivatableAbility)
-                                              .SetDisplayName(InternalString.Name)
-                                              .SetDescription(InternalString.Description)
-                                              .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.SummonerLifeLinkBuff))
-                                              .SetIcon(AbilityRefs.OracleRevelationLifeLinkAbility.Cast<BlueprintAbilityReference>().Reference.Get().m_Icon)
-                                              .SetDeactivateIfOwnerUnconscious(true)
-                                              .SetDeactivateIfOwnerDisabled(true)
-                                              .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
-                                              .Configure();
+            ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.SummonerLifeLinkActivatableAbility)
+                                          .SetDisplayName(InternalString.Name)
+                                          .SetDescription(InternalString.Description)
+                                          .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.SummonerLifeLinkBuff))
+                                          .SetIcon(AbilityRefs.OracleRevelationLifeLinkAbility.Cast<BlueprintAbilityReference>().Reference.Get().m_Icon)
+                                          .SetDeactivateIfOwnerUnconscious(true)
+                                          .SetDeactivateIfOwnerDisabled(true)
+                                          .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
+                                          .Configure();
         }
     }
 }

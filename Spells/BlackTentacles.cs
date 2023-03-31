@@ -1,6 +1,5 @@
 ﻿using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Conditions.Builder;
@@ -8,22 +7,14 @@ using BlueprintCore.Conditions.Builder.BasicEx;
 using BlueprintCore.Utils;
 using BlueprintCore.Utils.Assets;
 using BlueprintCore.Utils.Types;
-using Kingmaker.Assets.UnitLogic.Mechanics.Properties;
 using Kingmaker.Blueprints;
 using Kingmaker.ElementsSystem;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
-using Kingmaker.UnitLogic.Mechanics;
-using Kingmaker.UnitLogic.Mechanics.Properties;
 using Kingmaker.Utility;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentAndPatches;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -74,7 +65,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     Value = ContextValues.Rank()
                     }
             };
-            
+
             var areaEffect = AbilityAreaEffectConfigurator.New(InternalString.BlackTentaclesAreaEffectName, GetGUID.BlackTentaclesAreaEffect)
               .SetAffectEnemies()
               .SetAggroEnemies()

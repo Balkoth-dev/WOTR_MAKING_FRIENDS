@@ -1,22 +1,9 @@
 ﻿using BlueprintCore.Actions.Builder;
-using BlueprintCore.Actions.Builder.BasicEx;
 using BlueprintCore.Actions.Builder.ContextEx;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
-using BlueprintCore.Conditions.Builder;
-using BlueprintCore.Conditions.Builder.ContextEx;
-using BlueprintCore.Utils.Types;
-using Kingmaker.Designers.EventConditionActionSystem.Actions;
-using Kingmaker.ElementsSystem;
 using Kingmaker.Localization;
-using Kingmaker.RuleSystem;
-using Kingmaker.UnitLogic.Abilities;
-using Kingmaker.UnitLogic.Mechanics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Kingmaker.UnitLogic.Buffs.Blueprints;
 using WOTR_MAKING_FRIENDS.ComponentsAndPatches;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
@@ -47,7 +34,8 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
-                .AddBuffActions(applyLifeLink,disableLifeLink)
+                .AddBuffActions(applyLifeLink, disableLifeLink, applyLifeLink)
+                .SetStacking(StackingType.Ignore)
                 .AddComponent<LifeLinkEidolon>()
                 .Configure();
         }

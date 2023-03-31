@@ -1,30 +1,16 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.References;
-using Kingmaker.Armies.TacticalCombat.LeaderSkills;
-using Kingmaker.EntitySystem.Entities;
-using Kingmaker.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WOTR_MAKING_FRIENDS.GUIDs;
-using Kingmaker.Enums;
-using static WOTR_MAKING_FRIENDS.Units.NewUnits;
-using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
+using BlueprintCore.Utils;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.UnitLogic.Class.LevelUp.Actions;
-using Kingmaker.Blueprints;
-using Kingmaker.Items;
-using Kingmaker.EntitySystem.Persistence.Versioning;
-using BlueprintCore.Actions.Builder;
-using Kingmaker.AI.Blueprints;
-using BlueprintCore.Utils;
-using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.Blueprints.Classes.Experience;
+using Kingmaker.Enums;
+using Kingmaker.Localization;
 using UnityEngine;
+using WOTR_MAKING_FRIENDS.GUIDs;
+using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
+using static WOTR_MAKING_FRIENDS.Units.NewUnits;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -57,7 +43,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
                     .SetSize(newUnit.size ?? copiedUnit.Size);
 
-                if(newUnit.blueprintUnitFactReferences != null)
+                if (newUnit.blueprintUnitFactReferences != null)
                     unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
 
                 unitConfigured.Configure();
@@ -82,10 +68,12 @@ namespace WOTR_MAKING_FRIENDS.Units
                 .AddClassLevels(null, CharacterClassRefs.OutsiderClass.Cast<BlueprintCharacterClassReference>().Reference, null, 14, StatType.Unknown, null, StatType.Constitution)
                 .SetAlignment(Alignment.NeutralEvil)
                 .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.MeladaemonBrain))
-                .SetBody(new BlueprintUnit.UnitBody() { 
-                    PrimaryHand = ItemWeaponRefs.Bite2d6.Cast<BlueprintItemWeaponReference>().Reference, 
+                .SetBody(new BlueprintUnit.UnitBody()
+                {
+                    PrimaryHand = ItemWeaponRefs.Bite2d6.Cast<BlueprintItemWeaponReference>().Reference,
                     m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.Claw2d6.Cast<BlueprintItemWeaponReference>().Reference,
-                                                                             ItemWeaponRefs.Claw2d6.Cast<BlueprintItemWeaponReference>().Reference} }
+                                                                             ItemWeaponRefs.Claw2d6.Cast<BlueprintItemWeaponReference>().Reference}
+                }
                     )
                 .Configure();
         }
@@ -102,9 +90,9 @@ namespace WOTR_MAKING_FRIENDS.Units
         internal static void AdjustCacodaemon()
         {
             UnitConfigurator.For(GetGUID.CacodaemonSummon)
-                .AddChangeUnitSize(null,ComponentMerge.Replace,Size.Fine,-2,ChangeType.Value)
+                .AddChangeUnitSize(null, ComponentMerge.Replace, Size.Fine, -2, ChangeType.Value)
                 .RemoveComponents(components => components is AddClassLevels)
-                .AddClassLevels(null,CharacterClassRefs.OutsiderClass.Cast<BlueprintCharacterClassReference>().Reference,null,3,StatType.Unknown,null,StatType.Constitution)
+                .AddClassLevels(null, CharacterClassRefs.OutsiderClass.Cast<BlueprintCharacterClassReference>().Reference, null, 3, StatType.Unknown, null, StatType.Constitution)
                 .AddBuffOnEntityCreated(BuffRefs.InvisibilityBuff.Cast<BlueprintBuffReference>().Reference)
                 .AddBuffOnEntityCreated(BuffRefs.FastHealing2.Cast<BlueprintBuffReference>().Reference)
                 .SetAlignment(Alignment.NeutralEvil)
@@ -113,14 +101,14 @@ namespace WOTR_MAKING_FRIENDS.Units
         }
         internal static void AdjustDraconicAllies()
         {
-            string[] draconicAllies = 
-                { 
-                    GetGUID.DraconicAllySummonBlack, 
-                    GetGUID.DraconicAllySummonBlue, 
-                    GetGUID.DraconicAllySummonBrass, 
-                    GetGUID.DraconicAllySummonGreen, 
-                    GetGUID.DraconicAllySummonRed, 
-                    GetGUID.DraconicAllySummonSilver, 
+            string[] draconicAllies =
+                {
+                    GetGUID.DraconicAllySummonBlack,
+                    GetGUID.DraconicAllySummonBlue,
+                    GetGUID.DraconicAllySummonBrass,
+                    GetGUID.DraconicAllySummonGreen,
+                    GetGUID.DraconicAllySummonRed,
+                    GetGUID.DraconicAllySummonSilver,
                     GetGUID.DraconicAllySummonWhite
                 };
 

@@ -107,9 +107,9 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSummonMonsterVIBase = "d614bb32-51b5-4bd8-9858-ced3f09b42b7";
         internal const string SummonerSummonMonsterVIIBase = "ccdd0ed1-ef2a-4d90-8711-9aa4ea1388ca";
         internal const string SummonerSummonMonsterVIIIBase = "bc9a0a31-707b-4011-99b1-e5ae3f2072a7";
-        internal const string SummonerSummonMonsterIXBase = "7067b57a-2eed-4561-aa5a-0a2767500e6e"; 
+        internal const string SummonerSummonMonsterIXBase = "7067b57a-2eed-4561-aa5a-0a2767500e6e";
         internal const string SummonMinorMonsterBase = "efdb8a42-3bc3-4df9-b44e-310e502fc3b0";
-        internal const string SummonCacodaemon = "37773912-9619-4c64-905b-74648ca45f98"; 
+        internal const string SummonCacodaemon = "37773912-9619-4c64-905b-74648ca45f98";
         internal const string SummonCacodaemonGreater = "c2390e92-4723-4749-a566-62606edcd9cc";
         internal const string SummonDraconicAllyBase = "60c4ff4a-9dcb-494d-b185-00aff8d97433";
         internal const string SummonLesserDemonBase = "6d8aeb90-d871-4e16-8fcd-0232f94307e9";
@@ -205,4 +205,3 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
     }
 }
 
-    
