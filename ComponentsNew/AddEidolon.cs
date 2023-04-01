@@ -7,7 +7,6 @@
 using Kingmaker;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Blueprints.Root;
 using Kingmaker.ElementsSystem;
@@ -81,33 +80,48 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
       20
         };
 
-        public BlueprintUnit Pet => this.m_Pet?.Get();
+        public BlueprintUnit Pet => m_Pet?.Get();
 
-        public BlueprintFeature LevelRank => this.m_LevelRank?.Get();
+        public BlueprintFeature LevelRank => m_LevelRank?.Get();
 
-        public BlueprintFeature UpgradeFeature => this.m_UpgradeFeature?.Get();
+        public BlueprintFeature UpgradeFeature => m_UpgradeFeature?.Get();
 
-        public override void OnActivate() => this.TryUpdatePet();
+        public override void OnActivate() => TryUpdatePet();
 
         public override void OnDeactivate()
         {
-            if (this.IsReapplying || this.Data.Disabled)
+            if (IsReapplying || Data.Disabled)
+            {
                 return;
-            UnitEntityData unitEntityData = this.Data.SpawnedPetRef.Value;
-            if (!(unitEntityData != (UnitDescriptor)null))
+            }
+
+            UnitEntityData unitEntityData = Data.SpawnedPetRef.Value;
+            if (!(unitEntityData != null))
+            {
                 return;
+            }
+
             foreach (ItemSlot equipmentSlot in unitEntityData.Body.EquipmentSlots)
             {
                 if (equipmentSlot.HasItem && equipmentSlot.CanRemoveItem())
+                {
                     equipmentSlot.RemoveItem();
+                }
+
                 equipmentSlot.Lock.Retain();
             }
             unitEntityData.RemoveMaster();
-            if (this.m_DestroyPetOnDeactivate)
+            if (m_DestroyPetOnDeactivate)
+            {
                 unitEntityData.MarkForDestroy();
+            }
+
             AddEidolon.DeactivateAction current = ContextData<AddEidolon.DeactivateAction>.Current;
             if (current == null)
+            {
                 return;
+            }
+
             current.Action(unitEntityData);
         }
 
@@ -115,81 +129,96 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         {
         }
 
-        public void OnAreaDidLoad() => this.TryUpdatePet();
+        public void OnAreaDidLoad() => TryUpdatePet();
 
-        void IUpdatePet.TryUpdatePet() => this.TryUpdatePet();
+        void IUpdatePet.TryUpdatePet() => TryUpdatePet();
 
         private void TryUpdatePet()
         {
-            if (this.Data.Disabled || this.Owner.IsPet || !this.Owner.PreviewOf.IsEmpty)
-                return;
-            AddClassLevels.ExecutionMark current = ContextData<AddClassLevels.ExecutionMark>.Current;
-            AddPetData data = this.Data;
-            data.AutoLevelup = ((data.AutoLevelup ? 1 : 0) | (!(bool)(ContextData<AddClassLevels.ExecutionMark>)current ? 0 : (current.Unit != (UnitDescriptor)this.Owner ? 1 : 0))) != 0;
-            this.Data.AutoLevelup |= this.m_ForceAutoLevelup;
-            if (this.Owner.HoldingState == null)
+            if (Data.Disabled || Owner.IsPet || !Owner.PreviewOf.IsEmpty)
             {
-                EventBus.Subscribe((object)new AddEidolon.UnitSpawnHandler(this, this.Runtime));
+                return;
+            }
+
+            AddClassLevels.ExecutionMark current = ContextData<AddClassLevels.ExecutionMark>.Current;
+            AddPetData data = Data;
+            data.AutoLevelup = ((data.AutoLevelup ? 1 : 0) | (!(bool)(ContextData<AddClassLevels.ExecutionMark>)current ? 0 : (current.Unit != Owner ? 1 : 0))) != 0;
+            Data.AutoLevelup |= m_ForceAutoLevelup;
+            if (Owner.HoldingState == null)
+            {
+                EventBus.Subscribe(new AddEidolon.UnitSpawnHandler(this, Runtime));
             }
             else
             {
-                UnitEntityData spawnedPet = this.Data.SpawnedPetRef.Value;
-                bool flag = spawnedPet != (UnitDescriptor)null;
-                UnitPartPetMaster unitPartPetMaster = this.Owner.Ensure<UnitPartPetMaster>();
-                string id = unitPartPetMaster.Pets.FirstItem<EntityPartRef<UnitEntityData, UnitPartPet>>((Func<EntityPartRef<UnitEntityData, UnitPartPet>, bool>)(i =>
+                UnitEntityData spawnedPet = Data.SpawnedPetRef.Value;
+                bool flag = spawnedPet != null;
+                UnitPartPetMaster unitPartPetMaster = Owner.Ensure<UnitPartPetMaster>();
+                string id = unitPartPetMaster.Pets.FirstItem<EntityPartRef<UnitEntityData, UnitPartPet>>(i =>
                 {
                     PetType? type5 = i.EntityPart?.Type;
-                    PetType type6 = this.Type;
+                    PetType type6 = Type;
                     return type5.GetValueOrDefault() == type6 & type5.HasValue;
-                })).EntityRef.Id;
-                if (spawnedPet == (UnitDescriptor)null && id == null && !unitPartPetMaster.IsExPet(this.Type))
+                }).EntityRef.Id;
+                if (spawnedPet == null && id == null && !unitPartPetMaster.IsExPet(Type))
                 {
-                    Vector3 position = this.Owner.Position;
-                    if (this.Owner.IsInGame)
+                    Vector3 position = Owner.Position;
+                    if (Owner.IsInGame)
                     {
-                        FreePlaceSelector.PlaceSpawnPlaces(1, 0.5f, this.Owner.Position);
+                        FreePlaceSelector.PlaceSpawnPlaces(1, 0.5f, Owner.Position);
                         position = FreePlaceSelector.GetRelaxedPosition(0, true);
                     }
-                    this.Data.SpawnedPetRef = (UnitReference)(spawnedPet = Game.Instance.EntityCreator.SpawnUnit(this.Pet, position, Quaternion.Euler(0.0f, this.Owner.Orientation, 0.0f), this.Owner.HoldingState));
+                    Data.SpawnedPetRef = spawnedPet = Game.Instance.EntityCreator.SpawnUnit(Pet, position, Quaternion.Euler(0.0f, Owner.Orientation, 0.0f), Owner.HoldingState);
                 }
-                else if (spawnedPet != (UnitDescriptor)null && id != null && spawnedPet.UniqueId != id)
+                else if (spawnedPet != null && id != null && spawnedPet.UniqueId != id)
                 {
                     spawnedPet.MarkForDestroy();
                     if (!spawnedPet.IsPet)
+                    {
                         spawnedPet.Descriptor.SwitchFactions(BlueprintRoot.Instance.SystemMechanics.FactionNeutrals);
-                    this.Data.SpawnedPetRef = (UnitReference)(spawnedPet = (UnitEntityData)null);
-                    this.Data.Disabled = true;
-                    PFLog.Default.Error(string.Format("Can't spawn second animal companion: {0}, {1}", (object)this.Owner, (object)this.Fact));
+                    }
+
+                    Data.SpawnedPetRef = spawnedPet = null;
+                    Data.Disabled = true;
+                    PFLog.Default.Error(string.Format("Can't spawn second animal companion: {0}, {1}", Owner, Fact));
                 }
-                if (!(spawnedPet != (UnitDescriptor)null))
-                    return;
-                if (!unitPartPetMaster.IsExPet(spawnedPet.UniqueId) && spawnedPet.Master == (UnitDescriptor)null)
+                if (!(spawnedPet != null))
                 {
-                    spawnedPet.SetMaster(this.Owner, this.Type);
-                    spawnedPet.IsInGame = this.Owner.IsInGame;
-                }
-                this.TryLevelUpPet();
-                if (flag || !Game.Instance.Player.PartyCharacters.Contains((UnitReference)this.Owner))
                     return;
-                EventBus.RaiseEvent<IPartyHandler>((Action<IPartyHandler>)(h => h.HandleAddCompanion(spawnedPet)));
+                }
+
+                if (!unitPartPetMaster.IsExPet(spawnedPet.UniqueId) && spawnedPet.Master == null)
+                {
+                    spawnedPet.SetMaster(Owner, Type);
+                    spawnedPet.IsInGame = Owner.IsInGame;
+                }
+                TryLevelUpPet();
+                if (flag || !Game.Instance.Player.PartyCharacters.Contains(Owner))
+                {
+                    return;
+                }
+
+                EventBus.RaiseEvent<IPartyHandler>(h => h.HandleAddCompanion(spawnedPet));
             }
         }
 
         private int GetPetLevel()
         {
-            if (this.m_UseContextValueLevel)
+            if (m_UseContextValueLevel)
             {
-                ContextValue levelContextValue = this.m_LevelContextValue;
-                return levelContextValue == null ? 1 : levelContextValue.Calculate(this.Context);
+                ContextValue levelContextValue = m_LevelContextValue;
+                return levelContextValue == null ? 1 : levelContextValue.Calculate(Context);
             }
-            if (!(bool)(SimpleBlueprint)this.LevelRank)
+            if (!(bool)(SimpleBlueprint)LevelRank)
+            {
                 return 1;
-            EntityFact fact = this.Owner.GetFact((BlueprintUnitFact)this.LevelRank);
+            }
+
+            EntityFact fact = Owner.GetFact(LevelRank);
             int index = Mathf.Min(20, fact != null ? fact.GetRank() : 0);
-            switch (this.ProgressionType)
+            switch (ProgressionType)
             {
                 case PetProgressionType.AnimalCompanion:
-                    return Math.Min(this.Owner.Progression.CharacterLevel, AddEidolon.RankToLevelEidolon[index]);
+                    return Math.Min(Owner.Progression.CharacterLevel, AddEidolon.RankToLevelEidolon[index]);
                 default:
                     return 1;
             }
@@ -197,19 +226,25 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         private void TryLevelUpPet()
         {
-            UnitEntityData unitEntityData = this.Data.SpawnedPetRef.Value;
-            if (unitEntityData == (UnitDescriptor)null)
+            UnitEntityData unitEntityData = Data.SpawnedPetRef.Value;
+            if (unitEntityData == null)
+            {
                 return;
-            BlueprintComponentAndRuntime<AddClassLevels> componentAndRuntime = unitEntityData.Facts.List.Select<EntityFact, BlueprintComponentAndRuntime<AddClassLevels>>((Func<EntityFact, BlueprintComponentAndRuntime<AddClassLevels>>)(f => f.GetComponentWithRuntime<AddClassLevels>())).FirstOrDefault<BlueprintComponentAndRuntime<AddClassLevels>>((Func<BlueprintComponentAndRuntime<AddClassLevels>, bool>)(c => c.Component != null));
+            }
+
+            BlueprintComponentAndRuntime<AddClassLevels> componentAndRuntime = unitEntityData.Facts.List.Select<EntityFact, BlueprintComponentAndRuntime<AddClassLevels>>(f => f.GetComponentWithRuntime<AddClassLevels>()).FirstOrDefault<BlueprintComponentAndRuntime<AddClassLevels>>(c => c.Component != null);
             if (componentAndRuntime.Component == null)
+            {
                 return;
+            }
+
             int characterLevel = unitEntityData.Descriptor.Progression.CharacterLevel;
-            int petLevel = this.GetPetLevel();
+            int petLevel = GetPetLevel();
             int levels = petLevel - characterLevel;
             if (levels > 0)
             {
-                UnitPartCompanion unitPartCompanion = this.Owner.Get<UnitPartCompanion>();
-                if ((unitPartCompanion == null || unitPartCompanion.State == CompanionState.None ? 0 : (unitPartCompanion.State != CompanionState.ExCompanion ? 1 : 0)) != 0 && !this.Data.AutoLevelup && this.Type == PetTypeExtensions.Eidolon)
+                UnitPartCompanion unitPartCompanion = Owner.Get<UnitPartCompanion>();
+                if ((unitPartCompanion == null || unitPartCompanion.State == CompanionState.None ? 0 : (unitPartCompanion.State != CompanionState.ExCompanion ? 1 : 0)) != 0 && !Data.AutoLevelup && Type == PetTypeExtensions.Eidolon)
                 {
                     int bonus = BlueprintRoot.Instance.Progression.XPTable.GetBonus(petLevel);
                     unitEntityData.Progression.AdvanceExperienceTo(bonus, false, true);
@@ -220,23 +255,30 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                     AddClassLevels addClassLevels;
                     if ((object)master == null)
                     {
-                        addClassLevels = (AddClassLevels)null;
+                        addClassLevels = null;
                     }
                     else
                     {
                         BlueprintUnit blueprint = master.Blueprint;
-                        addClassLevels = blueprint != null ? blueprint.GetComponent<AddClassLevelsToPets>()?.LevelsProgression : (AddClassLevels)null;
+                        addClassLevels = blueprint != null ? blueprint.GetComponent<AddClassLevelsToPets>()?.LevelsProgression : null;
                     }
                     AddClassLevels c = addClassLevels;
                     if (c != null)
+                    {
                         AddClassLevels.LevelUp(c, unitEntityData.Descriptor, levels);
+                    }
                     else
+                    {
                         componentAndRuntime.Component.LevelUp(componentAndRuntime.Runtime, unitEntityData.Descriptor, levels);
+                    }
                 }
             }
-            if (this.GetPetLevel() >= this.UpgradeLevel && this.UpgradeFeature != null)
-                unitEntityData.Progression.Features.AddFeature(this.UpgradeFeature);
-            this.Data.AutoLevelup = false;
+            if (GetPetLevel() >= UpgradeLevel && UpgradeFeature != null)
+            {
+                unitEntityData.Progression.Features.AddFeature(UpgradeFeature);
+            }
+
+            Data.AutoLevelup = false;
         }
 
         public override void OnPostLoad()
@@ -245,17 +287,23 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public override void OnApplyPostLoadFixes()
         {
-            UnitEntityData _this = this.Data.SpawnedPetRef.Value;
-            if (!(_this != (UnitDescriptor)null) || this.UpgradeFeature == null || this.GetPetLevel() < this.UpgradeLevel || _this.HasFact((BlueprintFact)this.UpgradeFeature))
+            UnitEntityData _this = Data.SpawnedPetRef.Value;
+            if (!(_this != null) || UpgradeFeature == null || GetPetLevel() < UpgradeLevel || _this.HasFact(UpgradeFeature))
+            {
                 return;
-            _this.Progression.Features.AddFeature(this.UpgradeFeature);
+            }
+
+            _this.Progression.Features.AddFeature(UpgradeFeature);
         }
 
         public override void ApplyValidation(ValidationContext context, int parentIndex)
         {
             base.ApplyValidation(context, parentIndex);
-            if ((bool)(SimpleBlueprint)this.Pet)
+            if ((bool)(SimpleBlueprint)Pet)
+            {
                 return;
+            }
+
             context.AddError("Pet is not specified");
         }
 
@@ -265,11 +313,11 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
             public AddEidolon.DeactivateAction Setup(Action<UnitEntityData> action)
             {
-                this.Action = action;
+                Action = action;
                 return this;
             }
 
-            public override void Reset() => this.Action = (Action<UnitEntityData>)null;
+            public override void Reset() => Action = null;
         }
 
         private class UnitSpawnHandler :
@@ -286,20 +334,25 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
               AddEidolon feature,
               EntityFactComponentDelegate<UnitEntityData, AddPetData>.ComponentRuntime runtime)
             {
-                this.m_Feature = feature;
-                this.m_FeatureRuntime = runtime;
+                m_Feature = feature;
+                m_FeatureRuntime = runtime;
             }
 
             public void HandleUnitSpawned(UnitEntityData entityData)
             {
-                if (!((UnitEntityData)entityData.Descriptor == (UnitDescriptor)this.m_FeatureRuntime.Owner))
-                    return;
-                if ((UnityEngine.Object)entityData.View != (UnityEngine.Object)null)
+                if (!(entityData.Descriptor == m_FeatureRuntime.Owner))
                 {
-                    using (this.m_FeatureRuntime.RequestEventContext())
-                        this.m_Feature.TryUpdatePet();
+                    return;
                 }
-                EventBus.Unsubscribe((object)this);
+
+                if (entityData.View != null)
+                {
+                    using (m_FeatureRuntime.RequestEventContext())
+                    {
+                        m_Feature.TryUpdatePet();
+                    }
+                }
+                EventBus.Unsubscribe(this);
             }
 
             public void HandleUnitDestroyed(UnitEntityData entityData)
@@ -310,7 +363,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
             }
 
-            public void OnAreaBeginUnloading() => EventBus.Unsubscribe((object)this);
+            public void OnAreaBeginUnloading() => EventBus.Unsubscribe(this);
 
             public void OnAreaDidLoad()
             {

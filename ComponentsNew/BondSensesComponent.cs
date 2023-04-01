@@ -6,7 +6,6 @@ using Kingmaker.Enums;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Parts;
-using WOTR_MAKING_FRIENDS.ComponentsNew;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {

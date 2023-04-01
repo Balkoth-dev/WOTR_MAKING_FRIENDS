@@ -4,6 +4,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
+using Kingmaker.UnitLogic.Mechanics.Actions;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
@@ -24,6 +25,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                                                             .ApplyBuffPermanent(GetGUID.SummonerLifeLinkBuff, isNotDispelable: true)
                                                             .Build(),
                                                             PetTypeExtensions.Eidolon).Build();
+            ((ContextActionsOnPet)applyLifeLink.Actions[0]).AllPets = false;
 
             Kingmaker.ElementsSystem.ActionList disableLifeLink = ActionsBuilder.New().OnPets(ActionsBuilder.New()
                                                             .RemoveBuff(GetGUID.SummonerLifeLinkBuff)

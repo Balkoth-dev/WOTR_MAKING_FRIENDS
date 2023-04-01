@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WOTR_MAKING_FRIENDS.Resources
+﻿namespace WOTR_MAKING_FRIENDS.Resources
 {
-    class CreateResources
+    internal class CreateResources
     {
         public static void CreateAllResources()
         {

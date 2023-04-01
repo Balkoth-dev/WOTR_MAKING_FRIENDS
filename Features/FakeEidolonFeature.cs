@@ -24,25 +24,25 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateFakeEidolonFeature()
         {
-            var addEidolon = new AddEidolon()
+            AddEidolon addEidolon = new AddEidolon()
             {
-               m_Pet  = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
-               ProgressionType = PetProgressionType.AnimalCompanion,
-               m_UseContextValueLevel = false,
-               m_LevelRank = FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference,
-               Type = PetTypeExtensions.Eidolon,
-               m_ForceAutoLevelup = false
+                m_Pet = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                ProgressionType = PetProgressionType.AnimalCompanion,
+                m_UseContextValueLevel = false,
+                m_LevelRank = FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference,
+                Type = PetTypeExtensions.Eidolon,
+                m_ForceAutoLevelup = false
             };
-            var fakeEidolon = FeatureConfigurator.New(InternalString.Feature, GetGUID.FakeEidolonFeature)
+            Kingmaker.Blueprints.Classes.BlueprintFeature fakeEidolon = FeatureConfigurator.New(InternalString.Feature, GetGUID.FakeEidolonFeature)
                 .CopyFrom(FeatureRefs.AnimalCompanionFeatureDog.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
-               /* .AddPet(
-                    type: PetTypeExtensions.Eidolon,
-                    progressionType: PetProgressionType.AnimalCompanion,
-                    levelRank: FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference,
-                    pet: UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference
-                )*/
+                /* .AddPet(
+                     type: PetTypeExtensions.Eidolon,
+                     progressionType: PetProgressionType.AnimalCompanion,
+                     levelRank: FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference,
+                     pet: UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference
+                 )*/
                 .Configure();
 
             fakeEidolon.AddComponents(new[] { addEidolon });
