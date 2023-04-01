@@ -149,9 +149,11 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerLifeLinkFeature = "36141547-3a7e-4da7-8789-733938ff4ee5";
         internal const string FakeEidolonFeature = "8314af22-b2cc-49cc-9318-57a09e5592a6";
         internal const string SummonerBondedSensesFeature = "54e5ae67-4344-4c20-ad7c-0d72246bfe9e";
+        internal const string SummonerMakersCallFeature = "745cd39c-3f02-457d-9474-ce6b053774bd";
         #endregion
 
         #region Abilities
+        internal const string SummonerMakersCallAbility = "140c5833-4067-48e8-bd6d-a7ea2d3f7090";
         #endregion
 
         #region ActivatableAbilities
@@ -187,7 +189,11 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string BlackTentaclesFx = "8f1d08da-42bd-4e9c-becd-1c88e7a2daf5";
         #endregion
 
-        #region 
+        #region Resources
+        internal const string SummonerMakersCallResource = "1ef6826d-7b5d-4198-8875-c48ec4f7eeba";
+        #endregion
+
+        #region AreaEffect
         internal const string BlackTentaclesAreaEffect = "96d8224c-482e-4c22-95b0-d8c0cff5a9a3";
         #endregion
         public static string GUIDByName(string s)

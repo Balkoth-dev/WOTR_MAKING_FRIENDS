@@ -4,7 +4,7 @@ using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.UnitLogic.Mechanics.Actions;
 using System;
 
-namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
+namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
     public class BlackTentaclesGrappleAction : ContextAction
     {

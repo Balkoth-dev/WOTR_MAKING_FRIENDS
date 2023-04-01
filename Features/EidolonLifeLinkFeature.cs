@@ -9,7 +9,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features
 {
-    internal class EidolonLifeLink
+    internal class EidolonLifeLinkFeature
     {
         private static class InternalString
         {

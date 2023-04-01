@@ -13,6 +13,22 @@
   },
   {
     "Key": "wotr-making-friends.summonerbondedsensesfeature.description",
-    "enGB": "At 2nd level, a summoner can share the senses of his eidolon, hearing, seeing, smelling, tasting, and touching everything the eidolon does./nThe summoner's perception score is equal to their eidolon's, if they eidolon has a higher perception score."
+    "enGB": "At 2nd level, a summoner can share the senses of his eidolon, hearing, seeing, smelling, tasting, and touching everything the eidolon does./nThe summoner's perception ranks are equal to their eidolon's, if they eidolon has more ranks in perception."
+  },
+  {
+    "Key": "wotr-making-friends.summonermakerscallfeature.name",
+    "enGB": "Maker's Call"
+  },
+  {
+    "Key": "wotr-making-friends.summonermakerscallfeature.description",
+    "enGB": "At 6th level, as a standard action, a summoner can call his eidolon to his side. This functions as dimension door, using the summoner’s caster level. When this ability is used, the eidolon appears adjacent to the summoner (or as close as possible if all adjacent spaces are occupied). If the eidolon is out of range, the ability is wasted. The summoner can use this ability once per day at 6th level, plus one additional time per day for every four levels beyond 6th."
+  },
+  {
+    "Key": "wotr-making-friends.fakeeidolonfeature.name",
+    "enGB": "Fake Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.fakeeidolonfeature.description",
+    "enGB": "Fake Eidolon"
   }
 ]

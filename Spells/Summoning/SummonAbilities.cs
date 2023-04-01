@@ -78,6 +78,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
         public static SummonAbility[] summonAbilities =
         {
+            #region SummonerSummonISingle
             new SummonAbility
             {
                 name = "SummonerSummonISingle",
@@ -99,6 +100,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIISingle
             new SummonAbility
             {
                 name = "SummonerSummonIISingle",
@@ -120,6 +123,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIId3
             new SummonAbility
             {
                 name = "SummonerSummonIId3",
@@ -141,6 +146,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIIISingle
             new SummonAbility
             {
                 name = "SummonerSummonIIISingle",
@@ -162,6 +169,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIIId3
             new SummonAbility
             {
                 name = "SummonerSummonIIId3",
@@ -183,6 +192,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIVSingle
             new SummonAbility
             {
                 name = "SummonerSummonIVSingle",
@@ -204,6 +215,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIVd3
             new SummonAbility
             {
                 name = "SummonerSummonIVd3",
@@ -225,6 +238,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVSingle
             new SummonAbility
             {
                 name = "SummonerSummonVSingle",
@@ -247,6 +262,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVd3
             new SummonAbility
             {
                 name = "SummonerSummonVd3",
@@ -268,6 +285,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVISingle
             new SummonAbility
             {
                 name = "SummonerSummonVISingle",
@@ -290,6 +309,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVId3
             new SummonAbility
             {
                 name = "SummonerSummonVId3",
@@ -312,6 +333,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVIISingle
             new SummonAbility
             {
                 name = "SummonerSummonVIISingle",
@@ -331,6 +354,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVIId3
             new SummonAbility
             {
                 name = "SummonerSummonVIId3",
@@ -353,6 +378,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVIIISingle
             new SummonAbility
             {
                 name = "SummonerSummonVIIISingle",
@@ -374,6 +401,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonVIIId3
             new SummonAbility
             {
                 name = "SummonerSummonVIIId3",
@@ -394,6 +423,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIXSingle
             new SummonAbility
             {
                 name = "SummonerSummonIXSingle",
@@ -416,6 +447,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonerSummonIXd3
             new SummonAbility
             {
                 name = "SummonerSummonIXd3",
@@ -437,6 +470,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
                 craftingComponent = false
             },
+            #endregion
+            #region SummonMinorMonsterRedPanda
             new SummonAbility
             {
                 name = "SummonMinorMonsterRedPanda",
@@ -468,6 +503,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonMinorMonsterCat
             new SummonAbility
             {
                 name = "SummonMinorMonsterCat",
@@ -499,6 +536,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonCacodaemon
             new SummonAbility
             {
                 name = "SummonCacodaemon",
@@ -525,6 +564,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonCacodaemonGreater
             new SummonAbility
             {
                 name = "SummonCacodaemonGreater",
@@ -552,6 +593,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonSwarm
             new SummonAbility
             {
                 name = "SummonSwarm",
@@ -580,6 +623,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonDraconicAllyBlack
             new SummonAbility
             {
                 name = "SummonDraconicAllyBlack",
@@ -610,6 +655,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            #endregion
+            #region SummonDraconicAllyBlue
             new SummonAbility
             {
                 name = "SummonDraconicAllyBlue",
@@ -640,6 +687,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            #endregion
+            #region SummonDraconicAllyBrass
             new SummonAbility
             {
                 name = "SummonDraconicAllyBrass",
@@ -670,6 +719,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            #endregion
+            #region SummonDraconicAllyGreen
             new SummonAbility
             {
                 name = "SummonDraconicAllyGreen",
@@ -700,6 +751,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            #endregion
+            #region SummonDraconicAllyRed
             new SummonAbility
             {
                 name = "SummonDraconicAllyRed",
@@ -730,6 +783,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            #endregion
+            #region SummonDraconicAllySilver
             new SummonAbility
             {
                 name = "SummonDraconicAllySilver",
@@ -761,6 +816,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            #endregion
+            #region SummonDraconicAllyWhite
             new SummonAbility
             {
                 name = "SummonDraconicAllyWhite",
@@ -792,6 +849,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
             },
+            #endregion
+            #region SummonLesserDemonBrimorak
             new SummonAbility
             {
                 name = "SummonLesserDemonBrimorak",
@@ -821,6 +880,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonLesserDemonIncubus
             new SummonAbility
             {
                 name = "SummonLesserDemonIncubus",
@@ -850,6 +911,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonLesserDemonSchir
             new SummonAbility
             {
                 name = "SummonLesserDemonSchir",
@@ -879,6 +942,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonLesserDemonVermlek
             new SummonAbility
             {
                 name = "SummonLesserDemonVermlek",
@@ -909,6 +974,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonStampede
             new SummonAbility
             {
                 name = "SummonStampede",
@@ -936,6 +1003,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonReleaseTheHounds
             new SummonAbility
             {
                 name = "SummonReleaseTheHounds",
@@ -967,6 +1036,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonErinyes
             new SummonAbility
             {
                 name = "SummonErinyes",
@@ -997,6 +1068,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
+            #region SummonMeladaemon
             new SummonAbility
             {
                 name = "SummonMeladaemon",
@@ -1024,6 +1097,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
+            #endregion
         };
     }
 }

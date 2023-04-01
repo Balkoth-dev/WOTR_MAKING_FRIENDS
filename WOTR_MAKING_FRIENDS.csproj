@@ -116,7 +116,7 @@
     </ItemGroup>
 
     <RemoveDir Directories="$(SolutionDir)lib/" />
-    <PublicizeTask InputAssemblies="@(Assemblies)" OutputDir="$(SolutionDir)lib/" />
+    <PublicizeTask InputAssemblies="@(Assemblies)" OutputDir="$(SolutionDir)lib\" />
     <!-- ILRepack requires the assembly name match the reference so remove _public -->
     <Move SourceFiles="@(PublicAssembly)" DestinationFiles="@(RenamedAssembly)" />
   </Target>

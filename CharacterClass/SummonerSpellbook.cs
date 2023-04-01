@@ -60,26 +60,26 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             SpellsTableConfigurator.New(InternalString.SummonerSpellbook + ".SpellKnownTable", GetGUID.SummonerSpellbookSpellsKnown)
                 .SetLevels(new SpellsLevelEntry[] {
-                        CreateSpellLevelEntry(4,2),
-                        CreateSpellLevelEntry(5,3),
-                        CreateSpellLevelEntry(6,4),
-                        CreateSpellLevelEntry(6,4,2),
-                        CreateSpellLevelEntry(6,4,3),
-                        CreateSpellLevelEntry(6,4,4),
-                        CreateSpellLevelEntry(6,5,4,2),
-                        CreateSpellLevelEntry(6,5,4,3),
-                        CreateSpellLevelEntry(6,5,4,4),
-                        CreateSpellLevelEntry(6,5,5,4,2),
-                        CreateSpellLevelEntry(6,6,5,4,3),
-                        CreateSpellLevelEntry(6,6,5,4,4),
-                        CreateSpellLevelEntry(6,6,5,5,4,2),
-                        CreateSpellLevelEntry(6,6,6,5,4,3),
-                        CreateSpellLevelEntry(6,6,6,5,4,4),
-                        CreateSpellLevelEntry(6,6,6,5,5,4,2),
-                        CreateSpellLevelEntry(6,6,6,6,5,4,3),
-                        CreateSpellLevelEntry(6,6,6,6,5,4,4),
-                        CreateSpellLevelEntry(6,6,6,6,5,5,4),
-                        CreateSpellLevelEntry(6,6,6,6,6,5,5)
+                        CreateSpellLevelEntry(0,2),
+                        CreateSpellLevelEntry(0,3),
+                        CreateSpellLevelEntry(0,4),
+                        CreateSpellLevelEntry(0,4,2),
+                        CreateSpellLevelEntry(0,4,3),
+                        CreateSpellLevelEntry(0,4,4),
+                        CreateSpellLevelEntry(0,5,4,2),
+                        CreateSpellLevelEntry(0,5,4,3),
+                        CreateSpellLevelEntry(0,5,4,4),
+                        CreateSpellLevelEntry(0,5,5,4,2),
+                        CreateSpellLevelEntry(0,6,5,4,3),
+                        CreateSpellLevelEntry(0,6,5,4,4),
+                        CreateSpellLevelEntry(0,6,5,5,4,2),
+                        CreateSpellLevelEntry(0,6,6,5,4,3),
+                        CreateSpellLevelEntry(0,6,6,5,4,4),
+                        CreateSpellLevelEntry(0,6,6,5,5,4,2),
+                        CreateSpellLevelEntry(0,6,6,6,5,4,3),
+                        CreateSpellLevelEntry(0,6,6,6,5,4,4),
+                        CreateSpellLevelEntry(0,6,6,6,5,5,4),
+                        CreateSpellLevelEntry(0,6,6,6,6,5,5)
                     })
                 .Configure();
         }

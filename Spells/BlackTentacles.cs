@@ -16,7 +16,7 @@ using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.Utility;
 using System.Collections.Generic;
 using UnityEngine;
-using WOTR_MAKING_FRIENDS.ComponentAndPatches;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 

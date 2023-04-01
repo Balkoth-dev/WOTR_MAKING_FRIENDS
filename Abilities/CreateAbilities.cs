@@ -4,6 +4,7 @@
     {
         public static void CreateAllAbilities()
         {
+            MakersCallAbility.CreateMakersCallAbility();
         }
     }
 }

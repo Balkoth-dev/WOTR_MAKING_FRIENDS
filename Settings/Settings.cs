@@ -13,6 +13,7 @@ using WOTR_MAKING_FRIENDS.Brains;
 using WOTR_MAKING_FRIENDS.Buffs;
 using WOTR_MAKING_FRIENDS.CharacterClass;
 using WOTR_MAKING_FRIENDS.Features;
+using WOTR_MAKING_FRIENDS.Resources;
 using WOTR_MAKING_FRIENDS.Spells;
 using WOTR_MAKING_FRIENDS.SummonPools;
 using WOTR_MAKING_FRIENDS.Units;
@@ -73,6 +74,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             Main.Log("Settings Initialized");
 
             SummonerClass.CreateSummonerClass();
+            CreateResources.CreateAllResources();
             CreateFeatures.CreateAllFeatures();
             CreateBuffs.CreateAllBuffs();
             CreateAbilities.CreateAllAbilities();

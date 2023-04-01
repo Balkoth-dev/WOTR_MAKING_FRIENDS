@@ -3,7 +3,7 @@ using BlueprintCore.Blueprints.References;
 using Kingmaker.Blueprints;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
-using WOTR_MAKING_FRIENDS.ComponentsAndPatches;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 

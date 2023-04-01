@@ -18,7 +18,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
             LevelEntryBuilder entries = LevelEntryBuilder.New()
                     .AddEntry(1, GetGUID.SummonerProficiencies, GetGUID.SummonerSecondSpellbookFeat, GetGUID.SummonerLifeLinkFeature, GetGUID.FakeEidolonFeature)
-                    .AddEntry(2, GetGUID.SummonerBondedSensesFeature);
+                    .AddEntry(2, GetGUID.SummonerBondedSensesFeature)
+                    .AddEntry(6, GetGUID.SummonerMakersCallFeature);
 
             return ProgressionConfigurator.New(Strings.SummonerProgression, GetGUID.SummonerProgression)
                 .SetAllowNonContextActions(false)

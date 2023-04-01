@@ -6,9 +6,9 @@ using Kingmaker.Enums;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Parts;
-using WOTR_MAKING_FRIENDS.ComponentsAndPatches;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
 
-namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
+namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
     [AllowedOn(typeof(BlueprintFeature), false)]
     [AllowedOn(typeof(BlueprintBuff), false)]

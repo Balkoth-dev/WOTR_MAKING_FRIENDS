@@ -4,9 +4,10 @@
     {
         public static void CreateAllFeatures()
         {
-            EidolonLifeLink.CreateEidolonLifeLink();
+            EidolonLifeLinkFeature.CreateEidolonLifeLink();
             FakeEidolonFeature.CreateFakeEidolon();
-            BondedSenses.CreateBondedSenses();
+            BondedSensesFeature.CreateBondedSenses();
+            MakersCallFeature.CreateMakersCall();
         }
     }
 }

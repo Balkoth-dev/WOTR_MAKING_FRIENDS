@@ -10,7 +10,7 @@ using Kingmaker.UnitLogic;
 using System;
 using UnityEngine;
 
-namespace WOTR_MAKING_FRIENDS.ComponentsAndPatches
+namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
     [AllowedOn(typeof(BlueprintUnitFact), false)]
     [AllowMultipleComponents]

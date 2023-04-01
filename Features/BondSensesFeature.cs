@@ -3,12 +3,13 @@ using BlueprintCore.Blueprints.References;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
 using WOTR_MAKING_FRIENDS.ComponentAndPatches;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features
 {
-    internal class BondedSenses
+    internal class BondedSensesFeature
     {
         private static class InternalString
         {
@@ -28,8 +29,8 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(InternalString.Description)
                 .AddComponent<BondedSensesComponent>()
                 .AddRecalculateOnStatChange(stat: Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
+                .AddSavesFixerRecalculate()
                 .Configure();
-
         }
     }
 }

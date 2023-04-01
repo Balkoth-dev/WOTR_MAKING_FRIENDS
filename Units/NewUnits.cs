@@ -38,7 +38,8 @@ namespace WOTR_MAKING_FRIENDS.Units
 
         public static NewUnit[] newUnits =
             {
-                new NewUnit()
+            #region RedPandaSummon
+            new NewUnit()
                 {
                     guid = GetGUID.RedPandaSummon,
                     name = "RedPandaSummon",
@@ -58,7 +59,9 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
-                new NewUnit()
+            #endregion
+            #region CatSummon
+            new NewUnit()
                 {
                     guid = GetGUID.CatSummon,
                     name = "CatSummon",
@@ -78,6 +81,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region CacodaemonSummon
                 new NewUnit()
                 {
                     guid = GetGUID.CacodaemonSummon,
@@ -101,6 +106,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     UnitFactRefs.NaturalArmor4.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonBlack
                 new NewUnit()
                 {
                     guid = GetGUID.DraconicAllySummonBlack,
@@ -122,6 +129,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.FormOfTheDragonIBlackBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonBlue
                 new NewUnit()
                 {
                     guid = GetGUID.DraconicAllySummonBlue,
@@ -143,6 +152,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.FormOfTheDragonIBlueBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonBrass
                 new NewUnit()
                 {
                     guid = GetGUID.DraconicAllySummonBrass,
@@ -164,6 +175,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.FormOfTheDragonIBrassBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonGreen
                 new NewUnit()
                 {
                     guid = GetGUID.DraconicAllySummonGreen,
@@ -185,6 +198,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.FormOfTheDragonIGreenBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonRed
                 new NewUnit()
                 {
                     guid = GetGUID.DraconicAllySummonRed,
@@ -206,6 +221,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.FormOfTheDragonIGoldBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonSilver
                 new NewUnit()
                 {
                     guid = GetGUID.DraconicAllySummonSilver,
@@ -227,6 +244,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonWhite
                 new NewUnit()
                 {
                     guid = GetGUID.DraconicAllySummonWhite,
@@ -248,30 +267,40 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
+            #region LesserDemonSummonBrimorak
                 new NewUnit()
                 {
                     guid = GetGUID.LesserDemonSummonBrimorak,
                     name = "LesserDemonSummonBrimorak",
                     copiedUnit = UnitRefs.CR5_BrimorakStandard.Cast<BlueprintUnitReference>().Reference
                 },
+            #endregion
+            #region LesserDemonSummonIncubus
                 new NewUnit()
                 {
                     guid = GetGUID.LesserDemonSummonIncubus,
                     name = "LesserDemonSummonIncubus",
                     copiedUnit = UnitRefs.CR6_IncubusStandard.Cast<BlueprintUnitReference>().Reference
                 },
+            #endregion
+            #region LesserDemonSummonSchir
                 new NewUnit()
                 {
                     guid = GetGUID.LesserDemonSummonSchir,
                     name = "LesserDemonSummonSchir",
                     copiedUnit = UnitRefs.CR4_SchirStandard.Cast<BlueprintUnitReference>().Reference
                 },
+            #endregion
+            #region LesserDemonSummonVermlek
                 new NewUnit()
                 {
                     guid = GetGUID.LesserDemonSummonVermlek,
                     name = "LesserDemonSummonVermlek",
                     copiedUnit = UnitRefs.CR3_VermlekStandard.Cast<BlueprintUnitReference>().Reference
                 },
+            #endregion
+            #region StampedeSummonHorse
                 new NewUnit()
                 {
                     guid = GetGUID.StampedeSummonHorse,
@@ -287,6 +316,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.StampedeTrampleDamageAreaBuff)
                                                   }
                 },
+            #endregion
+            #region ReleaseTheHoundsWolf
                 new NewUnit()
                 {
                     guid = GetGUID.ReleaseTheHoundsWolf,
@@ -310,12 +341,16 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.ReleaseTheHoundsDamageAreaBuff)
                                                   }
                 },
+            #endregion
+            #region DraconicAllySummonBlack
                 new NewUnit()
                 {
                     guid = GetGUID.ErinyesSummon,
                     name = "ErinyesSummon",
                     copiedUnit = UnitRefs.CR8_ErinyesDevilStandard.Cast<BlueprintUnitReference>().Reference
                 },
+            #endregion
+            #region MeladaemonSummon
                 new NewUnit()
                 {
                     guid = GetGUID.MeladaemonSummon,
@@ -350,6 +385,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     AbilityRefs.WavesOfFatigue.Cast<BlueprintUnitFactReference>().Reference
                                                   }
                 },
+            #endregion
             };
 
     }
