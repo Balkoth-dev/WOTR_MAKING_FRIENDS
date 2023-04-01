@@ -42,6 +42,8 @@ namespace WOTR_MAKING_FRIENDS.Features
                                           .SetIcon(AbilityRefs.OracleRevelationLifeLinkAbility.Cast<BlueprintAbilityReference>().Reference.Get().m_Icon)
                                           .SetDeactivateIfOwnerUnconscious(true)
                                           .SetDeactivateIfOwnerDisabled(true)
+                                          .SetIsOnByDefault(true)
+                                          .SetDoNotTurnOffOnRest(false)
                                           .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
                                           .Configure();
         }
