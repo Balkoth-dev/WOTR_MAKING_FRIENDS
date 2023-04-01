@@ -17,7 +17,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SummonerSecondSpellbook.Initialize();
 
             LevelEntryBuilder entries = LevelEntryBuilder.New()
-                    .AddEntry(1, GetGUID.SummonerProficiencies, GetGUID.SummonerSecondSpellbookFeat, GetGUID.SummonerLifeLinkFeature, GetGUID.FakeEidolonFeature);
+                    .AddEntry(1, GetGUID.SummonerProficiencies, GetGUID.SummonerSecondSpellbookFeat, GetGUID.SummonerLifeLinkFeature, GetGUID.FakeEidolonFeature)
+                    .AddEntry(2, GetGUID.SummonerBondedSensesFeature);
 
             return ProgressionConfigurator.New(Strings.SummonerProgression, GetGUID.SummonerProgression)
                 .SetAllowNonContextActions(false)

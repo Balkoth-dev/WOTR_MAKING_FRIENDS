@@ -38,7 +38,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
         }
         private static string GetKey(string partialKey)
         {
-            Regex rgx = new("[^a-z0-9-]");
+            Regex rgx = new("[^a-z0-9-.]");
             partialKey = rgx.Replace(partialKey.ToLower(), "");
             return $"{RootKey}.{partialKey}";
         }
@@ -91,11 +91,14 @@ namespace WOTR_MAKING_FRIENDS.Settings
             {
                 sb.AddImage(AssetLoader.LoadInternal("Settings", "makingfriends.png", 200, 200), 200);
 
+                CreateSubHeader("hotkeysubheader");
+#if DEBUG
+                CreateKeyBinding("reloadsetting", () => Main.Reload());
+#endif
                 ModMenu.ModMenu.AddSettings(sb);
             }
             private static void CreateSubHeader(string key)
             {
-                GetString(key + ".value");
                 sb.AddSubHeader(GetString(key));
             }
             private static void CreateToggle(string key, bool defaultBool = false)
@@ -146,7 +149,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             }
             private static string GetKey(string partialKey)
             {
-                Regex rgx = new("[^a-z0-9-]");
+                Regex rgx = new("[^a-z0-9-.]");
                 partialKey = rgx.Replace(partialKey.ToLower(), "");
                 return $"{RootKey}.{partialKey}";
             }

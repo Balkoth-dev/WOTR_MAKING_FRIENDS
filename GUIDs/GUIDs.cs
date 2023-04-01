@@ -148,6 +148,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         #region Features
         internal const string SummonerLifeLinkFeature = "36141547-3a7e-4da7-8789-733938ff4ee5";
         internal const string FakeEidolonFeature = "8314af22-b2cc-49cc-9318-57a09e5592a6";
+        internal const string SummonerBondedSensesFeature = "54e5ae67-4344-4c20-ad7c-0d72246bfe9e";
         #endregion
 
         #region Abilities

@@ -6,5 +6,13 @@
   {
     "Key": "wotr-making-friends.summonerlifelinkfeature.description",
     "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, you may create a bond between yourself and your eidolon. Whenever damage would kill your eidolon, you may take the damage instead."
+  },
+  {
+    "Key": "wotr-making-friends.summonerbondedsensesfeature.name",
+    "enGB": "Bonded Senses"
+  },
+  {
+    "Key": "wotr-making-friends.summonerbondedsensesfeature.description",
+    "enGB": "At 2nd level, a summoner can share the senses of his eidolon, hearing, seeing, smelling, tasting, and touching everything the eidolon does./nThe summoner's perception score is equal to their eidolon's, if they eidolon has a higher perception score."
   }
 ]

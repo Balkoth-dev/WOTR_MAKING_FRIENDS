@@ -6,6 +6,7 @@
         {
             EidolonLifeLink.CreateEidolonLifeLink();
             FakeEidolonFeature.CreateFakeEidolon();
+            BondedSenses.CreateBondedSenses();
         }
     }
 }

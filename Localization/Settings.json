@@ -2,5 +2,17 @@
   {
     "Key": "wotr-making-friends.settings.title",
     "enGB": "Making Friends"
+  },
+  {
+    "Key": "wotr-making-friends.settings.hotkeysubheader",
+    "enGB": "Hotkeys"
+  },
+  {
+    "Key": "wotr-making-friends.settings.reloadsetting.description",
+    "enGB": "Reload"
+  },
+  {
+    "Key": "wotr-making-friends.settings.reloadsetting.longdescription",
+    "enGB": ""
   }
 ]
