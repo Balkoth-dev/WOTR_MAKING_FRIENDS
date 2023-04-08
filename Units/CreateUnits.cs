@@ -26,12 +26,10 @@ namespace WOTR_MAKING_FRIENDS.Units
                 sharedStringAsset.String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String;
 
                 UnitConfigurator unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
-                    .CopyFrom(newUnit.copiedUnit)
                     .CopyFrom(newUnit.copiedUnit, c => c is not null)
                     .SetLocalizedName(sharedStringAsset)
                     .AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference)
                     .AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference)
-                    .AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid })
                     .SetDisplayName(newUnit.m_DisplayName ?? copiedUnit.m_DisplayName)
                     .SetPrefab(newUnit.prefab ?? copiedUnit.Prefab)
                     .SetPortrait(newUnit.portrait ?? copiedUnit.m_Portrait)
@@ -42,6 +40,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetWisdom(newUnit.wisdom ?? copiedUnit.Wisdom)
                     .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
                     .SetSize(newUnit.size ?? copiedUnit.Size);
+
+                if(newUnit.isSummon)
+                {
+                    unitConfigured.AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid });
+                }
 
                 if (newUnit.blueprintUnitFactReferences != null)
                 {

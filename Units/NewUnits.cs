@@ -26,6 +26,8 @@ namespace WOTR_MAKING_FRIENDS.Units
             internal AssetLink<UnitViewLink> prefab;
             /// <summary> Portrait used for the unit. Leave null if same as copied unit. </summary>
             internal Blueprint<BlueprintPortraitReference> portrait;
+            /// <summary> Denotes if this unit is to be used in a summon spell. </summary>
+            internal bool isSummon;
             internal Size? size;
             internal int? strength;
             internal int? dexterity;
@@ -46,6 +48,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("RedPandaSummon.Name"),
                     copiedUnit = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
                     prefab = UnitRefs.RedPandaFamiliar.Reference.Get().Prefab,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 8,
                     dexterity = 16,
@@ -68,6 +71,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("CatSummon.Name"),
                     copiedUnit = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
                     prefab = UnitRefs.CatFamiliar.Reference.Get().Prefab,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 3,
                     dexterity = 15,
@@ -89,6 +93,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "CacodaemonSummon",
                     m_DisplayName = Helpers.ObtainString("CacodaemonSummon.Name"),
                     copiedUnit = UnitRefs.GibrilethSummon.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 12,
                     dexterity = 11,
@@ -114,6 +119,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "DraconicAllySummonBlack",
                     m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 7,
                     dexterity = 15,
@@ -137,6 +143,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "DraconicAllySummonBlue",
                     m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 7,
                     dexterity = 15,
@@ -160,6 +167,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "DraconicAllySummonBrass",
                     m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 7,
                     dexterity = 15,
@@ -183,6 +191,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "DraconicAllySummonGreen",
                     m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 7,
                     dexterity = 15,
@@ -206,6 +215,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "DraconicAllySummonRed",
                     m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 7,
                     dexterity = 15,
@@ -229,6 +239,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "DraconicAllySummonSilver",
                     m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 7,
                     dexterity = 15,
@@ -252,6 +263,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "DraconicAllySummonWhite",
                     m_DisplayName = Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Tiny,
                     strength = 7,
                     dexterity = 15,
@@ -273,7 +285,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     guid = GetGUID.LesserDemonSummonBrimorak,
                     name = "LesserDemonSummonBrimorak",
-                    copiedUnit = UnitRefs.CR5_BrimorakStandard.Cast<BlueprintUnitReference>().Reference
+                    copiedUnit = UnitRefs.CR5_BrimorakStandard.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true
                 },
             #endregion
             #region LesserDemonSummonIncubus
@@ -281,7 +294,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     guid = GetGUID.LesserDemonSummonIncubus,
                     name = "LesserDemonSummonIncubus",
-                    copiedUnit = UnitRefs.CR6_IncubusStandard.Cast<BlueprintUnitReference>().Reference
+                    copiedUnit = UnitRefs.CR6_IncubusStandard.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true
                 },
             #endregion
             #region LesserDemonSummonSchir
@@ -289,7 +303,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     guid = GetGUID.LesserDemonSummonSchir,
                     name = "LesserDemonSummonSchir",
-                    copiedUnit = UnitRefs.CR4_SchirStandard.Cast<BlueprintUnitReference>().Reference
+                    copiedUnit = UnitRefs.CR4_SchirStandard.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true
                 },
             #endregion
             #region LesserDemonSummonVermlek
@@ -297,7 +312,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     guid = GetGUID.LesserDemonSummonVermlek,
                     name = "LesserDemonSummonVermlek",
-                    copiedUnit = UnitRefs.CR3_VermlekStandard.Cast<BlueprintUnitReference>().Reference
+                    copiedUnit = UnitRefs.CR3_VermlekStandard.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true
                 },
             #endregion
             #region StampedeSummonHorse
@@ -306,6 +322,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     guid = GetGUID.StampedeSummonHorse,
                     name = "StampedeSummonHorse",
                     copiedUnit = UnitRefs.HorseSummoned.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     size = Size.Fine,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
@@ -323,6 +340,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     guid = GetGUID.ReleaseTheHoundsWolf,
                     name = "ReleaseTheHoundsWolf",
                     copiedUnit = UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                     m_DisplayName = Helpers.ObtainString("ReleaseTheHoundsWolf.Name"),
                     size = Size.Fine,
                     strength = 20,
@@ -347,7 +365,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     guid = GetGUID.ErinyesSummon,
                     name = "ErinyesSummon",
-                    copiedUnit = UnitRefs.CR8_ErinyesDevilStandard.Cast<BlueprintUnitReference>().Reference
+                    copiedUnit = UnitRefs.CR8_ErinyesDevilStandard.Cast<BlueprintUnitReference>().Reference,
+                    isSummon = true,
                 },
             #endregion
             #region MeladaemonSummon
@@ -357,6 +376,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     name = "MeladaemonSummon",
                     copiedUnit = UnitRefs.CR7_Werewolf.Cast<BlueprintUnitReference>().Reference,
                     m_DisplayName = Helpers.ObtainString("MeladaemonSummon.Name"),
+                    isSummon = true,
                     size = Size.Large,
                     strength = 22,
                     dexterity = 22,

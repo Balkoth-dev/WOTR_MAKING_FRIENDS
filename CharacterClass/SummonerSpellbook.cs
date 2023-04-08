@@ -32,6 +32,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             SpellsTableConfigurator.New(InternalString.SummonerSpellbookName + "SpellsPerDayTable", GetGUID.SummonerSpellbookSpellsPerDay)
                 .SetLevels(new SpellsLevelEntry[] {
+                        CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,1),
                         CreateSpellLevelEntry(0,2),
                         CreateSpellLevelEntry(0,3),
@@ -60,6 +61,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             SpellsTableConfigurator.New(InternalString.SummonerSpellbook + ".SpellKnownTable", GetGUID.SummonerSpellbookSpellsKnown)
                 .SetLevels(new SpellsLevelEntry[] {
+                        CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,2),
                         CreateSpellLevelEntry(0,3),
                         CreateSpellLevelEntry(0,4),
@@ -174,8 +176,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ProtectionFromEnergyCommunal.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ReducePersonMass.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Stoneskin.ToString()),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.SummonMonsterVBase.ToString()),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.ElementalWallFireAbility.ToString()),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.SummonMonsterVBase.ToString())
             };
             return spelllist;
         }
