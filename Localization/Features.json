@@ -1,5 +1,13 @@
 [
   {
+    "Key": "wotr-making-friends.fakeeidolonfeature.name",
+    "enGB": "Fake Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.fakeeidolonfeature.description",
+    "enGB": "Fake Eidolon"
+  },
+  {
     "Key": "wotr-making-friends.summonerlifelinkfeature.name",
     "enGB": "Life Link"
   },
@@ -32,11 +40,19 @@
     "enGB": "At 8th level, a summoner can use his maker’s call ability to swap locations with his eidolon. If the eidolon occupies more squares than the summoner, the summoner can appear in any square occupied by the eidolon. The eidolon must occupy the square that was occupied by the summoner if able, or as close as possible if it is not able."
   },
   {
-    "Key": "wotr-making-friends.fakeeidolonfeature.name",
-    "enGB": "Fake Eidolon"
+    "Key": "wotr-making-friends.summonershieldallyfeature.name",
+    "enGB": "Shield Ally"
   },
   {
-    "Key": "wotr-making-friends.fakeeidolonfeature.description",
-    "enGB": "Fake Eidolon"
+    "Key": "wotr-making-friends.summonershieldallyfeature.description",
+    "enGB": "At 4th level, whenever a summoner is within his eidolon’s reach, the summoner gains a +2 shield bonus to his Armor Class and a +2 circumstance bonus on his saving throws."
+  },
+  {
+    "Key": "wotr-making-friends.summonershieldallygreaterfeature.name",
+    "enGB": "Shield Ally, Greater"
+  },
+  {
+    "Key": "wotr-making-friends.summonershieldallygreaterfeature.description",
+    "enGB": "At 12th level, whenever an ally is within reach of the summoner’s eidolon, the ally gains a +2 shield bonus to its Armor Class and a +2 circumstance bonus on its saving throws. If this ally is the summoner, these bonuses increase to +4."
   }
 ]

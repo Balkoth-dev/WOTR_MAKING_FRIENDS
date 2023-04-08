@@ -37,6 +37,8 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .CopyFrom(FeatureRefs.AnimalCompanionFeatureDog.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
+                .AddFeatureOnApply(ProgressionRefs.DruidAnimalCompanionProgression.Cast<BlueprintFeatureReference>())
+                .AddFeatureOnApply(FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>())
                 /* .AddPet(
                      type: PetTypeExtensions.Eidolon,
                      progressionType: PetProgressionType.AnimalCompanion,

@@ -36,6 +36,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
+                .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeLink.png"))
                 .AddBuffActions(applyLifeLink, disableLifeLink, applyLifeLink)
                 .SetStacking(StackingType.Ignore)
                 .AddComponent<LifeLinkEidolon>()

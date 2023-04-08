@@ -151,6 +151,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerBondedSensesFeature = "54e5ae67-4344-4c20-ad7c-0d72246bfe9e";
         internal const string SummonerMakersCallFeature = "745cd39c-3f02-457d-9474-ce6b053774bd";
         internal const string SummonerTranspositionFeature = "358b1ba7-8409-41b3-8606-33e3c097220d";
+        internal const string SummonerShieldAllyFeature = "1024ef70-2bdb-4f31-979b-e65fbc0163ca";
+        internal const string SummonerShieldAllyAuraFeature = "b431ee5e-65d8-41c4-834e-9a43bd80f678";
+        internal const string SummonerShieldAllyGreaterFeature = "3f3be15e-a065-4db4-ae3e-a09d9dfeeeac";
+        internal const string SummonerShieldAllyGreaterAuraFeature = "7db0d03d-192b-46e2-9b23-2875779aa6fb";
         #endregion
 
         #region Abilities
@@ -175,6 +179,15 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string OverstimulateBuff = "05147ea5-8183-4c63-a3b0-47eb4af7fa32";
         internal const string BlackTentaclesBuff = "618ac21a-a0c8-4f76-a1b5-27893cccc63a";
         internal const string SummonerLifeLinkBuff = "f0f0f207-bb8e-4419-b058-937fa0ffb16b";
+        internal const string SummonerShieldAllyAuraBuff = "55623beb-1e7a-4254-a369-7257d2a2bd5d";
+        internal const string SummonerShieldAllyAuraAreaEffectBuff = "710c7bad-56c1-4fee-8bd2-b86ae9ada789";
+        internal const string SummonerShieldAllyBuff = "275da525-7951-44fa-aa4a-2b43fc17f47a";
+        internal const string SummonerShieldAllyConditionalBuff = "02dbf90d-fb58-406e-a79a-112fb0a8575b";
+        internal const string SummonerShieldAllyGreaterAuraBuff = "189c381a-0c46-440c-a7a6-1c58811b85a7";
+        internal const string SummonerShieldAllyGreaterAuraAreaEffectBuff = "314e1224-a03e-43de-90a8-637e91e86f69";
+        internal const string SummonerShieldAllyGreaterBuff = "00de01db-92b7-4776-80a6-9ded9ea56b05";
+        internal const string SummonerShieldAllyGreaterConditionalBuff = "149bc059-916c-416d-a28a-2c093499c3a5";
+        internal const string SummonerShieldAllyGreaterIsMasterBuff = "0594eee4-c119-44c1-aa50-591c380039d2";
         #endregion
 
         #region AiAttackAction

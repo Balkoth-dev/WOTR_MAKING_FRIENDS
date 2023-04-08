@@ -28,8 +28,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                 UnitConfigurator unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
                     .CopyFrom(newUnit.copiedUnit, c => c is not null)
                     .SetLocalizedName(sharedStringAsset)
-                    .AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference)
-                    .AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference)
                     .SetDisplayName(newUnit.m_DisplayName ?? copiedUnit.m_DisplayName)
                     .SetPrefab(newUnit.prefab ?? copiedUnit.Prefab)
                     .SetPortrait(newUnit.portrait ?? copiedUnit.m_Portrait)
@@ -44,6 +42,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                 if(newUnit.isSummon)
                 {
                     unitConfigured.AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid });
+                    unitConfigured.AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference);
+                    unitConfigured.AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference);
                 }
 
                 if (newUnit.blueprintUnitFactReferences != null)

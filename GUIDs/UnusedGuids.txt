@@ -1,17 +1,4 @@
 ﻿
-internal const string UNKNOWN = "1024ef70-2bdb-4f31-979b-e65fbc0163ca";
-internal const string UNKNOWN = "b431ee5e-65d8-41c4-834e-9a43bd80f678";
-internal const string UNKNOWN = "55623beb-1e7a-4254-a369-7257d2a2bd5d";
-internal const string UNKNOWN = "710c7bad-56c1-4fee-8bd2-b86ae9ada789";
-internal const string UNKNOWN = "275da525-7951-44fa-aa4a-2b43fc17f47a";
-internal const string UNKNOWN = "02dbf90d-fb58-406e-a79a-112fb0a8575b";
-internal const string UNKNOWN = "189c381a-0c46-440c-a7a6-1c58811b85a7";
-internal const string UNKNOWN = "314e1224-a03e-43de-90a8-637e91e86f69";
-internal const string UNKNOWN = "00de01db-92b7-4776-80a6-9ded9ea56b05";
-internal const string UNKNOWN = "149bc059-916c-416d-a28a-2c093499c3a5";
-internal const string UNKNOWN = "3f3be15e-a065-4db4-ae3e-a09d9dfeeeac";
-internal const string UNKNOWN = "7db0d03d-192b-46e2-9b23-2875779aa6fb";
-internal const string UNKNOWN = "0594eee4-c119-44c1-aa50-591c380039d2";
 internal const string UNKNOWN = "302da8c3-f31a-4eda-ab32-5d7608e1b397";
 internal const string UNKNOWN = "984f9c43-3369-4160-8d9a-fec6c37501ab";
 internal const string UNKNOWN = "5a1229f4-d6b3-4a53-a314-d60124e22af1";

@@ -9,6 +9,8 @@
             BondedSensesFeature.CreateBondedSenses();
             MakersCallFeature.CreateMakersCall();
             TranspositionFeature.CreateTransposition();
+            ShieldAllyFeature.CreateShieldAlly();
+            ShieldAllyGreaterFeature.CreateShieldAllyGreater();
         }
     }
 }

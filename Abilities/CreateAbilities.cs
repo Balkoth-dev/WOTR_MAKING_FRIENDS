@@ -4,6 +4,7 @@
     {
         public static void CreateAllAbilities()
         {
+            EidolonLifeLinkActivableAbility.CreateEidolonLifeLinkActivatableAbility();
             MakersCallAbility.CreateMakersCallAbility();
             TranspositionAbility.CreateTranspositionAbility();
         }
