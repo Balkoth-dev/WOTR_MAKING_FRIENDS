@@ -16,7 +16,6 @@ namespace WOTR_MAKING_FRIENDS.Features
             internal const string Feature = "SummonerLifeLinkFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerLifeLinkFeature.Name");
             internal static LocalizedString Description = Helpers.ObtainString("SummonerLifeLinkFeature.Description");
-            internal const string ActivatableAbility = "SummonerLifeLinkActivatableAbility";
         }
         public static void CreateEidolonLifeLink()
         {
