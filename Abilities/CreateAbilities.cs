@@ -5,6 +5,7 @@
         public static void CreateAllAbilities()
         {
             MakersCallAbility.CreateMakersCallAbility();
+            TranspositionAbility.CreateTranspositionAbility();
         }
     }
 }

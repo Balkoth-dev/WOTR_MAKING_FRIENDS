@@ -8,6 +8,7 @@
             FakeEidolonFeature.CreateFakeEidolon();
             BondedSensesFeature.CreateBondedSenses();
             MakersCallFeature.CreateMakersCall();
+            TranspositionFeature.CreateTransposition();
         }
     }
 }

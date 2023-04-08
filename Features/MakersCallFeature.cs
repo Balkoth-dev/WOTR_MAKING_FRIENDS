@@ -28,6 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(InternalString.Description)
                 .AddAbilityResources(amount: 1, resource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.SummonerMakersCallResource), true)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.SummonerMakersCallAbility) })
+                .SetIcon(FeatureRefs.DimensionalRideFeature.Reference.Get().m_Icon)
                 .Configure();
         }
     }

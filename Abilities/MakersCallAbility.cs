@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
 {
     internal class MakersCallAbility
     {
-        public static readonly BlueprintAbility emergencySwapAbility = BlueprintTool.Get<BlueprintAbility>("b50ca9b5d6292fb42b8eab8e5d64842d");
+        private static readonly BlueprintAbility emergencySwapAbility = BlueprintTool.Get<BlueprintAbility>("b50ca9b5d6292fb42b8eab8e5d64842d");
         private static class InternalString
         {
             internal const string Ability = "SummonerMakersCallAbility";
@@ -43,6 +43,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
                 .SetCanTargetFriends(true)
                 .SetCanTargetSelf(false)
                 .SetRange(AbilityRange.Long)
+                .SetIcon(FeatureRefs.DimensionalRideFeature.Reference.Get().m_Icon)
                 .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Standard)
                 .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.SummonerMakersCallResource))
                 .Configure();
