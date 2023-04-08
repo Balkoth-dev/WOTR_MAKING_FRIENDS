@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\**" />
+    <EmbeddedResource Remove="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\**" />
+    <None Remove="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Localization\Features.json" />
     <None Remove="Localization\Scrolls.json" />
     <None Remove="Localization\Settings.json" />
@@ -13,13 +19,6 @@
     <None Remove="Localization\SummonerClass.json" />
     <None Remove="Localization\SummonerSpellbook.json" />
     <None Remove="Localization\Units.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\Abilities\BlackTentacles.png" />
-    <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\Abilities\BlackTentaclesScroll.png" />
-    <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\Settings\makingfriends.png" />
-    <Content Include="bin\Debug\WOTR_MAKING_FRIENDS\net472\Info.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -93,6 +92,7 @@
   
 <ItemGroup>
   <Folder Include="GetClasses\" />
+  <Folder Include="Output\Assets\Settings\" />
 </ItemGroup>
    <!-- DLL Merging -->
 	<Target Name="ILRepack" AfterTargets="Build">
@@ -130,12 +130,12 @@
   <Target Name="Deploy" AfterTargets="ILRepack">
     <ItemGroup>
       <Assembly Include="$(OutputPath)\$(AssemblyName).dll" />
-      <ModConfig Include="$(OutputPath)\Info.json" />
-      <Assets Include="$(OutputPath)\Assets\*.*" />
+      <ModConfig Include="$(SolutionDir)\Output\Info.json" />
+      <Assets Include="$(SolutionDir)\Output\Assets\**\*.*" />
     </ItemGroup>
 
     <Copy SourceFiles="@(Assembly)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
     <Copy SourceFiles="@(ModConfig)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
-    <Copy SourceFiles="@(Assets)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)\Assets" />
+    <Copy SourceFiles="@(Assets)" DestinationFiles="@(Assets->'$(WrathPath)\Mods\$(MSBuildProjectName)\Assets\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 </Project>
