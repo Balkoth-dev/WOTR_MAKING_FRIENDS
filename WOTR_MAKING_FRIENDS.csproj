@@ -7,8 +7,11 @@
 
   <ItemGroup>
     <Compile Remove="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\**" />
+    <Compile Remove="GetClasses\**" />
     <EmbeddedResource Remove="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\**" />
+    <EmbeddedResource Remove="GetClasses\**" />
     <None Remove="bin\Debug\WOTR_MAKING_FRIENDS\net472\Assets\**" />
+    <None Remove="GetClasses\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -91,7 +94,6 @@
 </ItemGroup>
   
 <ItemGroup>
-  <Folder Include="GetClasses\" />
   <Folder Include="Output\Assets\Settings\" />
 </ItemGroup>
    <!-- DLL Merging -->
