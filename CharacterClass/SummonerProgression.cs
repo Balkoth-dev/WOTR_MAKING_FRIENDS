@@ -22,7 +22,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                     .AddEntry(4, GetGUID.SummonerShieldAllyFeature)
                     .AddEntry(6, GetGUID.SummonerMakersCallFeature)
                     .AddEntry(8, GetGUID.SummonerTranspositionFeature)
-                    .AddEntry(12, GetGUID.SummonerShieldAllyGreaterFeature);
+                    .AddEntry(12, GetGUID.SummonerShieldAllyGreaterFeature)
+                    .AddEntry(14, GetGUID.SummonerLifeBondFeature);
 
             return ProgressionConfigurator.New(Strings.SummonerProgression, GetGUID.SummonerProgression)
                 .SetAllowNonContextActions(false)

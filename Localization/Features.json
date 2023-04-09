@@ -13,7 +13,7 @@
   },
   {
     "Key": "wotr-making-friends.summonerlifelinkfeature.description",
-    "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, you may create a bond between yourself and your eidolon. Whenever damage would kill your eidolon, you may take the damage instead."
+    "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, the summoner may create a bond between the summoner and the summoner's eidolon. Whenever damage would kill the summoner's eidolon, the summoner may take the damage instead."
   },
   {
     "Key": "wotr-making-friends.summonerbondedsensesfeature.name",
@@ -54,5 +54,13 @@
   {
     "Key": "wotr-making-friends.summonershieldallygreaterfeature.description",
     "enGB": "At 12th level, whenever an ally is within reach of the summoner’s eidolon, the ally gains a +2 shield bonus to its Armor Class and a +2 circumstance bonus on its saving throws. If this ally is the summoner, these bonuses increase to +4."
+  },
+  {
+    "Key": "wotr-making-friends.summonerlifebondfeature.name",
+    "enGB": "Life Bond"
+  },
+  {
+    "Key": "wotr-making-friends.summonerlifebondfeature.description",
+    "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, the summoner may create a bond between the summoner and the summoner's eidolon. Whenever damage would kill the summoner, the summoner's eidolon may take the damage instead."
   }
 ]

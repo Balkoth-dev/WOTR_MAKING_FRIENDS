@@ -155,6 +155,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerShieldAllyAuraFeature = "b431ee5e-65d8-41c4-834e-9a43bd80f678";
         internal const string SummonerShieldAllyGreaterFeature = "3f3be15e-a065-4db4-ae3e-a09d9dfeeeac";
         internal const string SummonerShieldAllyGreaterAuraFeature = "7db0d03d-192b-46e2-9b23-2875779aa6fb";
+        internal const string SummonerLifeBondFeature = "5a1229f4-d6b3-4a53-a314-d60124e22af1";
         #endregion
 
         #region Abilities
@@ -164,6 +165,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
 
         #region ActivatableAbilities
         internal const string SummonerLifeLinkActivatableAbility = "5e08e283-da1d-4d32-b38c-c3df77d72244";
+        internal const string SummonerLifeBondActivatableAbility = "984f9c43-3369-4160-8d9a-fec6c37501ab";
         #endregion
 
         #region Buffs
@@ -188,6 +190,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerShieldAllyGreaterBuff = "00de01db-92b7-4776-80a6-9ded9ea56b05";
         internal const string SummonerShieldAllyGreaterConditionalBuff = "149bc059-916c-416d-a28a-2c093499c3a5";
         internal const string SummonerShieldAllyGreaterIsMasterBuff = "0594eee4-c119-44c1-aa50-591c380039d2";
+        internal const string SummonerLifeBondBuff = "302da8c3-f31a-4eda-ab32-5d7608e1b397";
         #endregion
 
         #region AiAttackAction

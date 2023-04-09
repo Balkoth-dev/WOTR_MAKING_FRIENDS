@@ -14,7 +14,7 @@ using Kingmaker.Localization;
 
 namespace WOTR_MAKING_FRIENDS.Abilities
 {
-    internal class EidolonLifeLinkActivableAbility
+    internal class LifeLinkActivableAbility
     {
         private static class InternalString
         {
@@ -22,13 +22,12 @@ namespace WOTR_MAKING_FRIENDS.Abilities
             internal static LocalizedString Description = Helpers.ObtainString("SummonerLifeLinkFeature.Description");
             internal const string ActivatableAbility = "SummonerLifeLinkActivatableAbility";
         }
-        public static void CreateEidolonLifeLinkActivatableAbility()
+        public static void CreateLifeLinkActivatableAbility()
         {
             ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.SummonerLifeLinkActivatableAbility)
                                           .SetDisplayName(InternalString.Name)
                                           .SetDescription(InternalString.Description)
                                           .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.SummonerLifeLinkBuff))
-                                          .SetIcon(AbilityRefs.OracleRevelationLifeLinkAbility.Cast<BlueprintAbilityReference>().Reference.Get().m_Icon)
                                           .SetDeactivateIfOwnerUnconscious(true)
                                           .SetDeactivateIfOwnerDisabled(true)
                                           .SetIsOnByDefault(true)

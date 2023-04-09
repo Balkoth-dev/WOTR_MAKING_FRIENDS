@@ -4,13 +4,14 @@
     {
         public static void CreateAllFeatures()
         {
-            EidolonLifeLinkFeature.CreateEidolonLifeLink();
+            LifeLinkFeature.CreateEidolonLifeLink();
             FakeEidolonFeature.CreateFakeEidolon();
             BondedSensesFeature.CreateBondedSenses();
             MakersCallFeature.CreateMakersCall();
             TranspositionFeature.CreateTransposition();
             ShieldAllyFeature.CreateShieldAlly();
             ShieldAllyGreaterFeature.CreateShieldAllyGreater();
+            LifeBondFeature.CreateEidolonLifeBond();
         }
     }
 }

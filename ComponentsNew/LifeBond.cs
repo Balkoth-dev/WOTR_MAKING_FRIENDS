@@ -2,19 +2,22 @@
 using Kingmaker.Blueprints.Facts;
 using Kingmaker.Designers;
 using Kingmaker.ElementsSystem;
+using Kingmaker.EntitySystem;
 using Kingmaker.EntitySystem.Entities;
 using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules.Damage;
 using Kingmaker.UI.Models.Log;
 using Kingmaker.UnitLogic;
+using Kingmaker.UnitLogic.Parts;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
     [AllowedOn(typeof(BlueprintUnitFact), false)]
     [AllowMultipleComponents]
-    public class LifeLinkEidolon :
+    public class LifeBond :
       UnitFactComponentDelegate,
       ITargetRulebookHandler<RuleDealDamage>,
       IRulebookHandler<RuleDealDamage>,
@@ -55,14 +58,30 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         private void TryReduceDamage(RuleDealDamage evt = null)
         {
-            int ownerNum = Math.Min(1, (int)(Owner.MaxHP * HealthPercent * 0.00999999977648258));
+            List<UnitEntityData> eidolons = new();
+            foreach (EntityPartRef<UnitEntityData, UnitPartPet> pet in Owner.Pets)
+            {
+                UnitPartPet entityPart = pet.EntityPart;
 
+                bool flag = entityPart != null && entityPart.Type == PetTypeExtensions.Eidolon;
+                if (flag)
+                {
+                    eidolons.Add(pet.Entity);
+                }
+            }
+
+            int ownerNum = Math.Min(1, (int)(Owner.MaxHP * HealthPercent * 0.00999999977648258));
             if (Owner.HPLeft > ownerNum)
             {
                 return;
             }
 
-            GameHelper.DealDirectDamage(evt != null ? evt.Initiator : Owner, Owner.Master, Owner.Damage - (Owner.Stats.HitPoints - ownerNum));
+            Main.Log("Hitpoints: "+ (int)Owner.Stats.HitPoints+" Total Damage: "+ Owner.Damage + " Damage Calc: " +(Owner.Stats.HitPoints - Owner.Damage));
+
+            foreach (var eidolon in eidolons)
+            {
+                GameHelper.DealDirectDamage(evt != null ? evt.Initiator : Owner, eidolon, Owner.Damage - (Owner.Stats.HitPoints - ownerNum));
+            }
             Owner.Damage = Owner.Stats.HitPoints - ownerNum;
         }
 

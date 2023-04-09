@@ -4,9 +4,10 @@
     {
         public static void CreateAllAbilities()
         {
-            EidolonLifeLinkActivableAbility.CreateEidolonLifeLinkActivatableAbility();
+            LifeLinkActivableAbility.CreateLifeLinkActivatableAbility();
             MakersCallAbility.CreateMakersCallAbility();
             TranspositionAbility.CreateTranspositionAbility();
+            LifeBondActivableAbility.CreateLifeBondActivatableAbility();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             SummonerLifeLinkBuff.CreateSummonerLifeLinkBuff();
             SummonerShieldAllyBuff.CreateShieldAllyBuffs();
             SummonerShieldAllyGreaterBuff.CreateShieldAllyGreaterBuffs();
+            SummonerLifeBondBuff.CreateSummonerLifeBondBuff();
         }
 
         private static void CreateDummyBuff()
