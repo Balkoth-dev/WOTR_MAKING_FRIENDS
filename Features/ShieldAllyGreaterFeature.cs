@@ -1,14 +1,7 @@
-﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
-using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
@@ -37,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(InternalString.Description)
                 .AddRemoveFeatureOnApply(GetGUID.SummonerShieldAllyFeature)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
-                .AddFeatureToPet(GetGUID.SummonerShieldAllyGreaterAuraFeature,PetTypeExtensions.Eidolon)
+                .AddFeatureToPet(GetGUID.SummonerShieldAllyGreaterAuraFeature, PetTypeExtensions.Eidolon)
                 .Configure();
 
         }

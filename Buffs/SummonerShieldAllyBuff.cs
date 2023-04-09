@@ -4,18 +4,14 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Conditions.Builder;
-using BlueprintCore.Utils.Types;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
-using Kingmaker.UnitLogic.Mechanics.Actions;
 using Kingmaker.UnitLogic.Mechanics.Conditions;
 using Kingmaker.Utility;
-using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static WOTR_MAKING_FRIENDS.Spells.Summoning.SummonAbilities;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
@@ -74,7 +70,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
                 .SetStacking(StackingType.Ignore)
-                .AddBuffActions(actionsAddBuffBuilder,actionsRemoveBuffBuilder,actionsAddBuffBuilder)
+                .AddBuffActions(actionsAddBuffBuilder, actionsRemoveBuffBuilder, actionsAddBuffBuilder)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
                 .Configure();
         }
@@ -86,7 +82,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .SetDescription(InternalString.Description)
                 .SetStacking(StackingType.Ignore)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
-                .AddStatBonus(ModifierDescriptor.Shield,null,StatType.AC, 2)
+                .AddStatBonus(ModifierDescriptor.Shield, null, StatType.AC, 2)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveFortitude, 2)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveReflex, 2)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveWill, 2)

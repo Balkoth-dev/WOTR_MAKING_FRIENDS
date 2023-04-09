@@ -1,10 +1,8 @@
-﻿using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.EntitySystem.Entities;
-using WOTR_MAKING_FRIENDS;
+﻿using Kingmaker.EntitySystem.Entities;
 
 namespace Kingmaker.UnitLogic.Mechanics.Conditions
 {
-    public class ContextConditionIsMaster: ContextCondition
+    public class ContextConditionIsMaster : ContextCondition
     {
         public override string GetConditionCaption() => "Is Master";
 
@@ -18,7 +16,7 @@ namespace Kingmaker.UnitLogic.Mechanics.Conditions
             UnitEntityData unit = this.Target.Unit;
             if (!(unit == (UnitDescriptor)null))
             {
-                if(unit == maybeCaster.Master)
+                if (unit == maybeCaster.Master)
                     return true;
             }
             return false;

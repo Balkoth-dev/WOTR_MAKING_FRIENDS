@@ -9,9 +9,7 @@ using Kingmaker.RuleSystem.Rules.Damage;
 using Kingmaker.UI.Models.Log;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Parts;
-using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -28,9 +26,6 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
       IUnitHealthChangedHandler,
       IGlobalSubscriber
     {
-        [Tooltip("0 means 1 HP")]
-        public int HealthPercent = 0;
-
         public override void OnTurnOn()
         {
             if (!Owner.IsPet && !Owner.IsReallyInFactPet)
@@ -70,24 +65,39 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                 }
             }
 
-            int ownerNum = Math.Min(1, (int)(Owner.MaxHP * HealthPercent * 0.00999999977648258));
+            foreach (var eidolon in eidolons)
+            {
+                if (eidolon.Stats.HitPoints - eidolon.Damage - (((Owner.Stats.HitPoints - Owner.Damage) * -1) + 1) < 1)
+                {
+                    eidolons.Remove(eidolon);
+                }
+            }
+            if (eidolons.Count == 0)
+            {
+                return;
+            }
+
+            int ownerNum = 1;
+
             if (Owner.HPLeft > ownerNum)
             {
                 return;
             }
 
-            Main.Log("Hitpoints: "+ (int)Owner.Stats.HitPoints+" Total Damage: "+ Owner.Damage + " Damage Calc: " +(Owner.Stats.HitPoints - Owner.Damage));
+            Main.Log("Hitpoints: " + (int)Owner.Stats.HitPoints + " Total Damage: " + Owner.Damage + " Damage Calc: " + (Owner.Stats.HitPoints - Owner.Damage));
+
+            int eidolonDamage = ((Owner.Stats.HitPoints - Owner.Damage) * -1) + 1 / eidolons.Count;
 
             foreach (var eidolon in eidolons)
             {
-                GameHelper.DealDirectDamage(evt != null ? evt.Initiator : Owner, eidolon, Owner.Damage - (Owner.Stats.HitPoints - ownerNum));
+                GameHelper.DealDirectDamage(evt != null ? evt.Initiator : Owner, eidolon, eidolonDamage);
             }
-            Owner.Damage = Owner.Stats.HitPoints - ownerNum;
+            Owner.Damage = (int)Owner.Stats.HitPoints - 1;
         }
 
         public void HandleUnitFailedToDie(UnitEntityData unit)
         {
-            int damage = Owner.HPLeft - Math.Min(1, (int)(Owner.MaxHP * HealthPercent * 0.00999999977648258));
+            int damage = Owner.HPLeft - 1;
             if (damage <= 0)
             {
                 return;

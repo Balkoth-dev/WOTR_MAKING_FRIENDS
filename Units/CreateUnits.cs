@@ -39,7 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
                     .SetSize(newUnit.size ?? copiedUnit.Size);
 
-                if(newUnit.isSummon)
+                if (newUnit.isSummon)
                 {
                     unitConfigured.AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid });
                     unitConfigured.AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference);
