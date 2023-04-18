@@ -217,7 +217,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             int index = Mathf.Min(20, fact != null ? fact.GetRank() : 0);
             switch (ProgressionType)
             {
-                case PetProgressionType.AnimalCompanion:
+                case PetProgressionTypeExtensions.EidolonProgression:
                     return Math.Min(Owner.Progression.CharacterLevel, AddEidolon.RankToLevelEidolon[index]);
                 default:
                     return 1;

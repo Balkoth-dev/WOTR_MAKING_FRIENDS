@@ -26,7 +26,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerSecondSpellbookFeat = "6908ce97-fe0e-44d5-abd2-0782d69dd731";
         #endregion
 
-        #region
+        #region SummonPools
         internal const string SummonerPool = "e3640f25-ed1e-4a6b-933a-380dd008839d";
         internal const string DraconicAllyPool = "f2754c34-dbf6-492f-bb69-b0e46ae8168b";
         #endregion
@@ -115,6 +115,9 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonLesserDemonBase = "6d8aeb90-d871-4e16-8fcd-0232f94307e9";
         #endregion
 
+        #region Eidolons
+        internal const string EidolonAirElemental = "f714b317-8898-46c5-a037-0202adacb3ab";
+        #endregion
 
         #region Units
         internal const string RedPandaSummon = "05708f21-cb8d-46ee-8f4e-d4bd5a5eedc8";
@@ -156,6 +159,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string SummonerShieldAllyGreaterFeature = "3f3be15e-a065-4db4-ae3e-a09d9dfeeeac";
         internal const string SummonerShieldAllyGreaterAuraFeature = "7db0d03d-192b-46e2-9b23-2875779aa6fb";
         internal const string SummonerLifeBondFeature = "5a1229f4-d6b3-4a53-a314-d60124e22af1";
+        internal const string EidolonRankFeature = "87509417-4b79-4012-b6bd-ab7454c8cec4";
         #endregion
 
         #region Abilities
@@ -213,6 +217,11 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
 
         #region AreaEffect
         internal const string BlackTentaclesAreaEffect = "96d8224c-482e-4c22-95b0-d8c0cff5a9a3";
+        #endregion
+
+        #region Progressions
+        internal const string EidolonProgression = "a453e008-1eaf-43ac-b642-365362cb4ec1";
+        internal const string EidolonBaseProgression = "62598c20-a930-46c8-8acb-4254c17c2083";
         #endregion
         public static string GUIDByName(string s)
         {

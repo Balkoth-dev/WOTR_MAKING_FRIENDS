@@ -1,7 +1,4 @@
 ﻿
-internal const string UNKNOWN = "a453e008-1eaf-43ac-b642-365362cb4ec1";
-internal const string UNKNOWN = "f714b317-8898-46c5-a037-0202adacb3ab";
-internal const string UNKNOWN = "87509417-4b79-4012-b6bd-ab7454c8cec4";
 internal const string UNKNOWN = "62598c20-a930-46c8-8acb-4254c17c2083";
 internal const string UNKNOWN = "1a170044-95b3-47c0-b4b6-0c7fdd238da1";
 internal const string UNKNOWN = "6d81b6ab-cff4-4973-afe1-e50f0fded5e9";

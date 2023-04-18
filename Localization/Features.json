@@ -62,5 +62,13 @@
   {
     "Key": "wotr-making-friends.summonerlifebondfeature.description",
     "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, the summoner may create a bond between the summoner and the summoner's eidolon. Whenever damage would kill the summoner, the summoner's eidolon may take the damage instead."
+  },
+  {
+    "Key": "wotr-making-friends.eidolonrank.name",
+    "enGB": "Eidolon Rank"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonrank.description",
+    "enGB": "Eidolon Rank"
   }
 ]

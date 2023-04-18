@@ -26,25 +26,22 @@ namespace WOTR_MAKING_FRIENDS.Features
         {
             AddEidolon addEidolon = new AddEidolon()
             {
-                m_Pet = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
-                ProgressionType = PetProgressionType.AnimalCompanion,
+                m_Pet = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.EidolonAirElemental),
+                ProgressionType = PetProgressionTypeExtensions.EidolonProgression,
                 m_UseContextValueLevel = false,
-                m_LevelRank = FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference,
+                m_LevelRank = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.EidolonRankFeature),
                 Type = PetTypeExtensions.Eidolon,
                 m_ForceAutoLevelup = false
             };
             Kingmaker.Blueprints.Classes.BlueprintFeature fakeEidolon = FeatureConfigurator.New(InternalString.Feature, GetGUID.FakeEidolonFeature)
-                .CopyFrom(FeatureRefs.AnimalCompanionFeatureDog.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
-                .AddFeatureOnApply(ProgressionRefs.DruidAnimalCompanionProgression.Cast<BlueprintFeatureReference>())
-                .AddFeatureOnApply(FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>())
-                /* .AddPet(
-                     type: PetTypeExtensions.Eidolon,
-                     progressionType: PetProgressionType.AnimalCompanion,
-                     levelRank: FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference,
-                     pet: UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference
-                 )*/
+                .AddFeatureOnApply(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.EidolonProgression))
+                .AddFeatureOnApply(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.EidolonRankFeature))
+                .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
+                .SetRanks(1)
+                .SetReapplyOnLevelUp(true)
+                .SetIsClassFeature(true)
                 .Configure();
 
             fakeEidolon.AddComponents(new[] { addEidolon });

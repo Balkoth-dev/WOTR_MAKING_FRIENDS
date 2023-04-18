@@ -12,6 +12,7 @@
             ShieldAllyFeature.CreateShieldAlly();
             ShieldAllyGreaterFeature.CreateShieldAllyGreater();
             LifeBondFeature.CreateEidolonLifeBond();
+            EidolonRank.CreateEidolonRank();
         }
     }
 }

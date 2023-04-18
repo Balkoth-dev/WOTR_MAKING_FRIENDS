@@ -13,6 +13,13 @@ namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
     [HarmonyPatch(typeof(ContextActionClearSummonPool), "RunAction")]
     public class ContextActionClearSummonPoolPatch
     {
+        [HarmonyReversePatch]
+        [HarmonyPatch(typeof(ContextActionClearSummonPool), "RunAction")]
+        private static void OriginalRunAction(ContextActionClearSummonPool __instance)
+        {
+            // The original method is empty because it is being replaced by the Prefix method.
+        }
+
         private static bool Prefix(ContextActionClearSummonPool __instance)
         {
 
@@ -44,15 +51,6 @@ namespace WOTR_MAKING_FRIENDS.ComponentAndPatches
             }
 
             return false; // Skip the original method.
-        }
-
-        [HarmonyPatch(typeof(ContextActionClearSummonPool), "RunAction")]
-        public class ContextActionClearSummonPoolPostfix
-        {
-            private static void Postfix(ContextActionClearSummonPool __instance)
-            {
-                // Do nothing.
-            }
         }
     }
 }

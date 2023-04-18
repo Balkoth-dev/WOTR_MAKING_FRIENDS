@@ -13,6 +13,7 @@ using WOTR_MAKING_FRIENDS.Brains;
 using WOTR_MAKING_FRIENDS.Buffs;
 using WOTR_MAKING_FRIENDS.CharacterClass;
 using WOTR_MAKING_FRIENDS.Features;
+using WOTR_MAKING_FRIENDS.Progressions;
 using WOTR_MAKING_FRIENDS.Resources;
 using WOTR_MAKING_FRIENDS.Spells;
 using WOTR_MAKING_FRIENDS.SummonPools;
@@ -75,6 +76,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
 
             SummonerClass.CreateSummonerClass();
             CreateResources.CreateAllResources();
+            CreateProgressions.CreateAllProgressions();
             CreateFeatures.CreateAllFeatures();
             CreateBuffs.CreateAllBuffs();
             CreateAbilities.CreateAllAbilities();

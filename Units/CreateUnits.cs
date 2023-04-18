@@ -2,21 +2,37 @@
 using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
+using Kingmaker.AI.Blueprints;
+using Kingmaker.Armies.Blueprints;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
+using Kingmaker.UnitLogic.Abilities;
+using Kingmaker.Utility;
+using System;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
-using static WOTR_MAKING_FRIENDS.Units.NewUnits;
+using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
     internal class CreateUnits
     {
+        internal static readonly BlueprintBrainReference characterBrain = BlueprintTool.Get<BlueprintBrain>("cf986dd7ba9d4ec46ad8a3a0406d02ae").ToReference<BlueprintBrainReference>();
         public static void CreateAllUnits()
+        {
+            CreateUnitsFromArray(NewSummons.newUnits);
+            CreateUnitsFromArray(NewEidolons.newUnits);
+            AdjustSummons();
+            foreach(var eidolon in NewEidolons.newUnits) 
+            {
+                AdjustEidolon(eidolon);
+            }
+        }
+        internal static void CreateUnitsFromArray(Array newUnits)
         {
             foreach (NewUnit newUnit in newUnits)
             {
@@ -37,7 +53,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(newUnit.intelligence ?? copiedUnit.Intelligence)
                     .SetWisdom(newUnit.wisdom ?? copiedUnit.Wisdom)
                     .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
-                    .SetSize(newUnit.size ?? copiedUnit.Size);
+                    .SetSize(newUnit.size ?? copiedUnit.Size)
+                    .SetFaction(FactionRefs.Neutrals.Cast<BlueprintFactionReference>().Reference);
 
                 if (newUnit.isSummon)
                 {
@@ -50,13 +67,86 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
                 }
-
                 unitConfigured.Configure();
+                Main.Log(newUnit.name + " : " + newUnit.guid + " created.");
             }
-            AdjustUnits();
 
         }
-        internal static void AdjustUnits()
+        internal static void AdjustEidolon(NewUnit eidolonUnit)
+        {
+            var eidolon = UnitConfigurator.For(eidolonUnit.guid)
+                            .RemoveComponents(components => components is not null)
+                            .AddAllowDyingCondition()
+                            .AddResurrectOnRest()
+                            .SetBrain(characterBrain)
+                            .SetBody(new BlueprintUnit.UnitBody() {})
+                    .AddClassLevels(null, CharacterClassRefs.AnimalCompanionClass.Cast<BlueprintCharacterClassReference>().Reference, null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception });
+
+            if (eidolonUnit.eidolonBaseForm == EidolonBaseForm.Abberant)
+            {
+                eidolon.SetStrength(12)
+                    .SetDexterity(13)
+                    .SetConstitution(16)
+                    .SetIntelligence(7)
+                    .SetWisdom(10)
+                    .SetCharisma(11)
+                    .SetBody(new BlueprintUnit.UnitBody()
+                    {
+                        PrimaryHand = ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference,
+                        m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.TentacleLarge1d6.Cast<BlueprintItemWeaponReference>().Reference}
+                    })
+                    .AddLockEquipmentSlot(slotType:SlotType.MainHand)
+                    .AddLockEquipmentSlot(slotType: SlotType.OffHand)
+                    .SetSpeed(20.Feet());
+            }
+            else if(eidolonUnit.eidolonBaseForm == EidolonBaseForm.Biped)
+            {
+                eidolon.SetStrength(16)
+                    .SetDexterity(12)
+                    .SetConstitution(13)
+                    .SetIntelligence(7)
+                    .SetWisdom(10)
+                    .SetCharisma(11)
+                    .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference)
+                    .SetSpeed(30.Feet());
+            }
+            else if (eidolonUnit.eidolonBaseForm == EidolonBaseForm.Quadruped)
+            {
+                eidolon.SetStrength(14)
+                    .SetDexterity(14)
+                    .SetConstitution(13)
+                    .SetIntelligence(7)
+                    .SetWisdom(10)
+                    .SetCharisma(11)
+                    .SetBody(new BlueprintUnit.UnitBody()
+                    {
+                        PrimaryHand = ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference
+                    })
+                    .AddLockEquipmentSlot(slotType: SlotType.MainHand)
+                    .AddLockEquipmentSlot(slotType: SlotType.OffHand)
+                    .SetSpeed(40.Feet());
+            }
+            else if (eidolonUnit.eidolonBaseForm == EidolonBaseForm.Serpentine)
+            {
+                eidolon.SetStrength(12)
+                    .SetDexterity(16)
+                    .SetConstitution(13)
+                    .SetIntelligence(7)
+                    .SetWisdom(10)
+                    .SetCharisma(11)
+                    .SetBody(new BlueprintUnit.UnitBody()
+                    {
+                        PrimaryHand = ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference,
+                        m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.Tail1d6.Cast<BlueprintItemWeaponReference>().Reference }
+                    })
+                    .AddLockEquipmentSlot(slotType: SlotType.MainHand)
+                    .AddLockEquipmentSlot(slotType: SlotType.OffHand)
+                    .SetSpeed(20.Feet());
+            }
+
+            eidolon.Configure();
+        }
+        internal static void AdjustSummons()
         {
             AdjustCacodaemon();
             AdjustDraconicAllies();
