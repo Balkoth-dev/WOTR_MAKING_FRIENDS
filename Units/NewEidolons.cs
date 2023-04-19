@@ -1,12 +1,9 @@
 ﻿using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
-using BlueprintCore.Utils.Assets;
 using Kingmaker.Blueprints;
 using Kingmaker.Enums;
-using Kingmaker.Localization;
-using Kingmaker.ResourceLinks;
 using WOTR_MAKING_FRIENDS.GUIDs;
-using WOTR_MAKING_FRIENDS.Utilities;
+using static WOTR_MAKING_FRIENDS.Enums.EidolonEnums;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -23,8 +20,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = UnitRefs.CR3_AirElementalMedium.Reference.Get().Prefab,
                     isSummon = false,
                     isEidolon = true,
-                    eidolonBaseForm = EidolonBaseForm.Abberant,
-                    eidolonSubtype = EidolonSubtype.Elemental,
+                    eidolonBaseForm = EidolonBaseFormEnums.Abberant,
+                    eidolonSubtype = EidolonSubtypeEnums.Elemental,
                     size = Size.Medium,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {

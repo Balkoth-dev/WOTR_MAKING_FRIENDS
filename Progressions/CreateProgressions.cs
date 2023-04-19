@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions;
 
 namespace WOTR_MAKING_FRIENDS.Progressions
 {
@@ -11,6 +7,8 @@ namespace WOTR_MAKING_FRIENDS.Progressions
         public static void CreateAllProgressions()
         {
             EidolonProgression.CreateEidolonProgression();
+            EidolonBaseProgression.CreateEidolonBaseProgression();
+            CreateAllEidolonProgressions.Create();
         }
     }
 }

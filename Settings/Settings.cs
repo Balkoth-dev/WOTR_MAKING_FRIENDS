@@ -69,7 +69,8 @@ namespace WOTR_MAKING_FRIENDS.Settings
               "WOTR_MAKING_FRIENDS.Localization.Spells.json",
               "WOTR_MAKING_FRIENDS.Localization.Scrolls.json",
               "WOTR_MAKING_FRIENDS.Localization.Units.json",
-              "WOTR_MAKING_FRIENDS.Localization.Features.json");
+              "WOTR_MAKING_FRIENDS.Localization.Features.json",
+              "WOTR_MAKING_FRIENDS.Localization.Progression.json");
 
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");

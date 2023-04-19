@@ -17,7 +17,6 @@ using Kingmaker.Enums;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -120,23 +119,23 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
         public static ActionList CreateSummonMonsterConditional(SummonAbility summonAbility)
         {
-                if (summonAbility.goodMonster == null)
-                {
-                    summonAbility.goodMonster = summonAbility.defaultMonster;
-                }
+            if (summonAbility.goodMonster == null)
+            {
+                summonAbility.goodMonster = summonAbility.defaultMonster;
+            }
 
-                ActionsBuilder summonMonsterConditional = ActionsBuilder.New();
+            ActionsBuilder summonMonsterConditional = ActionsBuilder.New();
 
-                if (summonAbility.summonPool != null)
-                {
-                    summonMonsterConditional.ClearSummonPool(summonAbility.summonPool);
-                }
+            if (summonAbility.summonPool != null)
+            {
+                summonMonsterConditional.ClearSummonPool(summonAbility.summonPool);
+            }
 
-                summonMonsterConditional.Conditional(
-                    ConditionsBuilder.New().Alignment(AlignmentComponent.Evil, true, false),
-                    CreateSummonMonster(summonAbility, summonAbility.defaultMonster),
-                    CreateSummonMonster(summonAbility, summonAbility.goodMonster)
-                    );
+            summonMonsterConditional.Conditional(
+                ConditionsBuilder.New().Alignment(AlignmentComponent.Evil, true, false),
+                CreateSummonMonster(summonAbility, summonAbility.defaultMonster),
+                CreateSummonMonster(summonAbility, summonAbility.goodMonster)
+                );
 
             return summonMonsterConditional.Build();
         }

@@ -222,6 +222,32 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         #region Progressions
         internal const string EidolonProgression = "a453e008-1eaf-43ac-b642-365362cb4ec1";
         internal const string EidolonBaseProgression = "62598c20-a930-46c8-8acb-4254c17c2083";
+        internal const string EidolonAberrantProgression = "99685332-68e7-49dd-aef0-c88e9def41b9";
+        internal const string EidolonAeonProgression = "c8c06be8-64de-4dec-852e-363dbac1f731";
+        internal const string EidolonAgathionProgression = "8b831631-611c-44b6-9082-96b9abaa3b08";
+        internal const string EidolonAncestorProgression = "50f2703e-6f18-4557-9fea-83839df73ed0";
+        internal const string EidolonAngelProgression = "ddfd4fbf-f5cf-4d0c-a514-45600eff0d64";
+        internal const string EidolonArchonProgression = "56732237-f23d-4efa-b775-9cf267b75f50";
+        internal const string EidolonAstralProgression = "c023bf76-641a-40ae-971e-c865a1d9d2b8";
+        internal const string EidolonAzataProgression = "8541263c-d2ca-4d6d-a866-5d8bc2b3ebb5";
+        internal const string EidolonDaemonProgression = "d8dcf423-8d03-481d-94b1-86eacde892c1";
+        internal const string EidolonDeepwaterProgression = "849dbad6-6e56-4090-86bb-9de35800c3fa";
+        internal const string EidolonDemonProgression = "95236a9b-ee90-4ac1-a9e4-2e39db88117c";
+        internal const string EidolonDevilProgression = "63e1478a-814d-4b5a-9637-f27563d8db0c";
+        internal const string EidolonDivProgression = "d219dbcd-f678-44ab-b46a-b86df0dc8b32";
+        internal const string EidolonElementalProgression = "86786014-77fa-4563-a797-e854de52a955";
+        internal const string EidolonGenieProgression = "bd26d535-a855-44c9-b5a2-a4e38fbe8b8d";
+        internal const string EidolonInevitableProgression = "991e35c9-6183-48c6-bbc3-ad41730dadd5";
+        internal const string EidolonKamiProgression = "45995a43-4cb7-47a3-811f-677cd48fa9ae";
+        internal const string EidolonKytonProgression = "5f190ba5-4dbe-4a69-abdf-ebb91bb9b171";
+        internal const string EidolonPlantProgression = "5dbd37fd-0690-40fd-bf14-2a2f88ea612c";
+        internal const string EidolonProteanProgression = "237e71c3-f1e5-4048-97d4-ab1f8d0418c2";
+        internal const string EidolonPsychopompProgression = "6a48ee85-73ad-4a11-8e21-9456ab53be17";
+        internal const string EidolonRadiantProgression = "f23761ae-fc03-4fce-83a6-294b34d8950f";
+        internal const string EidolonShadowProgression = "7c22d4c2-3b2b-431d-8d20-bb6d4e7688f5";
+        internal const string EidolonStorykinProgression = "c8ec3f73-445e-43c8-a5b2-4086e26ac17b";
+        internal const string EidolonTwinnedProgression = "df3db81d-eb6d-478c-a7d4-33853d72a33c";
+        internal const string EidolonVoidProgression = "cf556300-0ac7-44da-8452-e3e244aead43";
         #endregion
         public static string GUIDByName(string s)
         {

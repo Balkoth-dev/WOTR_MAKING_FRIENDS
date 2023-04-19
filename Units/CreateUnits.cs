@@ -3,19 +3,18 @@ using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.AI.Blueprints;
-using Kingmaker.Armies.Blueprints;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
-using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.Utility;
 using System;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
 using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
+using static WOTR_MAKING_FRIENDS.Enums.EidolonEnums;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -27,7 +26,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             CreateUnitsFromArray(NewSummons.newUnits);
             CreateUnitsFromArray(NewEidolons.newUnits);
             AdjustSummons();
-            foreach(var eidolon in NewEidolons.newUnits) 
+            foreach (var eidolon in NewEidolons.newUnits)
             {
                 AdjustEidolon(eidolon);
             }
@@ -79,10 +78,10 @@ namespace WOTR_MAKING_FRIENDS.Units
                             .AddAllowDyingCondition()
                             .AddResurrectOnRest()
                             .SetBrain(characterBrain)
-                            .SetBody(new BlueprintUnit.UnitBody() {})
+                            .SetBody(new BlueprintUnit.UnitBody() { })
                     .AddClassLevels(null, CharacterClassRefs.AnimalCompanionClass.Cast<BlueprintCharacterClassReference>().Reference, null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception });
 
-            if (eidolonUnit.eidolonBaseForm == EidolonBaseForm.Abberant)
+            if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Abberant)
             {
                 eidolon.SetStrength(12)
                     .SetDexterity(13)
@@ -93,13 +92,13 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetBody(new BlueprintUnit.UnitBody()
                     {
                         PrimaryHand = ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference,
-                        m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.TentacleLarge1d6.Cast<BlueprintItemWeaponReference>().Reference}
+                        m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.TentacleLarge1d6.Cast<BlueprintItemWeaponReference>().Reference }
                     })
-                    .AddLockEquipmentSlot(slotType:SlotType.MainHand)
+                    .AddLockEquipmentSlot(slotType: SlotType.MainHand)
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
                     .SetSpeed(20.Feet());
             }
-            else if(eidolonUnit.eidolonBaseForm == EidolonBaseForm.Biped)
+            else if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Biped)
             {
                 eidolon.SetStrength(16)
                     .SetDexterity(12)
@@ -110,7 +109,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference)
                     .SetSpeed(30.Feet());
             }
-            else if (eidolonUnit.eidolonBaseForm == EidolonBaseForm.Quadruped)
+            else if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Quadruped)
             {
                 eidolon.SetStrength(14)
                     .SetDexterity(14)
@@ -126,7 +125,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
                     .SetSpeed(40.Feet());
             }
-            else if (eidolonUnit.eidolonBaseForm == EidolonBaseForm.Serpentine)
+            else if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Serpentine)
             {
                 eidolon.SetStrength(12)
                     .SetDexterity(16)
