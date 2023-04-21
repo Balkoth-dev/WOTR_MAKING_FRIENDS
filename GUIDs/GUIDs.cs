@@ -198,11 +198,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string EidolonStorykinSubtypeFeature = "dfd70bf4-229c-4217-8575-8cedbfc9fae8";
         internal const string EidolonTwinnedSubtypeFeature = "702f9175-cf9f-4aa9-969e-5a7fc2290331";
         internal const string EidolonVoidSubtypeFeature = "4c074e20-8464-42eb-823a-c6eb1193317d";
-        internal const string EidolonFireElementalVariantFeature = "b5b0d9b1 - 75c2-4904-ae09-1348dd1ba78c";
-        internal const string EidolonAirElementalVariantFeature = "67b66abd-32e8-4433-abf5-c95b8b5fc342";
-        internal const string EidolonWaterElementalVariantFeature = "f96dbd1b - ecd3 - 41df-9801-8905b749ccde";
-        internal const string EidolonEarthElementalVariantFeature = "5671473d - ebbe - 47e1 - b865 - 39fc2765f814";
-
+        internal const string EidolonFireElementalVariantFeature = "d77210b3-2c16-4507-b7d9-1bae38792a01";
+        internal const string EidolonAirElementalVariantFeature = "2fe1bd87-b9ad-4cef-a036-a8444872e6bb";
+        internal const string EidolonWaterElementalVariantFeature = "b2602ac4-b0af-41c8-8102-05ab4025df3e";
+        internal const string EidolonEarthElementalVariantFeature = "020d4f41-a70e-42a4-b83a-312d0f2a7659";
         #endregion
 
         #region Abilities
@@ -409,11 +408,11 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
             }
             else
             {
-                Main.Log($"GUID with name '{s}' not found, creating GUID in NewGuids.txt");
+                Main.Log($"GUID with name '{s}' not found, creating GUID in NewGuids.txt, returning temporary guid.");
                 string fileName = "Mods/WOTR_MAKING_FRIENDS/GUIDs/NewGuids.txt";
                 string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
-                File.AppendAllText(path, $"internal const string {s} = \"" + Guid.NewGuid() + "\";" + Environment.NewLine);
-                return null;
+                File.AppendAllText(path, $"internal const string {s} = \"" + Guid.NewGuid().ToString().Replace(" ","") + "\";" + Environment.NewLine);
+                return Guid.NewGuid().ToString().Replace(" ", "");
             }
         }
     }

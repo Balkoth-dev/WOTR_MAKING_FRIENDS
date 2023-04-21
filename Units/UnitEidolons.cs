@@ -36,10 +36,10 @@ namespace WOTR_MAKING_FRIENDS.Units
                     size = Size.Medium
                 },
             #endregion
-            #region EidolonAirElemental
+            #region EidolonWaterElemental
             new NewUnitClass()
                 {
-                    Name = "EidolonAirElemental",
+                    Name = "EidolonWaterElemental",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR3_WaterElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
