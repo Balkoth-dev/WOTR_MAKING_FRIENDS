@@ -6,7 +6,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions
     {
         public static void CreateAllProgressions()
         {
-            EidolonProgression.CreateEidolonProgression();
+            ProgressionEidolon.CreateEidolonProgression();
             EidolonBaseProgression.CreateEidolonBaseProgression();
             CreateAllEidolonProgressions.Create();
         }

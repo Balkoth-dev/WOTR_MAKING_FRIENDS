@@ -22,5 +22,9 @@
   {
     "Key": "wotr-making-friends.meladaemonsummon.name",
     "enGB": "Meladaemon"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonunit.name",
+    "enGB": "Eidolon"
   }
 ]

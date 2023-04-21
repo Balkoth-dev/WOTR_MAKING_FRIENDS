@@ -7,10 +7,10 @@ namespace WOTR_MAKING_FRIENDS.Spells
         public static void CreateAllSpells()
         {
             CreateSummonSpells.CreateSummoningSpells();
-            BlackTentacles.CreateBlackTentaclesSpell();
-            InfernalHealing.CreateInfernalHealing();
-            InfernalHealing.CreateGreaterInfernalHealing();
-            Overstimulate.CreateOverstimulate();
+            SpellBlackTentacles.CreateBlackTentaclesSpell();
+            SpellInfernalHealing.CreateInfernalHealing();
+            SpellInfernalHealing.CreateGreaterInfernalHealing();
+            SpellOverstimulate.CreateOverstimulate();
         }
 
 

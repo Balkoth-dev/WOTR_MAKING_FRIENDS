@@ -1,17 +1,18 @@
 ﻿using BlueprintCore.Blueprints.References;
 using Kingmaker.Blueprints;
-using static WOTR_MAKING_FRIENDS.Enums.EidolonEnums;
+using WOTR_MAKING_FRIENDS.Utilities;
+using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 
 namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
 {
     internal class EidolonSubtypeInfo
     {
-        public static EidolonSubtypeClass[] eidolonSubtypes =
+        public static EidolonSubtypeProgression[] eidolonSubtypes =
         {
             #region Aberrant
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Aberrant,
+                    subtype = EnumsEidolonSubtype.Aberrant,
                     levelEntries = new()
                     {
                         {   1,
@@ -24,18 +25,18 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.VerminImmunities)
+                                GetRefs.BFBRCast(FeatureRefs.VerminImmunities)
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRSlashing5),
-                                GetRefs.Cast(FeatureRefs.FallenBlindsense)
+                                GetRefs.BFBRCast(FeatureRefs.DRSlashing5),
+                                GetRefs.BFBRCast(FeatureRefs.FallenBlindsense)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.Blindsight)
+                                GetRefs.BFBRCast(FeatureRefs.Blindsight)
                                 }
                         },
                         {   20,
@@ -47,40 +48,40 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Aeon
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Aeon,
+                    subtype = EnumsEidolonSubtype.Aeon,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature)
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.Fortification50Feature),
-                                GetRefs.Cast(FeatureRefs.TripImmunityFeature)
+                                GetRefs.BFBRCast(FeatureRefs.Fortification50Feature),
+                                GetRefs.BFBRCast(FeatureRefs.TripImmunityFeature)
                                 }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.Airborne)
+                                GetRefs.BFBRCast(FeatureRefs.Airborne)
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.CrushingDespair)
+                                GetRefs.BFBRCast(AbilityRefs.CrushingDespair)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToCritical)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToCritical)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.TrueStrike)
+                                GetRefs.BFBRCast(AbilityRefs.TrueStrike)
                                 }
                         }
 
@@ -88,43 +89,43 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Agathion
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Agathion,
+                    subtype = EnumsEidolonSubtype.Agathion,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature),
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.SonicResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.SonicResistance10Feature)
                                 }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.LayOnHandsFeature),
-                                GetRefs.Cast(AbilityResourceRefs.LayOnHandsResource)
+                                GetRefs.BFBRCast(FeatureRefs.LayOnHandsFeature),
+                                GetRefs.BFBRCast(AbilityResourceRefs.LayOnHandsResource)
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DREvil5),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPetrification)
+                                GetRefs.BFBRCast(FeatureRefs.DREvil5),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPetrification)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityImmunity)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DREvil10)
+                                GetRefs.BFBRCast(FeatureRefs.DREvil10)
                                 }
                         }
 
@@ -132,9 +133,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Ancestor
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Ancestor,
+                    subtype = EnumsEidolonSubtype.Ancestor,
                     levelEntries = new()
                     {
                         {   1,
@@ -166,44 +167,44 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Angel
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Angel,
+                    subtype = EnumsEidolonSubtype.Angel,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature)
+                                GetRefs.BFBRCast(FeatureRefs.AcidResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.FireResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.FireResistance10Feature)
                                 }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.Airborne)
+                                GetRefs.BFBRCast(FeatureRefs.Airborne)
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DREvil5),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPetrification)
+                                GetRefs.BFBRCast(FeatureRefs.DREvil5),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPetrification)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdImmunity),
-                                GetRefs.Cast(FeatureRefs.AcidImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.ColdImmunity),
+                                GetRefs.BFBRCast(FeatureRefs.AcidImmunity)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.HolyAura)
+                                GetRefs.BFBRCast(AbilityRefs.HolyAura)
                                 }
                         }
 
@@ -211,15 +212,15 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Archon
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Archon,
+                    subtype = EnumsEidolonSubtype.Archon,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,
@@ -232,19 +233,19 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DREvil5),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPetrification)
+                                GetRefs.BFBRCast(FeatureRefs.DREvil5),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPetrification)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityImmunity),
-                                GetRefs.Cast(AbilityRefs.FrightfulAspect)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityImmunity),
+                                GetRefs.BFBRCast(AbilityRefs.FrightfulAspect)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.DimensionDoor)
+                                GetRefs.BFBRCast(AbilityRefs.DimensionDoor)
                                 }
                         }
 
@@ -252,9 +253,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Astral
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Astral,
+                    subtype = EnumsEidolonSubtype.Astral,
                     levelEntries = new()
                     {
                         {   1,
@@ -286,36 +287,36 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Azata
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Azata,
+                    subtype = EnumsEidolonSubtype.Azata,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FireResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.FireResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature)
                             }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.Airborne)
+                                GetRefs.BFBRCast(FeatureRefs.Airborne)
                             }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DREvil5),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPetrification)
+                                GetRefs.BFBRCast(FeatureRefs.DREvil5),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPetrification)
                             }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityImmunity)
                             }
                         },
                         {   20,
@@ -328,22 +329,22 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Daemon
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Daemon,
+                    subtype = EnumsEidolonSubtype.Daemon,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature)
+                                GetRefs.BFBRCast(FeatureRefs.AcidResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FireResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.FireResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature)
                                 }
                         },
                         {   8,
@@ -352,15 +353,15 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRGood5),
-                                GetRefs.Cast(FeatureRefs.ImmunityToDeathEffects),
-                                GetRefs.Cast(FeatureRefs.ImmunityToDisease),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison)
+                                GetRefs.BFBRCast(FeatureRefs.DRGood5),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDeathEffects),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDisease),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.AcidImmunity)
                                 }
                         },
                         {   20,
@@ -372,14 +373,14 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Deepwater
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Deepwater,
+                    subtype = EnumsEidolonSubtype.Deepwater,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature)
                                 }
                         },
                         {   4,
@@ -392,17 +393,17 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRMagic5),
+                                GetRefs.BFBRCast(FeatureRefs.DRMagic5),
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.ColdImmunity)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FastHealing),
+                                GetRefs.BFBRCast(FeatureRefs.FastHealing),
                                 }
                         }
 
@@ -410,42 +411,42 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Demon
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Demon,
+                    subtype = EnumsEidolonSubtype.Demon,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.FireResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.FireResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.AcidResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature)
                                 }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison)
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRGood5)
+                                GetRefs.BFBRCast(FeatureRefs.DRGood5)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityImmunity)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.TrueSeeing)
+                                GetRefs.BFBRCast(AbilityRefs.TrueSeeing)
                                 }
                         }
 
@@ -453,41 +454,41 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Devil
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Devil,
+                    subtype = EnumsEidolonSubtype.Devil,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FireResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature)
+                                GetRefs.BFBRCast(FeatureRefs.FireResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.AcidResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature)
                                 }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison)
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRGood5)
+                                GetRefs.BFBRCast(FeatureRefs.DRGood5)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FireImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.FireImmunity)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FastHealing)
+                                GetRefs.BFBRCast(FeatureRefs.FastHealing)
                                 }
                         }
 
@@ -495,21 +496,21 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Div
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Div,
+                    subtype = EnumsEidolonSubtype.Div,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FireResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature)
+                                GetRefs.BFBRCast(FeatureRefs.FireResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.AcidResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature)
                                 }
                         },
                         {   8,
@@ -518,17 +519,17 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRGood5)
+                                GetRefs.BFBRCast(FeatureRefs.DRGood5)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FireImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.FireImmunity)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.DimensionDoor)
+                                GetRefs.BFBRCast(AbilityRefs.DimensionDoor)
                                 }
                         }
 
@@ -536,15 +537,15 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Elemental
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Elemental,
+                    subtype = EnumsEidolonSubtype.Elemental,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToParalysis),
-                                GetRefs.Cast(FeatureRefs.ImmunityToSleep)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToParalysis),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToSleep)
                                 }
                         },
                         {   4,
@@ -557,16 +558,16 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.UncannyDodge),
-                                GetRefs.Cast(FeatureRefs.ImmunityToBleed),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison),
-                                GetRefs.Cast(FeatureRefs.ImmunityToStun)
+                                GetRefs.BFBRCast(FeatureRefs.UncannyDodge),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToBleed),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToStun)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToCritical),
-                                GetRefs.Cast(FeatureRefs.DRImmune_PrecisionDamage)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToCritical),
+                                GetRefs.BFBRCast(FeatureRefs.DRImmune_PrecisionDamage)
                                 }
                         },
                         {   20,
@@ -578,9 +579,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Genie
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Genie,
+                    subtype = EnumsEidolonSubtype.Genie,
                     levelEntries = new()
                     {
                         {   1,
@@ -612,15 +613,15 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Inevitable
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Inevitable,
+                    subtype = EnumsEidolonSubtype.Inevitable,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.PoisonResistance4Feature),
-                                GetRefs.Cast(FeatureRefs.UndeadResistanceDhampir)
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature),
+                                GetRefs.BFBRCast(FeatureRefs.UndeadResistanceDhampir)
                                 }
                         },
                         {   4,
@@ -629,28 +630,28 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToDeathEffects),
-                                GetRefs.Cast(FeatureRefs.ImmunityToDisease),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDeathEffects),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDisease),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison)
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToSleep),
-                                GetRefs.Cast(FeatureRefs.DRChaotic10),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToSleep),
+                                GetRefs.BFBRCast(FeatureRefs.DRChaotic10),
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToAbilityDamage),
-                                GetRefs.Cast(FeatureRefs.ImmunityToEnergyDrain)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToAbilityDamage),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToEnergyDrain)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToParalysis),
-                                GetRefs.Cast(FeatureRefs.ImmunityToSleep),
-                                GetRefs.Cast(FeatureRefs.ImmunityToStun)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToParalysis),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToSleep),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToStun)
                                 }
                         }
 
@@ -658,9 +659,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Kami
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Kami,
+                    subtype = EnumsEidolonSubtype.Kami,
                     levelEntries = new()
                     {
                         {   1,
@@ -692,9 +693,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Kyton
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Kyton,
+                    subtype = EnumsEidolonSubtype.Kyton,
                     levelEntries = new()
                     {
                         {   1,
@@ -726,15 +727,15 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Plant
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Plant,
+                    subtype = EnumsEidolonSubtype.Plant,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.SonicResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.SonicResistance10Feature),
                                 }
                         },
                         {   4,
@@ -747,10 +748,10 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToParalysis),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison),
-                                GetRefs.Cast(FeatureRefs.ImmunityToSleep),
-                                GetRefs.Cast(FeatureRefs.ImmunityToStun),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToParalysis),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToSleep),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToStun),
                                 }
                         },
                         {   16,
@@ -759,8 +760,8 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.SonicImmunity),
-                                GetRefs.Cast(FeatureRefs.ElectricityImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.SonicImmunity),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityImmunity)
                                 }
                         }
 
@@ -768,20 +769,20 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Protean
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Protean,
+                    subtype = EnumsEidolonSubtype.Protean,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidResistance10Feature)
+                                GetRefs.BFBRCast(FeatureRefs.AcidResistance10Feature)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.SonicResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.SonicResistance10Feature),
                                 }
                         },
                         {   8,
@@ -790,20 +791,20 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRLawful15),
-                                GetRefs.Cast(FeatureRefs.Airborne),
+                                GetRefs.BFBRCast(FeatureRefs.DRLawful15),
+                                GetRefs.BFBRCast(FeatureRefs.Airborne),
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.AcidImmunity),
-                                GetRefs.Cast(FeatureRefs.AmorphousAnatomyFeature)
+                                GetRefs.BFBRCast(FeatureRefs.AcidImmunity),
+                                GetRefs.BFBRCast(FeatureRefs.AmorphousAnatomyFeature)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.FreedomOfMovement),
-                                GetRefs.Cast(AbilityRefs.PolymorphGreaterBase),
+                                GetRefs.BFBRCast(AbilityRefs.FreedomOfMovement),
+                                GetRefs.BFBRCast(AbilityRefs.PolymorphGreaterBase),
                                 }
                         }
 
@@ -811,22 +812,22 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Psychopomp
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Psychopomp,
+                    subtype = EnumsEidolonSubtype.Psychopomp,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToDeathEffects),
-                                GetRefs.Cast(FeatureRefs.ImmunityToDisease),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDeathEffects),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDisease),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature),
                                 }
                         },
                         {   8,
@@ -835,19 +836,19 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRAdamantine5)
+                                GetRefs.BFBRCast(FeatureRefs.DRAdamantine5)
                                 }
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.Invisibility)
+                                GetRefs.BFBRCast(AbilityRefs.Invisibility)
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRAdamantine10),
-                                GetRefs.Cast(FeatureRefs.ColdImmunity),
-                                GetRefs.Cast(FeatureRefs.ElectricityImmunity)
+                                GetRefs.BFBRCast(FeatureRefs.DRAdamantine10),
+                                GetRefs.BFBRCast(FeatureRefs.ColdImmunity),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityImmunity)
                                 }
                         }
 
@@ -855,30 +856,30 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Radiant
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Radiant,
+                    subtype = EnumsEidolonSubtype.Radiant,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ImmunityToDeathEffects),
-                                GetRefs.Cast(FeatureRefs.ImmunityToEnergyDrain)
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDeathEffects),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToEnergyDrain)
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.MageLight)
+                                GetRefs.BFBRCast(AbilityRefs.MageLight)
                                 }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.Airborne),
+                                GetRefs.BFBRCast(FeatureRefs.Airborne),
                                 }
                         },
                         {   12,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.FastHealing),
+                                GetRefs.BFBRCast(FeatureRefs.FastHealing),
                                 }
                         },
                         {   16,
@@ -894,16 +895,16 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Shadow
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Shadow,
+                    subtype = EnumsEidolonSubtype.Shadow,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature),
-                                GetRefs.Cast(FeatureRefs.ElectricityResistance10Feature),
-                                GetRefs.Cast(AbilityRefs.Bane),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ElectricityResistance10Feature),
+                                GetRefs.BFBRCast(AbilityRefs.Bane),
                                 }
                         },
                         {   4,
@@ -912,7 +913,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRMagic5),
+                                GetRefs.BFBRCast(FeatureRefs.DRMagic5),
                                 }
                         },
                         {   12,
@@ -921,13 +922,13 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.DRMagic10),
-                                GetRefs.Cast(FeatureRefs.SpellResistance10plusCR),
+                                GetRefs.BFBRCast(FeatureRefs.DRMagic10),
+                                GetRefs.BFBRCast(FeatureRefs.SpellResistance10plusCR),
                                 }
                         },
                         {   20,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(AbilityRefs.DimensionDoor),
+                                GetRefs.BFBRCast(AbilityRefs.DimensionDoor),
                                 }
                         }
 
@@ -935,9 +936,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Storykin
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Storykin,
+                    subtype = EnumsEidolonSubtype.Storykin,
                     levelEntries = new()
                     {
                         {   1,
@@ -969,9 +970,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Twinned
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Twinned,
+                    subtype = EnumsEidolonSubtype.Twinned,
                     levelEntries = new()
                     {
                         {   1,
@@ -1003,28 +1004,28 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 },
             #endregion
             #region Void
-            new EidolonSubtypeClass()
+            new EidolonSubtypeProgression()
                 {
-                    subtype = EidolonSubtypeEnums.Void,
+                    subtype = EnumsEidolonSubtype.Void,
                     levelEntries = new()
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.NegativeEnergyAffinity),
-                                GetRefs.Cast(FeatureRefs.ImmunityToDeathEffects),
-                                GetRefs.Cast(FeatureRefs.ImmunityToDisease),
-                                GetRefs.Cast(FeatureRefs.ImmunityToEnergyDrain),
-                                GetRefs.Cast(FeatureRefs.ImmunityToPoison),
+                                GetRefs.BFBRCast(FeatureRefs.NegativeEnergyAffinity),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDeathEffects),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToDisease),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToEnergyDrain),
+                                GetRefs.BFBRCast(FeatureRefs.ImmunityToPoison),
                                 }
                         },
                         {   4,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdResistance10Feature),
+                                GetRefs.BFBRCast(FeatureRefs.ColdResistance10Feature),
                                 }
                         },
                         {   8,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.Airborne),
+                                GetRefs.BFBRCast(FeatureRefs.Airborne),
                                 }
                         },
                         {   12,
@@ -1033,8 +1034,8 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         },
                         {   16,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.Cast(FeatureRefs.ColdImmunity),
-                                GetRefs.Cast(FeatureRefs.DRAdamantine5),
+                                GetRefs.BFBRCast(FeatureRefs.ColdImmunity),
+                                GetRefs.BFBRCast(FeatureRefs.DRAdamantine5),
                                 }
                         },
                         {   20,

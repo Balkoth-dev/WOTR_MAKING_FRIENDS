@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Localization\CharacterClasses.json" />
     <None Remove="Localization\Features.json" />
     <None Remove="Localization\Progression.json" />
     <None Remove="Localization\Scrolls.json" />
@@ -26,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Localization\CharacterClasses.json" />
     <EmbeddedResource Include="Localization\Progression.json" />
     <EmbeddedResource Include="Localization\Settings.json" />
     <EmbeddedResource Include="Localization\Spells.json" />

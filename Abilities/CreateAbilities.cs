@@ -4,10 +4,10 @@
     {
         public static void CreateAllAbilities()
         {
-            LifeLinkActivableAbility.CreateLifeLinkActivatableAbility();
-            MakersCallAbility.CreateMakersCallAbility();
-            TranspositionAbility.CreateTranspositionAbility();
-            LifeBondActivableAbility.CreateLifeBondActivatableAbility();
+            AbilityLifeLinkActivable.CreateLifeLinkActivatableAbility();
+            AbilityMakersCall.CreateMakersCallAbility();
+            AbilityTransposition.CreateTranspositionAbility();
+            AbilityLifeBondActivable.CreateLifeBondActivatableAbility();
         }
     }
 }

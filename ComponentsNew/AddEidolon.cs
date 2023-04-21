@@ -56,7 +56,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         public bool m_DestroyPetOnDeactivate;
         public int UpgradeLevel;
         private static readonly int[] RankToLevelEidolon = new int[21]
-        {
+{
       0,
       2,
       3,
@@ -78,7 +78,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
       18,
       19,
       20
-        };
+};
 
         public BlueprintUnit Pet => m_Pet?.Get();
 
@@ -231,19 +231,18 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 return;
             }
-
-            BlueprintComponentAndRuntime<AddClassLevels> componentAndRuntime = unitEntityData.Facts.List.Select<EntityFact, BlueprintComponentAndRuntime<AddClassLevels>>(f => f.GetComponentWithRuntime<AddClassLevels>()).FirstOrDefault<BlueprintComponentAndRuntime<AddClassLevels>>(c => c.Component != null);
+            BlueprintComponentAndRuntime<AddClassLevels> componentAndRuntime = unitEntityData.Facts.List.Select(f => f.GetComponentWithRuntime<AddClassLevels>()).FirstOrDefault(c => c.Component != null);
             if (componentAndRuntime.Component == null)
             {
                 return;
             }
-
             int characterLevel = unitEntityData.Descriptor.Progression.CharacterLevel;
             int petLevel = GetPetLevel();
             int levels = petLevel - characterLevel;
             if (levels > 0)
             {
                 UnitPartCompanion unitPartCompanion = Owner.Get<UnitPartCompanion>();
+                Main.Log("5: " + unitPartCompanion.ToString());
                 if ((unitPartCompanion == null || unitPartCompanion.State == CompanionState.None ? 0 : (unitPartCompanion.State != CompanionState.ExCompanion ? 1 : 0)) != 0 && !Data.AutoLevelup && Type == PetTypeExtensions.Eidolon)
                 {
                     int bonus = BlueprintRoot.Instance.Progression.XPTable.GetBonus(petLevel);

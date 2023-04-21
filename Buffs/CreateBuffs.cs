@@ -8,15 +8,15 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         public static void CreateAllBuffs()
         {
             CreateDummyBuff();
-            SummonStampedeBuffs.CreateStampedeTrampleDamageImmunityBuff();
-            SummonStampedeBuffs.CreateStampedeAttackBuff();
-            ReleaseTheHoundsBuffs.CreateReleaseTheHoundsBuff();
-            BlackTentaclesBuffs.CreateBlackTentaclesBuff();
-            OverstimulateBuff.CreateOverstimulateBuff();
-            SummonerLifeLinkBuff.CreateSummonerLifeLinkBuff();
-            SummonerShieldAllyBuff.CreateShieldAllyBuffs();
-            SummonerShieldAllyGreaterBuff.CreateShieldAllyGreaterBuffs();
-            SummonerLifeBondBuff.CreateSummonerLifeBondBuff();
+            BuffSummonStampede.CreateStampedeTrampleDamageImmunityBuff();
+            BuffSummonStampede.CreateStampedeAttackBuff();
+            BuffReleaseTheHounds.CreateReleaseTheHoundsBuff();
+            BuffBlackTentacles.CreateBlackTentaclesBuff();
+            BuffOverstimulate.CreateOverstimulateBuff();
+            BuffSummonerLifeLink.CreateSummonerLifeLinkBuff();
+            BuffSummonerShieldAlly.CreateShieldAllyBuffs();
+            BuffSummonerShieldAllyGreater.CreateShieldAllyGreaterBuffs();
+            BuffSummonerLifeBond.CreateSummonerLifeBondBuff();
         }
 
         private static void CreateDummyBuff()

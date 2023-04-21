@@ -12,6 +12,7 @@ using WOTR_MAKING_FRIENDS.AiActions;
 using WOTR_MAKING_FRIENDS.Brains;
 using WOTR_MAKING_FRIENDS.Buffs;
 using WOTR_MAKING_FRIENDS.CharacterClass;
+using WOTR_MAKING_FRIENDS.Classes;
 using WOTR_MAKING_FRIENDS.Features;
 using WOTR_MAKING_FRIENDS.Progressions;
 using WOTR_MAKING_FRIENDS.Resources;
@@ -19,6 +20,7 @@ using WOTR_MAKING_FRIENDS.Spells;
 using WOTR_MAKING_FRIENDS.SummonPools;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
+using WOTR_MAKING_FRIENDS.BlueprintPatches;
 
 namespace WOTR_MAKING_FRIENDS.Settings
 {
@@ -65,6 +67,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             LocalizationTool.LoadEmbeddedLocalizationPacks(
               "WOTR_MAKING_FRIENDS.Localization.Settings.json",
               "WOTR_MAKING_FRIENDS.Localization.SummonerClass.json",
+              "WOTR_MAKING_FRIENDS.Localization.CharacterClasses.json",
               "WOTR_MAKING_FRIENDS.Localization.SummonerSpellbook.json",
               "WOTR_MAKING_FRIENDS.Localization.Spells.json",
               "WOTR_MAKING_FRIENDS.Localization.Scrolls.json",
@@ -75,9 +78,11 @@ namespace WOTR_MAKING_FRIENDS.Settings
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
 
+            CreateBlueprintPatches.CreateAllBlueprintPatches();
             SummonerClass.CreateSummonerClass();
             CreateResources.CreateAllResources();
             CreateProgressions.CreateAllProgressions();
+            CreateClasses.CreateAllClasses();
             CreateFeatures.CreateAllFeatures();
             CreateBuffs.CreateAllBuffs();
             CreateAbilities.CreateAllAbilities();

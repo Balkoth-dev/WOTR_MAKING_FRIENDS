@@ -8,6 +8,14 @@
     "enGB": "Fake Eidolon"
   },
   {
+    "Key": "wotr-making-friends.eidolonsubtypefeature.name",
+    "enGB": "Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsubtypefeature.description",
+    "enGB": "Eidolon"
+  },
+  {
     "Key": "wotr-making-friends.summonerlifelinkfeature.name",
     "enGB": "Life Link"
   },
@@ -70,5 +78,125 @@
   {
     "Key": "wotr-making-friends.eidolonrank.description",
     "enGB": "Eidolon Rank"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonabberantbaseformfeature.name",
+    "enGB": "Abberant Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbipedbaseformfeature.name",
+    "enGB": "Biped Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonquadrupedbaseformfeature.name",
+    "enGB": "Quadruped Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonserpentinebaseformfeature.name",
+    "enGB": "Serpentine Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaberrantsubtypefeature.name",
+    "enGB": "Abberant Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeonsubtypefeature.name",
+    "enGB": "Aeon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonagathionsubtypefeature.name",
+    "enGB": "Agathion Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonancestorsubtypefeature.name",
+    "enGB": "Ancestor Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonangelsubtypefeature.name",
+    "enGB": "Angel Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonarchonsubtypefeature.name",
+    "enGB": "Archon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonastralsubtypefeature.name",
+    "enGB": "Astral Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonazatasubtypefeature.name",
+    "enGB": "Azata Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondaemonsubtypefeature.name",
+    "enGB": "Daemon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondeepwatersubtypefeature.name",
+    "enGB": "Deepwater Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondemonsubtypefeature.name",
+    "enGB": "Demon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondevilsubtypefeature.name",
+    "enGB": "Devil Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondivsubtypefeature.name",
+    "enGB": "Div Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelementalsubtypefeature.name",
+    "enGB": "Elemental Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongeniesubtypefeature.name",
+    "enGB": "Genie Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloninevitablesubtypefeature.name",
+    "enGB": "Inevitable Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonkamisubtypefeature.name",
+    "enGB": "Kami Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonkytonsubtypefeature.name",
+    "enGB": "Kyton Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonplantsubtypefeature.name",
+    "enGB": "Plant Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonproteansubtypefeature.name",
+    "enGB": "Protean Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonpsychopompsubtypefeature.name",
+    "enGB": "Psychopomp Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonradiantsubtypefeature.name",
+    "enGB": "Radiant Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonshadowsubtypefeature.name",
+    "enGB": "Shadow Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstorykinsubtypefeature.name",
+    "enGB": "Storykin Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolontwinnedsubtypefeature.name",
+    "enGB": "Twinned Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonvoidsubtypefeature.name",
+    "enGB": "Void Subtype"
   }
 ]

@@ -14,7 +14,7 @@ using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
 using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
-using static WOTR_MAKING_FRIENDS.Enums.EidolonEnums;
+using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -23,65 +23,80 @@ namespace WOTR_MAKING_FRIENDS.Units
         internal static readonly BlueprintBrainReference characterBrain = BlueprintTool.Get<BlueprintBrain>("cf986dd7ba9d4ec46ad8a3a0406d02ae").ToReference<BlueprintBrainReference>();
         public static void CreateAllUnits()
         {
-            CreateUnitsFromArray(NewSummons.newUnits);
-            CreateUnitsFromArray(NewEidolons.newUnits);
+            CreateUnitsFromArray(UnitSummons.newUnits);
+            CreateUnitsFromArray(UnitEidolons.newUnits);
             AdjustSummons();
-            foreach (var eidolon in NewEidolons.newUnits)
+            foreach (var eidolon in UnitEidolons.newUnits)
             {
                 AdjustEidolon(eidolon);
             }
         }
         internal static void CreateUnitsFromArray(Array newUnits)
         {
-            foreach (NewUnit newUnit in newUnits)
+            foreach (NewUnitClass newUnit in newUnits)
             {
-                BlueprintUnit copiedUnit = BlueprintTool.Get<BlueprintUnit>(newUnit.copiedUnit.ToString());
-
-                SharedStringAsset sharedStringAsset = ScriptableObject.CreateInstance<SharedStringAsset>();
-                sharedStringAsset.String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String;
-
-                UnitConfigurator unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
-                    .CopyFrom(newUnit.copiedUnit, c => c is not null)
-                    .SetLocalizedName(sharedStringAsset)
-                    .SetDisplayName(newUnit.m_DisplayName ?? copiedUnit.m_DisplayName)
-                    .SetPrefab(newUnit.prefab ?? copiedUnit.Prefab)
-                    .SetPortrait(newUnit.portrait ?? copiedUnit.m_Portrait)
-                    .SetStrength(newUnit.strength ?? copiedUnit.Strength)
-                    .SetDexterity(newUnit.dexterity ?? copiedUnit.Dexterity)
-                    .SetConstitution(newUnit.constitution ?? copiedUnit.Constitution)
-                    .SetIntelligence(newUnit.intelligence ?? copiedUnit.Intelligence)
-                    .SetWisdom(newUnit.wisdom ?? copiedUnit.Wisdom)
-                    .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
-                    .SetSize(newUnit.size ?? copiedUnit.Size)
-                    .SetFaction(FactionRefs.Neutrals.Cast<BlueprintFactionReference>().Reference);
-
-                if (newUnit.isSummon)
+                try
                 {
-                    unitConfigured.AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid });
-                    unitConfigured.AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference);
-                    unitConfigured.AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference);
-                }
+                    BlueprintUnit copiedUnit = BlueprintTool.Get<BlueprintUnit>(newUnit.copiedUnit.ToString());
 
-                if (newUnit.blueprintUnitFactReferences != null)
-                {
-                    unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
+                    SharedStringAsset sharedStringAsset = ScriptableObject.CreateInstance<SharedStringAsset>();
+                    sharedStringAsset.String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String;
+
+                    UnitConfigurator unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
+                        .CopyFrom(newUnit.copiedUnit, c => c is not null)
+                        .SetLocalizedName(sharedStringAsset)
+                        .SetDisplayName(newUnit.m_DisplayName ?? copiedUnit.m_DisplayName)
+                        .SetPrefab(newUnit.prefab ?? copiedUnit.Prefab)
+                        .SetPortrait(newUnit.portrait ?? copiedUnit.m_Portrait)
+                        .SetStrength(newUnit.strength ?? copiedUnit.Strength)
+                        .SetDexterity(newUnit.dexterity ?? copiedUnit.Dexterity)
+                        .SetConstitution(newUnit.constitution ?? copiedUnit.Constitution)
+                        .SetIntelligence(newUnit.intelligence ?? copiedUnit.Intelligence)
+                        .SetWisdom(newUnit.wisdom ?? copiedUnit.Wisdom)
+                        .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
+                        .SetSize(newUnit.size ?? copiedUnit.Size)
+                        .SetFaction(FactionRefs.Neutrals.Cast<BlueprintFactionReference>().Reference);
+
+                    if (newUnit.isSummon)
+                    {
+                        unitConfigured.AddUnitUpgraderComponent(null, ComponentMerge.Skip, new() { UnitUpgraderRefs.PF_359232_RemoveBrokenSummonOnLoad.Reference.Get().AssetGuid });
+                        unitConfigured.AddBuffOnEntityCreated(BuffRefs.SummonedCreatureVisual.Cast<BlueprintBuffReference>().Reference);
+                        unitConfigured.AddBuffOnEntityCreated(BuffRefs.Unlootable.Cast<BlueprintBuffReference>().Reference);
+                    }
+
+                    if (newUnit.blueprintUnitFactReferences != null)
+                    {
+                        unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
+                    }
+                    unitConfigured.Configure();
+                    Main.Log(newUnit.name + " : " + newUnit.guid + " created.");
                 }
-                unitConfigured.Configure();
-                Main.Log(newUnit.name + " : " + newUnit.guid + " created.");
+                catch(Exception ex)
+                {
+                    Main.Log(ex.ToString());
+                }
             }
 
         }
-        internal static void AdjustEidolon(NewUnit eidolonUnit)
+        internal static void AdjustEidolon(NewUnitClass eidolonUnit)
         {
+            var featureBaseForm = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonUnit.eidolonBaseForm) + "BaseFormFeature");
+            var featureSubtype = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonUnit.eidolonSubtype) + "SubtypeFeature");
             var eidolon = UnitConfigurator.For(eidolonUnit.guid)
                             .RemoveComponents(components => components is not null)
                             .AddAllowDyingCondition()
                             .AddResurrectOnRest()
                             .SetBrain(characterBrain)
                             .SetBody(new BlueprintUnit.UnitBody() { })
-                    .AddClassLevels(null, CharacterClassRefs.AnimalCompanionClass.Cast<BlueprintCharacterClassReference>().Reference, null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception });
+                            .SetAddFacts(new Blueprint<BlueprintUnitFactReference>[] {
+                                         FeatureRefs.OutsiderType.Cast<BlueprintUnitFactReference>().Reference,
+                                         FeatureRefs.HeadLocatorFeature.Cast<BlueprintUnitFactReference>().Reference,
+                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.EidolonSubtypeFeature),
+                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(featureBaseForm),
+                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(featureSubtype) })
+                            .AddClassLevels(null, BlueprintTool.GetRef<BlueprintCharacterClassReference>(GetGUID.EidolonBaseClass), null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception }); ;
 
-            if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Abberant)
+            if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Abberant)
             {
                 eidolon.SetStrength(12)
                     .SetDexterity(13)
@@ -89,16 +104,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(7)
                     .SetWisdom(10)
                     .SetCharisma(11)
-                    .SetBody(new BlueprintUnit.UnitBody()
-                    {
-                        PrimaryHand = ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference,
-                        m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.TentacleLarge1d6.Cast<BlueprintItemWeaponReference>().Reference }
-                    })
                     .AddLockEquipmentSlot(slotType: SlotType.MainHand)
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
                     .SetSpeed(20.Feet());
             }
-            else if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Biped)
+            else if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Biped)
             {
                 eidolon.SetStrength(16)
                     .SetDexterity(12)
@@ -106,10 +116,9 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(7)
                     .SetWisdom(10)
                     .SetCharisma(11)
-                    .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference)
                     .SetSpeed(30.Feet());
             }
-            else if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Quadruped)
+            else if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Quadruped)
             {
                 eidolon.SetStrength(14)
                     .SetDexterity(14)
@@ -117,15 +126,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(7)
                     .SetWisdom(10)
                     .SetCharisma(11)
-                    .SetBody(new BlueprintUnit.UnitBody()
-                    {
-                        PrimaryHand = ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference
-                    })
                     .AddLockEquipmentSlot(slotType: SlotType.MainHand)
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
                     .SetSpeed(40.Feet());
             }
-            else if (eidolonUnit.eidolonBaseForm == EidolonBaseFormEnums.Serpentine)
+            else if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Serpentine)
             {
                 eidolon.SetStrength(12)
                     .SetDexterity(16)
@@ -133,11 +138,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(7)
                     .SetWisdom(10)
                     .SetCharisma(11)
-                    .SetBody(new BlueprintUnit.UnitBody()
-                    {
-                        PrimaryHand = ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference,
-                        m_AdditionalLimbs = new BlueprintItemWeaponReference[] { ItemWeaponRefs.Tail1d6.Cast<BlueprintItemWeaponReference>().Reference }
-                    })
                     .AddLockEquipmentSlot(slotType: SlotType.MainHand)
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
                     .SetSpeed(20.Feet());
