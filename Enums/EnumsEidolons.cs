@@ -38,5 +38,12 @@
             Twinned = 25,
             Void = 26
         }
+        public enum EnumsEidolonVariant
+        {
+            FireElemental = 1,
+            AirElemental = 2,
+            WaterElemental = 3,
+            EarthElemental = 4
+        }
     }
 }

@@ -15,8 +15,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region EidolonAirElemental
             new NewUnitClass()
                 {
-                    guid = GetGUID.GUIDByName("EidolonAirElemental"),
-                    name = "EidolonAirElemental",
+                    Name = "EidolonAirElemental",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR3_AirElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
@@ -25,11 +24,10 @@ namespace WOTR_MAKING_FRIENDS.Units
                     size = Size.Medium
                 },
             #endregion
-            #region EidolonFireElementalMedium
+            #region EidolonFireElemental
             new NewUnitClass()
                 {
-                    guid = GetGUID.GUIDByName("EidolonFireElementalMedium"),
-                    name = "EidolonFireElementalMedium",
+                    Name = "EidolonFireElemental",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR3_FireElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
@@ -41,8 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region EidolonAirElemental
             new NewUnitClass()
                 {
-                    guid = GetGUID.GUIDByName("EidolonAirElemental"),
-                    name = "EidolonAirElemental",
+                    Name = "EidolonAirElemental",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR3_WaterElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
@@ -54,8 +51,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region EidolonEarthElemental
             new NewUnitClass()
                 {
-                    guid = GetGUID.GUIDByName("EidolonEarthElemental"),
-                    name = "EidolonEarthElemental",
+                    Name = "EidolonEarthElemental",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR3_EarthElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,

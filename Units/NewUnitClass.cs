@@ -4,16 +4,16 @@ using Kingmaker.Blueprints;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
 using Kingmaker.ResourceLinks;
+using System.Collections.Generic;
+using WOTR_MAKING_FRIENDS.GUIDs;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
     public class NewUnitClass
     {
-        /// <summary> GUID of the variant spell. </summary>
-        internal string guid;
-        /// <summary> Internal name of the ability </summary>
-        internal string name;
+        private string _guid;
+        private string _name;
         /// <summary> Name of the ability that is shown to the player. </summary>
         internal LocalizedString m_DisplayName;
         /// <summary> Unit to copy from. Helpful for body/brain/etc. </summary>
@@ -38,6 +38,23 @@ namespace WOTR_MAKING_FRIENDS.Units
         internal int? wisdom;
         internal int? charisma;
         internal Blueprint<BlueprintUnitFactReference>[] blueprintUnitFactReferences;
+
+        /// <summary> Internal name of the ability </summary>
+        internal string Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                _guid = GetGUID.GUIDByName(value);
+            }
+        }
+
+        /// <summary> GUID of the variant spell. </summary>
+        internal string Guid
+        {
+            get { return _guid; }
+        }
 
     };
 }

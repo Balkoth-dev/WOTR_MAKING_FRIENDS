@@ -1,7 +1,9 @@
 ﻿
 
 using System;
+using System.IO;
 using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WOTR_MAKING_FRIENDS.GUIDs
 {
@@ -120,7 +122,8 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string EidolonAirElemental = "f714b317-8898-46c5-a037-0202adacb3ab";
         internal const string EidolonFireElemental = "7021ebfd-a093-47f1-abcc-d5d970e69da6";
         internal const string EidolonWaterElemental = "c90f073a-1ac4-422a-8fde-5c16e8c23e30";
-        internal const string EidolonEarthElemental = "3b530c76-53f5-4d5f-81e6-4df87146fec7";
+        internal const string EidolonEarthElemental = "3b530c76-53f5-4d5f-81e6-4df87146fec7"; 
+
         #endregion
 
         #region Units
@@ -195,6 +198,11 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
         internal const string EidolonStorykinSubtypeFeature = "dfd70bf4-229c-4217-8575-8cedbfc9fae8";
         internal const string EidolonTwinnedSubtypeFeature = "702f9175-cf9f-4aa9-969e-5a7fc2290331";
         internal const string EidolonVoidSubtypeFeature = "4c074e20-8464-42eb-823a-c6eb1193317d";
+        internal const string EidolonFireElementalVariantFeature = "b5b0d9b1 - 75c2-4904-ae09-1348dd1ba78c";
+        internal const string EidolonAirElementalVariantFeature = "67b66abd-32e8-4433-abf5-c95b8b5fc342";
+        internal const string EidolonWaterElementalVariantFeature = "f96dbd1b - ecd3 - 41df-9801-8905b749ccde";
+        internal const string EidolonEarthElementalVariantFeature = "5671473d - ebbe - 47e1 - b865 - 39fc2765f814";
+
         #endregion
 
         #region Abilities
@@ -401,8 +409,10 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
             }
             else
             {
-                Main.Log($"GUID with name '{s}' not found, creating GUID:");
-                Main.Log($"internal const string {s} = " + Guid.NewGuid() + ";");
+                Main.Log($"GUID with name '{s}' not found, creating GUID in NewGuids.txt");
+                string fileName = "Mods/WOTR_MAKING_FRIENDS/GUIDs/NewGuids.txt";
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+                File.AppendAllText(path, $"internal const string {s} = \"" + Guid.NewGuid() + "\";" + Environment.NewLine);
                 return null;
             }
         }

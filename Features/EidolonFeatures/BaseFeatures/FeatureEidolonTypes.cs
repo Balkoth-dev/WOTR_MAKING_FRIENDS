@@ -27,6 +27,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
         }
         public static void Create()
         {
+            CreateBaseFeature();
+            CreateEnumFeature("BaseFormFeature", new EnumsEidolonBaseForm());
+            CreateEnumFeature("SubtypeFeature", new EnumsEidolonSubtype());
+            CreateEnumFeature("VariantFeature", new EnumsEidolonVariant());
+        }
+        internal static void CreateBaseFeature()
+        {
             FeatureConfigurator.New(InternalString.Feature, GetGUID.EidolonSubtypeFeature)
                                .SetDisplayName(InternalString.Name)
                                .SetDescription(InternalString.Description)
@@ -39,37 +46,17 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
             Main.Log("EidolonSubtypeFeature : " + GetGUID.EidolonSubtypeFeature + " created.");
 
-            foreach (var eidolonBaseForm in Enum.GetValues(typeof(EnumsEidolonBaseForm)))
+        }
+        internal static void CreateEnumFeature(string name, Enum enumType)
+        {
+            foreach (var eidolonBaseForm in Enum.GetValues(enumType.GetType()))
             {
                 try
                 {
-                    var eidolonFeatureName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + "BaseFormFeature";
+                    var eidolonFeatureName = "Eidolon" + Enum.GetName(enumType.GetType(), eidolonBaseForm) + name;
                     var eidolonFeatureGuid = GetGUID.GUIDByName(eidolonFeatureName);
 
-                    var characterClass = FeatureConfigurator.New(eidolonFeatureName, eidolonFeatureGuid)
-                                                            .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
-                                                            .SetHideInUI(true)
-                                                            .SetHideInCharacterSheetAndLevelUp(true)
-                                                            .SetGroups(FeatureGroup.CreatureType)
-                                                            .SetRanks(1)
-                                                            .SetIsClassFeature(true)
-                                                            .Configure();
-
-                    Main.Log(eidolonFeatureName + " : " + eidolonFeatureGuid + " created.");
-                }
-                catch (Exception ex)
-                {
-                    Main.Log(e: ex);
-                }
-            }
-            foreach (var eidolonBaseForm in Enum.GetValues(typeof(EnumsEidolonSubtype)))
-            {
-                try
-                {
-                    var eidolonFeatureName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonBaseForm) + "SubtypeFeature";
-                    var eidolonFeatureGuid = GetGUID.GUIDByName(eidolonFeatureName);
-
-                    var characterClass = FeatureConfigurator.New(eidolonFeatureName, eidolonFeatureGuid)
+                    var feature = FeatureConfigurator.New(eidolonFeatureName, eidolonFeatureGuid)
                                                             .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
                                                             .SetHideInUI(true)
                                                             .SetHideInCharacterSheetAndLevelUp(true)

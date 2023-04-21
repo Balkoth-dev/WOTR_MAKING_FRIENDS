@@ -28,7 +28,11 @@ namespace WOTR_MAKING_FRIENDS.Units
             AdjustSummons();
             foreach (var eidolon in UnitEidolons.newUnits)
             {
-                AdjustEidolon(eidolon);
+                try
+                {
+                    AdjustEidolon(eidolon);
+                }
+                catch { }
             }
         }
         internal static void CreateUnitsFromArray(Array newUnits)
@@ -42,7 +46,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     SharedStringAsset sharedStringAsset = ScriptableObject.CreateInstance<SharedStringAsset>();
                     sharedStringAsset.String = newUnit.m_DisplayName ?? copiedUnit.LocalizedName.String;
 
-                    UnitConfigurator unitConfigured = UnitConfigurator.New(newUnit.name, newUnit.guid)
+                    UnitConfigurator unitConfigured = UnitConfigurator.New(newUnit.Name, newUnit.Guid)
                         .CopyFrom(newUnit.copiedUnit, c => c is not null)
                         .SetLocalizedName(sharedStringAsset)
                         .SetDisplayName(newUnit.m_DisplayName ?? copiedUnit.m_DisplayName)
@@ -69,7 +73,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                         unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
                     }
                     unitConfigured.Configure();
-                    Main.Log(newUnit.name + " : " + newUnit.guid + " created.");
+                    Main.Log(newUnit.Name + " : " + newUnit.Guid + " created.");
                 }
                 catch(Exception ex)
                 {
@@ -82,7 +86,7 @@ namespace WOTR_MAKING_FRIENDS.Units
         {
             var featureBaseForm = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonUnit.eidolonBaseForm) + "BaseFormFeature");
             var featureSubtype = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonUnit.eidolonSubtype) + "SubtypeFeature");
-            var eidolon = UnitConfigurator.For(eidolonUnit.guid)
+            var eidolon = UnitConfigurator.For(eidolonUnit.Guid)
                             .RemoveComponents(components => components is not null)
                             .AddAllowDyingCondition()
                             .AddResurrectOnRest()
