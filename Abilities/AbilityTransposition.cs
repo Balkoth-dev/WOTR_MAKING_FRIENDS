@@ -21,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
         }
         public static void CreateTranspositionAbility()
         {
-            BlueprintAbility ability = AbilityConfigurator.New(InternalString.Ability, GetGUID.SummonerTranspositionAbility)
+            BlueprintAbility ability = AbilityConfigurator.New(InternalString.Ability, GetGUID.GUIDByName("SummonerTranspositionAbility"))
                 .CopyFrom(AbilityRefs.EmergencySwapAbility, c => c is AbilityCustomDimensionDoorSwap)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
@@ -32,7 +32,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
                 .SetRange(AbilityRange.Long)
                 .SetIcon(FeatureRefs.SpellDanceFeature.Reference.Get().m_Icon)
                 .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Standard)
-                .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.SummonerMakersCallResource))
+                .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerMakersCallResource")))
                 .Configure();
         }
     }

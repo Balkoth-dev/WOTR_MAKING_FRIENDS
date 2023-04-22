@@ -37,20 +37,20 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyGreaterAuraBuff()
         {
-            BuffConfigurator.New(InternalString.AuraBuff, GetGUID.SummonerShieldAllyGreaterAuraBuff)
+            BuffConfigurator.New(InternalString.AuraBuff, GetGUID.GUIDByName(InternalString.AuraBuff))
                 .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
-                .AddAreaEffect(GetGUID.SummonerShieldAllyGreaterAuraAreaEffectBuff)
+                .AddAreaEffect(GetGUID.GUIDByName("SummonerShieldAllyGreaterAuraAreaEffectBuff"))
                 .SetStacking(StackingType.Ignore)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
                 .Configure();
         }
         private static void CreateSummonerShieldAllyGreaterAuraAreaEffectBuff()
         {
-            AbilityAreaEffectConfigurator.New(InternalString.AreaEffectBuff, GetGUID.SummonerShieldAllyGreaterAuraAreaEffectBuff)
+            AbilityAreaEffectConfigurator.New(InternalString.AreaEffectBuff, GetGUID.GUIDByName(InternalString.AreaEffectBuff))
                 .CopyFrom(AbilityAreaEffectRefs.MartyrAuraOfHealthArea, c => c is null)
-                .AddAbilityAreaEffectBuff(GetGUID.SummonerShieldAllyGreaterConditionalBuff)
+                .AddAbilityAreaEffectBuff(GetGUID.GUIDByName("SummonerShieldAllyGreaterConditionalBuff"))
                 .SetSize(7.Feet())
                 .Configure();
         }
@@ -62,10 +62,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             var actionsAddBuffBuilderIsAlly = ActionsBuilder.New()
                                     .Conditional(conditionBuilderIsAlly,
                                                 ActionsBuilder.New()
-                                                .ApplyBuffPermanent(GetGUID.SummonerShieldAllyGreaterBuff, isNotDispelable: true))
+                                                .ApplyBuffPermanent(GetGUID.GUIDByName("SummonerShieldAllyGreaterBuff"), isNotDispelable: true))
                                     .Build();
 
-            var actionsRemoveBuffBuilderIsAlly = ActionsBuilder.New().RemoveBuff(GetGUID.SummonerShieldAllyGreaterBuff).Build();
+            var actionsRemoveBuffBuilderIsAlly = ActionsBuilder.New().RemoveBuff(GetGUID.GUIDByName("SummonerShieldAllyGreaterBuff")).Build();
 
             var conditionBuilderIsMaster = ConditionsBuilder.New().Build();
             conditionBuilderIsMaster.Conditions = new Kingmaker.ElementsSystem.Condition[] { new ContextConditionIsMaster() };
@@ -73,12 +73,12 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             var actionsAddBuffBuilderIsMaster = ActionsBuilder.New()
                                     .Conditional(conditionBuilderIsMaster,
                                                 ActionsBuilder.New()
-                                                .ApplyBuffPermanent(GetGUID.SummonerShieldAllyGreaterIsMasterBuff, isNotDispelable: true))
+                                                .ApplyBuffPermanent(GetGUID.GUIDByName("SummonerShieldAllyGreaterIsMasterBuff"), isNotDispelable: true))
                                     .Build();
 
-            var actionsRemoveBuffBuilderIsMaster = ActionsBuilder.New().RemoveBuff(GetGUID.SummonerShieldAllyGreaterBuff).Build();
+            var actionsRemoveBuffBuilderIsMaster = ActionsBuilder.New().RemoveBuff(GetGUID.GUIDByName("SummonerShieldAllyGreaterBuff")).Build();
 
-            BuffConfigurator.New(InternalString.ConditionalBuff, GetGUID.SummonerShieldAllyGreaterConditionalBuff)
+            BuffConfigurator.New(InternalString.ConditionalBuff, GetGUID.GUIDByName(InternalString.ConditionalBuff))
                 .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
@@ -90,7 +90,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyGreaterBuff()
         {
-            BuffConfigurator.New(InternalString.Buff, GetGUID.SummonerShieldAllyGreaterBuff)
+            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName(InternalString.Buff))
                 .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
@@ -104,7 +104,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyGreaterIsMasterBuff()
         {
-            BuffConfigurator.New(InternalString.BuffIsMaster, GetGUID.SummonerShieldAllyGreaterIsMasterBuff)
+            BuffConfigurator.New(InternalString.BuffIsMaster, GetGUID.GUIDByName(InternalString.BuffIsMaster))
                 .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)

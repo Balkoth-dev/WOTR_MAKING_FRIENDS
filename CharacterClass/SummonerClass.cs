@@ -22,12 +22,12 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         }
         public static void CreateSummonerClass()
         {
-            BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(InternalString.SummonerClass, GetGUID.SummonerClass).Configure();
+            BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(InternalString.SummonerClass, GetGUID.GUIDByName("SummonerClass")).Configure();
 
             BlueprintProgression summonerProgression = SummonerProgression.Initialize();
             Kingmaker.Blueprints.Classes.Spells.BlueprintSpellbook summonerSpellbook = SummonerSpellbook.CreateSpellBook();
 
-            CharacterClassConfigurator.For(GetGUID.SummonerClass)
+            CharacterClassConfigurator.For(GetGUID.GUIDByName("SummonerClass"))
                 .SetLocalizedName(InternalString.SummonerClassName)
                 .SetLocalizedDescription(InternalString.SummonerClassDescription)
                 .SetSpellbook(summonerSpellbook)

@@ -19,8 +19,8 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                     var guid = GetGUID.GUIDByName(name);
 
                     var progression = ProgressionConfigurator.New(name, guid)
-                        .CopyFrom(BlueprintTool.Get<BlueprintProgression>(GetGUID.EidolonBaseProgression), c => c is null)
-                        .SetClasses(GetGUID.SummonerClass)
+                        .CopyFrom(BlueprintTool.Get<BlueprintProgression>(GetGUID.GUIDByName("EidolonBaseProgression")), c => c is null)
+                        .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                         .SetUIGroups(new())
                         .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { });
 

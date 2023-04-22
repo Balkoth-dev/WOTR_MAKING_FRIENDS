@@ -299,8 +299,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.TripImmunityFeature.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.SubtypeExtraplanar.Cast<BlueprintUnitFactReference>().Reference,
                                                     UnitFactRefs.ReducedReach.Cast<BlueprintUnitFactReference>().Reference,
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.StampedeTrampleDamageImmunityBuff),
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.StampedeTrampleDamageAreaBuff)
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("StampedeTrampleDamageImmunityBuff")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("StampedeTrampleDamageAreaBuff"))
                                                   }
                 },
             #endregion
@@ -326,7 +326,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                     FeatureRefs.FireVulnerability.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.ColdImmunity.Cast<BlueprintUnitFactReference>().Reference,
                                                     FeatureRefs.TrippingBite.Cast<BlueprintUnitFactReference>().Reference,
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.ReleaseTheHoundsDamageAreaBuff)
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("ReleaseTheHoundsDamageAreaBuff"))
                                                   }
                 },
             #endregion

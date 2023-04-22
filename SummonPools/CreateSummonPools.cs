@@ -17,11 +17,11 @@ namespace WOTR_MAKING_FRIENDS.SummonPools
         }
         public static void CreateSummonerPool()
         {
-            SummonPoolConfigurator.New(InternalString.SummonerPool, GetGUID.SummonerPool).Configure();
+            SummonPoolConfigurator.New(InternalString.SummonerPool, GetGUID.GUIDByName("SummonerPool")).Configure();
         }
         public static void CreateDraconicAllyPool()
         {
-            SummonPoolConfigurator.New(InternalString.DraconicAllyPool, GetGUID.DraconicAllyPool).Configure();
+            SummonPoolConfigurator.New(InternalString.DraconicAllyPool, GetGUID.GUIDByName("DraconicAllyPool")).Configure();
         }
     }
 }

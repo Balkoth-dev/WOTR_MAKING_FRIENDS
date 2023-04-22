@@ -15,7 +15,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void Initialize()
         {
-            FeatureConfigurator.New(Proficiency, GetGUID.SummonerProficiencies)
+            FeatureConfigurator.New(Proficiency, GetGUID.GUIDByName("SummonerProficiencies"))
                 .SetDisplayName(ProficiencyName)
                 .SetDescription(ProficiencyDescription)
                 .AddFacts(new()

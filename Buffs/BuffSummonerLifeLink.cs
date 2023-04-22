@@ -22,17 +22,17 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         public static void CreateSummonerLifeLinkBuff()
         {
             Kingmaker.ElementsSystem.ActionList applyLifeLink = ActionsBuilder.New().OnPets(ActionsBuilder.New()
-                                                            .ApplyBuffPermanent(GetGUID.SummonerLifeLinkBuff, isNotDispelable: true)
+                                                            .ApplyBuffPermanent(GetGUID.GUIDByName("SummonerLifeLinkBuff"), isNotDispelable: true)
                                                             .Build(),
                                                             PetTypeExtensions.Eidolon).Build();
             ((ContextActionsOnPet)applyLifeLink.Actions[0]).AllPets = false;
 
             Kingmaker.ElementsSystem.ActionList disableLifeLink = ActionsBuilder.New().OnPets(ActionsBuilder.New()
-                                                            .RemoveBuff(GetGUID.SummonerLifeLinkBuff)
+                                                            .RemoveBuff(GetGUID.GUIDByName("SummonerLifeLinkBuff"))
                                                             .Build(),
                                                             PetTypeExtensions.Eidolon).Build();
 
-            BuffConfigurator.New(InternalString.Buff, GetGUID.SummonerLifeLinkBuff)
+            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName("SummonerLifeLinkBuff"))
                 .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)

@@ -17,10 +17,10 @@ namespace WOTR_MAKING_FRIENDS.Abilities
         }
         public static void CreateLifeLinkActivatableAbility()
         {
-            ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.SummonerLifeLinkActivatableAbility)
+            ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.GUIDByName("SummonerLifeLinkActivatableAbility"))
                                           .SetDisplayName(InternalString.Name)
                                           .SetDescription(InternalString.Description)
-                                          .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.SummonerLifeLinkBuff))
+                                          .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName("SummonerLifeLinkBuff")))
                                           .SetDeactivateIfOwnerUnconscious(true)
                                           .SetDeactivateIfOwnerDisabled(true)
                                           .SetIsOnByDefault(true)

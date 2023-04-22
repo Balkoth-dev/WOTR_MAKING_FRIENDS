@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         public static void CreateBlackTentaclesBuff()
         {
-            BuffConfigurator.New(InternalString.BlackTentaclesBuff, GetGUID.BlackTentaclesBuff)
+            BuffConfigurator.New(InternalString.BlackTentaclesBuff, GetGUID.GUIDByName("BlackTentaclesBuff"))
                 .CopyFrom(BuffRefs.OmoxGrappleBuff, c => c is null)
                 .SetDisplayName(InternalString.BlackTentaclesSpellName)
                 .SetDescription(InternalString.BlackTentaclesSpellDescription)

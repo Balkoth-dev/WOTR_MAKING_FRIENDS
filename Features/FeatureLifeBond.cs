@@ -22,12 +22,12 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateEidolonLifeBondFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.SummonerLifeBondFeature)
+            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
                 .CopyFrom(FeatureRefs.OracleRevelationLifeLink.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeBond.png"))
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.SummonerLifeBondActivatableAbility) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerLifeBondActivatableAbility")) })
                 .Configure();
 
         }

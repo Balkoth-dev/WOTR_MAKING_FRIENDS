@@ -31,7 +31,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
             internal static LocalizedString BlackTentaclesSpellName = Helpers.ObtainString("BlackTentaclesSpell.Name");
             internal static LocalizedString BlackTentaclesSpellDescription = Helpers.ObtainString("BlackTentaclesSpell.Description");
         }
-        internal static BlueprintBuffReference blackTentaclesBuff = BlueprintTool.Get<BlueprintBuff>(GetGUID.BlackTentaclesBuff).ToReference<BlueprintBuffReference>();
+        internal static BlueprintBuffReference blackTentaclesBuff = BlueprintTool.Get<BlueprintBuff>(GetGUID.GUIDByName("BlackTentaclesBuff")).ToReference<BlueprintBuffReference>();
 
         private static Dictionary<string, int> spellListComponents = new()
         {
@@ -41,12 +41,12 @@ namespace WOTR_MAKING_FRIENDS.Spells
             { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 4 },
             { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 4 },
             { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 4 },
-            { GetGUID.SummonerSpellbookSpellList, 4 }
+            { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 }
         };
         public static void CreateBlackTentaclesSpell()
         {
             string sourceFx = "aa448b28b377b1c49b136d88fa346600";
-            string newFx = GetGUID.BlackTentaclesFx;
+            string newFx = GetGUID.GUIDByName("BlackTentaclesFx");
 
             AssetTool.RegisterDynamicPrefabLink(newFx, sourceFx, BlackTentaclesFx);
 
@@ -66,7 +66,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     }
             };
 
-            BlueprintAbilityAreaEffect areaEffect = AbilityAreaEffectConfigurator.New(InternalString.BlackTentaclesAreaEffectName, GetGUID.BlackTentaclesAreaEffect)
+            BlueprintAbilityAreaEffect areaEffect = AbilityAreaEffectConfigurator.New(InternalString.BlackTentaclesAreaEffectName, GetGUID.GUIDByName("BlackTentaclesAreaEffect"))
               .SetAffectEnemies()
               .SetAggroEnemies()
               .SetSize(20.Feet())
@@ -82,7 +82,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
               .SetFx(newFx)
               .Configure();
 
-            AbilityConfigurator blackTentaclesSpell = AbilityConfigurator.New(InternalString.BlackTentaclesSpell, GetGUID.BlackTentaclesSpell)
+            AbilityConfigurator blackTentaclesSpell = AbilityConfigurator.New(InternalString.BlackTentaclesSpell, GetGUID.GUIDByName("BlackTentaclesSpell"))
                 .CopyFrom(AbilityRefs.SickeningEntanglement, c => c is not (AbilityEffectRunAction or AbilityAoERadius))
                 .SetDisplayName(InternalString.BlackTentaclesSpellName)
                 .SetDescription(InternalString.BlackTentaclesSpellDescription)

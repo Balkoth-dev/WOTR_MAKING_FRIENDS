@@ -2,6 +2,7 @@
 using System;
 using System.Reflection;
 using UnityModManagerNet;
+using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS
@@ -31,6 +32,7 @@ namespace WOTR_MAKING_FRIENDS
                 modInfo = modEntry;
                 Log("Patching...");
                 AssetLoader.ModEntry = modEntry;
+                GetGUID.ModEntry = modEntry;
                 harmony.PatchAll();
 
                 Log("Finished patching.");

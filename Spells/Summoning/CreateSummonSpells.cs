@@ -31,7 +31,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
     {
         internal static class Refs
         {
-            internal static readonly BlueprintSummonPoolReference summonerPoolRef = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool);
+            internal static readonly BlueprintSummonPoolReference summonerPoolRef = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool"));
         }
 
         public static Dictionary<string, List<Blueprint<BlueprintAbilityReference>>> baseSummonSpells = new();

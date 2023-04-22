@@ -22,11 +22,11 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateTranspositionFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.SummonerTranspositionFeature)
+            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
                 .CopyFrom(FeatureRefs.ArcanistExploitDimensionalSlideFeature.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.SummonerTranspositionAbility) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerTranspositionAbility")) })
                 .SetIcon(FeatureRefs.SpellDanceFeature.Reference.Get().m_Icon)
                 .Configure();
         }

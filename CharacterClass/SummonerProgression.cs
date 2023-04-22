@@ -17,15 +17,15 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SummonerSecondSpellbook.Initialize();
 
             LevelEntryBuilder entries = LevelEntryBuilder.New()
-                    .AddEntry(1, GetGUID.SummonerProficiencies, GetGUID.SummonerSecondSpellbookFeat, GetGUID.SummonerLifeLinkFeature, GetGUID.FakeEidolonFeature)
-                    .AddEntry(2, GetGUID.SummonerBondedSensesFeature)
-                    .AddEntry(4, GetGUID.SummonerShieldAllyFeature)
-                    .AddEntry(6, GetGUID.SummonerMakersCallFeature)
-                    .AddEntry(8, GetGUID.SummonerTranspositionFeature)
-                    .AddEntry(12, GetGUID.SummonerShieldAllyGreaterFeature)
-                    .AddEntry(14, GetGUID.SummonerLifeBondFeature);
+                    .AddEntry(1, GetGUID.GUIDByName("SummonerProficiencies"), GetGUID.GUIDByName("SummonerSecondSpellbookFeat"), GetGUID.GUIDByName("SummonerLifeLinkFeature"), GetGUID.GUIDByName("FakeEidolonFeature"))
+                    .AddEntry(2, GetGUID.GUIDByName("SummonerBondedSensesFeature"))
+                    .AddEntry(4, GetGUID.GUIDByName("SummonerShieldAllyFeature"))
+                    .AddEntry(6, GetGUID.GUIDByName("SummonerMakersCallFeature"))
+                    .AddEntry(8, GetGUID.GUIDByName("SummonerTranspositionFeature"))
+                    .AddEntry(12, GetGUID.GUIDByName("SummonerShieldAllyGreaterFeature"))
+                    .AddEntry(14, GetGUID.GUIDByName("SummonerLifeBondFeature"));
 
-            return ProgressionConfigurator.New(Strings.SummonerProgression, GetGUID.SummonerProgression)
+            return ProgressionConfigurator.New(Strings.SummonerProgression, GetGUID.GUIDByName("SummonerProgression"))
                 .SetAllowNonContextActions(false)
                 .SetHideInUI(false)
                 .SetHideInCharacterSheetAndLevelUp(false)

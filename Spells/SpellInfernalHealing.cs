@@ -34,7 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
             { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
             { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
-            { GetGUID.SummonerSpellbookSpellList, 1 }
+            { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 1 }
         };
         private static Dictionary<string, int> greaterInfernalHealingSpellListComponents = new()
         {
@@ -46,11 +46,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 4 },
             { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 4 },
             { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 4 },
-            { GetGUID.SummonerSpellbookSpellList, 4 }
+            { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 }
         };
         public static void CreateInfernalHealing()
         {
-            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.InfernalHealingSpellName, GetGUID.InfernalHealingSpell)
+            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.InfernalHealingSpellName, GetGUID.GUIDByName("InfernalHealingSpell"))
                 .CopyFrom(AbilityRefs.CureLightWounds)
                 .SetDisplayName(InternalString.InfernalHealingNameSpellName)
                 .SetDescription(InternalString.InfernalHealingNameSpellDescription)
@@ -71,7 +71,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         }
         public static void CreateGreaterInfernalHealing()
         {
-            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.GreaterInfernalHealingSpellName, GetGUID.GreaterInfernalHealingSpell)
+            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.GreaterInfernalHealingSpellName, GetGUID.GUIDByName("GreaterInfernalHealingSpell"))
                 .CopyFrom(AbilityRefs.CureLightWounds)
                 .SetDisplayName(InternalString.GreaterInfernalHealingNameSpellName)
                 .SetDescription(InternalString.GreaterInfernalHealingNameSpellDescription)

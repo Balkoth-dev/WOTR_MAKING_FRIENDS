@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellSlotsTable()
         {
-            SpellsTableConfigurator.New(InternalString.SummonerSpellbookName + "SpellsPerDayTable", GetGUID.SummonerSpellbookSpellsPerDay)
+            SpellsTableConfigurator.New(InternalString.SummonerSpellbookName + "SpellsPerDayTable", GetGUID.GUIDByName("SummonerSpellbookSpellsPerDay"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,1),
@@ -59,7 +59,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellsKnownTable()
         {
-            SpellsTableConfigurator.New(InternalString.SummonerSpellbook + ".SpellKnownTable", GetGUID.SummonerSpellbookSpellsKnown)
+            SpellsTableConfigurator.New(InternalString.SummonerSpellbook + ".SpellKnownTable", GetGUID.GUIDByName("SummonerSpellbookSpellsKnown"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,2),
@@ -247,7 +247,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void CreateSpellList()
         {
-            SpellListConfigurator.New(InternalString.SummonerSpellbook + ".SpellList", GetGUID.SummonerSpellbookSpellList)
+            SpellListConfigurator.New(InternalString.SummonerSpellbook + ".SpellList", GetGUID.GUIDByName("SummonerSpellbookSpellList"))
                 .AddToSpellsByLevel(Create0thLevelSpells(),
                 Create1stLevelSpells(),
                 Create2ndLevelSpells(),
@@ -266,12 +266,12 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             ConfigureSpellSlotsTable();
             ConfigureSpellsKnownTable();
             CreateSpellList();
-            return SpellbookConfigurator.New(InternalString.SummonerSpellbook, GetGUID.SummonerSpellbookSpellBook)
+            return SpellbookConfigurator.New(InternalString.SummonerSpellbook, GetGUID.GUIDByName("SummonerSpellbookSpellBook"))
                 .SetName(InternalString.SummonerSpellbookName)
-                .SetCharacterClass(GetGUID.SummonerClass)
-                .SetSpellsPerDay(GetGUID.SummonerSpellbookSpellsPerDay)
-                .SetSpellsKnown(GetGUID.SummonerSpellbookSpellsKnown)
-                .SetSpellList(GetGUID.SummonerSpellbookSpellList)
+                .SetCharacterClass(GetGUID.GUIDByName("SummonerClass"))
+                .SetSpellsPerDay(GetGUID.GUIDByName("SummonerSpellbookSpellsPerDay"))
+                .SetSpellsKnown(GetGUID.GUIDByName("SummonerSpellbookSpellsKnown"))
+                .SetSpellList(GetGUID.GUIDByName("SummonerSpellbookSpellList"))
                 .SetCastingAttribute(Kingmaker.EntitySystem.Stats.StatType.Charisma)
                 .SetIsMythic(false)
                 .SetSpontaneous(true)

@@ -69,8 +69,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             public SummonAbility()
             {
-                goodBuff = BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.DummyBuff);
-                evilBuff = BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.DummyBuff);
+                goodBuff = BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName("DummyBuff"));
+                evilBuff = BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName("DummyBuff"));
                 localizationDuration = Duration.RoundPerLevel;
             }
 
@@ -82,11 +82,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonISingle",
-                guid = GetGUID.SummonerSummonISingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonISingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIBase"),
                 defaultMonster = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -96,8 +96,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Description,
                 actionType = CommandType.Standard,
                 m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 1 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 1 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -105,11 +105,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIISingle",
-                guid = GetGUID.SummonerSummonIISingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIISingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIIBase"),
                 defaultMonster = UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -119,8 +119,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIISingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 2 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 2 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -128,11 +128,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIId3",
-                guid = GetGUID.SummonerSummonIId3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIId3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIIBase"),
                 defaultMonster = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -142,8 +142,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIId3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 2 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 2 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -151,11 +151,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIIISingle",
-                guid = GetGUID.SummonerSummonIIISingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIIISingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIIIBase"),
                 defaultMonster = UnitRefs.MonitorLizardSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -165,8 +165,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIIISingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 3 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 3 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -174,11 +174,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIIId3",
-                guid = GetGUID.SummonerSummonIIId3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIIId3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIIIBase"),
                 defaultMonster = UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -188,8 +188,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIIId3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 3 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 3 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -197,11 +197,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIVSingle",
-                guid = GetGUID.SummonerSummonIVSingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIVBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIVSingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIVBase"),
                 defaultMonster = UnitRefs.DireWolfSummon.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -211,8 +211,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIVSingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIVSingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 4 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 4 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -220,11 +220,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIVd3",
-                guid = GetGUID.SummonerSummonIVd3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIVBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIVd3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIVBase"),
                 defaultMonster = UnitRefs.MonitorLizardSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -234,8 +234,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIVd3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIVd3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 4 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 4 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -243,12 +243,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVSingle",
-                guid = GetGUID.SummonerSummonVSingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVSingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVBase"),
                 defaultMonster = UnitRefs.RedcapSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AzataBralaniSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -258,8 +258,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVSingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVSingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 5 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 5 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -267,11 +267,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVd3",
-                guid = GetGUID.SummonerSummonVd3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVd3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVBase"),
                 defaultMonster = UnitRefs.DireWolfSummon.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -281,8 +281,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVd3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVd3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 5 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 5 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -290,12 +290,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVISingle",
-                guid = GetGUID.SummonerSummonVISingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVISingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVIBase"),
                 defaultMonster = UnitRefs.SoulEaterSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AxiomiteSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -305,8 +305,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVISingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 6 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 6 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -314,12 +314,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVId3",
-                guid = GetGUID.SummonerSummonVId3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVId3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVIBase"),
                 defaultMonster = UnitRefs.RedcapSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AzataBralaniSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyIV_VI.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -329,8 +329,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVId3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 6 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 6 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -338,11 +338,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVIISingle",
-                guid = GetGUID.SummonerSummonVIISingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVIISingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVIIBase"),
                 defaultMonster = UnitRefs.BogeymanSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -350,8 +350,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVIISingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 7 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 7 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -359,12 +359,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVIId3",
-                guid = GetGUID.SummonerSummonVIId3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVIId3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVIIBase"),
                 defaultMonster = UnitRefs.SoulEaterSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AxiomiteSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -374,8 +374,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVIId3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 7 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 7 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -383,12 +383,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVIIISingle",
-                guid = GetGUID.SummonerSummonVIIISingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVIIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVIIISingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVIIIBase"),
                 defaultMonster = UnitRefs.FrostGiantSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.MonadicDevaSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -397,8 +397,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVIIISingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVIIISingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 8 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 8 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -406,12 +406,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonVIIId3",
-                guid = GetGUID.SummonerSummonVIIId3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterVIIIBase,
+                guid = GetGUID.GUIDByName("SummonerSummonVIIId3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterVIIIBase"),
                 defaultMonster = UnitRefs.BogeymanSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = null,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -419,8 +419,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterVIIId3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterVIIId3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 8 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 8 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -428,12 +428,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIXSingle",
-                guid = GetGUID.SummonerSummonIXSingle,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIXBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIXSingle"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIXBase"),
                 defaultMonster = UnitRefs.ThanadaemonSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.AzataGhaelSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -443,8 +443,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIXSingle.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIXSingle.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 9 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 9 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -452,12 +452,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonerSummonIXd3",
-                guid = GetGUID.SummonerSummonIXd3,
-                summonSpellBaseGuid = GetGUID.SummonerSummonMonsterIXBase,
+                guid = GetGUID.GUIDByName("SummonerSummonIXd3"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonerSummonMonsterIXBase"),
                 defaultMonster = UnitRefs.FrostGiantSummoned.Cast<BlueprintUnitReference>().Reference,
                 goodMonster = UnitRefs.MonadicDevaSummoned.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnAllyVI_IX.Cast<BlueprintBuffReference>().Reference },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.SummonerPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("SummonerPool")),
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Minutes,
                 localizationDuration = Duration.MinutePerLevel,
@@ -466,8 +466,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 m_Description = AbilityRefs.SummonMonsterIXd3.Reference.Get().m_Description,
                 m_icon = AbilityRefs.SummonMonsterIXd3.Reference.Get().m_Icon,
                 actionType = CommandType.Standard,
-                spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList, 9 } },
-                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.SummonerClass }),
+                spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"), 9 } },
+                contextRankConfig = ContextRankConfigs.ClassLevel(classes: new string[]{ GetGUID.GUIDByName("SummonerClass") }),
                 craftingComponent = false
             },
             #endregion
@@ -475,9 +475,9 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonMinorMonsterRedPanda",
-                guid = GetGUID.SummonMinorMonsterRedPanda,
-                summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.RedPandaSummon),
+                guid = GetGUID.GUIDByName("SummonMinorMonsterRedPanda"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonMinorMonsterBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("RedPandaSummon")),
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Rounds,
@@ -499,7 +499,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
                     { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
                     { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
-                    { GetGUID.SummonerSpellbookSpellList, 1 },
+                    { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 1 },
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -508,9 +508,9 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonMinorMonsterCat",
-                guid = GetGUID.SummonMinorMonsterCat,
-                summonSpellBaseGuid = GetGUID.SummonMinorMonsterBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CatSummon),
+                guid = GetGUID.GUIDByName("SummonMinorMonsterCat"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonMinorMonsterBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("CatSummon")),
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.D3,
                 durationRate = DurationRate.Rounds,
@@ -532,7 +532,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
                     { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
                     { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
-                    { GetGUID.SummonerSpellbookSpellList, 1 },
+                    { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 1 },
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -541,8 +541,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonCacodaemon",
-                guid = GetGUID.SummonCacodaemon,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CacodaemonSummon),
+                guid = GetGUID.GUIDByName("SummonCacodaemon"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("CacodaemonSummon")),
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.Rounds,
@@ -560,7 +560,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 2 },
                     { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 2 },
                     { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 2 },
-                    { GetGUID.SummonerSpellbookSpellList, 2 },
+                    { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 2 },
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -569,8 +569,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonCacodaemonGreater",
-                guid = GetGUID.SummonCacodaemonGreater,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.CacodaemonSummon),
+                guid = GetGUID.GUIDByName("SummonCacodaemonGreater"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("CacodaemonSummon")),
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.D4,
                 durationRate = DurationRate.Rounds,
@@ -589,7 +589,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 4 },
                     { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 4 },
                     { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 4 },
-                    { GetGUID.SummonerSpellbookSpellList, 3 },
+                    { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -598,7 +598,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonSwarm",
-                guid = GetGUID.SummonSwarm,
+                guid = GetGUID.GUIDByName("SummonSwarm"),
                 defaultMonster = UnitRefs.CR1_SpiderSwarm.Cast<BlueprintUnitReference>().Reference,
                 summonBuff = new BlueprintBuffReference[]{ BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference },
                 numberOfSummons = DiceType.One,
@@ -619,7 +619,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 2 },
                     { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 2 },
                     { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 2 },
-                    { GetGUID.SummonerSpellbookSpellList, 2 },
+                    { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 2 },
                 },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -628,14 +628,14 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonDraconicAllyBlack",
-                guid = GetGUID.SummonDraconicAllyBlack,
-                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonBlack),
+                guid = GetGUID.GUIDByName("SummonDraconicAllyBlack"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("DraconicAllySummonBlack")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonIBlackBuff.Cast<BlueprintBuffReference>().Reference
                 },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.DraconicAllyPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("DraconicAllyPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.TenMinutes,
                 localizationDuration = Duration.TenMinutesPerLevel,
@@ -650,7 +650,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
@@ -660,14 +660,14 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonDraconicAllyBlue",
-                guid = GetGUID.SummonDraconicAllyBlue,
-                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonBlue),
+                guid = GetGUID.GUIDByName("SummonDraconicAllyBlue"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("DraconicAllySummonBlue")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonIBlueBuff.Cast<BlueprintBuffReference>().Reference,
                 },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.DraconicAllyPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("DraconicAllyPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.TenMinutes,
                 localizationDuration = Duration.TenMinutesPerLevel,
@@ -682,7 +682,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
@@ -692,14 +692,14 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonDraconicAllyBrass",
-                guid = GetGUID.SummonDraconicAllyBrass,
-                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonBrass),
+                guid = GetGUID.GUIDByName("SummonDraconicAllyBrass"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("DraconicAllySummonBrass")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonIBrassBuff.Cast<BlueprintBuffReference>().Reference
                 },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.DraconicAllyPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("DraconicAllyPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.TenMinutes,
                 localizationDuration = Duration.TenMinutesPerLevel,
@@ -714,7 +714,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
@@ -724,14 +724,14 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonDraconicAllyGreen",
-                guid = GetGUID.SummonDraconicAllyGreen,
-                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonGreen),
+                guid = GetGUID.GUIDByName("SummonDraconicAllyGreen"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("DraconicAllySummonGreen")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonIGreenBuff.Cast<BlueprintBuffReference>().Reference
                 },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.DraconicAllyPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("DraconicAllyPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.TenMinutes,
                 localizationDuration = Duration.TenMinutesPerLevel,
@@ -746,7 +746,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
@@ -756,14 +756,14 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonDraconicAllyRed",
-                guid = GetGUID.SummonDraconicAllyRed,
-                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonRed),
+                guid = GetGUID.GUIDByName("SummonDraconicAllyRed"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("DraconicAllySummonRed")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonIRedBuff.Cast<BlueprintBuffReference>().Reference
                 },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.DraconicAllyPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("DraconicAllyPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.TenMinutes,
                 localizationDuration = Duration.TenMinutesPerLevel,
@@ -778,7 +778,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
@@ -788,15 +788,15 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonDraconicAllySilver",
-                guid = GetGUID.SummonDraconicAllySilver,
-                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonSilver),
+                guid = GetGUID.GUIDByName("SummonDraconicAllySilver"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("DraconicAllySummonSilver")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonISilverBuff.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonISilverBreathWeaponBuff.Cast<BlueprintBuffReference>().Reference,
                 },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.DraconicAllyPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("DraconicAllyPool")),
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.TenMinutes,
                 localizationDuration = Duration.TenMinutesPerLevel,
@@ -811,7 +811,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
@@ -821,14 +821,14 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonDraconicAllyWhite",
-                guid = GetGUID.SummonDraconicAllyWhite,
-                summonSpellBaseGuid = GetGUID.SummonDraconicAllyBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.DraconicAllySummonWhite),
+                guid = GetGUID.GUIDByName("SummonDraconicAllyWhite"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("DraconicAllySummonWhite")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterI_III.Cast<BlueprintBuffReference>().Reference,
                     BuffRefs.FormOfTheDragonIWhiteBuff.Cast<BlueprintBuffReference>().Reference
                 },
-                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.DraconicAllyPool),
+                summonPool = BlueprintTool.GetRef<BlueprintSummonPoolReference>(GetGUID.GUIDByName("DraconicAllyPool")),
                 blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[] { AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Cast<BlueprintUnitFactReference>().Reference },
                 numberOfSummons = DiceType.One,
                 durationRate = DurationRate.TenMinutes,
@@ -844,7 +844,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel(),
                 materialComponent = new BlueprintAbility.MaterialComponentData(){ m_Item = ItemRefs.DiamondDust.Cast<BlueprintItemReference>().Reference, Count = 5}
@@ -854,9 +854,9 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonLesserDemonBrimorak",
-                guid = GetGUID.SummonLesserDemonBrimorak,
-                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonBrimorak),
+                guid = GetGUID.GUIDByName("SummonLesserDemonBrimorak"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonLesserDemonBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("LesserDemonSummonBrimorak")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -876,7 +876,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
-                        { GetGUID.SummonerSpellbookSpellList, 4 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -885,9 +885,9 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonLesserDemonIncubus",
-                guid = GetGUID.SummonLesserDemonIncubus,
-                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonIncubus),
+                guid = GetGUID.GUIDByName("SummonLesserDemonIncubus"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonLesserDemonBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("LesserDemonSummonIncubus")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -907,7 +907,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
-                        { GetGUID.SummonerSpellbookSpellList, 4 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -916,9 +916,9 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonLesserDemonSchir",
-                guid = GetGUID.SummonLesserDemonSchir,
-                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonSchir),
+                guid = GetGUID.GUIDByName("SummonLesserDemonSchir"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonLesserDemonBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("LesserDemonSummonSchir")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -938,7 +938,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
-                        { GetGUID.SummonerSpellbookSpellList, 4 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -947,9 +947,9 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonLesserDemonVermlek",
-                guid = GetGUID.SummonLesserDemonVermlek,
-                summonSpellBaseGuid = GetGUID.SummonLesserDemonBase,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.LesserDemonSummonVermlek),
+                guid = GetGUID.GUIDByName("SummonLesserDemonVermlek"),
+                summonSpellBaseGuid = GetGUID.GUIDByName("SummonLesserDemonBase"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("LesserDemonSummonVermlek")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -970,7 +970,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
-                        { GetGUID.SummonerSpellbookSpellList, 4 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -979,8 +979,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonStampede",
-                guid = GetGUID.SummonStampede,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.StampedeSummonHorse),
+                guid = GetGUID.GUIDByName("SummonStampede"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("StampedeSummonHorse")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -999,7 +999,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.DruidClass.Reference.Guid.ToString(), 6 },
                         { CharacterClassRefs.HunterClass.Reference.Guid.ToString(), 6 },
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 6 },
-                        { GetGUID.SummonerSpellbookSpellList, 4 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -1008,8 +1008,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonReleaseTheHounds",
-                guid = GetGUID.SummonReleaseTheHounds,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.ReleaseTheHoundsWolf),
+                guid = GetGUID.GUIDByName("SummonReleaseTheHounds"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("ReleaseTheHoundsWolf")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -1032,7 +1032,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
-                        { GetGUID.SummonerSpellbookSpellList, 5 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 5 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -1041,8 +1041,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonErinyes",
-                guid = GetGUID.SummonErinyes,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.ErinyesSummon),
+                guid = GetGUID.GUIDByName("SummonErinyes"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("ErinyesSummon")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -1064,7 +1064,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
-                        { GetGUID.SummonerSpellbookSpellList, 5 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 5 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },
@@ -1073,8 +1073,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             new SummonAbility
             {
                 name = "SummonMeladaemon",
-                guid = GetGUID.SummonMeladaemon,
-                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.MeladaemonSummon),
+                guid = GetGUID.GUIDByName("SummonMeladaemon"),
+                defaultMonster = BlueprintTool.GetRef<BlueprintUnitReference>(GetGUID.GUIDByName("MeladaemonSummon")),
                 summonBuff = new BlueprintBuffReference[]{
                     BuffRefs.SummonedCreatureSpawnMonsterIV_VI.Cast<BlueprintBuffReference>().Reference
                 },
@@ -1093,7 +1093,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 8 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 8 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 8 },
-                        { GetGUID.SummonerSpellbookSpellList, 6 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 6 },
                     },
                 contextRankConfig = ContextRankConfigs.CasterLevel()
             },

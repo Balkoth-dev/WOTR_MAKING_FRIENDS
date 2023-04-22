@@ -40,7 +40,7 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
                 .AddToClassSkills(
                 StatType.SkillPerception)
                 .AddPrerequisiteIsPet(group:GroupType.Any,checkInProgression:false,hideInUI:false,not:false)
-                .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.EidolonSubtypeFeature))
+                .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonSubtypeFeature")))
                 .Configure();
                 Main.Log(InternalString.ClassName + " : " + GetGUID.GUIDByName(InternalString.ClassName) + " created.");
 

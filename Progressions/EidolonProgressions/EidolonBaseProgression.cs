@@ -24,10 +24,10 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
             entries.AddEntry(9, FeatureRefs.Multiattack.Cast<BlueprintFeatureBaseReference>().Reference);
             entries.AddEntry(14, FeatureRefs.ImprovedEvasion.Cast<BlueprintFeatureBaseReference>().Reference);
 
-            ProgressionConfigurator.New(InternalString.Progression, GetGUID.EidolonBaseProgression)
+            ProgressionConfigurator.New(InternalString.Progression, GetGUID.GUIDByName("EidolonBaseProgression"))
                 .CopyFrom(ProgressionRefs.DruidAnimalCompanionProgression, c => c is null)
                 .SetLevelEntries(entries)
-                .SetClasses(GetGUID.SummonerClass)
+                .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                 .SetUIGroups(new())
                 .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { })
                 .Configure();

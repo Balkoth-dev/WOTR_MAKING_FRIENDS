@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateBondedSensesFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.SummonerBondedSensesFeature)
+            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName("SummonerBondedSensesFeature"))
                 .CopyFrom(FeatureRefs.PossessedShamanSharedSkillPerception.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)

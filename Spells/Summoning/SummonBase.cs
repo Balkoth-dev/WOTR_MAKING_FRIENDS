@@ -38,97 +38,97 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             {
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterIBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterIBase"),
                     name = "SummonerSummonMonsterIBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterISingle.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterISingle.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,1 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),1 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterIIBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterIIBase"),
                     name = "SummonerSummonMonsterIIBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIIBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterIIBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,2 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),2 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterIIIBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterIIIBase"),
                     name = "SummonerSummonMonsterIIIBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIIIBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterIIIBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,3 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),3 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterIVBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterIVBase"),
                     name = "SummonerSummonMonsterIVBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIVBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIVBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterIVBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,4 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),4 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterVBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterVBase"),
                     name = "SummonerSummonMonsterVBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterVBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,5 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),5 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterVIBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterVIBase"),
                     name = "SummonerSummonMonsterVIBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVIBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterVIBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,6 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),6 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterVIIBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterVIIBase"),
                     name = "SummonerSummonMonsterVIIBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVIIBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterVIIBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,7 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),7 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterVIIIBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterVIIIBase"),
                     name = "SummonerSummonMonsterVIIIBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterVIIIBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterVIIIBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterVIIIBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,8 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),8 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonerSummonMonsterIXBase,
+                    guid = GetGUID.GUIDByName("SummonerSummonMonsterIXBase"),
                     name = "SummonerSummonMonsterIXBase",
                     localizationDuration = Duration.MinutePerLevel,
                     m_DisplayName = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_DisplayName,
                     m_Description = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_Description,
                     m_icon = AbilityRefs.SummonMonsterIXBase.Reference.Get().m_Icon,
-                    spellListComponents = new() { {GetGUID.SummonerSecondSpellbookSpellList,9 } }
+                    spellListComponents = new() { {GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"),9 } }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonMinorMonsterBase,
+                    guid = GetGUID.GUIDByName("SummonMinorMonsterBase"),
                     name = "SummonMinorMonsterBase",
                     localizationDuration = Duration.RoundPerLevel,
                     isFullRound = true,
@@ -145,12 +145,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
-                        { GetGUID.SummonerSpellbookSpellList, 1 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 1 },
                     }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonDraconicAllyBase,
+                    guid = GetGUID.GUIDByName("SummonDraconicAllyBase"),
                     name = "SummonDraconicAllyBase",
                     localizationDuration = Duration.RoundPerLevel,
                     isFullRound = true,
@@ -163,12 +163,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.PaladinClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 3 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 3 },
-                        { GetGUID.SummonerSpellbookSpellList, 3 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 3 },
                     }
                 },
                 new SummonAbilityBase()
                 {
-                    guid = GetGUID.SummonLesserDemonBase,
+                    guid = GetGUID.GUIDByName("SummonLesserDemonBase"),
                     name = "SummonLesserDemonBase",
                     localizationDuration = Duration.RoundPerLevel,
                     isFullRound = true,
@@ -183,7 +183,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                         { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 5 },
                         { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 5 },
-                        { GetGUID.SummonerSpellbookSpellList, 4 },
+                        { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 },
                     }
                 }
             };

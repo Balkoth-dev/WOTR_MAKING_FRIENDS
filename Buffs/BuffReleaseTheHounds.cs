@@ -37,14 +37,14 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                       failed: ActionsBuilder.New().KnockdownTarget()).Build()
                             )).Build();
 
-            BlueprintBuff damageBuff = BuffConfigurator.New("ReleaseTheHoundsDamageBuff", GetGUID.ReleaseTheHoundsDamageBuff)
+            BlueprintBuff damageBuff = BuffConfigurator.New("ReleaseTheHoundsDamageBuff", GetGUID.GUIDByName("ReleaseTheHoundsDamageBuff"))
                 .AddNewRoundTrigger(newRoundActions: conditionalDamage)
                 .SetStacking(StackingType.Rank)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .AddContextRankConfig(component: ContextRankConfigs.BuffRank(GetGUID.ReleaseTheHoundsDamageBuff, min: 20))
+                .AddContextRankConfig(component: ContextRankConfigs.BuffRank(GetGUID.GUIDByName("ReleaseTheHoundsDamageBuff"), min: 20))
                 .Configure();
 
-            BlueprintAbilityAreaEffect area = AbilityAreaEffectConfigurator.New("ReleaseTheHoundsDamageAreaEffect", GetGUID.ReleaseTheHoundsDamageAreaEffect)
+            BlueprintAbilityAreaEffect area = AbilityAreaEffectConfigurator.New("ReleaseTheHoundsDamageAreaEffect", GetGUID.GUIDByName("ReleaseTheHoundsDamageAreaEffect"))
                 .SetAffectEnemies(true)
                 .SetTargetType(BlueprintAbilityAreaEffect.TargetType.Any)
                 .SetSize(1.Feet())
@@ -55,7 +55,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 )
                 .Configure();
 
-            BuffConfigurator.New("ReleaseTheHoundsDamageAreaBuff", GetGUID.ReleaseTheHoundsDamageAreaBuff)
+            BuffConfigurator.New("ReleaseTheHoundsDamageAreaBuff", GetGUID.GUIDByName("ReleaseTheHoundsDamageAreaBuff"))
                 .AddAreaEffect(areaEffect: area)
                 .SetFxOnStart(iceBody.GetComponent<AbilitySpawnFx>().PrefabLink)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })

@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             internal static LocalizedString OverstimulateSpellName = Helpers.ObtainString(OverstimulateSpell + ".Name");
             internal static LocalizedString OverstimulateSpellDescription = Helpers.ObtainString(OverstimulateSpell + ".Description");
         }
-        internal static BlueprintBuffReference overstimulateBuff = BlueprintTool.Get<BlueprintBuff>(GetGUID.OverstimulateBuff).ToReference<BlueprintBuffReference>();
+        internal static BlueprintBuffReference overstimulateBuff = BlueprintTool.Get<BlueprintBuff>(GetGUID.GUIDByName("OverstimulateBuff")).ToReference<BlueprintBuffReference>();
 
         private static Dictionary<string, int> overstimulateSpellListComponents = new()
         {
@@ -38,11 +38,11 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             { CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 2 },
             { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 2 },
             { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 2 },
-            { GetGUID.SummonerSpellbookSpellList, 2 }
+            { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 2 }
         };
         public static void CreateOverstimulate()
         {
-            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.OverstimulateSpell, GetGUID.OverstimulateSpell)
+            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.OverstimulateSpell, GetGUID.GUIDByName("OverstimulateSpell"))
                 .CopyFrom(AbilityRefs.Rage, c => c is null)
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddAbilityEffectRunAction(

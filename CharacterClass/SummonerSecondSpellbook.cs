@@ -34,7 +34,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellSlotsTable()
         {
-            SpellsTableConfigurator.New(InternalString.SummonMonsterSpellbookName + "SpellsPerDayTable", GetGUID.SummonerSecondSpellbookSpellsPerDay)
+            SpellsTableConfigurator.New(InternalString.SummonMonsterSpellbookName + "SpellsPerDayTable", GetGUID.GUIDByName("SummonerSecondSpellbookSpellsPerDay"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,3),
@@ -63,7 +63,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellsKnownTable()
         {
-            SpellsTableConfigurator.New(InternalString.SummonMonsterSpellbook + ".SpellKnownTable", GetGUID.SummonerSecondSpellbookSpellsKnown)
+            SpellsTableConfigurator.New(InternalString.SummonMonsterSpellbook + ".SpellKnownTable", GetGUID.GUIDByName("SummonerSecondSpellbookSpellsKnown"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,1),
@@ -176,7 +176,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void CreateSpellList()
         {
-            SpellListConfigurator.New(InternalString.SummonMonsterSpellbook + ".SpellList", GetGUID.SummonerSecondSpellbookSpellList)
+            SpellListConfigurator.New(InternalString.SummonMonsterSpellbook + ".SpellList", GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"))
                 .AddToSpellsByLevel(Create0thLevelSpells(),
                 Create1stLevelSpells(),
                 Create2ndLevelSpells(),
@@ -195,12 +195,12 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             ConfigureSpellSlotsTable();
             ConfigureSpellsKnownTable();
             CreateSpellList();
-            return SpellbookConfigurator.New(InternalString.SummonMonsterSpellbook, GetGUID.SummonerSecondSpellbookSpellBook)
+            return SpellbookConfigurator.New(InternalString.SummonMonsterSpellbook, GetGUID.GUIDByName("SummonerSecondSpellbookSpellBook"))
                 .SetName(InternalString.SummonMonsterSpellbookName)
-                .SetCharacterClass(GetGUID.SummonerClass)
-                .SetSpellsPerDay(GetGUID.SummonerSecondSpellbookSpellsPerDay)
-                .SetSpellsKnown(GetGUID.SummonerSecondSpellbookSpellsKnown)
-                .SetSpellList(GetGUID.SummonerSecondSpellbookSpellList)
+                .SetCharacterClass(GetGUID.GUIDByName("SummonerClass"))
+                .SetSpellsPerDay(GetGUID.GUIDByName("SummonerSecondSpellbookSpellsPerDay"))
+                .SetSpellsKnown(GetGUID.GUIDByName("SummonerSecondSpellbookSpellsKnown"))
+                .SetSpellList(GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"))
                 .SetCastingAttribute(Kingmaker.EntitySystem.Stats.StatType.Charisma)
                 .SetIsMythic(false)
                 .SetSpontaneous(true)
@@ -216,11 +216,11 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             CreateSpellBook();
 
-            return FeatureConfigurator.New(InternalString.SummonMonsterSpellbookFeat, GetGUID.SummonerSecondSpellbookFeat)
+            return FeatureConfigurator.New(InternalString.SummonMonsterSpellbookFeat, GetGUID.GUIDByName("SummonerSecondSpellbookFeat"))
                 .SetDisplayName(InternalString.SummonMonsterSpellbookFeatName)
                 .SetDescription(InternalString.SummonMonsterSpellbookFeatDescription)
-                .AddSpellbook(ContextValues.Rank(), spellbook: GetGUID.SummonerSecondSpellbookSpellBook)
-                .AddContextRankConfig(ContextRankConfigs.ClassLevel(new string[] { BlueprintTool.Get<BlueprintCharacterClass>(GetGUID.SummonerClass).ToString() }, false, Kingmaker.Enums.AbilityRankType.Default, 20, 1))
+                .AddSpellbook(ContextValues.Rank(), spellbook: GetGUID.GUIDByName("SummonerSecondSpellbookSpellBook"))
+                .AddContextRankConfig(ContextRankConfigs.ClassLevel(new string[] { BlueprintTool.Get<BlueprintCharacterClass>(GetGUID.GUIDByName("SummonerClass")).ToString() }, false, Kingmaker.Enums.AbilityRankType.Default, 20, 1))
                 .SetIsClassFeature(true)
                 .Configure();
         }

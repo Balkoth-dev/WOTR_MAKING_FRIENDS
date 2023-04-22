@@ -24,23 +24,23 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         private static void CreateShieldAllyFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.SummonerShieldAllyFeature)
+            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
                 .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
-                .AddFeatureToPet(GetGUID.SummonerShieldAllyAuraFeature, PetTypeExtensions.Eidolon)
+                .AddFeatureToPet(GetGUID.GUIDByName("SummonerShieldAllyAuraFeature"), PetTypeExtensions.Eidolon)
                 .Configure();
 
         }
         private static void CreateShieldAllyAuraFeature()
         {
-            FeatureConfigurator.New(InternalString.AuraFeature, GetGUID.SummonerShieldAllyAuraFeature)
+            FeatureConfigurator.New(InternalString.AuraFeature, GetGUID.GUIDByName(InternalString.AuraFeature))
                 .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
-                .AddAuraFeatureComponent(GetGUID.SummonerShieldAllyAuraBuff)
+                .AddAuraFeatureComponent(GetGUID.GUIDByName("SummonerShieldAllyAuraBuff"))
                 .Configure();
         }
     }

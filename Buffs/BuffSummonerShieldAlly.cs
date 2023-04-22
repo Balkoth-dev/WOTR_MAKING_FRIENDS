@@ -35,20 +35,20 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyAuraBuff()
         {
-            BuffConfigurator.New(InternalString.AuraBuff, GetGUID.SummonerShieldAllyAuraBuff)
+            BuffConfigurator.New(InternalString.AuraBuff, GetGUID.GUIDByName("SummonerShieldAllyAuraBuff"))
                 .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
-                .AddAreaEffect(GetGUID.SummonerShieldAllyAuraAreaEffectBuff)
+                .AddAreaEffect(GetGUID.GUIDByName("SummonerShieldAllyAuraAreaEffectBuff"))
                 .SetStacking(StackingType.Ignore)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
                 .Configure();
         }
         private static void CreateSummonerShieldAllyAuraAreaEffectBuff()
         {
-            AbilityAreaEffectConfigurator.New(InternalString.AreaEffectBuff, GetGUID.SummonerShieldAllyAuraAreaEffectBuff)
+            AbilityAreaEffectConfigurator.New(InternalString.AreaEffectBuff, GetGUID.GUIDByName("SummonerShieldAllyAuraAreaEffectBuff"))
                 .CopyFrom(AbilityAreaEffectRefs.MartyrAuraOfHealthArea, c => c is null)
-                .AddAbilityAreaEffectBuff(GetGUID.SummonerShieldAllyConditionalBuff)
+                .AddAbilityAreaEffectBuff(GetGUID.GUIDByName("SummonerShieldAllyConditionalBuff"))
                 .SetSize(7.Feet())
                 .Configure();
         }
@@ -60,12 +60,12 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             var actionsAddBuffBuilder = ActionsBuilder.New()
                                     .Conditional(conditionBuilder,
                                                 ActionsBuilder.New()
-                                                .ApplyBuffPermanent(GetGUID.SummonerShieldAllyBuff, isNotDispelable: true))
+                                                .ApplyBuffPermanent(GetGUID.GUIDByName("SummonerShieldAllyBuff"), isNotDispelable: true))
                                     .Build();
 
-            var actionsRemoveBuffBuilder = ActionsBuilder.New().RemoveBuff(GetGUID.SummonerShieldAllyBuff).Build();
+            var actionsRemoveBuffBuilder = ActionsBuilder.New().RemoveBuff(GetGUID.GUIDByName("SummonerShieldAllyBuff")).Build();
 
-            BuffConfigurator.New(InternalString.ConditionalBuff, GetGUID.SummonerShieldAllyConditionalBuff)
+            BuffConfigurator.New(InternalString.ConditionalBuff, GetGUID.GUIDByName("SummonerShieldAllyConditionalBuff"))
                 .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
@@ -76,7 +76,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyBuff()
         {
-            BuffConfigurator.New(InternalString.Buff, GetGUID.SummonerShieldAllyBuff)
+            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName("SummonerShieldAllyBuff"))
                 .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)

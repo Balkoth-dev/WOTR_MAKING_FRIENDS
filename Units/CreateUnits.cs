@@ -11,6 +11,7 @@ using Kingmaker.Localization;
 using Kingmaker.Utility;
 using System;
 using UnityEngine;
+using WOTR_MAKING_FRIENDS.Classes.EidolonClasses;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
 using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
@@ -95,10 +96,10 @@ namespace WOTR_MAKING_FRIENDS.Units
                             .SetAddFacts(new Blueprint<BlueprintUnitFactReference>[] {
                                          FeatureRefs.OutsiderType.Cast<BlueprintUnitFactReference>().Reference,
                                          FeatureRefs.HeadLocatorFeature.Cast<BlueprintUnitFactReference>().Reference,
-                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.EidolonSubtypeFeature),
+                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonSubtypeFeature")),
                                          BlueprintTool.GetRef<BlueprintUnitFactReference>(featureBaseForm),
                                          BlueprintTool.GetRef<BlueprintUnitFactReference>(featureSubtype) })
-                            .AddClassLevels(null, BlueprintTool.GetRef<BlueprintCharacterClassReference>(GetGUID.EidolonBaseClass), null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception }); ;
+                            .AddClassLevels(null, BlueprintTool.GetRef<BlueprintCharacterClassReference>(GetGUID.GUIDByName("EidolonBaseClass")), null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception }); ;
 
             if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Abberant)
             {
@@ -160,12 +161,12 @@ namespace WOTR_MAKING_FRIENDS.Units
 
         private static void AdjustMeladaemon()
         {
-            UnitConfigurator.For(GetGUID.MeladaemonSummon)
+            UnitConfigurator.For(GetGUID.GUIDByName("MeladaemonSummon"))
                 .AddChangeUnitSize(null, ComponentMerge.Replace, Size.Large, 1, ChangeType.Value)
                 .RemoveComponents(components => components is AddClassLevels)
                 .AddClassLevels(null, CharacterClassRefs.OutsiderClass.Cast<BlueprintCharacterClassReference>().Reference, null, 14, StatType.Unknown, null, StatType.Constitution)
                 .SetAlignment(Alignment.NeutralEvil)
-                .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.MeladaemonBrain))
+                .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.GUIDByName("MeladaemonBrain")))
                 .SetBody(new BlueprintUnit.UnitBody()
                 {
                     PrimaryHand = ItemWeaponRefs.Bite2d6.Cast<BlueprintItemWeaponReference>().Reference,
@@ -178,16 +179,16 @@ namespace WOTR_MAKING_FRIENDS.Units
 
         private static void AdjustReleaseTheHoundsWolf()
         {
-            UnitConfigurator.For(GetGUID.ReleaseTheHoundsWolf)
+            UnitConfigurator.For(GetGUID.GUIDByName("ReleaseTheHoundsWolf"))
                     .RemoveComponents(components => components is AddClassLevels)
                     .AddClassLevels(null, CharacterClassRefs.AnimalClass.Cast<BlueprintCharacterClassReference>().Reference, null, 6, StatType.Unknown, null, StatType.Constitution)
-                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.StampedeHorseBrain))
+                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.GUIDByName("StampedeHorseBrain")))
                     .Configure();
         }
 
         internal static void AdjustCacodaemon()
         {
-            UnitConfigurator.For(GetGUID.CacodaemonSummon)
+            UnitConfigurator.For(GetGUID.GUIDByName("CacodaemonSummon"))
                 .AddChangeUnitSize(null, ComponentMerge.Replace, Size.Fine, -2, ChangeType.Value)
                 .RemoveComponents(components => components is AddClassLevels)
                 .AddClassLevels(null, CharacterClassRefs.OutsiderClass.Cast<BlueprintCharacterClassReference>().Reference, null, 3, StatType.Unknown, null, StatType.Constitution)
@@ -201,13 +202,13 @@ namespace WOTR_MAKING_FRIENDS.Units
         {
             string[] draconicAllies =
                 {
-                    GetGUID.DraconicAllySummonBlack,
-                    GetGUID.DraconicAllySummonBlue,
-                    GetGUID.DraconicAllySummonBrass,
-                    GetGUID.DraconicAllySummonGreen,
-                    GetGUID.DraconicAllySummonRed,
-                    GetGUID.DraconicAllySummonSilver,
-                    GetGUID.DraconicAllySummonWhite
+                    GetGUID.GUIDByName("DraconicAllySummonBlack"),
+                    GetGUID.GUIDByName("DraconicAllySummonBlue"),
+                    GetGUID.GUIDByName("DraconicAllySummonBrass"),
+                    GetGUID.GUIDByName("DraconicAllySummonGreen"),
+                    GetGUID.GUIDByName("DraconicAllySummonRed"),
+                    GetGUID.GUIDByName("DraconicAllySummonSilver"),
+                    GetGUID.GUIDByName("DraconicAllySummonWhite")
                 };
 
             foreach (string guid in draconicAllies)
@@ -216,15 +217,15 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .RemoveComponents(components => components is AddClassLevels)
                     .AddClassLevels(null, CharacterClassRefs.DragonClass.Cast<BlueprintCharacterClassReference>().Reference, false, 2, StatType.Unknown, null, StatType.Constitution)
                     .SetAlignment(Alignment.NeutralGood)
-                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.DraconicAllyBrain))
+                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.GUIDByName("DraconicAllyBrain")))
                     .Configure();
             }
         }
 
         private static void AdjustStampedeSummonHorse()
         {
-            UnitConfigurator.For(GetGUID.StampedeSummonHorse)
-                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.StampedeHorseBrain))
+            UnitConfigurator.For(GetGUID.GUIDByName("StampedeSummonHorse"))
+                    .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.GUIDByName("StampedeHorseBrain")))
                     .Configure();
         }
     }

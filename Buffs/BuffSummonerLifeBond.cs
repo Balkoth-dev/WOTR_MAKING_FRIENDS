@@ -18,7 +18,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         public static void CreateSummonerLifeBondBuff()
         {
-            BuffConfigurator.New(InternalString.Buff, GetGUID.SummonerLifeBondBuff)
+            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName("SummonerLifeBondBuff"))
                 .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)

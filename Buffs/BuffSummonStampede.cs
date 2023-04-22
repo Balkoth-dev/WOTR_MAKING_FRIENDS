@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
     {
         public static void CreateStampedeTrampleDamageImmunityBuff()
         {
-            BuffConfigurator.New("StampedeTrampleDamageImmunityBuff", GetGUID.StampedeTrampleDamageImmunityBuff)
+            BuffConfigurator.New("StampedeTrampleDamageImmunityBuff", GetGUID.GUIDByName("StampedeTrampleDamageImmunityBuff"))
                 .Configure();
         }
 
@@ -30,17 +30,17 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         {
             Kingmaker.ElementsSystem.ActionList conditionalDamage = ActionsBuilder.New()
                 .Conditional(ConditionsBuilder.New()
-                            .HasFact(BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.StampedeTrampleDamageImmunityBuff)),
+                            .HasFact(BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("StampedeTrampleDamageImmunityBuff"))),
                             null,
                             ActionsBuilder.New().DealDamage(damageType: DamageTypes.Physical(form: PhysicalDamageForm.Bludgeoning), value: ContextDice.Value(DiceType.D6, diceCount: ContextValues.Constant(4), bonus: 9))
                             ).Build();
 
-            BlueprintBuff damageBuff = BuffConfigurator.New("StampedeTrampleDamageBuff", GetGUID.StampedeTrampleDamageBuff)
+            BlueprintBuff damageBuff = BuffConfigurator.New("StampedeTrampleDamageBuff", GetGUID.GUIDByName("StampedeTrampleDamageBuff"))
                 .AddNewRoundTrigger(newRoundActions: conditionalDamage)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
                 .Configure();
 
-            BlueprintAbilityAreaEffect area = AbilityAreaEffectConfigurator.New("StampedeTrampleDamageAreaEffect", GetGUID.StampedeTrampleDamageAreaEffect)
+            BlueprintAbilityAreaEffect area = AbilityAreaEffectConfigurator.New("StampedeTrampleDamageAreaEffect", GetGUID.GUIDByName("StampedeTrampleDamageAreaEffect"))
                 .SetAffectEnemies(true)
                 .SetTargetType(BlueprintAbilityAreaEffect.TargetType.Any)
                 .SetSize(2.Feet())
@@ -50,7 +50,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                         unitExit: ActionsBuilder.New().RemoveBuff(buff: damageBuff).Build()
                 ).Configure();
 
-            BuffConfigurator.New("StampedeTrampleDamageAreaBuff", GetGUID.StampedeTrampleDamageAreaBuff)
+            BuffConfigurator.New("StampedeTrampleDamageAreaBuff", GetGUID.GUIDByName("StampedeTrampleDamageAreaBuff"))
                 .AddAreaEffect(areaEffect: area)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
                 .Configure();

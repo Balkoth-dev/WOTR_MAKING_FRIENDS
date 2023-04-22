@@ -23,22 +23,22 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void DraconicAllyBrain()
         {
-            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.DraconicAllyBrain).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.GUIDByName("DraconicAllyBrain")).Configure();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 attackAiAction,
-                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.FormOfTheDragonIGoldAiAction),
-                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.FormOfTheDragonIBlackAiAction),
-                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.FormOfTheDragonIBlueAiAction),
-                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.FormOfTheDragonIBrassAiAction),
-                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.FormOfTheDragonIGreenAiAction),
-                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.FormOfTheDragonISilverAiAction)
+                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.GUIDByName("FormOfTheDragonIGoldAiAction")),
+                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.GUIDByName("FormOfTheDragonIBlackAiAction")),
+                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.GUIDByName("FormOfTheDragonIBlueAiAction")),
+                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.GUIDByName("FormOfTheDragonIBrassAiAction")),
+                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.GUIDByName("FormOfTheDragonIGreenAiAction")),
+                BlueprintTool.GetRef<BlueprintAiActionReference>(GetGUID.GUIDByName("FormOfTheDragonISilverAiAction"))
             };
         }
 
         private static void StampedeHorseBrain()
         {
-            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("StampedeHorseBrain", GetGUID.StampedeHorseBrain).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("StampedeHorseBrain", GetGUID.GUIDByName("StampedeHorseBrain")).Configure();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 followEnemyAiAction
@@ -47,7 +47,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void MeladaemonBrain()
         {
-            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("MeladaemonBrain", GetGUID.MeladaemonBrain).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("MeladaemonBrain", GetGUID.GUIDByName("MeladaemonBrain")).Configure();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 attackAiAction,

@@ -21,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateEidolonRankFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.EidolonRankFeature)
+            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
                 .CopyFrom(FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)

@@ -21,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 
         private static void CreateDummyBuff()
         {
-            BuffConfigurator.New("dummyBuff", GetGUID.DummyBuff).Configure();
+            BuffConfigurator.New("dummyBuff", GetGUID.GUIDByName("DummyBuff")).Configure();
         }
     }
 }

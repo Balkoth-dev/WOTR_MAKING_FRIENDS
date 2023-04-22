@@ -34,7 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
                 m_DisappearProjectile = ProjectileRefs.DimensionDoor00_CasterDisappear.Cast<BlueprintProjectileReference>().Reference,
             };
 
-            BlueprintAbility ability = AbilityConfigurator.New(InternalString.Ability, GetGUID.SummonerMakersCallAbility)
+            BlueprintAbility ability = AbilityConfigurator.New(InternalString.Ability, GetGUID.GUIDByName("SummonerMakersCallAbility"))
                 .CopyFrom(AbilityRefs.ArcanistExploitDimensionalSlideAbility, c => c is null)
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
@@ -45,7 +45,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
                 .SetRange(AbilityRange.Long)
                 .SetIcon(FeatureRefs.DimensionalRideFeature.Reference.Get().m_Icon)
                 .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Standard)
-                .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.SummonerMakersCallResource))
+                .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerMakersCallResource")))
                 .Configure();
 
             ability.AddComponents(abilityCustomDimensionDoorToCaster);

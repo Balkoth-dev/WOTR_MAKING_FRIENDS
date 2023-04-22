@@ -34,7 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
         }
         internal static void CreateBaseFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.EidolonSubtypeFeature)
+            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName("EidolonSubtypeFeature"))
                                .SetDisplayName(InternalString.Name)
                                .SetDescription(InternalString.Description)
                                .SetHideInUI(true)
@@ -44,7 +44,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                .SetIsClassFeature(true)
                                .Configure();
 
-            Main.Log("EidolonSubtypeFeature : " + GetGUID.EidolonSubtypeFeature + " created.");
+            Main.Log("EidolonSubtypeFeature : " + GetGUID.GUIDByName("EidolonSubtypeFeature") + " created.");
 
         }
         internal static void CreateEnumFeature(string name, Enum enumType)

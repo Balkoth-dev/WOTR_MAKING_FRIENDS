@@ -17,7 +17,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         public static void CreateOverstimulateBuff()
         {
-            BuffConfigurator.New(InternalString.OverstimulateBuff, GetGUID.OverstimulateBuff)
+            BuffConfigurator.New(InternalString.OverstimulateBuff, GetGUID.GUIDByName("OverstimulateBuff"))
                 .CopyFrom(BuffRefs.RageBuff, c => c is null)
                 .SetDisplayName(InternalString.OverstimulateSpellName)
                 .SetDescription(InternalString.OverstimulateSpellDescription)
