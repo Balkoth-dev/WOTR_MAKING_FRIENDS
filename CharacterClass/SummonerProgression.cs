@@ -2,6 +2,7 @@
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints.Classes;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
@@ -35,7 +36,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 .SetIsClassFeature(false)
                 .SetForAllOtherClasses(false)
                 .SetLevelEntries(entries)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

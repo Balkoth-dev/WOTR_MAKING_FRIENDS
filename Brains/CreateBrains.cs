@@ -3,6 +3,7 @@ using BlueprintCore.Utils;
 using Kingmaker.AI.Blueprints;
 using Kingmaker.Blueprints;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Brains
 {
@@ -23,7 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void DraconicAllyBrain()
         {
-            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.GUIDByName("DraconicAllyBrain")).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("DraconicAllyBrain", GetGUID.GUIDByName("DraconicAllyBrain")).ConfigureWithLogging();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 attackAiAction,
@@ -38,7 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void StampedeHorseBrain()
         {
-            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("StampedeHorseBrain", GetGUID.GUIDByName("StampedeHorseBrain")).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("StampedeHorseBrain", GetGUID.GUIDByName("StampedeHorseBrain")).ConfigureWithLogging();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 followEnemyAiAction
@@ -47,7 +48,7 @@ namespace WOTR_MAKING_FRIENDS.Brains
 
         private static void MeladaemonBrain()
         {
-            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("MeladaemonBrain", GetGUID.GUIDByName("MeladaemonBrain")).Configure();
+            BlueprintBrain brain = BlueprintConfigurator<BlueprintBrain>.New("MeladaemonBrain", GetGUID.GUIDByName("MeladaemonBrain")).ConfigureWithLogging();
             brain.m_Actions = new BlueprintAiActionReference[]
             {
                 attackAiAction,

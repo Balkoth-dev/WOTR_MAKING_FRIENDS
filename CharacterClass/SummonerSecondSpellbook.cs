@@ -58,7 +58,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                         CreateSpellLevelEntry(0,3,3,3,3,3,3,3,3,3),
                         CreateSpellLevelEntry(0,3,3,3,3,3,3,3,3,3)
                 })
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static void ConfigureSpellsKnownTable()
@@ -86,7 +86,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                         CreateSpellLevelEntry(0,1,1,1,1,1,1,1,1,1),
                         CreateSpellLevelEntry(0,1,1,1,1,1,1,1,1,1)
                     })
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static SpellLevelList Create0thLevelSpells()
@@ -187,7 +187,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 Create7thLevelSpells(),
                 Create8thLevelSpells(),
                 Create9thLevelSpells())
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static BlueprintSpellbook CreateSpellBook()
@@ -209,7 +209,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 .SetCanCopyScrolls(false)
                 .SetAllSpellsKnown(true)
                 .SetCasterLevelModifier(0)
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static BlueprintFeature Initialize()
@@ -222,7 +222,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 .AddSpellbook(ContextValues.Rank(), spellbook: GetGUID.GUIDByName("SummonerSecondSpellbookSpellBook"))
                 .AddContextRankConfig(ContextRankConfigs.ClassLevel(new string[] { BlueprintTool.Get<BlueprintCharacterClass>(GetGUID.GUIDByName("SummonerClass")).ToString() }, false, Kingmaker.Enums.AbilityRankType.Default, 20, 1))
                 .SetIsClassFeature(true)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

@@ -40,7 +40,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddBuffActions(applyLifeLink, disableLifeLink, applyLifeLink)
                 .SetStacking(StackingType.Ignore)
                 .AddComponent<LifeLinkEidolon>()
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

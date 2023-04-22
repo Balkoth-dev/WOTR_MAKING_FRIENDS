@@ -15,6 +15,7 @@ using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.Utility;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
@@ -23,7 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         public static void CreateStampedeTrampleDamageImmunityBuff()
         {
             BuffConfigurator.New("StampedeTrampleDamageImmunityBuff", GetGUID.GUIDByName("StampedeTrampleDamageImmunityBuff"))
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static void CreateStampedeAttackBuff()
@@ -38,7 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
             BlueprintBuff damageBuff = BuffConfigurator.New("StampedeTrampleDamageBuff", GetGUID.GUIDByName("StampedeTrampleDamageBuff"))
                 .AddNewRoundTrigger(newRoundActions: conditionalDamage)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
 
             BlueprintAbilityAreaEffect area = AbilityAreaEffectConfigurator.New("StampedeTrampleDamageAreaEffect", GetGUID.GUIDByName("StampedeTrampleDamageAreaEffect"))
                 .SetAffectEnemies(true)
@@ -48,12 +49,12 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddAbilityAreaEffectRunAction(
                         unitEnter: ActionsBuilder.New().ApplyBuff(buff: damageBuff, ContextDuration.Fixed(1, rate: DurationRate.Days)).Build(),
                         unitExit: ActionsBuilder.New().RemoveBuff(buff: damageBuff).Build()
-                ).Configure();
+                ).ConfigureWithLogging();
 
             BuffConfigurator.New("StampedeTrampleDamageAreaBuff", GetGUID.GUIDByName("StampedeTrampleDamageAreaBuff"))
                 .AddAreaEffect(areaEffect: area)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

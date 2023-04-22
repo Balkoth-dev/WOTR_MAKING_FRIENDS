@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                 .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                 .SetUIGroups(new())
                 .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { })
-                .Configure();
+                .ConfigureWithLogging();
 
         }
     }

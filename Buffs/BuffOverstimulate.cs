@@ -23,7 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .SetDescription(InternalString.OverstimulateSpellDescription)
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddMechanicsFeature(Kingmaker.UnitLogic.FactLogic.AddMechanicsFeature.MechanicsFeatureType.Ferocity)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

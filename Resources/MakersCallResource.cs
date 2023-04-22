@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.References;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Resources
 {
@@ -12,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Resources
             AbilityResourceConfigurator.New("SummonerMakersCallResource", GetGUID.GUIDByName("SummonerMakersCallResource"))
                 .CopyFrom(AbilityResourceRefs.ItemBondResource, c => c is null)
                 .SetMaxAmount(maxAmount)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

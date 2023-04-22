@@ -157,7 +157,7 @@
   },
   {
     "Key": "wotr-making-friends.summonstampede.description",
-    "enGB": "This spell functions like summon monster, except it summons 1d4+4 horses. These horses do not attack enemies, but move about the battlefield.\nAny creatures caught in the herd’s path take 4d6+9 points of bludgeoning damage at the start of their turn as they are trampled beneath dozens of animals’ hooves."
+    "enGB": "This spell functions like summon monster, except it summons 1d4+4 horses. These horses do not attack enemies, but move about the battlefield.\nAny creatures caught in the herdï¿½s path take 4d6+9 points of bludgeoning damage at the start of their turn as they are trampled beneath dozens of animalsï¿½ hooves."
   },
   {
     "Key": "wotr-making-friends.summonreleasethehounds.name",
@@ -165,7 +165,7 @@
   },
   {
     "Key": "wotr-making-friends.summonreleasethehounds.description",
-    "enGB": "This spell functions like summon monster, except it summons 1d4+4 frost wolves. These wolves do not attack enemies, but move about the battlefield.\nAny enemies caught in the pack’s path take 3d6 points of cold damage at the start of their turn and may become prone (DC 20 Reflex)."
+    "enGB": "This spell functions like summon monster, except it summons 1d4+4 frost wolves. These wolves do not attack enemies, but move about the battlefield.\nAny enemies caught in the packï¿½s path take 3d6 points of cold damage at the start of their turn and may become prone (DC 20 Reflex)."
   },
   {
     "Key": "wotr-making-friends.summonerinyes.name",
@@ -189,7 +189,7 @@
   },
   {
     "Key": "wotr-making-friends.blacktentaclesspell.description",
-    "enGB": "Every creature within the area of the spell is the target of a combat maneuver check made to grapple each round at the beginning of your turn, including the round that black tentacles is cast. Creatures that enter the area of effect are also automatically attacked. The tentacles do not provoke attacks of opportunity. When determining the tentacles’ CMB, the tentacles use your caster level as their base attack bonus and receive a +4 bonus due to their Strength and a +1 size bonus. Roll only once for the entire spell effect each round and apply the result to all creatures in the area of effect.\nIf the tentacles succeed in grappling a foe, that foe takes 1d6+4 points of damage and gains the grappled condition. Grappled opponents cannot move without first breaking the grapple. All other movement is prohibited unless the creature breaks the grapple first. The black tentacles spell receives a +5 bonus on grapple checks made against opponents it is already grappling, but cannot move foes or pin foes. Each round that black tentacles succeeds on a grapple check, it deals an additional 1d6+4 points of damage. The CMD of black tentacles, for the purposes of escaping the grapple, is equal to 10 + its CMB."
+    "enGB": "Every creature within the area of the spell is the target of a combat maneuver check made to grapple each round at the beginning of your turn, including the round that black tentacles is cast. Creatures that enter the area of effect are also automatically attacked. The tentacles do not provoke attacks of opportunity. When determining the tentaclesï¿½ CMB, the tentacles use your caster level as their base attack bonus and receive a +4 bonus due to their Strength and a +1 size bonus. Roll only once for the entire spell effect each round and apply the result to all creatures in the area of effect.\nIf the tentacles succeed in grappling a foe, that foe takes 1d6+4 points of damage and gains the grappled condition. Grappled opponents cannot move without first breaking the grapple. All other movement is prohibited unless the creature breaks the grapple first. The black tentacles spell receives a +5 bonus on grapple checks made against opponents it is already grappling, but cannot move foes or pin foes. Each round that black tentacles succeeds on a grapple check, it deals an additional 1d6+4 points of damage. The CMD of black tentacles, for the purposes of escaping the grapple, is equal to 10 + its CMB."
   },
   {
     "Key": "wotr-making-friends.infernalhealingspell.name",
@@ -197,7 +197,7 @@
   },
   {
     "Key": "wotr-making-friends.infernalhealingspell.description",
-    "enGB": "You anoint a wounded creature with devil’s blood or unholy water, giving it fast healing 1."
+    "enGB": "You anoint a wounded creature with devilï¿½s blood or unholy water, giving it fast healing 1."
   },
   {
     "Key": "wotr-making-friends.greaterinfernalhealingspell.name",
@@ -205,7 +205,7 @@
   },
   {
     "Key": "wotr-making-friends.greaterinfernalhealingspell.description",
-    "enGB": "You anoint a wounded creature with devil’s blood or unholy water, giving it fast healing 4."
+    "enGB": "You anoint a wounded creature with devilï¿½s blood or unholy water, giving it fast healing 4."
   },
   {
     "Key": "wotr-making-friends.overstimulatespell.name",

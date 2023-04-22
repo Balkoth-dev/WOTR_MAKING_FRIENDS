@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.SummonPools
 {
@@ -17,11 +18,11 @@ namespace WOTR_MAKING_FRIENDS.SummonPools
         }
         public static void CreateSummonerPool()
         {
-            SummonPoolConfigurator.New(InternalString.SummonerPool, GetGUID.GUIDByName("SummonerPool")).Configure();
+            SummonPoolConfigurator.New(InternalString.SummonerPool, GetGUID.GUIDByName("SummonerPool")).ConfigureWithLogging();
         }
         public static void CreateDraconicAllyPool()
         {
-            SummonPoolConfigurator.New(InternalString.DraconicAllyPool, GetGUID.GUIDByName("DraconicAllyPool")).Configure();
+            SummonPoolConfigurator.New(InternalString.DraconicAllyPool, GetGUID.GUIDByName("DraconicAllyPool")).ConfigureWithLogging();
         }
     }
 }

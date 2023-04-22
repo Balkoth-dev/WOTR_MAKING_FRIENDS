@@ -4,6 +4,7 @@ using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using System;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
 {
@@ -32,7 +33,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         }
                     }
 
-                    progression.Configure();
+                    progression.ConfigureWithLogging();
                 }
                 catch(Exception ex)
                 {

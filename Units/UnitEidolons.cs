@@ -21,7 +21,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
                     eidolonSubtype = EnumsEidolonSubtype.Elemental,
-                    size = Size.Medium
+                    size = Size.Medium,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAirElementalVariantFeature"))
+                                                  }
                 },
             #endregion
             #region EidolonFireElemental
@@ -33,7 +37,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
                     eidolonSubtype = EnumsEidolonSubtype.Elemental,
-                    size = Size.Medium
+                    size = Size.Medium,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonFireElementalVariantFeature"))
+                                                  }
                 },
             #endregion
             #region EidolonWaterElemental
@@ -45,7 +53,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
                     eidolonSubtype = EnumsEidolonSubtype.Elemental,
-                    size = Size.Medium
+                    size = Size.Medium,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonWaterElementalVariantFeature"))
+                                                  }
                 },
             #endregion
             #region EidolonEarthElemental
@@ -57,7 +69,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
                     eidolonSubtype = EnumsEidolonSubtype.Elemental,
-                    size = Size.Medium
+                    size = Size.Medium,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonEarthElementalVariantFeature"))
+                                                  }
                 }
             #endregion
         };

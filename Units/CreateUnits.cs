@@ -16,6 +16,9 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
 using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
+using WOTR_MAKING_FRIENDS.Utilities;
+using HarmonyLib;
+using System.Linq;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -73,8 +76,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     {
                         unitConfigured.SetAddFacts(newUnit.blueprintUnitFactReferences);
                     }
-                    unitConfigured.Configure();
-                    Main.Log(newUnit.Name + " : " + newUnit.Guid + " created.");
+                    unitConfigured.ConfigureWithLogging();
                 }
                 catch(Exception ex)
                 {
@@ -87,18 +89,30 @@ namespace WOTR_MAKING_FRIENDS.Units
         {
             var featureBaseForm = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonUnit.eidolonBaseForm) + "BaseFormFeature");
             var featureSubtype = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonUnit.eidolonSubtype) + "SubtypeFeature");
+
+            var newFacts = new Blueprint<BlueprintUnitFactReference>[] {
+                                         FeatureRefs.OutsiderType.Cast<BlueprintUnitFactReference>().Reference,
+                                         FeatureRefs.HeadLocatorFeature.Cast<BlueprintUnitFactReference>().Reference,
+                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonSubtypeFeature")),
+                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(featureBaseForm),
+                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(featureSubtype) };
+
+            if (eidolonUnit.blueprintUnitFactReferences != null)
+            {
+                eidolonUnit.blueprintUnitFactReferences = eidolonUnit.blueprintUnitFactReferences.Concat(newFacts).ToArray();
+            }
+            else
+            {
+                eidolonUnit.blueprintUnitFactReferences = newFacts;
+            }
+
             var eidolon = UnitConfigurator.For(eidolonUnit.Guid)
                             .RemoveComponents(components => components is not null)
                             .AddAllowDyingCondition()
                             .AddResurrectOnRest()
                             .SetBrain(characterBrain)
                             .SetBody(new BlueprintUnit.UnitBody() { })
-                            .SetAddFacts(new Blueprint<BlueprintUnitFactReference>[] {
-                                         FeatureRefs.OutsiderType.Cast<BlueprintUnitFactReference>().Reference,
-                                         FeatureRefs.HeadLocatorFeature.Cast<BlueprintUnitFactReference>().Reference,
-                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonSubtypeFeature")),
-                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(featureBaseForm),
-                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(featureSubtype) })
+                            .SetAddFacts(eidolonUnit.blueprintUnitFactReferences)
                             .AddClassLevels(null, BlueprintTool.GetRef<BlueprintCharacterClassReference>(GetGUID.GUIDByName("EidolonBaseClass")), null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception }); ;
 
             if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Abberant)
@@ -148,7 +162,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetSpeed(20.Feet());
             }
 
-            eidolon.Configure();
+            eidolon.ConfigureWithLogging();
         }
         internal static void AdjustSummons()
         {
@@ -174,7 +188,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                                              ItemWeaponRefs.Claw2d6.Cast<BlueprintItemWeaponReference>().Reference}
                 }
                     )
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         private static void AdjustReleaseTheHoundsWolf()
@@ -183,7 +197,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .RemoveComponents(components => components is AddClassLevels)
                     .AddClassLevels(null, CharacterClassRefs.AnimalClass.Cast<BlueprintCharacterClassReference>().Reference, null, 6, StatType.Unknown, null, StatType.Constitution)
                     .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.GUIDByName("StampedeHorseBrain")))
-                    .Configure();
+                    .ConfigureWithLogging();
         }
 
         internal static void AdjustCacodaemon()
@@ -196,7 +210,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                 .AddBuffOnEntityCreated(BuffRefs.FastHealing2.Cast<BlueprintBuffReference>().Reference)
                 .SetAlignment(Alignment.NeutralEvil)
                 .SetBody(new BlueprintUnit.UnitBody() { PrimaryHand = ItemWeaponRefs.Bite1d4.Cast<BlueprintItemWeaponReference>().Reference })
-                .Configure();
+                .ConfigureWithLogging();
         }
         internal static void AdjustDraconicAllies()
         {
@@ -218,7 +232,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .AddClassLevels(null, CharacterClassRefs.DragonClass.Cast<BlueprintCharacterClassReference>().Reference, false, 2, StatType.Unknown, null, StatType.Constitution)
                     .SetAlignment(Alignment.NeutralGood)
                     .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.GUIDByName("DraconicAllyBrain")))
-                    .Configure();
+                    .ConfigureWithLogging();
             }
         }
 
@@ -226,7 +240,7 @@ namespace WOTR_MAKING_FRIENDS.Units
         {
             UnitConfigurator.For(GetGUID.GUIDByName("StampedeSummonHorse"))
                     .SetBrain(BlueprintTool.GetRef<BlueprintBrainReference>(GetGUID.GUIDByName("StampedeHorseBrain")))
-                    .Configure();
+                    .ConfigureWithLogging();
         }
     }
 }

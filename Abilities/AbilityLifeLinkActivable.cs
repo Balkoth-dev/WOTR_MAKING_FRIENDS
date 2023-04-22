@@ -27,7 +27,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
                                           .SetDoNotTurnOffOnRest(false)
                                           .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeLink.png"))
                                           .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
-                                          .Configure();
+                                          .ConfigureWithLogging();
         }
     }
 }

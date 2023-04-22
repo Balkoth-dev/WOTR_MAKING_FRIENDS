@@ -37,7 +37,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                                                     .BreakFree(success: ActionsBuilder.New().RemoveSelf(), useCMB: true)
                                                     .Build())
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

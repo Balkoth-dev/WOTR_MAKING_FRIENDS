@@ -138,12 +138,14 @@
       <Assembly Include="$(OutputPath)\$(AssemblyName).dll" />
       <ModConfig Include="$(SolutionDir)\Output\Info.json" />
       <Assets Include="$(SolutionDir)\Output\Assets\**\*.*" />
+      <ModdedGUIDs Include="$(WrathPath)\Mods\$(MSBuildProjectName)\GUIDs\**\*.*" />
       <GUIDs Include="$(SolutionDir)\Output\GUIDs\**\*.*" />
     </ItemGroup>
 
     <Copy SourceFiles="@(Assembly)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
     <Copy SourceFiles="@(ModConfig)" DestinationFolder="$(WrathPath)\Mods\$(MSBuildProjectName)" />
     <Copy SourceFiles="@(Assets)" DestinationFiles="@(Assets->'$(WrathPath)\Mods\$(MSBuildProjectName)\Assets\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Copy SourceFiles="@(GUIDs)" DestinationFiles="@(GUIDs->'$(WrathPath)\Mods\$(MSBuildProjectName)\GUIDs\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ModdedGUIDs)" DestinationFiles="@(ModdedGUIDs->'$(SolutionDir)\Output\GUIDs\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(GUIDs)" DestinationFiles="@(GUIDs->'$(WrathPath)\Mods\$(MSBuildProjectName)\GUIDs\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 </Project>

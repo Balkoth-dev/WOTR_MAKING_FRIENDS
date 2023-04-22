@@ -80,7 +80,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                                             .Build())
               .SetShape(AreaEffectShape.Cylinder)
               .SetFx(newFx)
-              .Configure();
+              .ConfigureWithLogging();
 
             AbilityConfigurator blackTentaclesSpell = AbilityConfigurator.New(InternalString.BlackTentaclesSpell, GetGUID.GUIDByName("BlackTentaclesSpell"))
                 .CopyFrom(AbilityRefs.SickeningEntanglement, c => c is not (AbilityEffectRunAction or AbilityAoERadius))
@@ -100,7 +100,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 }
             }
 
-            blackTentaclesSpell.Configure();
+            blackTentaclesSpell.ConfigureWithLogging();
 
         }
         private static void BlackTentaclesFx(GameObject gameObject)

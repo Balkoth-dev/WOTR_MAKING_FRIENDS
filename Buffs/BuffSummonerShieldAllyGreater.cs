@@ -44,7 +44,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddAreaEffect(GetGUID.GUIDByName("SummonerShieldAllyGreaterAuraAreaEffectBuff"))
                 .SetStacking(StackingType.Ignore)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
         }
         private static void CreateSummonerShieldAllyGreaterAuraAreaEffectBuff()
         {
@@ -52,7 +52,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .CopyFrom(AbilityAreaEffectRefs.MartyrAuraOfHealthArea, c => c is null)
                 .AddAbilityAreaEffectBuff(GetGUID.GUIDByName("SummonerShieldAllyGreaterConditionalBuff"))
                 .SetSize(7.Feet())
-                .Configure();
+                .ConfigureWithLogging();
         }
         private static void CreateSummonerShieldAllyGreaterConditionalBuff()
         {
@@ -86,7 +86,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddBuffActions(actionsAddBuffBuilderIsAlly, actionsRemoveBuffBuilderIsAlly, actionsAddBuffBuilderIsAlly)
                 .AddBuffActions(actionsAddBuffBuilderIsMaster, actionsRemoveBuffBuilderIsMaster, actionsAddBuffBuilderIsMaster)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
         }
         private static void CreateSummonerShieldAllyGreaterBuff()
         {
@@ -100,7 +100,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveFortitude, 2)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveReflex, 2)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveWill, 2)
-                .Configure();
+                .ConfigureWithLogging();
         }
         private static void CreateSummonerShieldAllyGreaterIsMasterBuff()
         {
@@ -114,7 +114,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveFortitude, 4)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveReflex, 4)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveWill, 4)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

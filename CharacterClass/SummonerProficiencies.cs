@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 .SetRanks(1)
                 .SetAllowNonContextActions(false)
                 .AddArcaneArmorProficiency(new ArmorProficiencyGroup[] { ArmorProficiencyGroup.Light })
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

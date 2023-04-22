@@ -42,9 +42,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                .SetGroups(FeatureGroup.CreatureType)
                                .SetRanks(1)
                                .SetIsClassFeature(true)
-                               .Configure();
+                               .ConfigureWithLogging();
 
-            Main.Log("EidolonSubtypeFeature : " + GetGUID.GUIDByName("EidolonSubtypeFeature") + " created.");
 
         }
         internal static void CreateEnumFeature(string name, Enum enumType)
@@ -63,9 +62,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                                             .SetGroups(FeatureGroup.CreatureType)
                                                             .SetRanks(1)
                                                             .SetIsClassFeature(true)
-                                                            .Configure();
+                                                            .ConfigureWithLogging();
 
-                    Main.Log(eidolonFeatureName + " : " + eidolonFeatureGuid + " created.");
                 }
                 catch (Exception ex)
                 {

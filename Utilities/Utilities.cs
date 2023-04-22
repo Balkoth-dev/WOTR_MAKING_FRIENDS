@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Designers.EventConditionActionSystem.Conditions;
 using Kingmaker.Localization;
 using System;
 using System.Collections.Generic;
@@ -58,18 +59,43 @@ namespace WOTR_MAKING_FRIENDS.Utilities
         }
         public static LocalizedString ObtainString(string name, string seperator = ".")
         {
+            string partialKey = Settings.Settings.PartialKey;
+            Regex rgx = new("[^a-z0-9-.]");
+            string key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
             try
             {
-                string partialKey = Settings.Settings.PartialKey;
-                Regex rgx = new("[^a-z0-9-.]");
-                string key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
                 return LocalizationTool.GetString(key);
+
             }
-            catch (Exception ex)
+            catch
             {
-                Main.Log(ex.Message);
-                return null;
+                Main.Log("Localization " + key + " not found, replacing with temporary localization.");
+                return CreateString(key, "REPLACE ME: " + name);
             }
+        }
+        public static LocalizedString CreateString(string key, string value)
+        {
+            // See if we used the text previously.
+            // (It's common for many features to use the same localized text.
+            // In that case, we reuse the old entry instead of making a new one.)
+            if (textToLocalizedString.TryGetValue(value, out LocalizedString localized))
+            {
+                return localized;
+            }
+            var strings = LocalizationManager.CurrentPack?.m_Strings;
+            if (strings!.TryGetValue(key, out var oldValue) && value != oldValue.Text)
+            {
+                Main.Log($"Info: duplicate localized string `{key}`, different text.");
+            }
+            var sE = new Kingmaker.Localization.LocalizationPack.StringEntry();
+            sE.Text = value;
+            strings[key] = sE;
+            localized = new LocalizedString
+            {
+                m_Key = key
+            };
+            textToLocalizedString[value] = localized;
+            return localized;
         }
     }
 }

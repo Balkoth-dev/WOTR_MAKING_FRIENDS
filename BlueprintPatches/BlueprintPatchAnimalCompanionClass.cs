@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.BlueprintPatches
 {
@@ -17,7 +18,7 @@ namespace WOTR_MAKING_FRIENDS.BlueprintPatches
         {
             CharacterClassConfigurator.For(CharacterClassRefs.AnimalCompanionClass)
                 .AddPrerequisiteNoFeature(GetGUID.GUIDByName("EidolonSubtypeFeature"))
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

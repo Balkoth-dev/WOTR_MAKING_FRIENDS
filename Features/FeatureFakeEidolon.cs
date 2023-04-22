@@ -41,7 +41,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetRanks(1)
                 .SetReapplyOnLevelUp(true)
                 .SetIsClassFeature(true)
-                .Configure();
+                .ConfigureWithLogging();
 
             fakeEidolon.AddComponents(new[] { addEidolon });
 

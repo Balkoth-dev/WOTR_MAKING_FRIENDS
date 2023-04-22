@@ -58,7 +58,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                     spell.AddToSpellList(spellList.Value, BlueprintTool.GetRef<BlueprintSpellListReference>(spellList.Key), true);
                 }
             }
-            spell.Configure();
+            spell.ConfigureWithLogging();
         }
 
     }

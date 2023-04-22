@@ -29,7 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .AddAbilityResources(amount: 1, resource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerMakersCallResource")), true)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerMakersCallAbility")) })
                 .SetIcon(FeatureRefs.DimensionalRideFeature.Reference.Get().m_Icon)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

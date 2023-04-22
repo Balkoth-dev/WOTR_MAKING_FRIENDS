@@ -28,7 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(InternalString.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeLink.png"))
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerLifeLinkActivatableAbility")) })
-                .Configure();
+                .ConfigureWithLogging();
 
         }
     }

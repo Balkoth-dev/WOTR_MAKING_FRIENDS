@@ -26,7 +26,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
                 .ClearIsPrerequisiteFor()
-                .Configure();
+                .ConfigureWithLogging();
 
         }
     }

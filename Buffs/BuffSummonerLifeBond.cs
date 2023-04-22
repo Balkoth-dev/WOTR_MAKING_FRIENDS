@@ -25,7 +25,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeBond.png"))
                 .SetStacking(StackingType.Ignore)
                 .AddComponent<LifeBond>()
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

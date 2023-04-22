@@ -42,7 +42,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddAreaEffect(GetGUID.GUIDByName("SummonerShieldAllyAuraAreaEffectBuff"))
                 .SetStacking(StackingType.Ignore)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
         }
         private static void CreateSummonerShieldAllyAuraAreaEffectBuff()
         {
@@ -50,7 +50,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .CopyFrom(AbilityAreaEffectRefs.MartyrAuraOfHealthArea, c => c is null)
                 .AddAbilityAreaEffectBuff(GetGUID.GUIDByName("SummonerShieldAllyConditionalBuff"))
                 .SetSize(7.Feet())
-                .Configure();
+                .ConfigureWithLogging();
         }
         private static void CreateSummonerShieldAllyConditionalBuff()
         {
@@ -72,7 +72,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .SetStacking(StackingType.Ignore)
                 .AddBuffActions(actionsAddBuffBuilder, actionsRemoveBuffBuilder, actionsAddBuffBuilder)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
         }
         private static void CreateSummonerShieldAllyBuff()
         {
@@ -86,7 +86,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveFortitude, 2)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveReflex, 2)
                 .AddStatBonus(ModifierDescriptor.Circumstance, null, StatType.SaveWill, 2)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .AddComponent<BondedSensesComponent>()
                 .AddRecalculateOnStatChange(stat: Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
                 .AddSavesFixerRecalculate()
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

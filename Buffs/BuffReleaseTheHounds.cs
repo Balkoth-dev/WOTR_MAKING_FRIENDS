@@ -16,6 +16,7 @@ using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.Utility;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
@@ -42,7 +43,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                 .SetStacking(StackingType.Rank)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
                 .AddContextRankConfig(component: ContextRankConfigs.BuffRank(GetGUID.GUIDByName("ReleaseTheHoundsDamageBuff"), min: 20))
-                .Configure();
+                .ConfigureWithLogging();
 
             BlueprintAbilityAreaEffect area = AbilityAreaEffectConfigurator.New("ReleaseTheHoundsDamageAreaEffect", GetGUID.GUIDByName("ReleaseTheHoundsDamageAreaEffect"))
                 .SetAffectEnemies(true)
@@ -53,13 +54,13 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                         unitEnter: ActionsBuilder.New().ApplyBuff(buff: damageBuff, ContextDuration.Fixed(1, rate: DurationRate.Days)).Build(),
                         unitExit: ActionsBuilder.New().RemoveBuff(buff: damageBuff).Build()
                 )
-                .Configure();
+                .ConfigureWithLogging();
 
             BuffConfigurator.New("ReleaseTheHoundsDamageAreaBuff", GetGUID.GUIDByName("ReleaseTheHoundsDamageAreaBuff"))
                 .AddAreaEffect(areaEffect: area)
                 .SetFxOnStart(iceBody.GetComponent<AbilitySpawnFx>().PrefabLink)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

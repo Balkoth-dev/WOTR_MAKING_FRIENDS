@@ -33,7 +33,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
                 .SetIcon(FeatureRefs.SpellDanceFeature.Reference.Get().m_Icon)
                 .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Standard)
                 .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerMakersCallResource")))
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

@@ -98,14 +98,14 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 summonSpell.AddToAvailableMetamagic(Metamagic.Maximize, Metamagic.Empower);
             };
 
-            summonSpell.Configure();
+            summonSpell.ConfigureWithLogging();
         }
 
         private static void CreateSummonScroll(SummonAbility summonAbility)
         {
             BlueprintItemEquipmentUsable summonScroll = BlueprintConfigurator<BlueprintItemEquipmentUsable>.New(summonAbility.name + "Scroll", GetGUID.GUIDByName(summonAbility.name + "Scroll"))
                 .CopyFrom(summonMonsterISingleScroll)
-                .Configure();
+                .ConfigureWithLogging();
             int maxSpellLevel = 0;
             if (summonAbility.spellListComponents.Count > 0)
             {
@@ -209,7 +209,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 }
             }
 
-            baseSummonSpell.Configure();
+            baseSummonSpell.ConfigureWithLogging();
         }
 
         public static void CreateSummoningSpells()
@@ -220,7 +220,6 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             foreach (SummonAbilityBase baseAbility in summonBaseAbilities)
             {
                 CreateSummonMonsterBase(baseAbility);
-                Main.Log(baseAbility.name + " : " + baseAbility.guid + " created.");
                 count++;
             }
 
@@ -228,7 +227,6 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             {
                 CreateSummonAbility(ability);
 
-                Main.Log(ability.name + " : " + ability.guid + " created.");
                 if (ability.summonSpellBaseGuid != null)
                 {
                     if (!baseSummonSpells.ContainsKey(ability.summonSpellBaseGuid))
@@ -249,7 +247,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
             foreach (KeyValuePair<string, List<Blueprint<BlueprintAbilityReference>>> baseSummonSpell in baseSummonSpells)
             {
-                AbilityConfigurator.For(baseSummonSpell.Key).AddAbilityVariants(baseSummonSpell.Value).Configure();
+                AbilityConfigurator.For(baseSummonSpell.Key).AddAbilityVariants(baseSummonSpell.Value).ConfigureWithLogging();
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
@@ -21,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 
         private static void CreateDummyBuff()
         {
-            BuffConfigurator.New("dummyBuff", GetGUID.GUIDByName("DummyBuff")).Configure();
+            BuffConfigurator.New("dummyBuff", GetGUID.GUIDByName("DummyBuff")).ConfigureWithLogging();
         }
     }
 }

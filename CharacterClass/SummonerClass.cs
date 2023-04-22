@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         }
         public static void CreateSummonerClass()
         {
-            BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(InternalString.SummonerClass, GetGUID.GUIDByName("SummonerClass")).Configure();
+            BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(InternalString.SummonerClass, GetGUID.GUIDByName("SummonerClass")).ConfigureWithLogging();
 
             BlueprintProgression summonerProgression = SummonerProgression.Initialize();
             Kingmaker.Blueprints.Classes.Spells.BlueprintSpellbook summonerSpellbook = SummonerSpellbook.CreateSpellBook();
@@ -62,7 +62,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 StatType.SkillUseMagicDevice)
                 .AddToRecommendedAttributes(StatType.Charisma)
                 .AddPrerequisiteIsPet(false, Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite.GroupType.All, true, true)
-                .Configure();
+                .ConfigureWithLogging();
 
 
             BlueprintCharacterClassReference classref = summonerClass.ToReference<BlueprintCharacterClassReference>();

@@ -54,7 +54,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                         CreateSpellLevelEntry(0,5,5,5,5,5,4),
                         CreateSpellLevelEntry(0,5,5,5,5,5,5),
                 })
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static void ConfigureSpellsKnownTable()
@@ -83,7 +83,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                         CreateSpellLevelEntry(0,6,6,6,5,5,4),
                         CreateSpellLevelEntry(0,6,6,6,6,5,5)
                     })
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static SpellLevelList Create0thLevelSpells()
@@ -258,7 +258,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 Create7thLevelSpells(),
                 Create8thLevelSpells(),
                 Create9thLevelSpells())
-                .Configure();
+                .ConfigureWithLogging();
         }
 
         public static BlueprintSpellbook CreateSpellBook()
@@ -280,7 +280,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 .SetCanCopyScrolls(false)
                 .SetAllSpellsKnown(false)
                 .SetCasterLevelModifier(0)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }

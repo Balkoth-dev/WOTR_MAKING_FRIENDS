@@ -11,6 +11,7 @@ using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 using static WOTR_MAKING_FRIENDS.SummonPools.CreateSummonPools;
+using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
 {
@@ -63,10 +64,9 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
                                           .SetWillSave(StatProgressionRefs.SavesHigh.Reference.Get());
                         }
 
-                        BlueprintCharacterClassReference classref = characterClass.Configure().ToReference<BlueprintCharacterClassReference>();
+                        BlueprintCharacterClassReference classref = characterClass.ConfigureWithLogging().ToReference<BlueprintCharacterClassReference>();
                         root.Progression.m_PetClasses = CommonTool.Append(root.Progression.m_PetClasses, classref);
 
-                        Main.Log(characterClassName + " : " + characterClassGuid + " created.");
                     }
                     catch (Exception ex)
                     {

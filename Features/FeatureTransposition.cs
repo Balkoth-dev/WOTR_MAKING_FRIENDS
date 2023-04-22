@@ -28,7 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(InternalString.Description)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerTranspositionAbility")) })
                 .SetIcon(FeatureRefs.SpellDanceFeature.Reference.Get().m_Icon)
-                .Configure();
+                .ConfigureWithLogging();
         }
     }
 }
