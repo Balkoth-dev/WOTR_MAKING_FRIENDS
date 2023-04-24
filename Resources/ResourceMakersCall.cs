@@ -5,7 +5,7 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Resources
 {
-    internal class MakersCallResource
+    internal class ResourceMakersCall
     {
         public static void CreateMakersCallResource()
         {

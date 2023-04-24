@@ -4,7 +4,8 @@
     {
         public static void CreateAllResources()
         {
-            MakersCallResource.CreateMakersCallResource();
+            ResourceMakersCall.CreateMakersCallResource();
+            ResourceEvolutionPoints.CreateEvolutionPointsResource();
         }
     }
 }

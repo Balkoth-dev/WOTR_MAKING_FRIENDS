@@ -4,6 +4,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Localization;
 using Kingmaker.RuleSystem;
@@ -32,7 +33,7 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
                 .SetPrestigeClass(false)
                 .SetIsMythic(false)
                 .SetHideIfRestricted(true)
-                .SetBaseAttackBonus(StatProgressionRefs.BABFull.Reference.Get())
+                .SetBaseAttackBonus(StatProgressionRefs.BABMedium.Reference.Get())
                 .SetIsDivineCaster(false)
                 .SetIsArcaneCaster(false)
                 .SetStartingGold(0)

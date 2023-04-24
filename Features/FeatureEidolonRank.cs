@@ -11,9 +11,9 @@ namespace WOTR_MAKING_FRIENDS.Features
     {
         private static class InternalString
         {
-            internal const string Feature = "EidolonRank";
-            internal static LocalizedString Name = Helpers.ObtainString("EidolonRank.Name");
-            internal static LocalizedString Description = Helpers.ObtainString("EidolonRank.Description");
+            internal const string Feature = "EidolonRankFeature";
+            internal static LocalizedString Name = Helpers.ObtainString("EidolonRankFeature.Name");
+            internal static LocalizedString Description = Helpers.ObtainString("EidolonRankFeature.Description");
         }
         public static void CreateEidolonRank()
         {

@@ -18,7 +18,7 @@ namespace WOTR_MAKING_FRIENDS.BlueprintPatches
         {
             CharacterClassConfigurator.For(CharacterClassRefs.AnimalCompanionClass)
                 .AddPrerequisiteNoFeature(GetGUID.GUIDByName("EidolonSubtypeFeature"))
-                .ConfigureWithLogging();
+                .ConfigureWithLogging(true);
         }
     }
 }

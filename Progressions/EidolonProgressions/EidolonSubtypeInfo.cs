@@ -620,8 +620,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                     {
                         {   1,
                             new BlueprintFeatureBaseReference[]{
-                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature),
-                                GetRefs.BFBRCast(FeatureRefs.UndeadResistanceDhampir)
+                                GetRefs.BFBRCast(FeatureRefs.PoisonResistance4Feature)
                                 }
                         },
                         {   4,

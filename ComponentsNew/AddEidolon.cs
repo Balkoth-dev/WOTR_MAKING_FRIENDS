@@ -231,18 +231,21 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 return;
             }
+            //Main.Log(unitEntityData.CharacterName);
             BlueprintComponentAndRuntime<AddClassLevels> componentAndRuntime = unitEntityData.Facts.List.Select(f => f.GetComponentWithRuntime<AddClassLevels>()).FirstOrDefault(c => c.Component != null);
             if (componentAndRuntime.Component == null)
             {
                 return;
             }
+            //Main.Log(componentAndRuntime.ToString());
             int characterLevel = unitEntityData.Descriptor.Progression.CharacterLevel;
             int petLevel = GetPetLevel();
             int levels = petLevel - characterLevel;
+            //Main.Log(petLevel + " - " + characterLevel + " = "+ levels);
             if (levels > 0)
             {
                 UnitPartCompanion unitPartCompanion = Owner.Get<UnitPartCompanion>();
-                Main.Log("5: " + unitPartCompanion.ToString());
+                //Main.Log(unitPartCompanion.ToString());
                 if ((unitPartCompanion == null || unitPartCompanion.State == CompanionState.None ? 0 : (unitPartCompanion.State != CompanionState.ExCompanion ? 1 : 0)) != 0 && !Data.AutoLevelup && Type == PetTypeExtensions.Eidolon)
                 {
                     int bonus = BlueprintRoot.Instance.Progression.XPTable.GetBonus(petLevel);

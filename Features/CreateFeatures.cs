@@ -1,4 +1,6 @@
-﻿using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures;
+﻿using WOTR_MAKING_FRIENDS.Features.EidolonFeatures;
+using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures;
+using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions;
 
 namespace WOTR_MAKING_FRIENDS.Features
 {
@@ -15,7 +17,11 @@ namespace WOTR_MAKING_FRIENDS.Features
             FeatureShieldAllyGreater.CreateShieldAllyGreater();
             FeatureLifeBond.CreateEidolonLifeBond();
             FeatureEidolonRank.CreateEidolonRank();
+            FeatureExtraEvolutionPool.Create();
+            FeatureAddEvolutionPoints.Create();
             FeatureEidolonTypes.Create();
+            FeatureEidolonSelection.Create();
+            FeatureCreateAllEvolutions.Create();
         }
     }
 }

@@ -2,6 +2,7 @@
 using Kingmaker.Blueprints;
 using Kingmaker.Designers.EventConditionActionSystem.Conditions;
 using Kingmaker.Localization;
+using Kingmaker.ResourceLinks;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -70,7 +71,7 @@ namespace WOTR_MAKING_FRIENDS.Utilities
             catch
             {
                 Main.Log("Localization " + key + " not found, replacing with temporary localization.");
-                return CreateString(key, "REPLACE ME: " + name);
+                return CreateString(key, name);
             }
         }
         public static LocalizedString CreateString(string key, string value)

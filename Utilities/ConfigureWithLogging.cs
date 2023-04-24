@@ -11,7 +11,7 @@ namespace WOTR_MAKING_FRIENDS.Utilities
 {
     public static class RootConfiguratorExtensions
     {
-        public static T ConfigureWithLogging<T, TBuilder>(this RootConfigurator<T, TBuilder> configurator)
+        public static T ConfigureWithLogging<T, TBuilder>(this RootConfigurator<T, TBuilder> configurator, bool patch = false)
             where T : BlueprintScriptableObject
             where TBuilder : RootConfigurator<T, TBuilder>
         {
@@ -20,7 +20,14 @@ namespace WOTR_MAKING_FRIENDS.Utilities
 
             var blueprint = (T)blueprintField.GetValue(configurator);
 
-            Main.Log("Configuring " + blueprint.name + " : " + blueprint.AssetGuid);
+            if (patch)
+            {
+                Main.Log("Patching " + blueprint.name + " : " + blueprint.AssetGuid);
+            }
+            else 
+            { 
+                Main.Log("Configuring " + blueprint.name + " : " + blueprint.AssetGuid);
+            }
 
             return configurator.Configure();
         }

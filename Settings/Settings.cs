@@ -21,6 +21,7 @@ using WOTR_MAKING_FRIENDS.SummonPools;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
 using WOTR_MAKING_FRIENDS.BlueprintPatches;
+using WOTR_MAKING_FRIENDS.SpellBook;
 
 namespace WOTR_MAKING_FRIENDS.Settings
 {
@@ -82,6 +83,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             SummonerClass.CreateSummonerClass();
             CreateResources.CreateAllResources();
             CreateProgressions.CreateAllProgressions();
+            CreateSpellbooks.CreateAllSpellbooks();
             CreateClasses.CreateAllClasses();
             CreateFeatures.CreateAllFeatures();
             CreateBuffs.CreateAllBuffs();
