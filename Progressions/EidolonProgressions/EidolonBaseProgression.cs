@@ -3,8 +3,10 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
+using System;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 
 namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
 {
@@ -35,15 +37,16 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                 .AddEntry(15, InternalString.ExtraEvolutionPoolFeature)
                                 .AddEntry(17, InternalString.ExtraEvolutionPoolFeature)
                                 .AddEntry(18, InternalString.ExtraEvolutionPoolFeature)
-                                .AddEntry(19, InternalString.ExtraEvolutionPoolFeature); 
+                                .AddEntry(19, InternalString.ExtraEvolutionPoolFeature);
 
-            ProgressionConfigurator.New(InternalString.Progression, GetGUID.GUIDByName("EidolonBaseProgression"))
-                .CopyFrom(ProgressionRefs.DruidAnimalCompanionProgression, c => c is null)
-                .SetLevelEntries(entries)
-                .SetClasses(GetGUID.GUIDByName("SummonerClass"))
-                .SetUIGroups(new())
-                .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { })
-                .ConfigureWithLogging();
+            var progression = ProgressionConfigurator.New(InternalString.Progression, GetGUID.GUIDByName("EidolonBaseProgression"))
+           .CopyFrom(ProgressionRefs.DruidAnimalCompanionProgression, c => c is null)
+           .SetLevelEntries(entries)
+           .SetClasses(GetGUID.GUIDByName("SummonerClass"))
+           .SetUIGroups(new())
+           .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { });
+            
+            progression.ConfigureWithLogging();
 
         }
     }

@@ -5,6 +5,7 @@ using Kingmaker.Blueprints.Classes;
 using System;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 
 namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
 {
@@ -24,6 +25,18 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                         .SetUIGroups(new())
                         .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { });
+
+                    foreach (var eidolonBaseForm in Enum.GetValues(typeof(EnumsEidolonBaseForm)))
+                    {
+                            try
+                            {
+                                var characterClassName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + eidolonSubtype.name + "Class";
+                                var characterClassGuid = GetGUID.GUIDByName(characterClassName);
+                                progression.AddToClasses(BlueprintTool.GetRef<BlueprintCharacterClassReference>(characterClassGuid));
+
+                            }
+                            catch { }
+                    }
 
                     foreach (var entry in eidolonSubtype.levelEntries)
                     {
