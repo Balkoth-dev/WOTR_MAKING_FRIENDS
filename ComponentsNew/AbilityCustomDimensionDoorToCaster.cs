@@ -1,4 +1,5 @@
 ﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.EntitySystem.Entities;
 using Kingmaker.ResourceLinks;
 using Kingmaker.UnitLogic.Abilities;
@@ -10,6 +11,7 @@ using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
+    [TypeId("1558014072294f50a6da0b2209218574")]
     public class AbilityCustomDimensionDoorToCaster : AbilityCustomLogic
     {
         public PrefabLink PortalFromPrefab;

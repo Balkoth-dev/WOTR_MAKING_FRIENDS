@@ -22,6 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Features
             FeatureEidolonTypes.Create();
             FeatureEidolonSelection.Create();
             FeatureCreateAllEvolutions.Create();
+            FeatureAddMaxAttacks.Create();
         }
     }
 }

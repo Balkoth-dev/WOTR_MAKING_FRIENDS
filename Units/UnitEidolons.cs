@@ -22,7 +22,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_AirElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Elemental,
                     size = Size.Medium,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
@@ -38,7 +37,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_FireElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Elemental,
                     size = Size.Medium,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
@@ -54,7 +52,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_WaterElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Elemental,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
                                                     BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonWaterElementalVariantFeature"))
@@ -69,7 +66,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_EarthElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Elemental,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
                                                     BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonEarthElementalVariantFeature"))
@@ -85,7 +81,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "7a47bc6dbd2e2014aa5be8519e93a02e"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Agathion
                 },
             #endregion
             #region EidolonSilverDragon
@@ -97,7 +92,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "f021f54d9e87f5a49922a10f69598bba"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Agathion
                 },
             #endregion
             #region EidolonBrassDragon
@@ -109,7 +103,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "2b4bbf498ccba75489dfcbe786c7a8b2"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Agathion
                 },
             #endregion
             #region EidolonCopperDragon
@@ -121,7 +114,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "d69ec0bc0baab38408f87bcc0809517b"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Agathion
                 },
             #endregion
             #region EidolonTroll
@@ -134,7 +126,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Storykin
                 },
             #endregion
             #region EidolonSuccubus
@@ -145,7 +136,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR15_SuccubusCaster.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonIncubus
@@ -156,7 +146,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR16_IncubusGladiator.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonBabau
@@ -167,7 +156,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.BabauSummon.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region Marilith
@@ -179,7 +167,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonDretch
@@ -190,7 +177,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR2_DretchStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonBalor
@@ -202,7 +188,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonSchir
@@ -213,7 +198,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR4_SchirStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonColoxus
@@ -224,7 +208,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR12_ColoxusStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonGlabrezu
@@ -235,7 +218,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR13_GlabrezuStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonVrock
@@ -247,7 +229,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonPainaji
@@ -258,7 +239,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR14_PainajaiStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonBrimorak
@@ -269,7 +249,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR5_BrimorakStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonLilitu
@@ -281,7 +260,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonVavakia
@@ -293,7 +271,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Demon
                 },
             #endregion
             #region EidolonBythos
@@ -304,7 +281,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR16_BythosStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Aeon
                 },
             #endregion
             #region EidolonAxiomiteMasc
@@ -315,7 +291,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.Aeon_Axiomite_M_01.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Aeon
                 },
             #endregion
             #region EidolonAxiomiteFem
@@ -326,7 +301,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.Aeon_Axiomite_F_01.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Aeon
                 },
             #endregion
             #region EidolonGolemWood
@@ -338,7 +312,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Aeon
                 },
             #endregion
             #region EidolonGolemIron
@@ -350,7 +323,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Aeon
                 },
             #endregion
             #region EidolonAstralDeva
@@ -361,7 +333,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR14_AstralDeva.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Angel
                 },
             #endregion
             #region EidolonMonadicDeva
@@ -372,7 +343,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.MonadicDevaSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Angel
                 },
             #endregion
             #region EidolonMovanicDeva
@@ -383,7 +353,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.MovanicDevaSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Angel
                 },
             #endregion
             #region EidolonLillend
@@ -395,7 +364,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
-                    eidolonSubtype = EnumsEidolonSubtype.Azata
                 },
             #endregion
             #region EidolonBralani
@@ -406,7 +374,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR6_AzataBralaniStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Azata
                 },
             #endregion
             #region EidolonVeranallia
@@ -418,7 +385,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Azata
                 },
             #endregion
             #region EidolonYinudja
@@ -429,7 +395,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.AzataIsland_AzataYinudja.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Azata
                 },
             #endregion
             #region EidolonTreant
@@ -441,7 +406,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Kami
                 },
             #endregion
             #region EidolonErinyes
@@ -452,18 +416,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR8_ErinyesDevilStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Devil
-                },
-            #endregion
-            #region EidolonDevilAssassin
-            new NewUnitClass()
-                {
-                    Name = "EidolonDevilAssassin",
-                    m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
-                    copiedUnit = UnitRefs.Irmangaleths_Assassin.Cast<BlueprintUnitReference>().Reference,
-                    isEidolon = true,
-                    eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Devil
                 },
             #endregion
             #region EidolonDeathsnatcher
@@ -474,7 +426,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR18_DeathsnatcherStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Aberrant
                 },
             #endregion
             #region EidolonSpirit
@@ -484,9 +435,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.Arcanotheign.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Medium,
+                    changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
-                    eidolonSubtype = EnumsEidolonSubtype.Shadow
                 },
             #endregion
             #region EidolonShade
@@ -497,7 +447,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_Shadow.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
-                    eidolonSubtype = EnumsEidolonSubtype.Shadow
                 },
             #endregion
             #region EidolonKeketar
@@ -509,7 +458,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
-                    eidolonSubtype = EnumsEidolonSubtype.Protean
                 },
             #endregion
             #region EidolonCragLinnorm
@@ -521,7 +469,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     isEidolon = true,
                     changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
-                    eidolonSubtype = EnumsEidolonSubtype.Storykin
                 },
             #endregion
             #region EidolonRedDragon
@@ -533,7 +480,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "2577a3281d0de4c469c52f4519ebcc2a"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Storykin
                 },
             #endregion
             #region EidolonGreenDragon
@@ -546,7 +492,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     portrait = BlueprintTool.GetRef<BlueprintPortraitReference>("a61b3b56482e45989a101b9816d54932"),
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Storykin
                 },
             #endregion
             #region EidolonWhiteDragon
@@ -558,7 +503,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "f886c5a59c94a3249a273764fac0475d"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Storykin
                 },
             #endregion
             #region EidolonBlackDragon
@@ -570,7 +514,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "5c1800575096ebc45a19ebd216f1e4ea"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Storykin
                 },
             #endregion
             #region EidolonBlueDragon
@@ -582,29 +525,28 @@ namespace WOTR_MAKING_FRIENDS.Units
                     prefab = new UnitViewLink(){AssetId = "f599384431b2c494e895ff1549cfa015"},
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Storykin
                 },
             #endregion
-            #region EidolonSalamanderOverseer
+            #region EidolonSalamander
             new NewUnitClass()
                 {
-                    Name = "EidolonSalamanderOverseer",
+                    Name = "EidolonSalamander",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR15_CyborgSalamander_Add.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
+                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
-                    eidolonSubtype = EnumsEidolonSubtype.Protean
                 },
             #endregion
-            #region EidolonShamblingMount
+            #region EidolonShamblingMound
             new NewUnitClass()
                 {
-                    Name = "EidolonShamblingMount",
+                    Name = "EidolonShamblingMound",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR6_ShamblingMound.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
+                    changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Kami
                 },
             #endregion
             #region EidolonNightmare
@@ -614,8 +556,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR5_NightmareFriendly.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
+                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Shadow
                 },
             #endregion
             #region EidolonHellHound
@@ -625,8 +567,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.HellhoundSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
+                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
-                    eidolonSubtype = EnumsEidolonSubtype.Shadow
                 },
             #endregion
             #region EidolonAstradaemon
@@ -636,8 +578,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.SoulsCloakAstradaemonSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
+                    changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Daemon
                 },
             #endregion
             #region EidolonMeladaemon
@@ -648,7 +590,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR2_WerewolfStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                    eidolonSubtype = EnumsEidolonSubtype.Daemon
                 },
             #endregion
             #region EidolonMimic
@@ -659,7 +600,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.MimicChestStandart.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    eidolonSubtype = EnumsEidolonSubtype.Aberrant
                 },
             #endregion
         };

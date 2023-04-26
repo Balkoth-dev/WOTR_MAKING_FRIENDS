@@ -1,4 +1,5 @@
-﻿using Kingmaker.ElementsSystem;
+﻿using Kingmaker.Blueprints.JsonSystem;
+using Kingmaker.ElementsSystem;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.UnitLogic.Mechanics.Actions;
@@ -6,6 +7,7 @@ using System;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
+    [TypeId("e4ccb4b9c9a44a86bb01feffcf38acab")]
     public class BlackTentaclesGrappleAction : ContextAction
     {
         public CombatManeuver Type = CombatManeuver.Grapple;

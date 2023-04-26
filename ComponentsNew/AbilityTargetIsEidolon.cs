@@ -1,4 +1,5 @@
 ﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Blueprints.Root;
 using Kingmaker.EntitySystem;
 using Kingmaker.EntitySystem.Entities;
@@ -8,6 +9,7 @@ using Kingmaker.Utility;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
+    [TypeId("f92d3401beff4a90aa0f6148914d1642")]
     public class AbilityTargetIsEidolon : BlueprintComponent, IAbilityTargetRestriction
     {
         public bool Not;

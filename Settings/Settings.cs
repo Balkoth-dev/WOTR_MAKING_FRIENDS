@@ -93,6 +93,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             CreateUnits.CreateAllUnits();
             CreateSummonPools.CreateAllSummonPools();
             CreateSpells.CreateAllSpells();
+            Main.Log("Total number of new blueprints: " + RootConfiguratorExtensions.numberOfBlueprints);
         }
 
         private class SettingsUI

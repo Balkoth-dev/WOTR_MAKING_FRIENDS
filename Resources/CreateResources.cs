@@ -4,8 +4,9 @@
     {
         public static void CreateAllResources()
         {
-            ResourceMakersCall.CreateMakersCallResource();
-            ResourceEvolutionPoints.CreateEvolutionPointsResource();
+            ResourceMakersCall.Create();
+            ResourceEvolutionPoints.Create();
+            ResourceMaxAttacksResource.Create();
         }
     }
 }

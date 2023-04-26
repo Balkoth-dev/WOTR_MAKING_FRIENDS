@@ -1,5 +1,6 @@
 ﻿using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.EntitySystem;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
@@ -9,6 +10,7 @@ using Kingmaker.UnitLogic.Parts;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
+    [TypeId("88b2e594e9024a8a8618d5d9e8ab81fb")]
     [AllowedOn(typeof(BlueprintFeature), false)]
     [AllowedOn(typeof(BlueprintBuff), false)]
     [AllowMultipleComponents]

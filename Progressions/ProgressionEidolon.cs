@@ -25,11 +25,10 @@ namespace WOTR_MAKING_FRIENDS.Progressions
                 entries.AddEntry(i, GetGUID.GUIDByName("EidolonRankFeature"));
             }
             ProgressionConfigurator.New(InternalString.Progression, GetGUID.GUIDByName("EidolonProgression"))
-                .CopyFrom(ProgressionRefs.DruidAnimalCompanionProgression, c => c is null)
                 .SetLevelEntries(entries)
                 .SetClasses(GetGUID.GUIDByName("SummonerClass"))
-                .SetUIGroups(new())
-                .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { })
+                .SetIsClassFeature(true)
+                .SetRanks(1)
                 .ConfigureWithLogging();
 
         }

@@ -37,7 +37,6 @@ namespace WOTR_MAKING_FRIENDS.Units
             CreateUnitsFromArray(UnitEidolons.newUnits);
             AdjustSummons();
             int eidolonCount = 0;
-            List<EnumsEidolonSubtype> subtypeList = new();
             List<EnumsEidolonBaseForm> baseFormList = new();
             foreach (var eidolon in UnitEidolons.newUnits)
             {
@@ -45,7 +44,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     AdjustEidolon(eidolon);
                     eidolonCount++;
-                    subtypeList.Add(eidolon.eidolonSubtype);
                     baseFormList.Add(eidolon.eidolonBaseForm);
                 }
                 catch { }
@@ -58,13 +56,6 @@ namespace WOTR_MAKING_FRIENDS.Units
             {
                 Main.Log(kvp.Key + " : " + kvp.Value);
             }
-            Main.Log("Subtypes: ");
-            var stEnumCounts = subtypeList.GroupBy(e => e).ToDictionary(g => g.Key, g => g.Count());
-            foreach (var kvp in stEnumCounts)
-            {
-                Main.Log(kvp.Key +" : "+ kvp.Value);
-            }
-
         }
         internal static void CreateUnitsFromArray(Array newUnits)
         {
@@ -121,16 +112,12 @@ namespace WOTR_MAKING_FRIENDS.Units
         internal static void AdjustEidolon(NewUnitClass eidolonUnit)
         {
             var featureBaseForm = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonUnit.eidolonBaseForm) + "BaseFormFeature");
-            var featureSubtype = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonUnit.eidolonSubtype) + "SubtypeFeature");
 
             var newFacts = new Blueprint<BlueprintUnitFactReference>[] {
                                          FeatureRefs.OutsiderType.Cast<BlueprintUnitFactReference>().Reference,
                                          FeatureRefs.HeadLocatorFeature.Cast<BlueprintUnitFactReference>().Reference,
                                          BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonSubtypeFeature")),
                                          BlueprintTool.GetRef<BlueprintUnitFactReference>(featureBaseForm),
-                                         BlueprintTool.GetRef<BlueprintUnitFactReference>(featureSubtype),
-                                         BlueprintTool.GetRef<BlueprintUnitFactReference>("AddEvolutionPointsFeature"),
-                                         BlueprintTool.GetRef<BlueprintUnitFactReference>("EvolutionBaseAbilitiesFeature")
             };
 
             if (eidolonUnit.blueprintUnitFactReferences != null)
@@ -146,12 +133,15 @@ namespace WOTR_MAKING_FRIENDS.Units
                             .RemoveComponents(components => true)
                             .AddAllowDyingCondition()
                             .AddResurrectOnRest()
+                            .AddUndetectableAlignment()
+                            .SetAlignment(Alignment.TrueNeutral)
                             .SetBrain(characterBrain)
                             .SetMaxHP(1)
                             .SetSize(Size.Medium)
                             .SetBody(new BlueprintUnit.UnitBody() { })
                             .SetAddFacts(eidolonUnit.blueprintUnitFactReferences)
                             .AddClassLevels(null, BlueprintTool.GetRef<BlueprintCharacterClassReference>(GetGUID.GUIDByName("EidolonBaseClass")), null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception })
+                            .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Unarmed1d3.Cast<BlueprintItemWeaponReference>().Reference)
                             .SetSkills(new BlueprintUnit.UnitSkills());
 
             if (eidolonUnit.changeSize != null)
@@ -169,6 +159,14 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetCharisma(11)
                     .AddLockEquipmentSlot(slotType: SlotType.MainHand)
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon8)
                     .SetSpeed(20.Feet());
             }
             else if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Biped)
@@ -191,6 +189,14 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetCharisma(11)
                     .AddLockEquipmentSlot(slotType: SlotType.MainHand)
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon8)
                     .SetSpeed(40.Feet());
             }
             else if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Serpentine)
@@ -203,9 +209,20 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetCharisma(11)
                     .AddLockEquipmentSlot(slotType: SlotType.MainHand)
                     .AddLockEquipmentSlot(slotType: SlotType.OffHand)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
+                    .AddLockEquipmentSlot(slotType: SlotType.Weapon8)
                     .SetSpeed(20.Feet());
             }
-            eidolon.ConfigureWithLogging();
+            var completeEidolon = eidolon.ConfigureWithLogging();
+
+            EyePortraitInjector.Replacements[completeEidolon.PortraitSafe.Data] = AssetLoader.LoadInternal("Portraits", "DefaultEyePortrait.png", 176, 24);
+
         }
         internal static void AdjustSummons()
         {

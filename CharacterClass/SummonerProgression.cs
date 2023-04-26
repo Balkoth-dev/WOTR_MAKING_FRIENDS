@@ -35,6 +35,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 .SetReapplyOnLevelUp(false)
                 .SetIsClassFeature(false)
                 .SetForAllOtherClasses(false)
+                .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                 .SetLevelEntries(entries)
                 .ConfigureWithLogging();
         }

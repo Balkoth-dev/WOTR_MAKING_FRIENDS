@@ -15,13 +15,14 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
-    public static class FeatureAddEvolutionPoints
+    public static class FeatureAddMaxAttacks
     {
         private static class InternalString
         {
-            internal const string Feature = "AddEvolutionPointsFeature";
+            internal const string Feature = "AddMaxAttacksFeature";
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
             internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
+            internal const string StepFeature = "AddMaxAttacksStepFeature";
         }
 
         public static void Create()
@@ -29,8 +30,15 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
-                .SetIcon(FeatureRefs.LuckDomainBaseFeature.Reference.Get().m_Icon)
-                .AddAbilityResources(1, GetGUID.GUIDByName("SummonerEvolutionPointsResource"),true,true)
+                .SetIcon(AbilityRefs.MagicFangGreater.Reference.Get().m_Icon)
+                .AddAbilityResources(0, GetGUID.GUIDByName("EidolonMaxAttacksResource"),true,true)
+                .ConfigureWithLogging();
+
+            FeatureConfigurator.New(InternalString.StepFeature, GetGUID.GUIDByName(InternalString.StepFeature))
+                .SetDisplayName(InternalString.Name)
+                .SetDescription(InternalString.Description)
+                .SetIcon(AbilityRefs.MagicFangGreater.Reference.Get().m_Icon)
+                .AddAbilityResources(1, GetGUID.GUIDByName("EidolonMaxAttacksResource"), true, true)
                 .SetRanks(99)
                 .ConfigureWithLogging();
         }

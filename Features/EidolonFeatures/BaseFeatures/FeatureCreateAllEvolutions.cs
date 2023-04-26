@@ -50,6 +50,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
                     var action = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(featureName)))
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
+                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")))
                                                      .Build();
 
                     var abilityName = evolution + "Ability";
@@ -58,10 +59,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                         .SetDescription(Helpers.ObtainString(abilityName + ".Description"))
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetType(AbilityType.Special)
-                        .SetRange(AbilityRange.Touch)
+                        .SetRange(AbilityRange.Personal)
                         .SetActionType(CommandType.Free)
                         .AddAbilityTargetHasFact(new() { GetGUID.GUIDByName("EidolonSubtypeFeature") })
-                        .SetCanTargetFriends(true)
+                        .SetCanTargetFriends(false)
                         .SetCanTargetSelf(true)
                         .AddAbilityEffectRunAction(actions: action)
                         .AddAbilityResourceLogic(amount, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
@@ -77,12 +78,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 var abilityBase = AbilityConfigurator.New(name, GetGUID.GUIDByName(name))
                     .SetDisplayName(Helpers.ObtainString(name + ".Name"))
                     .SetDescription(Helpers.ObtainString(name + ".Description"))
-                    .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
+                    .SetIcon(AbilityRefs.ElementalBodyIBase.Reference.Get().m_Icon)
                     .SetType(AbilityType.Special)
                     .SetRange(AbilityRange.Touch)
                     .SetActionType(CommandType.Free)
                     .SetCanTargetSelf(true)
-                    .AddAbilityResourceLogic(0, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")));
+                    .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")));
 
                 var abilities = new List<Blueprint<BlueprintAbilityReference>>();
                 foreach (var evolution in level.Value)
@@ -134,6 +135,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                 "EvolutionSting",
                                 "EvolutionTail",
                                 "EvolutionTentacle",
+                                "EvolutionTentacleMass",
                                 "EvolutionWingBuffet",
                             } 
             },

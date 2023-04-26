@@ -28,8 +28,6 @@ namespace WOTR_MAKING_FRIENDS.Units
         internal bool isEidolon;
         /// <summary> If the unit is an eidolon, assign base form. </summary>
         internal EnumsEidolonBaseForm eidolonBaseForm;
-        /// <summary> If the unit is an eidolon, assign subtype.  </summary>
-        internal EnumsEidolonSubtype eidolonSubtype;
         internal Size? size;
         // <summary> If the unit's prefab needs to be adjusted, then this will change it.
         internal Size? changeSize;

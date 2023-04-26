@@ -1,4 +1,5 @@
-﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
+﻿using BlueprintCore.Actions.Builder;
+using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
@@ -16,16 +17,15 @@ using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
 {
-    internal class EvolutionBite
+    internal class EvolutionTentacleMass
     {
         private static class InternalString
         {
-            internal static Sprite icon = ItemWeaponRefs.Bite1d10.Reference.Get().m_Icon;
-            internal const string Evolution = "EvolutionBite";
+            internal static Sprite icon = AssetLoader.LoadInternal("Abilities", "BlackTentacles.png");
+            internal const string Evolution = "EvolutionTentacleMass";
             internal const string Feature = Evolution + "Feature";
             internal static LocalizedString FeatureName = Helpers.ObtainString(Feature + ".Name");
             internal static LocalizedString FeatureDescription = Helpers.ObtainString(Feature + ".Description");
@@ -43,17 +43,38 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             AdjustFeature();
             AdjustAbility();
+            AddWeaponEmptyHandOverrideAbility();
+            AddEvolutionBuff();
         }
         public static void AdjustFeature()
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddAdditionalLimb(weapon:ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
-                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
-                .SetRanks(1)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.ActivatableAbility)) })
                 .ConfigureWithLogging(true);
         }
-
+        public static void AddWeaponEmptyHandOverrideAbility()
+        {
+            ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.GUIDByName(InternalString.ActivatableAbility))
+                .SetDisplayName(InternalString.ActivatableAbilityName)
+                .SetDescription(InternalString.ActivatableAbilityDescription)
+                .SetIcon(InternalString.icon)
+                .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
+                .SetDeactivateImmediately(true)
+                .SetActivateWithUnitCommand(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free)
+                .SetActivateOnUnitAction(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivateOnUnitActionType.Attack)
+                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(InternalString.Buff)))
+                .ConfigureWithLogging();
+        }
+        public static void AddEvolutionBuff()
+        {
+            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName(InternalString.Buff))
+                .SetDisplayName(InternalString.BuffName)
+                .SetDescription(InternalString.BuffDescription)
+                .SetIcon(InternalString.icon)
+                .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.TentacleLarge1d6.Cast<BlueprintItemWeaponReference>().Reference)
+                .ConfigureWithLogging();
+        }
         public static void AdjustAbility()
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
@@ -73,7 +94,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 })
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 1;
+                    c.resourceAmount = 2;
                 })
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]

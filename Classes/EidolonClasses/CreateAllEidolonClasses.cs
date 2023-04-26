@@ -22,58 +22,53 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
         {
             foreach (var eidolonBaseForm in Enum.GetValues(typeof(EnumsEidolonBaseForm)))
             {
-                foreach (var eidolonSubtype in Enum.GetValues(typeof(EnumsEidolonSubtype)))
+                try
                 {
-                    try
+                    var characterClassName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + "Class";
+                    var characterClassGuid = GetGUID.GUIDByName(characterClassName);
+                    var featureBaseForm = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + "BaseFormFeature");
+                    var progressionName = "EidolonBaseProgression";
+
+                    var characterClass = CharacterClassConfigurator.New(characterClassName, characterClassGuid)
+                        .CopyFrom(GetGUID.GUIDByName("EidolonBaseClass"), c => c is null)
+                        .SetProgression(BlueprintTool.Get<BlueprintProgression>(GetGUID.GUIDByName(progressionName)))
+                        .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(featureBaseForm));
+
+
+                    if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Abberant)
                     {
-                        var characterClassName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonSubtype) + "Class";
-                        var characterClassGuid = GetGUID.GUIDByName(characterClassName);
-                        var featureBaseForm = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + "BaseFormFeature");
-                        var featureSubtype = GetGUID.GUIDByName("Eidolon" + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonSubtype) + "SubtypeFeature");
-                        var progressionName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonSubtype), eidolonSubtype) + "Progression";
-
-                        var characterClass = CharacterClassConfigurator.New(characterClassName, characterClassGuid)
-                            .CopyFrom(GetGUID.GUIDByName("EidolonBaseClass"), c => c is null)
-                            .SetProgression(BlueprintTool.Get<BlueprintProgression>(GetGUID.GUIDByName(progressionName)))
-                            .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(featureBaseForm))
-                            .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(featureSubtype));
-
-
-                        if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Abberant)
-                        {
-                            characterClass.SetFortitudeSave(StatProgressionRefs.SavesHigh.Reference.Get())
-                                          .SetReflexSave(StatProgressionRefs.SavesLow.Reference.Get())
-                                          .SetWillSave(StatProgressionRefs.SavesHigh.Reference.Get());
-                        }
-                        else if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Biped)
-                        {
-                            characterClass.SetFortitudeSave(StatProgressionRefs.SavesHigh.Reference.Get())
-                                          .SetReflexSave(StatProgressionRefs.SavesLow.Reference.Get())
-                                          .SetWillSave(StatProgressionRefs.SavesHigh.Reference.Get());
-                        }
-                        else if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Quadruped)
-                        {
-                            characterClass.SetFortitudeSave(StatProgressionRefs.SavesHigh.Reference.Get())
-                                          .SetReflexSave(StatProgressionRefs.SavesHigh.Reference.Get())
-                                          .SetWillSave(StatProgressionRefs.SavesLow.Reference.Get());
-                        }
-                        else if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Serpentine)
-                        {
-                            characterClass.SetFortitudeSave(StatProgressionRefs.SavesLow.Reference.Get())
-                                          .SetReflexSave(StatProgressionRefs.SavesHigh.Reference.Get())
-                                          .SetWillSave(StatProgressionRefs.SavesHigh.Reference.Get());
-                        }
-
-                        BlueprintCharacterClassReference classref = characterClass.ConfigureWithLogging().ToReference<BlueprintCharacterClassReference>();
-                        root.Progression.m_PetClasses = CommonTool.Append(root.Progression.m_PetClasses, classref);
-
+                        characterClass.SetFortitudeSave(StatProgressionRefs.SavesHigh.Reference.Get())
+                                      .SetReflexSave(StatProgressionRefs.SavesLow.Reference.Get())
+                                      .SetWillSave(StatProgressionRefs.SavesHigh.Reference.Get());
                     }
-                    catch (Exception ex)
+                    else if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Biped)
                     {
-                        Main.Log(e: ex);
+                        characterClass.SetFortitudeSave(StatProgressionRefs.SavesHigh.Reference.Get())
+                                      .SetReflexSave(StatProgressionRefs.SavesLow.Reference.Get())
+                                      .SetWillSave(StatProgressionRefs.SavesHigh.Reference.Get());
                     }
+                    else if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Quadruped)
+                    {
+                        characterClass.SetFortitudeSave(StatProgressionRefs.SavesHigh.Reference.Get())
+                                      .SetReflexSave(StatProgressionRefs.SavesHigh.Reference.Get())
+                                      .SetWillSave(StatProgressionRefs.SavesLow.Reference.Get());
+                    }
+                    else if ((EnumsEidolonBaseForm)eidolonBaseForm == EnumsEidolonBaseForm.Serpentine)
+                    {
+                        characterClass.SetFortitudeSave(StatProgressionRefs.SavesLow.Reference.Get())
+                                      .SetReflexSave(StatProgressionRefs.SavesHigh.Reference.Get())
+                                      .SetWillSave(StatProgressionRefs.SavesHigh.Reference.Get());
+                    }
+
+                    BlueprintCharacterClassReference classref = characterClass.ConfigureWithLogging().ToReference<BlueprintCharacterClassReference>();
+                    root.Progression.m_PetClasses = CommonTool.Append(root.Progression.m_PetClasses, classref);
+
+                }
+                catch (Exception ex)
+                {
+                    Main.Log(e: ex);
                 }
             }
-            }
         }
+    }
 }

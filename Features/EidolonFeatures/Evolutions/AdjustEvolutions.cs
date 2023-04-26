@@ -12,6 +12,21 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
         public static void Adjust()
         {
             EvolutionBite.Adjust();
+            EvolutionClaws.Adjust();
+            EvolutionImprovedDamage.Adjust();
+            EvolutionMagicAttacks.Adjust();
+            EvolutionNaturalArmor.Adjust();
+            EvolutionPincers.Adjust();
+            EvolutionReach.Adjust();
+            EvolutionResistance.Adjust();
+            EvolutionScent.Adjust();
+            EvolutionSkilled.Adjust();
+            EvolutionSlam.Adjust();
+            EvolutionSting.Adjust();
+            EvolutionTail.Adjust();
+            EvolutionTentacle.Adjust();
+            EvolutionTentacleMass.Adjust();
+            EvolutionWingBuffet.Adjust(); 
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Facts;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Designers;
 using Kingmaker.ElementsSystem;
 using Kingmaker.EntitySystem.Entities;
@@ -12,6 +13,7 @@ using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
+    [TypeId("082d1e0ef881457699f7df1870a451b6")]
     [AllowedOn(typeof(BlueprintUnitFact), false)]
     [AllowMultipleComponents]
     public class LifeLinkEidolon :

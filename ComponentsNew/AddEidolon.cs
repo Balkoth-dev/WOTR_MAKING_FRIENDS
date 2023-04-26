@@ -28,7 +28,7 @@ using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
-    [TypeId("d918579b19d94c04b4c0baecd11fcb3c")]
+    [TypeId("b3804dff48aa4493bbbafb1d6da905c5")]
     public class AddEidolon :
       UnitFactComponentDelegate<AddPetData>,
       IAreaHandler,

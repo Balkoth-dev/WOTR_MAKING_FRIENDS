@@ -24,26 +24,19 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                         .CopyFrom(BlueprintTool.Get<BlueprintProgression>(GetGUID.GUIDByName("EidolonBaseProgression")), c => c is null)
                         .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                         .SetUIGroups(new())
-                        .SetUIDeterminatorsGroup(new BlueprintCore.Utils.Blueprint<BlueprintFeatureBaseReference>[] { });
+                        .SetUIDeterminatorsGroup(new Blueprint<BlueprintFeatureBaseReference>[] { })
+                        .SetLevelEntries(eidolonSubtype.levelEntries);
+
 
                     foreach (var eidolonBaseForm in Enum.GetValues(typeof(EnumsEidolonBaseForm)))
                     {
                             try
                             {
-                                var characterClassName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + eidolonSubtype.name + "Class";
+                                var characterClassName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + "Class";
                                 var characterClassGuid = GetGUID.GUIDByName(characterClassName);
                                 progression.AddToClasses(BlueprintTool.GetRef<BlueprintCharacterClassReference>(characterClassGuid));
-
                             }
                             catch { }
-                    }
-
-                    foreach (var entry in eidolonSubtype.levelEntries)
-                    {
-                        foreach (var bfbr in entry.Value)
-                        {
-                            progression.AddToLevelEntry(entry.Key, bfbr);
-                        }
                     }
 
                     progression.ConfigureWithLogging();

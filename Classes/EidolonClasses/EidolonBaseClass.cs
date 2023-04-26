@@ -10,6 +10,7 @@ using Kingmaker.Localization;
 using Kingmaker.RuleSystem;
 using WOTR_MAKING_FRIENDS.CharacterClass;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite;
 
@@ -38,6 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
                 .SetIsArcaneCaster(false)
                 .SetStartingGold(0)
                 .SetDifficulty(1)
+                .SetProgression(GetGUID.GUIDByName("EidolonBaseProgression"))
                 .AddToClassSkills(
                 StatType.SkillPerception)
                 .AddPrerequisiteIsPet(group:GroupType.Any,checkInProgression:false,hideInUI:false,not:false)
