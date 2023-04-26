@@ -38,7 +38,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .SetDisplayName(InternalString.Name)
                 .SetDescription(InternalString.Description)
                 .SetIcon(AbilityRefs.MagicFangGreater.Reference.Get().m_Icon)
-                .AddAbilityResources(1, GetGUID.GUIDByName("EidolonMaxAttacksResource"), true, true)
+                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), 1)
                 .SetRanks(99)
                 .ConfigureWithLogging();
         }
