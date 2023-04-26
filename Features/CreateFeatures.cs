@@ -1,5 +1,4 @@
-﻿using WOTR_MAKING_FRIENDS.Features.EidolonFeatures;
-using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures;
+﻿using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures;
 using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions;
 
 namespace WOTR_MAKING_FRIENDS.Features
