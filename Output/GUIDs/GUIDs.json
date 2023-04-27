@@ -1850,5 +1850,89 @@
   {
     "name": "AddMaxAttacksStepFeature",
     "guid": "89c54d88-40c7-4043-84cf-8b04d4d864b4"
+  },
+  {
+    "name": "EvolutionTentacle1Feature",
+    "guid": "5d62b399-e742-4284-af82-a759904c2cf1"
+  },
+  {
+    "name": "EvolutionTentacle2Feature",
+    "guid": "be0ba527-0af6-4b60-833d-6c16257027b7"
+  },
+  {
+    "name": "EvolutionTentacle3Feature",
+    "guid": "4959cfa5-5393-490a-9e70-625a5aa3e8fc"
+  },
+  {
+    "name": "EvolutionTentacle4Feature",
+    "guid": "73515d1e-18a8-4077-86a0-c486fb88f3fb"
+  },
+  {
+    "name": "EvolutionTentacle5Feature",
+    "guid": "656c9440-4030-4bdc-85e8-a4118d744231"
+  },
+  {
+    "name": "EvolutionTentacle6Feature",
+    "guid": "2dcf0c51-7801-4b4a-aab7-fe7ae2bbe5b4"
+  },
+  {
+    "name": "EvolutionTentacle7Feature",
+    "guid": "86451b09-f94a-4660-a0f7-cb8af925e0e7"
+  },
+  {
+    "name": "EvolutionTentacle8Feature",
+    "guid": "99e7f9dd-dd07-44e5-88fe-13473e59c767"
+  },
+  {
+    "name": "EvolutionTentacle9Feature",
+    "guid": "d3481eb9-a010-4c24-9fe3-26140a043248"
+  },
+  {
+    "name": "EvolutionTentacle10Feature",
+    "guid": "1d4ca060-ba08-4c16-9742-935c0c1006a6"
+  },
+  {
+    "name": "EvolutionLimbsArmsActivatableAbility",
+    "guid": "c2462115-ccae-4cbb-8e0c-0c7203e3d8d7"
+  },
+  {
+    "name": "EvolutionLimbsArms1Feature",
+    "guid": "0c22da79-1155-4199-a4ed-2190c4b51d91"
+  },
+  {
+    "name": "EvolutionLimbsArms2Feature",
+    "guid": "bb21b614-b84f-44f3-97a0-863e1b1d1650"
+  },
+  {
+    "name": "EvolutionLimbsArms3Feature",
+    "guid": "9ac7ebfd-9dec-44f5-ae9e-e74a9709b37e"
+  },
+  {
+    "name": "EvolutionLimbsArms4Feature",
+    "guid": "5bf38071-fc92-410b-9498-df33b0cbde8e"
+  },
+  {
+    "name": "EvolutionLimbsArms5Feature",
+    "guid": "84ada553-baaf-4797-bad2-ddd5aa14ccd7"
+  },
+  {
+    "name": "EvolutionLimbsArms6Feature",
+    "guid": "1fdee042-7079-46b5-96a1-003b21028e46"
+  },
+  {
+    "name": "EvolutionLimbsArms7Feature",
+    "guid": "83ec4302-f7e6-4433-b0ee-e3f99125c981"
+  },
+  {
+    "name": "EvolutionLimbsArms8Feature",
+    "guid": "8f2cbf8d-3db1-4a83-8c26-fe0e5e89383c"
+  },
+  {
+    "name": "EvolutionLimbsArms9Feature",
+    "guid": "d3a11a15-e831-4f98-94de-9b6e65fe80a3"
+  },
+  {
+    "name": "EvolutionLimbsArms10Feature",
+    "guid": "f032f0a0-e72a-47d4-a083-54def981935d"
   }
 ]

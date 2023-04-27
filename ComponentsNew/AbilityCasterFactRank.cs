@@ -29,6 +29,8 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public int maxRank = 0;
 
+        public int startLevel = 0;
+
         bool CanTakeRank(int currentLevel, int currentRank)
         {
             if (currentRank >= maxRank)
@@ -47,9 +49,12 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             }
             if (!caster.Progression.Features.HasFact(m_UnitFact))
             {
-                return true;
+                if(caster.Progression.CharacterLevel >= startLevel)
+                    return true;
+                else return false;
             }
-            return CanTakeRank(caster.Progression.CharacterLevel, caster.Progression.Features.GetFact(m_UnitFact).Rank);
+
+            return CanTakeRank(caster.Progression.CharacterLevel, caster.Progression.Features.GetFact(m_UnitFact).GetRank());
         }
 
         public string GetAbilityCasterRestrictionUIText()

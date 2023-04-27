@@ -38,19 +38,24 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 amount++;
                 foreach(var evolution in level.Value)
                 {
+                    var featureAction = ActionsBuilder.New().RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")),99)
+                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")),99)
+                                                     .Build();
+
                     var featureName = evolution + "Feature";
                     FeatureConfigurator.New(featureName, GetGUID.GUIDByName(featureName))
                         .SetDisplayName(Helpers.ObtainString(featureName + ".Name"))
                         .SetDescription(Helpers.ObtainString(featureName + ".Description"))
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetRanks(1)
+                        .AddActionsOnBuffApply(actions: featureAction)
                         .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), -amount)
                         .ConfigureWithLogging();
 
 
-                    var action = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(featureName)))
-                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
-                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")))
+                    var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(featureName)))
+                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")),99)
+                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
                                                      .Build();
 
                     var abilityName = evolution + "Ability";
@@ -64,7 +69,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                         .AddAbilityTargetHasFact(new() { GetGUID.GUIDByName("EidolonSubtypeFeature") })
                         .SetCanTargetFriends(false)
                         .SetCanTargetSelf(true)
-                        .AddAbilityEffectRunAction(actions: action)
+                        .AddAbilityEffectRunAction(actions: abilityAction)
                         .AddAbilityResourceLogic(amount, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
                         .ConfigureWithLogging();
                 }
@@ -143,10 +148,14 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 "Two",
                 new List<string>
                             {
-                                "EvolutionAbilityIncrease",
+                                "EvolutionAbilityIncreaseStrength",
+                                "EvolutionAbilityIncreaseDexterity",
+                                "EvolutionAbilityIncreaseConstitution",
+                                "EvolutionAbilityIncreaseIntelligence",
+                                "EvolutionAbilityIncreaseWisdom",
+                                "EvolutionAbilityIncreaseCharisma",
                                 "EvolutionBloodFrenzy",
                                 "EvolutionEnergyAttacks",
-                                "EvolutionExtraFeat",
                                 "EvolutionFlight",
                                 "EvolutionGore",
                                 "EvolutionImmunity",

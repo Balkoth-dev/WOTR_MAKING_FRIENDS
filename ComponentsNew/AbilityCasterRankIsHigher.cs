@@ -15,31 +15,37 @@ using UnityEngine;
 using Kingmaker.UnitLogic;
 using Kingmaker.UI.Models.Log;
 using Kingmaker.UnitLogic.Abilities;
-using Kingmaker;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
-    [TypeId("e187fa66def2416b99df66d7eba5a32c")]
+    [TypeId("1b650f07db8e488d80e9fdca40158fec")]
     [AllowedOn(typeof(BlueprintAbility), false)]
     [AllowMultipleComponents]
-    public class AbilityCasterHasResource : BlueprintComponent, IAbilityCasterRestriction
+    public class AbilityCasterRankIsHigherThanFeatureAmount : BlueprintComponent, IAbilityCasterRestriction
     {
-        public BlueprintAbilityResourceReference m_Resource;
-        public int resourceAmount = 1;
+        public BlueprintFeatureReference[] hasFeatures;
+        public BlueprintUnitFactReference greaterThanFact;
+
         public bool IsCasterRestrictionPassed(UnitEntityData caster)
         {
-            if (caster == null)
+            if (hasFeatures == null || greaterThanFact == null)
             {
-                PFLog.Default.Error(this, "Caster is missing", Array.Empty<object>());
                 return false;
             }
-            return caster.Descriptor.Resources.HasEnoughResource(m_Resource, resourceAmount);
+            if (!caster.Progression.Features.HasFact(greaterThanFact))
+            {
+                return false;
+            }
+            var i = 0;
+            foreach (var feature in hasFeatures) {
+                if (caster.Progression.Features.HasFact(feature)) { i++; }
+            }
+            return i < caster.Progression.Features.GetFact(greaterThanFact).GetRank();
         }
 
         public string GetAbilityCasterRestrictionUIText()
         {
-            Main.Log("Not Enough Resource");
-            return "";
+            return string.Empty;
         }
     }
 }

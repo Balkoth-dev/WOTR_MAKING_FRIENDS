@@ -7,6 +7,7 @@ using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
+using Kingmaker.UnitLogic.FactLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,9 +49,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddAdditionalLimb(weapon:ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
+                .AddSecondaryAttacks(weapon:ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
-                .SetRanks(1)
                 .ConfigureWithLogging(true);
         }
 
