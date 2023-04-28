@@ -602,6 +602,17 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
                 },
             #endregion
+            #region EidolonManticore
+            new NewUnitClass()
+                {
+                    Name = "EidolonManticore",
+                    m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
+                    copiedUnit = UnitRefs.ManticoreSummoned.Cast<BlueprintUnitReference>().Reference,
+                    isEidolon = true,
+                    changeSize = Size.Medium,
+                    eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
+                },
+            #endregion
         };
     }
 }

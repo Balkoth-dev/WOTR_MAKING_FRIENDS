@@ -142,7 +142,17 @@ namespace WOTR_MAKING_FRIENDS.Units
                             .SetAddFacts(eidolonUnit.blueprintUnitFactReferences)
                             .AddClassLevels(null, BlueprintTool.GetRef<BlueprintCharacterClassReference>(GetGUID.GUIDByName("EidolonBaseClass")), null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception })
                             .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Unarmed1d3.Cast<BlueprintItemWeaponReference>().Reference)
-                            .SetSkills(new BlueprintUnit.UnitSkills());
+                            .SetSkills(new BlueprintUnit.UnitSkills())
+                            .AddLockEquipmentSlot(slotType: SlotType.MainHand)
+                            .AddLockEquipmentSlot(slotType: SlotType.OffHand)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
+                            .AddLockEquipmentSlot(slotType: SlotType.Weapon8);
 
             if (eidolonUnit.changeSize != null)
             {
@@ -157,16 +167,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(7)
                     .SetWisdom(10)
                     .SetCharisma(11)
-                    .AddLockEquipmentSlot(slotType: SlotType.MainHand)
-                    .AddLockEquipmentSlot(slotType: SlotType.OffHand)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon8)
                     .SetSpeed(20.Feet());
             }
             else if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Biped)
@@ -187,16 +187,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(7)
                     .SetWisdom(10)
                     .SetCharisma(11)
-                    .AddLockEquipmentSlot(slotType: SlotType.MainHand)
-                    .AddLockEquipmentSlot(slotType: SlotType.OffHand)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon8)
                     .SetSpeed(40.Feet());
             }
             else if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Serpentine)
@@ -207,16 +197,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     .SetIntelligence(7)
                     .SetWisdom(10)
                     .SetCharisma(11)
-                    .AddLockEquipmentSlot(slotType: SlotType.MainHand)
-                    .AddLockEquipmentSlot(slotType: SlotType.OffHand)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
-                    .AddLockEquipmentSlot(slotType: SlotType.Weapon8)
                     .SetSpeed(20.Feet());
             }
             var completeEidolon = eidolon.ConfigureWithLogging();

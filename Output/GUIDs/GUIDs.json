@@ -1934,5 +1934,93 @@
   {
     "name": "EvolutionLimbsArms10Feature",
     "guid": "f032f0a0-e72a-47d4-a083-54def981935d"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseStrengthFeature",
+    "guid": "1403cf74-472f-4521-ae94-4d5f8c51ece8"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseStrengthAbility",
+    "guid": "6329543c-613a-40bd-a57d-561880d0de2e"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseDexterityFeature",
+    "guid": "d7ed0c77-31a8-48fe-9050-20c9bf629d1e"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseDexterityAbility",
+    "guid": "5d2833f8-e2a3-4472-9f45-f0e6b4ed881b"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseConstitutionFeature",
+    "guid": "464aadbe-7492-42fc-9c5f-286ea63ad4b2"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseConstitutionAbility",
+    "guid": "d434c0e5-0dfa-4e90-afd8-88348e43e3aa"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseIntelligenceFeature",
+    "guid": "846c4d80-a35c-4746-a2c1-b845f384250d"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseIntelligenceAbility",
+    "guid": "a25a5b42-6244-4159-b061-c1f64bfe5e89"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseWisdomFeature",
+    "guid": "9f619c7a-ba18-4d21-a96e-0990f9cbfbca"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseWisdomAbility",
+    "guid": "d79c998b-3e8e-40d2-83e0-f101857a8e6e"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseCharismaFeature",
+    "guid": "e7b9326d-5bb1-413b-ae86-b614b640d833"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseCharismaAbility",
+    "guid": "d60bdd9f-1055-412c-ba18-85591285cd1f"
+  },
+  {
+    "name": "EvolutionSting1Feature",
+    "guid": "d099df99-7f57-4cfd-b468-e5aaf466d218"
+  },
+  {
+    "name": "EvolutionSting2Feature",
+    "guid": "b7833ce1-d42d-454a-b3b7-c24a5767d790"
+  },
+  {
+    "name": "EvolutionSting3Feature",
+    "guid": "0ef71221-bd0d-4034-94ec-9e1f92617bff"
+  },
+  {
+    "name": "EvolutionSting4Feature",
+    "guid": "b1f33868-7aa8-45bf-b935-b97b04eb50e2"
+  },
+  {
+    "name": "EvolutionSting5Feature",
+    "guid": "25345448-a88b-47a2-9080-3e29339f13ee"
+  },
+  {
+    "name": "EvolutionSting6Feature",
+    "guid": "25e49e81-c38f-45c5-a85e-a1fc91a89434"
+  },
+  {
+    "name": "EvolutionSting7Feature",
+    "guid": "5e2ec7ee-c5e7-41ae-bf71-7e8bd3149403"
+  },
+  {
+    "name": "EvolutionSting8Feature",
+    "guid": "5f89d4db-d28f-47c2-84cf-d4aed2c4b172"
+  },
+  {
+    "name": "EvolutionSting9Feature",
+    "guid": "d1cb4500-41ab-4ba5-9bc2-98210113547b"
+  },
+  {
+    "name": "EvolutionSting10Feature",
+    "guid": "63876235-32f5-4c17-b9f4-bb2cd69b109a"
   }
 ]

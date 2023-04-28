@@ -35,13 +35,18 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
             EvolutionScent.Adjust();
             EvolutionSkilled.Adjust();
             EvolutionSlam.Adjust();
-            EvolutionSting.Adjust();
+            EvolutionSpike.Adjust();
             EvolutionTail.Adjust();
             EvolutionTentacle.Adjust();
             EvolutionTentacleMass.Adjust();
             EvolutionWingBuffet.Adjust();
 
+            EvolutionAbilityIncrease.Adjust();
             EvolutionLimbsArms.Adjust();
+            EvolutionLimbsLegs.Adjust();
+            EvolutionRend.Adjust();
+            EvolutionTrip.Adjust();
+            EvolutionTrample.Adjust();
         }
 
         public static BlueprintFeatureReference[] addAbilityMultipleRanks(string evolutionName, int ranks)

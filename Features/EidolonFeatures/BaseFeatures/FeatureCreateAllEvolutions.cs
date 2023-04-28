@@ -137,7 +137,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                 "EvolutionScent",
                                 "EvolutionSkilled",
                                 "EvolutionSlam",
-                                "EvolutionSting",
+                                "EvolutionSpike",
                                 "EvolutionTail",
                                 "EvolutionTentacle",
                                 "EvolutionTentacleMass",

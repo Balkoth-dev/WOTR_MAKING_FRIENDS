@@ -29,21 +29,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = AbilityRefs.StrengthBlessingMajorAbility.Reference.Get().m_Icon;
+            internal static Sprite icon = AssetLoader.LoadInternal("Abilities", "EvolutionLimbsArms.png");
             internal const string Evolution = "EvolutionLimbsArms";
             internal static int Ranks = 10;
             internal const string Feature = Evolution + "Feature";
-            internal static LocalizedString FeatureName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString FeatureDescription = Helpers.ObtainString(Feature + ".Description");
             internal const string Ability = Evolution + "Ability";
-            internal static LocalizedString AbilityName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString AbilityDescription = Helpers.ObtainString(Feature + ".Description");
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
         }
         public static void Adjust()
         {
@@ -55,7 +45,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
                 .RemoveComponents(c => c is IncreaseResourceAmount)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.ActivatableAbility)) })
                 .AddComponent<AddAdditionalBothHandsAttacks>()
                 .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")); c.Rank = 2; c.Value = -2; })
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"),-2)

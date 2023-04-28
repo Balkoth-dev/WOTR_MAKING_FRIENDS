@@ -27,18 +27,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             internal static Sprite icon = ItemWeaponRefs.Bite1d10.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionBite";
-            internal const string Feature = Evolution + "Feature";
-            internal static LocalizedString FeatureName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString FeatureDescription = Helpers.ObtainString(Feature + ".Description");
+            internal const string Feature = Evolution + "Feature";           
             internal const string Ability = Evolution + "Ability";
-            internal static LocalizedString AbilityName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString AbilityDescription = Helpers.ObtainString(Feature + ".Description");
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
         }
         public static void Adjust()
         {

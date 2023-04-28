@@ -35,20 +35,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = FeatureRefs.ShifterTigerRend.Reference.Get().m_Icon;
+            internal static Sprite icon = ActivatableAbilityRefs.TigerGrabActivatableAbility.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionRend";
             internal const string Feature = Evolution + "Feature";
-            internal static LocalizedString FeatureName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString FeatureDescription = Helpers.ObtainString(Feature + ".Description");
             internal const string Ability = Evolution + "Ability";
-            internal static LocalizedString AbilityName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString AbilityDescription = Helpers.ObtainString(Feature + ".Description");
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
         }
         public static void Adjust()
         {
@@ -61,7 +51,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .SetIcon(InternalString.icon)
                 .AddComponent<WeaponRend>(c =>
                 {
-                    c.RendDamage = new DiceFormula { m_Rolls = 2, m_Dice = DiceType.D8 };
+                    c.RendDamage = new DiceFormula { m_Rolls = 1, m_Dice = DiceType.D6 };
                     c.RendType = new DamageTypeDescription { Common = new DamageTypeDescription.CommomData(), 
                                                              Energy = DamageEnergyType.Fire, Type = DamageType.Physical, 
                                                              Physical = new() { Material = 0, Form = PhysicalDamageForm.Slashing, Enhancement=0, EnhancementTotal=0 } };

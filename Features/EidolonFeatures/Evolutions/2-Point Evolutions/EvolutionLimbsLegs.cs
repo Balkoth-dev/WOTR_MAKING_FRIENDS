@@ -26,14 +26,14 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = FeatureRefs.MammothTrample.Reference.Get().m_Icon;
+            internal static Sprite icon = AssetLoader.LoadInternal("Abilities", "EvolutionLimbsLegs.png");
             internal const string Evolution = "EvolutionLimbsLegs";
             internal const string Feature = Evolution + "Feature";
-            internal static LocalizedString FeatureName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString FeatureDescription = Helpers.ObtainString(Feature + ".Description");
+            
+            
             internal const string Ability = Evolution + "Ability";
-            internal static LocalizedString AbilityName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString AbilityDescription = Helpers.ObtainString(Feature + ".Description");
+            
+            
             internal const string ActivatableAbility = Evolution + "ActivatableAbility";
             internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
             internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");

@@ -24,25 +24,15 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
 {
-    internal class EvolutionSting
+    internal class EvolutionSpike
     {
         private static class InternalString
         {
-            internal static Sprite icon = ItemWeaponRefs.Sting1d6.Reference.Get().m_Icon;
-            internal const string Evolution = "EvolutionSting";
+            internal static Sprite icon = ActivatableAbilityRefs.GrowingSpikesAbilityLevel1.Reference.Get().m_Icon;
+            internal const string Evolution = "EvolutionSpike";
             internal static int Ranks = 10;
             internal const string Feature = Evolution + "Feature";
-            internal static LocalizedString FeatureName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString FeatureDescription = Helpers.ObtainString(Feature + ".Description");
             internal const string Ability = Evolution + "Ability";
-            internal static LocalizedString AbilityName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString AbilityDescription = Helpers.ObtainString(Feature + ".Description");
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
         }
         public static void Adjust()
         {
@@ -54,7 +44,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.ActivatableAbility)) })
-                .AddSecondaryAttacks(ItemWeaponRefs.Sting1d6.Cast<BlueprintItemWeaponReference>().Reference)
+                .AddSecondaryAttacks(ItemWeaponRefs.Spike1d4.Cast<BlueprintItemWeaponReference>().Reference)
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
                 .ConfigureWithLogging(true);
 

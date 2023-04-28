@@ -5,9 +5,11 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using Kingmaker.UnitLogic.FactLogic;
+using Microsoft.Build.Framework.XamlTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,20 +27,18 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = ItemWeaponRefs.Bite1d10.Reference.Get().m_Icon;
-            internal const string Evolution = "EvolutionBite";
+            internal const string Evolution = "EvolutionAbilityIncrease";
             internal const string Feature = Evolution + "Feature";
-            internal static LocalizedString FeatureName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString FeatureDescription = Helpers.ObtainString(Feature + ".Description");
-            internal const string Ability = Evolution + "Ability";
-            internal static LocalizedString AbilityName = Helpers.ObtainString(Feature + ".Name");
-            internal static LocalizedString AbilityDescription = Helpers.ObtainString(Feature + ".Description");
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
+            internal static string[] abilities = new[] { "","Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" };
+            internal static Sprite[] icons = new[] { 
+                                            null,
+                                            AbilityRefs.BullsStrength.Reference.Get().m_Icon,
+                                            AbilityRefs.CatsGrace.Reference.Get().m_Icon,
+                                            AbilityRefs.BearsEndurance.Reference.Get().m_Icon,
+                                            AbilityRefs.FoxsCunning.Reference.Get().m_Icon,
+                                            AbilityRefs.OwlsWisdom.Reference.Get().m_Icon,
+                                            AbilityRefs.EaglesSplendor.Reference.Get().m_Icon
+                                            };
         }
         public static void Adjust()
         {
@@ -47,41 +47,29 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
-                .AddSecondaryAttacks(weapon: ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
-                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
-                .ConfigureWithLogging(true);
+            for(var i = 1; i < InternalString.abilities.Length; i++)
+            {
+                FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"))
+                    .SetIcon(InternalString.icons[i])
+                    .SetRanks(4)
+                    .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.Racial, stat: (StatType)Enum.Parse(typeof(StatType), i.ToString()), value: 2)
+                    .ConfigureWithLogging(true);
+            }
         }
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
-                    c.m_Facts = new BlueprintUnitFactReference[]
-                    {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDevilSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDivSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonElementalSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
-                    };
-                })
-                .AddComponent<AbilityCasterHasResource>(c => {
-                    c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 1;
-                })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
-                    c.m_Facts = new BlueprintUnitFactReference[]
-                    {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature))
-                    };
-                })
-                .ConfigureWithLogging(true);
+            for (var i = 1; i < InternalString.abilities.Length; i++)
+            {
+                AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Ability"))
+                    .SetIcon(InternalString.icons[i])
+                    .AddComponent<AbilityCasterHasFactRank>(c => {
+                        c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"));
+                        c.maxRank = 4;
+                        c.numLevelsBetweenRanks = 6;
+                    })
+                    .ConfigureWithLogging(true);
+            }
         }
     }
 }
