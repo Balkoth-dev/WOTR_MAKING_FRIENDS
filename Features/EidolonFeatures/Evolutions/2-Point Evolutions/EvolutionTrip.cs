@@ -25,7 +25,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = FeatureRefs.DragonDiscipleBiteFeatureBasic.Reference.Get().m_Icon;
+            internal static Sprite icon = FeatureRefs.WolfScarredFaceCurseBite1d4.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionTrip";
             internal const string Feature = Evolution + "Feature";
             

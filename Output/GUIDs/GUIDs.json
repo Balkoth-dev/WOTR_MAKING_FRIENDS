@@ -2022,5 +2022,81 @@
   {
     "name": "EvolutionSting10Feature",
     "guid": "63876235-32f5-4c17-b9f4-bb2cd69b109a"
+  },
+  {
+    "name": "EidolonManticore",
+    "guid": "e8b0a3f2-afd4-4273-9c2c-510bc8896971"
+  },
+  {
+    "name": "EidolonManticoreCompanionFeature",
+    "guid": "290618f2-485f-4ba1-8240-cd68cc651e01"
+  },
+  {
+    "name": "EvolutionSpikeFeature",
+    "guid": "f6a01200-dff7-4ea6-897c-296af4fbbf79"
+  },
+  {
+    "name": "EvolutionSpikeAbility",
+    "guid": "ef9a9c4c-f6de-49e7-aabf-76344cf84307"
+  },
+  {
+    "name": "EvolutionSpikeActivatableAbility",
+    "guid": "1eb1837c-f176-40b5-9a71-31e6d86d9836"
+  },
+  {
+    "name": "EvolutionSpike1Feature",
+    "guid": "d9423a8c-d699-4c75-a544-7a93774cd8f1"
+  },
+  {
+    "name": "EvolutionSpike2Feature",
+    "guid": "ee4f8a1d-87ca-4f17-9b0a-1db7fba2596d"
+  },
+  {
+    "name": "EvolutionSpike3Feature",
+    "guid": "27e76d45-90d2-40a9-aa7c-85ea3753f1d9"
+  },
+  {
+    "name": "EvolutionSpike4Feature",
+    "guid": "93297ce2-daa6-43f0-af32-d18ce6106697"
+  },
+  {
+    "name": "EvolutionSpike5Feature",
+    "guid": "fc2ba565-c74e-454f-919e-f3866a2d134c"
+  },
+  {
+    "name": "EvolutionSpike6Feature",
+    "guid": "c3461a23-a017-4115-8664-af9579caa2b5"
+  },
+  {
+    "name": "EvolutionSpike7Feature",
+    "guid": "2ebe0d65-e8b0-484d-a443-18b7449e68db"
+  },
+  {
+    "name": "EvolutionSpike8Feature",
+    "guid": "88228402-fc06-43f1-8d80-3ac639236e76"
+  },
+  {
+    "name": "EvolutionSpike9Feature",
+    "guid": "bda3a1fe-a163-44f0-a522-eb81e58afec2"
+  },
+  {
+    "name": "EvolutionSpike10Feature",
+    "guid": "29addf04-3eaa-4f7b-bd56-412ca1b52961"
+  },
+  {
+    "name": "EvolutionTripTripFeature",
+    "guid": "17c93b46-b69b-4b98-97c0-780ed95cae7e"
+  },
+  {
+    "name": "EvolutionBiteTrampleAbility",
+    "guid": "ae69c704-4702-499a-9946-7db0951252c6"
+  },
+  {
+    "name": "EvolutionTrampleTrampleAbility",
+    "guid": "20938408-14e0-4c43-ad50-de8b71edaa46"
+  },
+  {
+    "name": "EvolutionDamageReductionResourceReductionFeature",
+    "guid": "fae53a91-545a-437c-951d-156b328cfbeb"
   }
 ]

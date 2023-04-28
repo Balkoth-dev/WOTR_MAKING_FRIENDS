@@ -26,7 +26,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = AssetLoader.LoadInternal("Abilities", "EvolutionLimbsLegs.png");
+            internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionLimbsLegs.png");
             internal const string Evolution = "EvolutionLimbsLegs";
             internal const string Feature = Evolution + "Feature";
             

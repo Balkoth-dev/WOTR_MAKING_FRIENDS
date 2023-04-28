@@ -128,11 +128,9 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                             {
                                 "EvolutionBite",
                                 "EvolutionClaws",
-                                "EvolutionImprovedDamage",
                                 "EvolutionMagicAttacks",
                                 "EvolutionNaturalArmor",
                                 "EvolutionPincers",
-                                "EvolutionReach",
                                 "EvolutionResistance",
                                 "EvolutionScent",
                                 "EvolutionSkilled",
@@ -175,6 +173,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                 "EvolutionDamageReduction",
                                 "EvolutionPounce",
                                 "EvolutionWeb",
+                                "EvolutionImprovedDamage",
+                                "EvolutionReach",
                             }
             },
             {

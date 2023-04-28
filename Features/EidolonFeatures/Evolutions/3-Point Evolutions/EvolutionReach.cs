@@ -18,14 +18,14 @@ using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolutions
 {
-    internal class EvolutionTail
+    internal class EvolutionReach
     {
         private static class InternalString
         {
-            internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionTail.png");
-            internal const string Evolution = "EvolutionTail";
+            internal static Sprite icon = FeatureRefs.LungeFeature.Reference.Get().m_Icon;
+            internal const string Evolution = "EvolutionReach";
             internal const string Feature = Evolution + "Feature";
             internal const string Ability = Evolution + "Ability";
         }
@@ -38,25 +38,17 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.Racial, stat: StatType.SkillMobility, value: 2)
-                .SetRanks(99)
+                .AddStatBonus(descriptor:Kingmaker.Enums.ModifierDescriptor.Other,false,StatType.Reach,5)
                 .ConfigureWithLogging(true);
         }
         public static void AdjustAbility()
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
                 .SetIcon(InternalString.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDevilSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDivSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonElementalSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature))
                     };
                 })
                 .ConfigureWithLogging(true);

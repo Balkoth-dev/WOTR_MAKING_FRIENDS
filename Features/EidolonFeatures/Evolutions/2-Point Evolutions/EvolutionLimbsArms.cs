@@ -22,6 +22,7 @@ using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
 {
@@ -29,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = AssetLoader.LoadInternal("Abilities", "EvolutionLimbsArms.png");
+            internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionLimbsArms.png");
             internal const string Evolution = "EvolutionLimbsArms";
             internal static int Ranks = 10;
             internal const string Feature = Evolution + "Feature";
@@ -49,6 +50,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")); c.Rank = 2; c.Value = -2; })
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"),-2)
                 .SetRanks(InternalString.Ranks)
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.MainHand; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.OffHand; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon1; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon2; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon3; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon4; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon5; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon6; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon7; })
+                .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon8; })
                 .ConfigureWithLogging(true);
 
         }

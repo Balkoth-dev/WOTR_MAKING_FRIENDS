@@ -17,6 +17,8 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using WOTR_MAKING_FRIENDS.Utilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Components;
+using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolutions;
+using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolutions;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
 {
@@ -26,11 +28,9 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
         {
             EvolutionBite.Adjust();
             EvolutionClaws.Adjust();
-            EvolutionImprovedDamage.Adjust();
             EvolutionMagicAttacks.Adjust();
             EvolutionNaturalArmor.Adjust();
             EvolutionPincers.Adjust();
-            EvolutionReach.Adjust();
             EvolutionResistance.Adjust();
             EvolutionScent.Adjust();
             EvolutionSkilled.Adjust();
@@ -47,6 +47,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
             EvolutionRend.Adjust();
             EvolutionTrip.Adjust();
             EvolutionTrample.Adjust();
+
+            EvolutionImprovedDamage.Adjust();
+            EvolutionReach.Adjust();
+            EvolutionDamageReduction.Adjust();
         }
 
         public static BlueprintFeatureReference[] addAbilityMultipleRanks(string evolutionName, int ranks)

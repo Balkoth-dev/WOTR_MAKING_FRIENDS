@@ -4,10 +4,14 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
+using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
-using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Blueprints.Items.Weapons;
+using Kingmaker.Enums;
 using Kingmaker.Localization;
+using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
+using Kingmaker.UnitLogic.Mechanics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +21,16 @@ using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static Kingmaker.UnitLogic.Mechanics.Components.AdditionalDiceOnAttack;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolutions
 {
-    internal class EvolutionTail
+    internal class EvolutionImprovedDamage
     {
         private static class InternalString
         {
-            internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionTail.png");
-            internal const string Evolution = "EvolutionTail";
+            internal static Sprite icon = AbilityRefs.MagicFang.Reference.Get().m_Icon;
+            internal const string Evolution = "EvolutionImprovedDamage";
             internal const string Feature = Evolution + "Feature";
             internal const string Ability = Evolution + "Ability";
         }
@@ -38,25 +43,17 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.Racial, stat: StatType.SkillMobility, value: 2)
-                .SetRanks(99)
+                .AddComponent<WeaponSizeChangeWeaponGroup>(c => { c.weaponGroup = WeaponFighterGroup.Natural; c.SizeCategoryChange = 1; })
                 .ConfigureWithLogging(true);
         }
         public static void AdjustAbility()
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
                 .SetIcon(InternalString.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDevilSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDivSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonElementalSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature))
                     };
                 })
                 .ConfigureWithLogging(true);
