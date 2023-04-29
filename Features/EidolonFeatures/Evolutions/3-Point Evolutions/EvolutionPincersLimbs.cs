@@ -50,6 +50,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
                     c.limbCount = 2;
                     c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature));
                 })
+                .AddManeuverBonus(type: Kingmaker.RuleSystem.Rules.CombatManeuver.SunderArmor, bonus: 2, descriptor: Kingmaker.Enums.ModifierDescriptor.Racial)
                 .SetRanks(InternalString.Ranks)
                 .ConfigureWithLogging(true);
 

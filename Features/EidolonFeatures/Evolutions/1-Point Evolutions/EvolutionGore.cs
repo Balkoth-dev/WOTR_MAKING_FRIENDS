@@ -25,7 +25,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = FeatureRefs.DemonNaturalAttackFeatureLevel5.Reference.Get().m_Icon;
+            internal static Sprite icon = FeatureRefs.DemonFirstAscension.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionGore";
             internal const string Feature = Evolution + "Feature";
             internal const string Ability = Evolution + "Ability";

@@ -61,7 +61,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                 FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"))
                     .SetIcon(InternalString.icons[i])
                     .SetRanks(1)
-                    .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
                     .AddEnergyImmunity(type: energyType)
                     .ConfigureWithLogging(true);
             }

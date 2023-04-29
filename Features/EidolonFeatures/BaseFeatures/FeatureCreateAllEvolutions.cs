@@ -199,7 +199,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                             {
                                 "EvolutionAmorphous",
                                 "EvolutionBlindsight",
-                                "EvolutionBreathWeapon",
+                                "EvolutionBreathWeaponAcid",
+                                "EvolutionBreathWeaponCold",
+                                "EvolutionBreathWeaponElectricity",
+                                "EvolutionBreathWeaponFire",
                                 "EvolutionFastHealing",
                                 "EvolutionLarge",
                                 "EvolutionSpellResistance"

@@ -23,7 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
     {
         private static class InternalString
         {
-            internal static Sprite icon = FeatureRefs.KiStrikeMagic.Reference.Get().m_Icon;
+            internal static Sprite icon = AbilityRefs.MagicWeapon.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionMagicAttacks";
             internal const string Feature = Evolution + "Feature";
             internal const string Ability = Evolution + "Ability";

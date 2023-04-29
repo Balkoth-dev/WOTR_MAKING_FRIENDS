@@ -64,6 +64,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
             EvolutionReach.Adjust();
             EvolutionSlamLimbs.Adjust();
             EvolutionWeb.Adjust();
+
+            EvolutionAmorphous.Adjust();
+            EvolutionBlindsight.Adjust();
+            EvolutionBreathWeapon.Adjust();
+            EvolutionFastHealing.Adjust();
+            EvolutionSpellResistance.Adjust();
         }
 
 
