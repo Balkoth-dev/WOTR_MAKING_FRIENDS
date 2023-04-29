@@ -75,12 +75,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
                 .SetIcon(InternalString.icon)
                 .AddAbilityEffectRunAction(actions: abilityAction)
-                       .AddComponent<AbilityCasterHasFactRank>(c => {
-                           c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature));
-                           c.maxRank = 100;
-                           c.numLevelsBetweenRanks = 0;
-                           c.startLevel = 15;
-                       })
+                .AddComponent<AbilityCasterHasFactRank>(c => {
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.maxRank = 100;
+                    c.numLevelsBetweenRanks = 0;
+                    c.startLevel = 15;
+                })
                 .ConfigureWithLogging(true);
         }
     }

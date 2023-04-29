@@ -6,6 +6,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
+using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using Kingmaker.UnitLogic.FactLogic;
 using System;
@@ -47,7 +48,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         public static void AddEvolutionTrampleAbility()
         {
             AbilityConfigurator.New(InternalString.WebAbility, GetGUID.GUIDByName(InternalString.WebAbility))
-                .CopyFrom(AbilityRefs.Web, c => true)
+                .CopyFrom(AbilityRefs.WebTiefling, c => c is not AbilityResourceLogic)
                 .ConfigureWithLogging();
         }
 

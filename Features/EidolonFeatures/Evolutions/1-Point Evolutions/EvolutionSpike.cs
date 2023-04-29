@@ -45,7 +45,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddComponent<AddAdditionalBothHandsAttacksOrAddAdditionalLimbs>(c => { c.blueprintItemWeaponReference = ItemWeaponRefs.Slam1d4.Cast<BlueprintItemWeaponReference>().Reference; c.additionalLimbs = 2; })
+                .AddComponent<AddSecondaryAttacksItemsByRank>(c => {
+                    c.m_Weapon = ItemWeaponRefs.Spike1d4.Cast<BlueprintItemWeaponReference>().Reference;
+                    c.limbCount = 1;
+                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature));
+                })
                 .SetRanks(InternalString.Ranks)
                 .ConfigureWithLogging(true);
 

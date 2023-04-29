@@ -45,7 +45,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddComponent<AddAdditionalBothHandsAttacksOrAddAdditionalLimbs>(c => { c.blueprintItemWeaponReference = ItemWeaponRefs.Slam1d4.Cast<BlueprintItemWeaponReference>().Reference; c.additionalLimbs = 2; })
+                .AddComponent<AddSecondaryAttacksItemsByRank>(c => {
+                    c.m_Weapon = ItemWeaponRefs.Slam1d4.Cast<BlueprintItemWeaponReference>().Reference;
+                    c.limbCount = 2;
+                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature));
+                })
+                .AddManeuverBonus(type: Kingmaker.RuleSystem.Rules.CombatManeuver.BullRush, bonus: 2, descriptor: Kingmaker.Enums.ModifierDescriptor.Racial)
                 .SetRanks(InternalString.Ranks)
                 .ConfigureWithLogging(true);
 
