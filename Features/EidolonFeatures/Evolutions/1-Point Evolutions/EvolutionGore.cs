@@ -21,24 +21,14 @@ using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
 {
-    internal class EvolutionWeaponTraining
+    internal class EvolutionGore
     {
         private static class InternalString
         {
-            internal static Sprite icon = ItemWeaponRefs.Bite1d10.Reference.Get().m_Icon;
-            internal const string Evolution = "EvolutionBite";
+            internal static Sprite icon = FeatureRefs.DemonNaturalAttackFeatureLevel5.Reference.Get().m_Icon;
+            internal const string Evolution = "EvolutionGore";
             internal const string Feature = Evolution + "Feature";
-            
-            
             internal const string Ability = Evolution + "Ability";
-            
-            
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
         }
         public static void Adjust()
         {
@@ -49,7 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddSecondaryAttacks(weapon: ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
+                .AddSecondaryAttacks(weapon: ItemWeaponRefs.Gore1d6.Cast<BlueprintItemWeaponReference>().Reference)
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
                 .ConfigureWithLogging(true);
         }

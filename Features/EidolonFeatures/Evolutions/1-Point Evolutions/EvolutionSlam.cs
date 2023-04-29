@@ -46,6 +46,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.ActivatableAbility)) })
+                .AddManeuverBonus(type: Kingmaker.RuleSystem.Rules.CombatManeuver.BullRush, bonus: 2, descriptor: Kingmaker.Enums.ModifierDescriptor.Racial)
                 .ConfigureWithLogging(true);
         }
         public static void AddWeaponEmptyHandOverrideAbility()
@@ -74,19 +75,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
                 .SetIcon(InternalString.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
-                    c.m_Facts = new BlueprintUnitFactReference[]
-                    {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDevilSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDivSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonElementalSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
-                    };
-                })
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
                     c.resourceAmount = 2;

@@ -5,7 +5,9 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Enums;
 using Kingmaker.Localization;
+using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using Kingmaker.UnitLogic.FactLogic;
 using System;
@@ -19,26 +21,16 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions
 {
-    internal class EvolutionGore
+    internal class EvolutionBullrush
     {
         private static class InternalString
         {
-            internal static Sprite icon = FeatureRefs.DemonNaturalAttackFeatureLevel5.Reference.Get().m_Icon;
-            internal const string Evolution = "EvolutionGore";
+            internal static Sprite icon = AbilityRefs.BullRushAction.Reference.Get().m_Icon;
+            internal const string Evolution = "EvolutionBullrush";
             internal const string Feature = Evolution + "Feature";
-            
-            
             internal const string Ability = Evolution + "Ability";
-            
-            
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
         }
         public static void Adjust()
         {
@@ -49,8 +41,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddSecondaryAttacks(weapon: ItemWeaponRefs.Gore1d6.Cast<BlueprintItemWeaponReference>().Reference)
-                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
+                .AddManeuverOnAttack(category:WeaponCategory.Slam,maneuver:CombatManeuver.BullRush)
                 .ConfigureWithLogging(true);
         }
 
@@ -61,19 +52,19 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDevilSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDivSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonElementalSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
                     };
                 })
-                .AddComponent<AbilityCasterHasResource>(c => {
-                    c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 1;
+                .AddComponent<AbilityCasterHasFacts>(c => {
+                    c.m_Facts = new BlueprintUnitFactReference[]
+                    {
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSlamFeature")),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSlamLimbsFeature")),
+                    };
                 })
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]

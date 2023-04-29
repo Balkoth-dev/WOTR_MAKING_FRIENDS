@@ -5,7 +5,9 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Enums;
 using Kingmaker.Localization;
+using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using Kingmaker.UnitLogic.FactLogic;
 using System;
@@ -19,40 +21,28 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions
 {
     internal class EvolutionTrip
     {
         private static class InternalString
         {
-            internal static Sprite icon = FeatureRefs.WolfScarredFaceCurseBite1d4.Reference.Get().m_Icon;
+            internal static Sprite icon = AbilityRefs.BestowCurse.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionTrip";
             internal const string Feature = Evolution + "Feature";
-            
-            
             internal const string Ability = Evolution + "Ability";
-            
-            
-            internal const string TripFeature = Evolution + "TripFeature";
         }
         public static void Adjust()
         {
             AdjustFeature();
-            AddEvolutionTrampleAbility();
             AdjustAbility();
         }
         public static void AdjustFeature()
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.TripFeature)) })
+                .AddManeuverOnAttack(category:WeaponCategory.Bite,maneuver:CombatManeuver.Trip)
                 .ConfigureWithLogging(true);
-        }
-        public static void AddEvolutionTrampleAbility()
-        {
-            FeatureConfigurator.New(InternalString.TripFeature, GetGUID.GUIDByName(InternalString.TripFeature))
-                .CopyFrom(FeatureRefs.TrippingBite, c => true)
-                .ConfigureWithLogging();
         }
 
         public static void AdjustAbility()

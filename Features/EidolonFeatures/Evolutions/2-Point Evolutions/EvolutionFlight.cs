@@ -19,61 +19,51 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions
 {
     internal class EvolutionFlight
     {
         private static class InternalString
         {
-            internal static Sprite icon = ItemWeaponRefs.Bite1d10.Reference.Get().m_Icon;
-            internal const string Evolution = "EvolutionBite";
+            internal static Sprite icon = ActivatableAbilityRefs.AbilityWingsAngel.Reference.Get().m_Icon;
+            internal const string Evolution = "EvolutionFlight";
             internal const string Feature = Evolution + "Feature";
-            
-            
             internal const string Ability = Evolution + "Ability";
-            
-            
-            internal const string ActivatableAbility = Evolution + "ActivatableAbility";
-            internal static LocalizedString ActivatableAbilityName = Helpers.ObtainString(ActivatableAbility + ".Name");
-            internal static LocalizedString ActivatableAbilityDescription = Helpers.ObtainString(ActivatableAbility + ".Description");
-            internal const string Buff = Evolution + "Buff";
-            internal static LocalizedString BuffName = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString BuffDescription = Helpers.ObtainString(Buff + ".Description");
+            internal const string FlightBuff = Evolution + "FlightBuff";
+            internal const string FlightFeature = Evolution + "FlightFeature";
         }
         public static void Adjust()
         {
             AdjustFeature();
+            AddEvolutionFlightBuff();
             AdjustAbility();
         }
         public static void AdjustFeature()
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddSecondaryAttacks(weapon: ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
-                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.FlightBuff)) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.FlightFeature)) })
                 .ConfigureWithLogging(true);
+        }
+        public static void AddEvolutionFlightBuff()
+        {
+            BuffConfigurator.New(InternalString.FlightBuff, GetGUID.GUIDByName(InternalString.FlightBuff))
+                .CopyFrom(BuffRefs.AngelicAspectGreaterBuff)
+                .ConfigureWithLogging();
+
+            FeatureConfigurator.New(InternalString.FlightFeature, GetGUID.GUIDByName(InternalString.FlightFeature))
+                .CopyFrom(FeatureRefs.Airborne, c => true)
+                .ConfigureWithLogging();
         }
 
         public static void AdjustAbility()
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
                 .SetIcon(InternalString.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
-                    c.m_Facts = new BlueprintUnitFactReference[]
-                    {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDevilSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDivSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonElementalSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
-                    };
-                })
-                .AddComponent<AbilityCasterHasResource>(c => {
-                    c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 1;
+                .AddComponent<AbilityCasterHasFactRank>(c => {
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.startLevel = 5;
                 })
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]

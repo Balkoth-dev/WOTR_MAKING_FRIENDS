@@ -11,6 +11,7 @@ using Kingmaker.Blueprints;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
+using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics.Conditions;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
 {
@@ -43,17 +45,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddSecondaryAttacks(ItemWeaponRefs.Tentacle1d4.Cast<BlueprintItemWeaponReference>().Reference)
-                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
+                .AddComponent<AddAdditionalBothHandsAttacksOrAddAdditionalLimbs>(c => { c.blueprintItemWeaponReference = ItemWeaponRefs.Tentacle1d4.Cast<BlueprintItemWeaponReference>().Reference; c.additionalLimbs = 2; })
+                .SetRanks(InternalString.Ranks)
                 .ConfigureWithLogging(true);
-
-            AdjustEvolutions.createEvolutionCopies(InternalString.Evolution, InternalString.Ranks);
 
         }
         public static void AdjustAbility()
         {
-            AdjustEvolutions.addAbilityMultipleRanks(InternalString.Evolution, InternalString.Ranks);
-
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
                 .SetIcon(InternalString.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
@@ -71,13 +69,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 })
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 1;
-                })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
-                    c.m_Facts = new BlueprintUnitFactReference[]
-                    {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution+InternalString.Ranks+"Feature"))
-                    };
+                    c.resourceAmount = 2;
                 })
                 .ConfigureWithLogging(true);
         }

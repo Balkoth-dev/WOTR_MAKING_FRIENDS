@@ -25,6 +25,8 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
     public class AbilityCasterHasResource : BlueprintComponent, IAbilityCasterRestriction
     {
         public BlueprintAbilityResourceReference m_Resource;
+        public BlueprintFeatureReference m_Feature;
+        public int featureRank = 0;
         public int resourceAmount = 1;
         public bool IsCasterRestrictionPassed(UnitEntityData caster)
         {
@@ -32,6 +34,16 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 PFLog.Default.Error(this, "Caster is missing", Array.Empty<object>());
                 return false;
+            }
+            if(m_Feature != null)
+            {
+                if(caster.Progression.Features.HasFact(m_Feature))
+                {
+                    if(caster.Progression.Features.GetFact(m_Feature).Rank <= featureRank)
+                    {
+                        return true;
+                    }
+                }
             }
             return caster.Descriptor.Resources.HasEnoughResource(m_Resource, resourceAmount);
         }

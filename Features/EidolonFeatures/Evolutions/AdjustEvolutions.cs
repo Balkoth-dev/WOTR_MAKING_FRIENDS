@@ -19,6 +19,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Components;
 using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolutions;
 using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolutions;
+using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
 {
@@ -28,6 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
         {
             EvolutionBite.Adjust();
             EvolutionClaws.Adjust();
+            EvolutionGore.Adjust();
             EvolutionMagicAttacks.Adjust();
             EvolutionNaturalArmor.Adjust();
             EvolutionPincers.Adjust();
@@ -42,17 +44,30 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
             EvolutionWingBuffet.Adjust();
 
             EvolutionAbilityIncrease.Adjust();
+            EvolutionBloodFrenzy.Adjust();
+            EvolutionBullrush.Adjust();
+            EvolutionEnergyAttacks.Adjust();
+            EvolutionFlight.Adjust();
+            EvolutionImmunity.Adjust();
             EvolutionLimbsArms.Adjust();
             EvolutionLimbsLegs.Adjust();
             EvolutionRend.Adjust();
-            EvolutionTrip.Adjust();
+            EvolutionSunderarmor.Adjust();
             EvolutionTrample.Adjust();
+            EvolutionTrip.Adjust();
 
-            EvolutionImprovedDamage.Adjust();
-            EvolutionReach.Adjust();
+            EvolutionClawsLimbs.Adjust();
             EvolutionDamageReduction.Adjust();
+            EvolutionImprovedDamage.Adjust();
+            EvolutionPincersLimbs.Adjust();
+            EvolutionPounce.Adjust();
+            EvolutionReach.Adjust();
+            EvolutionSlamLimbs.Adjust();
+            EvolutionWeb.Adjust();
         }
 
+
+        //To-Do: Delete below if not needed 
         public static BlueprintFeatureReference[] addAbilityMultipleRanks(string evolutionName, int ranks)
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(evolutionName + "Ability"))

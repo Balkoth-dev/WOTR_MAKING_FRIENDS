@@ -24,7 +24,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions
 {
     internal class EvolutionLimbsArms
     {
@@ -46,7 +46,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
                 .RemoveComponents(c => c is IncreaseResourceAmount)
-                .AddComponent<AddAdditionalBothHandsAttacks>()
+                .AddComponent<AddAdditionalBothHandsAttacksOrAddAdditionalLimbs>(c => { c.rankStart = 2; })
                 .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")); c.Rank = 2; c.Value = -2; })
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"),-2)
                 .SetRanks(InternalString.Ranks)
@@ -69,13 +69,9 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .SetIcon(InternalString.icon)
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 1;
-                })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
-                    c.m_Facts = new BlueprintUnitFactReference[]
-                    {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution+InternalString.Ranks+"Feature"))
-                    };
+                    c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(InternalString.Feature);
+                    c.featureRank = 1;
+                    c.resourceAmount = 2;
                 })
                 .ConfigureWithLogging(true);
         }

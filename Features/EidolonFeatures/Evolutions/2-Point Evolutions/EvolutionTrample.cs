@@ -19,7 +19,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions
 {
     internal class EvolutionTrample
     {
@@ -28,11 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             internal static Sprite icon = AbilityRefs.TrampleAbility.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionTrample";
             internal const string Feature = Evolution + "Feature";
-            
-            
-            internal const string Ability = Evolution + "Ability";
-            
-            
+            internal const string Ability = Evolution + "Ability";            
             internal const string TrampleAbility = Evolution + "TrampleAbility";
         }
         public static void Adjust()

@@ -1,18 +1,15 @@
-﻿using BlueprintCore.Actions.Builder;
-using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
+﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
-using BlueprintCore.Conditions.Builder;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Enums;
 using Kingmaker.Localization;
-using Kingmaker.UnitLogic.Abilities.Components;
+using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.UnitLogic.Mechanics.Conditions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,17 +19,16 @@ using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
+using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions
 {
-    internal class EvolutionSpike
+    internal class EvolutionSunderarmor
     {
         private static class InternalString
         {
-            internal static Sprite icon = ItemWeaponRefs.Spike1d4.Reference.Get().m_Icon;
-            internal const string Evolution = "EvolutionSpike";
-            internal static int Ranks = 10;
+            internal static Sprite icon = AbilityRefs.SunderAction.Reference.Get().m_Icon;
+            internal const string Evolution = "EvolutionSunderarmor";
             internal const string Feature = Evolution + "Feature";
             internal const string Ability = Evolution + "Ability";
         }
@@ -45,11 +41,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
                 .SetIcon(InternalString.icon)
-                .AddComponent<AddAdditionalBothHandsAttacksOrAddAdditionalLimbs>(c => { c.blueprintItemWeaponReference = ItemWeaponRefs.Slam1d4.Cast<BlueprintItemWeaponReference>().Reference; c.additionalLimbs = 2; })
-                .SetRanks(InternalString.Ranks)
+                .AddManeuverOnAttack(category:WeaponCategory.OtherNaturalWeapons,maneuver:CombatManeuver.SunderArmor)
                 .ConfigureWithLogging(true);
-
         }
+
         public static void AdjustAbility()
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
@@ -57,7 +52,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDevilSubtypeFeature")),
@@ -67,12 +61,18 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
                     };
                 })
-                .AddComponent<AbilityCasterHasResource>(c => {
-                    c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 1;
+                .AddComponent<AbilityCasterHasFacts>(c => {
+                    c.m_Facts = new BlueprintUnitFactReference[]
+                    {
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionPincersFeature")),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionPincersLimbsFeature")),
+                    };
                 })
-                .AddComponent<AbilityCasterRankIsHigherThanFeatureAmount>(c => {
-                    c.greaterThanFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionTailFeature"));
+                .AddComponent<AbilityCasterHasNoFacts>(c => {
+                    c.m_Facts = new BlueprintUnitFactReference[]
+                    {
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature))
+                    };
                 })
                 .ConfigureWithLogging(true);
         }

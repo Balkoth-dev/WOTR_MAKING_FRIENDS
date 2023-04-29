@@ -23,7 +23,7 @@ using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.UnitLogic.Mechanics.Components.AdditionalDiceOnAttack;
 
-namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolutions
+namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolutions
 {
     internal class EvolutionImprovedDamage
     {

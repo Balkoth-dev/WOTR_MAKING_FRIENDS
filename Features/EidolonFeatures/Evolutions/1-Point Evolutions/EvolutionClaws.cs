@@ -69,7 +69,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .SetDescription(InternalString.BuffDescription)
                 .SetIcon(InternalString.icon)
                 .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference)
-                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -2)
                 .ConfigureWithLogging();
         }
         public static void AdjustAbility()

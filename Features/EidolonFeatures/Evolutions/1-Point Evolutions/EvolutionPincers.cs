@@ -5,6 +5,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using System;
@@ -68,6 +69,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .SetDescription(InternalString.BuffDescription)
                 .SetIcon(InternalString.icon)
                 .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Pincers1d6.Cast<BlueprintItemWeaponReference>().Reference)
+                .AddManeuverBonus(type: Kingmaker.RuleSystem.Rules.CombatManeuver.SunderArmor, bonus: 2, descriptor: Kingmaker.Enums.ModifierDescriptor.Racial)
                 .ConfigureWithLogging();
         }
         public static void AdjustAbility()
