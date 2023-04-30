@@ -2466,5 +2466,117 @@
   {
     "name": "AdditionalWeaponClaw",
     "guid": "4ead1ecc-93b3-4948-bca0-edac656c2102"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidFeature",
+    "guid": "fc46aae0-860b-40a2-85cb-26573039f0bf"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidAbility",
+    "guid": "72be6634-f7cd-48c0-9488-601d90b760c2"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdFeature",
+    "guid": "6441bdde-57e3-4817-a397-22a7c94df141"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdAbility",
+    "guid": "efd43154-12d0-4117-ab24-815274675461"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityFeature",
+    "guid": "c4cb72f2-1b4d-4f60-a037-144663f01e60"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityAbility",
+    "guid": "e41175d0-c702-4d70-82bf-1a691f69f7ea"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireFeature",
+    "guid": "72a21072-3c20-48b9-ac8d-6c9e7f2fa57d"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireAbility",
+    "guid": "6d450788-d9a2-4d35-818a-8ad5c31da2fe"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidBreathAbility",
+    "guid": "085c9ed8-9a8b-4c31-ae4f-59ce9b893ea6"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdBreathAbility",
+    "guid": "b7bb0804-35a8-40ec-83d3-db849e7b081a"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityBreathAbility",
+    "guid": "a70f8381-f543-481c-966b-9ad103c8cc4d"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireBreathAbility",
+    "guid": "9808b508-dbe6-49e5-89a0-97cd588b7225"
+  },
+  {
+    "name": "EvolutionFastHealingBuff",
+    "guid": "f817e423-4048-489b-b38f-bc0180b3339e"
+  },
+  {
+    "name": "EvolutionSizeChangeFineFeature",
+    "guid": "4eaea374-565c-45aa-b5e7-c285c606621f"
+  },
+  {
+    "name": "EvolutionSizeChangeDiminutiveFeature",
+    "guid": "dac5bbb3-2f29-49fc-85af-d23a75d229d1"
+  },
+  {
+    "name": "EvolutionSizeChangeTinyFeature",
+    "guid": "cf473181-e3cb-4662-909a-efdaa2dc0f3e"
+  },
+  {
+    "name": "EvolutionSizeChangeSmallFeature",
+    "guid": "193d96cb-2fdd-4ad5-8741-38e2ae6cc588"
+  },
+  {
+    "name": "EvolutionSizeChangeMediumFeature",
+    "guid": "b4e0c003-b0da-4b0a-aa39-aaa0940db89a"
+  },
+  {
+    "name": "EvolutionSizeChangeLargeFeature",
+    "guid": "ec7dd4b0-3d39-4cfb-83c3-fb80a9054e03"
+  },
+  {
+    "name": "EvolutionSizeChangeHugeFeature",
+    "guid": "937fd11d-dcd1-48f7-a9ad-3aaff618ae8d"
+  },
+  {
+    "name": "EvolutionSizeChangeGargantuanFeature",
+    "guid": "dbb0936c-929f-4fd1-bff0-f61e008429e5"
+  },
+  {
+    "name": "EvolutionSizeChangeColossalFeature",
+    "guid": "6f89fb4a-0119-45aa-b94e-5f093993fd73"
+  },
+  {
+    "name": "EvolutionCost1",
+    "guid": "24a03c47-1e60-44f0-bfab-da3141e3ba41"
+  },
+  {
+    "name": "EvolutionTailSlapFeature",
+    "guid": "655d3bea-ab6c-4ab8-9547-2ce17852dd97"
+  },
+  {
+    "name": "EvolutionTailSlapAbility",
+    "guid": "ec52e116-268b-418d-92af-683ff71ef5c7"
+  },
+  {
+    "name": "EvolutionCost2",
+    "guid": "027ee41f-64c2-4b1d-a4db-9245be87a882"
+  },
+  {
+    "name": "EvolutionCost3",
+    "guid": "a5c6b189-eeeb-41f4-9bee-2e84207d4256"
+  },
+  {
+    "name": "EvolutionCost4",
+    "guid": "e336ff80-9fc6-463b-af2a-dbf255a0a9c3"
   }
 ]

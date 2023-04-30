@@ -22,11 +22,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_AirElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    size = Size.Medium,
-                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
-                                                  {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAirElementalVariantFeature"))
-                                                  }
                 },
             #endregion
             #region EidolonFireElemental
@@ -37,11 +32,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_FireElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    size = Size.Medium,
-                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
-                                                  {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonFireElementalVariantFeature"))
-                                                  }
                 },
             #endregion
             #region EidolonWaterElemental
@@ -52,10 +42,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.CR3_WaterElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
-                                                  {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonWaterElementalVariantFeature"))
-                                                  }
                 },
             #endregion
             #region EidolonEarthElemental
@@ -65,11 +51,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR3_EarthElementalMedium.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
-                                                  {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonEarthElementalVariantFeature"))
-                                                  }
+                    eidolonBaseForm = EnumsEidolonBaseForm.Abberant
                 },
             #endregion
             #region EidolonGoldDragon
@@ -124,8 +106,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     copiedUnit = UnitRefs.TestTroll.Cast<BlueprintUnitReference>().Reference,
                     portrait = BlueprintTool.GetRef<BlueprintPortraitReference>("8b39144752ca7644b97d0d6c3253f923"),
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonSuccubus
@@ -165,8 +150,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR17_MarilithStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonDretch
@@ -186,8 +174,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.BalorSummon.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonSchir
@@ -227,8 +218,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR11_VrockAdvanced.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonPainaji
@@ -258,8 +252,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR17_LilituStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonVavakia
@@ -269,8 +266,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR18_VavakiaStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonBythos
@@ -310,8 +310,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.GolemWoodSummon.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonGolemIron
@@ -321,8 +324,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.GolemIronSummon.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonAstralDeva
@@ -362,8 +368,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR7_AzataLillendStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonBralani
@@ -383,8 +392,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.ArmyAzataVeranallia.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonYinudja
@@ -404,8 +416,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.TreantSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonErinyes
@@ -435,8 +450,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.Arcanotheign.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonShade
@@ -456,8 +474,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR17_ProteanKeketarStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonCragLinnorm
@@ -467,8 +488,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR14_CragLinnorm.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonRedDragon
@@ -534,8 +558,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR15_CyborgSalamander_Add.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonShamblingMound
@@ -545,8 +572,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR6_ShamblingMound.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonNightmare
@@ -556,8 +586,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR5_NightmareFriendly.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonHellHound
@@ -567,8 +600,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.HellhoundSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Small,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonAstradaemon
@@ -578,8 +614,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.SoulsCloakAstradaemonSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Fine,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature"))
+                                                  }
                 },
             #endregion
             #region EidolonMeladaemon
@@ -609,8 +648,11 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.ManticoreSummoned.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    changeSize = Size.Medium,
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                  }
                 },
             #endregion
         };

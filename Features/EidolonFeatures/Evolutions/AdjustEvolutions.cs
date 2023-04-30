@@ -27,6 +27,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
     {
         public static void Adjust()
         {
+            //1-Point Evolutions
             EvolutionBite.Adjust();
             EvolutionClaws.Adjust();
             EvolutionGore.Adjust();
@@ -39,10 +40,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
             EvolutionSlam.Adjust();
             EvolutionSpike.Adjust();
             EvolutionTail.Adjust();
+            EvolutionTailSlap.Adjust();
             EvolutionTentacle.Adjust();
             EvolutionTentacleMass.Adjust();
             EvolutionWingBuffet.Adjust();
 
+            //2-Point Evolutions
             EvolutionAbilityIncrease.Adjust();
             EvolutionBloodFrenzy.Adjust();
             EvolutionBullrush.Adjust();
@@ -56,6 +59,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
             EvolutionTrample.Adjust();
             EvolutionTrip.Adjust();
 
+            //3-Point Evolutions
             EvolutionClawsLimbs.Adjust();
             EvolutionDamageReduction.Adjust();
             EvolutionImprovedDamage.Adjust();
@@ -65,53 +69,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions
             EvolutionSlamLimbs.Adjust();
             EvolutionWeb.Adjust();
 
+            //4-Point Evolutions
             EvolutionAmorphous.Adjust();
             EvolutionBlindsight.Adjust();
             EvolutionBreathWeapon.Adjust();
             EvolutionFastHealing.Adjust();
+            EvolutionLarge.Adjust();
             EvolutionSpellResistance.Adjust();
-        }
-
-
-        //To-Do: Delete below if not needed 
-        public static BlueprintFeatureReference[] addAbilityMultipleRanks(string evolutionName, int ranks)
-        {
-            AbilityConfigurator.For(GetGUID.GUIDByName(evolutionName + "Ability"))
-                .RemoveComponents(c => c is AbilityEffectRunAction)
-                .ConfigureWithLogging(true);
-
-            string originalFeatureName = evolutionName + "Feature";
-            BlueprintFeatureReference[] blueprintFeatureReferences = new BlueprintFeatureReference[ranks+1];
-            blueprintFeatureReferences[0] = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(originalFeatureName));
-            for (var i = 1; i <= ranks; i++)
-            {
-                string fullFeatureName = evolutionName + i + "Feature";
-                blueprintFeatureReferences[i] = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(fullFeatureName));
-
-            }
-
-            var action = ActionsBuilder.New().Add<ContextActionAddFeatureIfPrevious>(c => { c.m_PermanentFeatures = blueprintFeatureReferences; })
-                                             .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
-                                             .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")));
-
-
-
-            AbilityConfigurator.For(GetGUID.GUIDByName(evolutionName + "Ability"))
-                .AddAbilityEffectRunAction(action.Build())
-                .ConfigureWithLogging(true);
-
-            return blueprintFeatureReferences;
-        }
-
-        public static void createEvolutionCopies(string evolutionName, int ranks)
-        {
-            string origininalFeatureName = evolutionName + "Feature";
-            for (var i = 1; i <= ranks; i++)
-            {
-                string fullFeatureName = evolutionName + i + "Feature";
-
-                FeatureConfigurator.New(fullFeatureName, GetGUID.GUIDByName(fullFeatureName)).CopyFrom(origininalFeatureName, c => true).ConfigureWithLogging();
-            }
         }
 
     }

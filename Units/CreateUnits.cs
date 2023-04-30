@@ -24,6 +24,7 @@ using Kingmaker.ResourceLinks;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 using static WOTR_MAKING_FRIENDS.SummonPools.CreateSummonPools;
+using Microsoft.Build.Framework.XamlTypes;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
@@ -153,11 +154,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                             .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
                             .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
                             .AddLockEquipmentSlot(slotType: SlotType.Weapon8);
-
-            if (eidolonUnit.changeSize != null)
-            {
-                eidolon.AddChangeUnitSize(null, ComponentMerge.Replace, eidolonUnit.changeSize, 0, ChangeType.Value);
-            }
 
             if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Abberant)
             {

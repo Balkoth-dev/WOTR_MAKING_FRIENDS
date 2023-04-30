@@ -48,7 +48,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                 .RemoveComponents(c => c is IncreaseResourceAmount)
                 .AddComponent<AddAdditionalBothHandsAttacks>(c => { c.rankStart = 2; })
                 .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")); c.Rank = 2; c.Value = -2; })
-                .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"),-2)
                 .SetRanks(InternalString.Ranks)
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.MainHand; })
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.OffHand; })

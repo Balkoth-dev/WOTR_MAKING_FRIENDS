@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kingmaker.Blueprints.Items.Weapons;
+using Kingmaker.Kingdom.Blueprints;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -24,13 +25,29 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         public WeaponFighterGroup weaponGroup;
         public bool ignoreWeaponGroup;
 
+        public bool plusFeatureRanks;
+        public BlueprintFeatureReference m_Feature;
+
         public void OnEventAboutToTrigger(RuleCalculateWeaponStats evt)
         {
+            int bonusRanks = 0;
+            Main.Log("Size Category Change: " + SizeCategoryChange);
+            if (plusFeatureRanks)
+            {
+                Main.Log("Size Category Change: " + SizeCategoryChange);
+                if (m_Feature != null)
+                {
+                    bonusRanks = evt.Initiator.Progression.Features.GetRank(m_Feature.Get());
+                    Main.Log("Size Category Change: "+ SizeCategoryChange);
+                }
+            }
+            Main.Log("Size Category Change: " + SizeCategoryChange);
+
             if ((ignoreWeaponGroup || evt.Weapon.Blueprint.FighterGroup.Contains(this.weaponGroup)) && SizeCategoryChange != 0)
             {
-                for (var i = 0; i < Math.Abs(SizeCategoryChange); i++)
+                for (var i = 0; i < Math.Abs(SizeCategoryChange+bonusRanks); i++)
                 {
-                    if (SizeCategoryChange > 0)
+                    if (SizeCategoryChange + bonusRanks > 0)
                     {
                         evt.IncreaseWeaponSize();
                     }

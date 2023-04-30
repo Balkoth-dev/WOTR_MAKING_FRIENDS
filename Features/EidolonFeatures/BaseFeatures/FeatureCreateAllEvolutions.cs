@@ -36,7 +36,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             foreach(var level in Evolutions)
             {
                 amount++;
-                foreach(var evolution in level.Value)
+
+                FeatureConfigurator.New("EvolutionCost"+amount, GetGUID.GUIDByName("EvolutionCost" + amount))
+                        .SetDisplayName(Helpers.ObtainString("EvolutionCost" + amount + ".Name"))
+                        .SetDescription(Helpers.ObtainString("EvolutionCost" + amount + ".Description"))
+                        .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
+                        .SetRanks(100)
+                        .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), -amount)
+                        .ConfigureWithLogging();
+
+                foreach (var evolution in level.Value)
                 {
                     var featureAction = ActionsBuilder.New().RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")),99)
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")),99)
@@ -49,11 +58,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetRanks(1)
                         .AddActionsOnBuffApply(actions: featureAction)
-                        .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), -amount)
                         .ConfigureWithLogging();
 
-
                     var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(featureName)))
+                                                     .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + amount)))
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")),99)
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
                                                      .Build();
@@ -144,6 +152,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                 "EvolutionSlam",
                                 "EvolutionSpike",
                                 "EvolutionTail",
+                                "EvolutionTailSlap",
                                 "EvolutionTentacle",
                                 "EvolutionTentacleMass",
                                 "EvolutionWingBuffet",
