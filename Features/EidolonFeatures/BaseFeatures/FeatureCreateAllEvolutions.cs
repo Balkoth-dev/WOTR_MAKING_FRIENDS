@@ -18,6 +18,7 @@ using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
+using WOTR_MAKING_FRIENDS.Enums;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
@@ -29,6 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             CreateAllEvolutionBaseAbilities();
             CreateAddBaseAbiltiesFeature();
             AdjustEvolutions.Adjust();
+            CreateAllBaseEvolutions();
         }
         internal static void CreateAllEvolutions()
         {
@@ -37,9 +39,9 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             {
                 amount++;
 
-                FeatureConfigurator.New("EvolutionCost"+amount, GetGUID.GUIDByName("EvolutionCost" + amount))
-                        .SetDisplayName(Helpers.ObtainString("EvolutionCost" + amount + ".Name"))
-                        .SetDescription(Helpers.ObtainString("EvolutionCost" + amount + ".Description"))
+                FeatureConfigurator.New("EvolutionCost"+amount+"Feature", GetGUID.GUIDByName("EvolutionCost" + amount + "Feature"))
+                        .SetDisplayName(Helpers.ObtainString("EvolutionCost" + amount + "Feature" + ".Name"))
+                        .SetDescription(Helpers.ObtainString("EvolutionCost" + amount + "Feature" + ".Description"))
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetRanks(100)
                         .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), -amount)
@@ -57,11 +59,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                         .SetDescription(Helpers.ObtainString(featureName + ".Description"))
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetRanks(1)
+                        .SetGroups(FeatureGroupExtension.EvolutionTransmogrifiable)
                         .AddActionsOnBuffApply(actions: featureAction)
                         .ConfigureWithLogging();
 
                     var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(featureName)))
-                                                     .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + amount)))
+                                                     .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + amount + "Feature")))
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")),99)
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
                                                      .Build();
@@ -126,8 +129,21 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             feature.AddFacts(abilities); 
             feature.ConfigureWithLogging();
         }
-
-
+        internal static void CreateAllBaseEvolutions()
+        {
+            foreach (var level in Evolutions)
+            {
+                foreach (var evolution in level.Value)
+                {
+                    var featureName = evolution + "Feature";
+                    var baseFeatureName = evolution + "BaseFeature";
+                    FeatureConfigurator.New(baseFeatureName, GetGUID.GUIDByName(baseFeatureName))
+                        .CopyFrom(BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName(featureName)), c => true)
+                        .SetGroups(FeatureGroupExtension.EvolutionBase)
+                        .ConfigureWithLogging();
+                }
+            }
+        }
         public static Dictionary<string,List<string>> Evolutions = new Dictionary<string, List<string>>()
         {
             {

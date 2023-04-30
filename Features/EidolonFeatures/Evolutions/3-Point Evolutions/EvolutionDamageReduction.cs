@@ -35,6 +35,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
             internal static Sprite icon = FeatureRefs.BloodragerDamageReduction.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionDamageReduction";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string ResourceReductionFeature = Evolution + "ResourceReductionFeature";
             internal const string Ability = Evolution + "Ability";
         }
@@ -67,7 +68,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
                 .ConfigureWithLogging(true);
 
             var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.ResourceReductionFeature)))
-                                                    .Add<ContextActionAddFeatureRanks>(c => { c.setRank = 5; c.m_PermanentFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature)); })
+                                                    .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost3Feature")))
+                                                    .Add<ContextActionAddFeatureRanks>(c => { c.setRank = 5; c.m_PermanentFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature)); })           
                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")), 99)
                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
                                                     .Build();

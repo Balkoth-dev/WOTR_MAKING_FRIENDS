@@ -26,6 +26,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             internal static Sprite icon = AbilityRefs.Barkskin.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionNaturalArmor";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
         }
         public static void Adjust()

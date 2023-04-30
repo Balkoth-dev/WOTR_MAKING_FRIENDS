@@ -27,6 +27,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionTail.png");
             internal const string Evolution = "EvolutionTail";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
         }
         public static void Adjust()

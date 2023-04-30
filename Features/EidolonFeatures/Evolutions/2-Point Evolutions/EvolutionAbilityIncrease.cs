@@ -29,6 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         {
             internal const string Evolution = "EvolutionAbilityIncrease";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal static string[] abilities = new[] { "","Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" };
             internal static Sprite[] icons = new[] { 
                                             null,

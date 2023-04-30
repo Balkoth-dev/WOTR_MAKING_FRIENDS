@@ -32,6 +32,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
             internal static Sprite icon = AbilityRefs.MagicFang.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionImprovedDamage";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
         }
         public static void Adjust()

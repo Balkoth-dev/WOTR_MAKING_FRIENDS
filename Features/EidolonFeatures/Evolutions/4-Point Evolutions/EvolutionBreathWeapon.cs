@@ -36,6 +36,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
         {
             internal const string Evolution = "EvolutionBreathWeapon";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal static string[] abilities = new[] {
                                 "Acid",
                                 "Cold",
@@ -98,7 +99,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                     .AddComponent<AbilityCasterHasNoFacts>(c => {
                         c.m_Facts = new BlueprintUnitFactReference[]
                         {
-                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"))
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature")),
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "BaseFeature"))
                         };
                     })
                     .ConfigureWithLogging(true);

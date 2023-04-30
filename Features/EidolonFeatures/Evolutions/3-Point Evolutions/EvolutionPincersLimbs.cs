@@ -34,6 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
             internal const string Evolution = "EvolutionPincersLimbs";
             internal static int Ranks = 10;
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
         }
         public static void Adjust()

@@ -24,6 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             internal static Sprite icon = AbilityRefs.ObsidianFlow.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionAmorphous";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
         }
         public static void Adjust()
@@ -54,7 +55,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
                     };
                 })
                 .AddComponent<AbilityCasterHasFactRank>(c => {

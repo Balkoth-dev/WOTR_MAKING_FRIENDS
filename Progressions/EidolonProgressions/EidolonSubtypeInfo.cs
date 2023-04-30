@@ -17,10 +17,10 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                     subtype = EnumsEidolonSubtype.Aberrant,
                     levelEntries = LevelEntryBuilder.New()
                                     .AddEntry(1, GetGUID.GUIDByName("dummyBuff"))
-                                    .AddEntry(4, GetGUID.GUIDByName("dummyBuff"))
-                                    .AddEntry(8, GetRefs.BFBRCast(FeatureRefs.VerminImmunities))
-                                    .AddEntry(12, GetRefs.BFBRCast(FeatureRefs.DRSlashing5), GetRefs.BFBRCast(FeatureRefs.FallenBlindsense))
-                                    .AddEntry(16, GetRefs.BFBRCast(FeatureRefs.Blindsight))
+                                    .AddEntry(4, GetGUID.GUIDByName("ExtraEvolutionPoolFeature"))
+                                    .AddEntry(8, GetGUID.GUIDByName("dummyBuff"))
+                                    .AddEntry(12, GetGUID.GUIDByName("dummyBuff"))
+                                    .AddEntry(16, GetGUID.GUIDByName("dummyBuff"))
                                     .AddEntry(20, GetGUID.GUIDByName("dummyBuff")),
                     baseForms = new()
                     {

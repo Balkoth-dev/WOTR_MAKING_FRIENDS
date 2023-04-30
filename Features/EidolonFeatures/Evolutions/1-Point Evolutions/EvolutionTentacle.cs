@@ -34,6 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             internal const string Evolution = "EvolutionTentacle";
             internal static int Ranks = 10;
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
         }
         public static void Adjust()
@@ -47,9 +48,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .SetIcon(InternalString.icon)
                 .AddComponent<AddSecondaryAttacksItemsByRank>(c => {
                     c.m_Weapon = ItemWeaponRefs.Tentacle1d4.Cast<BlueprintItemWeaponReference>().Reference;
-                    c.limbCount = 2;
+                    c.limbCount = 1;
                     c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature));
                 })
+                .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
                 .SetRanks(InternalString.Ranks)
                 .ConfigureWithLogging(true);
 
@@ -73,7 +75,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 })
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.resourceAmount = 2;
+                    c.resourceAmount = 1;
                 })
                 .ConfigureWithLogging(true);
         }

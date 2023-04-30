@@ -11,6 +11,7 @@ using Kingmaker.UI.Models.Log;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Parts;
 using System.Collections.Generic;
+using WOTR_MAKING_FRIENDS.Enums;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {

@@ -25,6 +25,7 @@ using Owlcat.QA.Validation;
 using System;
 using System.Linq;
 using UnityEngine;
+using WOTR_MAKING_FRIENDS.Enums;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {

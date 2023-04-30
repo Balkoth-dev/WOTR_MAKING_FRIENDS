@@ -34,6 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             internal const string Evolution = "EvolutionSkilled";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal static string[] abilities = new[] { "SkillPerception", "SkillThievery", "SkillUseMagicDevice"};
             internal static Sprite[] icons = new[] {
                                             FeatureRefs.SkillFocusPerception.Reference.Get().m_Icon,
@@ -65,9 +66,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             {
                 AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Ability"))
                     .SetIcon(InternalString.icons[i])
-                    .AddComponent<AbilityCasterHasFactRank>(c => {
-                        c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"));
-                        c.maxRank = 1;
+                    .AddComponent<AbilityCasterHasNoFacts>(c => {
+                        c.m_Facts = new BlueprintUnitFactReference[]
+                        {
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature")),
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "BaseFeature"))
+                        };
                     })
                     .ConfigureWithLogging(true);
             }

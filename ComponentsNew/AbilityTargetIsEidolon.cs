@@ -6,6 +6,7 @@ using Kingmaker.EntitySystem.Entities;
 using Kingmaker.UnitLogic.Abilities.Components.Base;
 using Kingmaker.UnitLogic.Parts;
 using Kingmaker.Utility;
+using WOTR_MAKING_FRIENDS.Enums;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {

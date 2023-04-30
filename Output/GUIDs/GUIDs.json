@@ -2578,5 +2578,273 @@
   {
     "name": "EvolutionCost4",
     "guid": "e336ff80-9fc6-463b-af2a-dbf255a0a9c3"
+  },
+  {
+    "name": "EvolutionBiteBaseFeature",
+    "guid": "0a36c130-e213-4cdc-b19c-d9867edf8099"
+  },
+  {
+    "name": "EvolutionClawsBaseFeature",
+    "guid": "f7af2ae6-e7bf-414a-ae55-a5af62a03e28"
+  },
+  {
+    "name": "EvolutionGoreBaseFeature",
+    "guid": "b949ad50-e0a2-4b44-893a-4aa5076e6753"
+  },
+  {
+    "name": "EvolutionMagicAttacksBaseFeature",
+    "guid": "e49743ba-8d47-4509-8959-cc286014a942"
+  },
+  {
+    "name": "EvolutionPincersBaseFeature",
+    "guid": "58ef6b09-ac57-4f1f-a91d-d57d67394ff6"
+  },
+  {
+    "name": "EvolutionResistanceAcidBaseFeature",
+    "guid": "33f0cba6-2ad8-45c6-88d5-b370a00dd9ff"
+  },
+  {
+    "name": "EvolutionResistanceColdBaseFeature",
+    "guid": "02c997bf-1ab3-4288-880f-fd3f623b32cf"
+  },
+  {
+    "name": "EvolutionResistanceElectricityBaseFeature",
+    "guid": "0bb5a2e1-8270-4dbc-bcc9-97522e82a74d"
+  },
+  {
+    "name": "EvolutionResistanceFireBaseFeature",
+    "guid": "98d0b014-7a6a-49ce-b965-e76be3556561"
+  },
+  {
+    "name": "EvolutionResistanceSonicBaseFeature",
+    "guid": "4222296a-ae1a-41f5-a8b5-312cde3d758e"
+  },
+  {
+    "name": "EvolutionScentBaseFeature",
+    "guid": "5fe9d81c-a807-46fd-ab9b-25d1b8958761"
+  },
+  {
+    "name": "EvolutionSkilledSkillPerceptionBaseFeature",
+    "guid": "69815934-aa76-4fd6-83f6-d2cab0ca0284"
+  },
+  {
+    "name": "EvolutionSkilledSkillThieveryBaseFeature",
+    "guid": "b6f75b07-bbd2-446a-b87b-e09c2dea00da"
+  },
+  {
+    "name": "EvolutionSkilledSkillUseMagicDeviceBaseFeature",
+    "guid": "0e935ae0-0559-43f8-800a-a9dd7fc430d3"
+  },
+  {
+    "name": "EvolutionSlamBaseFeature",
+    "guid": "a07cf378-5d53-4b16-b52a-ee3d70709315"
+  },
+  {
+    "name": "EvolutionTailSlapBaseFeature",
+    "guid": "2f50a8b5-3e1a-4c4a-b53d-cb0148d18bb8"
+  },
+  {
+    "name": "EvolutionTentacleMassBaseFeature",
+    "guid": "66aece3c-0002-4de9-8074-00e1e9b9da70"
+  },
+  {
+    "name": "EvolutionWingBuffetBaseFeature",
+    "guid": "42fe7f7f-6042-46a1-81d8-2ac1839b77d8"
+  },
+  {
+    "name": "EvolutionBloodFrenzyBaseFeature",
+    "guid": "f643ddc6-f0d3-4e74-ad39-7772f31ac164"
+  },
+  {
+    "name": "EvolutionBullrushBaseFeature",
+    "guid": "d15b7e51-7c48-4437-9de7-511e22ff5cab"
+  },
+  {
+    "name": "EvolutionEnergyAttacksAcidBaseFeature",
+    "guid": "4c222147-81cd-4d54-b69f-9bfb6d038424"
+  },
+  {
+    "name": "EvolutionEnergyAttacksColdBaseFeature",
+    "guid": "bbe68496-3f2f-4a3e-9111-1a86868dcb71"
+  },
+  {
+    "name": "EvolutionEnergyAttacksElectricityBaseFeature",
+    "guid": "9d6c5347-2f47-496d-a447-c2425043f145"
+  },
+  {
+    "name": "EvolutionEnergyAttacksFireBaseFeature",
+    "guid": "44950095-f008-4888-a7f2-797b2f7b129d"
+  },
+  {
+    "name": "EvolutionFlightBaseFeature",
+    "guid": "9bcdb739-d6ff-495e-906e-6f8844642d04"
+  },
+  {
+    "name": "EvolutionImmunityAcidBaseFeature",
+    "guid": "2bbd0fc1-31fd-45fd-919c-a1ec3ddbef53"
+  },
+  {
+    "name": "EvolutionImmunityColdBaseFeature",
+    "guid": "e71c29b7-9d3d-4386-85cf-bebf77cf3b3f"
+  },
+  {
+    "name": "EvolutionImmunityElectricityBaseFeature",
+    "guid": "7362230c-f946-4f01-b76e-d9caf22d2c54"
+  },
+  {
+    "name": "EvolutionImmunityFireBaseFeature",
+    "guid": "d9f6be81-25a1-47de-ad0d-bf5ffec9f1aa"
+  },
+  {
+    "name": "EvolutionImmunitySonicBaseFeature",
+    "guid": "c64f4601-6878-4b4e-826b-6b12465e4852"
+  },
+  {
+    "name": "EvolutionRendBaseFeature",
+    "guid": "dda4c8c0-43e0-4f0f-b57e-829b71329c91"
+  },
+  {
+    "name": "EvolutionSunderarmorBaseFeature",
+    "guid": "2757ca47-14ce-451b-bc7a-9846ec8728f2"
+  },
+  {
+    "name": "EvolutionTrampleBaseFeature",
+    "guid": "8e9bd635-0bd9-4456-ace2-034179c3f1f8"
+  },
+  {
+    "name": "EvolutionTripBaseFeature",
+    "guid": "429a6403-1414-4d03-a61f-be4ee2305ae3"
+  },
+  {
+    "name": "EvolutionCost3Feature",
+    "guid": "5361f4b6-90f3-4297-8b95-f133aae5ef89"
+  },
+  {
+    "name": "EvolutionPounceBaseFeature",
+    "guid": "952821d8-c397-4cce-9d3e-cbd76049b497"
+  },
+  {
+    "name": "EvolutionReachBaseFeature",
+    "guid": "1127304d-5d2c-4111-aecf-62cdd2db87f5"
+  },
+  {
+    "name": "EvolutionWebBaseFeature",
+    "guid": "308fb6bc-87d3-4708-9a3e-18a5ef1a3271"
+  },
+  {
+    "name": "EvolutionAmorphousBaseFeature",
+    "guid": "271472ad-7f99-4997-a1b5-05ce4adc73c7"
+  },
+  {
+    "name": "EvolutionBlindsightBaseFeature",
+    "guid": "98f26595-1b9a-42e1-89a7-0d5c968ca246"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidBaseFeature",
+    "guid": "19648a31-cc6b-41c4-b802-2b64d6c30d4f"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdBaseFeature",
+    "guid": "34e7f881-a78f-4e41-821d-ef52779085ab"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityBaseFeature",
+    "guid": "060208de-fa54-4404-8025-ee958230e79e"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireBaseFeature",
+    "guid": "28df8856-03d9-4e72-83f2-1c246421e37d"
+  },
+  {
+    "name": "EvolutionFastHealingBaseFeature",
+    "guid": "072ffd0b-677f-46e1-890f-467583c5981f"
+  },
+  {
+    "name": "EvolutionCost4Feature",
+    "guid": "29adb821-d0bd-4180-a5ce-26df01519472"
+  },
+  {
+    "name": "EvolutionSpellResistanceBaseFeature",
+    "guid": "6fa9b042-389c-4cd8-8c14-ac5f64e1e769"
+  },
+  {
+    "name": "EvolutionNaturalArmorBaseFeature",
+    "guid": "89e5e189-fff9-4b80-86c2-af3c3ec5bd8e"
+  },
+  {
+    "name": "EvolutionSpikeBaseFeature",
+    "guid": "00a2cc35-d62c-430e-bebe-3fb2d4eef5b7"
+  },
+  {
+    "name": "EvolutionTailBaseFeature",
+    "guid": "10b4811f-7b62-4984-a0a8-b67c27a52b36"
+  },
+  {
+    "name": "EvolutionTentacleBaseFeature",
+    "guid": "a8c3aafe-c551-4756-ad00-5d2a1bcc62ea"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseStrengthBaseFeature",
+    "guid": "ca7b2c81-8aa6-49a9-bbd6-5caba99842d3"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseDexterityBaseFeature",
+    "guid": "ac7aba46-79ad-4916-8886-9c16892b18d8"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseConstitutionBaseFeature",
+    "guid": "9ac7c265-c37c-4441-96b0-b9d54f0052d6"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseIntelligenceBaseFeature",
+    "guid": "0878da0b-2827-40b1-9065-53ba3bde9776"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseWisdomBaseFeature",
+    "guid": "3f3c802e-fa45-4aa3-9d9e-dd9aecff6e81"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseCharismaBaseFeature",
+    "guid": "71358218-8940-4356-b334-7cacf930fad6"
+  },
+  {
+    "name": "EvolutionLimbsArmsBaseFeature",
+    "guid": "c9de3efb-99b7-4a97-9913-558ba468e1f4"
+  },
+  {
+    "name": "EvolutionLimbsLegsBaseFeature",
+    "guid": "5e651e78-5453-44e1-b1fa-7e4a1ed6bd9a"
+  },
+  {
+    "name": "EvolutionDamageReductionBaseFeature",
+    "guid": "c49ac639-6e49-416d-94ad-9b7a7ae3ce0d"
+  },
+  {
+    "name": "EvolutionImprovedDamageBaseFeature",
+    "guid": "d3d91bfc-c4c8-4fa2-a39f-38b19d99d494"
+  },
+  {
+    "name": "EvolutionClawsLimbsBaseFeature",
+    "guid": "ae36ba7d-efa8-4c2a-be46-0c106674ebf8"
+  },
+  {
+    "name": "EvolutionPincersLimbsBaseFeature",
+    "guid": "40f87d8c-87ac-409c-80e7-8ba0ce3abb08"
+  },
+  {
+    "name": "EvolutionSlamLimbsBaseFeature",
+    "guid": "2a45a08d-ffef-4768-b869-bc13269b7003"
+  },
+  {
+    "name": "EvolutionLargeBaseFeature",
+    "guid": "d2d9fed5-77b8-4d4e-a00d-99dc54e61828"
+  },
+  {
+    "name": "EvolutionCost1Feature",
+    "guid": "c47794a4-f915-4f59-b694-27c79c44e688"
+  },
+  {
+    "name": "EvolutionCost2Feature",
+    "guid": "932e6e72-5f3c-4915-9d1e-bf40ba902a18"
   }
 ]

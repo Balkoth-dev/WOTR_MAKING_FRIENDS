@@ -29,6 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
             internal static Sprite icon = AbilityRefs.ArmySpiderWebCast.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionWeb";
             internal const string Feature = Evolution + "Feature";
+            internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
             internal const string WebAbility = Evolution + "WebAbility";
         }
@@ -67,7 +68,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);
