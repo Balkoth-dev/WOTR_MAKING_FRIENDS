@@ -12,7 +12,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureFakeEidolon
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "FakeEidolonFeature";
             internal static LocalizedString Name = Helpers.ObtainString("FakeEidolonFeature.Name");
@@ -33,9 +33,9 @@ namespace WOTR_MAKING_FRIENDS.Features
                 Type = PetTypeExtensions.Eidolon,
                 m_ForceAutoLevelup = false
             };
-            Kingmaker.Blueprints.Classes.BlueprintFeature fakeEidolon = FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName("FakeEidolonFeature"))
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            Kingmaker.Blueprints.Classes.BlueprintFeature fakeEidolon = FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName("FakeEidolonFeature"))
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .AddFeatureOnApply(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonProgression")))
                 .AddFeatureOnApply(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonRankFeature")))
                 .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)

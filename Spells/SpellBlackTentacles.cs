@@ -24,7 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
 {
     public class SpellBlackTentacles
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string BlackTentaclesAreaEffectName = "BlackTentaclesAreaEffect";
             internal const string BlackTentaclesSpell = "BlackTentaclesSpell";
@@ -66,7 +66,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                     }
             };
 
-            BlueprintAbilityAreaEffect areaEffect = AbilityAreaEffectConfigurator.New(InternalString.BlackTentaclesAreaEffectName, GetGUID.GUIDByName("BlackTentaclesAreaEffect"))
+            BlueprintAbilityAreaEffect areaEffect = AbilityAreaEffectConfigurator.New(IClass.BlackTentaclesAreaEffectName, GetGUID.GUIDByName("BlackTentaclesAreaEffect"))
               .SetAffectEnemies()
               .SetAggroEnemies()
               .SetSize(20.Feet())
@@ -82,10 +82,10 @@ namespace WOTR_MAKING_FRIENDS.Spells
               .SetFx(newFx)
               .ConfigureWithLogging();
 
-            AbilityConfigurator blackTentaclesSpell = AbilityConfigurator.New(InternalString.BlackTentaclesSpell, GetGUID.GUIDByName("BlackTentaclesSpell"))
+            AbilityConfigurator blackTentaclesSpell = AbilityConfigurator.New(IClass.BlackTentaclesSpell, GetGUID.GUIDByName("BlackTentaclesSpell"))
                 .CopyFrom(AbilityRefs.SickeningEntanglement, c => c is not (AbilityEffectRunAction or AbilityAoERadius))
-                .SetDisplayName(InternalString.BlackTentaclesSpellName)
-                .SetDescription(InternalString.BlackTentaclesSpellDescription)
+                .SetDisplayName(IClass.BlackTentaclesSpellName)
+                .SetDescription(IClass.BlackTentaclesSpellDescription)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "BlackTentacles.png"))
                 .AddAbilityEffectRunAction(actions: ActionsBuilder.New()
                                                     .SpawnAreaEffect(areaEffect: areaEffect,

@@ -14,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
     internal class AbilityMakersCall
     {
         private static readonly BlueprintAbility emergencySwapAbility = BlueprintTool.Get<BlueprintAbility>("b50ca9b5d6292fb42b8eab8e5d64842d");
-        private static class InternalString
+        private static class IClass
         {
             internal const string Ability = "SummonerMakersCallAbility";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerMakersCallFeature.Name");
@@ -34,10 +34,10 @@ namespace WOTR_MAKING_FRIENDS.Abilities
                 m_DisappearProjectile = ProjectileRefs.DimensionDoor00_CasterDisappear.Cast<BlueprintProjectileReference>().Reference,
             };
 
-            BlueprintAbility ability = AbilityConfigurator.New(InternalString.Ability, GetGUID.GUIDByName("SummonerMakersCallAbility"))
-                .CopyFrom(AbilityRefs.ArcanistExploitDimensionalSlideAbility, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            BlueprintAbility ability = AbilityConfigurator.New(IClass.Ability, GetGUID.GUIDByName("SummonerMakersCallAbility"))
+                .CopyFrom(AbilityRefs.ArcanistExploitDimensionalSlideAbility)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .AddComponent<AbilityTargetIsEidolon>()
                 .SetCanTargetPoint(false)
                 .SetCanTargetFriends(true)

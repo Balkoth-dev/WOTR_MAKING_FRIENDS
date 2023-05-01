@@ -33,7 +33,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionRend
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = ActivatableAbilityRefs.TigerGrabActivatableAbility.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionRend";
@@ -48,8 +48,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<WeaponRend>(c =>
                 {
                     c.RendDamage = new DiceFormula { m_Rolls = 1, m_Dice = DiceType.D6 };
@@ -69,8 +69,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
@@ -78,14 +78,14 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                     };
                 })
                 .AddComponent<AbilityCasterHasFactRank>(c => {
-                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature));
                     c.startLevel = 6;
                 })
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

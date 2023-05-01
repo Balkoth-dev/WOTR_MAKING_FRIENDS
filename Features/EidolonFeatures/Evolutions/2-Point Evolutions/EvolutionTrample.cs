@@ -23,7 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionTrample
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = AbilityRefs.TrampleAbility.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionTrample";
@@ -40,22 +40,22 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.TrampleAbility)) })
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.TrampleAbility)) })
                 .ConfigureWithLogging(true);
         }
         public static void AddEvolutionTrampleAbility()
         {
-            AbilityConfigurator.New(InternalString.TrampleAbility, GetGUID.GUIDByName(InternalString.TrampleAbility))
+            AbilityConfigurator.New(InternalClass.TrampleAbility, GetGUID.GUIDByName(InternalClass.TrampleAbility))
                 .CopyFrom(AbilityRefs.TrampleAbility, c => true)
                 .ConfigureWithLogging();
         }
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
@@ -66,8 +66,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

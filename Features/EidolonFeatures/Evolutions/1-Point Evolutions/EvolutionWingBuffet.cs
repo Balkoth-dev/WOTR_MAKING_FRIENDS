@@ -23,7 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionWingBuffet
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = ActivatableAbilityRefs.AbilityWingsDemon.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionWingBuffet";
@@ -38,8 +38,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .AddSecondaryAttacks(weapon: ItemWeaponRefs.Wing1d4.Cast<BlueprintItemWeaponReference>().Reference)
                 .AddSecondaryAttacks(weapon: ItemWeaponRefs.Wing1d4.Cast<BlueprintItemWeaponReference>().Reference)
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -2)
@@ -48,8 +48,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
                     c.resourceAmount = 2;
@@ -63,8 +63,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

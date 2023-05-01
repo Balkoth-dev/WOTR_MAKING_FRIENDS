@@ -12,7 +12,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
     internal class SummonerSpellbook
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string SummonerSpellbook = "SummonerSpellbook";
             internal static readonly LocalizedString SummonerSpellbookName = Helpers.ObtainString(SummonerSpellbook + ".Name");
@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellSlotsTable()
         {
-            SpellsTableConfigurator.New(InternalString.SummonerSpellbookName + "SpellsPerDayTable", GetGUID.GUIDByName("SummonerSpellbookSpellsPerDay"))
+            SpellsTableConfigurator.New(InternalClass.SummonerSpellbookName + "SpellsPerDayTable", GetGUID.GUIDByName("SummonerSpellbookSpellsPerDay"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,1),
@@ -59,7 +59,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellsKnownTable()
         {
-            SpellsTableConfigurator.New(InternalString.SummonerSpellbook + ".SpellKnownTable", GetGUID.GUIDByName("SummonerSpellbookSpellsKnown"))
+            SpellsTableConfigurator.New(InternalClass.SummonerSpellbook + ".SpellKnownTable", GetGUID.GUIDByName("SummonerSpellbookSpellsKnown"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,2),
@@ -247,7 +247,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void CreateSpellList()
         {
-            SpellListConfigurator.New(InternalString.SummonerSpellbook + ".SpellList", GetGUID.GUIDByName("SummonerSpellbookSpellList"))
+            SpellListConfigurator.New(InternalClass.SummonerSpellbook + ".SpellList", GetGUID.GUIDByName("SummonerSpellbookSpellList"))
                 .AddToSpellsByLevel(Create0thLevelSpells(),
                 Create1stLevelSpells(),
                 Create2ndLevelSpells(),
@@ -266,8 +266,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             ConfigureSpellSlotsTable();
             ConfigureSpellsKnownTable();
             CreateSpellList();
-            return SpellbookConfigurator.New(InternalString.SummonerSpellbook, GetGUID.GUIDByName("SummonerSpellbookSpellBook"))
-                .SetName(InternalString.SummonerSpellbookName)
+            return SpellbookConfigurator.New(InternalClass.SummonerSpellbook, GetGUID.GUIDByName("SummonerSpellbookSpellBook"))
+                .SetName(InternalClass.SummonerSpellbookName)
                 .SetCharacterClass(GetGUID.GUIDByName("SummonerClass"))
                 .SetSpellsPerDay(GetGUID.GUIDByName("SummonerSpellbookSpellsPerDay"))
                 .SetSpellsKnown(GetGUID.GUIDByName("SummonerSpellbookSpellsKnown"))

@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions
 {
     internal class ProgressionEidolon
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Progression = "EidolonProgression";
             internal static LocalizedString Name = Helpers.ObtainString("EidolonProgression.Name");
@@ -24,7 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions
             {
                 entries.AddEntry(i, GetGUID.GUIDByName("EidolonRankFeature"));
             }
-            ProgressionConfigurator.New(InternalString.Progression, GetGUID.GUIDByName("EidolonProgression"))
+            ProgressionConfigurator.New(IClass.Progression, GetGUID.GUIDByName("EidolonProgression"))
                 .SetLevelEntries(entries)
                 .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                 .SetIsClassFeature(true)

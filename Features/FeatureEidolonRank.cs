@@ -9,7 +9,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureEidolonRank
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "EidolonRankFeature";
             internal static LocalizedString Name = Helpers.ObtainString("EidolonRankFeature.Name");
@@ -21,10 +21,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateEidolonRankFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .CopyFrom(FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
+                .CopyFrom(FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .ClearIsPrerequisiteFor()
                 .ConfigureWithLogging();
 

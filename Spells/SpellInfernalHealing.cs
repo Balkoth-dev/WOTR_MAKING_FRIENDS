@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
     internal class SpellInfernalHealing
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string InfernalHealingSpellName = "InfernalHealingSpell";
             internal static LocalizedString InfernalHealingNameSpellName = Helpers.ObtainString(InfernalHealingSpellName + ".Name");
@@ -50,10 +50,10 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         };
         public static void CreateInfernalHealing()
         {
-            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.InfernalHealingSpellName, GetGUID.GUIDByName("InfernalHealingSpell"))
+            AbilityConfigurator spell = AbilityConfigurator.New(IClass.InfernalHealingSpellName, GetGUID.GUIDByName("InfernalHealingSpell"))
                 .CopyFrom(AbilityRefs.CureLightWounds)
-                .SetDisplayName(InternalString.InfernalHealingNameSpellName)
-                .SetDescription(InternalString.InfernalHealingNameSpellDescription)
+                .SetDisplayName(IClass.InfernalHealingNameSpellName)
+                .SetDescription(IClass.InfernalHealingNameSpellDescription)
                 .AddActionsOnBuffApply(
                 ActionsBuilder.New()
                 .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing1.Cast<BlueprintBuffReference>().Reference, 60)
@@ -71,10 +71,10 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         }
         public static void CreateGreaterInfernalHealing()
         {
-            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.GreaterInfernalHealingSpellName, GetGUID.GUIDByName("GreaterInfernalHealingSpell"))
+            AbilityConfigurator spell = AbilityConfigurator.New(IClass.GreaterInfernalHealingSpellName, GetGUID.GUIDByName("GreaterInfernalHealingSpell"))
                 .CopyFrom(AbilityRefs.CureLightWounds)
-                .SetDisplayName(InternalString.GreaterInfernalHealingNameSpellName)
-                .SetDescription(InternalString.GreaterInfernalHealingNameSpellDescription)
+                .SetDisplayName(IClass.GreaterInfernalHealingNameSpellName)
+                .SetDescription(IClass.GreaterInfernalHealingNameSpellDescription)
                 .AddActionsOnBuffApply(
                 ActionsBuilder.New()
                 .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing4.Cast<BlueprintBuffReference>().Reference, 60)

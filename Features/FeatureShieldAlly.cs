@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureShieldAlly
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "SummonerShieldAllyFeature";
             internal const string AuraFeature = "SummonerShieldAllyAuraFeature";
@@ -24,10 +24,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         private static void CreateShieldAllyFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
+                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddFeatureToPet(GetGUID.GUIDByName("SummonerShieldAllyAuraFeature"), PetTypeExtensions.Eidolon)
                 .ConfigureWithLogging();
@@ -35,10 +35,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         private static void CreateShieldAllyAuraFeature()
         {
-            FeatureConfigurator.New(InternalString.AuraFeature, GetGUID.GUIDByName(InternalString.AuraFeature))
-                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.AuraFeature, GetGUID.GUIDByName(IClass.AuraFeature))
+                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddAuraFeatureComponent(GetGUID.GUIDByName("SummonerShieldAllyAuraBuff"))
                 .ConfigureWithLogging();

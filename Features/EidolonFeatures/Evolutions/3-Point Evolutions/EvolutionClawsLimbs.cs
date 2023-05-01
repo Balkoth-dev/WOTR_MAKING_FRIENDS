@@ -29,7 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
 {
     internal class EvolutionClawsLimbs
     {
-        private static class InternalString
+        private static class IClass
         {
             internal static Sprite icon = FeatureRefs.StoneclawStrikeShifterFeature.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionClawsLimbs";
@@ -46,24 +46,24 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            var additionalWeapon = ItemWeaponConfigurator.New(InternalString.AdditionalWeapon, GetGUID.GUIDByName(InternalString.AdditionalWeapon))
+            var additionalWeapon = ItemWeaponConfigurator.New(IClass.AdditionalWeapon, GetGUID.GUIDByName(IClass.AdditionalWeapon))
                 .CopyFrom(ItemWeaponRefs.Slam1d4)
                 .SetType(WeaponTypeRefs.ClawType.Cast<BlueprintWeaponTypeReference>().Reference)
                 .ConfigureWithLogging(true);
 
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
                 .AddComponent<AddSecondaryAttacksItemsByRank>(c => { c.m_Weapon = ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference;
                                                                      c.limbCount = 2; 
-                                                                     c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature)); })
-                .SetRanks(InternalString.Ranks)
+                                                                     c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature)); })
+                .SetRanks(IClass.Ranks)
                 .ConfigureWithLogging(true);
 
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
                     c.resourceAmount = 2;

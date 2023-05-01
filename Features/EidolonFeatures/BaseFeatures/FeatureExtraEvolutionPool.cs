@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     public static class FeatureExtraEvolutionPool
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string Feature = "ExtraEvolutionPoolFeature";
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
@@ -22,10 +22,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
         public static void Create()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
+            FeatureConfigurator.New(InternalClass.Feature, GetGUID.GUIDByName(InternalClass.Feature))
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), 1)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+                .SetDisplayName(InternalClass.Name)
+                .SetDescription(InternalClass.Description)
                 .SetIcon(AbilityRefs.TarPool.Reference.Get().m_Icon)
                 .SetRanks(40)
                 .ConfigureWithLogging();

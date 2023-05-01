@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureMakersCall
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "SummonerMakersCallFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerMakersCallFeature.Name");
@@ -22,10 +22,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateMakersCallFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .CopyFrom(FeatureRefs.ArcanistExploitDimensionalSlideFeature.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
+                .CopyFrom(FeatureRefs.ArcanistExploitDimensionalSlideFeature.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .AddAbilityResources(amount: 1, resource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerMakersCallResource")), true)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerMakersCallAbility")) })
                 .SetIcon(FeatureRefs.DimensionalRideFeature.Reference.Get().m_Icon)

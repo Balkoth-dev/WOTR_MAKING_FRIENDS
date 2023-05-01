@@ -20,7 +20,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
 {
     internal class EvolutionSpellResistance
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = AbilityRefs.SpellResistance.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionSpellResistance";
@@ -35,8 +35,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .AddSpellResistance(value:ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.StatBonus))
                 .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
                 .AddContextCalculateSharedValue(1,valueType:Kingmaker.UnitLogic.Abilities.AbilitySharedValue.StatBonus)
@@ -45,17 +45,17 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
                     };
                 })
                 .AddComponent<AbilityCasterHasFactRank>(c => {
-                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature));
                     c.startLevel = 9;
                 })
                 .ConfigureWithLogging(true);

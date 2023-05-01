@@ -17,7 +17,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     public static class FeatureAddEvolutionPoints
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "AddEvolutionPointsFeature";
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
@@ -26,9 +26,9 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
         public static void Create()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetIcon(FeatureRefs.LuckDomainBaseFeature.Reference.Get().m_Icon)
                 .AddAbilityResources(1, GetGUID.GUIDByName("SummonerEvolutionPointsResource"),true,true)
                 .SetRanks(99)

@@ -14,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffBlackTentacles
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string BlackTentaclesBuff = "BlackTentaclesBuff";
             internal static LocalizedString BlackTentaclesSpellName = Helpers.ObtainString("BlackTentaclesSpell.Name");
@@ -22,10 +22,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         public static void CreateBlackTentaclesBuff()
         {
-            BuffConfigurator.New(InternalString.BlackTentaclesBuff, GetGUID.GUIDByName("BlackTentaclesBuff"))
-                .CopyFrom(BuffRefs.OmoxGrappleBuff, c => c is null)
-                .SetDisplayName(InternalString.BlackTentaclesSpellName)
-                .SetDescription(InternalString.BlackTentaclesSpellDescription)
+            BuffConfigurator.New(IClass.BlackTentaclesBuff, GetGUID.GUIDByName("BlackTentaclesBuff"))
+                .CopyFrom(BuffRefs.OmoxGrappleBuff)
+                .SetDisplayName(IClass.BlackTentaclesSpellName)
+                .SetDescription(IClass.BlackTentaclesSpellDescription)
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddCondition(Kingmaker.UnitLogic.UnitCondition.Entangled)
                 .AddCondition(Kingmaker.UnitLogic.UnitCondition.CantMove)

@@ -21,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionClaws
     {
-        private static class InternalString
+        private static class IClass
         {
             internal static Sprite icon = ItemWeaponRefs.Claw1d4.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionClaws";
@@ -44,38 +44,38 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.ActivatableAbility)) })
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.ActivatableAbility)) })
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -2)
                 .ConfigureWithLogging(true);
         }
         public static void AddWeaponEmptyHandOverrideAbility()
         {
-            ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.GUIDByName(InternalString.ActivatableAbility))
-                .SetDisplayName(InternalString.ActivatableAbilityName)
-                .SetDescription(InternalString.ActivatableAbilityDescription)
-                .SetIcon(InternalString.icon)
+            ActivatableAbilityConfigurator.New(IClass.ActivatableAbility, GetGUID.GUIDByName(IClass.ActivatableAbility))
+                .SetDisplayName(IClass.ActivatableAbilityName)
+                .SetDescription(IClass.ActivatableAbilityDescription)
+                .SetIcon(IClass.icon)
                 .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
                 .SetDeactivateImmediately(true)
                 .SetActivateWithUnitCommand(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free)
                 .SetActivateOnUnitAction(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivateOnUnitActionType.Attack)
-                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(InternalString.Buff)))
+                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(IClass.Buff)))
                 .ConfigureWithLogging();
         }
         public static void AddEvolutionBuff()
         {
-            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName(InternalString.Buff))
-                .SetDisplayName(InternalString.BuffName)
-                .SetDescription(InternalString.BuffDescription)
-                .SetIcon(InternalString.icon)
+            BuffConfigurator.New(IClass.Buff, GetGUID.GUIDByName(IClass.Buff))
+                .SetDisplayName(IClass.BuffName)
+                .SetDescription(IClass.BuffDescription)
+                .SetIcon(IClass.icon)
                 .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference)
                 .ConfigureWithLogging();
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
@@ -96,8 +96,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

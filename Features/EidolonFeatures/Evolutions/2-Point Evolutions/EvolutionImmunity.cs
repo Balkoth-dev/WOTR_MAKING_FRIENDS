@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionImmunity
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string Evolution = "EvolutionImmunity";
             internal const string Feature = Evolution + "Feature";
@@ -56,11 +56,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            for (var i = 0; i < InternalString.abilities.Length; i++)
+            for (var i = 0; i < InternalClass.abilities.Length; i++)
             {
-                var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), InternalString.abilities[i]);
-                FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"))
-                    .SetIcon(InternalString.icons[i])
+                var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), InternalClass.abilities[i]);
+                FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "Feature"))
+                    .SetIcon(InternalClass.icons[i])
                     .SetRanks(1)
                     .AddEnergyImmunity(type: energyType)
                     .ConfigureWithLogging(true);
@@ -69,19 +69,19 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 
         public static void AdjustAbility()
         {
-            for (var i = 0; i < InternalString.abilities.Length; i++)
+            for (var i = 0; i < InternalClass.abilities.Length; i++)
             {
-                AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Ability"))
-                    .SetIcon(InternalString.icons[i])
+                AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "Ability"))
+                    .SetIcon(InternalClass.icons[i])
                     .AddComponent<AbilityCasterHasFactRank>(c => {
-                        c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"));
+                        c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "Feature"));
                         c.startLevel = 7;
                     })
                     .AddComponent<AbilityCasterHasNoFacts>(c => {
                         c.m_Facts = new BlueprintUnitFactReference[]
                         {
-                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature")),
-                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "BaseFeature"))
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "Feature")),
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "BaseFeature"))
                         };
                     })
                     .ConfigureWithLogging(true);

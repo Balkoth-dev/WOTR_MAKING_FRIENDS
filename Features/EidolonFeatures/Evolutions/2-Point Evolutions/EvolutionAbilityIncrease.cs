@@ -25,7 +25,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionAbilityIncrease
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Evolution = "EvolutionAbilityIncrease";
             internal const string Feature = Evolution + "Feature";
@@ -48,10 +48,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            for(var i = 1; i < InternalString.abilities.Length; i++)
+            for(var i = 1; i < IClass.abilities.Length; i++)
             {
-                FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"))
-                    .SetIcon(InternalString.icons[i])
+                FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Feature"))
+                    .SetIcon(IClass.icons[i])
                     .SetRanks(4)
                     .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.Racial, stat: (StatType)Enum.Parse(typeof(StatType), i.ToString()), value: 2)
                     .ConfigureWithLogging(true);
@@ -60,12 +60,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 
         public static void AdjustAbility()
         {
-            for (var i = 1; i < InternalString.abilities.Length; i++)
+            for (var i = 1; i < IClass.abilities.Length; i++)
             {
-                AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Ability"))
-                    .SetIcon(InternalString.icons[i])
+                AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Ability"))
+                    .SetIcon(IClass.icons[i])
                     .AddComponent<AbilityCasterHasFactRank>(c => {
-                        c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"));
+                        c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Feature"));
                         c.maxRank = 4;
                         c.numLevelsBetweenRanks = 6;
                     })

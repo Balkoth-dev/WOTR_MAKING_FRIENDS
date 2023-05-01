@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureLifeBond
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "SummonerLifeBondFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerLifeBondFeature.Name");
@@ -22,10 +22,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateEidolonLifeBondFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .CopyFrom(FeatureRefs.OracleRevelationLifeLink.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
+                .CopyFrom(FeatureRefs.OracleRevelationLifeLink.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeBond.png"))
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerLifeBondActivatableAbility")) })
                 .ConfigureWithLogging();

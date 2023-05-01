@@ -14,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffSummonerLifeLink
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Buff = "SummonerLifeLinkBuff";
             internal static LocalizedString Name = Helpers.ObtainString("summonerlifelinkfeature.Name");
@@ -33,10 +33,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
                                                             .Build(),
                                                             PetTypeExtensions.Eidolon).Build();
 
-            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName("SummonerLifeLinkBuff"))
-                .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            BuffConfigurator.New(IClass.Buff, GetGUID.GUIDByName("SummonerLifeLinkBuff"))
+                .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeLink.png"))
                 .AddBuffActions(applyLifeLink, disableLifeLink, applyLifeLink)
                 .SetStacking(StackingType.Ignore)

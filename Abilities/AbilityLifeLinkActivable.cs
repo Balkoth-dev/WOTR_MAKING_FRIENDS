@@ -9,7 +9,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
 {
     internal class AbilityLifeLinkActivable
     {
-        private static class InternalString
+        private static class IClass
         {
             internal static LocalizedString Name = Helpers.ObtainString("SummonerLifeLinkFeature.Name");
             internal static LocalizedString Description = Helpers.ObtainString("SummonerLifeLinkFeature.Description");
@@ -17,9 +17,9 @@ namespace WOTR_MAKING_FRIENDS.Abilities
         }
         public static void CreateLifeLinkActivatableAbility()
         {
-            ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.GUIDByName("SummonerLifeLinkActivatableAbility"))
-                                          .SetDisplayName(InternalString.Name)
-                                          .SetDescription(InternalString.Description)
+            ActivatableAbilityConfigurator.New(IClass.ActivatableAbility, GetGUID.GUIDByName("SummonerLifeLinkActivatableAbility"))
+                                          .SetDisplayName(IClass.Name)
+                                          .SetDescription(IClass.Description)
                                           .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName("SummonerLifeLinkBuff")))
                                           .SetDeactivateIfOwnerUnconscious(true)
                                           .SetDeactivateIfOwnerDisabled(true)

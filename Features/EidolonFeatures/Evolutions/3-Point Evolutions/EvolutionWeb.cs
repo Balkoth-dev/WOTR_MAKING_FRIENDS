@@ -24,7 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
 {
     internal class EvolutionWeb
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = AbilityRefs.ArmySpiderWebCast.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionWeb";
@@ -36,27 +36,27 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         public static void Adjust()
         {
             AdjustFeature();
-            AddEvolutionTrampleAbility();
+            AddEvolutionWebAbility();
             AdjustAbility();
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.WebAbility)) })
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.WebAbility)) })
                 .ConfigureWithLogging(true);
         }
-        public static void AddEvolutionTrampleAbility()
+        public static void AddEvolutionWebAbility()
         {
-            AbilityConfigurator.New(InternalString.WebAbility, GetGUID.GUIDByName(InternalString.WebAbility))
+            AbilityConfigurator.New(InternalClass.WebAbility, GetGUID.GUIDByName(InternalClass.WebAbility))
                 .CopyFrom(AbilityRefs.WebTiefling, c => c is not AbilityResourceLogic)
                 .ConfigureWithLogging();
         }
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
@@ -68,8 +68,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionSkilled
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string Evolution = "EvolutionSkilled";
             internal const string Feature = Evolution + "Feature";
@@ -49,11 +49,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            for (var i = 0; i < InternalString.abilities.Length; i++)
+            for (var i = 0; i < InternalClass.abilities.Length; i++)
             {
-                var skillType = (StatType)Enum.Parse(typeof(StatType), InternalString.abilities[i]);
-                FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"))
-                    .SetIcon(InternalString.icons[i])
+                var skillType = (StatType)Enum.Parse(typeof(StatType), InternalClass.abilities[i]);
+                FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "Feature"))
+                    .SetIcon(InternalClass.icons[i])
                     .SetRanks(1)
                     .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.Racial, stat: skillType, value: 8)
                     .ConfigureWithLogging(true);
@@ -62,15 +62,15 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 
         public static void AdjustAbility()
         {
-            for (var i = 0; i < InternalString.abilities.Length; i++)
+            for (var i = 0; i < InternalClass.abilities.Length; i++)
             {
-                AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Ability"))
-                    .SetIcon(InternalString.icons[i])
+                AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "Ability"))
+                    .SetIcon(InternalClass.icons[i])
                     .AddComponent<AbilityCasterHasNoFacts>(c => {
                         c.m_Facts = new BlueprintUnitFactReference[]
                         {
-                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature")),
-                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "BaseFeature"))
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "Feature")),
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Evolution + InternalClass.abilities[i] + "BaseFeature"))
                         };
                     })
                     .ConfigureWithLogging(true);

@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
 {
     internal class AbilityTransposition
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string Ability = "SummonerTranspositionAbility";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerTranspositionFeature.Name");
@@ -21,10 +21,10 @@ namespace WOTR_MAKING_FRIENDS.Abilities
         }
         public static void CreateTranspositionAbility()
         {
-            BlueprintAbility ability = AbilityConfigurator.New(InternalString.Ability, GetGUID.GUIDByName("SummonerTranspositionAbility"))
+            BlueprintAbility ability = AbilityConfigurator.New(InternalClass.Ability, GetGUID.GUIDByName("SummonerTranspositionAbility"))
                 .CopyFrom(AbilityRefs.EmergencySwapAbility, c => c is AbilityCustomDimensionDoorSwap)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+                .SetDisplayName(InternalClass.Name)
+                .SetDescription(InternalClass.Description)
                 .AddComponent<AbilityTargetIsEidolon>()
                 .SetCanTargetPoint(false)
                 .SetCanTargetFriends(true)

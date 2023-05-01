@@ -17,7 +17,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffSummonerShieldAllyGreater
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Buff = "SummonerShieldAllyGreaterBuff";
             internal const string BuffIsMaster = "SummonerShieldAllyGreaterIsMasterBuff";
@@ -37,10 +37,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyGreaterAuraBuff()
         {
-            BuffConfigurator.New(InternalString.AuraBuff, GetGUID.GUIDByName(InternalString.AuraBuff))
-                .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            BuffConfigurator.New(IClass.AuraBuff, GetGUID.GUIDByName(IClass.AuraBuff))
+                .CopyFrom(BuffRefs.ShieldOfFaithBuff)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .AddAreaEffect(GetGUID.GUIDByName("SummonerShieldAllyGreaterAuraAreaEffectBuff"))
                 .SetStacking(StackingType.Ignore)
                 .SetFlags(new BlueprintBuff.Flags[] { BlueprintBuff.Flags.HiddenInUi })
@@ -48,8 +48,8 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyGreaterAuraAreaEffectBuff()
         {
-            AbilityAreaEffectConfigurator.New(InternalString.AreaEffectBuff, GetGUID.GUIDByName(InternalString.AreaEffectBuff))
-                .CopyFrom(AbilityAreaEffectRefs.MartyrAuraOfHealthArea, c => c is null)
+            AbilityAreaEffectConfigurator.New(IClass.AreaEffectBuff, GetGUID.GUIDByName(IClass.AreaEffectBuff))
+                .CopyFrom(AbilityAreaEffectRefs.MartyrAuraOfHealthArea)
                 .AddAbilityAreaEffectBuff(GetGUID.GUIDByName("SummonerShieldAllyGreaterConditionalBuff"))
                 .SetSize(7.Feet())
                 .ConfigureWithLogging();
@@ -78,10 +78,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 
             var actionsRemoveBuffBuilderIsMaster = ActionsBuilder.New().RemoveBuff(GetGUID.GUIDByName("SummonerShieldAllyGreaterBuff")).Build();
 
-            BuffConfigurator.New(InternalString.ConditionalBuff, GetGUID.GUIDByName(InternalString.ConditionalBuff))
-                .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            BuffConfigurator.New(IClass.ConditionalBuff, GetGUID.GUIDByName(IClass.ConditionalBuff))
+                .CopyFrom(BuffRefs.ShieldOfFaithBuff)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetStacking(StackingType.Ignore)
                 .AddBuffActions(actionsAddBuffBuilderIsAlly, actionsRemoveBuffBuilderIsAlly, actionsAddBuffBuilderIsAlly)
                 .AddBuffActions(actionsAddBuffBuilderIsMaster, actionsRemoveBuffBuilderIsMaster, actionsAddBuffBuilderIsMaster)
@@ -90,10 +90,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyGreaterBuff()
         {
-            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName(InternalString.Buff))
-                .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            BuffConfigurator.New(IClass.Buff, GetGUID.GUIDByName(IClass.Buff))
+                .CopyFrom(BuffRefs.ShieldOfFaithBuff)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetStacking(StackingType.Ignore)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddStatBonus(ModifierDescriptor.Shield, null, StatType.AC, 2)
@@ -104,10 +104,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         private static void CreateSummonerShieldAllyGreaterIsMasterBuff()
         {
-            BuffConfigurator.New(InternalString.BuffIsMaster, GetGUID.GUIDByName(InternalString.BuffIsMaster))
-                .CopyFrom(BuffRefs.ShieldOfFaithBuff, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            BuffConfigurator.New(IClass.BuffIsMaster, GetGUID.GUIDByName(IClass.BuffIsMaster))
+                .CopyFrom(BuffRefs.ShieldOfFaithBuff)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetStacking(StackingType.Ignore)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddStatBonus(ModifierDescriptor.Shield, null, StatType.AC, 4)

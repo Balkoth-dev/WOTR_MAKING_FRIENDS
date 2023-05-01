@@ -9,7 +9,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffOverstimulate
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string OverstimulateBuff = "OverstimulateBuff";
             internal static LocalizedString OverstimulateSpellName = Helpers.ObtainString("OverstimulateSpell.Name");
@@ -17,10 +17,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         public static void CreateOverstimulateBuff()
         {
-            BuffConfigurator.New(InternalString.OverstimulateBuff, GetGUID.GUIDByName("OverstimulateBuff"))
-                .CopyFrom(BuffRefs.RageBuff, c => c is null)
-                .SetDisplayName(InternalString.OverstimulateSpellName)
-                .SetDescription(InternalString.OverstimulateSpellDescription)
+            BuffConfigurator.New(IClass.OverstimulateBuff, GetGUID.GUIDByName("OverstimulateBuff"))
+                .CopyFrom(BuffRefs.RageBuff)
+                .SetDisplayName(IClass.OverstimulateSpellName)
+                .SetDescription(IClass.OverstimulateSpellDescription)
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddMechanicsFeature(Kingmaker.UnitLogic.FactLogic.AddMechanicsFeature.MechanicsFeatureType.Ferocity)
                 .ConfigureWithLogging();

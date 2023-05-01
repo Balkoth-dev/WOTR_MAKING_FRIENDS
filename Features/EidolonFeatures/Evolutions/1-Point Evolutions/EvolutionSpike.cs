@@ -28,7 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionSpike
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = ItemWeaponRefs.Spike1d4.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionSpike";
@@ -44,21 +44,21 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AddSecondaryAttacksItemsByRank>(c => {
                     c.m_Weapon = ItemWeaponRefs.Spike1d4.Cast<BlueprintItemWeaponReference>().Reference;
                     c.limbCount = 1;
-                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalClass.Feature));
                 })
-                .SetRanks(InternalString.Ranks)
+                .SetRanks(InternalClass.Ranks)
                 .ConfigureWithLogging(true);
 
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {

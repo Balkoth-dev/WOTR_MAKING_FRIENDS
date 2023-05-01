@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureTransposition
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "SummonerTranspositionFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerTranspositionFeature.Name");
@@ -22,10 +22,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateTranspositionFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .CopyFrom(FeatureRefs.ArcanistExploitDimensionalSlideFeature.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
+                .CopyFrom(FeatureRefs.ArcanistExploitDimensionalSlideFeature.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerTranspositionAbility")) })
                 .SetIcon(FeatureRefs.SpellDanceFeature.Reference.Get().m_Icon)
                 .ConfigureWithLogging();

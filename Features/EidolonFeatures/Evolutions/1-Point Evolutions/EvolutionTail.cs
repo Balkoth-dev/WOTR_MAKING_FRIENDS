@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionTail
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionTail.png");
             internal const string Evolution = "EvolutionTail";
@@ -37,16 +37,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.Racial, stat: StatType.SkillMobility, value: 2)
                 .SetRanks(99)
                 .ConfigureWithLogging(true);
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {

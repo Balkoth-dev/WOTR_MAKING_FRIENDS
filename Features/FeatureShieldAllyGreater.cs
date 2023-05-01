@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureShieldAllyGreater
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "SummonerShieldAllyGreaterFeature";
             internal const string AuraFeature = "SummonerShieldAllyGreaterAuraFeature";
@@ -24,10 +24,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         private static void CreateShieldAllyGreaterFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
+                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .AddRemoveFeatureOnApply(GetGUID.GUIDByName("SummonerShieldAllyFeature"))
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddFeatureToPet(GetGUID.GUIDByName("SummonerShieldAllyGreaterAuraFeature"), PetTypeExtensions.Eidolon)
@@ -36,10 +36,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         private static void CreateShieldAllyGreaterAuraFeature()
         {
-            FeatureConfigurator.New(InternalString.AuraFeature, GetGUID.GUIDByName(InternalString.AuraFeature))
-                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.AuraFeature, GetGUID.GUIDByName(IClass.AuraFeature))
+                .CopyFrom(FeatureRefs.CavalierSpiritualShield.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddAuraFeatureComponent(GetGUID.GUIDByName("SummonerShieldAllyGreaterAuraBuff"))
                 .ConfigureWithLogging();

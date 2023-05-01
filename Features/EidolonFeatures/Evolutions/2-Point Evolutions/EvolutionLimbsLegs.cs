@@ -24,7 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionLimbsLegs
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionLimbsLegs.png");
             internal const string Evolution = "EvolutionLimbsLegs";
@@ -48,8 +48,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.Racial, stat: StatType.Speed, value: 10)
                 .SetRanks(99)
                 .ConfigureWithLogging(true);
@@ -57,8 +57,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .ConfigureWithLogging(true);
         }
     }

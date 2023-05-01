@@ -16,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
     internal class SpellOverstimulate
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string OverstimulateSpell = "OverstimulateSpell";
             internal static LocalizedString OverstimulateSpellName = Helpers.ObtainString(OverstimulateSpell + ".Name");
@@ -42,8 +42,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         };
         public static void CreateOverstimulate()
         {
-            AbilityConfigurator spell = AbilityConfigurator.New(InternalString.OverstimulateSpell, GetGUID.GUIDByName("OverstimulateSpell"))
-                .CopyFrom(AbilityRefs.Rage, c => c is null)
+            AbilityConfigurator spell = AbilityConfigurator.New(IClass.OverstimulateSpell, GetGUID.GUIDByName("OverstimulateSpell"))
+                .CopyFrom(AbilityRefs.Rage)
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddAbilityEffectRunAction(
                 ActionsBuilder.New()

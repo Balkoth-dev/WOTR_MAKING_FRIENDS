@@ -21,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     internal class FeatureEidolonSelection
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string BaseFeatureSelection = "EidolonBaseFeatureSelection";
             internal const string BaseFormSelectionFeature = "BaseFormSelectionFeature";
@@ -31,15 +31,15 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
         public static void Create()
         {
             BaseFeatureSelection();
-            BaseFormSelectionFeatures(InternalString.BaseFormSelectionFeature, new EnumsEidolonBaseForm());
-            EidolonFeature(InternalString.Feature, UnitEidolons.newUnits);
+            BaseFormSelectionFeatures(InternalClass.BaseFormSelectionFeature, new EnumsEidolonBaseForm());
+            EidolonFeature(InternalClass.Feature, UnitEidolons.newUnits);
         }
 
         internal static void BaseFeatureSelection()
         {
-            var feature = FeatureSelectionConfigurator.New(InternalString.BaseFeatureSelection, GetGUID.GUIDByName(InternalString.BaseFeatureSelection))
-                                                    .SetDisplayName(Helpers.ObtainString(InternalString.BaseFeatureSelection + ".Name"))
-                                                    .SetDescription(Helpers.ObtainString(InternalString.BaseFeatureSelection + ".Description"))
+            var feature = FeatureSelectionConfigurator.New(InternalClass.BaseFeatureSelection, GetGUID.GUIDByName(InternalClass.BaseFeatureSelection))
+                                                    .SetDisplayName(Helpers.ObtainString(InternalClass.BaseFeatureSelection + ".Name"))
+                                                    .SetDescription(Helpers.ObtainString(InternalClass.BaseFeatureSelection + ".Description"))
                                                     .SetHideInUI(false)
                                                     .SetHideInCharacterSheetAndLevelUp(false)
                                                     .SetGroups(FeatureGroup.AnimalCompanion)
@@ -67,7 +67,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                                             .SetIsClassFeature(true)
                                                             .ConfigureWithLogging();
 
-                    FeatureSelectionConfigurator.For(GetGUID.GUIDByName(InternalString.BaseFeatureSelection)).AddToAllFeatures(eidolonFeatureGuid).ConfigureWithLogging(true);
+                    FeatureSelectionConfigurator.For(GetGUID.GUIDByName(InternalClass.BaseFeatureSelection)).AddToAllFeatures(eidolonFeatureGuid).ConfigureWithLogging(true);
 
                 }
                 catch (Exception ex)
@@ -111,7 +111,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                     feature.AddComponents(new[] { addEidolon });
 
                     var eidolonBaseFormType = Enum.GetName(typeof(EnumsEidolonBaseForm), eidolon.eidolonBaseForm);
-                    var eidolonSelectionFeatureName = "Eidolon" + eidolonBaseFormType + InternalString.BaseFormSelectionFeature;
+                    var eidolonSelectionFeatureName = "Eidolon" + eidolonBaseFormType + InternalClass.BaseFormSelectionFeature;
                     var eidolonSelectionFeatureGuid = GetGUID.GUIDByName(eidolonSelectionFeatureName);
                     FeatureSelectionConfigurator.For(eidolonSelectionFeatureGuid).AddToAllFeatures(eidolonFeatureGuid).ConfigureWithLogging(true);
                 }

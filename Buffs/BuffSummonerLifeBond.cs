@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffSummonerLifeBond
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Buff = "SummonerLifeBondBuff";
             internal static LocalizedString Name = Helpers.ObtainString("summonerlifebondfeature.Name");
@@ -18,10 +18,10 @@ namespace WOTR_MAKING_FRIENDS.Buffs
         }
         public static void CreateSummonerLifeBondBuff()
         {
-            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName("SummonerLifeBondBuff"))
-                .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            BuffConfigurator.New(IClass.Buff, GetGUID.GUIDByName("SummonerLifeBondBuff"))
+                .CopyFrom(BuffRefs.OracleRevelationLifeLinkBuff)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "LifeBond.png"))
                 .SetStacking(StackingType.Ignore)
                 .AddComponent<LifeBond>()

@@ -32,7 +32,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
 {
     internal class EvolutionBreathWeapon
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Evolution = "EvolutionBreathWeapon";
             internal const string Feature = Evolution + "Feature";
@@ -63,44 +63,44 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            for (var i = 0; i < InternalString.abilities.Length; i++)
+            for (var i = 0; i < IClass.abilities.Length; i++)
             {
-                var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), InternalString.abilities[i]);
-                FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature"))
-                    .SetIcon(InternalString.icons[i])
+                var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), IClass.abilities[i]);
+                FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Feature"))
+                    .SetIcon(IClass.icons[i])
                     .SetRanks(1)
-                    .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "BreathAbility")) })
+                    .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "BreathAbility")) })
                     .ConfigureWithLogging(true);
             }
         }
         public static void ConfigureBreathWeapons()
         {
-            for (var i = 0; i < InternalString.copiedAbilities.Length; i++)
+            for (var i = 0; i < IClass.copiedAbilities.Length; i++)
             {
-                var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), InternalString.abilities[i]);
-                AbilityConfigurator.New(InternalString.Evolution + InternalString.abilities[i] + "BreathAbility",GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "BreathAbility"))
-                    .CopyFrom(InternalString.copiedAbilities[i],c => c is not AbilityResourceLogic)
-                    .SetDescription(Helpers.ObtainString(InternalString.Evolution + InternalString.abilities[i] + "BreathAbility.Name"))
-                    .SetDescription(Helpers.ObtainString(InternalString.Evolution + InternalString.abilities[i] + "BreathAbility.Description"))
-                    .SetIcon(InternalString.icons[i])
+                var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), IClass.abilities[i]);
+                AbilityConfigurator.New(IClass.Evolution + IClass.abilities[i] + "BreathAbility",GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "BreathAbility"))
+                    .CopyFrom(IClass.copiedAbilities[i],c => c is not AbilityResourceLogic)
+                    .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Name"))
+                    .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Description"))
+                    .SetIcon(IClass.icons[i])
                     .ConfigureWithLogging();
             }
         }
 
         public static void AdjustAbility()
         {
-            for (var i = 0; i < InternalString.abilities.Length; i++)
+            for (var i = 0; i < IClass.abilities.Length; i++)
             {
-                AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Ability"))
-                    .SetIcon(InternalString.icons[i])
+                AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Ability"))
+                    .SetIcon(IClass.icons[i])
                     .AddComponent<AbilityCasterHasFactRank>(c => {
                         c.startLevel = 9;
                     })
                     .AddComponent<AbilityCasterHasNoFacts>(c => {
                         c.m_Facts = new BlueprintUnitFactReference[]
                         {
-                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "Feature")),
-                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Evolution + InternalString.abilities[i] + "BaseFeature"))
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Feature")),
+                            BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "BaseFeature"))
                         };
                     })
                     .ConfigureWithLogging(true);

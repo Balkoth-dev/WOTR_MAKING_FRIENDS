@@ -28,7 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionLimbsArms
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionLimbsArms.png");
             internal const string Evolution = "EvolutionLimbsArms";
@@ -43,12 +43,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .RemoveComponents(c => c is IncreaseResourceAmount)
                 .AddComponent<AddAdditionalBothHandsAttacks>(c => { c.rankStart = 2; })
                 .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")); c.Rank = 2; c.Value = -2; })
-                .SetRanks(InternalString.Ranks)
+                .SetRanks(InternalClass.Ranks)
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.MainHand; })
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.OffHand; })
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon1; })
@@ -64,11 +64,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(InternalString.Feature);
+                    c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(InternalClass.Feature);
                     c.featureRank = 1;
                     c.resourceAmount = 2;
                 })

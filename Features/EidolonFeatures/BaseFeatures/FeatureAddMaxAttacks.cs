@@ -17,7 +17,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     public static class FeatureAddMaxAttacks
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string Feature = "AddMaxAttacksFeature";
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
@@ -27,16 +27,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
         public static void Create()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName(InternalString.Feature))
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(InternalClass.Feature, GetGUID.GUIDByName(InternalClass.Feature))
+                .SetDisplayName(InternalClass.Name)
+                .SetDescription(InternalClass.Description)
                 .SetIcon(AbilityRefs.MagicFangGreater.Reference.Get().m_Icon)
                 .AddAbilityResources(0, GetGUID.GUIDByName("EidolonMaxAttacksResource"),true,true)
                 .ConfigureWithLogging();
 
-            FeatureConfigurator.New(InternalString.StepFeature, GetGUID.GUIDByName(InternalString.StepFeature))
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(InternalClass.StepFeature, GetGUID.GUIDByName(InternalClass.StepFeature))
+                .SetDisplayName(InternalClass.Name)
+                .SetDescription(InternalClass.Description)
                 .SetIcon(AbilityRefs.MagicFangGreater.Reference.Get().m_Icon)
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), 1)
                 .SetRanks(40)

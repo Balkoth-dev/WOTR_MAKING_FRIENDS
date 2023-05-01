@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
 {
     internal class EvolutionDamageReduction
     {
-        private static class InternalString
+        private static class IClass
         {
             internal static Sprite icon = FeatureRefs.BloodragerDamageReduction.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionDamageReduction";
@@ -46,16 +46,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.New(InternalString.ResourceReductionFeature, GetGUID.GUIDByName(InternalString.ResourceReductionFeature))
-                .CopyFrom(GetGUID.GUIDByName(InternalString.Feature), c => true)
+            FeatureConfigurator.New(IClass.ResourceReductionFeature, GetGUID.GUIDByName(IClass.ResourceReductionFeature))
+                .CopyFrom(GetGUID.GUIDByName(IClass.Feature), c => true)
                 .SetRanks(100)
                 .SetHideInUI(true)
                 .ConfigureWithLogging();
 
-            var feature = FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            var feature = FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
                 .RemoveComponents(c => c is IncreaseResourceAmount)
-                .AddContextRankConfig(ContextRankConfigs.FeatureRank(GetGUID.GUIDByName(InternalString.Feature)))
+                .AddContextRankConfig(ContextRankConfigs.FeatureRank(GetGUID.GUIDByName(IClass.Feature)))
                 .AddDamageResistancePhysical(value: ContextValues.Rank())
                 .SetRanks(100)
                 .ConfigureWithLogging(true);
@@ -63,22 +63,22 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .RemoveComponents(c => c is AbilityEffectRunAction)
                 .ConfigureWithLogging(true);
 
-            var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.ResourceReductionFeature)))
+            var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.ResourceReductionFeature)))
                                                     .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost3Feature")))
-                                                    .Add<ContextActionAddFeatureRanks>(c => { c.setRank = 5; c.m_PermanentFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature)); })           
+                                                    .Add<ContextActionAddFeatureRanks>(c => { c.setRank = 5; c.m_PermanentFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature)); })           
                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")), 99)
                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
                                                     .Build();
 
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
                 .AddAbilityEffectRunAction(actions: abilityAction)
                 .AddComponent<AbilityCasterHasFactRank>(c => {
-                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
                     c.maxRank = 100;
                     c.numLevelsBetweenRanks = 0;
                     c.startLevel = 15;

@@ -18,7 +18,7 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
 {
     internal class EidolonBaseClass
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal const string ClassName = "EidolonBaseClass";
             internal static LocalizedString Name = Helpers.ObtainString("EidolonBaseClass.Name");
@@ -26,9 +26,9 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
         }
         public static void CreateEidolonBaseClass()
         {
-            CharacterClassConfigurator.New(InternalString.ClassName, GetGUID.GUIDByName(InternalString.ClassName))
-                .SetLocalizedName(InternalString.Name)
-                .SetLocalizedDescription(InternalString.Description)
+            CharacterClassConfigurator.New(InternalClass.ClassName, GetGUID.GUIDByName(InternalClass.ClassName))
+                .SetLocalizedName(InternalClass.Name)
+                .SetLocalizedDescription(InternalClass.Description)
                 .SetSkillPoints(3)
                 .SetHitDie(DiceType.D10)
                 .SetPrestigeClass(false)

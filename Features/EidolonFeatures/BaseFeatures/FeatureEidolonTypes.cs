@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     internal class FeatureEidolonTypes
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "EidolonSubtypeFeature";
             internal static LocalizedString Name = Helpers.ObtainString("eidolonsubtypefeature.Name");
@@ -39,9 +39,9 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
         }
         internal static void CreateBaseFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName("EidolonSubtypeFeature"))
-                               .SetDisplayName(InternalString.Name)
-                               .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName("EidolonSubtypeFeature"))
+                               .SetDisplayName(IClass.Name)
+                               .SetDescription(IClass.Description)
                                .SetHideInUI(true)
                                .SetHideInCharacterSheetAndLevelUp(true)
                                .SetGroups(FeatureGroup.CreatureType)

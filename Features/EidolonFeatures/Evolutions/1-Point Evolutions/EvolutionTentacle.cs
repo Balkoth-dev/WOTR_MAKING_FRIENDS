@@ -28,7 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionTentacle
     {
-        private static class InternalString
+        private static class IClass
         {
             internal static Sprite icon = AbilityRefs.ThirstingEntangle.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionTentacle";
@@ -44,22 +44,22 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
                 .AddComponent<AddSecondaryAttacksItemsByRank>(c => {
                     c.m_Weapon = ItemWeaponRefs.Tentacle1d4.Cast<BlueprintItemWeaponReference>().Reference;
                     c.limbCount = 1;
-                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature));
                 })
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
-                .SetRanks(InternalString.Ranks)
+                .SetRanks(IClass.Ranks)
                 .ConfigureWithLogging(true);
 
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {

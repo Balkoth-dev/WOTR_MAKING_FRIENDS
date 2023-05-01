@@ -27,7 +27,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionBloodFrenzy
     {
-        private static class InternalString
+        private static class IClass
         {
             internal static Sprite icon = AbilityRefs.Rage.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionBloodFrenzy";
@@ -50,32 +50,32 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.ActivatableAbility)) })
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.ActivatableAbility)) })
                 .ConfigureWithLogging(true);
         }
         public static void AddWeaponFrenzyOverrideAbility()
         {
-            ActivatableAbilityConfigurator.New(InternalString.ActivatableAbility, GetGUID.GUIDByName(InternalString.ActivatableAbility))
-                .SetDisplayName(InternalString.ActivatableAbilityName)
-                .SetDescription(InternalString.ActivatableAbilityDescription)
-                .SetIcon(InternalString.icon)
+            ActivatableAbilityConfigurator.New(IClass.ActivatableAbility, GetGUID.GUIDByName(IClass.ActivatableAbility))
+                .SetDisplayName(IClass.ActivatableAbilityName)
+                .SetDescription(IClass.ActivatableAbilityDescription)
+                .SetIcon(IClass.icon)
                 .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
                 .SetDeactivateImmediately(true)
                 .SetActivateWithUnitCommand(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free)
                 .SetActivateOnUnitAction(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivateOnUnitActionType.Attack)
                 .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Fatigued,invert:true)
                 .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Exhausted, invert: true)
-                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(InternalString.Buff)))
+                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(IClass.Buff)))
                 .ConfigureWithLogging();
         }
         public static void AddEvolutionBuff()
         {
-            BuffConfigurator.New(InternalString.Buff, GetGUID.GUIDByName(InternalString.Buff))
-                .SetDisplayName(InternalString.BuffName)
-                .SetDescription(InternalString.BuffDescription)
-                .SetIcon(InternalString.icon)
+            BuffConfigurator.New(IClass.Buff, GetGUID.GUIDByName(IClass.Buff))
+                .SetDisplayName(IClass.BuffName)
+                .SetDescription(IClass.BuffDescription)
+                .SetIcon(IClass.icon)
                 .AddFactContextActions(ActionsBuilder.New().BuffActionAddStatBonus(descriptor:ModifierDescriptor.Morale,StatType.AdditionalAttackBonus,ContextValues.Constant(2))
                                                            .BuffActionAddStatBonus(descriptor: ModifierDescriptor.Morale, StatType.AdditionalDamage, ContextValues.Constant(2))
                                                            .Build(),
@@ -86,8 +86,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
                 .AddComponent<AbilityCasterHasFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
@@ -99,8 +99,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                 .AddComponent<AbilityCasterHasNoFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalString.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

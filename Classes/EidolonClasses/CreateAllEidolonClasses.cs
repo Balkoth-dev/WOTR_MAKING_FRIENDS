@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
                     var progressionName = "EidolonBaseProgression";
 
                     var characterClass = CharacterClassConfigurator.New(characterClassName, characterClassGuid)
-                        .CopyFrom(GetGUID.GUIDByName("EidolonBaseClass"), c => c is null)
+                        .CopyFrom(GetGUID.GUIDByName("EidolonBaseClass"))
                         .SetProgression(BlueprintTool.Get<BlueprintProgression>(GetGUID.GUIDByName(progressionName)))
                         .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(featureBaseForm));
 

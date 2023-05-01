@@ -28,7 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
 {
     internal class EvolutionSlamLimbs
     {
-        private static class InternalString
+        private static class InternalClass
         {
             internal static Sprite icon = AbilityRefs.RageshaperGroundSlam.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionSlamLimbs";
@@ -44,22 +44,22 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalString.Feature))
-                .SetIcon(InternalString.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AddSecondaryAttacksItemsByRank>(c => {
                     c.m_Weapon = ItemWeaponRefs.Slam1d4.Cast<BlueprintItemWeaponReference>().Reference;
                     c.limbCount = 2;
-                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalString.Feature));
+                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(InternalClass.Feature));
                 })
                 .AddManeuverBonus(type: Kingmaker.RuleSystem.Rules.CombatManeuver.BullRush, bonus: 2, descriptor: Kingmaker.Enums.ModifierDescriptor.Racial)
-                .SetRanks(InternalString.Ranks)
+                .SetRanks(InternalClass.Ranks)
                 .ConfigureWithLogging(true);
 
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalString.Ability))
-                .SetIcon(InternalString.icon)
+            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
+                .SetIcon(InternalClass.icon)
                 .AddComponent<AbilityCasterHasResource>(c => {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
                     c.resourceAmount = 2;

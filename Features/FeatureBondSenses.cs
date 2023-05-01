@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureBondSenses
     {
-        private static class InternalString
+        private static class IClass
         {
             internal const string Feature = "SummonerBondedSensesFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerBondedSensesFeature.Name");
@@ -22,10 +22,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         }
         public static void CreateBondedSensesFeature()
         {
-            FeatureConfigurator.New(InternalString.Feature, GetGUID.GUIDByName("SummonerBondedSensesFeature"))
-                .CopyFrom(FeatureRefs.PossessedShamanSharedSkillPerception.Cast<BlueprintFeatureReference>().Reference, c => c is null)
-                .SetDisplayName(InternalString.Name)
-                .SetDescription(InternalString.Description)
+            FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName("SummonerBondedSensesFeature"))
+                .CopyFrom(FeatureRefs.PossessedShamanSharedSkillPerception.Cast<BlueprintFeatureReference>().Reference)
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
                 .AddComponent<BondedSensesComponent>()
                 .AddRecalculateOnStatChange(stat: Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
                 .AddSavesFixerRecalculate()
