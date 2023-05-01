@@ -1,23 +1,8 @@
-﻿using BlueprintCore.Actions.Builder;
-using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
-using BlueprintCore.Blueprints.References;
-using BlueprintCore.Conditions.Builder;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
-using Kingmaker.Localization;
-using Kingmaker.UnitLogic.Abilities.Components;
-using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.UnitLogic.Mechanics.Conditions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -28,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionLimbsArms
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal static Sprite icon = AssetLoader.LoadInternal("Evolutions", "EvolutionLimbsArms.png");
             internal const string Evolution = "EvolutionLimbsArms";
@@ -43,12 +28,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
-                .SetIcon(InternalClass.icon)
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
                 .RemoveComponents(c => c is IncreaseResourceAmount)
                 .AddComponent<AddAdditionalBothHandsAttacks>(c => { c.rankStart = 2; })
                 .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")); c.Rank = 2; c.Value = -2; })
-                .SetRanks(InternalClass.Ranks)
+                .SetRanks(IClass.Ranks)
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.MainHand; })
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.OffHand; })
                 .AddComponent<UnlockEquipmentSlot>(c => { c.m_SlotType = (UnlockEquipmentSlot.SlotType)SlotType.Weapon1; })
@@ -64,11 +49,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
-                .SetIcon(InternalClass.icon)
-                .AddComponent<AbilityCasterHasResource>(c => {
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
+                .AddComponent<AbilityCasterHasResource>(c =>
+                {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
-                    c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(InternalClass.Feature);
+                    c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(IClass.Feature);
                     c.featureRank = 1;
                     c.resourceAmount = 2;
                 })

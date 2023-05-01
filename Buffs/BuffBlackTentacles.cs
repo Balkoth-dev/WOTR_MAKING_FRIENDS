@@ -14,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffBlackTentacles
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string BlackTentaclesBuff = "BlackTentaclesBuff";
             internal static LocalizedString BlackTentaclesSpellName = Helpers.ObtainString("BlackTentaclesSpell.Name");

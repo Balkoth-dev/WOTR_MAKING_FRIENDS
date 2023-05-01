@@ -6,7 +6,7 @@ namespace WOTR_MAKING_FRIENDS.SummonPools
 {
     internal class CreateSummonPools
     {
-        internal static class InternalClass
+        internal static class IClass
         {
             internal const string SummonerPool = "SummonerPool";
             internal const string DraconicAllyPool = "DraconicAlly";
@@ -18,11 +18,11 @@ namespace WOTR_MAKING_FRIENDS.SummonPools
         }
         public static void CreateSummonerPool()
         {
-            SummonPoolConfigurator.New(InternalClass.SummonerPool, GetGUID.GUIDByName("SummonerPool")).ConfigureWithLogging();
+            SummonPoolConfigurator.New(IClass.SummonerPool, GetGUID.GUIDByName("SummonerPool")).ConfigureWithLogging();
         }
         public static void CreateDraconicAllyPool()
         {
-            SummonPoolConfigurator.New(InternalClass.DraconicAllyPool, GetGUID.GUIDByName("DraconicAllyPool")).ConfigureWithLogging();
+            SummonPoolConfigurator.New(IClass.DraconicAllyPool, GetGUID.GUIDByName("DraconicAllyPool")).ConfigureWithLogging();
         }
     }
 }

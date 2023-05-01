@@ -7,11 +7,6 @@ using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -21,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionSlam
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal static Sprite icon = ActivatableAbilityRefs.TerribleSlamAbilityLevel1.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionSlam";
@@ -44,47 +39,49 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
-                .SetIcon(InternalClass.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.ActivatableAbility)) })
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.ActivatableAbility)) })
                 .AddManeuverBonus(type: Kingmaker.RuleSystem.Rules.CombatManeuver.BullRush, bonus: 2, descriptor: Kingmaker.Enums.ModifierDescriptor.Racial)
                 .ConfigureWithLogging(true);
         }
         public static void AddWeaponEmptyHandOverrideAbility()
         {
-            ActivatableAbilityConfigurator.New(InternalClass.ActivatableAbility, GetGUID.GUIDByName(InternalClass.ActivatableAbility))
-                .SetDisplayName(InternalClass.ActivatableAbilityName)
-                .SetDescription(InternalClass.ActivatableAbilityDescription)
-                .SetIcon(InternalClass.icon)
+            ActivatableAbilityConfigurator.New(IClass.ActivatableAbility, GetGUID.GUIDByName(IClass.ActivatableAbility))
+                .SetDisplayName(IClass.ActivatableAbilityName)
+                .SetDescription(IClass.ActivatableAbilityDescription)
+                .SetIcon(IClass.icon)
                 .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
                 .SetDeactivateImmediately(true)
                 .SetActivateWithUnitCommand(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free)
                 .SetActivateOnUnitAction(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivateOnUnitActionType.Attack)
-                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(InternalClass.Buff)))
+                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(IClass.Buff)))
                 .ConfigureWithLogging();
         }
         public static void AddEvolutionBuff()
         {
-            BuffConfigurator.New(InternalClass.Buff, GetGUID.GUIDByName(InternalClass.Buff))
-                .SetDisplayName(InternalClass.BuffName)
-                .SetDescription(InternalClass.BuffDescription)
-                .SetIcon(InternalClass.icon)
+            BuffConfigurator.New(IClass.Buff, GetGUID.GUIDByName(IClass.Buff))
+                .SetDisplayName(IClass.BuffName)
+                .SetDescription(IClass.BuffDescription)
+                .SetIcon(IClass.icon)
                 .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Slam1d8.Cast<BlueprintItemWeaponReference>().Reference)
                 .ConfigureWithLogging();
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
-                .SetIcon(InternalClass.icon)
-                .AddComponent<AbilityCasterHasResource>(c => {
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
+                .AddComponent<AbilityCasterHasResource>(c =>
+                {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
                     c.resourceAmount = 2;
                 })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

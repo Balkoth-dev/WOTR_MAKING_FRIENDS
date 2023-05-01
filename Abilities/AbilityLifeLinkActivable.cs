@@ -9,7 +9,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
 {
     internal class AbilityLifeLinkActivable
     {
-        private static class IClass
+        internal static class IClass
         {
             internal static LocalizedString Name = Helpers.ObtainString("SummonerLifeLinkFeature.Name");
             internal static LocalizedString Description = Helpers.ObtainString("SummonerLifeLinkFeature.Description");

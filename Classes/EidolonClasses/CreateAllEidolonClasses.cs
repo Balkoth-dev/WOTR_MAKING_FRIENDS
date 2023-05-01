@@ -1,17 +1,13 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Classes;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Root;
 using System;
-using WOTR_MAKING_FRIENDS.CharacterClass;
-using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
-using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
-using static WOTR_MAKING_FRIENDS.SummonPools.CreateSummonPools;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 
 namespace WOTR_MAKING_FRIENDS.Classes.EidolonClasses
 {

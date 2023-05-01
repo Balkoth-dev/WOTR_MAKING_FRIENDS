@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
     internal class SummonerSecondSpellbook
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal const string SummonMonsterSpellbook = "SummonerSecondSpellbook";
             internal const string SummonMonsterSpellbookFeat = "SummonerSecondSpellbookFeat";
@@ -34,7 +34,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellSlotsTable()
         {
-            SpellsTableConfigurator.New(InternalClass.SummonMonsterSpellbookName + "SpellsPerDayTable", GetGUID.GUIDByName("SummonerSecondSpellbookSpellsPerDay"))
+            SpellsTableConfigurator.New(IClass.SummonMonsterSpellbookName + "SpellsPerDayTable", GetGUID.GUIDByName("SummonerSecondSpellbookSpellsPerDay"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,3),
@@ -63,7 +63,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void ConfigureSpellsKnownTable()
         {
-            SpellsTableConfigurator.New(InternalClass.SummonMonsterSpellbook + ".SpellKnownTable", GetGUID.GUIDByName("SummonerSecondSpellbookSpellsKnown"))
+            SpellsTableConfigurator.New(IClass.SummonMonsterSpellbook + ".SpellKnownTable", GetGUID.GUIDByName("SummonerSecondSpellbookSpellsKnown"))
                 .SetLevels(new SpellsLevelEntry[] {
                         CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,1),
@@ -176,7 +176,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 
         public static void CreateSpellList()
         {
-            SpellListConfigurator.New(InternalClass.SummonMonsterSpellbook + ".SpellList", GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"))
+            SpellListConfigurator.New(IClass.SummonMonsterSpellbook + ".SpellList", GetGUID.GUIDByName("SummonerSecondSpellbookSpellList"))
                 .AddToSpellsByLevel(Create0thLevelSpells(),
                 Create1stLevelSpells(),
                 Create2ndLevelSpells(),
@@ -195,8 +195,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             ConfigureSpellSlotsTable();
             ConfigureSpellsKnownTable();
             CreateSpellList();
-            return SpellbookConfigurator.New(InternalClass.SummonMonsterSpellbook, GetGUID.GUIDByName("SummonerSecondSpellbookSpellBook"))
-                .SetName(InternalClass.SummonMonsterSpellbookName)
+            return SpellbookConfigurator.New(IClass.SummonMonsterSpellbook, GetGUID.GUIDByName("SummonerSecondSpellbookSpellBook"))
+                .SetName(IClass.SummonMonsterSpellbookName)
                 .SetCharacterClass(GetGUID.GUIDByName("SummonerClass"))
                 .SetSpellsPerDay(GetGUID.GUIDByName("SummonerSecondSpellbookSpellsPerDay"))
                 .SetSpellsKnown(GetGUID.GUIDByName("SummonerSecondSpellbookSpellsKnown"))
@@ -216,9 +216,9 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             CreateSpellBook();
 
-            return FeatureConfigurator.New(InternalClass.SummonMonsterSpellbookFeat, GetGUID.GUIDByName("SummonerSecondSpellbookFeat"))
-                .SetDisplayName(InternalClass.SummonMonsterSpellbookFeatName)
-                .SetDescription(InternalClass.SummonMonsterSpellbookFeatDescription)
+            return FeatureConfigurator.New(IClass.SummonMonsterSpellbookFeat, GetGUID.GUIDByName("SummonerSecondSpellbookFeat"))
+                .SetDisplayName(IClass.SummonMonsterSpellbookFeatName)
+                .SetDescription(IClass.SummonMonsterSpellbookFeatDescription)
                 .AddSpellbook(ContextValues.Rank(), spellbook: GetGUID.GUIDByName("SummonerSecondSpellbookSpellBook"))
                 .AddContextRankConfig(ContextRankConfigs.ClassLevel(new string[] { BlueprintTool.Get<BlueprintCharacterClass>(GetGUID.GUIDByName("SummonerClass")).ToString() }, false, Kingmaker.Enums.AbilityRankType.Default, 20, 1))
                 .SetIsClassFeature(true)

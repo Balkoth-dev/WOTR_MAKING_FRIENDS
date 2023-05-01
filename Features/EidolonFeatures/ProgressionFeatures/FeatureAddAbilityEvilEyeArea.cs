@@ -4,15 +4,12 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Mechanics.Components;
 using Kingmaker.Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+using UnityEngine; using WOTR_MAKING_FRIENDS.Enums;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
@@ -22,12 +19,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
     {
         internal static class IClass
         {
-            internal static string ProgressionFeature = "AddAbilityEvilEyeArea";
+            internal static string ProgressionFeature = "Eidolon" + "AddAbilityEvilEyeArea";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static string Name = Helpers.ObtainString(Feature + ".Name");
             internal static string Description = Helpers.ObtainString(Feature + ".Description");
             internal static Sprite Icon = FeatureRefs.CombatCasting.Reference.Get().m_Icon;
+            internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
         internal static class IClassAbility
@@ -76,7 +74,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .CopyFrom(AbilityRefs.WitchHexEvilEyeACAbility, c => c is not (ContextSetAbilityParams or ContextRankConfig))
                 .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
                 .AddContextSetAbilityParams(dC: ContextValues.Rank(), casterLevel: ContextValues.Rank(), spellLevel: ContextValues.Rank())
-                .AddAbilityTargetsAround(radius:10.Feet())
+                .AddAbilityTargetsAround(radius: 10.Feet())
                 .ConfigureWithLogging();
 
             AbilityConfigurator.New("WitchHexEvilEyeAttackAreaAbility", GetGUID.GUIDByName("WitchHexEvilEyeAttackAreaAbility"))

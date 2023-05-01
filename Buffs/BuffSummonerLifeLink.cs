@@ -14,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffSummonerLifeLink
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Buff = "SummonerLifeLinkBuff";
             internal static LocalizedString Name = Helpers.ObtainString("summonerlifelinkfeature.Name");

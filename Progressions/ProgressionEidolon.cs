@@ -1,7 +1,5 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
-using Kingmaker.Blueprints;
 using Kingmaker.Localization;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
@@ -10,7 +8,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions
 {
     internal class ProgressionEidolon
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Progression = "EidolonProgression";
             internal static LocalizedString Name = Helpers.ObtainString("EidolonProgression.Name");

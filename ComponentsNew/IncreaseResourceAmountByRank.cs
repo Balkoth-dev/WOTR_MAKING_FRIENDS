@@ -1,14 +1,9 @@
-﻿using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.Blueprints;
+﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.PubSubSystem;
 using Kingmaker.UnitLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Serialization;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {

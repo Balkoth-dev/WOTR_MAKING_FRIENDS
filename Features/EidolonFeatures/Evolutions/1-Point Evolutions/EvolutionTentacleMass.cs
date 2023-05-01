@@ -1,5 +1,4 @@
-﻿using BlueprintCore.Actions.Builder;
-using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
+﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
@@ -8,11 +7,6 @@ using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -22,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionTentacleMass
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal static Sprite icon = AssetLoader.LoadInternal("Abilities", "BlackTentacles.png");
             internal const string Evolution = "EvolutionTentacleMass";
@@ -45,38 +39,39 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
-                .SetIcon(InternalClass.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.ActivatableAbility)) })
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.ActivatableAbility)) })
                 .ConfigureWithLogging(true);
         }
         public static void AddWeaponEmptyHandOverrideAbility()
         {
-            ActivatableAbilityConfigurator.New(InternalClass.ActivatableAbility, GetGUID.GUIDByName(InternalClass.ActivatableAbility))
-                .SetDisplayName(InternalClass.ActivatableAbilityName)
-                .SetDescription(InternalClass.ActivatableAbilityDescription)
-                .SetIcon(InternalClass.icon)
+            ActivatableAbilityConfigurator.New(IClass.ActivatableAbility, GetGUID.GUIDByName(IClass.ActivatableAbility))
+                .SetDisplayName(IClass.ActivatableAbilityName)
+                .SetDescription(IClass.ActivatableAbilityDescription)
+                .SetIcon(IClass.icon)
                 .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
                 .SetDeactivateImmediately(true)
                 .SetActivateWithUnitCommand(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free)
                 .SetActivateOnUnitAction(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivateOnUnitActionType.Attack)
-                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(InternalClass.Buff)))
+                .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(IClass.Buff)))
                 .ConfigureWithLogging();
         }
         public static void AddEvolutionBuff()
         {
-            BuffConfigurator.New(InternalClass.Buff, GetGUID.GUIDByName(InternalClass.Buff))
-                .SetDisplayName(InternalClass.BuffName)
-                .SetDescription(InternalClass.BuffDescription)
-                .SetIcon(InternalClass.icon)
+            BuffConfigurator.New(IClass.Buff, GetGUID.GUIDByName(IClass.Buff))
+                .SetDisplayName(IClass.BuffName)
+                .SetDescription(IClass.BuffDescription)
+                .SetIcon(IClass.icon)
                 .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.TentacleLarge1d6.Cast<BlueprintItemWeaponReference>().Reference)
                 .ConfigureWithLogging();
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
-                .SetIcon(InternalClass.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
+                .AddComponent<AbilityCasterHasFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAgathionSubtypeFeature")),
@@ -89,15 +84,17 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonPsychopompSubtypeFeature")),
                     };
                 })
-                .AddComponent<AbilityCasterHasResource>(c => {
+                .AddComponent<AbilityCasterHasResource>(c =>
+                {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
                     c.resourceAmount = 2;
                 })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

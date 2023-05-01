@@ -1,38 +1,22 @@
-﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
-using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
-using Kingmaker.Designers.EventConditionActionSystem.Conditions;
-using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums.Damage;
-using Kingmaker.Localization;
-using Kingmaker.RuleSystem;
-using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.UnitLogic.Mechanics;
-using Microsoft.Build.Framework.XamlTypes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolutions
 {
     internal class EvolutionBreathWeapon
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Evolution = "EvolutionBreathWeapon";
             internal const string Feature = Evolution + "Feature";
@@ -48,7 +32,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                                             AbilityRefs.DragonsBreathBlue.Reference.Get().m_Icon,
                                             AbilityRefs.DragonsBreathGold.Reference.Get().m_Icon,
                                             };
-            internal static BlueprintAbilityReference[] copiedAbilities = new BlueprintAbilityReference[] { 
+            internal static BlueprintAbilityReference[] copiedAbilities = new BlueprintAbilityReference[] {
                                              AbilityRefs.DragonbloodShifterGreenBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference,
                                              AbilityRefs.DragonbloodShifterSilverBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference,
                                              AbilityRefs.DragonbloodShifterBlueBreathWeaponAbility.Cast<BlueprintAbilityReference>().Reference,
@@ -78,8 +62,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             for (var i = 0; i < IClass.copiedAbilities.Length; i++)
             {
                 var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), IClass.abilities[i]);
-                AbilityConfigurator.New(IClass.Evolution + IClass.abilities[i] + "BreathAbility",GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "BreathAbility"))
-                    .CopyFrom(IClass.copiedAbilities[i],c => c is not AbilityResourceLogic)
+                AbilityConfigurator.New(IClass.Evolution + IClass.abilities[i] + "BreathAbility", GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "BreathAbility"))
+                    .CopyFrom(IClass.copiedAbilities[i], c => c is not AbilityResourceLogic)
                     .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Name"))
                     .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Description"))
                     .SetIcon(IClass.icons[i])
@@ -93,10 +77,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             {
                 AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Ability"))
                     .SetIcon(IClass.icons[i])
-                    .AddComponent<AbilityCasterHasFactRank>(c => {
+                    .AddComponent<AbilityCasterHasFactRank>(c =>
+                    {
                         c.startLevel = 9;
                     })
-                    .AddComponent<AbilityCasterHasNoFacts>(c => {
+                    .AddComponent<AbilityCasterHasNoFacts>(c =>
+                    {
                         c.m_Facts = new BlueprintUnitFactReference[]
                         {
                             BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Feature")),

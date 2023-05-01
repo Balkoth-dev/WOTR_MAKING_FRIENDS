@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using WOTR_MAKING_FRIENDS.Abilities;
 using WOTR_MAKING_FRIENDS.AiActions;
+using WOTR_MAKING_FRIENDS.BlueprintPatches;
 using WOTR_MAKING_FRIENDS.Brains;
 using WOTR_MAKING_FRIENDS.Buffs;
 using WOTR_MAKING_FRIENDS.CharacterClass;
@@ -16,12 +17,11 @@ using WOTR_MAKING_FRIENDS.Classes;
 using WOTR_MAKING_FRIENDS.Features;
 using WOTR_MAKING_FRIENDS.Progressions;
 using WOTR_MAKING_FRIENDS.Resources;
+using WOTR_MAKING_FRIENDS.SpellBook;
 using WOTR_MAKING_FRIENDS.Spells;
 using WOTR_MAKING_FRIENDS.SummonPools;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
-using WOTR_MAKING_FRIENDS.BlueprintPatches;
-using WOTR_MAKING_FRIENDS.SpellBook;
 
 namespace WOTR_MAKING_FRIENDS.Settings
 {

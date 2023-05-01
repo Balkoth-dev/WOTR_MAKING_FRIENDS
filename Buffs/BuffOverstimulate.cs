@@ -9,7 +9,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffOverstimulate
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string OverstimulateBuff = "OverstimulateBuff";
             internal static LocalizedString OverstimulateSpellName = Helpers.ObtainString("OverstimulateSpell.Name");

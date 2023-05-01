@@ -13,13 +13,7 @@ using Kingmaker.Enums;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using Kingmaker.UnitLogic.Mechanics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
@@ -27,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
 {
     internal class EvolutionBloodFrenzy
     {
-        private static class IClass
+        internal static class IClass
         {
             internal static Sprite icon = AbilityRefs.Rage.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionBloodFrenzy";
@@ -65,7 +59,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                 .SetDeactivateImmediately(true)
                 .SetActivateWithUnitCommand(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free)
                 .SetActivateOnUnitAction(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivateOnUnitActionType.Attack)
-                .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Fatigued,invert:true)
+                .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Fatigued, invert: true)
                 .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Exhausted, invert: true)
                 .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(IClass.Buff)))
                 .ConfigureWithLogging();
@@ -76,10 +70,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                 .SetDisplayName(IClass.BuffName)
                 .SetDescription(IClass.BuffDescription)
                 .SetIcon(IClass.icon)
-                .AddFactContextActions(ActionsBuilder.New().BuffActionAddStatBonus(descriptor:ModifierDescriptor.Morale,StatType.AdditionalAttackBonus,ContextValues.Constant(2))
+                .AddFactContextActions(ActionsBuilder.New().BuffActionAddStatBonus(descriptor: ModifierDescriptor.Morale, StatType.AdditionalAttackBonus, ContextValues.Constant(2))
                                                            .BuffActionAddStatBonus(descriptor: ModifierDescriptor.Morale, StatType.AdditionalDamage, ContextValues.Constant(2))
                                                            .Build(),
-                                                           ActionsBuilder.New().ApplyBuff(BuffRefs.Fatigued.Cast<BlueprintBuffReference>().Reference,ContextDuration.Fixed(1,DurationRate.Minutes)))
+                                                           ActionsBuilder.New().ApplyBuff(BuffRefs.Fatigued.Cast<BlueprintBuffReference>().Reference, ContextDuration.Fixed(1, DurationRate.Minutes)))
                 .AddCombatStateTrigger(ActionsBuilder.New().RemoveSelf())
                 .AddCondition(Kingmaker.UnitLogic.UnitCondition.AttackNearest)
                 .ConfigureWithLogging();
@@ -88,7 +82,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
+                .AddComponent<AbilityCasterHasFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonAberrantSubtypeFeature")),
@@ -96,7 +91,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDemonSubtypeFeature"))
                     };
                 })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),

@@ -3,13 +3,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
-using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -20,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
 {
     internal class EvolutionPounce
     {
-        private static class IClass
+        internal static class IClass
         {
             internal static Sprite icon = FeatureRefs.LungeFeature.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionPounce";
@@ -44,17 +38,20 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
+                .AddComponent<AbilityCasterHasFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonQuadrupedBaseFormFeature")),
                     };
                 })
-                .AddComponent<AbilityCasterHasFactRank>(c => {
+                .AddComponent<AbilityCasterHasFactRank>(c =>
+                {
                     c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
                     c.startLevel = 7;
                 })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),

@@ -1,16 +1,12 @@
-﻿using Kingmaker.Blueprints.Facts;
+﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Facts;
+using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.Blueprints;
 using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Kingmaker.Blueprints.Items.Weapons;
-using Kingmaker.Kingdom.Blueprints;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -38,14 +34,14 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                 if (m_Feature != null)
                 {
                     bonusRanks = evt.Initiator.Progression.Features.GetRank(m_Feature.Get());
-                    Main.Log("Size Category Change: "+ SizeCategoryChange);
+                    Main.Log("Size Category Change: " + SizeCategoryChange);
                 }
             }
             Main.Log("Size Category Change: " + SizeCategoryChange);
 
             if ((ignoreWeaponGroup || evt.Weapon.Blueprint.FighterGroup.Contains(this.weaponGroup)) && SizeCategoryChange != 0)
             {
-                for (var i = 0; i < Math.Abs(SizeCategoryChange+bonusRanks); i++)
+                for (var i = 0; i < Math.Abs(SizeCategoryChange + bonusRanks); i++)
                 {
                     if (SizeCategoryChange + bonusRanks > 0)
                     {

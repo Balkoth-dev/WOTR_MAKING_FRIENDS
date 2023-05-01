@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
 {
     internal class EidolonBaseProgression
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal const string Progression = "EidolonBaseProgression";
             internal static LocalizedString Name = Helpers.ObtainString("EidolonBaseProgression.Name");
@@ -30,23 +30,23 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                          BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EvolutionBaseAbilitiesFeature")),
                                          BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonSubtypeSelectionFeature"))
                                          )
-                                .AddEntry(2, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(3, FeatureRefs.Evasion.Cast<BlueprintFeatureBaseReference>().Reference, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(4, InternalClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
-                                .AddEntry(5, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(6, FeatureRefs.AnimalCompanionDevotion.Cast<BlueprintFeatureBaseReference>().Reference, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(7, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(9, FeatureRefs.Multiattack.Cast<BlueprintFeatureBaseReference>().Reference, InternalClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
-                                .AddEntry(10, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(11, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(13, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(14, FeatureRefs.ImprovedEvasion.Cast<BlueprintFeatureBaseReference>().Reference, InternalClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
-                                .AddEntry(15, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(17, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(18, InternalClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(19, InternalClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")));
+                                .AddEntry(2, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(3, FeatureRefs.Evasion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(4, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
+                                .AddEntry(5, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(6, FeatureRefs.AnimalCompanionDevotion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(7, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(9, FeatureRefs.Multiattack.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
+                                .AddEntry(10, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(11, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(13, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(14, FeatureRefs.ImprovedEvasion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
+                                .AddEntry(15, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(17, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(18, IClass.ExtraEvolutionPoolFeature)
+                                .AddEntry(19, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")));
 
-            var progression = ProgressionConfigurator.New(InternalClass.Progression, GetGUID.GUIDByName("EidolonBaseProgression"))
+            var progression = ProgressionConfigurator.New(IClass.Progression, GetGUID.GUIDByName("EidolonBaseProgression"))
                                                      .SetLevelEntries(entries)
                                                      .SetIsClassFeature(true)
                                                      .SetRanks(1)

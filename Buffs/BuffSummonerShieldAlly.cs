@@ -17,7 +17,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffSummonerShieldAlly
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Buff = "SummonerShieldAllyBuff";
             internal const string ConditionalBuff = "SummonerShieldAllyConditionalBuff";

@@ -1,30 +1,19 @@
-﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
-using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using Kingmaker.UnitLogic.FactLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolutions
 {
     internal class EvolutionWeb
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal static Sprite icon = AbilityRefs.ArmySpiderWebCast.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionWeb";
@@ -41,23 +30,24 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
-                .SetIcon(InternalClass.icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.WebAbility)) })
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.WebAbility)) })
                 .ConfigureWithLogging(true);
         }
         public static void AddEvolutionWebAbility()
         {
-            AbilityConfigurator.New(InternalClass.WebAbility, GetGUID.GUIDByName(InternalClass.WebAbility))
+            AbilityConfigurator.New(IClass.WebAbility, GetGUID.GUIDByName(IClass.WebAbility))
                 .CopyFrom(AbilityRefs.WebTiefling, c => c is not AbilityResourceLogic)
                 .ConfigureWithLogging();
         }
 
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
-                .SetIcon(InternalClass.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
+                .AddComponent<AbilityCasterHasFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
@@ -65,11 +55,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
                     };
                 })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature)),
-                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.BaseFeature))
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.BaseFeature))
                     };
                 })
                 .ConfigureWithLogging(true);

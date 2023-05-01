@@ -1,45 +1,25 @@
 ﻿using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
-using BlueprintCore.Utils.Types;
-using HarmonyLib;
 using Kingmaker.Blueprints;
-using Kingmaker.Blueprints.Items.Weapons;
-using Kingmaker.Designers.EventConditionActionSystem.Conditions;
 using Kingmaker.Designers.Mechanics.Buffs;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
-using Kingmaker.Enums.Damage;
-using Kingmaker.Localization;
-using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.Abilities.Components;
-using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.UnitLogic.Mechanics;
-using Microsoft.Build.Framework.XamlTypes;
-using Owlcat.Runtime.Visual.RenderPipeline.PostProcess.HBAO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.Blueprints.BlueprintAbilityResource;
-using static Kingmaker.GameModes.GameModeType;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolutions
 {
     internal class EvolutionLarge
     {
-        private static class IClass
+        internal static class IClass
         {
             internal static Sprite icon = AbilityRefs.LegendaryProportions.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionLarge";
@@ -49,7 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             internal const string Ability = Evolution + "Ability";
         }
         internal static BlueprintFeatureReference[] blueprintUnitFactReferences = new BlueprintFeatureReference[7];
-        internal static int[] SizeACPenalty = new int[] { -8, -4, -2, -1 }; 
+        internal static int[] SizeACPenalty = new int[] { -8, -4, -2, -1 };
         public static void Adjust()
         {
             AdjustFeature();
@@ -60,8 +40,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
                 .SetIcon(IClass.icon)
-                .AddStatBonus(ModifierDescriptor.Racial, false, StatType.Strength,2)
+                .AddStatBonus(ModifierDescriptor.Racial, false, StatType.Strength, 4)
+                .AddStatBonus(ModifierDescriptor.Racial, false, StatType.Constitution, 2)
+                .AddStatBonus(ModifierDescriptor.NaturalArmor, false, StatType.AC, 2)
                 .AddStatBonus(ModifierDescriptor.Racial, false, StatType.Dexterity, -2)
+                .AddStatBonus(ModifierDescriptor.Other, false, StatType.Reach, 5)
                 .SetRanks(2)
                 .ConfigureWithLogging(true);
         }
@@ -84,12 +67,14 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                         .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
                         .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
                         .SetRanks(1)
-                        .AddChangeUnitSize(size: enumValue, type: ChangeUnitSize.ChangeType.Value);
+                        .AddChangeUnitSize(size: enumValue, type: ChangeUnitSize.ChangeType.Value)
+                        .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")); c.Rank = 2; c.Value = -2; });
 
                     if (diff > 0)
                     {
-                        feature.AddComponent<WeaponSizeChangeWeaponGroup>(c => { 
-                            c.ignoreWeaponGroup = true; 
+                        feature.AddComponent<WeaponSizeChangeWeaponGroup>(c =>
+                        {
+                            c.ignoreWeaponGroup = true;
                             c.SizeCategoryChange = diff;
                             c.plusFeatureRanks = true;
                             c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature));
@@ -120,11 +105,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .RemoveComponents(c => c is AbilityEffectRunAction)
                 .ConfigureWithLogging(true);
-            
+
             var action = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature)))
-                                             .Add<ContextActionAddRemoveFeature>(c => { 
-                                                                                 c.m_Features = blueprintUnitFactReferences; 
-                                                                                 c.m_Default_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.EvolutionSizeChange+"LargeFeature")); })
+                                             .Add<ContextActionAddRemoveFeature>(c =>
+                                             {
+                                                 c.m_Features = blueprintUnitFactReferences;
+                                                 c.m_Default_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.EvolutionSizeChange + "LargeFeature"));
+                                             })
                                              .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost4Feature")))
                                              .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
                                              .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")));
@@ -132,7 +119,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
                 .AddAbilityEffectRunAction(action.Build())
-                .AddComponent<AbilityCasterHasFactRank>(c => {
+                .AddComponent<AbilityCasterHasResource>(c =>
+                {
+                    c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource"));
+                    c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(IClass.Feature);
+                    c.featureRank = 2;
+                    c.resourceAmount = 4;
+                    c.costMultiplierByRank = 2;
+                })
+                .AddComponent<AbilityCasterHasFactRank>(c =>
+                {
                     c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
                     c.maxRank = 2;
                     c.numLevelsBetweenRanks = 0;

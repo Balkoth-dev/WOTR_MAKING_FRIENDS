@@ -1,28 +1,21 @@
-﻿using BlueprintCore.Blueprints.Configurators.Classes;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
-using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Localization;
-using Microsoft.Build.Framework.XamlTypes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static RootMotion.FinalIK.GrounderQuadruped;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     internal class FeatureEidolonTypes
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Feature = "EidolonSubtypeFeature";
             internal static LocalizedString Name = Helpers.ObtainString("eidolonsubtypefeature.Name");

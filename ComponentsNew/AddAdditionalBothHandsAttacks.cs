@@ -1,14 +1,9 @@
-﻿using Kingmaker.Blueprints.Facts;
+﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.Blueprints;
 using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -20,20 +15,20 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         public int rankStart = 1;
         public void OnEventAboutToTrigger(RuleCalculateAttacksCount evt)
         {
-                if (evt.Initiator.Body.PrimaryHand.HasWeapon && !evt.Initiator.Body.PrimaryHand.Weapon.Blueprint.IsNatural)
+            if (evt.Initiator.Body.PrimaryHand.HasWeapon && !evt.Initiator.Body.PrimaryHand.Weapon.Blueprint.IsNatural)
+            {
+                for (var i = rankStart; i <= base.Fact.GetRank(); i++)
                 {
-                    for (var i = rankStart; i <= base.Fact.GetRank(); i++)
-                    {
-                        evt.Result.PrimaryHand.PenalizedAttacks++;
-                    }
+                    evt.Result.PrimaryHand.PenalizedAttacks++;
                 }
-                if (evt.Initiator.Body.SecondaryHand.HasWeapon && !evt.Initiator.Body.SecondaryHand.Weapon.Blueprint.IsNatural)
+            }
+            if (evt.Initiator.Body.SecondaryHand.HasWeapon && !evt.Initiator.Body.SecondaryHand.Weapon.Blueprint.IsNatural)
+            {
+                for (var i = rankStart; i <= base.Fact.GetRank(); i++)
                 {
-                    for (var i = rankStart; i <= base.Fact.GetRank(); i++)
-                    {
-                        evt.Result.SecondaryHand.PenalizedAttacks++;
-                    }
+                    evt.Result.SecondaryHand.PenalizedAttacks++;
                 }
+            }
         }
 
         public void OnEventDidTrigger(RuleCalculateAttacksCount evt)

@@ -1,17 +1,11 @@
-﻿using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.JsonSystem;
+﻿using Kingmaker;
 using Kingmaker.Blueprints;
-using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.Blueprints.Classes;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.UnitLogic;
-using Kingmaker.Utility;
-using Kingmaker;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Serialization;
+using Kingmaker.UnitLogic.Mechanics.Actions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -45,8 +39,8 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             if (setRank != 0)
             {
                 int rank = features.GetRank(m_PermanentFeature);
-                feature.SetRank(rank + (setRank-1));
-                
+                feature.SetRank(rank + (setRank - 1));
+
             }
         }
     }

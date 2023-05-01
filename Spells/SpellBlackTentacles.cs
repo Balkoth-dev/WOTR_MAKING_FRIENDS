@@ -24,7 +24,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
 {
     public class SpellBlackTentacles
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string BlackTentaclesAreaEffectName = "BlackTentaclesAreaEffect";
             internal const string BlackTentaclesSpell = "BlackTentaclesSpell";

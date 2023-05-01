@@ -9,7 +9,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureEidolonRank
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Feature = "EidolonRankFeature";
             internal static LocalizedString Name = Helpers.ObtainString("EidolonRankFeature.Name");

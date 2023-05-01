@@ -17,7 +17,7 @@ namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffSummonerShieldAllyGreater
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Buff = "SummonerShieldAllyGreaterBuff";
             internal const string BuffIsMaster = "SummonerShieldAllyGreaterIsMasterBuff";

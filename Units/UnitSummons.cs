@@ -36,7 +36,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region CatSummon
             new NewUnitClass()
                 {
-                    
+
                     Name ="CatSummon",
                     m_DisplayName =Helpers.ObtainString("CatSummon.Name"),
                     copiedUnit = UnitRefs.DogSummoned.Cast<BlueprintUnitReference>().Reference,
@@ -59,7 +59,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region CacodaemonSummon
                 new NewUnitClass()
                 {
-                    
+
                     Name ="CacodaemonSummon",
                     m_DisplayName =Helpers.ObtainString("CacodaemonSummon.Name"),
                     copiedUnit = UnitRefs.GibrilethSummon.Cast<BlueprintUnitReference>().Reference,
@@ -85,7 +85,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonBlack
                 new NewUnitClass()
                 {
-                    
+
                     Name ="DraconicAllySummonBlack",
                     m_DisplayName =Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
@@ -109,7 +109,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonBlue
                 new NewUnitClass()
                 {
-                    
+
                     Name ="DraconicAllySummonBlue",
                     m_DisplayName =Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
@@ -133,7 +133,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonBrass
                 new NewUnitClass()
                 {
-                    
+
                     Name ="DraconicAllySummonBrass",
                     m_DisplayName =Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
@@ -157,7 +157,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonGreen
                 new NewUnitClass()
                 {
-                    
+
                     Name ="DraconicAllySummonGreen",
                     m_DisplayName =Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
@@ -181,7 +181,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonRed
                 new NewUnitClass()
                 {
-                    
+
                     Name ="DraconicAllySummonRed",
                     m_DisplayName =Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
@@ -205,7 +205,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonSilver
                 new NewUnitClass()
                 {
-                    
+
                     Name ="DraconicAllySummonSilver",
                     m_DisplayName =Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
@@ -229,7 +229,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonWhite
                 new NewUnitClass()
                 {
-                    
+
                     Name ="DraconicAllySummonWhite",
                     m_DisplayName =Helpers.ObtainString("DraconicAllySummon.Name"),
                     copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
@@ -253,7 +253,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region LesserDemonSummonBrimorak
                 new NewUnitClass()
                 {
-                    
+
                     Name ="LesserDemonSummonBrimorak",
                     copiedUnit = UnitRefs.CR5_BrimorakStandard.Cast<BlueprintUnitReference>().Reference,
                     isSummon = true
@@ -262,7 +262,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region LesserDemonSummonIncubus
                 new NewUnitClass()
                 {
-                    
+
                     Name ="LesserDemonSummonIncubus",
                     copiedUnit = UnitRefs.CR6_IncubusStandard.Cast<BlueprintUnitReference>().Reference,
                     isSummon = true
@@ -271,7 +271,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region LesserDemonSummonSchir
                 new NewUnitClass()
                 {
-                    
+
                     Name ="LesserDemonSummonSchir",
                     copiedUnit = UnitRefs.CR4_SchirStandard.Cast<BlueprintUnitReference>().Reference,
                     isSummon = true
@@ -280,7 +280,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region LesserDemonSummonVermlek
                 new NewUnitClass()
                 {
-                    
+
                     Name ="LesserDemonSummonVermlek",
                     copiedUnit = UnitRefs.CR3_VermlekStandard.Cast<BlueprintUnitReference>().Reference,
                     isSummon = true
@@ -289,7 +289,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region StampedeSummonHorse
                 new NewUnitClass()
                 {
-                    
+
                     Name ="StampedeSummonHorse",
                     copiedUnit = UnitRefs.HorseSummoned.Cast<BlueprintUnitReference>().Reference,
                     isSummon = true,
@@ -307,7 +307,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region ReleaseTheHoundsWolf
                 new NewUnitClass()
                 {
-                    
+
                     Name ="ReleaseTheHoundsWolf",
                     copiedUnit = UnitRefs.WolfSummon.Cast<BlueprintUnitReference>().Reference,
                     isSummon = true,
@@ -333,7 +333,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region DraconicAllySummonBlack
                 new NewUnitClass()
                 {
-                    
+
                     Name ="ErinyesSummon",
                     copiedUnit = UnitRefs.CR8_ErinyesDevilStandard.Cast<BlueprintUnitReference>().Reference,
                     isSummon = true,
@@ -342,7 +342,7 @@ namespace WOTR_MAKING_FRIENDS.Units
             #region MeladaemonSummon
                 new NewUnitClass()
                 {
-                    
+
                     Name ="MeladaemonSummon",
                     copiedUnit = UnitRefs.CR7_Werewolf.Cast<BlueprintUnitReference>().Reference,
                     m_DisplayName =Helpers.ObtainString("MeladaemonSummon.Name"),

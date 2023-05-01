@@ -1,5 +1,4 @@
 ﻿using BlueprintCore.Utils.Types;
-using Kingmaker.Blueprints;
 using System;
 using System.Collections.Generic;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;

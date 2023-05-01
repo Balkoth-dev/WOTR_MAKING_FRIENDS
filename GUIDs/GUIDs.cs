@@ -1,12 +1,9 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
-using Microsoft.CSharp;
-using System.Reflection;
-using static System.Net.Mime.MediaTypeNames;
-using Newtonsoft.Json.Linq;
-using static UnityModManagerNet.UnityModManager;
 using System.Linq;
+using static UnityModManagerNet.UnityModManager;
 
 namespace WOTR_MAKING_FRIENDS.GUIDs
 {
@@ -34,7 +31,7 @@ namespace WOTR_MAKING_FRIENDS.GUIDs
                 newObject["name"] = s;
                 newObject["guid"] = newGuid;
 
-                oba.Add(newObject); 
+                oba.Add(newObject);
                 var settings = new JsonSerializerSettings
                 {
                     Formatting = Formatting.Indented

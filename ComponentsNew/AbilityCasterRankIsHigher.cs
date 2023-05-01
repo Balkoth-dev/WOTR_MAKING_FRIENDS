@@ -1,20 +1,8 @@
-﻿using Kingmaker.Blueprints.Facts;
+﻿using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.Blueprints.Root;
-using Kingmaker.Blueprints;
 using Kingmaker.EntitySystem.Entities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Serialization;
-using UnityEngine;
-using Kingmaker.UnitLogic;
-using Kingmaker.UI.Models.Log;
-using Kingmaker.UnitLogic.Abilities;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -37,7 +25,8 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                 return false;
             }
             var i = 0;
-            foreach (var feature in hasFeatures) {
+            foreach (var feature in hasFeatures)
+            {
                 if (caster.Progression.Features.HasFact(feature)) { i++; }
             }
             return i < caster.Progression.Features.GetFact(greaterThanFact).GetRank();

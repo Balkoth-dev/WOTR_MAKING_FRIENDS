@@ -1,8 +1,6 @@
 ﻿using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
-using Kingmaker.Designers.EventConditionActionSystem.Conditions;
 using Kingmaker.Localization;
-using Kingmaker.ResourceLinks;
 using System;
 using System.Collections.Generic;
 using System.IO;

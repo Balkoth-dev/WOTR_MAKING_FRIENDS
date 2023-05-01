@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureMakersCall
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Feature = "SummonerMakersCallFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerMakersCallFeature.Name");

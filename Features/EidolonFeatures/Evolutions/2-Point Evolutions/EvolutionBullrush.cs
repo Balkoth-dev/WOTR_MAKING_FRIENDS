@@ -1,31 +1,20 @@
-﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Enums;
-using Kingmaker.Localization;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using Kingmaker.UnitLogic.FactLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions
 {
     internal class EvolutionBullrush
     {
-        private static class IClass
+        internal static class IClass
         {
             internal static Sprite icon = AbilityRefs.BullRushAction.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionBullrush";
@@ -42,7 +31,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
                 .SetIcon(IClass.icon)
-                .AddManeuverOnAttack(category:WeaponCategory.Slam,maneuver:CombatManeuver.BullRush)
+                .AddManeuverOnAttack(category: WeaponCategory.Slam, maneuver: CombatManeuver.BullRush)
                 .ConfigureWithLogging(true);
         }
 
@@ -50,7 +39,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
-                .AddComponent<AbilityCasterHasFacts>(c => {
+                .AddComponent<AbilityCasterHasFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDaemonSubtypeFeature")),
@@ -60,14 +50,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonProteanSubtypeFeature")),
                     };
                 })
-                .AddComponent<AbilityCasterHasFacts>(c => {
+                .AddComponent<AbilityCasterHasFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSlamFeature")),
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSlamLimbsFeature")),
                     };
                 })
-                .AddComponent<AbilityCasterHasNoFacts>(c => {
+                .AddComponent<AbilityCasterHasNoFacts>(c =>
+                {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature)),

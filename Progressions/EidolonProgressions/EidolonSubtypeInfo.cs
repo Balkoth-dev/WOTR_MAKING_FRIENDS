@@ -1,6 +1,5 @@
 ﻿using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
-using Kingmaker.Blueprints;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;

@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureLifeLink
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Feature = "SummonerLifeLinkFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerLifeLinkFeature.Name");

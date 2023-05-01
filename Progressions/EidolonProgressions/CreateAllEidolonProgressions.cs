@@ -30,20 +30,20 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
 
                     foreach (var eidolonBaseForm in Enum.GetValues(typeof(EnumsEidolonBaseForm)))
                     {
-                            try
-                            {
-                                var characterClassName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + "Class";
-                                var characterClassGuid = GetGUID.GUIDByName(characterClassName);
-                                progression.AddToClasses(BlueprintTool.GetRef<BlueprintCharacterClassReference>(characterClassGuid));
-                            }
-                            catch { }
+                        try
+                        {
+                            var characterClassName = "Eidolon" + Enum.GetName(typeof(EnumsEidolonBaseForm), eidolonBaseForm) + "Class";
+                            var characterClassGuid = GetGUID.GUIDByName(characterClassName);
+                            progression.AddToClasses(BlueprintTool.GetRef<BlueprintCharacterClassReference>(characterClassGuid));
+                        }
+                        catch { }
                     }
 
                     progression.ConfigureWithLogging();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    Main.Log(e:ex);
+                    Main.Log(e: ex);
                 }
             }
         }

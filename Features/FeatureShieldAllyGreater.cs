@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureShieldAllyGreater
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Feature = "SummonerShieldAllyGreaterFeature";
             internal const string AuraFeature = "SummonerShieldAllyGreaterAuraFeature";

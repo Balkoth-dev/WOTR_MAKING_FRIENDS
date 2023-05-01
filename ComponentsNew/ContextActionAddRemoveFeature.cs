@@ -1,17 +1,8 @@
-﻿using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.JsonSystem;
+﻿using Kingmaker;
 using Kingmaker.Blueprints;
-using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.UnitLogic;
-using Kingmaker.Utility;
-using Kingmaker;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Serialization;
-using UnityEngine;
+using Kingmaker.UnitLogic.Mechanics.Actions;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -36,11 +27,11 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             }
 
             FeatureCollection features = base.Target.Unit.Descriptor.Progression.Features;
-            
-            for(var i = 1; i < m_Features.Length; i++)
+
+            for (var i = 1; i < m_Features.Length; i++)
             {
                 Main.Log(m_Features[i].Get().Name);
-                Main.Log(m_Features[i-1].Get().Name);
+                Main.Log(m_Features[i - 1].Get().Name);
                 if (features.HasFact(m_Features[i - 1].Get()))
                 {
                     features.RemoveFact(m_Features[i - 1].Get());

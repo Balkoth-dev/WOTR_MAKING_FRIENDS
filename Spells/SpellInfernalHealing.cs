@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
     internal class SpellInfernalHealing
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string InfernalHealingSpellName = "InfernalHealingSpell";
             internal static LocalizedString InfernalHealingNameSpellName = Helpers.ObtainString(InfernalHealingSpellName + ".Name");

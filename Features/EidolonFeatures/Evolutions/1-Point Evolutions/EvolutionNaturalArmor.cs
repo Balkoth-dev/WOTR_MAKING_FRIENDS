@@ -1,17 +1,9 @@
-﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -21,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
 {
     internal class EvolutionNaturalArmor
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal static Sprite icon = AbilityRefs.Barkskin.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionNaturalArmor";
@@ -36,18 +28,19 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         }
         public static void AdjustFeature()
         {
-            FeatureConfigurator.For(GetGUID.GUIDByName(InternalClass.Feature))
-                .SetIcon(InternalClass.icon)
-                .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.NaturalArmor,stat:StatType.AC,value:2)
+            FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
+                .SetIcon(IClass.icon)
+                .AddStatBonus(Kingmaker.Enums.ModifierDescriptor.NaturalArmor, stat: StatType.AC, value: 2)
                 .SetRanks(4)
                 .ConfigureWithLogging(true);
         }
         public static void AdjustAbility()
         {
-            AbilityConfigurator.For(GetGUID.GUIDByName(InternalClass.Ability))
-                .SetIcon(InternalClass.icon)
-                .AddComponent<AbilityCasterHasFactRank>(c => {
-                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(InternalClass.Feature));
+            AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
+                .SetIcon(IClass.icon)
+                .AddComponent<AbilityCasterHasFactRank>(c =>
+                {
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
                     c.maxRank = 4;
                     c.numLevelsBetweenRanks = 5;
                 })

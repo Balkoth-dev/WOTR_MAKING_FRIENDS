@@ -1,35 +1,19 @@
-﻿using BlueprintCore.Actions.Builder;
-using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.Configurators.Items.Weapons;
-using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
+﻿using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
-using BlueprintCore.Conditions.Builder;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
-using Kingmaker.Localization;
-using Kingmaker.UnitLogic.Abilities.Components;
-using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.UnitLogic.Mechanics.Conditions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolutions
 {
     internal class EvolutionClawsLimbs
     {
-        private static class IClass
+        internal static class IClass
         {
             internal static Sprite icon = FeatureRefs.StoneclawStrikeShifterFeature.Reference.Get().m_Icon;
             internal const string Evolution = "EvolutionClawsLimbs";
@@ -53,9 +37,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
 
             FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
                 .SetIcon(IClass.icon)
-                .AddComponent<AddSecondaryAttacksItemsByRank>(c => { c.m_Weapon = ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference;
-                                                                     c.limbCount = 2; 
-                                                                     c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature)); })
+                .AddComponent<AddSecondaryAttacksItemsByRank>(c =>
+                {
+                    c.m_Weapon = ItemWeaponRefs.Claw1d4.Cast<BlueprintItemWeaponReference>().Reference;
+                    c.limbCount = 2;
+                    c.m_feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature));
+                })
                 .SetRanks(IClass.Ranks)
                 .ConfigureWithLogging(true);
 
@@ -64,7 +51,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
-                .AddComponent<AbilityCasterHasResource>(c => {
+                .AddComponent<AbilityCasterHasResource>(c =>
+                {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource"));
                     c.resourceAmount = 2;
                 })

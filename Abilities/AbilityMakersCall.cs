@@ -14,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.Abilities
     internal class AbilityMakersCall
     {
         private static readonly BlueprintAbility emergencySwapAbility = BlueprintTool.Get<BlueprintAbility>("b50ca9b5d6292fb42b8eab8e5d64842d");
-        private static class IClass
+        internal static class IClass
         {
             internal const string Ability = "SummonerMakersCallAbility";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerMakersCallFeature.Name");

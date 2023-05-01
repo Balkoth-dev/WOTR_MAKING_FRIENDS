@@ -14,7 +14,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
     internal class SummonerClass
     {
-        private static class InternalClass
+        internal static class IClass
         {
             internal const string SummonerClass = "Summoner";
             internal static readonly LocalizedString SummonerClassName = Helpers.ObtainString(SummonerClass + ".Name");
@@ -22,14 +22,14 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         }
         public static void CreateSummonerClass()
         {
-            BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(InternalClass.SummonerClass, GetGUID.GUIDByName("SummonerClass")).ConfigureWithLogging();
+            BlueprintCharacterClass summonerClass = CharacterClassConfigurator.New(IClass.SummonerClass, GetGUID.GUIDByName("SummonerClass")).ConfigureWithLogging();
 
             BlueprintProgression summonerProgression = SummonerProgression.Initialize();
             Kingmaker.Blueprints.Classes.Spells.BlueprintSpellbook summonerSpellbook = SummonerSpellbook.CreateSpellBook();
 
             CharacterClassConfigurator.For(GetGUID.GUIDByName("SummonerClass"))
-                .SetLocalizedName(InternalClass.SummonerClassName)
-                .SetLocalizedDescription(InternalClass.SummonerClassDescription)
+                .SetLocalizedName(IClass.SummonerClassName)
+                .SetLocalizedDescription(IClass.SummonerClassDescription)
                 .SetSpellbook(summonerSpellbook)
                 .SetProgression(summonerProgression)
                 .SetSkillPoints(1)

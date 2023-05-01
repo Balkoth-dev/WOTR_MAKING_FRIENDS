@@ -4,7 +4,6 @@ using Kingmaker.Blueprints;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
 using Kingmaker.ResourceLinks;
-using System.Collections.Generic;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
 

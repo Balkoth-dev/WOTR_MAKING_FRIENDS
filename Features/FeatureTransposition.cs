@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureTransposition
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string Feature = "SummonerTranspositionFeature";
             internal static LocalizedString Name = Helpers.ObtainString("SummonerTranspositionFeature.Name");

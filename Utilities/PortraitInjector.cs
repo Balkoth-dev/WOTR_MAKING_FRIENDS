@@ -1,10 +1,6 @@
 ﻿using HarmonyLib;
 using Kingmaker.Blueprints;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 //Source: https://github.com/ka-dyn/ExpandedContent/blob/7ae441e92dc0746f7df3ea9879f7111ccbc9e53d/ExpandedContent/Utilities/PortraitInjector.cs

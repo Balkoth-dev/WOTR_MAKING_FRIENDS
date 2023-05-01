@@ -1,18 +1,11 @@
 ﻿using JetBrains.Annotations;
-using Kingmaker.Blueprints.Facts;
-using Kingmaker.Blueprints.Items.Weapons;
-using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Blueprints;
-using Kingmaker.UnitLogic.FactLogic;
+using Kingmaker.Blueprints.Facts;
+using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.UnitLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Serialization;
+using Kingmaker.UnitLogic.FactLogic;
 using UnityEngine;
-using Kingmaker.Utility;
+using UnityEngine.Serialization;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {

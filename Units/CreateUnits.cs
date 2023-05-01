@@ -10,28 +10,21 @@ using Kingmaker.Enums;
 using Kingmaker.Localization;
 using Kingmaker.Utility;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using WOTR_MAKING_FRIENDS.Classes.EidolonClasses;
 using WOTR_MAKING_FRIENDS.GUIDs;
+using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
 using static Kingmaker.UnitLogic.FactLogic.LockEquipmentSlot;
 using static WOTR_MAKING_FRIENDS.Enums.EnumsEidolons;
-using WOTR_MAKING_FRIENDS.Utilities;
-using HarmonyLib;
-using System.Linq;
-using BlueprintCore.Utils.Assets;
-using Kingmaker.ResourceLinks;
-using System.Security.Cryptography.X509Certificates;
-using System.Collections.Generic;
-using static WOTR_MAKING_FRIENDS.SummonPools.CreateSummonPools;
-using Microsoft.Build.Framework.XamlTypes;
 
 namespace WOTR_MAKING_FRIENDS.Units
 {
     internal class CreateUnits
     {
         internal static readonly BlueprintBrainReference characterBrain = BlueprintTool.Get<BlueprintBrain>("cf986dd7ba9d4ec46ad8a3a0406d02ae").ToReference<BlueprintBrainReference>();
-        
+
         public static void CreateAllUnits()
         {
             CreateUnitsFromArray(UnitSummons.newUnits);
@@ -103,7 +96,7 @@ namespace WOTR_MAKING_FRIENDS.Units
 
                     unitConfigured.ConfigureWithLogging();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Main.Log(ex.ToString());
                 }

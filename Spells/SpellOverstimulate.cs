@@ -16,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
     internal class SpellOverstimulate
     {
-        private static class IClass
+        internal static class IClass
         {
             internal const string OverstimulateSpell = "OverstimulateSpell";
             internal static LocalizedString OverstimulateSpellName = Helpers.ObtainString(OverstimulateSpell + ".Name");
