@@ -462,7 +462,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR3_Shadow.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
+                    eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                 },
             #endregion
             #region EidolonKeketar

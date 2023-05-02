@@ -3,16 +3,16 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using UnityEngine; using WOTR_MAKING_FRIENDS.Enums;
+using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    internal class FeatureAbilityIncreaseSelection
+    public static class FeatureAbilityIncreaseSelection
     {
-        internal static class IClass
+        public static class IClass
         {
             internal static string ProgressionFeature = "Eidolon" + "AncestorBonusFeat";
             internal static string Feature = ProgressionFeature + "Feature";
@@ -23,7 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
-        public void Create()
+        public static void Create()
         {
             FeatureSelectionConfigurator.New(IClass.Feature, IClass.Guid)
                 .SetDisplayName(IClass.Name)

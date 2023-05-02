@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.Enums.Damage;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -9,11 +10,11 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    public static class FeatureDR5Magic
+    public static class FeatureDR5Lawful
     {
         public static class IClass
         {
-            internal static string ProgressionFeature = "Eidolon" + "DR5Magic";
+            internal static string ProgressionFeature = "Eidolon" + "DR5Lawful";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static string Name = Helpers.ObtainString(Feature + ".Name");
@@ -34,7 +35,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetDisplayName(IClass.Description)
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
-                    .AddDamageResistancePhysical(value: ContextValues.Constant(5), bypassedByMagic: true)
+                    .AddDamageResistancePhysical(value: ContextValues.Constant(5), alignment: DamageAlignment.Lawful, bypassedByAlignment: true)
                     .SetGroups(IClass.featureGroup)
                     .ConfigureWithLogging();
         }

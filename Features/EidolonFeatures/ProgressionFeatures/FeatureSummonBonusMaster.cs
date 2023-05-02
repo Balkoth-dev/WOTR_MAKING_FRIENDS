@@ -1,6 +1,6 @@
 ﻿namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    internal class FeatureSummonBonusMaster
+    public static class FeatureSummonBonusMaster
     {
     }
 }

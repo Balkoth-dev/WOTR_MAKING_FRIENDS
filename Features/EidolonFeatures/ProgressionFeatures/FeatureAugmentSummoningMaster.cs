@@ -10,15 +10,16 @@ using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics.Conditions;
 using Kingmaker.Utility;
-using UnityEngine; using WOTR_MAKING_FRIENDS.Enums;
+using UnityEngine;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    internal class FeatureAugmentSummoningMaster
+    public static class FeatureAugmentSummoningMaster
     {
-        internal static class IClass
+        public static class IClass
         {
             internal static string ProgressionFeature = "Eidolon" + "AugmentSummoningMaster";
             internal static string Feature = ProgressionFeature + "Feature";
@@ -29,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
-        internal static class IClassBuff
+        public static class IClassBuff
         {
             internal const string BuffName = "AugmentSummoningMaster";
             internal const string Buff = BuffName + "Buff";
@@ -38,7 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal const string AuraBuff = BuffName + "AuraBuff";
             internal const string AreaEffectBuff = BuffName + "AuraAreaEffectBuff";
         }
-        public void Create()
+        public static void Create()
         {
             CreateFeature();
             CreateAuraBuff();
@@ -46,7 +47,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             CreateConditionalBuff();
             CreateIsMasterBuff();
         }
-        public void CreateFeature()
+        public static void CreateFeature()
         {
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
                 .SetDisplayName(IClass.Name)
@@ -54,6 +55,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetIcon(IClass.Icon)
                 .SetRanks(IClass.Ranks)
                 .AddAuraFeatureComponent(GetGUID.GUIDByName(IClassBuff.AuraBuff))
+                .SetGroups(IClass.featureGroup)
                 .Configure();
         }
 

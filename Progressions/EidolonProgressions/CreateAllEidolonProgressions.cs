@@ -13,7 +13,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
     {
         public static void Create()
         {
-            foreach (var eidolonSubtype in EidolonSubtypeInfo.eidolonSubtypes)
+            foreach (var eidolonSubtype in EidolonSubtypes.eidolonSubtypes)
             {
                 try
                 {

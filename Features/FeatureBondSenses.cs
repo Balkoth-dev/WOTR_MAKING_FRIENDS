@@ -16,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.Features
             internal static LocalizedString Name = Helpers.ObtainString("SummonerBondedSensesFeature.Name");
             internal static LocalizedString Description = Helpers.ObtainString("SummonerBondedSensesFeature.Description");
         }
-        public static void CreateBondedSenses()
+        public static void Create()
         {
             CreateBondedSensesFeature();
         }

@@ -3,15 +3,16 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using UnityEngine; using WOTR_MAKING_FRIENDS.Enums;
+using UnityEngine;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    internal class FeatureAddFeatureLayOnHands
+    public static class FeatureAddFeatureLayOnHands
     {
-        internal static class IClass
+        public static class IClass
         {
             internal static string ProgressionFeature = "Eidolon" + "AddFeatureLayOnHands";
             internal static string Feature = ProgressionFeature + "Feature";
@@ -22,7 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
-        internal static class IClassFeature
+        public static class IClassFeature
         {
             internal static string Ability = IClass.ProgressionFeature + "AddedFeature";
             internal static string Guid = GetGUID.GUIDByName(Ability);
@@ -31,12 +32,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
-        public void Create()
+        public static void Create()
         {
             CreateFeature();
             CreateAbility();
         }
-        internal void CreateFeature()
+        internal static void CreateFeature()
         {
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
                     .SetDisplayName(IClass.Name)
@@ -44,9 +45,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassFeature.Guid) })
+                    .SetGroups(IClass.featureGroup)
                     .ConfigureWithLogging();
         }
-        internal void CreateAbility()
+        internal static void CreateAbility()
         {
             FeatureConfigurator.New(IClassFeature.Ability, IClassFeature.Guid)
                 .CopyFrom(FeatureRefs.LayOnHandsFeature, c => true)

@@ -1,6 +1,6 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
-using BlueprintCore.Utils.Types;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
@@ -9,11 +9,11 @@ using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    public static class FeatureDR5Magic
+    public static class FeatureStorykinBonusFeat
     {
         public static class IClass
         {
-            internal static string ProgressionFeature = "Eidolon" + "DR5Magic";
+            internal static string ProgressionFeature = "Eidolon" + "StorykinBonusFeat";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static string Name = Helpers.ObtainString(Feature + ".Name");
@@ -24,17 +24,19 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         }
         public static void Create()
         {
-            CreateFeature();
-        }
-        internal static void CreateFeature()
-        {
-
-            FeatureConfigurator.New(IClass.Feature, IClass.Guid)
+            FeatureSelectionConfigurator.New(IClass.Feature, IClass.Guid)
                     .SetDisplayName(IClass.Name)
                     .SetDisplayName(IClass.Description)
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
-                    .AddDamageResistancePhysical(value: ContextValues.Constant(5), bypassedByMagic: true)
+                    .SetAllFeatures(
+                                      FeatureRefs.IronWill.Cast<BlueprintFeatureReference>(),
+                                      FeatureRefs.IronWillImproved.Cast<BlueprintFeatureReference>(),
+                                      FeatureRefs.LightningReflexes.Cast<BlueprintFeatureReference>(),
+                                      FeatureRefs.LightningReflexesImproved.Cast<BlueprintFeatureReference>(),
+                                      FeatureRefs.GreatFortitude.Cast<BlueprintFeatureReference>(),
+                                      FeatureRefs.GreatFortitudeImproved.Cast<BlueprintFeatureReference>()
+                    )
                     .SetGroups(IClass.featureGroup)
                     .ConfigureWithLogging();
         }

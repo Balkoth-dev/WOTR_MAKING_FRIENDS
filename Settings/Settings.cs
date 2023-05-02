@@ -78,14 +78,14 @@ namespace WOTR_MAKING_FRIENDS.Settings
 
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
-
+            
             CreateBlueprintPatches.CreateAllBlueprintPatches();
+            CreateFeatures.CreateAllFeatures();
             SummonerClass.CreateSummonerClass();
             CreateResources.CreateAllResources();
             CreateProgressions.CreateAllProgressions();
             CreateSpellbooks.CreateAllSpellbooks();
             CreateClasses.CreateAllClasses();
-            CreateFeatures.CreateAllFeatures();
             CreateBuffs.CreateAllBuffs();
             CreateAbilities.CreateAllAbilities();
             CreateAiActions.CreateAllAiActions();

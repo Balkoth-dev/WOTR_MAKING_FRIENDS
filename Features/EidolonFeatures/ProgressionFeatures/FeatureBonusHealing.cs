@@ -7,15 +7,16 @@ using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics.Components;
-using UnityEngine; using WOTR_MAKING_FRIENDS.Enums;
+using UnityEngine;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    internal class FeatureBonusHealing
+    public static class FeatureBonusHealing
     {
-        internal static class IClass
+        public static class IClass
         {
             internal static string ProgressionFeature = "Eidolon" + "AddBreathOfLifeSpell";
             internal static string Feature = ProgressionFeature + "Feature";
@@ -26,7 +27,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 2;
         }
-        internal static class IClassBuff
+        public static class IClassBuff
         {
             internal static string Ability = IClass.ProgressionFeature + "Buff";
             internal static string Guid = GetGUID.GUIDByName(Ability);
@@ -35,12 +36,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
-        public void Create()
+        public static void Create()
         {
             CreateFeature();
             CreateAbility();
         }
-        internal void CreateFeature()
+        internal static void CreateFeature()
         {
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
                     .SetDisplayName(IClass.Name)
@@ -48,9 +49,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassBuff.Guid) })
+                    .SetGroups(IClass.featureGroup)
                     .ConfigureWithLogging();
         }
-        internal void CreateAbility()
+        internal static void CreateAbility()
         {
             BuffConfigurator.New(IClassBuff.Ability, IClassBuff.Guid)
                 .CopyFrom(BuffRefs.CelestialTotemLesserBuff, c => c is not ContextRankConfig)

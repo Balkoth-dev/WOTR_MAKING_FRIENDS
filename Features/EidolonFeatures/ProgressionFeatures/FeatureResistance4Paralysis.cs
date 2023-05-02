@@ -2,15 +2,16 @@
 using BlueprintCore.Blueprints.References;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Classes.Spells;
-using UnityEngine; using WOTR_MAKING_FRIENDS.Enums;
+using UnityEngine;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    internal class FeatureResistance4Paralysis
+    public static class FeatureResistance4Paralysis
     {
-        internal static class IClass
+        public static class IClass
         {
             internal static string ProgressionFeature = "Eidolon" + "Resistance4Paralysis";
             internal static string Feature = ProgressionFeature + "Feature";
@@ -21,11 +22,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
-        public void Create()
+        public static void Create()
         {
             CreateFeature();
         }
-        internal void CreateFeature()
+        internal static void CreateFeature()
         {
 
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
@@ -33,6 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetDisplayName(IClass.Description)
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
+                    .SetGroups(IClass.featureGroup)
                     .AddSavingThrowBonusAgainstDescriptor(bonus: 4, spellDescriptor: new SpellDescriptorWrapper() { m_IntValue = (long)SpellDescriptor.Paralysis })
                     .ConfigureWithLogging();
         }

@@ -81,7 +81,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
         }
         internal static void CreateSubtypeFeatures(string name)
         {
-            foreach (var eidolonSubtype in EidolonSubtypeInfo.eidolonSubtypes)
+            foreach (var eidolonSubtype in EidolonSubtypes.eidolonSubtypes)
             {
                 try
                 {

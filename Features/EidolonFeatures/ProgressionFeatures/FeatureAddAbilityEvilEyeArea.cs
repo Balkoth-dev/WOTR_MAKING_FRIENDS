@@ -8,16 +8,16 @@ using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Mechanics.Components;
 using Kingmaker.Utility;
-using UnityEngine; using WOTR_MAKING_FRIENDS.Enums;
+using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
-    internal class FeatureAddAbilityEvilEyeArea
+    public static class FeatureAddAbilityEvilEyeArea
     {
-        internal static class IClass
+        public static class IClass
         {
             internal static string ProgressionFeature = "Eidolon" + "AddAbilityEvilEyeArea";
             internal static string Feature = ProgressionFeature + "Feature";
@@ -28,7 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
-        internal static class IClassAbility
+        public static class IClassAbility
         {
             internal static string Ability = IClass.ProgressionFeature + "Ability";
             internal static string Guid = GetGUID.GUIDByName(Ability);
@@ -37,13 +37,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
-        public void Create()
+        public static void Create()
         {
             CreateFeature();
             CreateAbility();
             CreateAbilityVariants();
         }
-        internal void CreateFeature()
+        internal static void CreateFeature()
         {
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
                     .SetDisplayName(IClass.Name)
@@ -51,9 +51,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassAbility.Guid) })
+                    .SetGroups(IClass.featureGroup)
                     .ConfigureWithLogging();
         }
-        internal void CreateAbility()
+        internal static void CreateAbility()
         {
             AbilityConfigurator.New(IClassAbility.Ability, IClassAbility.Guid)
                 .CopyFrom(AbilityRefs.WitchHexEvilEyeAbility)
@@ -68,7 +69,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .ConfigureWithLogging();
         }
 
-        internal void CreateAbilityVariants()
+        internal static void CreateAbilityVariants()
         {
             AbilityConfigurator.New("WitchHexEvilEyeACAreaAbility", GetGUID.GUIDByName("WitchHexEvilEyeACAreaAbility"))
                 .CopyFrom(AbilityRefs.WitchHexEvilEyeACAbility, c => c is not (ContextSetAbilityParams or ContextRankConfig))
