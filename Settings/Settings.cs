@@ -15,6 +15,7 @@ using WOTR_MAKING_FRIENDS.Buffs;
 using WOTR_MAKING_FRIENDS.CharacterClass;
 using WOTR_MAKING_FRIENDS.Classes;
 using WOTR_MAKING_FRIENDS.Features;
+using WOTR_MAKING_FRIENDS.Portraits;
 using WOTR_MAKING_FRIENDS.Progressions;
 using WOTR_MAKING_FRIENDS.Resources;
 using WOTR_MAKING_FRIENDS.SpellBook;
@@ -93,6 +94,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             CreateUnits.CreateAllUnits();
             CreateSummonPools.CreateAllSummonPools();
             CreateSpells.CreateAllSpells();
+            CreatePortraits.CreateAllPortraits();
             Main.Log("Total number of new blueprints: " + RootConfiguratorExtensions.numberOfBlueprints);
         }
 

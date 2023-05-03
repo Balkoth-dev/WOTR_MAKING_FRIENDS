@@ -17,6 +17,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         public BlueprintFeatureReference m_Feature;
         public int featureRank = 0;
         public int resourceAmount = 1;
+        public bool useCostMultiplier = false;
         public int costMultiplierByRank = 0;
         public bool IsCasterRestrictionPassed(UnitEntityData caster)
         {
@@ -30,7 +31,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 if (caster.Progression.Features.HasFact(m_Feature))
                 {
-                    if (caster.Progression.Features.GetRank(m_Feature) <= featureRank)
+                    if (!useCostMultiplier && caster.Progression.Features.GetRank(m_Feature) <= featureRank)
                     {
                         return true;
                     }

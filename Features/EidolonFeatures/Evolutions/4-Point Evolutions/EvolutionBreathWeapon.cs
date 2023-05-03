@@ -2,10 +2,14 @@
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
+using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
+using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
+using Kingmaker.UnitLogic.Mechanics.Components;
 using System;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
@@ -59,14 +63,20 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
         }
         public static void ConfigureBreathWeapons()
         {
+            var damageConfig = ContextRankConfigs.StatBonus(StatType.Constitution, type: AbilityRankType.DamageBonus);
+            damageConfig.m_StepLevel = 10;
+
             for (var i = 0; i < IClass.copiedAbilities.Length; i++)
             {
                 var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), IClass.abilities[i]);
                 AbilityConfigurator.New(IClass.Evolution + IClass.abilities[i] + "BreathAbility", GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "BreathAbility"))
-                    .CopyFrom(IClass.copiedAbilities[i], c => c is not AbilityResourceLogic)
+                    .CopyFrom(IClass.copiedAbilities[i], c => c is not (AbilityResourceLogic or ContextRankConfig))
                     .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Name"))
                     .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Description"))
                     .SetIcon(IClass.icons[i])
+                    .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
+                    .AddContextRankConfig(ContextRankConfigs.CharacterLevel(AbilityRankType.DamageDice).WithDiv2Progression())
+                    .AddContextRankConfig(damageConfig)
                     .ConfigureWithLogging();
             }
         }

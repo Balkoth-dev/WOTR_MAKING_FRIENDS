@@ -726,5 +726,2041 @@
   {
     "name": "EidolonImmunityPolymorphFeature",
     "guid": "55a9df7b-c18f-4054-b300-1914829f2ebb"
+  },
+  {
+    "name": "EvolutionImmunityFireFeature",
+    "guid": "2862da92-2777-405e-a2e4-848f3294bdd8"
+  },
+  {
+    "name": "EvolutionImmunityElectricityFeature",
+    "guid": "3446de14-82c4-4003-b898-6617a6d85241"
+  },
+  {
+    "name": "EvolutionImmunityColdFeature",
+    "guid": "e54f31aa-8bd6-4968-8bdf-d52efb737dd4"
+  },
+  {
+    "name": "EvolutionImmunityAcidFeature",
+    "guid": "f8fe0bf2-b8bf-49be-afca-37c725b39ee0"
+  },
+  {
+    "name": "EidolonFireElementalCapstoneFeature",
+    "guid": "5c246ae9-89c5-43fc-9cb1-b1483f4813de"
+  },
+  {
+    "name": "EidolonEarthElementalCapstoneFeature",
+    "guid": "9f7a7e9a-b710-4d08-bd70-5480e8401a66"
+  },
+  {
+    "name": "EidolonAirElementalCapstoneFeature",
+    "guid": "02576f21-7917-4f52-8c7d-c32676b19abc"
+  },
+  {
+    "name": "EidolonWaterElementalCapstoneFeature",
+    "guid": "b3edde9e-f9fd-451c-9436-7707e27db90f"
+  },
+  {
+    "name": "EvolutionEnergyAttacksFireFeature",
+    "guid": "5c7ac79b-c258-4a64-a4cc-5b0ec7f8905e"
+  },
+  {
+    "name": "EvolutionEnergyAttacksAcidFeature",
+    "guid": "980db316-921b-46c3-9b22-d76b1b627937"
+  },
+  {
+    "name": "EvolutionEnergyAttacksElectricityFeature",
+    "guid": "b9452a6e-f3f5-4736-bd98-eb04b41f7e43"
+  },
+  {
+    "name": "EvolutionEnergyAttacksColdFeature",
+    "guid": "15e8287b-1908-434c-aa23-a0023d87c2e2"
+  },
+  {
+    "name": "SuperiorSummoningMasterAuraBuff",
+    "guid": "3d85f863-2b1e-422e-9aa8-fa096dfc4dc7"
+  },
+  {
+    "name": "SuperiorSummoningMasterAuraAreaEffectBuff",
+    "guid": "75b7756b-38f8-439a-aeff-babfc04fd7e6"
+  },
+  {
+    "name": "SuperiorSummoningMasterConditionalBuff",
+    "guid": "ea50cbd6-1e03-46c5-8227-15fc5cfb81d3"
+  },
+  {
+    "name": "SuperiorSummoningMasterIsMasterBuff",
+    "guid": "1e73fcc3-4001-4529-a21e-b5ebade1e512"
+  },
+  {
+    "name": "EidolonAberrantProgression",
+    "guid": "533a1889-576b-4a08-8e72-8d26b3ae1024"
+  },
+  {
+    "name": "EidolonAeonProgression",
+    "guid": "b3da805b-f277-4cfe-a7ed-4d52bba5d9ce"
+  },
+  {
+    "name": "EidolonAgathionProgression",
+    "guid": "ef93da32-1e9f-4c31-9ac6-fd5408519908"
+  },
+  {
+    "name": "EidolonAngelProgression",
+    "guid": "4c51075a-b030-404a-bd10-907988c41d30"
+  },
+  {
+    "name": "EidolonArchonProgression",
+    "guid": "2d7f5d0f-4276-44ae-86fa-b30c55386776"
+  },
+  {
+    "name": "EidolonAstralProgression",
+    "guid": "131e1e86-13db-43b8-883e-38115ed15567"
+  },
+  {
+    "name": "EidolonAzataProgression",
+    "guid": "392f47fb-a77f-4287-bee2-167986ced0e8"
+  },
+  {
+    "name": "EidolonDaemonProgression",
+    "guid": "4f1b1923-5b83-493d-bdaf-6e009ecf80d6"
+  },
+  {
+    "name": "EidolonDeepwaterProgression",
+    "guid": "0a667390-ca52-43cc-b1a2-9e5b960e006e"
+  },
+  {
+    "name": "EidolonDemonProgression",
+    "guid": "371c1619-623e-4775-89bc-c7831d02659a"
+  },
+  {
+    "name": "EidolonDevilProgression",
+    "guid": "e67f5764-6566-4f35-9b0f-695c0d8e3461"
+  },
+  {
+    "name": "EidolonDivProgression",
+    "guid": "0d32ff6d-4bd3-4a63-a5ba-b83b3b24f075"
+  },
+  {
+    "name": "EidolonElementalProgression",
+    "guid": "c802d3d4-3e70-430b-b142-b565c7eb516d"
+  },
+  {
+    "name": "EidolonInevitableProgression",
+    "guid": "e03848fb-6808-491a-85a4-48376336bd75"
+  },
+  {
+    "name": "EidolonKamiProgression",
+    "guid": "50c5ed90-c3f6-4942-967f-64918dbcb46d"
+  },
+  {
+    "name": "EidolonKytonProgression",
+    "guid": "1c8d0d4c-9d1f-40c7-9383-9a5d295b0331"
+  },
+  {
+    "name": "EidolonProteanProgression",
+    "guid": "ae67161b-2790-406d-9bad-cb3f44d49f81"
+  },
+  {
+    "name": "EidolonPsychopompProgression",
+    "guid": "42e2ff9b-aa84-4a1e-b8d3-f3c2b093d49b"
+  },
+  {
+    "name": "EidolonRadiantProgression",
+    "guid": "c4cfe179-05af-4a68-8f5e-402823dc11d3"
+  },
+  {
+    "name": "EidolonShadowProgression",
+    "guid": "6ca773f9-8b28-4b2b-a82d-5c71638df6e4"
+  },
+  {
+    "name": "EidolonStorykinProgression",
+    "guid": "b12d4908-7ce5-4ee2-8a29-cb529c519aac"
+  },
+  {
+    "name": "EidolonVoidProgression",
+    "guid": "02d3b9f1-df43-42d4-82cc-5eaa4e51da92"
+  },
+  {
+    "name": "EidolonFireElemental",
+    "guid": "4984f673-5fdc-4c42-ac05-7d39daaf618b"
+  },
+  {
+    "name": "EidolonWaterElemental",
+    "guid": "d1defeb0-b161-44a3-b14d-3a8028078090"
+  },
+  {
+    "name": "EidolonEarthElemental",
+    "guid": "94d02aed-48ae-4384-a22d-c65369dc3e52"
+  },
+  {
+    "name": "EidolonGoldDragon",
+    "guid": "771e40b0-d769-447c-9943-41c03a00cb99"
+  },
+  {
+    "name": "EidolonSilverDragon",
+    "guid": "d576e01a-9e9b-4519-9857-5d4b58849385"
+  },
+  {
+    "name": "EidolonBrassDragon",
+    "guid": "5cb38c83-5032-4457-9cf3-d108147328d9"
+  },
+  {
+    "name": "EidolonCopperDragon",
+    "guid": "19f4d88e-65f2-4574-8b27-d007fa747607"
+  },
+  {
+    "name": "EidolonTroll",
+    "guid": "7a980038-2ec4-4373-aebe-e08623442d86"
+  },
+  {
+    "name": "EvolutionSizeChangeSmallFeature",
+    "guid": "1d0b3dcc-a6d9-47aa-ac6e-892d8f3d85ce"
+  },
+  {
+    "name": "EidolonSuccubus",
+    "guid": "8d6afafa-fb0f-46d9-9978-318920eb24c7"
+  },
+  {
+    "name": "EidolonIncubus",
+    "guid": "0f4fdae8-cffc-4612-8f09-7ceacbf82d4d"
+  },
+  {
+    "name": "EidolonBabau",
+    "guid": "b68a9d5d-182b-4b95-97db-351c9e184ba4"
+  },
+  {
+    "name": "EidolonMarilith",
+    "guid": "48b068a1-c5e4-47cb-aa9c-21a7f4019cbc"
+  },
+  {
+    "name": "EidolonDretch",
+    "guid": "09c7d47f-c536-4135-a3ff-91e0f0965325"
+  },
+  {
+    "name": "EidolonBalor",
+    "guid": "f6b0f364-4054-4591-8bc8-64fe7012ec2b"
+  },
+  {
+    "name": "EidolonSchir",
+    "guid": "37abd24e-6157-4933-87a5-d4d277c97fe6"
+  },
+  {
+    "name": "EidolonColoxus",
+    "guid": "02ea15b3-352c-4475-ad5a-da269c9f8c71"
+  },
+  {
+    "name": "EidolonGlabrezu",
+    "guid": "7562272a-835d-4a1e-902b-bf6192a69191"
+  },
+  {
+    "name": "EidolonVrock",
+    "guid": "23517850-bb9a-4049-aea7-7ceb2cd6ba22"
+  },
+  {
+    "name": "EidolonPainaji",
+    "guid": "d66fb980-5c31-48cc-84a6-dc384d537d85"
+  },
+  {
+    "name": "EidolonBrimorak",
+    "guid": "b5f145ce-3ee7-4724-9009-c39da302de81"
+  },
+  {
+    "name": "EidolonLilitu",
+    "guid": "ad445727-d883-44e4-9a98-85922bb2e606"
+  },
+  {
+    "name": "EidolonVavakia",
+    "guid": "70d960ef-408e-4784-8369-05e6738c5389"
+  },
+  {
+    "name": "EidolonBythos",
+    "guid": "6cdd6ce4-fd20-4841-a22e-a11c52edbed9"
+  },
+  {
+    "name": "EidolonAxiomiteMasc",
+    "guid": "26066628-3a3b-4e73-9e4e-e02205d9ffef"
+  },
+  {
+    "name": "EidolonAxiomiteFem",
+    "guid": "6f6b6f8b-d04c-4d9c-8514-851c58d30aff"
+  },
+  {
+    "name": "EidolonGolemWood",
+    "guid": "0965e429-016a-4e00-8304-20fed13c7191"
+  },
+  {
+    "name": "EidolonGolemIron",
+    "guid": "6369bc8d-2e74-4e46-9e04-2c80e65d9f37"
+  },
+  {
+    "name": "EidolonAstralDeva",
+    "guid": "d1e489a0-695e-4ae1-9c87-0e59d2a56323"
+  },
+  {
+    "name": "EidolonMonadicDeva",
+    "guid": "c85a1429-f097-4240-b251-ebc392ac139e"
+  },
+  {
+    "name": "EidolonMovanicDeva",
+    "guid": "321ecbb6-42b6-4720-a7db-f3c328e7321d"
+  },
+  {
+    "name": "EidolonLillend",
+    "guid": "5a857ab2-d25e-4233-8e25-e834f60d50e3"
+  },
+  {
+    "name": "EidolonBralani",
+    "guid": "8d1a06e2-7714-4f7a-94b8-ede5c680b9e0"
+  },
+  {
+    "name": "EidolonVeranallia",
+    "guid": "ef5cb5e9-bbb3-41fe-b823-b95af8ab5a44"
+  },
+  {
+    "name": "EidolonYinudja",
+    "guid": "c943053e-43d3-420f-870c-69f515cac5c4"
+  },
+  {
+    "name": "EidolonTreant",
+    "guid": "b1b6b948-984f-4628-886a-d13167ae59b8"
+  },
+  {
+    "name": "EidolonErinyes",
+    "guid": "61bbd1b3-767f-44a4-b98c-b5880a37bc14"
+  },
+  {
+    "name": "EidolonDeathsnatcher",
+    "guid": "771ffc05-20ed-43bb-a499-bcf071c2c082"
+  },
+  {
+    "name": "EidolonSpirit",
+    "guid": "a462dfe2-04de-481b-80f1-6873dfa1ef5c"
+  },
+  {
+    "name": "EidolonShade",
+    "guid": "225d10f2-b8d1-420c-957c-2250dcaa574d"
+  },
+  {
+    "name": "EidolonKeketar",
+    "guid": "84694a30-544a-4492-823f-83686f652ca1"
+  },
+  {
+    "name": "EidolonCragLinnorm",
+    "guid": "b3f8abdb-da08-4825-b0ea-f85fbde0375f"
+  },
+  {
+    "name": "EvolutionSizeChangeFineFeature",
+    "guid": "b0aafb02-6d3c-409f-b083-bc3e88fbf3ad"
+  },
+  {
+    "name": "EidolonRedDragon",
+    "guid": "958f8301-76df-415c-9c00-53ee4319def7"
+  },
+  {
+    "name": "EidolonGreenDragon",
+    "guid": "9d36fa30-ebf3-4c57-98bb-da4f21171e88"
+  },
+  {
+    "name": "EidolonWhiteDragon",
+    "guid": "e96eb6d6-56da-4058-894c-d1eb5e60c11f"
+  },
+  {
+    "name": "EidolonBlackDragon",
+    "guid": "e5dfbf55-b250-4a76-b426-9233a86a3174"
+  },
+  {
+    "name": "EidolonBlueDragon",
+    "guid": "9dfae8ac-70f3-4976-b203-463ad76ef078"
+  },
+  {
+    "name": "EidolonSalamander",
+    "guid": "256ecb46-da95-4282-a2bc-8705aa253789"
+  },
+  {
+    "name": "EidolonShamblingMound",
+    "guid": "7968909d-276c-478c-b34d-96e46dd8f55b"
+  },
+  {
+    "name": "EidolonNightmare",
+    "guid": "692a822c-13e8-440f-8eca-2db2cff45567"
+  },
+  {
+    "name": "EidolonHellHound",
+    "guid": "d484176a-e933-4947-8ee2-6843dbc52b57"
+  },
+  {
+    "name": "EidolonAstradaemon",
+    "guid": "fe1521a7-6d58-4622-9e2c-d10b5b05d288"
+  },
+  {
+    "name": "EidolonMeladaemon",
+    "guid": "50d2ad7f-e2c5-49eb-8458-8e42317f7fd7"
+  },
+  {
+    "name": "EidolonMimic",
+    "guid": "fbfc57c6-5bc4-4c9c-baff-f0e1693b8773"
+  },
+  {
+    "name": "EidolonManticore",
+    "guid": "9b4eb758-b8fc-4a62-8030-53ea62d92790"
+  },
+  {
+    "name": "EidolonBaseFeatureSelection",
+    "guid": "2966c40f-e3ca-4c4d-892b-ad2b8175daa9"
+  },
+  {
+    "name": "EidolonAbberantBaseFormSelectionFeature",
+    "guid": "2c44b78e-bf8f-49ee-9d82-0bfe2e23c1cf"
+  },
+  {
+    "name": "EidolonBipedBaseFormSelectionFeature",
+    "guid": "e5768fdb-cf7d-40e0-8eec-f45cd4336698"
+  },
+  {
+    "name": "EidolonQuadrupedBaseFormSelectionFeature",
+    "guid": "4a8b8c19-e40e-4a48-9a4f-d4059e157026"
+  },
+  {
+    "name": "EidolonSerpentineBaseFormSelectionFeature",
+    "guid": "337803eb-2994-4b2b-8e32-75ccedfd2dab"
+  },
+  {
+    "name": "EidolonAirElementalCompanionFeature",
+    "guid": "4d4e72c4-3ee1-4032-8a81-8ae751e69624"
+  },
+  {
+    "name": "EidolonFireElementalCompanionFeature",
+    "guid": "56f7da04-0737-4353-9f54-f7d599804e7b"
+  },
+  {
+    "name": "EidolonWaterElementalCompanionFeature",
+    "guid": "a09b31a3-ee85-4545-aee0-8db42748dd0f"
+  },
+  {
+    "name": "EidolonEarthElementalCompanionFeature",
+    "guid": "120481be-50e1-414b-a363-d742f0964251"
+  },
+  {
+    "name": "EidolonGoldDragonCompanionFeature",
+    "guid": "39b5fb3c-cfa4-4de0-a009-1c24b8f09dea"
+  },
+  {
+    "name": "EidolonSilverDragonCompanionFeature",
+    "guid": "eff0fefb-586b-48e1-9bf4-e67af088f6a3"
+  },
+  {
+    "name": "EidolonBrassDragonCompanionFeature",
+    "guid": "3c8d124e-f977-45c5-9897-3ef0e0c540da"
+  },
+  {
+    "name": "EidolonCopperDragonCompanionFeature",
+    "guid": "6a72548c-1a4e-4d8b-b577-b8cbca51e4e1"
+  },
+  {
+    "name": "EidolonTrollCompanionFeature",
+    "guid": "f85fceda-d5e9-4d7a-878b-85cce29b6bf2"
+  },
+  {
+    "name": "EidolonSuccubusCompanionFeature",
+    "guid": "f76c69ec-a535-4cb3-b44b-23cbaa0e3c2d"
+  },
+  {
+    "name": "EidolonIncubusCompanionFeature",
+    "guid": "5b6f560d-0126-4760-a0da-59507114bcce"
+  },
+  {
+    "name": "EidolonBabauCompanionFeature",
+    "guid": "b2dad5f7-c010-4282-a39b-86ade3c5507b"
+  },
+  {
+    "name": "EidolonMarilithCompanionFeature",
+    "guid": "db2c8891-7e70-449e-ac46-7f2e845fe6e5"
+  },
+  {
+    "name": "EidolonDretchCompanionFeature",
+    "guid": "6842f329-e227-4b47-b0cf-db357c9d2ab6"
+  },
+  {
+    "name": "EidolonBalorCompanionFeature",
+    "guid": "45618c2e-d5e0-4836-a965-25da2cf6812e"
+  },
+  {
+    "name": "EidolonSchirCompanionFeature",
+    "guid": "29f3a7fc-7db7-400c-aad4-37f18c04a19b"
+  },
+  {
+    "name": "EidolonColoxusCompanionFeature",
+    "guid": "94aaaab0-77ca-4ec8-9e14-164d89f5d406"
+  },
+  {
+    "name": "EidolonGlabrezuCompanionFeature",
+    "guid": "226bf263-9426-4c42-b049-40329411a6ba"
+  },
+  {
+    "name": "EidolonVrockCompanionFeature",
+    "guid": "487f3160-8ff7-464d-99fe-6ae63c2a418b"
+  },
+  {
+    "name": "EidolonPainajiCompanionFeature",
+    "guid": "3af69468-7fba-44b6-b9e3-fa2c14bf76de"
+  },
+  {
+    "name": "EidolonBrimorakCompanionFeature",
+    "guid": "46e76227-f286-4ed4-8a88-2af17bd19582"
+  },
+  {
+    "name": "EidolonLilituCompanionFeature",
+    "guid": "dc10a342-225e-4e7d-9e11-e90c800b2d4a"
+  },
+  {
+    "name": "EidolonVavakiaCompanionFeature",
+    "guid": "b445fbac-7fd1-4db4-94b9-3ea6da3a0f2c"
+  },
+  {
+    "name": "EidolonBythosCompanionFeature",
+    "guid": "2b87d773-cd9f-427a-a77d-aa307f14e4f0"
+  },
+  {
+    "name": "EidolonAxiomiteMascCompanionFeature",
+    "guid": "b1005391-4445-4d68-b236-c217e8079c8c"
+  },
+  {
+    "name": "EidolonAxiomiteFemCompanionFeature",
+    "guid": "ef1fc6ba-c009-4e15-b12c-62a8c9bef6d4"
+  },
+  {
+    "name": "EidolonGolemWoodCompanionFeature",
+    "guid": "b0b51d24-7702-4e1a-8bee-36ee5f5bc341"
+  },
+  {
+    "name": "EidolonGolemIronCompanionFeature",
+    "guid": "3ab74aeb-d804-46a3-ac58-39cb69e51762"
+  },
+  {
+    "name": "EidolonAstralDevaCompanionFeature",
+    "guid": "a6494649-9514-44a5-9c1c-d3bcdb355435"
+  },
+  {
+    "name": "EidolonMonadicDevaCompanionFeature",
+    "guid": "876622fe-8c53-4e5e-8c9a-7e20cf1f4838"
+  },
+  {
+    "name": "EidolonMovanicDevaCompanionFeature",
+    "guid": "6474d147-5145-4d77-8041-0a93ae3e0ee9"
+  },
+  {
+    "name": "EidolonLillendCompanionFeature",
+    "guid": "551121b7-64e7-4851-8a66-b5c5119c0951"
+  },
+  {
+    "name": "EidolonBralaniCompanionFeature",
+    "guid": "6efbb673-c816-4ef7-99b6-88fc2c27d0c7"
+  },
+  {
+    "name": "EidolonVeranalliaCompanionFeature",
+    "guid": "bdce388f-56f4-41f8-8576-5a1c0874180e"
+  },
+  {
+    "name": "EidolonYinudjaCompanionFeature",
+    "guid": "26f53fd3-7a5a-4b39-9eb9-62c71d0daeeb"
+  },
+  {
+    "name": "EidolonTreantCompanionFeature",
+    "guid": "18740cc5-ec6d-4b84-9047-8cca27ca09ac"
+  },
+  {
+    "name": "EidolonErinyesCompanionFeature",
+    "guid": "313463cb-efc3-44ee-a10c-2953dfbb48ae"
+  },
+  {
+    "name": "EidolonDeathsnatcherCompanionFeature",
+    "guid": "14ba73cb-265f-4b20-8f3b-0045bd1583de"
+  },
+  {
+    "name": "EidolonSpiritCompanionFeature",
+    "guid": "f170efd9-c0e3-4ff5-ae54-7c30837bfeb4"
+  },
+  {
+    "name": "EidolonShadeCompanionFeature",
+    "guid": "f8484628-272a-4941-92a7-6e2b393d7885"
+  },
+  {
+    "name": "EidolonKeketarCompanionFeature",
+    "guid": "8e6576be-fa1e-463b-ad0a-f0eb7504f0de"
+  },
+  {
+    "name": "EidolonCragLinnormCompanionFeature",
+    "guid": "a9b7a106-bc23-408f-9ed2-b313cd95a276"
+  },
+  {
+    "name": "EidolonRedDragonCompanionFeature",
+    "guid": "64014735-3ace-4281-9991-339c5b3ec9a3"
+  },
+  {
+    "name": "EidolonGreenDragonCompanionFeature",
+    "guid": "75213410-e2cb-4f41-abca-b520534f523e"
+  },
+  {
+    "name": "EidolonWhiteDragonCompanionFeature",
+    "guid": "92b6f207-51c9-4bb6-81e0-0710a1be2f82"
+  },
+  {
+    "name": "EidolonBlackDragonCompanionFeature",
+    "guid": "36a6f101-c3ad-4308-9c95-9805140ca943"
+  },
+  {
+    "name": "EidolonBlueDragonCompanionFeature",
+    "guid": "1d61017a-b8b3-4350-ba00-34a1cb5ada7e"
+  },
+  {
+    "name": "EidolonSalamanderCompanionFeature",
+    "guid": "9e2d6bb7-3dc0-49b5-b56e-16242be5740a"
+  },
+  {
+    "name": "EidolonShamblingMoundCompanionFeature",
+    "guid": "5b3159ca-6002-4091-85de-4d1f5fc95572"
+  },
+  {
+    "name": "EidolonNightmareCompanionFeature",
+    "guid": "c664caed-6d67-4e7b-b4ec-f704a7b04e5b"
+  },
+  {
+    "name": "EidolonHellHoundCompanionFeature",
+    "guid": "9c48a539-0e4f-4115-a44a-054383823ec1"
+  },
+  {
+    "name": "EidolonAstradaemonCompanionFeature",
+    "guid": "7a201314-39aa-4582-96e7-904c9aa12833"
+  },
+  {
+    "name": "EidolonMeladaemonCompanionFeature",
+    "guid": "489dcb77-7b39-487a-bea7-e013379e0642"
+  },
+  {
+    "name": "EidolonMimicCompanionFeature",
+    "guid": "1a16a9db-441a-4a44-b9f9-5ba6c4f40706"
+  },
+  {
+    "name": "EidolonManticoreCompanionFeature",
+    "guid": "e5cc29d8-a3a2-4278-8dee-ff9817bfe9a8"
+  },
+  {
+    "name": "EvolutionCost1Feature",
+    "guid": "281f8c3d-8e72-4205-90bd-87d74c306b27"
+  },
+  {
+    "name": "EidolonMaxAttacksResource",
+    "guid": "0cc36ee3-0b88-4e80-8fa1-247400ae9323"
+  },
+  {
+    "name": "EvolutionBiteFeature",
+    "guid": "42b6ae0e-7940-4599-b2c6-0326e2bacbad"
+  },
+  {
+    "name": "EvolutionBiteAbility",
+    "guid": "b01c5049-c9c0-45c4-bd97-3d0d5267a0f3"
+  },
+  {
+    "name": "EvolutionGoreFeature",
+    "guid": "ae918994-624d-4dc9-b9b5-7572581c0acb"
+  },
+  {
+    "name": "EvolutionGoreAbility",
+    "guid": "d8f9de05-b1a4-4434-9e62-15d455b700e7"
+  },
+  {
+    "name": "EvolutionClawsFeature",
+    "guid": "af15e1e6-abc9-4858-91c3-dc2287cd694b"
+  },
+  {
+    "name": "EvolutionClawsAbility",
+    "guid": "843adc84-8d06-4de3-bebb-079d47284de9"
+  },
+  {
+    "name": "EvolutionMagicAttacksFeature",
+    "guid": "b11586d5-2d80-4fbb-93b8-6149e1ea0722"
+  },
+  {
+    "name": "EvolutionMagicAttacksAbility",
+    "guid": "ffc96395-5cd9-4242-806f-b940c7a445c9"
+  },
+  {
+    "name": "EvolutionNaturalArmorFeature",
+    "guid": "38cf3ae9-dffb-4404-867f-43516a325bdc"
+  },
+  {
+    "name": "EvolutionNaturalArmorAbility",
+    "guid": "c061eb8e-b918-4618-be28-3b7417288e4b"
+  },
+  {
+    "name": "EvolutionPincersFeature",
+    "guid": "745b241f-2452-4e5c-be62-3b5adb4bc07a"
+  },
+  {
+    "name": "EvolutionPincersAbility",
+    "guid": "7fe92db5-5e57-4760-9079-a9ed39e03b19"
+  },
+  {
+    "name": "EvolutionResistanceAcidFeature",
+    "guid": "2f815f9b-9fd8-42b5-83f6-60aa95de240f"
+  },
+  {
+    "name": "EvolutionResistanceAcidAbility",
+    "guid": "1e11d260-d565-4910-b8f9-90e172e10547"
+  },
+  {
+    "name": "EvolutionResistanceColdFeature",
+    "guid": "1d43bae1-5540-490e-afd3-1b1c82a7dddb"
+  },
+  {
+    "name": "EvolutionResistanceColdAbility",
+    "guid": "20467454-2519-4647-8542-0b288257798e"
+  },
+  {
+    "name": "EvolutionResistanceElectricityFeature",
+    "guid": "de478f47-ed23-4009-b428-5d27bdd825c2"
+  },
+  {
+    "name": "EvolutionResistanceElectricityAbility",
+    "guid": "4b019cfe-5823-4a21-97ce-0b8f1db62737"
+  },
+  {
+    "name": "EvolutionResistanceFireFeature",
+    "guid": "8fdde1cf-4543-4d35-a8e1-0410f0c1351b"
+  },
+  {
+    "name": "EvolutionResistanceFireAbility",
+    "guid": "d30f015d-0551-4f03-89e6-7e82e90e1d45"
+  },
+  {
+    "name": "EvolutionResistanceSonicFeature",
+    "guid": "89c4cf4d-e070-4c9e-bfe8-8cbc16944d19"
+  },
+  {
+    "name": "EvolutionResistanceSonicAbility",
+    "guid": "4a49d166-1c35-47a3-a9b1-fe03ec9f8ee2"
+  },
+  {
+    "name": "EvolutionScentFeature",
+    "guid": "35a83b72-b961-4a82-9ccf-3dd7c5b2f61a"
+  },
+  {
+    "name": "EvolutionScentAbility",
+    "guid": "a754e2d5-e1ab-4db0-b67a-b0cc645b9047"
+  },
+  {
+    "name": "EvolutionSkilledSkillPerceptionFeature",
+    "guid": "5c648c07-f246-48d2-be77-b95744245f16"
+  },
+  {
+    "name": "EvolutionSkilledSkillPerceptionAbility",
+    "guid": "016b0f83-e0a4-4696-b9c5-cfbddbefb0fb"
+  },
+  {
+    "name": "EvolutionSkilledSkillThieveryFeature",
+    "guid": "148e4379-14ce-4306-90db-352a21c39cf7"
+  },
+  {
+    "name": "EvolutionSkilledSkillThieveryAbility",
+    "guid": "2d8c4eaa-9c86-43fc-aef9-6d14190a78c5"
+  },
+  {
+    "name": "EvolutionSkilledSkillUseMagicDeviceFeature",
+    "guid": "85b5620b-a4d3-4576-8ad5-430047282566"
+  },
+  {
+    "name": "EvolutionSkilledSkillUseMagicDeviceAbility",
+    "guid": "1994a91a-5a2e-4192-a7ed-1393f08a02f7"
+  },
+  {
+    "name": "EvolutionSlamFeature",
+    "guid": "a83ace39-fe36-4e84-b299-64f6768bc8d6"
+  },
+  {
+    "name": "EvolutionSlamAbility",
+    "guid": "4468b88a-6c72-4f82-8fc2-53f0c8de15c6"
+  },
+  {
+    "name": "EvolutionSpikeFeature",
+    "guid": "280867e3-ee45-46fc-990e-07e5d582dd33"
+  },
+  {
+    "name": "EvolutionSpikeAbility",
+    "guid": "741cf1f7-6ec7-41c7-adf9-0dfc0e56da67"
+  },
+  {
+    "name": "EvolutionTailFeature",
+    "guid": "931dd768-55c8-4829-b11a-043c38c13400"
+  },
+  {
+    "name": "EvolutionTailAbility",
+    "guid": "4341d748-a4cf-44c3-937d-c16f864afe50"
+  },
+  {
+    "name": "EvolutionTailSlapFeature",
+    "guid": "5ff6993e-9246-4305-b90d-400a663bf4a0"
+  },
+  {
+    "name": "EvolutionTailSlapAbility",
+    "guid": "3f63dd92-ff6f-42dd-bc33-a74a9655e4c4"
+  },
+  {
+    "name": "EvolutionTentacleFeature",
+    "guid": "8d56a73c-99ca-4722-a5c3-ebff4596ddc5"
+  },
+  {
+    "name": "EvolutionTentacleAbility",
+    "guid": "6d265842-b369-4977-9c06-2d1f5e89d9d5"
+  },
+  {
+    "name": "EvolutionTentacleMassFeature",
+    "guid": "3d112c60-0d40-44ae-9dc0-acf57a37a978"
+  },
+  {
+    "name": "EvolutionTentacleMassAbility",
+    "guid": "d4535f0c-bd45-4238-a9fd-e0a82765c3d8"
+  },
+  {
+    "name": "EvolutionWingBuffetFeature",
+    "guid": "66720deb-c356-4e57-a10b-ad69ace7c7ff"
+  },
+  {
+    "name": "EvolutionWingBuffetAbility",
+    "guid": "1d09d7e0-a255-4f08-978c-8e6efbfd3b97"
+  },
+  {
+    "name": "EvolutionCost2Feature",
+    "guid": "8013f7dc-5ca7-4043-9b9d-2cdbddcd7132"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseStrengthFeature",
+    "guid": "01838f48-83e2-4a1f-a79f-750d399e13f4"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseStrengthAbility",
+    "guid": "9ae97e1c-8190-4216-9110-793dfaf6899a"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseDexterityFeature",
+    "guid": "924b2c80-7229-4823-8489-4815cff91701"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseDexterityAbility",
+    "guid": "da6e75c9-47db-446e-a6c4-e1d2eac7694b"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseConstitutionFeature",
+    "guid": "4df667b7-1cee-400f-863f-c5b97a5e241e"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseConstitutionAbility",
+    "guid": "c72326ca-13a5-4abf-a393-7b988151ba1f"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseIntelligenceFeature",
+    "guid": "e60afa5f-ef97-4d43-bd26-9b32b6449f3d"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseIntelligenceAbility",
+    "guid": "2b815787-b14f-45e9-9871-edda51efeb53"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseWisdomFeature",
+    "guid": "9041cd64-f967-48e7-aea1-910a2baefecb"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseWisdomAbility",
+    "guid": "8abc3711-b1bd-48e4-8efe-1bc5740b7241"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseCharismaFeature",
+    "guid": "6d25b601-f512-4913-bafe-c7b48b38de23"
+  },
+  {
+    "name": "EvolutionAbilityIncreaseCharismaAbility",
+    "guid": "b8f5e5fc-d325-4b72-bfc7-84d88744c133"
+  },
+  {
+    "name": "EvolutionBloodFrenzyFeature",
+    "guid": "4b2b549b-05f6-4e50-b5ff-8018e4b6dc2b"
+  },
+  {
+    "name": "EvolutionBloodFrenzyAbility",
+    "guid": "69aa65bb-e2d7-4544-a41d-594d63ed4041"
+  },
+  {
+    "name": "EvolutionEnergyAttacksAcidAbility",
+    "guid": "8e6571a3-1d2a-4988-9edd-33fe5a2dda6f"
+  },
+  {
+    "name": "EvolutionEnergyAttacksColdAbility",
+    "guid": "9a998ab0-0f83-4129-887b-a70534a98484"
+  },
+  {
+    "name": "EvolutionEnergyAttacksElectricityAbility",
+    "guid": "51dfff24-fcb0-4ea7-8133-8ac5bc96433b"
+  },
+  {
+    "name": "EvolutionEnergyAttacksFireAbility",
+    "guid": "5a20c34d-76eb-4adf-8460-3b82b3fc0bb0"
+  },
+  {
+    "name": "EvolutionFlightFeature",
+    "guid": "6bb04669-0445-4ce1-ace4-de578d5d9b1a"
+  },
+  {
+    "name": "EvolutionFlightAbility",
+    "guid": "1c6fabac-aea2-407e-8258-d7476cb5819c"
+  },
+  {
+    "name": "EvolutionImmunityAcidAbility",
+    "guid": "331a5bd5-919c-442e-868e-92490822c213"
+  },
+  {
+    "name": "EvolutionImmunityColdAbility",
+    "guid": "04db8cb7-4b60-4aaa-9901-4934ba8ccef7"
+  },
+  {
+    "name": "EvolutionImmunityElectricityAbility",
+    "guid": "22f1b013-fa74-4f1b-ab34-52d9bee9c1bc"
+  },
+  {
+    "name": "EvolutionImmunityFireAbility",
+    "guid": "25c1c21b-d142-492d-a659-9acfc2aa63bc"
+  },
+  {
+    "name": "EvolutionImmunitySonicFeature",
+    "guid": "b7755c13-ce94-4c6a-acd7-39515b4a5910"
+  },
+  {
+    "name": "EvolutionImmunitySonicAbility",
+    "guid": "d442bbdf-a6b1-4bf5-9020-e95ca64d4b63"
+  },
+  {
+    "name": "EvolutionLimbsArmsFeature",
+    "guid": "548842bf-d9b0-47ef-a9e8-d45f4b1eca66"
+  },
+  {
+    "name": "EvolutionLimbsArmsAbility",
+    "guid": "070cb52a-ab11-404f-9869-3c746d5ffa78"
+  },
+  {
+    "name": "EvolutionLimbsLegsFeature",
+    "guid": "059f6a4e-e5b2-432c-9cb9-261b636f0a21"
+  },
+  {
+    "name": "EvolutionLimbsLegsAbility",
+    "guid": "6b40668b-9e9a-4317-9ca7-3f83889d2c2c"
+  },
+  {
+    "name": "EvolutionRendFeature",
+    "guid": "0f9a72aa-2371-46c2-a751-6bf5a27d7dd0"
+  },
+  {
+    "name": "EvolutionRendAbility",
+    "guid": "a8c9b916-39ae-4633-a268-aeb56bbd2e65"
+  },
+  {
+    "name": "EvolutionTrampleFeature",
+    "guid": "4dd61ffb-5556-4bd2-8d59-bc905ebef883"
+  },
+  {
+    "name": "EvolutionTrampleAbility",
+    "guid": "180b7a5e-e3e1-4a0a-b3b2-b06221658568"
+  },
+  {
+    "name": "EvolutionTripFeature",
+    "guid": "4bcd3e72-a04f-4902-92e8-2ff9c2c80a27"
+  },
+  {
+    "name": "EvolutionTripAbility",
+    "guid": "ef82cf18-31f2-424d-9304-7ca31230262f"
+  },
+  {
+    "name": "EvolutionBullrushFeature",
+    "guid": "60950896-9189-4f28-876b-60e1ed1ac05b"
+  },
+  {
+    "name": "EvolutionBullrushAbility",
+    "guid": "f502f3b3-c22a-46b5-b8e0-873624f4c258"
+  },
+  {
+    "name": "EvolutionSunderarmorFeature",
+    "guid": "fb09f5b4-ae64-403e-91ca-a7d4d175ba32"
+  },
+  {
+    "name": "EvolutionSunderarmorAbility",
+    "guid": "e59c8aee-6bdb-404f-896b-5018299fbf1e"
+  },
+  {
+    "name": "EvolutionCost3Feature",
+    "guid": "5c2b819f-3ab3-4a7f-bc8a-3b5e3cd70ce7"
+  },
+  {
+    "name": "EvolutionDamageReductionFeature",
+    "guid": "9bbb7416-ee5e-4c80-9515-1ab6c1856e88"
+  },
+  {
+    "name": "EvolutionDamageReductionAbility",
+    "guid": "7f306a3a-fbfb-4d88-98da-3cf10244da8e"
+  },
+  {
+    "name": "EvolutionPounceFeature",
+    "guid": "d77c02e2-59ed-473a-a75e-beb67ee5d013"
+  },
+  {
+    "name": "EvolutionPounceAbility",
+    "guid": "68b5950d-87f2-47f6-a369-cea046589d1f"
+  },
+  {
+    "name": "EvolutionWebFeature",
+    "guid": "39b97fa0-2537-405c-a69c-52a1781df1ef"
+  },
+  {
+    "name": "EvolutionWebAbility",
+    "guid": "1bef914b-17e3-4e17-80eb-874857315e03"
+  },
+  {
+    "name": "EvolutionImprovedDamageFeature",
+    "guid": "2365c0c1-dc76-439c-b464-13f9dfe1d48b"
+  },
+  {
+    "name": "EvolutionImprovedDamageAbility",
+    "guid": "cdd2b3e5-4230-4a46-a50d-7c25a180014f"
+  },
+  {
+    "name": "EvolutionReachFeature",
+    "guid": "2cd02ae1-4735-4440-9c1e-f335c6088c73"
+  },
+  {
+    "name": "EvolutionReachAbility",
+    "guid": "71d66c80-14bb-4213-8cb1-67fc9351b550"
+  },
+  {
+    "name": "EvolutionClawsLimbsFeature",
+    "guid": "cde48e44-00f6-40f8-9e8e-4594805acac0"
+  },
+  {
+    "name": "EvolutionClawsLimbsAbility",
+    "guid": "105bde47-a762-4fa0-8949-b62fcf7ab0d5"
+  },
+  {
+    "name": "EvolutionPincersLimbsFeature",
+    "guid": "257b8277-ac7c-47a8-874b-9ffd5f625f8b"
+  },
+  {
+    "name": "EvolutionPincersLimbsAbility",
+    "guid": "02d52cf1-21cf-4148-bb52-1b8c8985d431"
+  },
+  {
+    "name": "EvolutionSlamLimbsFeature",
+    "guid": "71b5128d-37f8-4b98-9ec8-d1fa7bd3bd9f"
+  },
+  {
+    "name": "EvolutionSlamLimbsAbility",
+    "guid": "b365f6b5-9604-4d1f-b4c6-9d424f6657fc"
+  },
+  {
+    "name": "EvolutionCost4Feature",
+    "guid": "a0246e18-2bb7-436c-b8a4-b14500459c29"
+  },
+  {
+    "name": "EvolutionAmorphousFeature",
+    "guid": "4f5f8a39-d4bb-43bf-a593-1286ff9c2b5e"
+  },
+  {
+    "name": "EvolutionAmorphousAbility",
+    "guid": "1ce4151f-5c77-4c01-adf9-1914437aa2a8"
+  },
+  {
+    "name": "EvolutionBlindsightFeature",
+    "guid": "464ef366-5e38-47eb-85bf-abf0b26b0cdd"
+  },
+  {
+    "name": "EvolutionBlindsightAbility",
+    "guid": "e4668f9a-d525-4b9b-9b02-639e385b98dd"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidFeature",
+    "guid": "a20dfe7b-88aa-4401-97f3-324185a97336"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidAbility",
+    "guid": "5fa11ff2-f191-4ea8-bf42-c0eceb0fd762"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdFeature",
+    "guid": "ce9d485c-328f-4e02-a645-1ed0b3700cd7"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdAbility",
+    "guid": "0ec4cf52-5395-4e60-8b6c-17952c37b3bb"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityFeature",
+    "guid": "ebc94918-6849-47bd-8521-1a1a8a9993c3"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityAbility",
+    "guid": "238e9a86-5123-423d-bec4-c189c1e9537a"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireFeature",
+    "guid": "1c75bbb5-c479-472e-a149-be53108da783"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireAbility",
+    "guid": "0252b0f6-7cd7-4fcf-89a7-9757aa769fdf"
+  },
+  {
+    "name": "EvolutionFastHealingFeature",
+    "guid": "1bee6ad4-769f-4bf0-a8b3-5a43b3a94a89"
+  },
+  {
+    "name": "EvolutionFastHealingAbility",
+    "guid": "40b78461-1bae-43ae-88c3-f4381aa434fa"
+  },
+  {
+    "name": "EvolutionLargeFeature",
+    "guid": "45328e93-0b8e-4c31-85bb-8c5ecbfc49c8"
+  },
+  {
+    "name": "EvolutionLargeAbility",
+    "guid": "044afd61-7a73-4e06-9d67-32623560baca"
+  },
+  {
+    "name": "EvolutionSpellResistanceFeature",
+    "guid": "83307f9d-765a-40b3-982a-6327eddffa5d"
+  },
+  {
+    "name": "EvolutionSpellResistanceAbility",
+    "guid": "26ba32a0-ff70-45d2-a29b-71c2cbbf2360"
+  },
+  {
+    "name": "EvolutionOneAbilityBase",
+    "guid": "35b50553-35d4-4a0c-82cc-7fc4e7b0e42b"
+  },
+  {
+    "name": "EvolutionTwoAbilityBase",
+    "guid": "546f0d2a-43bd-44d2-9cf7-bdfbe061f53d"
+  },
+  {
+    "name": "EvolutionThreeAbilityBase",
+    "guid": "3ec1f92b-26de-4968-b2fd-5e409eb2c110"
+  },
+  {
+    "name": "EvolutionFourAbilityBase",
+    "guid": "bfdc8ae1-e212-44a5-b4ca-b8d2366b0e16"
+  },
+  {
+    "name": "EvolutionBaseAbilitiesFeature",
+    "guid": "55146c73-74ab-46cd-b4ba-cf0009d562ec"
+  },
+  {
+    "name": "EvolutionBiteBaseFeature",
+    "guid": "c601b55b-0e8e-4b79-a9f1-d48e42734fd6"
+  },
+  {
+    "name": "EvolutionClawsActivatableAbility",
+    "guid": "5b01ee5e-b507-4789-a388-97a5fa5ebce7"
+  },
+  {
+    "name": "EvolutionClawsBaseFeature",
+    "guid": "cbdc22fa-b0bb-4adf-876a-73ad59a1c9df"
+  },
+  {
+    "name": "EvolutionClawsBuff",
+    "guid": "fc1833aa-a541-4917-b97d-52a312f80661"
+  },
+  {
+    "name": "EvolutionGoreBaseFeature",
+    "guid": "9ae5ab6d-68f0-4e1a-a755-4481e93217f3"
+  },
+  {
+    "name": "EvolutionMagicAttacksBaseFeature",
+    "guid": "b8904966-dd4f-4b9e-b11d-fde43b7dbd14"
+  },
+  {
+    "name": "EvolutionPincersActivatableAbility",
+    "guid": "0bc2769f-8077-4b56-adaa-94502ad8bd85"
+  },
+  {
+    "name": "EvolutionPincersBaseFeature",
+    "guid": "ec9fc322-7068-472a-8737-f5063dd17524"
+  },
+  {
+    "name": "EvolutionPincersBuff",
+    "guid": "792cb9fc-8f3f-4591-8b11-ac74c65ba352"
+  },
+  {
+    "name": "EvolutionSkilledSkillPerceptionBaseFeature",
+    "guid": "98df0fb2-8e9c-4bb9-9811-32ab55cf846b"
+  },
+  {
+    "name": "EvolutionSkilledSkillThieveryBaseFeature",
+    "guid": "20b463e3-1658-44af-a2b3-10c399413a1d"
+  },
+  {
+    "name": "EvolutionSkilledSkillUseMagicDeviceBaseFeature",
+    "guid": "88eb8de3-db8c-42a4-8607-daebe64aecef"
+  },
+  {
+    "name": "EvolutionSlamActivatableAbility",
+    "guid": "6ae98332-99da-40ee-aa29-dbd20740a2d5"
+  },
+  {
+    "name": "EvolutionSlamBaseFeature",
+    "guid": "83dbab09-eed3-4857-903c-99304e730576"
+  },
+  {
+    "name": "EvolutionSlamBuff",
+    "guid": "86cb3980-521e-4c44-b939-af91c0f929ea"
+  },
+  {
+    "name": "EvolutionTailSlapBaseFeature",
+    "guid": "74bafeef-12d3-4795-98ef-01aa52a98490"
+  },
+  {
+    "name": "EvolutionTentacleMassActivatableAbility",
+    "guid": "b7c64d7f-ea97-4036-a040-5b50538102e5"
+  },
+  {
+    "name": "EvolutionTentacleMassBaseFeature",
+    "guid": "4b63d769-a45b-4e97-857c-9158ce18bb8c"
+  },
+  {
+    "name": "EvolutionTentacleMassBuff",
+    "guid": "5a1c0abc-8e20-4e31-84c1-f431bb64132b"
+  },
+  {
+    "name": "EvolutionWingBuffetBaseFeature",
+    "guid": "27aa409e-33a4-4a0e-adf8-c8480188f8de"
+  },
+  {
+    "name": "EvolutionBloodFrenzyActivatableAbility",
+    "guid": "0eb2e0f9-306a-41d6-b172-834cb9d6c576"
+  },
+  {
+    "name": "EvolutionBloodFrenzyBaseFeature",
+    "guid": "6df311de-eeca-42e7-9232-d2b86a0cdec6"
+  },
+  {
+    "name": "EvolutionBloodFrenzyBuff",
+    "guid": "fb79039d-2f94-4e36-b254-4f23cbdc3354"
+  },
+  {
+    "name": "EvolutionBullrushBaseFeature",
+    "guid": "7e6d513f-33c1-49fb-b2e7-3cbc73cd1c56"
+  },
+  {
+    "name": "EvolutionEnergyAttacksAcidBaseFeature",
+    "guid": "3f440f33-6b97-4fac-8b5b-e08154657d85"
+  },
+  {
+    "name": "EvolutionEnergyAttacksColdBaseFeature",
+    "guid": "df7f1605-11fe-4080-93d8-9fd339e86bf3"
+  },
+  {
+    "name": "EvolutionEnergyAttacksElectricityBaseFeature",
+    "guid": "9a5e69ef-d775-4635-a0b1-37858248371e"
+  },
+  {
+    "name": "EvolutionEnergyAttacksFireBaseFeature",
+    "guid": "12e008ab-2999-474d-ac5f-7ed6928da016"
+  },
+  {
+    "name": "EvolutionFlightFlightFeature",
+    "guid": "9308cc88-6928-4886-90c8-e27374850d3c"
+  },
+  {
+    "name": "EvolutionSunderarmorBaseFeature",
+    "guid": "fd69084e-20f9-42b6-ab11-16d7c188f589"
+  },
+  {
+    "name": "EvolutionTrampleTrampleAbility",
+    "guid": "e8571d97-144f-4420-a5cc-bc465d0fe225"
+  },
+  {
+    "name": "EvolutionTrampleBaseFeature",
+    "guid": "5b9b4cdb-e04f-41a3-9995-806210a433b6"
+  },
+  {
+    "name": "EvolutionTripBaseFeature",
+    "guid": "fcb5383c-dcee-43a7-8610-b97f80708005"
+  },
+  {
+    "name": "AdditionalWeaponClaw",
+    "guid": "36068d4b-603a-44f3-8e4f-951de7529aaf"
+  },
+  {
+    "name": "EvolutionDamageReductionResourceReductionFeature",
+    "guid": "a267dded-d622-4fa2-a7eb-fdbd39038bc5"
+  },
+  {
+    "name": "EvolutionPounceBaseFeature",
+    "guid": "55d31e9a-bccd-46ae-9b63-5876fd1689e4"
+  },
+  {
+    "name": "EvolutionReachBaseFeature",
+    "guid": "ad3e920d-ecd6-423e-9878-73e6d618245e"
+  },
+  {
+    "name": "EvolutionWebWebAbility",
+    "guid": "f5c1f7d2-78c9-48c8-80c4-69a15ab7e6e6"
+  },
+  {
+    "name": "EvolutionWebBaseFeature",
+    "guid": "faa30870-7a0f-48d5-a387-b99baf3b4b2b"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidBreathAbility",
+    "guid": "57dac3f6-ba02-4ffe-b8a3-286c3d5e73e5"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdBreathAbility",
+    "guid": "e58bc528-9df9-4769-ad91-98517a66ef60"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityBreathAbility",
+    "guid": "111e8603-5309-44f8-8701-5ed91cdca6e3"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireBreathAbility",
+    "guid": "4175b820-366f-41a7-b0ec-bdd8fc32981f"
+  },
+  {
+    "name": "EvolutionBreathWeaponAcidBaseFeature",
+    "guid": "9c09c37d-7976-4fe9-bd98-3fb9a08b41f7"
+  },
+  {
+    "name": "EvolutionBreathWeaponColdBaseFeature",
+    "guid": "6d3d49d9-b6c0-4c8b-83f9-7de1ae20e456"
+  },
+  {
+    "name": "EvolutionBreathWeaponElectricityBaseFeature",
+    "guid": "cc1c7bef-01f4-4256-b527-7602638dfee2"
+  },
+  {
+    "name": "EvolutionBreathWeaponFireBaseFeature",
+    "guid": "07fb2651-8f43-42e9-93a2-98d89046dbf3"
+  },
+  {
+    "name": "EvolutionFastHealingBuff",
+    "guid": "ea224cc0-fcce-46b4-b526-affceb30b0d4"
+  },
+  {
+    "name": "EvolutionSizeChangeDiminutiveFeature",
+    "guid": "4dab38c3-ec22-4d18-98e7-5ac38d23e247"
+  },
+  {
+    "name": "EvolutionSizeChangeTinyFeature",
+    "guid": "f98fe22c-2c40-49c6-b8f9-02e84330ede1"
+  },
+  {
+    "name": "EvolutionSizeChangeMediumFeature",
+    "guid": "fda3170c-428d-4756-9022-31e04593159a"
+  },
+  {
+    "name": "EvolutionSizeChangeLargeFeature",
+    "guid": "f296c2ad-b9f8-48e6-ba91-2bfaaae61f01"
+  },
+  {
+    "name": "EvolutionSizeChangeHugeFeature",
+    "guid": "63da33be-9d24-42c5-8de2-1311df8e227f"
+  },
+  {
+    "name": "EvolutionSizeChangeGargantuanFeature",
+    "guid": "debbc06e-2bcb-4187-a370-031047219a50"
+  },
+  {
+    "name": "EvolutionSizeChangeColossalFeature",
+    "guid": "306b6629-7bcc-4dd4-ad42-801a7e6fa051"
+  },
+  {
+    "name": "EvolutionNaturalArmorBaseFeature",
+    "guid": "d110ce64-3fa7-4b58-9ef9-004fc6224460"
+  },
+  {
+    "name": "EvolutionSpikeBaseFeature",
+    "guid": "ce1e31c4-986e-4bfc-b83c-7aa05be0aedb"
+  },
+  {
+    "name": "EvolutionTailBaseFeature",
+    "guid": "faea832c-3e63-4d8f-84c7-b63db94a67e1"
+  },
+  {
+    "name": "EvolutionTentacleBaseFeature",
+    "guid": "4ca42a21-a0f0-48c5-9c52-70e19360637d"
+  },
+  {
+    "name": "EvolutionLimbsArmsBaseFeature",
+    "guid": "90d2dc2a-1ecb-486c-b825-3c432ec47e27"
+  },
+  {
+    "name": "EvolutionLimbsLegsBaseFeature",
+    "guid": "a8b66252-290e-49d9-b972-9a5d5cbe5bc7"
+  },
+  {
+    "name": "EvolutionDamageReductionBaseFeature",
+    "guid": "0a6077df-67b8-4326-82a2-5b2155d67cc9"
+  },
+  {
+    "name": "EvolutionImprovedDamageBaseFeature",
+    "guid": "657b884b-67ce-45e0-97a6-d99df583d1ce"
+  },
+  {
+    "name": "EvolutionClawsLimbsBaseFeature",
+    "guid": "642817d3-bc79-461a-8821-b932f9dd1c96"
+  },
+  {
+    "name": "EvolutionPincersLimbsBaseFeature",
+    "guid": "d1692eb0-6741-4d7c-a2be-f2a052dade9e"
+  },
+  {
+    "name": "EvolutionSlamLimbsBaseFeature",
+    "guid": "8e94d163-b1a0-4101-a19d-b9ee5d4f5c97"
+  },
+  {
+    "name": "EvolutionLargeBaseFeature",
+    "guid": "a9f87e34-f1a4-4ec7-b5cc-87d8fa7d65dd"
+  },
+  {
+    "name": "AddMaxAttacksFeature",
+    "guid": "f8958bf1-1da3-4570-b972-0d05b3cd7026"
+  },
+  {
+    "name": "AddMaxAttacksStepFeature",
+    "guid": "b13d69ae-f5d6-44e9-a08c-ebdc039ee1ff"
+  },
+  {
+    "name": "SummonerClass",
+    "guid": "c6a9c7f9-bdce-4c89-aedf-cde62620b2b7"
+  },
+  {
+    "name": "SummonerProficiencies",
+    "guid": "822684c9-9537-41b1-8031-1594daadfb49"
+  },
+  {
+    "name": "SummonerSecondSpellbookSpellsPerDay",
+    "guid": "3d1620d1-a472-4432-8060-f3136ac417a5"
+  },
+  {
+    "name": "SummonerSecondSpellbookSpellsKnown",
+    "guid": "fbc1c28d-c8cd-4182-a94a-12c24a14f3bd"
+  },
+  {
+    "name": "SummonerSecondSpellbookSpellList",
+    "guid": "92e4f9a4-5b61-48dc-87a7-cc6aab966fd9"
+  },
+  {
+    "name": "SummonerSecondSpellbookSpellBook",
+    "guid": "d577ad2c-6c83-4f89-9ae4-ff7374edfd36"
+  },
+  {
+    "name": "SummonerSecondSpellbookFeat",
+    "guid": "62201579-df46-4f90-92ed-2f3f72a352bd"
+  },
+  {
+    "name": "SummonerProgression",
+    "guid": "cf6de663-5772-4e12-b966-b2e6537d9066"
+  },
+  {
+    "name": "SummonerSpellbookSpellsPerDay",
+    "guid": "4d4748f0-2e17-4fea-9a3e-299d2b214cdc"
+  },
+  {
+    "name": "SummonerSpellbookSpellsKnown",
+    "guid": "8c44cf1b-bc26-49e4-9a00-b87e88faea96"
+  },
+  {
+    "name": "SummonerSpellbookSpellList",
+    "guid": "d1ae0519-7677-491e-b236-e0aa97080da1"
+  },
+  {
+    "name": "SummonerSpellbookSpellBook",
+    "guid": "b4b298ef-cb2c-43e8-a8a1-c7a15d3c32d9"
+  },
+  {
+    "name": "EidolonBaseProgression",
+    "guid": "4950f4b0-118b-4ca5-b20c-90d2b49d45fc"
+  },
+  {
+    "name": "EidolonAbberantClass",
+    "guid": "2c8e7db7-4d85-41cc-b60c-720b037b5c96"
+  },
+  {
+    "name": "EidolonBipedClass",
+    "guid": "6f4b088a-6bee-44ef-9623-821f97b610e4"
+  },
+  {
+    "name": "EidolonQuadrupedClass",
+    "guid": "0c910ba2-dc15-4810-b185-f17ad03cb690"
+  },
+  {
+    "name": "EidolonSerpentineClass",
+    "guid": "e4396e85-2244-492d-8e79-70468d10e1b2"
+  },
+  {
+    "name": "EidolonAncestorProgression",
+    "guid": "ce528f03-cf96-46db-ac23-70f09ba94733"
+  },
+  {
+    "name": "EidolonGenieProgression",
+    "guid": "fb5ae8c9-aca6-4ff7-bfac-2f1ac7068bb9"
+  },
+  {
+    "name": "EidolonPlantProgression",
+    "guid": "0cc25016-eeaa-4782-aa5a-8ad0fac1a3bc"
+  },
+  {
+    "name": "EidolonTwinnedProgression",
+    "guid": "59b3d3c4-dc17-4b40-9f04-b48cb28ea07a"
+  },
+  {
+    "name": "EidolonBaseClass",
+    "guid": "075743fe-93d5-4a58-bef4-fae948513a6f"
+  },
+  {
+    "name": "DummyBuff",
+    "guid": "d466d1db-685c-4d26-854a-e9bf80812f3b"
+  },
+  {
+    "name": "StampedeTrampleDamageImmunityBuff",
+    "guid": "42f145fe-c0a9-4ad2-919e-383c37eaf683"
+  },
+  {
+    "name": "StampedeTrampleDamageBuff",
+    "guid": "b58e5f01-caf3-4c95-8e39-6c2601f1ee63"
+  },
+  {
+    "name": "StampedeTrampleDamageAreaEffect",
+    "guid": "d0996107-4833-4369-8f57-17447901e298"
+  },
+  {
+    "name": "StampedeTrampleDamageAreaBuff",
+    "guid": "2bc45c4c-f2ee-40c6-82ee-473aebb4c46e"
+  },
+  {
+    "name": "ReleaseTheHoundsDamageBuff",
+    "guid": "3b86b94f-0af7-437a-9bee-34c79ef51c78"
+  },
+  {
+    "name": "ReleaseTheHoundsDamageAreaEffect",
+    "guid": "2687291b-4206-4984-8f08-9c300ff3b5c1"
+  },
+  {
+    "name": "ReleaseTheHoundsDamageAreaBuff",
+    "guid": "a36aaed2-0e10-4793-bddb-45e552c27901"
+  },
+  {
+    "name": "BlackTentaclesBuff",
+    "guid": "bb0dbff4-f6cd-4a28-a4f0-dc027e703879"
+  },
+  {
+    "name": "OverstimulateBuff",
+    "guid": "eb3c414a-2407-4e36-adc0-3d877456148d"
+  },
+  {
+    "name": "SummonerLifeLinkBuff",
+    "guid": "d89e5c51-295d-4388-a7a5-4f89418078b2"
+  },
+  {
+    "name": "SummonerShieldAllyAuraAreaEffectBuff",
+    "guid": "a5aa11d3-bda0-402c-a6bd-a2a8565dc353"
+  },
+  {
+    "name": "SummonerShieldAllyConditionalBuff",
+    "guid": "f4763446-425d-44ad-8790-d1312f706e93"
+  },
+  {
+    "name": "SummonerShieldAllyBuff",
+    "guid": "956388b9-f41d-470f-9371-09c84f3befd2"
+  },
+  {
+    "name": "SummonerShieldAllyGreaterAuraAreaEffectBuff",
+    "guid": "9bbde12e-4e39-403f-90f8-f4ee7568d08c"
+  },
+  {
+    "name": "SummonerShieldAllyGreaterConditionalBuff",
+    "guid": "e964513b-768d-4bfa-b038-90d3a7bf83e0"
+  },
+  {
+    "name": "SummonerShieldAllyGreaterBuff",
+    "guid": "bdec43ce-7e5b-4b22-9e77-812185e94ad2"
+  },
+  {
+    "name": "SummonerShieldAllyGreaterIsMasterBuff",
+    "guid": "bd5b3792-0226-4e04-b609-08b77e2da7f3"
+  },
+  {
+    "name": "SummonerLifeBondBuff",
+    "guid": "02176c30-5341-4b25-9961-b1d41d37ba02"
+  },
+  {
+    "name": "FormOfTheDragonIGoldAiAction",
+    "guid": "44138aa3-77fa-406a-ad74-57c6e72e9324"
+  },
+  {
+    "name": "FormOfTheDragonISilverAiAction",
+    "guid": "b7cf134b-c2d4-482f-9791-de773f20fac1"
+  },
+  {
+    "name": "FormOfTheDragonIBlackAiAction",
+    "guid": "97bee123-3eb7-4389-8b10-75a56c6caf9e"
+  },
+  {
+    "name": "FormOfTheDragonIBlueAiAction",
+    "guid": "fa4f554e-a7dd-4af7-a303-dd259bfb0fb6"
+  },
+  {
+    "name": "FormOfTheDragonIBrassAiAction",
+    "guid": "99928b0b-91cc-42e1-a28a-b34eae507356"
+  },
+  {
+    "name": "FormOfTheDragonIGreenAiAction",
+    "guid": "25af1e11-a012-4023-834b-8d0f87f5f388"
+  },
+  {
+    "name": "DraconicAllyBrain",
+    "guid": "065ea33b-959c-4986-a136-53cf97527478"
+  },
+  {
+    "name": "StampedeHorseBrain",
+    "guid": "e3155279-a405-4106-a1d0-8c8f7bf09887"
+  },
+  {
+    "name": "MeladaemonBrain",
+    "guid": "d6b0ee21-2d80-45c7-8d98-3e5f6f4c1cc5"
+  },
+  {
+    "name": "RedPandaSummon",
+    "guid": "bb4025c1-e269-4108-9c17-507b2401c1f8"
+  },
+  {
+    "name": "CatSummon",
+    "guid": "2a75d769-7778-49b0-aa88-1dc6fdb5c7a7"
+  },
+  {
+    "name": "CacodaemonSummon",
+    "guid": "ec3b5e7e-9c7f-49fd-a916-6b9d399745be"
+  },
+  {
+    "name": "DraconicAllySummonBlack",
+    "guid": "b63390f3-b7c1-48f8-b250-a8e4e1106f1f"
+  },
+  {
+    "name": "DraconicAllySummonBlue",
+    "guid": "afaf4090-3ab0-452a-ae60-5653f67e1211"
+  },
+  {
+    "name": "DraconicAllySummonBrass",
+    "guid": "87664171-338c-4bcd-bc12-fc6f8e641124"
+  },
+  {
+    "name": "DraconicAllySummonGreen",
+    "guid": "96de0934-1b3a-4391-b112-fa2787052f62"
+  },
+  {
+    "name": "DraconicAllySummonRed",
+    "guid": "1287b296-16d3-448e-a9a9-f34552e1fbd1"
+  },
+  {
+    "name": "DraconicAllySummonSilver",
+    "guid": "feb4e4ce-43e7-455c-a5ff-71d656d95f2c"
+  },
+  {
+    "name": "DraconicAllySummonWhite",
+    "guid": "3ea1ef35-5b2a-4aaa-80cb-927586d6da96"
+  },
+  {
+    "name": "LesserDemonSummonBrimorak",
+    "guid": "4d752872-6fee-40b3-b933-b8489d31db4c"
+  },
+  {
+    "name": "LesserDemonSummonIncubus",
+    "guid": "004e2e23-848a-4b53-bc90-b9b1df31fc16"
+  },
+  {
+    "name": "LesserDemonSummonSchir",
+    "guid": "7a18be28-9129-4a97-be70-a93e4881ebbf"
+  },
+  {
+    "name": "LesserDemonSummonVermlek",
+    "guid": "ad7f5470-a549-43ca-88ff-7355c34d606c"
+  },
+  {
+    "name": "StampedeSummonHorse",
+    "guid": "780419b9-8950-4911-83dd-564f1bcf9f63"
+  },
+  {
+    "name": "ReleaseTheHoundsWolf",
+    "guid": "9aaaa15b-2d7a-4a49-ba9b-86f42fcd8fa7"
+  },
+  {
+    "name": "ErinyesSummon",
+    "guid": "0af56b26-122a-49ab-bf57-6fa8516bdd7b"
+  },
+  {
+    "name": "MeladaemonSummon",
+    "guid": "e0ed41c3-a02c-485b-ac20-2f2e233db512"
+  },
+  {
+    "name": "SummonerPool",
+    "guid": "39565d71-8d71-4e37-a9d0-8e3aca9c36e5"
+  },
+  {
+    "name": "DraconicAllyPool",
+    "guid": "07103d6a-a73e-4755-be91-3116ddca1a5c"
+  },
+  {
+    "name": "SummonerSummonMonsterIBase",
+    "guid": "daa6ce22-6e8f-4696-a42e-93c469a1a759"
+  },
+  {
+    "name": "SummonerSummonMonsterIIBase",
+    "guid": "f0f9ffaf-3330-4a18-837e-6e4468ca8952"
+  },
+  {
+    "name": "SummonerSummonMonsterIIIBase",
+    "guid": "3af7a1c4-4539-481f-99b5-c9e8bee6c09e"
+  },
+  {
+    "name": "SummonerSummonMonsterIVBase",
+    "guid": "71c3f8cb-5fc9-4b1e-aa5c-cff0026896a1"
+  },
+  {
+    "name": "SummonerSummonMonsterVBase",
+    "guid": "7493802b-dffb-479b-aa3d-e5e35e956b09"
+  },
+  {
+    "name": "SummonerSummonMonsterVIBase",
+    "guid": "c18c5543-ae18-4967-a512-ad74711fff07"
+  },
+  {
+    "name": "SummonerSummonMonsterVIIBase",
+    "guid": "3114f9b9-fdd4-4999-b12f-fa740801dfd2"
+  },
+  {
+    "name": "SummonerSummonMonsterVIIIBase",
+    "guid": "9cfe31f2-95bb-4ed9-bf26-06b7c6053f8d"
+  },
+  {
+    "name": "SummonerSummonMonsterIXBase",
+    "guid": "f61a7b42-ee27-40bf-ace1-a446bd87b3f4"
+  },
+  {
+    "name": "SummonMinorMonsterBase",
+    "guid": "1d3f426d-8021-4701-9e09-1161d7a456b0"
+  },
+  {
+    "name": "SummonDraconicAllyBase",
+    "guid": "0747d6a8-b26b-4f59-9d70-13d435834e6f"
+  },
+  {
+    "name": "SummonLesserDemonBase",
+    "guid": "7cf401ce-3675-4f05-8cb5-4637b18a38ce"
+  },
+  {
+    "name": "SummonerSummonISingle",
+    "guid": "4ee680e9-f135-40c3-a8f8-39cc099218ab"
+  },
+  {
+    "name": "SummonerSummonIISingle",
+    "guid": "75158f3b-0072-41dc-b188-fde5a8489da4"
+  },
+  {
+    "name": "SummonerSummonIId3",
+    "guid": "401aa5fa-b721-483b-a04d-937c99b405b1"
+  },
+  {
+    "name": "SummonerSummonIIISingle",
+    "guid": "2c4e3819-caef-40cd-bd20-7aa1f98e1c70"
+  },
+  {
+    "name": "SummonerSummonIIId3",
+    "guid": "96701efc-4b52-44a5-a33f-502232f95f1b"
+  },
+  {
+    "name": "SummonerSummonIVSingle",
+    "guid": "7ed26e72-3441-47c4-af18-dca1ea6f2046"
+  },
+  {
+    "name": "SummonerSummonIVd3",
+    "guid": "76cb29e8-67bd-40cb-8a75-b181e19d7972"
+  },
+  {
+    "name": "SummonerSummonVSingle",
+    "guid": "29e8cf16-dc61-46c4-9791-fda53d4a249b"
+  },
+  {
+    "name": "SummonerSummonVd3",
+    "guid": "d65e80d6-ec4b-407f-9bb0-85b4642c21c3"
+  },
+  {
+    "name": "SummonerSummonVISingle",
+    "guid": "04d715ce-bbc8-461a-bbde-1d6ed2a70173"
+  },
+  {
+    "name": "SummonerSummonVId3",
+    "guid": "11a833d7-ee40-4963-b9b9-3d7cce92d959"
+  },
+  {
+    "name": "SummonerSummonVIISingle",
+    "guid": "89c59af9-bfff-4b2d-b0f6-4773690d7355"
+  },
+  {
+    "name": "SummonerSummonVIId3",
+    "guid": "83aee5a0-d314-4c2b-941c-bf84f90be30a"
+  },
+  {
+    "name": "SummonerSummonVIIISingle",
+    "guid": "76990826-5d03-4208-aeca-8669bd80f6d6"
+  },
+  {
+    "name": "SummonerSummonVIIId3",
+    "guid": "c4d5c84a-ce51-48f7-adb2-a5271b0f946b"
+  },
+  {
+    "name": "SummonerSummonIXSingle",
+    "guid": "18ec1c1e-2403-4b08-845f-f847fcf526f6"
+  },
+  {
+    "name": "SummonerSummonIXd3",
+    "guid": "05c3f90d-0b97-46c8-a96a-8da1ecf461cb"
+  },
+  {
+    "name": "SummonMinorMonsterRedPanda",
+    "guid": "913d03bd-dd14-4839-87ca-1301cd8a0bcf"
+  },
+  {
+    "name": "SummonMinorMonsterCat",
+    "guid": "6e517fe2-d850-428b-9b25-d9dbcc72a2af"
+  },
+  {
+    "name": "SummonCacodaemon",
+    "guid": "c0b6cead-4cc9-403d-b0fc-8dc75146e85b"
+  },
+  {
+    "name": "SummonCacodaemonGreater",
+    "guid": "0c794874-add5-46cd-9e83-fdbb68a13a93"
+  },
+  {
+    "name": "SummonSwarm",
+    "guid": "8fccb7bf-9659-4950-a058-1dcb075bc1f9"
+  },
+  {
+    "name": "SummonDraconicAllyBlack",
+    "guid": "cc16d4e8-a408-4177-b824-7f9873b82236"
+  },
+  {
+    "name": "SummonDraconicAllyBlue",
+    "guid": "9a1af5d8-44a0-4ca0-aef8-c7b8e4b85a2b"
+  },
+  {
+    "name": "SummonDraconicAllyBrass",
+    "guid": "5cb5902a-ff86-4b1a-a8f2-d7114d52b2ec"
+  },
+  {
+    "name": "SummonDraconicAllyGreen",
+    "guid": "d5aa9fb0-45a3-4ec7-8607-aaba9c5001ff"
+  },
+  {
+    "name": "SummonDraconicAllyRed",
+    "guid": "736053f2-2f99-4f29-ab77-97dc2af707a3"
+  },
+  {
+    "name": "SummonDraconicAllySilver",
+    "guid": "593073f2-1775-4ac5-aecf-4026e8a0b730"
+  },
+  {
+    "name": "SummonDraconicAllyWhite",
+    "guid": "a31dd7bb-3e9c-4a7f-924a-c378062b2d8c"
+  },
+  {
+    "name": "SummonLesserDemonBrimorak",
+    "guid": "29204e38-8c87-49cb-88a5-03f08a464c0c"
+  },
+  {
+    "name": "SummonLesserDemonIncubus",
+    "guid": "fd02a8a6-82d5-43a9-b8f0-0157f165cf55"
+  },
+  {
+    "name": "SummonLesserDemonSchir",
+    "guid": "056790bb-1dd9-4abc-85bf-6ecd69506811"
+  },
+  {
+    "name": "SummonLesserDemonVermlek",
+    "guid": "eb633f92-3dc0-403e-82c7-dc838a6b41a2"
+  },
+  {
+    "name": "SummonStampede",
+    "guid": "bf8dad27-fbc4-4b84-8b67-c29757b402ed"
+  },
+  {
+    "name": "SummonReleaseTheHounds",
+    "guid": "0076940e-363d-4e20-a7e8-d39918013802"
+  },
+  {
+    "name": "SummonErinyes",
+    "guid": "11e2c3de-6529-4e93-b9b3-54c0570dda97"
+  },
+  {
+    "name": "SummonMeladaemon",
+    "guid": "44381254-a4d9-4704-ae8e-19dd3bb1e975"
+  },
+  {
+    "name": "SummonMinorMonsterRedPandaScroll",
+    "guid": "33625007-9c6a-4615-a554-9ab0692da8ce"
+  },
+  {
+    "name": "SummonMinorMonsterCatScroll",
+    "guid": "41124935-9c9c-442c-9db2-bf453014b857"
+  },
+  {
+    "name": "SummonCacodaemonScroll",
+    "guid": "873b5ea7-38bd-4c0c-abb2-5190b624133c"
+  },
+  {
+    "name": "SummonCacodaemonGreaterScroll",
+    "guid": "70e1b394-e1cc-4bd9-9c38-32f067f32868"
+  },
+  {
+    "name": "SummonSwarmScroll",
+    "guid": "2ab579f6-6d24-4bcc-b96e-4c96b0ab8162"
+  },
+  {
+    "name": "SummonDraconicAllyBlackScroll",
+    "guid": "dd8d6332-55c3-4a81-b7ba-35cfce40fab7"
+  },
+  {
+    "name": "SummonDraconicAllyBlueScroll",
+    "guid": "8743fd92-5185-47c4-bafe-62500ba592fa"
+  },
+  {
+    "name": "SummonDraconicAllyBrassScroll",
+    "guid": "820223e2-0ed8-4638-b2c3-8167a9a82c8e"
+  },
+  {
+    "name": "SummonDraconicAllyGreenScroll",
+    "guid": "884d4b51-74cc-4618-933c-ac062ec740cc"
+  },
+  {
+    "name": "SummonDraconicAllyRedScroll",
+    "guid": "8fa76462-153d-4c5f-98b8-11bc0ed4f409"
+  },
+  {
+    "name": "SummonDraconicAllySilverScroll",
+    "guid": "aea52687-2cdb-449c-b89f-61ea7643ec78"
+  },
+  {
+    "name": "SummonDraconicAllyWhiteScroll",
+    "guid": "e1faa937-0714-4ac9-9b3d-9fbd34b02313"
+  },
+  {
+    "name": "SummonLesserDemonBrimorakScroll",
+    "guid": "7cb3c50a-6d3a-4d9e-91a1-7fa0668735a1"
+  },
+  {
+    "name": "SummonLesserDemonIncubusScroll",
+    "guid": "3d1aaf3d-6779-49ff-a8f8-573884ce0d60"
+  },
+  {
+    "name": "SummonLesserDemonSchirScroll",
+    "guid": "d6b546dd-98de-4530-ada3-61ea0d6f0666"
+  },
+  {
+    "name": "SummonLesserDemonVermlekScroll",
+    "guid": "3a1cb0ac-bd38-434a-a7c8-3ddca2d281ec"
+  },
+  {
+    "name": "SummonStampedeScroll",
+    "guid": "cab7d19b-4d90-4fa6-8d7f-96a4eda383ab"
+  },
+  {
+    "name": "SummonReleaseTheHoundsScroll",
+    "guid": "b8ddfdb7-f55f-4b84-a818-37b9ce018f63"
+  },
+  {
+    "name": "SummonErinyesScroll",
+    "guid": "b9c7d35a-fa94-40ba-8d00-fa736ccbed0e"
+  },
+  {
+    "name": "SummonMeladaemonScroll",
+    "guid": "237c1ef8-5d4d-4c98-8844-6d4c751951b2"
+  },
+  {
+    "name": "BlackTentaclesFx",
+    "guid": "665f5fec-710a-4eb3-8201-d9718ce1dbdb"
+  },
+  {
+    "name": "BlackTentaclesAreaEffect",
+    "guid": "adb07a38-7d44-4f45-b11e-8ea4435555ae"
+  },
+  {
+    "name": "BlackTentaclesSpell",
+    "guid": "b3c05fb4-0596-4aba-827d-bb7eed6b5f0a"
+  },
+  {
+    "name": "InfernalHealingSpell",
+    "guid": "5f98d4f8-90c8-43bf-a161-3bda01dd2b04"
+  },
+  {
+    "name": "GreaterInfernalHealingSpell",
+    "guid": "99752051-a758-4f67-9722-ccaa0b7d51b6"
+  },
+  {
+    "name": "OverstimulateSpell",
+    "guid": "61db3c6c-cb5c-4ab4-bb87-cbbc7a6058e9"
+  },
+  {
+    "name": "EidolonStatBonus",
+    "guid": "e12ed1d8-95c0-45b2-bfd7-c8f80995bf75"
+  },
+  {
+    "name": "TransmogrifySpell",
+    "guid": "4cc5ab99-1088-41a5-a8e5-3cb490909538"
+  },
+  {
+    "name": "EvolutionLimbsFeature",
+    "guid": "22ae0777-c131-4d0c-a935-cfa9c5e312e5"
+  },
+  {
+    "name": "EvolutionSizeChangeSmallOriginalFeature",
+    "guid": "e04c6838-31a3-44e0-9df7-669c5399ab88"
+  },
+  {
+    "name": "EvolutionSizeChangeFineOriginalFeature",
+    "guid": "1a3428e9-caf2-4534-bc11-867bd2ee9ed0"
+  },
+  {
+    "name": "EvolutionSizeChangeDiminutiveOriginalFeature",
+    "guid": "6a6d24b6-e81e-4aae-a339-1fd9d55f5fe9"
+  },
+  {
+    "name": "EvolutionSizeChangeTinyOriginalFeature",
+    "guid": "4c9cd883-4081-4b54-8960-44f46f230cb8"
+  },
+  {
+    "name": "EvolutionSizeChangeMediumOriginalFeature",
+    "guid": "7250698a-981c-44d7-9386-d310f64b51f0"
+  },
+  {
+    "name": "EvolutionSizeChangeLargeOriginalFeature",
+    "guid": "d350aff6-b79f-46e9-8c0b-d934aadc91f5"
+  },
+  {
+    "name": "EvolutionSizeChangeHugeOriginalFeature",
+    "guid": "375352c6-d0cb-4681-8f3c-63a2a2b2198a"
+  },
+  {
+    "name": "EvolutionSizeChangeGargantuanOriginalFeature",
+    "guid": "6623f8f0-86d9-45a9-b6cd-15bd3723bfca"
+  },
+  {
+    "name": "EvolutionSizeChangeColossalOriginalFeature",
+    "guid": "609c5c67-1db0-434e-ac5c-02f6e721933a"
+  },
+  {
+    "name": "EidolonAstradaemonPortrait",
+    "guid": "e88d6fc7-56b2-4ff7-b711-1fb30543d32a"
   }
 ]

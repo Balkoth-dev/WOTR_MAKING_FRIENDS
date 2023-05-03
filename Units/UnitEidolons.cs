@@ -1,4 +1,5 @@
-﻿using BlueprintCore.Blueprints.References;
+﻿using BlueprintCore.Blueprints.Configurators;
+using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.ResourceLinks;
@@ -107,7 +108,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -151,7 +153,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -175,7 +178,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -219,7 +223,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -253,7 +258,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -267,7 +273,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -311,7 +318,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -325,7 +333,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -369,7 +378,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -393,7 +403,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -417,7 +428,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -451,7 +463,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -475,7 +488,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -489,7 +503,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -559,7 +574,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Serpentine,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -573,7 +589,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -587,7 +604,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -601,7 +619,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -611,11 +630,13 @@ namespace WOTR_MAKING_FRIENDS.Units
                     Name = "EidolonAstradaemon",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.SoulsCloakAstradaemonSummoned.Cast<BlueprintUnitReference>().Reference,
+                    portrait = BlueprintTool.GetRef<BlueprintPortraitReference>(GetGUID.GUIDByName("EidolonAstradaemonPortrait")),
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Fine"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Tiny"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Tiny"+"OriginalFeature"))
                                                   }
                 },
             #endregion
@@ -649,7 +670,8 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
                     blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
                                                   {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature"))
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Small"+"OriginalFeature"))
                                                   }
                 },
             #endregion

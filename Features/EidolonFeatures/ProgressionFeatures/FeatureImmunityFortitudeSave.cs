@@ -2,10 +2,12 @@
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.Designers.Mechanics.Facts;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static Kingmaker.Designers.Mechanics.Facts.ModifyD20;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
@@ -35,7 +37,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .SetGroups(IClass.featureGroup)
-                    .AddModifyD20(savingThrowType: Kingmaker.Designers.Mechanics.Facts.ModifyD20.InnerSavingThrowType.Fortitude, value: ContextValues.Constant(20), replace: true)
+                    .AddModifyD20(rule: RuleType.SavingThrow, savingThrowType: InnerSavingThrowType.Fortitude, replace: true, rollResult: ContextValues.Constant(20))
                     .ConfigureWithLogging();
         }
     }

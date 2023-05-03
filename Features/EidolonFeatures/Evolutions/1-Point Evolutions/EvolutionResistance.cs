@@ -47,7 +47,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Feature"))
                     .SetIcon(IClass.icons[i])
                     .SetRanks(1)
-                    .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
+                    .AddContextRankConfig(ContextRankConfigs.CharacterLevel(min:10,max:15))
                     .AddDamageResistanceEnergy(type: skillType, value: ContextValues.Rank())
                     .ConfigureWithLogging(true);
             }

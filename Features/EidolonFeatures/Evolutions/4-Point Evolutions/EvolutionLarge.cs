@@ -3,6 +3,8 @@ using BlueprintCore.Actions.Builder.ContextEx;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
+using BlueprintCore.Conditions.Builder;
+using BlueprintCore.Conditions.Builder.BasicEx;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Designers.Mechanics.Buffs;
@@ -12,6 +14,7 @@ using Kingmaker.UnitLogic.Abilities.Components;
 using System;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 
@@ -28,7 +31,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             internal const string BaseFeature = Evolution + "BaseFeature";
             internal const string Ability = Evolution + "Ability";
         }
-        internal static BlueprintFeatureReference[] blueprintUnitFactReferences = new BlueprintFeatureReference[7];
+        internal static BlueprintFeatureReference[] blueprintUnitFactReferences = new BlueprintFeatureReference[9];
         internal static int[] SizeACPenalty = new int[] { -8, -4, -2, -1 };
         public static void Adjust()
         {
@@ -62,13 +65,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                     int sizeInt = (int)enumValue;
                     int diff = mediumInt - sizeInt;
 
-                    var feature = FeatureConfigurator.New(eidolonFeatureName, GetGUID.GUIDByName(eidolonFeatureName))
+                    var feature = FeatureConfigurator.New(eidolonFeatureName, eidolonFeatureGuid)
                         .SetIcon(IClass.icon)
                         .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
                         .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
                         .SetRanks(1)
-                        .AddChangeUnitSize(size: enumValue, type: ChangeUnitSize.ChangeType.Value)
-                        .AddComponent<IncreaseResourceAmountRank>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")); c.Rank = 2; c.Value = -2; });
+                        .SetGroups(FeatureGroupExtension.EvolutionTransmogrifiable)
+                        .AddChangeUnitSize(size: enumValue, type: ChangeUnitSize.ChangeType.Value);
 
                     if (diff > 0)
                     {
@@ -87,6 +90,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                     }
 
                     feature.ConfigureWithLogging();
+
+                    var eidolonOriginalFeatureName = IClass.EvolutionSizeChange + System.Enum.GetName(typeof(Size), enumValue) + "OriginalFeature";
+                    var eidolonOriginalFeatureGuid = GetGUID.GUIDByName(eidolonOriginalFeatureName);
+                    FeatureConfigurator.New(eidolonOriginalFeatureName, eidolonOriginalFeatureGuid)
+                        .CopyFrom(eidolonOriginalFeatureGuid, c => c is not ChangeUnitSize)
+                        .SetGroups(FeatureGroupExtension.EvolutionBase)
+                        .ConfigureWithLogging();
 
                     blueprintUnitFactReferences[arrayInt] = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(eidolonFeatureName));
                     arrayInt++;
@@ -113,12 +123,21 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                                                  c.m_Default_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.EvolutionSizeChange + "LargeFeature"));
                                              })
                                              .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost4Feature")))
+                                             .Conditional(ConditionsBuilder.New().HasFact(BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature))), 
+                                                                                  ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost2Feature"))))
                                              .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
                                              .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")));
 
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
                 .AddAbilityEffectRunAction(action.Build())
+                .AddComponent<AbilityCasterHasFactRank>(c =>
+                {
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
+                    c.maxRank = 2;
+                    c.numLevelsBetweenRanks = 5;
+                    c.startLevel = 8;
+                })
                 .AddComponent<AbilityCasterHasResource>(c =>
                 {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource"));
@@ -126,13 +145,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                     c.featureRank = 2;
                     c.resourceAmount = 4;
                     c.costMultiplierByRank = 2;
-                })
-                .AddComponent<AbilityCasterHasFactRank>(c =>
-                {
-                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
-                    c.maxRank = 2;
-                    c.numLevelsBetweenRanks = 0;
-                    c.startLevel = 0;
+                    c.useCostMultiplier = true;
                 })
                 .ConfigureWithLogging(true);
         }

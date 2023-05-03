@@ -27,17 +27,13 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         public void OnEventAboutToTrigger(RuleCalculateWeaponStats evt)
         {
             int bonusRanks = 0;
-            Main.Log("Size Category Change: " + SizeCategoryChange);
             if (plusFeatureRanks)
             {
-                Main.Log("Size Category Change: " + SizeCategoryChange);
                 if (m_Feature != null)
                 {
                     bonusRanks = evt.Initiator.Progression.Features.GetRank(m_Feature.Get());
-                    Main.Log("Size Category Change: " + SizeCategoryChange);
                 }
             }
-            Main.Log("Size Category Change: " + SizeCategoryChange);
 
             if ((ignoreWeaponGroup || evt.Weapon.Blueprint.FighterGroup.Contains(this.weaponGroup)) && SizeCategoryChange != 0)
             {

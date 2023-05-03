@@ -11,6 +11,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
             SpellInfernalHealing.CreateInfernalHealing();
             SpellInfernalHealing.CreateGreaterInfernalHealing();
             SpellOverstimulate.CreateOverstimulate();
+            SpellTransmogrify.Create();
         }
 
 

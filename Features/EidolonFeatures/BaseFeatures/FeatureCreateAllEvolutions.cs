@@ -37,6 +37,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                         .SetDescription(Helpers.ObtainString("EvolutionCost" + amount + "Feature" + ".Description"))
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetRanks(100)
+                        .SetGroups(FeatureGroupExtension.EvolutionTransmogrifiable)
                         .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), -amount)
                         .ConfigureWithLogging();
 

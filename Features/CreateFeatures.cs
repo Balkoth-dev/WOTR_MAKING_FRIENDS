@@ -16,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.Features
             FeatureShieldAllyGreater.CreateShieldAllyGreater();
             FeatureLifeBond.CreateEidolonLifeBond();
             FeatureEidolonRank.CreateEidolonRank();
-            FeatureExtraEvolutionPool.Create();
+            FeatureArmorBonus.Create();
             FeatureAddEvolutionPoints.Create();
             CreateProgressionFeatures.Create();
             FeatureEidolonTypes.Create();
