@@ -39,7 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                     .AddEntry(1,  FeatureResistance4Mind.IClass.Guid)
                                     .AddEntry(4, FeatureModerateFortification.IClass.Guid,GetRefs.BFBRCast(FeatureRefs.TripImmunityFeature))
                                     .AddEntry(8, GetGUID.GUIDByName("EvolutionFlightBaseFeature"))
-                                    .AddEntry(12, FeatureAddSpellCrushingDespair.IClass.Guid)
+                                    .AddEntry(12, FeatureAeonSelectionFeature.IClass.Guid)
                                     .AddEntry(16, GetGUID.GUIDByName("EvolutionAmorphousBaseFeature"),FeatureImmunityPoison.IClass.Guid)
                                     .AddEntry(20, FeatureAddSpellTrueStrike.IClass.Guid),
                     baseForms = new()
@@ -160,7 +160,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                     .AddEntry(12, FeatureDR5Evil.IClass.Guid,
                                                   FeatureImmunityPetrification.IClass.Guid)
                                     .AddEntry(16, GetGUID.GUIDByName("EvolutionImmunityElectricityBaseFeature"))
-                                    .AddEntry(20, FeatureIncoporeal.IClass.Guid),
+                                    .AddEntry(20, FeatureAddAbilityIncoporeal.IClass.Guid),
                     baseForms = new()
                     {
                         EnumsEidolonBaseForm.Biped,
@@ -360,9 +360,9 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                     levelEntries = LevelEntryBuilder.New()
                                     .AddEntry(1, GetGUID.GUIDByName("EvolutionResistanceColdBaseFeature"), GetRefs.BFBRCast(FeatureRefs.TongiProficiency))
                                     .AddEntry(4, GetGUID.GUIDByName("ExtraEvolutionPoolFeature"))
-                                    .AddEntry(8, FeatureAddAbilityEvilEye.IClass.Guid)
-                                    .AddEntry(12, FeatureDR5Good.IClass.Guid)
-                                    .AddEntry(16, FeatureAddAbilityEvilEyeArea.IClass.Guid)
+                                    .AddEntry(8, FeatureAddAbilityUnnervingGaze.IClass.Guid)
+                                    .AddEntry(12, FeatureAddAbilityUnnervingGazeArea.IClass.Guid,FeatureDR5Good.IClass.Guid)
+                                    .AddEntry(16, GetGUID.GUIDByName("EvolutionImmunityColdBaseFeature"), FeatureAddAbilityUnnervingGazeAreaStagger.IClass.Guid)
                                     .AddEntry(20, GetGUID.GUIDByName("EvolutionFastHealingBaseFeature")),
                     baseForms = new()
                     {
@@ -419,7 +419,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                                  GetGUID.GUIDByName("EvolutionResistanceElectrictyBaseFeature"))
                                     .AddEntry(8, GetGUID.GUIDByName("ExtraEvolutionPoolFeature"))
                                     .AddEntry(12, FeatureDR5Adamantine.IClass.Guid)
-                                    .AddEntry(16, FeatureAbilityIncreaseSelection.IClass.Guid)
+                                    .AddEntry(16, FeatureAbilityIncreaseSelection.IClass.Guid, FeatureAddSpellInvisibility.IClass.Guid)
                                     .AddEntry(20, FeatureDR10Adamantine.IClass.Guid,
                                                   GetGUID.GUIDByName("EvolutionImmunityElectrictyBaseFeature"),
                                                   GetGUID.GUIDByName("EvolutionImmunityColdBaseFeature")),

@@ -2762,5 +2762,153 @@
   {
     "name": "EidolonAstradaemonPortrait",
     "guid": "e88d6fc7-56b2-4ff7-b711-1fb30543d32a"
+  },
+  {
+    "name": "EidolonHexDCProperty",
+    "guid": "f996caeb-cdfc-4f84-9d91-04c736bed2d2"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeFeature",
+    "guid": "ab04ece3-6f0e-4b93-918f-f77d2fad44e5"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAbility",
+    "guid": "92103380-dab6-477a-a324-6c44fbddaed6"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeCooldownBuff",
+    "guid": "4af644b1-0545-4e35-9b96-756bed7e6d3a"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaFeature",
+    "guid": "9a7ad912-720a-4715-bed6-836f68d353c7"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaAbility",
+    "guid": "4e4572f9-2685-4c88-b31a-444f416bdbef"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaCooldownBuff",
+    "guid": "7c2e5c4f-c368-4286-b838-0958221943c5"
+  },
+  {
+    "name": "AddAbilityUnnervingGazeFeature",
+    "guid": "4396374d-af11-4c0b-91c8-e014ba4f1af7"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaStunFeature",
+    "guid": "9b7fddc7-5287-4dfc-bf20-b48591286e3e"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaStunAbility",
+    "guid": "b148fbb4-0efb-4105-92c4-257bce81326f"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaStunCooldownBuff",
+    "guid": "84811d47-b44c-41f1-a438-350dd6ac42fb"
+  },
+  {
+    "name": "AddAbilityUnnervingGazeFeatureArea",
+    "guid": "1cbd22dd-2a0b-4001-adb9-73b505d5c0b6"
+  },
+  {
+    "name": "EidolonAscendantSummonsMasterFeature",
+    "guid": "fd239990-0af8-4130-971f-69464eca01e0"
+  },
+  {
+    "name": "AscendantSummonsMasterAuraBuff",
+    "guid": "e7af8602-21f3-47d2-b69d-411d69d10baa"
+  },
+  {
+    "name": "AscendantSummonsMasterAuraAreaEffectBuff",
+    "guid": "b4ba6e87-2325-4b32-b286-6ec6046f78ff"
+  },
+  {
+    "name": "AscendantSummonsMasterConditionalBuff",
+    "guid": "467692b9-24a8-40e9-90a0-bfee97ccca50"
+  },
+  {
+    "name": "AscendantSummonsMasterIsMasterBuff",
+    "guid": "757c289a-685f-4f70-ade1-5f9eaa0a3f05"
+  },
+  {
+    "name": "AddAbilityUnnervingGazeAreaFeature",
+    "guid": "fa64a36c-f813-4280-9620-9757c9d5fe68"
+  },
+  {
+    "name": "AddAbilityUnnervingGazeAreaStunFeature",
+    "guid": "c616813f-9fb1-429c-958f-183f85a01e27"
+  },
+  {
+    "name": "EidolonAddAbilityIncoporealFeature",
+    "guid": "02502681-548b-4248-9ed7-b9bc7e47300b"
+  },
+  {
+    "name": "EidolonAddAbilityIncoporealAbility",
+    "guid": "74a3da74-5001-44b4-8285-1ee850aecb07"
+  },
+  {
+    "name": "EidolonAddAbilityIncoporealBuff",
+    "guid": "04215fee-b4d6-4f0a-b8a3-7ec78a257f3b"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaStaggerFeature",
+    "guid": "a3405221-5dbe-405c-8fd2-da1baa229311"
+  },
+  {
+    "name": "EidolonAddAbilityUnnervingGazeAreaStaggerAbility",
+    "guid": "2a4b539d-ad8c-4550-aacf-e90b5e93afb0"
+  },
+  {
+    "name": "EidolonAddSpellInvisibilityFeature",
+    "guid": "6538c6c8-e4c2-4c43-a01b-170a6aee0161"
+  },
+  {
+    "name": "EidolonAddSpellInvisibilityAbility",
+    "guid": "db7dcf2a-42c1-4eb9-be03-5c208a7fe2a3"
+  },
+  {
+    "name": "EidolonWillOWisp",
+    "guid": "79420314-9ec2-4ab9-8071-62d89c5d7f70"
+  },
+  {
+    "name": "EidolonWillOWispCompanionFeature",
+    "guid": "a1e6cdc9-b1e2-45cf-a3c3-38fd59c8433b"
+  },
+  {
+    "name": "EidolonAddAbilityDivineTrothResource",
+    "guid": "43a0e7f2-f834-4cc6-9ba9-91ff6316d17f"
+  },
+  {
+    "name": "EidolonAddSpellBaneResource",
+    "guid": "64b2c76d-3d37-4203-bd36-53511e987871"
+  },
+  {
+    "name": "EidolonAddSpellBreathOfLifeResource",
+    "guid": "1dbbee8a-4f1b-4b8e-93f7-6c66506d1969"
+  },
+  {
+    "name": "EidolonAeonSelectionFeatureFeature",
+    "guid": "5dc6f105-0152-450d-876d-7b6b05b84525"
+  },
+  {
+    "name": "EidolonAeonSelectionFeatureResource",
+    "guid": "83d142ca-177e-4218-b017-726bb038679d"
+  },
+  {
+    "name": "EidolonAddSpellCureSeriousWoundsResource",
+    "guid": "90bb993e-43a3-4713-b677-90a4c9c7eed0"
+  },
+  {
+    "name": "EidolonAddSpellTrueStrikeResource",
+    "guid": "01d5cdb3-318a-4cbb-bedb-7e9d6511ac76"
+  },
+  {
+    "name": "EidolonAeonEmotionsFeatureFeature",
+    "guid": "87468436-35c9-4553-9629-7009cb927add"
+  },
+  {
+    "name": "EidolonAeonTimeFeatureFeature",
+    "guid": "3c1147e5-cc78-49a4-8a43-3d9a0d070fca"
   }
 ]

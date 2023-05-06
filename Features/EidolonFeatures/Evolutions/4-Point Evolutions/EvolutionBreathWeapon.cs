@@ -63,8 +63,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
         }
         public static void ConfigureBreathWeapons()
         {
-            var damageConfig = ContextRankConfigs.StatBonus(StatType.Constitution, type: AbilityRankType.DamageBonus);
-            damageConfig.m_StepLevel = 10;
+            var damageBonus = ContextRankConfigs.StatBonus(StatType.Constitution, type: AbilityRankType.DamageBonus, modDescriptor: ModifierDescriptor.Racial);
+            damageBonus.m_Progression = ContextRankProgression.BonusValue;
+            damageBonus.m_StepLevel = 10;
+            damageBonus.m_BuffRankMultiplier = 1;
 
             for (var i = 0; i < IClass.copiedAbilities.Length; i++)
             {
@@ -76,7 +78,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                     .SetIcon(IClass.icons[i])
                     .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
                     .AddContextRankConfig(ContextRankConfigs.CharacterLevel(AbilityRankType.DamageDice).WithDiv2Progression())
-                    .AddContextRankConfig(damageConfig)
+                    .AddContextRankConfig(damageBonus)
                     .ConfigureWithLogging();
             }
         }

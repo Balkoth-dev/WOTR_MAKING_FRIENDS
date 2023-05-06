@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static string Name = Helpers.ObtainString(Feature + ".Name");
             internal static string Description = Helpers.ObtainString(Feature + ".Description");
-            internal static Sprite Icon = FeatureRefs.CombatCasting.Reference.Get().m_Icon;
+            internal static Sprite Icon = AbilityRefs.Blur.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }

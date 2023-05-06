@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static string Name = Helpers.ObtainString(Feature + ".Name");
             internal static string Description = Helpers.ObtainString(Feature + ".Description");
-            internal static Sprite Icon = FeatureRefs.CombatCasting.Reference.Get().m_Icon;
+            internal static Sprite Icon = AbilityRefs.Haste.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
@@ -56,6 +56,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             AbilityConfigurator.New(IClassAbility.Ability, IClassAbility.Guid)
                 .CopyFrom(AbilityRefs.Haste, c => c is not ContextRankConfig)
                 .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
+                .AddAbilityResourceLogic(amount: 1, isSpendResource: true,  requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(FeatureAeonSelectionFeature.IClassResource.Guid))
                 .ConfigureWithLogging();
         }
     }

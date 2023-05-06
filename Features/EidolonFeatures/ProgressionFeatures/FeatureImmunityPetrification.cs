@@ -31,6 +31,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
                     .CopyFrom(FeatureRefs.ImmunityToPetrification, c => true)
                     .SetGroups(IClass.featureGroup)
+                    .SetDisplayName(IClass.Name)
+                    .SetDisplayName(IClass.Description)
                     .ConfigureWithLogging();
         }
     }

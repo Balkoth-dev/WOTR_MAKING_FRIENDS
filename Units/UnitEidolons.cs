@@ -675,6 +675,16 @@ namespace WOTR_MAKING_FRIENDS.Units
                                                   }
                 },
             #endregion
+            #region EidolonWillOWisp
+            new NewUnitClass()
+                {
+                    Name = "EidolonWillOWisp",
+                    m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
+                    copiedUnit = UnitRefs.WillOWispSummon.Cast<BlueprintUnitReference>().Reference,
+                    isEidolon = true,
+                    eidolonBaseForm = EnumsEidolonBaseForm.Abberant
+                },
+            #endregion
         };
     }
 }

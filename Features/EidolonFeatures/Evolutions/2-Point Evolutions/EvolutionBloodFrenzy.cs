@@ -11,7 +11,10 @@ using Kingmaker.Blueprints;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
+using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
+using Kingmaker.UnitLogic.ActivatableAbilities;
+using Kingmaker.UnitLogic.Commands.Base;
 using Kingmaker.UnitLogic.Mechanics;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -55,12 +58,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                 .SetDisplayName(IClass.ActivatableAbilityName)
                 .SetDescription(IClass.ActivatableAbilityDescription)
                 .SetIcon(IClass.icon)
-                .SetActivationType(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivationType.Immediately)
+                .SetActivationType(AbilityActivationType.Immediately)
                 .SetDeactivateImmediately(true)
-                .SetActivateWithUnitCommand(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free)
-                .SetActivateOnUnitAction(Kingmaker.UnitLogic.ActivatableAbilities.AbilityActivateOnUnitActionType.Attack)
-                .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Fatigued, invert: true)
-                .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Exhausted, invert: true)
+                .SetActivateWithUnitCommand(UnitCommand.CommandType.Free)
+                .SetActivateOnUnitAction(AbilityActivateOnUnitActionType.Attack)
+                .AddRestrictionHasUnitCondition(UnitCondition.Fatigued, invert: true)
+                .AddRestrictionHasUnitCondition(UnitCondition.Exhausted, invert: true)
+                .SetOnlyInCombat(true)
                 .SetBuff(BlueprintTool.GetRef<BlueprintBuffReference>(GetGUID.GUIDByName(IClass.Buff)))
                 .ConfigureWithLogging();
         }
@@ -75,7 +79,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                                                            .Build(),
                                                            ActionsBuilder.New().ApplyBuff(BuffRefs.Fatigued.Cast<BlueprintBuffReference>().Reference, ContextDuration.Fixed(1, DurationRate.Minutes)))
                 .AddCombatStateTrigger(ActionsBuilder.New().RemoveSelf())
-                .AddCondition(Kingmaker.UnitLogic.UnitCondition.AttackNearest)
+                .AddCondition(UnitCondition.AttackNearest)
                 .ConfigureWithLogging();
         }
         public static void AdjustAbility()

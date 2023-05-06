@@ -1,4 +1,5 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
@@ -20,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static string Name = Helpers.ObtainString(Feature + ".Name");
             internal static string Description = Helpers.ObtainString(Feature + ".Description");
-            internal static Sprite Icon = FeatureRefs.CombatCasting.Reference.Get().m_Icon;
+            internal static Sprite Icon = AbilityRefs.Bane.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
@@ -33,9 +34,15 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
+        public static class IClassResource
+        {
+            internal static string Resource = IClass.ProgressionFeature + "Resource";
+            internal static string Guid = GetGUID.GUIDByName(Resource);
+        }
         public static void Create()
         {
             CreateFeature();
+            CreateResource();
             CreateAbility();
         }
         internal static void CreateFeature()
@@ -46,13 +53,22 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassAbility.Guid) })
+                    .AddAbilityResources(3, BlueprintTool.GetRef<BlueprintAbilityResourceReference>(IClassResource.Guid), true)
                     .SetGroups(IClass.featureGroup)
                     .ConfigureWithLogging();
+        }
+        internal static void CreateResource()
+        {
+            BlueprintAbilityResource.Amount maxAmount = ResourceAmountBuilder.New(3).Build();
+            AbilityResourceConfigurator.New(IClassResource.Resource, IClassResource.Guid)
+                .SetMaxAmount(maxAmount)
+                .ConfigureWithLogging();
         }
         internal static void CreateAbility()
         {
             AbilityConfigurator.New(IClassAbility.Ability, IClassAbility.Guid)
                 .CopyFrom(AbilityRefs.Bane, c => true)
+                .AddAbilityResourceLogic(amount: 1, isSpendResource: true,  requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(IClassResource.Guid))
                 .ConfigureWithLogging();
         }
     }

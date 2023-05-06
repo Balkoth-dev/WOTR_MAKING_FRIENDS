@@ -7,8 +7,10 @@
             FeatureAddAbilityConsumeFear.Create();
             FeatureAbilityIncreaseSelection.Create();
             FeatureAddAbilityDivineTroth.Create();
-            FeatureAddAbilityEvilEye.Create();
-            FeatureAddAbilityEvilEyeArea.Create();
+            FeatureAddAbilityIncoporeal.Create();
+            FeatureAddAbilityUnnervingGaze.Create();
+            FeatureAddAbilityUnnervingGazeArea.Create();
+            FeatureAddAbilityUnnervingGazeAreaStagger.Create();
             FeatureAddFeatureLayOnHands.Create();
             FeatureAddSpellBane.Create();
             FeatureAddSpellBlink.Create();
@@ -20,10 +22,13 @@
             FeatureAddSpellGoodHope.Create();
             FeatureAddSpellHaste.Create();
             FeatureAddSpellHolyAura.Create();
+            FeatureAddSpellInvisibility.Create();
             FeatureAddSpellSlow.Create();
             FeatureAddSpellTrueSeeing.Create();
             FeatureAddSpellTrueStrike.Create();
+            FeatureAeonSelectionFeature.Create();
             FeatureAugmentSummoningMaster.Create();
+            FeatureAscendantSummonsMaster.Create();
             FeatureBonusHealing.Create();
             FeatureDR10Adamantine.Create();
             FeatureDR10Evil.Create();
@@ -54,7 +59,6 @@
             FeatureImmunitySleep.Create();
             FeatureImmunityStun.Create();
             FeatureImmunityCurse.Create();
-            FeatureIncoporeal.Create();
             FeatureElemental1.Create();
             FeatureElemental8.Create();
             FeatureElemental20.Create();
