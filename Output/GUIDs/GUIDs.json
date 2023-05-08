@@ -2910,5 +2910,361 @@
   {
     "name": "EidolonAeonTimeFeatureFeature",
     "guid": "3c1147e5-cc78-49a4-8a43-3d9a0d070fca"
+  },
+  {
+    "name": "EidolonStartingEvolutionsFeature",
+    "guid": "595c8572-925c-46d1-8fbe-25fa3f0d0150"
+  },
+  {
+    "name": "AbberantAberrantBaseAttackFeature",
+    "guid": "ca68a623-038d-480a-9219-8ade9fbb9fa1"
+  },
+  {
+    "name": "QuadrupedAberrantBaseAttackFeature",
+    "guid": "477380eb-f4f2-43f5-835a-d1c291d10b71"
+  },
+  {
+    "name": "SerpentineAberrantBaseAttackFeature",
+    "guid": "850215b7-68c9-41c9-b6fe-587d6ccd51ed"
+  },
+  {
+    "name": "BipedAeonBaseAttackFeature",
+    "guid": "8072cfc9-389c-48ee-8f9e-ca9fd2060103"
+  },
+  {
+    "name": "SerpentineAeonBaseAttackFeature",
+    "guid": "c453d473-58e2-4586-9eb5-5e3dbce457b7"
+  },
+  {
+    "name": "BipedAgathionBaseAttackFeature",
+    "guid": "1eef2400-7e26-43cb-83f7-b16ee89d6130"
+  },
+  {
+    "name": "QuadrupedAgathionBaseAttackFeature",
+    "guid": "3ba6638e-9351-4fd6-978f-4602c744f6ad"
+  },
+  {
+    "name": "BipedAncestorBaseAttackFeature",
+    "guid": "f86bb8e3-9d0a-4a0b-b04d-0a3672251ad8"
+  },
+  {
+    "name": "BipedAngelBaseAttackFeature",
+    "guid": "9f55b3c2-94ff-44ab-9400-f4e98e1062e2"
+  },
+  {
+    "name": "BipedArchonBaseAttackFeature",
+    "guid": "4378778f-19c9-4384-99c1-14b1a069bb78"
+  },
+  {
+    "name": "BipedAstralBaseAttackFeature",
+    "guid": "410fee89-7814-49fe-890b-fdb40eb18bdd"
+  },
+  {
+    "name": "SerpentineAstralBaseAttackFeature",
+    "guid": "136f0259-5447-40f7-8027-21f07b897690"
+  },
+  {
+    "name": "BipedAzataBaseAttackFeature",
+    "guid": "0e7fcca0-8c82-4fd6-91cd-9e803b341c80"
+  },
+  {
+    "name": "SerpentineAzataBaseAttackFeature",
+    "guid": "20aef1b7-4861-47b6-889c-fb639e459676"
+  },
+  {
+    "name": "BipedDaemonBaseAttackFeature",
+    "guid": "1ace66d5-646d-46bf-9245-00d2363eb4fb"
+  },
+  {
+    "name": "AbberantDaemonBaseAttackFeature",
+    "guid": "a5501785-a404-46d4-ba66-2c9fe45aadbf"
+  },
+  {
+    "name": "SerpentineDaemonBaseAttackFeature",
+    "guid": "3fed2a11-3064-403c-b740-9d6f4b060d08"
+  },
+  {
+    "name": "SerpentineDeepwaterBaseAttackFeature",
+    "guid": "1b808416-ed11-4ef7-9760-e6d52f42aed5"
+  },
+  {
+    "name": "AbberantDemonBaseAttackFeature",
+    "guid": "3ac30c8c-2fef-4744-8a4c-9f1d03167a8b"
+  },
+  {
+    "name": "BipedDemonBaseAttackFeature",
+    "guid": "0fff6da0-8421-4401-a034-3db8c8e8c0d3"
+  },
+  {
+    "name": "QuadrupedDemonBaseAttackFeature",
+    "guid": "8e3f7c2e-bbd3-4c24-b9bd-1c92ad1d9550"
+  },
+  {
+    "name": "SerpentineDemonBaseAttackFeature",
+    "guid": "15feb2b7-ff76-42c0-805b-017a49c00f78"
+  },
+  {
+    "name": "BipedDevilBaseAttackFeature",
+    "guid": "5aeadc17-36a8-47e6-ae33-40e9aed50c1e"
+  },
+  {
+    "name": "BipedDivBaseAttackFeature",
+    "guid": "5bda979f-8031-47cb-9df1-fb3c6c679a23"
+  },
+  {
+    "name": "AbberantElementalBaseAttackFeature",
+    "guid": "c812f102-145b-449a-b203-f691d9a2f6b1"
+  },
+  {
+    "name": "BipedElementalBaseAttackFeature",
+    "guid": "a1d531d6-d952-4c83-9339-f0cf012d6434"
+  },
+  {
+    "name": "SerpentineElementalBaseAttackFeature",
+    "guid": "fc2ddf4d-21d9-43fa-b865-40c85fceaac2"
+  },
+  {
+    "name": "BipedGenieBaseAttackFeature",
+    "guid": "3f1f29ad-7432-468a-840b-baef814b1450"
+  },
+  {
+    "name": "BipedInevitableBaseAttackFeature",
+    "guid": "09ef36b1-51c7-442f-a585-4a09212e0bd9"
+  },
+  {
+    "name": "BipedKamiBaseAttackFeature",
+    "guid": "483f9059-043d-4585-93ae-0b1c513ea63d"
+  },
+  {
+    "name": "BipedKytonBaseAttackFeature",
+    "guid": "bd7274a0-90e3-4224-b629-302a07c09750"
+  },
+  {
+    "name": "SerpentineProteanBaseAttackFeature",
+    "guid": "2f8f8d89-d375-4219-844e-f52555c4363d"
+  },
+  {
+    "name": "BipedPsychopompBaseAttackFeature",
+    "guid": "354cdf09-481b-4897-9d4d-353ebae4cdff"
+  },
+  {
+    "name": "QuadrupedPsychopompBaseAttackFeature",
+    "guid": "bde131d2-0888-4666-9bfc-5e9209d4641c"
+  },
+  {
+    "name": "SerpentinePsychopompBaseAttackFeature",
+    "guid": "bdf7aa67-b67d-4961-86b0-c4f9337a66a4"
+  },
+  {
+    "name": "BipedRadiantBaseAttackFeature",
+    "guid": "a4518f4e-0b3e-4a92-a359-8523212b27f4"
+  },
+  {
+    "name": "QuadrupedRadiantBaseAttackFeature",
+    "guid": "3f3eae7c-89a9-4e63-94f4-9e345a583f47"
+  },
+  {
+    "name": "BipedShadowBaseAttackFeature",
+    "guid": "50f78882-dab0-4f53-8ee1-fc2fa93a998d"
+  },
+  {
+    "name": "SerpentineShadowBaseAttackFeature",
+    "guid": "57ce5403-7793-497a-aff3-991831bce4e3"
+  },
+  {
+    "name": "BipedStorykinBaseAttackFeature",
+    "guid": "40732506-43aa-405d-a5f9-c894e310eca0"
+  },
+  {
+    "name": "QuadrupedStorykinBaseAttackFeature",
+    "guid": "f981f83d-73a7-4fb8-b0f0-9cb64b6f15d5"
+  },
+  {
+    "name": "SerpentineStorykinBaseAttackFeature",
+    "guid": "d9306845-15f9-46ba-8f7c-0bdc313ad7c6"
+  },
+  {
+    "name": "BipedTwinnedBaseAttackFeature",
+    "guid": "0f492549-a1b6-48f5-ade4-396c40339a68"
+  },
+  {
+    "name": "BipedVoidBaseAttackFeature",
+    "guid": "c6a20e6e-8d16-47d4-a410-17a3c0fbdee4"
+  },
+  {
+    "name": "AbberantAberrantStartingEvolutionsFeature",
+    "guid": "ad64cb23-6cff-48a5-9008-c252d2abac9b"
+  },
+  {
+    "name": "QuadrupedAberrantStartingEvolutionsFeature",
+    "guid": "f6f98270-1fb8-4709-b994-c6c6f5bb9694"
+  },
+  {
+    "name": "SerpentineAberrantStartingEvolutionsFeature",
+    "guid": "194b18ce-216b-4a78-82c5-3b1a5427a580"
+  },
+  {
+    "name": "BipedAeonStartingEvolutionsFeature",
+    "guid": "220c2f7f-a346-4e58-bbf0-4fd1cb2ef0fb"
+  },
+  {
+    "name": "SerpentineAeonStartingEvolutionsFeature",
+    "guid": "3c1fa888-26da-40e2-a082-7963261fb33c"
+  },
+  {
+    "name": "BipedAgathionStartingEvolutionsFeature",
+    "guid": "6e1d6719-b082-49e2-9d73-c3c0a5df4f1b"
+  },
+  {
+    "name": "QuadrupedAgathionStartingEvolutionsFeature",
+    "guid": "8982bcfa-7125-4f2e-b8a4-086577f9e27a"
+  },
+  {
+    "name": "BipedAncestorStartingEvolutionsFeature",
+    "guid": "55060d12-bae3-4ca9-9597-0d86121e3c2f"
+  },
+  {
+    "name": "BipedAngelStartingEvolutionsFeature",
+    "guid": "a6922684-a13f-4a0b-a9d1-fae76b842896"
+  },
+  {
+    "name": "BipedArchonStartingEvolutionsFeature",
+    "guid": "8f2c6591-bdfe-42b1-b138-f2bc07535048"
+  },
+  {
+    "name": "BipedAstralStartingEvolutionsFeature",
+    "guid": "7101f365-3588-4855-99b7-727ee4658880"
+  },
+  {
+    "name": "SerpentineAstralStartingEvolutionsFeature",
+    "guid": "36630ee7-24b3-4b91-8dbc-d9840804cb5a"
+  },
+  {
+    "name": "BipedAzataStartingEvolutionsFeature",
+    "guid": "820c0613-fd44-431a-b1c3-c8954a2b4766"
+  },
+  {
+    "name": "SerpentineAzataStartingEvolutionsFeature",
+    "guid": "c50337fd-09ce-4580-b002-61b98749be4e"
+  },
+  {
+    "name": "BipedDaemonStartingEvolutionsFeature",
+    "guid": "8cd49a7f-2f37-48f0-9fd5-8365ceeafd5d"
+  },
+  {
+    "name": "AbberantDaemonStartingEvolutionsFeature",
+    "guid": "6b61d2f0-85b0-4cbe-b06c-548f2a0f1166"
+  },
+  {
+    "name": "SerpentineDaemonStartingEvolutionsFeature",
+    "guid": "6e593ed8-9edb-4bf8-8199-ce4818e474cf"
+  },
+  {
+    "name": "SerpentineDeepwaterStartingEvolutionsFeature",
+    "guid": "f5679e97-a4f6-4c54-bd3f-80d8ea3caa8c"
+  },
+  {
+    "name": "AbberantDemonStartingEvolutionsFeature",
+    "guid": "8999d877-07f8-4236-aeaf-eae818a2440c"
+  },
+  {
+    "name": "BipedDemonStartingEvolutionsFeature",
+    "guid": "cff07a9a-7e38-4a01-9e98-63798c896e75"
+  },
+  {
+    "name": "QuadrupedDemonStartingEvolutionsFeature",
+    "guid": "b04d19bc-f6a0-4294-a16d-82db523fd8e2"
+  },
+  {
+    "name": "SerpentineDemonStartingEvolutionsFeature",
+    "guid": "4b4ad0b3-e858-4ed8-84b3-295018803237"
+  },
+  {
+    "name": "BipedDevilStartingEvolutionsFeature",
+    "guid": "98217ba6-5678-4ab3-8b71-aa0ff063939e"
+  },
+  {
+    "name": "BipedDivStartingEvolutionsFeature",
+    "guid": "e3051f93-b30f-4d8e-b53d-f57652660d99"
+  },
+  {
+    "name": "AbberantElementalStartingEvolutionsFeature",
+    "guid": "83d151a9-1130-43d7-a1cb-904356bdefce"
+  },
+  {
+    "name": "BipedElementalStartingEvolutionsFeature",
+    "guid": "68a07cfc-c2fb-4c24-8b30-3e43bfa8289e"
+  },
+  {
+    "name": "SerpentineElementalStartingEvolutionsFeature",
+    "guid": "154d4ed5-b5ec-4a3f-9497-0dd61f9c121f"
+  },
+  {
+    "name": "BipedGenieStartingEvolutionsFeature",
+    "guid": "38df5e04-47d2-4093-910d-07283ec988b8"
+  },
+  {
+    "name": "BipedInevitableStartingEvolutionsFeature",
+    "guid": "eb4d6eca-a3c1-4572-bacb-c892415dcea6"
+  },
+  {
+    "name": "BipedKamiStartingEvolutionsFeature",
+    "guid": "58414f26-b677-4847-8117-455ca22d9163"
+  },
+  {
+    "name": "BipedKytonStartingEvolutionsFeature",
+    "guid": "339974c3-a298-448b-acf2-6113acf4d1a4"
+  },
+  {
+    "name": "SerpentineProteanStartingEvolutionsFeature",
+    "guid": "15522388-0d0f-4965-9cd9-80adbb410b99"
+  },
+  {
+    "name": "BipedPsychopompStartingEvolutionsFeature",
+    "guid": "9bbd3e38-ebb1-47a6-9a82-9eeda1adb628"
+  },
+  {
+    "name": "QuadrupedPsychopompStartingEvolutionsFeature",
+    "guid": "62d835ef-b61d-4694-bc45-7aecbed43884"
+  },
+  {
+    "name": "SerpentinePsychopompStartingEvolutionsFeature",
+    "guid": "b1aba534-86a0-4e0f-a7a9-87662280c2e4"
+  },
+  {
+    "name": "BipedRadiantStartingEvolutionsFeature",
+    "guid": "6cd536bb-b08f-4111-bd8f-68d1db841baf"
+  },
+  {
+    "name": "QuadrupedRadiantStartingEvolutionsFeature",
+    "guid": "75aba211-76a2-4344-9604-4da107061ae2"
+  },
+  {
+    "name": "BipedShadowStartingEvolutionsFeature",
+    "guid": "1209f5b3-5d84-42cd-ba32-0300e9a7870b"
+  },
+  {
+    "name": "SerpentineShadowStartingEvolutionsFeature",
+    "guid": "c838b789-2d39-4ef7-95c6-1f0412e7dd8f"
+  },
+  {
+    "name": "BipedStorykinStartingEvolutionsFeature",
+    "guid": "fd96994e-5915-4dc6-89af-2bef84dc6c86"
+  },
+  {
+    "name": "QuadrupedStorykinStartingEvolutionsFeature",
+    "guid": "82c106dd-a073-45ce-9271-fc257468ad2a"
+  },
+  {
+    "name": "SerpentineStorykinStartingEvolutionsFeature",
+    "guid": "314cf46e-94ac-4a88-8df8-2c4e513ad9ef"
+  },
+  {
+    "name": "BipedTwinnedStartingEvolutionsFeature",
+    "guid": "5f971740-fcb1-493c-babc-47f02b0f97e0"
+  },
+  {
+    "name": "BipedVoidStartingEvolutionsFeature",
+    "guid": "c1c2bf45-5446-41ff-a7c3-994f66e7ff67"
   }
 ]

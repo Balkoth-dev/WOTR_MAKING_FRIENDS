@@ -131,10 +131,20 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 {
                     var featureName = evolution + "Feature";
                     var baseFeatureName = evolution + "BaseFeature";
-                    FeatureConfigurator.New(baseFeatureName, GetGUID.GUIDByName(baseFeatureName))
-                        .CopyFrom(BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName(featureName)), c => true)
-                        .SetGroups(FeatureGroupExtension.EvolutionBase)
-                        .ConfigureWithLogging();
+                    var feature = FeatureConfigurator.New(baseFeatureName, GetGUID.GUIDByName(baseFeatureName))
+                        .SetGroups(FeatureGroupExtension.EvolutionBase);
+
+                    if (baseFeatureName.Contains("EvolutionLimbsArms"))
+                    {
+                        feature.CopyFrom(BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName(featureName)));
+                    }
+                    else
+                    {
+                        feature.CopyFrom(BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName(featureName)), c => true);
+                    }
+
+                    feature.ConfigureWithLogging();
+
                 }
             }
         }

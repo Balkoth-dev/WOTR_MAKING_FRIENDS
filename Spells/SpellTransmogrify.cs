@@ -58,7 +58,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 }
             }
 
-            originalBlueprintUnitFactReferences[arrayInt] = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonBipedBaseFormFeature"));
+            originalBlueprintUnitFactReferences[arrayInt] = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionLimbsArmsBaseFeature"));
             newBlueprintUnitFactReferences[arrayInt] = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature"));
 
             AbilityConfigurator spell = AbilityConfigurator.New(IClass.Spell, IClass.Guid)

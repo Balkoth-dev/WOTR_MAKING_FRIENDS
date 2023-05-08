@@ -28,7 +28,8 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                          BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddEvolutionPointsFeature")),
                                          BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksFeature")),
                                          BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EvolutionBaseAbilitiesFeature")),
-                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonSubtypeSelectionFeature"))
+                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonSubtypeSelectionFeature")),
+                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStartingEvolutionsFeature"))
                                          )
                                 .AddEntry(2, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
                                 .AddEntry(3, FeatureRefs.Evasion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature)
