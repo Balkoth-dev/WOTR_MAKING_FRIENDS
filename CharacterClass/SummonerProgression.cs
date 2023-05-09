@@ -1,5 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
@@ -18,7 +20,12 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
             SummonerSecondSpellbook.Initialize();
 
             LevelEntryBuilder entries = LevelEntryBuilder.New()
-                    .AddEntry(1, GetGUID.GUIDByName("SummonerProficiencies"), GetGUID.GUIDByName("SummonerSecondSpellbookFeat"), GetGUID.GUIDByName("SummonerLifeLinkFeature"), GetGUID.GUIDByName("EidolonBaseFeatureSelection"))
+                    .AddEntry(1, GetGUID.GUIDByName("SummonerProficiencies"),
+                                 GetGUID.GUIDByName("SummonerSecondSpellbookFeat"),
+                                 GetGUID.GUIDByName("SummonerLifeLinkFeature"),
+                                 GetGUID.GUIDByName("EidolonBaseFeatureSelection"),
+                                 GetGUID.GUIDByName("EidolonProgression"),
+                                 GetGUID.GUIDByName("EidolonRankFeature"))
                     .AddEntry(2, GetGUID.GUIDByName("SummonerBondedSensesFeature"))
                     .AddEntry(4, GetGUID.GUIDByName("SummonerShieldAllyFeature"))
                     .AddEntry(6, GetGUID.GUIDByName("SummonerMakersCallFeature"))

@@ -3,13 +3,14 @@ using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.EntitySystem.Entities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components.Base;
+using Kingmaker.Utility;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
-    [TypeId("e566e0a0546b4780a30ca83383468394")]
+    [TypeId("79f47bdc467d47e8b33b2b5e8d000541")]
     [AllowedOn(typeof(BlueprintAbility), false)]
     [AllowMultipleComponents]
-    public class AbilityCasterHasFactRank : BlueprintComponent, IAbilityCasterRestriction
+    public class AbilityTargetHasFactRank : BlueprintComponent, IAbilityTargetRestriction
     {
         public BlueprintUnitFactReference m_UnitFact;
 
@@ -25,27 +26,28 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 return false;
             }
-            int nextRankLevel = (1 + currentRank * numLevelsBetweenRanks) + startLevel;
+            int nextRankLevel = (1 + currentRank * numLevelsBetweenRanks)+ startLevel;
 
             return currentLevel >= nextRankLevel;
         }
-        public bool IsCasterRestrictionPassed(UnitEntityData caster)
+        public bool IsTargetRestrictionPassed(UnitEntityData caster, TargetWrapper target)
         {
             if (m_UnitFact == null)
             {
                 return true;
             }
-            if (!caster.Progression.Features.HasFact(m_UnitFact))
+            if (!target.Unit.Progression.Features.HasFact(m_UnitFact))
             {
-                if (caster.Progression.CharacterLevel >= startLevel)
+                if (target.Unit.Progression.CharacterLevel >= startLevel)
+                {
                     return true;
+                }
                 else return false;
             }
 
-            return CanTakeRank(caster.Progression.CharacterLevel, caster.Progression.Features.GetFact(m_UnitFact).GetRank());
+            return CanTakeRank(target.Unit.Progression.CharacterLevel, target.Unit.Progression.Features.GetFact(m_UnitFact).GetRank());
         }
-
-        public string GetAbilityCasterRestrictionUIText()
+        public string GetAbilityTargetRestrictionUIText(UnitEntityData caster, TargetWrapper target)
         {
             return string.Empty;
         }

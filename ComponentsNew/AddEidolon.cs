@@ -59,8 +59,8 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         private static readonly int[] RankToLevelEidolon = new int[21]
 {
       0,
+      1,
       2,
-      3,
       3,
       4,
       5,

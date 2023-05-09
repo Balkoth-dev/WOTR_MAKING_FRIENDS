@@ -131,13 +131,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
                 .AddAbilityEffectRunAction(action.Build())
-                .AddComponent<AbilityCasterHasFactRank>(c =>
-                {
-                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
-                    c.maxRank = 2;
-                    c.numLevelsBetweenRanks = 5;
-                    c.startLevel = 8;
-                })
                 .AddComponent<AbilityCasterHasResource>(c =>
                 {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource"));
@@ -146,6 +139,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                     c.resourceAmount = 4;
                     c.costMultiplierByRank = 2;
                     c.useCostMultiplier = true;
+                })
+                .AddComponent<AbilityCasterHasFactRank>(c =>
+                {
+                    c.m_UnitFact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName(IClass.Feature));
+                    c.maxRank = 2;
+                    c.numLevelsBetweenRanks = 5;
+                    c.startLevel = 8;
                 })
                 .ConfigureWithLogging(true);
         }

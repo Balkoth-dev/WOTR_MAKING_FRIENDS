@@ -4,7 +4,8 @@
     {
         public static void CreateAllBlueprintPatches()
         {
-            BlueprintPatchAnimalCompanionClass.PatchAnimalCompanionClass();
+            BlueprintPatchAnimalCompanionClass.Patch();
+            BlueprintPatchMountTargetAbility.Patch();
         }
     }
 }

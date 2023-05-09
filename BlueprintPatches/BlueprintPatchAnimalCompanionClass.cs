@@ -7,7 +7,7 @@ namespace WOTR_MAKING_FRIENDS.BlueprintPatches
 {
     internal class BlueprintPatchAnimalCompanionClass
     {
-        public static void PatchAnimalCompanionClass()
+        public static void Patch()
         {
             CharacterClassConfigurator.For(CharacterClassRefs.AnimalCompanionClass)
                 .AddPrerequisiteNoFeature(GetGUID.GUIDByName("EidolonSubtypeFeature"))

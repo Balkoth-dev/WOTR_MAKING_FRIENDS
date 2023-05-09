@@ -22,10 +22,10 @@ namespace WOTR_MAKING_FRIENDS.Features
         public static void CreateEidolonRankFeature()
         {
             FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
-                .CopyFrom(FeatureRefs.AnimalCompanionRank.Cast<BlueprintFeatureReference>().Reference)
                 .SetDisplayName(IClass.Name)
                 .SetDescription(IClass.Description)
-                .ClearIsPrerequisiteFor()
+                .SetRanks(20)
+                .SetIsClassFeature(true)
                 .ConfigureWithLogging();
 
         }
