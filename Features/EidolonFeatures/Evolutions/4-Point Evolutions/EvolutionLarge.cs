@@ -113,7 +113,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
         {
 
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
-                .RemoveComponents(c => c is AbilityEffectRunAction)
+                .RemoveComponents(c => c is (AbilityEffectRunAction or AbilityEidolonHasResource))
                 .ConfigureWithLogging(true);
 
             var action = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature)))
@@ -132,6 +132,15 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                 .SetIcon(IClass.icon)
                 .AddAbilityEffectRunAction(action.Build())
                 .AddComponent<AbilityCasterHasResource>(c =>
+                {
+                    c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource"));
+                    c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(IClass.Feature);
+                    c.featureRank = 2;
+                    c.resourceAmount = 4;
+                    c.costMultiplierByRank = 2;
+                    c.useCostMultiplier = true;
+                })
+                .AddComponent<AbilityEidolonHasResource>(c =>
                 {
                     c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource"));
                     c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(IClass.Feature);

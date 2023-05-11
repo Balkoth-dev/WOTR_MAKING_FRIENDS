@@ -38,6 +38,14 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .SetIcon(AbilityRefs.TarPool.Reference.Get().m_Icon)
                 .SetRanks(100)
                 .ConfigureWithLogging();
+
+            FeatureConfigurator.New(IClassAddFeature.Feature+"4", GetGUID.GUIDByName(IClassAddFeature.Feature+"4"))
+                .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), 4)
+                .SetDisplayName(IClassAddFeature.Name)
+                .SetDescription(IClassAddFeature.Description)
+                .SetIcon(AbilityRefs.TarPool.Reference.Get().m_Icon)
+                .SetRanks(100)
+                .ConfigureWithLogging();
         }
 
     }

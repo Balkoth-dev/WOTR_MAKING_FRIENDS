@@ -6,7 +6,9 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
+using System;
 using System.Collections.Generic;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -59,8 +61,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
                     var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(featureName)))
                                                      .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + amount + "Feature")))
+                                                     .Add<AddContextFeatureToPet>(c => { c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + amount + "Feature")); 
+                                                                                         c.m_ReplaceFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + Math.Min(1, amount/2) + "Feature")); 
+                                                                                         c.m_HasFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("SummonerAspectGreaterFeature")); })
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")), 99)
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
+                                                     .Add<ContextRestoreResourceOnPets>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")); c.m_IsFullRestoreAllResources = true; })
+                                                     .Add<ContextRestoreResourceOnPets>(c => { c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")); c.m_IsFullRestoreAllResources = true; })
                                                      .Build();
 
                     var abilityName = evolution + "Ability";
@@ -71,11 +78,16 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                         .SetType(AbilityType.Special)
                         .SetRange(AbilityRange.Personal)
                         .SetActionType(CommandType.Free)
-                        .AddAbilityTargetHasFact(new() { GetGUID.GUIDByName("EidolonSubtypeFeature") })
+                        .AddAbilityTargetHasFact(new() { GetGUID.GUIDByName("EidolonSubtypeFeature"), GetGUID.GUIDByName("SummonerAspectFeature"), GetGUID.GUIDByName("SummonerAspectGreaterFeature") })
                         .SetCanTargetFriends(false)
                         .SetCanTargetSelf(true)
                         .AddAbilityEffectRunAction(actions: abilityAction)
                         .AddAbilityResourceLogic(amount, isSpendResource: true, requiredResource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")))
+                        .AddComponent<AbilityEidolonHasResource>(c =>
+                        {
+                            c.m_Resource = BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource"));
+                            c.resourceAmount = amount;
+                        })
                         .ConfigureWithLogging();
                 }
             }

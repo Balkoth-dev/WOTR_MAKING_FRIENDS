@@ -24,6 +24,8 @@ namespace WOTR_MAKING_FRIENDS.Features
             FeatureCreateAllEvolutions.Create();
             FeatureAddMaxAttacks.Create();
             FeatureStartingEvolutions.Create();
+            FeatureAspect.Create();
+            FeatureAspectGreater.Create();
         }
     }
 }

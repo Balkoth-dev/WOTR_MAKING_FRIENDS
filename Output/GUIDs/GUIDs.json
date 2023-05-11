@@ -3266,5 +3266,45 @@
   {
     "name": "BipedVoidStartingEvolutionsFeature",
     "guid": "c1c2bf45-5446-41ff-a7c3-994f66e7ff67"
+  },
+  {
+    "name": "ExtraEvolutionPoolFeature4",
+    "guid": "618717c2-4cc5-4581-9410-af5a075441ad"
+  },
+  {
+    "name": "EidolonWerewolf",
+    "guid": "94fa805d-3a69-4cbd-a865-e9db100cd7e5"
+  },
+  {
+    "name": "EidolonWerewolfCompanionFeature",
+    "guid": "48576518-b034-4863-af18-5ae48abd5bee"
+  },
+  {
+    "name": "EvolutionCost0Feature",
+    "guid": "29f4ae05-2764-4cb3-acd9-27fede0d33a7"
+  },
+  {
+    "name": "SummonerAspectGreaterFeature",
+    "guid": "1169e0ff-4ff6-4940-9f9e-2efa7391bb6a"
+  },
+  {
+    "name": "SummonerAspectFeature",
+    "guid": "09290ef9-1bef-4da6-b7ba-c97151fd7515"
+  },
+  {
+    "name": "Evolution1AbilityBase",
+    "guid": "8ef8a866-6765-479e-8a1a-dd2734dfa216"
+  },
+  {
+    "name": "Evolution2AbilityBase",
+    "guid": "0583da9d-9999-4813-a185-41846d163ca3"
+  },
+  {
+    "name": "Evolution3AbilityBase",
+    "guid": "c8cc31cf-e404-49da-92ee-bb8ae4ab79de"
+  },
+  {
+    "name": "Evolution4AbilityBase",
+    "guid": "a3f6cb97-6aad-454c-8954-67e9437acb02"
   }
 ]

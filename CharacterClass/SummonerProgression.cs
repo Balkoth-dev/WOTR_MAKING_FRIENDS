@@ -25,13 +25,17 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                                  GetGUID.GUIDByName("SummonerLifeLinkFeature"),
                                  GetGUID.GUIDByName("EidolonBaseFeatureSelection"),
                                  GetGUID.GUIDByName("EidolonProgression"),
-                                 GetGUID.GUIDByName("EidolonRankFeature"))
+                                 GetGUID.GUIDByName("EidolonRankFeature"),
+                                 GetGUID.GUIDByName("EvolutionLimbsArmsFeature"),
+                                 GetGUID.GUIDByName("EvolutionLimbsArmsBaseFeature"))
                     .AddEntry(2, GetGUID.GUIDByName("SummonerBondedSensesFeature"))
                     .AddEntry(4, GetGUID.GUIDByName("SummonerShieldAllyFeature"))
                     .AddEntry(6, GetGUID.GUIDByName("SummonerMakersCallFeature"))
                     .AddEntry(8, GetGUID.GUIDByName("SummonerTranspositionFeature"))
+                    .AddEntry(10, GetGUID.GUIDByName("SummonerAspectFeature"))
                     .AddEntry(12, GetGUID.GUIDByName("SummonerShieldAllyGreaterFeature"))
-                    .AddEntry(14, GetGUID.GUIDByName("SummonerLifeBondFeature"));
+                    .AddEntry(14, GetGUID.GUIDByName("SummonerLifeBondFeature"))
+                    .AddEntry(18, GetGUID.GUIDByName("SummonerAspectGreaterFeature"));
 
             return ProgressionConfigurator.New(Strings.SummonerProgression, GetGUID.GUIDByName("SummonerProgression"))
                 .SetAllowNonContextActions(false)
