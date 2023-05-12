@@ -3306,5 +3306,97 @@
   {
     "name": "Evolution4AbilityBase",
     "guid": "a3f6cb97-6aad-454c-8954-67e9437acb02"
+  },
+  {
+    "name": "AddMaxAttacksFeatureAspect",
+    "guid": "7230685d-6795-48e2-b2a9-69ef81e20302"
+  },
+  {
+    "name": "70d7380f-4b96-4f72-b703-39492198e08f",
+    "guid": "2358df27-7de4-4e2b-b745-c832c21c4a79"
+  },
+  {
+    "name": "78b6c0ca-bb61-46f8-a9b7-f2531880c440",
+    "guid": "00bc80f8-d3aa-4862-bff7-ca50ff3ddb77"
+  },
+  {
+    "name": "282c1f0d-be27-4e90-9676-80f0074c8e53",
+    "guid": "a6057825-e221-496f-aad8-f6e56a6fe22a"
+  },
+  {
+    "name": "a07a599f-4c06-4198-b8d9-dd457f84086d",
+    "guid": "723514d7-f34d-42f8-ad72-1fcbd3472197"
+  },
+  {
+    "name": "637287bc-8e12-435f-8638-f5824b962864",
+    "guid": "57b2be17-b3ae-4e65-9b23-6dbac4389feb"
+  },
+  {
+    "name": "70aa5673-7904-480f-bb6d-5a479ad7c236",
+    "guid": "97a54a89-ad30-417e-8e0c-cfae55d87efd"
+  },
+  {
+    "name": "e02682c1-6a9d-4b7b-b319-17ee8fe86387",
+    "guid": "35680249-b5ec-4e58-903c-551c38b31db2"
+  },
+  {
+    "name": "b652d2cd-58e1-49cb-a61e-3233a38275bc",
+    "guid": "4d79b319-435a-499e-88a2-ad4be9a23df9"
+  },
+  {
+    "name": "c2684ee5-d9a1-4ab8-b54c-2b1dccda9a83",
+    "guid": "55ee2925-73c2-48c8-b6f1-2c0675be6efc"
+  },
+  {
+    "name": "f1a979db-921c-4f73-91e1-394a81d007bf",
+    "guid": "ee0862bb-8c5a-474c-8b5e-38a2ba5fc5e4"
+  },
+  {
+    "name": "82ae9505-1f93-444f-881a-c92e6c3b7050",
+    "guid": "950aaa99-bcda-4793-900b-377f61276a4c"
+  },
+  {
+    "name": "2ba61457-d9e5-4349-9eff-143dd6e0af4d",
+    "guid": "8d4b0271-2927-4a0a-8110-9716c1370fdb"
+  },
+  {
+    "name": "cfba59c2-71f1-49f6-b3d5-197240e38431",
+    "guid": "6bae7fd2-7f14-418f-ad6f-b0f0115b34b6"
+  },
+  {
+    "name": "101b47a1-6eeb-4fe6-b6a3-d6ae672ec731",
+    "guid": "f5e3c915-0dc5-464a-a2b7-b63e4739d6ee"
+  },
+  {
+    "name": "bea22772-d80f-4add-8c2e-f3edd064842d",
+    "guid": "bbfd712f-8eaf-416f-984e-97b334f15ddc"
+  },
+  {
+    "name": "bb5e0e3e-a59c-433e-89a4-b69218e8e21b",
+    "guid": "e122a894-4d0f-40c1-a009-2a5b784e7827"
+  },
+  {
+    "name": "38da2b4e-f369-4d5c-aec0-0fa29c5482d7",
+    "guid": "d8e1fdd8-c353-491a-b540-79520252d5a7"
+  },
+  {
+    "name": "21425a23-95e6-4471-b89f-3497d2cad98f",
+    "guid": "e199f965-713b-4113-9fd2-57f1f563ce25"
+  },
+  {
+    "name": "09b77eb4-0364-476d-b231-a95077cc5512",
+    "guid": "c8a25d89-d04b-49d2-9f68-6c80f481de70"
+  },
+  {
+    "name": "5560513f-de9d-4de1-916c-709e03a66e8f",
+    "guid": "13259cdb-902d-42bf-ab0a-a4d07abdeae0"
+  },
+  {
+    "name": "d3b02dc9-f207-42d7-8417-1a9bc3135192",
+    "guid": "9265a8e7-9e1c-4c6b-9716-1708f8b9fade"
+  },
+  {
+    "name": "473022d4-4cac-47b9-b7b3-b7f3de3cae76",
+    "guid": "3b944ee8-b08d-41a5-a064-d2462614f122"
   }
 ]

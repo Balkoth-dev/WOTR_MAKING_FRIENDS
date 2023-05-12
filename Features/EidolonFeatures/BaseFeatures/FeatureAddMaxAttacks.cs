@@ -32,6 +32,13 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), 1)
                 .SetRanks(40)
                 .ConfigureWithLogging();
+
+            FeatureConfigurator.New(IClass.Feature+"Aspect", GetGUID.GUIDByName(IClass.Feature + "Aspect"))
+                .SetDisplayName(IClass.Name)
+                .SetDescription(IClass.Description)
+                .SetIcon(AbilityRefs.MagicFangGreater.Reference.Get().m_Icon)
+                .AddAbilityResources(99, GetGUID.GUIDByName("EidolonMaxAttacksResource"), true, true)
+                .ConfigureWithLogging();
         }
 
     }

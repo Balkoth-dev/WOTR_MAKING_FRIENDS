@@ -8,10 +8,12 @@ using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.FactLogic;
+using System;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using static Kingmaker.Blueprints.BlueprintAbilityResource;
 
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolutions
 {
@@ -41,7 +43,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
 
             var feature = FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
                 .SetIcon(IClass.icon)
-                .RemoveComponents(c => c is IncreaseResourceAmount)
                 .AddContextRankConfig(ContextRankConfigs.FeatureRank(GetGUID.GUIDByName(IClass.Feature)))
                 .AddDamageResistancePhysical(value: ContextValues.Rank())
                 .SetRanks(100)
@@ -57,6 +58,11 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
             var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.ResourceReductionFeature)))
                                                     .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost3Feature")))
                                                     .Add<ContextActionAddFeatureRanks>(c => { c.setRank = 5; c.m_PermanentFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(IClass.Feature)); })
+                                                    .Add<AddContextFeatureToPet>(c => {
+                                                         c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost3Feature"));
+                                                         c.m_ReplaceFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost2Feature"));
+                                                         c.m_HasFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("SummonerAspectGreaterFeature"));
+                                                     })
                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")), 99)
                                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
                                                     .Build();

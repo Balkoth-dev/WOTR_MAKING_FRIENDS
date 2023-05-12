@@ -70,9 +70,10 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .SetRange(AbilityRange.Touch)
                 .AddSpellComponent(Kingmaker.Blueprints.Classes.Spells.SpellSchool.Transmutation)
                 .AddPureRecommendation(priority:Kingmaker.Designers.Mechanics.Recommendations.RecommendationPriority.Good)
+                
                 .AddAbilityEffectRunAction(
-                ActionsBuilder.New().Add<RemoveFactWithGroup>(c => { c.featureGroup = FeatureGroupExtension.EvolutionTransmogrifiable;})
-                                    .Add<AddFactsOnArray>(c => { c.originalBlueprints = originalBlueprintUnitFactReferences; c.newBlueprints = newBlueprintUnitFactReferences; })
+                ActionsBuilder.New().Add<RemoveFactWithGroup>(c => { c.featureGroup = FeatureGroupExtension.EvolutionTransmogrifiable; c.affectCaster = true; })
+                                    .Add<AddFactsOnArray>(c => { c.originalBlueprints = originalBlueprintUnitFactReferences; c.newBlueprints = newBlueprintUnitFactReferences; c.affectCaster = true; })
                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")), 99)
                                     .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
                 .Build()

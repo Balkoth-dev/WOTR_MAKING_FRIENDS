@@ -6,6 +6,7 @@ using Kingmaker.Blueprints.Classes;
 using Kingmaker.Localization;
 using System;
 using System.Collections.Generic;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions;
 using WOTR_MAKING_FRIENDS.Utilities;

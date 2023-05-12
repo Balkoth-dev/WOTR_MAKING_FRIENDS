@@ -27,6 +27,8 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public FeatureGroup featureGroup;
 
+        public bool affectCaster = false;
+
         public override string GetCaption()
         {
             return $"Remove Fact ({featureGroup} from {Unit})";
@@ -34,14 +36,12 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public override void RunAction()
         {
-            Main.Log("Start");
             var features = new List<Feature>();
 
             foreach(var feature in base.Target.Unit.Progression.Features)
             {
                 if (feature.Blueprint.HasGroup(featureGroup))
                 {
-                    Main.Log($"Feature Add {feature.Blueprint.name}");
                     features.Add(feature);
                 }
             }
@@ -53,8 +53,31 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                 {
                     while (Target.Unit.Progression.Features.HasFact(fact))
                     {
-                        Main.Log("Removing Fact");
                         base.Target.Unit.Progression.Features.RemoveFact(fact);
+                    }
+                }
+            }
+
+            if(affectCaster)
+            {
+                var casterFeatures = new List<Feature>();
+                foreach (var feature in base.AbilityContext.Caster.Progression.Features)
+                {
+                    if (feature.Blueprint.HasGroup(featureGroup))
+                    {
+                        casterFeatures.Add(feature);
+                    }
+                }
+
+                foreach (var fact in features)
+                {
+                    Main.Log($"Fact: {fact.Blueprint.name}");
+                    if (fact.Blueprint.HasGroup(featureGroup))
+                    {
+                        while (base.AbilityContext.Caster.Progression.Features.HasFact(fact))
+                        {
+                            base.AbilityContext.Caster.Progression.Features.RemoveFact(fact);
+                        }
                     }
                 }
             }

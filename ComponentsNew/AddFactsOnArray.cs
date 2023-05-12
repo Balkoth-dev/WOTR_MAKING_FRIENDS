@@ -18,6 +18,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
     {
         public BlueprintFeatureReference[] originalBlueprints;
         public BlueprintFeatureReference[] newBlueprints;
+        public bool affectCaster = false;
 
         public override string GetCaption()
         {
@@ -34,11 +35,21 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             FeatureCollection features = base.Target.Unit.Descriptor.Progression.Features;
             for (var i = 0;  i < originalBlueprints.Length; i++)
             {
-                Main.Log(originalBlueprints[i].Get().name + " : " + base.Target.Unit.Progression.Features.HasFact(originalBlueprints[i]));
                 if (base.Target.Unit.Progression.Features.HasFact(originalBlueprints[i]))
                 {
-                    Main.Log("Has Fact");
                     features.AddFeature(newBlueprints[i]);
+                }
+            }
+
+            if(affectCaster)
+            {
+                FeatureCollection casterFeatures = base.AbilityContext.Caster.Descriptor.Progression.Features;
+                for (var i = 0; i < originalBlueprints.Length; i++)
+                {
+                    if (base.AbilityContext.Caster.Progression.Features.HasFact(originalBlueprints[i]))
+                    {
+                        casterFeatures.AddFeature(newBlueprints[i]);
+                    }
                 }
             }
         }

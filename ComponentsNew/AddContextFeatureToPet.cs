@@ -36,12 +36,12 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         [SerializeField]
         public BlueprintFeatureReference m_ReplaceFeature;
 
-        public BlueprintFeature ReplaceFeature => m_Feature?.Get();
+        public BlueprintFeature ReplaceFeature => m_ReplaceFeature?.Get();
 
         [SerializeField]
         public BlueprintFeatureReference m_HasFeature;
 
-        public BlueprintFeature HasFeature => m_Feature?.Get();
+        public BlueprintFeature HasFeature => m_HasFeature?.Get();
 
         public override void RunAction()
         {
@@ -60,10 +60,12 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                     FeatureCollection petFeatures = pet.Entity.Descriptor.Progression.Features;
                     if (HasFeature != null && targetFeatures.HasFact(HasFeature))
                     {
+                        Main.Log(ReplaceFeature.m_DisplayName);
                         petFeatures.AddFeature(ReplaceFeature);
                     }
                     else
                     {
+                        Main.Log(HasFeature.m_DisplayName);
                         petFeatures.AddFeature(Feature);
                     }
                 }

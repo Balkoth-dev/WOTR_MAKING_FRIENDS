@@ -30,7 +30,8 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionOneAbilityBase")), 
                                   BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionTwoAbilityBase")),
                                   BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("AddEvolutionPointsFeature")),
-                                  BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("ExtraEvolutionPoolFeature"))})
+                                  BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("ExtraEvolutionPoolFeature")),
+                                  BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("AddMaxAttacksFeatureAspect"))})
                 .ConfigureWithLogging();
 
         }

@@ -62,7 +62,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                     var abilityAction = ActionsBuilder.New().AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(featureName)))
                                                      .AddFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + amount + "Feature")))
                                                      .Add<AddContextFeatureToPet>(c => { c.m_Feature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + amount + "Feature")); 
-                                                                                         c.m_ReplaceFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + Math.Min(1, amount/2) + "Feature")); 
+                                                                                         c.m_ReplaceFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EvolutionCost" + Math.Max(1, Math.Ceiling((double)amount/2)) + "Feature")); 
                                                                                          c.m_HasFeature = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("SummonerAspectGreaterFeature")); })
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerEvolutionPointsResource")), 99)
                                                      .RestoreResource(BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("EidolonMaxAttacksResource")), 99)
@@ -100,7 +100,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 var abilityBase = AbilityConfigurator.New(name, GetGUID.GUIDByName(name))
                     .SetDisplayName(Helpers.ObtainString(name + ".Name"))
                     .SetDescription(Helpers.ObtainString(name + ".Description"))
-                    .SetIcon(AbilityRefs.ElementalBodyIBase.Reference.Get().m_Icon)
+                    .SetIcon(AssetLoader.LoadInternal("Abilities", $"Evolutions{level.Key}.png"))
                     .SetType(AbilityType.Special)
                     .SetRange(AbilityRange.Touch)
                     .SetActionType(CommandType.Free)

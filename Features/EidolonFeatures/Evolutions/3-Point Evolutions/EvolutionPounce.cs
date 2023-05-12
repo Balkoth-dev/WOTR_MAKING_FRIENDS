@@ -38,7 +38,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._3_Point_Evolu
         {
             AbilityConfigurator.For(GetGUID.GUIDByName(IClass.Ability))
                 .SetIcon(IClass.icon)
-                .AddComponent<AbilityCasterHasFacts>(c =>
+                .AddComponent<AbilityOwnerOrPetHasFacts>(c =>
                 {
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
