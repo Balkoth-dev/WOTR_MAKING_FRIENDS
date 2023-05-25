@@ -17,6 +17,7 @@ using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
+using Kingmaker.Blueprints.Classes.Spells;
 
 namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
@@ -68,7 +69,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .SetCanTargetFriends(true)
                 .SetCanTargetSelf(true)
                 .SetRange(AbilityRange.Touch)
-                .AddSpellComponent(Kingmaker.Blueprints.Classes.Spells.SpellSchool.Transmutation)
+                .AddSpellComponent(SpellSchool.Transmutation)
                 .AddPureRecommendation(priority:Kingmaker.Designers.Mechanics.Recommendations.RecommendationPriority.Good)
                 
                 .AddAbilityEffectRunAction(

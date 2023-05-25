@@ -5,6 +5,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics;
@@ -47,6 +48,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .SetDisplayName(IClass.OverstimulateSpellName)
                 .SetDescription(IClass.OverstimulateSpellDescription)
+                .AddSpellComponent(SpellSchool.Transmutation)
                 .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
                 .ApplyBuff(overstimulateBuff, ContextDuration.Variable(ContextValues.Rank(), DurationRate.Rounds, true))

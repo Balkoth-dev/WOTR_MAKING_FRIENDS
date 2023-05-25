@@ -274,7 +274,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 .SetSpellList(GetGUID.GUIDByName("SummonerSpellbookSpellList"))
                 .SetCastingAttribute(Kingmaker.EntitySystem.Stats.StatType.Charisma)
                 .SetIsMythic(false)
-                .SetSpontaneous(false)
+                .SetSpontaneous(true)
                 .SetIsArcane(true)
                 .SetIsArcanist(false)
                 .SetCanCopyScrolls(false)

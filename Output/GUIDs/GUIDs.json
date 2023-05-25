@@ -3398,5 +3398,13 @@
   {
     "name": "473022d4-4cac-47b9-b7b3-b7f3de3cae76",
     "guid": "3b944ee8-b08d-41a5-a064-d2462614f122"
+  },
+  {
+    "name": "EidolonFairyDragon",
+    "guid": "b056bd8c-4f2c-48fb-ad4d-af3abe1251a4"
+  },
+  {
+    "name": "EidolonFairyDragonCompanionFeature",
+    "guid": "f70f1e6e-ffd6-44b1-83a8-346d3054305a"
   }
 ]

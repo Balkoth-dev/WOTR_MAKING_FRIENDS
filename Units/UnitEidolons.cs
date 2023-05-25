@@ -685,6 +685,31 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Abberant
                 },
             #endregion
+            #region EidolonFairyDragon
+            new NewUnitClass()
+                {
+                    Name = "EidolonFairyDragon",
+                    m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
+                    copiedUnit = UnitRefs.FaerieDragon_01_Familiar.Cast<BlueprintUnitReference>().Reference,
+                    isEidolon = true,
+                    eidolonBaseForm = EnumsEidolonBaseForm.Serpentine
+                },
+            #endregion
+            #region EidolonBulette
+            new NewUnitClass()
+                {
+                    Name = "EidolonBulette",
+                    m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
+                    copiedUnit = UnitRefs.CR12_BuletteAncient.Cast<BlueprintUnitReference>().Reference,
+                    isEidolon = true,
+                    eidolonBaseForm = EnumsEidolonBaseForm.Quadruped,
+                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
+                                                  {
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Tiny"+"Feature")),
+                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Tiny"+"OriginalFeature"))
+                                                  }
+                },
+            #endregion
         };
     }
 }

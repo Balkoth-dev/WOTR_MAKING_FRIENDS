@@ -43,6 +43,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             AbilityConfigurator summonSpell =
             AbilityConfigurator.New(summonAbility.name, summonAbility.guid)
                 .SetIsFullRoundAction(summonAbility.isFullRound)
+                .AddSpellComponent(SpellSchool.Conjuration)
                 .SetActionType(summonAbility.actionType)
                 .SetIsFullRoundAction(summonAbility.isFullRound)
                 .SetIcon(summonAbility.m_icon)
@@ -199,6 +200,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .SetLocalizedDuration(summonAbilityBase.localizationDuration)
                 .SetActionType(summonAbilityBase.actionType)
                 .SetIsFullRoundAction(summonAbilityBase.isFullRound)
+                .AddSpellComponent(SpellSchool.Conjuration)
                 .SetHasVariants(true);
 
             if (summonAbilityBase.spellListComponents != null)

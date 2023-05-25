@@ -8,6 +8,7 @@ using BlueprintCore.Utils;
 using BlueprintCore.Utils.Assets;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.ElementsSystem;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
@@ -86,6 +87,7 @@ namespace WOTR_MAKING_FRIENDS.Spells
                 .CopyFrom(AbilityRefs.SickeningEntanglement, c => c is not (AbilityEffectRunAction or AbilityAoERadius))
                 .SetDisplayName(IClass.BlackTentaclesSpellName)
                 .SetDescription(IClass.BlackTentaclesSpellDescription)
+                .AddSpellComponent(SpellSchool.Conjuration)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "BlackTentacles.png"))
                 .AddAbilityEffectRunAction(actions: ActionsBuilder.New()
                                                     .SpawnAreaEffect(areaEffect: areaEffect,

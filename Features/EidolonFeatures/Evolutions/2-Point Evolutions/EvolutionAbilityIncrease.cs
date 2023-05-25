@@ -59,7 +59,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                         c.maxRank = 4;
                         c.numLevelsBetweenRanks = 6;
                     })
-                    .AddComponent<AbilityTargetIsEidolon>()
+                    .AddAbilityCasterHasFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonSubtypeFeature")) })
                     .ConfigureWithLogging(true);
             }
         }

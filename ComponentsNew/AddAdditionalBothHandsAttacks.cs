@@ -15,14 +15,14 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
         public int rankStart = 1;
         public void OnEventAboutToTrigger(RuleCalculateAttacksCount evt)
         {
-            if ((evt.Initiator.Body.PrimaryHand.HasWeapon || evt.Initiator.Body.PrimaryHand.Weapon.Blueprint.IsUnarmed) && !evt.Initiator.Body.PrimaryHand.Weapon.Blueprint.IsNatural)
+            if (evt.Initiator.Body.PrimaryHand.HasWeapon && (!evt.Initiator.Body.PrimaryHand.Weapon.Blueprint.IsNatural || evt.Initiator.Body.PrimaryHand.Weapon.Blueprint.IsUnarmed))
             {
                 for (var i = rankStart; i <= base.Fact.GetRank(); i++)
                 {
                     evt.Result.PrimaryHand.PenalizedAttacks++;
                 }
             }
-            if ((evt.Initiator.Body.SecondaryHand.HasWeapon || evt.Initiator.Body.SecondaryHand.Weapon.Blueprint.IsUnarmed) && !evt.Initiator.Body.SecondaryHand.Weapon.Blueprint.IsNatural)
+            if (evt.Initiator.Body.SecondaryHand.HasWeapon && (!evt.Initiator.Body.SecondaryHand.Weapon.Blueprint.IsNatural || evt.Initiator.Body.PrimaryHand.Weapon.Blueprint.IsUnarmed))
             {
                 for (var i = rankStart; i <= base.Fact.GetRank(); i++)
                 {

@@ -4,6 +4,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Localization;
 using System.Collections.Generic;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -54,7 +55,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .CopyFrom(AbilityRefs.CureLightWounds)
                 .SetDisplayName(IClass.InfernalHealingNameSpellName)
                 .SetDescription(IClass.InfernalHealingNameSpellDescription)
-                .AddActionsOnBuffApply(
+                .AddSpellComponent(SpellSchool.Conjuration)
+                .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
                 .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing1.Cast<BlueprintBuffReference>().Reference, 60)
                 .Build()
@@ -75,7 +77,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .CopyFrom(AbilityRefs.CureLightWounds)
                 .SetDisplayName(IClass.GreaterInfernalHealingNameSpellName)
                 .SetDescription(IClass.GreaterInfernalHealingNameSpellDescription)
-                .AddActionsOnBuffApply(
+                .AddSpellComponent(SpellSchool.Conjuration)
+                .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
                 .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing4.Cast<BlueprintBuffReference>().Reference, 60)
                 .Build()
