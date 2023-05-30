@@ -20,34 +20,36 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
             internal static LocalizedString Description = Helpers.ObtainString("EidolonBaseProgression.Description");
             internal static string ExtraEvolutionPoolFeature = GetGUID.GUIDByName("ExtraEvolutionPoolFeature");
             internal static string AddEvolutionPoolResource = GetGUID.GUIDByName("AddEvolutionPointsFeature");
+            internal static string EvolutionStatBonus = GetGUID.GUIDByName("EidolonStatBonus");
+            internal static string AddMaxAttacksStepFeature = GetGUID.GUIDByName("AddMaxAttacksStepFeature");
         }
         public static void CreateEidolonBaseProgression()
         {
             LevelEntryBuilder entries = LevelEntryBuilder.New()
                                 .AddEntry(1,
-                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddEvolutionPointsFeature")),
-                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksFeature")),
-                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EvolutionBaseAbilitiesFeature")),
-                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonSubtypeSelectionFeature")),
-                                         BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStartingEvolutionsFeature"))
+                                         GetGUID.GUIDByName("AddEvolutionPointsFeature"),
+                                         GetGUID.GUIDByName("AddMaxAttacksFeature"),
+                                         GetGUID.GUIDByName("EvolutionBaseAbilitiesFeature"),
+                                         GetGUID.GUIDByName("EidolonSubtypeSelectionFeature"),
+                                         GetGUID.GUIDByName("EidolonStartingEvolutionsFeature")
                                          )
-                                .AddEntry(2, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
+                                .AddEntry(2, IClass.ExtraEvolutionPoolFeature, IClass.EvolutionStatBonus)
                                 .AddEntry(3, FeatureRefs.Evasion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(4, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
-                                .AddEntry(5, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
+                                .AddEntry(4, IClass.ExtraEvolutionPoolFeature, IClass.AddMaxAttacksStepFeature)
+                                .AddEntry(5, IClass.ExtraEvolutionPoolFeature, IClass.EvolutionStatBonus)
                                 .AddEntry(6, FeatureRefs.AnimalCompanionDevotion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(7, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
-                                .AddEntry(9, FeatureRefs.Multiattack.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
-                                .AddEntry(10, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
+                                .AddEntry(7, IClass.ExtraEvolutionPoolFeature, IClass.EvolutionStatBonus)
+                                .AddEntry(9, FeatureRefs.Multiattack.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature, IClass.AddMaxAttacksStepFeature)
+                                .AddEntry(10, IClass.ExtraEvolutionPoolFeature, IClass.EvolutionStatBonus)
                                 .AddEntry(11, IClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(12, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
+                                .AddEntry(12, IClass.EvolutionStatBonus)
                                 .AddEntry(13, IClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(14, FeatureRefs.ImprovedEvasion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
-                                .AddEntry(15, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
-                                .AddEntry(17, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")))
+                                .AddEntry(14, FeatureRefs.ImprovedEvasion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature, IClass.AddMaxAttacksStepFeature)
+                                .AddEntry(15, IClass.ExtraEvolutionPoolFeature, IClass.EvolutionStatBonus)
+                                .AddEntry(17, IClass.ExtraEvolutionPoolFeature, IClass.EvolutionStatBonus)
                                 .AddEntry(18, IClass.ExtraEvolutionPoolFeature)
-                                .AddEntry(19, IClass.ExtraEvolutionPoolFeature, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("AddMaxAttacksStepFeature")))
-                                .AddEntry(20, BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName("EidolonStatBonus")));
+                                .AddEntry(19, IClass.ExtraEvolutionPoolFeature, IClass.AddMaxAttacksStepFeature)
+                                .AddEntry(20, IClass.EvolutionStatBonus, GetGUID.GUIDByName("GrandEidolonFeature"));
 
             var progression = ProgressionConfigurator.New(IClass.Progression, GetGUID.GUIDByName("EidolonBaseProgression"))
                                                      .SetLevelEntries(entries)

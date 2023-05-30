@@ -26,7 +26,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             FeatureConfigurator.New(IClass.Feature, GetGUID.GUIDByName(IClass.Feature))
                 .SetDisplayName(IClass.Name)
                 .SetDescription(IClass.Description)
-                .SetIcon(FeatureRefs.LuckDomainBaseFeature.Reference.Get().m_Icon)
+                .SetIcon(AssetLoader.LoadInternal("Abilities", "EvolutionPoints.png"))
                 .AddAbilityResources(1, GetGUID.GUIDByName("SummonerEvolutionPointsResource"), true, true)
                 .SetRanks(1)
                 .ConfigureWithLogging();
@@ -35,7 +35,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), 1)
                 .SetDisplayName(IClassAddFeature.Name)
                 .SetDescription(IClassAddFeature.Description)
-                .SetIcon(AbilityRefs.TarPool.Reference.Get().m_Icon)
+                .SetIcon(AssetLoader.LoadInternal("Abilities", "EvolutionPoints.png"))
                 .SetRanks(100)
                 .ConfigureWithLogging();
 
@@ -43,7 +43,15 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), 4)
                 .SetDisplayName(IClassAddFeature.Name)
                 .SetDescription(IClassAddFeature.Description)
-                .SetIcon(AbilityRefs.TarPool.Reference.Get().m_Icon)
+                .SetIcon(AssetLoader.LoadInternal("Abilities", "EvolutionPoints.png"))
+                .SetRanks(100)
+                .ConfigureWithLogging();
+
+            FeatureConfigurator.New("GrandEidolonFeature", GetGUID.GUIDByName("GrandEidolonFeature"))
+                .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), 4)
+                .SetDisplayName(IClassAddFeature.Name)
+                .SetDescription(IClassAddFeature.Description)
+                .SetIcon(AssetLoader.LoadInternal("Abilities", "GrandEidolon.png"))
                 .SetRanks(100)
                 .ConfigureWithLogging();
         }

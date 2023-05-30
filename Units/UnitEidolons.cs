@@ -143,7 +143,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                 },
             #endregion
-            #region Marilith
+            #region EidolonMarilith
             new NewUnitClass()
                 {
                     Name = "EidolonMarilith",
@@ -294,16 +294,6 @@ namespace WOTR_MAKING_FRIENDS.Units
                     Name = "EidolonAxiomiteMasc",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.Aeon_Axiomite_M_01.Cast<BlueprintUnitReference>().Reference,
-                    isEidolon = true,
-                    eidolonBaseForm = EnumsEidolonBaseForm.Biped,
-                },
-            #endregion
-            #region EidolonAxiomiteFem
-            new NewUnitClass()
-                {
-                    Name = "EidolonAxiomiteFem",
-                    m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
-                    copiedUnit = UnitRefs.Aeon_Axiomite_F_01.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                 },
@@ -586,12 +576,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
                     copiedUnit = UnitRefs.CR6_ShamblingMound.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
-                    eidolonBaseForm = EnumsEidolonBaseForm.Abberant,
-                    blueprintUnitFactReferences = new Blueprint<BlueprintUnitFactReference>[]
-                                                  {
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Tiny"+"Feature")),
-                                                    BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionSizeChange"+"Tiny"+"OriginalFeature"))
-                                                  }
+                    eidolonBaseForm = EnumsEidolonBaseForm.Abberant
                 },
             #endregion
             #region EidolonNightmare

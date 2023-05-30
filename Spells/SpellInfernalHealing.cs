@@ -53,6 +53,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         {
             AbilityConfigurator spell = AbilityConfigurator.New(IClass.InfernalHealingSpellName, GetGUID.GUIDByName("InfernalHealingSpell"))
                 .CopyFrom(AbilityRefs.CureLightWounds)
+                .SetIcon(AssetLoader.LoadInternal("Abilities", "InfernalHealing.png"))
                 .SetDisplayName(IClass.InfernalHealingNameSpellName)
                 .SetDescription(IClass.InfernalHealingNameSpellDescription)
                 .AddSpellComponent(SpellSchool.Conjuration)
@@ -75,6 +76,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         {
             AbilityConfigurator spell = AbilityConfigurator.New(IClass.GreaterInfernalHealingSpellName, GetGUID.GUIDByName("GreaterInfernalHealingSpell"))
                 .CopyFrom(AbilityRefs.CureLightWounds)
+                .SetIcon(AssetLoader.LoadInternal("Abilities", "InfernalHealingGreater.png"))
                 .SetDisplayName(IClass.GreaterInfernalHealingNameSpellName)
                 .SetDescription(IClass.GreaterInfernalHealingNameSpellDescription)
                 .AddSpellComponent(SpellSchool.Conjuration)
