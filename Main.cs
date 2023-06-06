@@ -33,6 +33,7 @@ namespace WOTR_MAKING_FRIENDS
                 Log("Patching...");
                 AssetLoader.ModEntry = modEntry;
                 GetGUID.ModEntry = modEntry;
+                Helpers.ModEntry = modEntry;
                 harmony.PatchAll();
 
                 Log("Finished patching.");

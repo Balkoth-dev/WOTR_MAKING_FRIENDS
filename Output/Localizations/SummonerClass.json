@@ -1,0 +1,18 @@
+[
+  {
+    "Key": "wotr-making-friends.summoner.name",
+    "enGB": "!Summoner"
+  },
+  {
+    "Key": "wotr-making-friends.summoner.description",
+    "enGB": "There are those who take a different path when pursuing the arcane arts, reaching across the boundaries of the world to the far-flung planes to call forth all manner of creatures to do their bidding. Known as summoners, these arcane practitioners form close bonds with particular outsiders, known as eidolons, which increase in power along with their callers. In the end, summoners and their eidolons become linked, sharing shards of the same souls."
+  },
+  {
+    "Key": "wotr-making-friends.summonerproficiencies.name",
+    "enGB": "Summoner Proficiencies"
+  },
+  {
+    "Key": "wotr-making-friends.summonerproficiencies.description",
+    "enGB": "Summoners are proficient with all simple weapons and light armor. A summoner can cast summoner spells while wearing light armor without incurring the normal arcane spell failure chance. Like any other arcane spellcaster, a summoner wearing medium or heavy armor, or using a shield, incurs a chance of arcane spell failure if the spell in question has a somatic component. A summoner still incurs the normal arcane spell failure chance for arcane spells granted by other classes."
+  }
+]

@@ -67,15 +67,16 @@ namespace WOTR_MAKING_FRIENDS.Settings
 
             // Load Localizations
             LocalizationTool.LoadEmbeddedLocalizationPacks(
-              "WOTR_MAKING_FRIENDS.Localization.Settings.json",
-              "WOTR_MAKING_FRIENDS.Localization.SummonerClass.json",
-              "WOTR_MAKING_FRIENDS.Localization.CharacterClasses.json",
-              "WOTR_MAKING_FRIENDS.Localization.SummonerSpellbook.json",
-              "WOTR_MAKING_FRIENDS.Localization.Spells.json",
-              "WOTR_MAKING_FRIENDS.Localization.Scrolls.json",
-              "WOTR_MAKING_FRIENDS.Localization.Units.json",
-              "WOTR_MAKING_FRIENDS.Localization.Features.json",
-              "WOTR_MAKING_FRIENDS.Localization.Progression.json");
+              "WOTR_MAKING_FRIENDS.Output.Localization.Settings.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.SummonerClass.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.CharacterClasses.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.SummonerSpellbook.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.Spells.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.Scrolls.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.Units.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.Features.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.Progression.json",
+              "WOTR_MAKING_FRIENDS.Output.Localization.Other.json");
 
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");

@@ -1,0 +1,202 @@
+[
+  {
+    "Key": "wotr-making-friends.fakeeidolonfeature.name",
+    "enGB": "Fake Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.fakeeidolonfeature.description",
+    "enGB": "Fake Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsubtypefeature.name",
+    "enGB": "Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsubtypefeature.description",
+    "enGB": "Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.summonerlifelinkfeature.name",
+    "enGB": "Life Link"
+  },
+  {
+    "Key": "wotr-making-friends.summonerlifelinkfeature.description",
+    "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, the summoner may create a bond between the summoner and the summoner's eidolon. Whenever damage would kill the summoner's eidolon, the summoner may take the damage instead."
+  },
+  {
+    "Key": "wotr-making-friends.summonerbondedsensesfeature.name",
+    "enGB": "Bonded Senses"
+  },
+  {
+    "Key": "wotr-making-friends.summonerbondedsensesfeature.description",
+    "enGB": "At 2nd level, a summoner can share the senses of his eidolon, hearing, seeing, smelling, tasting, and touching everything the eidolon does./nThe summoner's perception ranks are equal to their eidolon's, if they eidolon has more ranks in perception."
+  },
+  {
+    "Key": "wotr-making-friends.summonermakerscallfeature.name",
+    "enGB": "Maker's Call"
+  },
+  {
+    "Key": "wotr-making-friends.summonermakerscallfeature.description",
+    "enGB": "At 6th level, as a standard action, a summoner can call his eidolon to his side. This functions as dimension door, using the summoner's caster level. When this ability is used, the eidolon appears adjacent to the summoner (or as close as possible if all adjacent spaces are occupied). If the eidolon is out of range, the ability is wasted. The summoner can use this ability once per day at 6th level, plus one additional time per day for every four levels beyond 6th."
+  },
+  {
+    "Key": "wotr-making-friends.summonertranspositionfeature.name",
+    "enGB": "Transposition"
+  },
+  {
+    "Key": "wotr-making-friends.summonertranspositionfeature.description",
+    "enGB": "At 8th level, a summoner can use his maker’s call ability to swap locations with his eidolon. If the eidolon occupies more squares than the summoner, the summoner can appear in any square occupied by the eidolon. The eidolon must occupy the square that was occupied by the summoner if able, or as close as possible if it is not able."
+  },
+  {
+    "Key": "wotr-making-friends.summonershieldallyfeature.name",
+    "enGB": "Shield Ally"
+  },
+  {
+    "Key": "wotr-making-friends.summonershieldallyfeature.description",
+    "enGB": "At 4th level, whenever a summoner is within his eidolon’s reach, the summoner gains a +2 shield bonus to his Armor Class and a +2 circumstance bonus on his saving throws."
+  },
+  {
+    "Key": "wotr-making-friends.summonershieldallygreaterfeature.name",
+    "enGB": "Shield Ally, Greater"
+  },
+  {
+    "Key": "wotr-making-friends.summonershieldallygreaterfeature.description",
+    "enGB": "At 12th level, whenever an ally is within reach of the summoner’s eidolon, the ally gains a +2 shield bonus to its Armor Class and a +2 circumstance bonus on its saving throws. If this ally is the summoner, these bonuses increase to +4."
+  },
+  {
+    "Key": "wotr-making-friends.summonerlifebondfeature.name",
+    "enGB": "Life Bond"
+  },
+  {
+    "Key": "wotr-making-friends.summonerlifebondfeature.description",
+    "enGB": "As a {g|Encyclopedia:Free_Actions}free action{/g}, the summoner may create a bond between the summoner and the summoner's eidolon. Whenever damage would kill the summoner, the summoner's eidolon may take the damage instead."
+  },
+  {
+    "Key": "wotr-making-friends.eidolonrank.name",
+    "enGB": "Eidolon Rank"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonrank.description",
+    "enGB": "Eidolon Rank"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonabberantbaseformfeature.name",
+    "enGB": "Abberant Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbipedbaseformfeature.name",
+    "enGB": "Biped Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonquadrupedbaseformfeature.name",
+    "enGB": "Quadruped Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonserpentinebaseformfeature.name",
+    "enGB": "Serpentine Base Form"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaberrantsubtypefeature.name",
+    "enGB": "Abberant Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeonsubtypefeature.name",
+    "enGB": "Aeon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonagathionsubtypefeature.name",
+    "enGB": "Agathion Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonancestorsubtypefeature.name",
+    "enGB": "Ancestor Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonangelsubtypefeature.name",
+    "enGB": "Angel Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonarchonsubtypefeature.name",
+    "enGB": "Archon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonastralsubtypefeature.name",
+    "enGB": "Astral Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonazatasubtypefeature.name",
+    "enGB": "Azata Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondaemonsubtypefeature.name",
+    "enGB": "Daemon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondeepwatersubtypefeature.name",
+    "enGB": "Deepwater Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondemonsubtypefeature.name",
+    "enGB": "Demon Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondevilsubtypefeature.name",
+    "enGB": "Devil Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondivsubtypefeature.name",
+    "enGB": "Div Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelementalsubtypefeature.name",
+    "enGB": "Elemental Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongeniesubtypefeature.name",
+    "enGB": "Genie Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloninevitablesubtypefeature.name",
+    "enGB": "Inevitable Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonkamisubtypefeature.name",
+    "enGB": "Kami Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonkytonsubtypefeature.name",
+    "enGB": "Kyton Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonplantsubtypefeature.name",
+    "enGB": "Plant Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonproteansubtypefeature.name",
+    "enGB": "Protean Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonpsychopompsubtypefeature.name",
+    "enGB": "Psychopomp Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonradiantsubtypefeature.name",
+    "enGB": "Radiant Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonshadowsubtypefeature.name",
+    "enGB": "Shadow Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstorykinsubtypefeature.name",
+    "enGB": "Storykin Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolontwinnedsubtypefeature.name",
+    "enGB": "Twinned Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonvoidsubtypefeature.name",
+    "enGB": "Void Subtype"
+  }
+]

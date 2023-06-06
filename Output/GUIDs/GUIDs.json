@@ -3414,5 +3414,9 @@
   {
     "name": "EidolonBuletteCompanionFeature",
     "guid": "fd624863-6805-4c33-ac92-7727ad78f253"
+  },
+  {
+    "name": "GrandEidolonFeature",
+    "guid": "e675c4b3-5ce2-43a4-9459-ed280055ac97"
   }
 ]
