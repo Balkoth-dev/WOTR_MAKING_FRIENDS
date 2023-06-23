@@ -198,5 +198,2125 @@
   {
     "Key": "wotr-making-friends.eidolonvoidsubtypefeature.name",
     "enGB": "Void Subtype"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonrankfeature.name",
+    "enGB": "EidolonRankFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonrankfeature.description",
+    "enGB": "EidolonRankFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.addevolutionpointsfeature.name",
+    "enGB": "AddEvolutionPointsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.addevolutionpointsfeature.description",
+    "enGB": "AddEvolutionPointsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.extraevolutionpoolfeature.name",
+    "enGB": "ExtraEvolutionPoolFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.extraevolutionpoolfeature.description",
+    "enGB": "ExtraEvolutionPoolFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityconsumefearfeature.name",
+    "enGB": "EidolonAddAbilityConsumeFearFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityconsumefearfeature.description",
+    "enGB": "EidolonAddAbilityConsumeFearFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonancestorbonusfeatfeature.name",
+    "enGB": "EidolonAncestorBonusFeatFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonancestorbonusfeatfeature.description",
+    "enGB": "EidolonAncestorBonusFeatFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilitydivinetrothfeature.name",
+    "enGB": "EidolonAddAbilityDivineTrothFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilitydivinetrothfeature.description",
+    "enGB": "EidolonAddAbilityDivineTrothFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityincoporealfeature.name",
+    "enGB": "EidolonAddAbilityIncoporealFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityincoporealfeature.description",
+    "enGB": "EidolonAddAbilityIncoporealFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazefeature.name",
+    "enGB": "EidolonAddAbilityUnnervingGazeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazefeature.description",
+    "enGB": "EidolonAddAbilityUnnervingGazeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareafeature.name",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareafeature.description",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareastaggerfeature.name",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaStaggerFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareastaggerfeature.description",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaStaggerFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsfeature.name",
+    "enGB": "EidolonAddFeatureLayOnHandsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsfeature.description",
+    "enGB": "EidolonAddFeatureLayOnHandsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsaddedfeature.name",
+    "enGB": "EidolonAddFeatureLayOnHandsAddedFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsaddedfeature.description",
+    "enGB": "EidolonAddFeatureLayOnHandsAddedFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbanefeature.name",
+    "enGB": "EidolonAddSpellBaneFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbanefeature.description",
+    "enGB": "EidolonAddSpellBaneFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblinkfeature.name",
+    "enGB": "EidolonAddSpellBlinkFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblinkfeature.description",
+    "enGB": "EidolonAddSpellBlinkFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblurfeature.name",
+    "enGB": "EidolonAddSpellBlurFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblurfeature.description",
+    "enGB": "EidolonAddSpellBlurFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbreathoflifefeature.name",
+    "enGB": "EidolonAddSpellBreathOfLifeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbreathoflifefeature.description",
+    "enGB": "EidolonAddSpellBreathOfLifeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcrushingdespairfeature.name",
+    "enGB": "EidolonAddSpellCrushingDespairFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcrushingdespairfeature.description",
+    "enGB": "EidolonAddSpellCrushingDespairFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeonselectionfeaturefeature.name",
+    "enGB": "EidolonAeonSelectionFeatureFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeonselectionfeaturefeature.description",
+    "enGB": "EidolonAeonSelectionFeatureFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcureseriouswoundsfeature.name",
+    "enGB": "EidolonAddSpellCureSeriousWoundsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcureseriouswoundsfeature.description",
+    "enGB": "EidolonAddSpellCureSeriousWoundsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelldimensiondoorfeature.name",
+    "enGB": "EidolonAddSpellDimensionDoorFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelldimensiondoorfeature.description",
+    "enGB": "EidolonAddSpellDimensionDoorFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellgoodhopefeature.name",
+    "enGB": "EidolonAddSpellGoodHopeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellgoodhopefeature.description",
+    "enGB": "EidolonAddSpellGoodHopeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellhastefeature.name",
+    "enGB": "EidolonAddSpellHasteFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellhastefeature.description",
+    "enGB": "EidolonAddSpellHasteFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeatureaddspellholyaurafeature.name",
+    "enGB": "EidolonFeatureAddSpellHolyAuraFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeatureaddspellholyaurafeature.description",
+    "enGB": "EidolonFeatureAddSpellHolyAuraFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeatureaddspellholyauraability.name",
+    "enGB": "EidolonFeatureAddSpellHolyAuraAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeatureaddspellholyauraability.description",
+    "enGB": "EidolonFeatureAddSpellHolyAuraAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellinvisibilityfeature.name",
+    "enGB": "EidolonAddSpellInvisibilityFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellinvisibilityfeature.description",
+    "enGB": "EidolonAddSpellInvisibilityFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellslowfeature.name",
+    "enGB": "EidolonAddSpellSlowFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellslowfeature.description",
+    "enGB": "EidolonAddSpellSlowFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltrueseeingfeature.name",
+    "enGB": "EidolonAddSpellTrueSeeingFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltrueseeingfeature.description",
+    "enGB": "EidolonAddSpellTrueSeeingFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltruestrikefeature.name",
+    "enGB": "EidolonAddSpellTrueStrikeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltruestrikefeature.description",
+    "enGB": "EidolonAddSpellTrueStrikeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeonemotionsfeaturefeature.name",
+    "enGB": "EidolonAeonEmotionsFeatureFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeonemotionsfeaturefeature.description",
+    "enGB": "EidolonAeonEmotionsFeatureFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeontimefeaturefeature.name",
+    "enGB": "EidolonAeonTimeFeatureFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaeontimefeaturefeature.description",
+    "enGB": "EidolonAeonTimeFeatureFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaugmentsummoningmasterfeature.name",
+    "enGB": "EidolonAugmentSummoningMasterFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaugmentsummoningmasterfeature.description",
+    "enGB": "EidolonAugmentSummoningMasterFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonascendantsummonsmasterfeature.name",
+    "enGB": "EidolonAscendantSummonsMasterFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonascendantsummonsmasterfeature.description",
+    "enGB": "EidolonAscendantSummonsMasterFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddbreathoflifespellfeature.name",
+    "enGB": "EidolonAddBreathOfLifeSpellFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddbreathoflifespellfeature.description",
+    "enGB": "EidolonAddBreathOfLifeSpellFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr10adamantinefeature.name",
+    "enGB": "EidolonDR10AdamantineFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr10adamantinefeature.description",
+    "enGB": "EidolonDR10AdamantineFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr10evilfeature.name",
+    "enGB": "EidolonDR10EvilFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr10evilfeature.description",
+    "enGB": "EidolonDR10EvilFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr10magicfeature.name",
+    "enGB": "EidolonDR10MagicFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr10magicfeature.description",
+    "enGB": "EidolonDR10MagicFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5feature.name",
+    "enGB": "EidolonDR5Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5feature.description",
+    "enGB": "EidolonDR5Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5adamantinefeature.name",
+    "enGB": "EidolonDR5AdamantineFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5adamantinefeature.description",
+    "enGB": "EidolonDR5AdamantineFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5chaoticfeature.name",
+    "enGB": "EidolonDR5ChaoticFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5chaoticfeature.description",
+    "enGB": "EidolonDR5ChaoticFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5lawfulfeature.name",
+    "enGB": "EidolonDR5LawfulFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5lawfulfeature.description",
+    "enGB": "EidolonDR5LawfulFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5evilfeature.name",
+    "enGB": "EidolonDR5EvilFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5evilfeature.description",
+    "enGB": "EidolonDR5EvilFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5goodfeature.name",
+    "enGB": "EidolonDR5GoodFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5goodfeature.description",
+    "enGB": "EidolonDR5GoodFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5magicfeature.name",
+    "enGB": "EidolonDR5MagicFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5magicfeature.description",
+    "enGB": "EidolonDR5MagicFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5slashingfeature.name",
+    "enGB": "EidolonDR5SlashingFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondr5slashingfeature.description",
+    "enGB": "EidolonDR5SlashingFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonenergydrainbitefeature.name",
+    "enGB": "EidolonEnergyDrainBiteFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonenergydrainbitefeature.description",
+    "enGB": "EidolonEnergyDrainBiteFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeaturefreedomofmovementfeature.name",
+    "enGB": "EidolonFeatureFreedomOfMovementFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeaturefreedomofmovementfeature.description",
+    "enGB": "EidolonFeatureFreedomOfMovementFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeaturefreedomofmovementbuff.name",
+    "enGB": "EidolonFeatureFreedomOfMovementBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfeaturefreedomofmovementbuff.description",
+    "enGB": "EidolonFeatureFreedomOfMovementBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfrightfulpresencefeature.name",
+    "enGB": "EidolonFrightfulPresenceFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfrightfulpresencefeature.description",
+    "enGB": "EidolonFrightfulPresenceFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonghosttouchfeature.name",
+    "enGB": "EidolonGhostTouchFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonghosttouchfeature.description",
+    "enGB": "EidolonGhostTouchFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityabilitydamagefeature.name",
+    "enGB": "EidolonImmunityAbilityDamageFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityabilitydamagefeature.description",
+    "enGB": "EidolonImmunityAbilityDamageFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitybleedfeature.name",
+    "enGB": "EidolonImmunityBleedFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitybleedfeature.description",
+    "enGB": "EidolonImmunityBleedFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitydeathfeature.name",
+    "enGB": "EidolonImmunityDeathFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitydeathfeature.description",
+    "enGB": "EidolonImmunityDeathFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitydiseasefeature.name",
+    "enGB": "EidolonImmunityDiseaseFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitydiseasefeature.description",
+    "enGB": "EidolonImmunityDiseaseFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityenergydrainfeature.name",
+    "enGB": "EidolonImmunityEnergyDrainFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityenergydrainfeature.description",
+    "enGB": "EidolonImmunityEnergyDrainFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityfortitudesavefeature.name",
+    "enGB": "EidolonImmunityFortitudeSaveFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityfortitudesavefeature.description",
+    "enGB": "EidolonImmunityFortitudeSaveFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitymindfeature.name",
+    "enGB": "EidolonImmunityMindFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitymindfeature.description",
+    "enGB": "EidolonImmunityMindFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityparalysisfeature.name",
+    "enGB": "EidolonImmunityParalysisFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunityparalysisfeature.description",
+    "enGB": "EidolonImmunityParalysisFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitypetrificationfeature.name",
+    "enGB": "EidolonImmunityPetrificationFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitypetrificationfeature.description",
+    "enGB": "EidolonImmunityPetrificationFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitypoisonfeature.name",
+    "enGB": "EidolonImmunityPoisonFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitypoisonfeature.description",
+    "enGB": "EidolonImmunityPoisonFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitypolymorphfeature.name",
+    "enGB": "EidolonImmunityPolymorphFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitypolymorphfeature.description",
+    "enGB": "EidolonImmunityPolymorphFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitysleepfeature.name",
+    "enGB": "EidolonImmunitySleepFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitysleepfeature.description",
+    "enGB": "EidolonImmunitySleepFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitystunfeature.name",
+    "enGB": "EidolonImmunityStunFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitystunfeature.description",
+    "enGB": "EidolonImmunityStunFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitycursefeature.name",
+    "enGB": "EidolonImmunityCurseFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonimmunitycursefeature.description",
+    "enGB": "EidolonImmunityCurseFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelemental1feature.name",
+    "enGB": "EidolonElemental1Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelemental1feature.description",
+    "enGB": "EidolonElemental1Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelemental8feature.name",
+    "enGB": "EidolonElemental8Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelemental8feature.description",
+    "enGB": "EidolonElemental8Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelemental20feature.name",
+    "enGB": "EidolonElemental20Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonelemental20feature.description",
+    "enGB": "EidolonElemental20Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmagelightfeature.name",
+    "enGB": "EidolonMageLightFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmagelightfeature.description",
+    "enGB": "EidolonMageLightFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmaximizehealingfeature.name",
+    "enGB": "EidolonMaximizeHealingFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmaximizehealingfeature.description",
+    "enGB": "EidolonMaximizeHealingFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmoderatefortificationfeature.name",
+    "enGB": "EidolonModerateFortificationFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmoderatefortificationfeature.description",
+    "enGB": "EidolonModerateFortificationFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4cursesfeature.name",
+    "enGB": "EidolonResistance4CursesFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4cursesfeature.description",
+    "enGB": "EidolonResistance4CursesFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4deathfeature.name",
+    "enGB": "EidolonResistance4DeathFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4deathfeature.description",
+    "enGB": "EidolonResistance4DeathFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4diseasefeature.name",
+    "enGB": "EidolonResistance4DiseaseFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4diseasefeature.description",
+    "enGB": "EidolonResistance4DiseaseFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4paralysisfeature.name",
+    "enGB": "EidolonResistance4ParalysisFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4paralysisfeature.description",
+    "enGB": "EidolonResistance4ParalysisFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4poisonfeature.name",
+    "enGB": "EidolonResistance4PoisonFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4poisonfeature.description",
+    "enGB": "EidolonResistance4PoisonFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4mindfeature.name",
+    "enGB": "EidolonResistance4MindFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonresistance4mindfeature.description",
+    "enGB": "EidolonResistance4MindFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstorykinbonusfeatfeature.name",
+    "enGB": "EidolonStorykinBonusFeatFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstorykinbonusfeatfeature.description",
+    "enGB": "EidolonStorykinBonusFeatFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsuperiorsummoningmasterfeature.name",
+    "enGB": "EidolonSuperiorSummoningMasterFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsuperiorsummoningmasterfeature.description",
+    "enGB": "EidolonSuperiorSummoningMasterFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsubtypeselectionfeature.name",
+    "enGB": "EidolonSubtypeSelectionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsubtypeselectionfeature.description",
+    "enGB": "EidolonSubtypeSelectionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbasefeatureselection.name",
+    "enGB": "EidolonBaseFeatureSelection.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbasefeatureselection.description",
+    "enGB": "EidolonBaseFeatureSelection.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonabberantbaseformselectionfeature.name",
+    "enGB": "EidolonAbberantBaseFormSelectionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonabberantbaseformselectionfeature.description",
+    "enGB": "EidolonAbberantBaseFormSelectionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbipedbaseformselectionfeature.name",
+    "enGB": "EidolonBipedBaseFormSelectionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbipedbaseformselectionfeature.description",
+    "enGB": "EidolonBipedBaseFormSelectionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonquadrupedbaseformselectionfeature.name",
+    "enGB": "EidolonQuadrupedBaseFormSelectionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonquadrupedbaseformselectionfeature.description",
+    "enGB": "EidolonQuadrupedBaseFormSelectionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonserpentinebaseformselectionfeature.name",
+    "enGB": "EidolonSerpentineBaseFormSelectionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonserpentinebaseformselectionfeature.description",
+    "enGB": "EidolonSerpentineBaseFormSelectionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonairelementalcompanionfeature.name",
+    "enGB": "EidolonAirElementalCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonairelementalcompanionfeature.description",
+    "enGB": "EidolonAirElementalCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfireelementalcompanionfeature.name",
+    "enGB": "EidolonFireElementalCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfireelementalcompanionfeature.description",
+    "enGB": "EidolonFireElementalCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwaterelementalcompanionfeature.name",
+    "enGB": "EidolonWaterElementalCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwaterelementalcompanionfeature.description",
+    "enGB": "EidolonWaterElementalCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonearthelementalcompanionfeature.name",
+    "enGB": "EidolonEarthElementalCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonearthelementalcompanionfeature.description",
+    "enGB": "EidolonEarthElementalCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongolddragoncompanionfeature.name",
+    "enGB": "EidolonGoldDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongolddragoncompanionfeature.description",
+    "enGB": "EidolonGoldDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsilverdragoncompanionfeature.name",
+    "enGB": "EidolonSilverDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsilverdragoncompanionfeature.description",
+    "enGB": "EidolonSilverDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbrassdragoncompanionfeature.name",
+    "enGB": "EidolonBrassDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbrassdragoncompanionfeature.description",
+    "enGB": "EidolonBrassDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloncopperdragoncompanionfeature.name",
+    "enGB": "EidolonCopperDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloncopperdragoncompanionfeature.description",
+    "enGB": "EidolonCopperDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolontrollcompanionfeature.name",
+    "enGB": "EidolonTrollCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolontrollcompanionfeature.description",
+    "enGB": "EidolonTrollCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsuccubuscompanionfeature.name",
+    "enGB": "EidolonSuccubusCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsuccubuscompanionfeature.description",
+    "enGB": "EidolonSuccubusCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonincubuscompanionfeature.name",
+    "enGB": "EidolonIncubusCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonincubuscompanionfeature.description",
+    "enGB": "EidolonIncubusCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbabaucompanionfeature.name",
+    "enGB": "EidolonBabauCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbabaucompanionfeature.description",
+    "enGB": "EidolonBabauCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmarilithcompanionfeature.name",
+    "enGB": "EidolonMarilithCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmarilithcompanionfeature.description",
+    "enGB": "EidolonMarilithCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondretchcompanionfeature.name",
+    "enGB": "EidolonDretchCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondretchcompanionfeature.description",
+    "enGB": "EidolonDretchCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbalorcompanionfeature.name",
+    "enGB": "EidolonBalorCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbalorcompanionfeature.description",
+    "enGB": "EidolonBalorCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonschircompanionfeature.name",
+    "enGB": "EidolonSchirCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonschircompanionfeature.description",
+    "enGB": "EidolonSchirCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloncoloxuscompanionfeature.name",
+    "enGB": "EidolonColoxusCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloncoloxuscompanionfeature.description",
+    "enGB": "EidolonColoxusCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonglabrezucompanionfeature.name",
+    "enGB": "EidolonGlabrezuCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonglabrezucompanionfeature.description",
+    "enGB": "EidolonGlabrezuCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonvrockcompanionfeature.name",
+    "enGB": "EidolonVrockCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonvrockcompanionfeature.description",
+    "enGB": "EidolonVrockCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonpainajicompanionfeature.name",
+    "enGB": "EidolonPainajiCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonpainajicompanionfeature.description",
+    "enGB": "EidolonPainajiCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbrimorakcompanionfeature.name",
+    "enGB": "EidolonBrimorakCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbrimorakcompanionfeature.description",
+    "enGB": "EidolonBrimorakCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonlilitucompanionfeature.name",
+    "enGB": "EidolonLilituCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonlilitucompanionfeature.description",
+    "enGB": "EidolonLilituCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonvavakiacompanionfeature.name",
+    "enGB": "EidolonVavakiaCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonvavakiacompanionfeature.description",
+    "enGB": "EidolonVavakiaCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbythoscompanionfeature.name",
+    "enGB": "EidolonBythosCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbythoscompanionfeature.description",
+    "enGB": "EidolonBythosCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaxiomitemasccompanionfeature.name",
+    "enGB": "EidolonAxiomiteMascCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaxiomitemasccompanionfeature.description",
+    "enGB": "EidolonAxiomiteMascCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongolemwoodcompanionfeature.name",
+    "enGB": "EidolonGolemWoodCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongolemwoodcompanionfeature.description",
+    "enGB": "EidolonGolemWoodCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongolemironcompanionfeature.name",
+    "enGB": "EidolonGolemIronCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongolemironcompanionfeature.description",
+    "enGB": "EidolonGolemIronCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonastraldevacompanionfeature.name",
+    "enGB": "EidolonAstralDevaCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonastraldevacompanionfeature.description",
+    "enGB": "EidolonAstralDevaCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmonadicdevacompanionfeature.name",
+    "enGB": "EidolonMonadicDevaCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmonadicdevacompanionfeature.description",
+    "enGB": "EidolonMonadicDevaCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmovanicdevacompanionfeature.name",
+    "enGB": "EidolonMovanicDevaCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmovanicdevacompanionfeature.description",
+    "enGB": "EidolonMovanicDevaCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonlillendcompanionfeature.name",
+    "enGB": "EidolonLillendCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonlillendcompanionfeature.description",
+    "enGB": "EidolonLillendCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbralanicompanionfeature.name",
+    "enGB": "EidolonBralaniCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbralanicompanionfeature.description",
+    "enGB": "EidolonBralaniCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonveranalliacompanionfeature.name",
+    "enGB": "EidolonVeranalliaCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonveranalliacompanionfeature.description",
+    "enGB": "EidolonVeranalliaCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonyinudjacompanionfeature.name",
+    "enGB": "EidolonYinudjaCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonyinudjacompanionfeature.description",
+    "enGB": "EidolonYinudjaCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolontreantcompanionfeature.name",
+    "enGB": "EidolonTreantCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolontreantcompanionfeature.description",
+    "enGB": "EidolonTreantCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonerinyescompanionfeature.name",
+    "enGB": "EidolonErinyesCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonerinyescompanionfeature.description",
+    "enGB": "EidolonErinyesCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondeathsnatchercompanionfeature.name",
+    "enGB": "EidolonDeathsnatcherCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolondeathsnatchercompanionfeature.description",
+    "enGB": "EidolonDeathsnatcherCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonspiritcompanionfeature.name",
+    "enGB": "EidolonSpiritCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonspiritcompanionfeature.description",
+    "enGB": "EidolonSpiritCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonshadecompanionfeature.name",
+    "enGB": "EidolonShadeCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonshadecompanionfeature.description",
+    "enGB": "EidolonShadeCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonkeketarcompanionfeature.name",
+    "enGB": "EidolonKeketarCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonkeketarcompanionfeature.description",
+    "enGB": "EidolonKeketarCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloncraglinnormcompanionfeature.name",
+    "enGB": "EidolonCragLinnormCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidoloncraglinnormcompanionfeature.description",
+    "enGB": "EidolonCragLinnormCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonreddragoncompanionfeature.name",
+    "enGB": "EidolonRedDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonreddragoncompanionfeature.description",
+    "enGB": "EidolonRedDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongreendragoncompanionfeature.name",
+    "enGB": "EidolonGreenDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolongreendragoncompanionfeature.description",
+    "enGB": "EidolonGreenDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwhitedragoncompanionfeature.name",
+    "enGB": "EidolonWhiteDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwhitedragoncompanionfeature.description",
+    "enGB": "EidolonWhiteDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonblackdragoncompanionfeature.name",
+    "enGB": "EidolonBlackDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonblackdragoncompanionfeature.description",
+    "enGB": "EidolonBlackDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbluedragoncompanionfeature.name",
+    "enGB": "EidolonBlueDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbluedragoncompanionfeature.description",
+    "enGB": "EidolonBlueDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsalamandercompanionfeature.name",
+    "enGB": "EidolonSalamanderCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonsalamandercompanionfeature.description",
+    "enGB": "EidolonSalamanderCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonshamblingmoundcompanionfeature.name",
+    "enGB": "EidolonShamblingMoundCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonshamblingmoundcompanionfeature.description",
+    "enGB": "EidolonShamblingMoundCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonnightmarecompanionfeature.name",
+    "enGB": "EidolonNightmareCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonnightmarecompanionfeature.description",
+    "enGB": "EidolonNightmareCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonhellhoundcompanionfeature.name",
+    "enGB": "EidolonHellHoundCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonhellhoundcompanionfeature.description",
+    "enGB": "EidolonHellHoundCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonastradaemoncompanionfeature.name",
+    "enGB": "EidolonAstradaemonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonastradaemoncompanionfeature.description",
+    "enGB": "EidolonAstradaemonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwerewolfcompanionfeature.name",
+    "enGB": "EidolonWerewolfCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwerewolfcompanionfeature.description",
+    "enGB": "EidolonWerewolfCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmimiccompanionfeature.name",
+    "enGB": "EidolonMimicCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmimiccompanionfeature.description",
+    "enGB": "EidolonMimicCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmanticorecompanionfeature.name",
+    "enGB": "EidolonManticoreCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmanticorecompanionfeature.description",
+    "enGB": "EidolonManticoreCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwillowispcompanionfeature.name",
+    "enGB": "EidolonWillOWispCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwillowispcompanionfeature.description",
+    "enGB": "EidolonWillOWispCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfairydragoncompanionfeature.name",
+    "enGB": "EidolonFairyDragonCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfairydragoncompanionfeature.description",
+    "enGB": "EidolonFairyDragonCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbulettecompanionfeature.name",
+    "enGB": "EidolonBuletteCompanionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonbulettecompanionfeature.description",
+    "enGB": "EidolonBuletteCompanionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost1feature.name",
+    "enGB": "EvolutionCost1Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost1feature.description",
+    "enGB": "EvolutionCost1Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbitefeature.name",
+    "enGB": "EvolutionBiteFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbitefeature.description",
+    "enGB": "EvolutionBiteFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiongorefeature.name",
+    "enGB": "EvolutionGoreFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiongorefeature.description",
+    "enGB": "EvolutionGoreFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsfeature.name",
+    "enGB": "EvolutionClawsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsfeature.description",
+    "enGB": "EvolutionClawsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionmagicattacksfeature.name",
+    "enGB": "EvolutionMagicAttacksFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionmagicattacksfeature.description",
+    "enGB": "EvolutionMagicAttacksFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionnaturalarmorfeature.name",
+    "enGB": "EvolutionNaturalArmorFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionnaturalarmorfeature.description",
+    "enGB": "EvolutionNaturalArmorFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersfeature.name",
+    "enGB": "EvolutionPincersFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersfeature.description",
+    "enGB": "EvolutionPincersFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceacidfeature.name",
+    "enGB": "EvolutionResistanceAcidFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceacidfeature.description",
+    "enGB": "EvolutionResistanceAcidFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancecoldfeature.name",
+    "enGB": "EvolutionResistanceColdFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancecoldfeature.description",
+    "enGB": "EvolutionResistanceColdFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceelectricityfeature.name",
+    "enGB": "EvolutionResistanceElectricityFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceelectricityfeature.description",
+    "enGB": "EvolutionResistanceElectricityFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancefirefeature.name",
+    "enGB": "EvolutionResistanceFireFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancefirefeature.description",
+    "enGB": "EvolutionResistanceFireFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancesonicfeature.name",
+    "enGB": "EvolutionResistanceSonicFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancesonicfeature.description",
+    "enGB": "EvolutionResistanceSonicFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionscentfeature.name",
+    "enGB": "EvolutionScentFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionscentfeature.description",
+    "enGB": "EvolutionScentFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillperceptionfeature.name",
+    "enGB": "EvolutionSkilledSkillPerceptionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillperceptionfeature.description",
+    "enGB": "EvolutionSkilledSkillPerceptionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillthieveryfeature.name",
+    "enGB": "EvolutionSkilledSkillThieveryFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillthieveryfeature.description",
+    "enGB": "EvolutionSkilledSkillThieveryFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillusemagicdevicefeature.name",
+    "enGB": "EvolutionSkilledSkillUseMagicDeviceFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillusemagicdevicefeature.description",
+    "enGB": "EvolutionSkilledSkillUseMagicDeviceFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamfeature.name",
+    "enGB": "EvolutionSlamFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamfeature.description",
+    "enGB": "EvolutionSlamFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspikefeature.name",
+    "enGB": "EvolutionSpikeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspikefeature.description",
+    "enGB": "EvolutionSpikeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailfeature.name",
+    "enGB": "EvolutionTailFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailfeature.description",
+    "enGB": "EvolutionTailFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailslapfeature.name",
+    "enGB": "EvolutionTailSlapFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailslapfeature.description",
+    "enGB": "EvolutionTailSlapFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclefeature.name",
+    "enGB": "EvolutionTentacleFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclefeature.description",
+    "enGB": "EvolutionTentacleFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassfeature.name",
+    "enGB": "EvolutionTentacleMassFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassfeature.description",
+    "enGB": "EvolutionTentacleMassFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwingbuffetfeature.name",
+    "enGB": "EvolutionWingBuffetFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwingbuffetfeature.description",
+    "enGB": "EvolutionWingBuffetFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost2feature.name",
+    "enGB": "EvolutionCost2Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost2feature.description",
+    "enGB": "EvolutionCost2Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasestrengthfeature.name",
+    "enGB": "EvolutionAbilityIncreaseStrengthFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasestrengthfeature.description",
+    "enGB": "EvolutionAbilityIncreaseStrengthFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasedexterityfeature.name",
+    "enGB": "EvolutionAbilityIncreaseDexterityFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasedexterityfeature.description",
+    "enGB": "EvolutionAbilityIncreaseDexterityFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseconstitutionfeature.name",
+    "enGB": "EvolutionAbilityIncreaseConstitutionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseconstitutionfeature.description",
+    "enGB": "EvolutionAbilityIncreaseConstitutionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseintelligencefeature.name",
+    "enGB": "EvolutionAbilityIncreaseIntelligenceFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseintelligencefeature.description",
+    "enGB": "EvolutionAbilityIncreaseIntelligenceFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasewisdomfeature.name",
+    "enGB": "EvolutionAbilityIncreaseWisdomFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasewisdomfeature.description",
+    "enGB": "EvolutionAbilityIncreaseWisdomFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasecharismafeature.name",
+    "enGB": "EvolutionAbilityIncreaseCharismaFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasecharismafeature.description",
+    "enGB": "EvolutionAbilityIncreaseCharismaFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzyfeature.name",
+    "enGB": "EvolutionBloodFrenzyFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzyfeature.description",
+    "enGB": "EvolutionBloodFrenzyFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksacidfeature.name",
+    "enGB": "EvolutionEnergyAttacksAcidFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksacidfeature.description",
+    "enGB": "EvolutionEnergyAttacksAcidFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackscoldfeature.name",
+    "enGB": "EvolutionEnergyAttacksColdFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackscoldfeature.description",
+    "enGB": "EvolutionEnergyAttacksColdFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackselectricityfeature.name",
+    "enGB": "EvolutionEnergyAttacksElectricityFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackselectricityfeature.description",
+    "enGB": "EvolutionEnergyAttacksElectricityFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksfirefeature.name",
+    "enGB": "EvolutionEnergyAttacksFireFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksfirefeature.description",
+    "enGB": "EvolutionEnergyAttacksFireFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionflightfeature.name",
+    "enGB": "EvolutionFlightFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionflightfeature.description",
+    "enGB": "EvolutionFlightFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityacidfeature.name",
+    "enGB": "EvolutionImmunityAcidFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityacidfeature.description",
+    "enGB": "EvolutionImmunityAcidFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitycoldfeature.name",
+    "enGB": "EvolutionImmunityColdFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitycoldfeature.description",
+    "enGB": "EvolutionImmunityColdFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityelectricityfeature.name",
+    "enGB": "EvolutionImmunityElectricityFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityelectricityfeature.description",
+    "enGB": "EvolutionImmunityElectricityFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityfirefeature.name",
+    "enGB": "EvolutionImmunityFireFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityfirefeature.description",
+    "enGB": "EvolutionImmunityFireFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitysonicfeature.name",
+    "enGB": "EvolutionImmunitySonicFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitysonicfeature.description",
+    "enGB": "EvolutionImmunitySonicFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbsarmsfeature.name",
+    "enGB": "EvolutionLimbsArmsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbsarmsfeature.description",
+    "enGB": "EvolutionLimbsArmsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsfeature.name",
+    "enGB": "EvolutionLimbsLegsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsfeature.description",
+    "enGB": "EvolutionLimbsLegsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionrendfeature.name",
+    "enGB": "EvolutionRendFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionrendfeature.description",
+    "enGB": "EvolutionRendFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontramplefeature.name",
+    "enGB": "EvolutionTrampleFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontramplefeature.description",
+    "enGB": "EvolutionTrampleFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontripfeature.name",
+    "enGB": "EvolutionTripFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontripfeature.description",
+    "enGB": "EvolutionTripFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbullrushfeature.name",
+    "enGB": "EvolutionBullrushFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbullrushfeature.description",
+    "enGB": "EvolutionBullrushFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsunderarmorfeature.name",
+    "enGB": "EvolutionSunderarmorFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsunderarmorfeature.description",
+    "enGB": "EvolutionSunderarmorFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost3feature.name",
+    "enGB": "EvolutionCost3Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost3feature.description",
+    "enGB": "EvolutionCost3Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiondamagereductionfeature.name",
+    "enGB": "EvolutionDamageReductionFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiondamagereductionfeature.description",
+    "enGB": "EvolutionDamageReductionFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpouncefeature.name",
+    "enGB": "EvolutionPounceFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpouncefeature.description",
+    "enGB": "EvolutionPounceFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwebfeature.name",
+    "enGB": "EvolutionWebFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwebfeature.description",
+    "enGB": "EvolutionWebFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimproveddamagefeature.name",
+    "enGB": "EvolutionImprovedDamageFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimproveddamagefeature.description",
+    "enGB": "EvolutionImprovedDamageFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionreachfeature.name",
+    "enGB": "EvolutionReachFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionreachfeature.description",
+    "enGB": "EvolutionReachFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawslimbsfeature.name",
+    "enGB": "EvolutionClawsLimbsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawslimbsfeature.description",
+    "enGB": "EvolutionClawsLimbsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincerslimbsfeature.name",
+    "enGB": "EvolutionPincersLimbsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincerslimbsfeature.description",
+    "enGB": "EvolutionPincersLimbsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamlimbsfeature.name",
+    "enGB": "EvolutionSlamLimbsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamlimbsfeature.description",
+    "enGB": "EvolutionSlamLimbsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost4feature.name",
+    "enGB": "EvolutionCost4Feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost4feature.description",
+    "enGB": "EvolutionCost4Feature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionamorphousfeature.name",
+    "enGB": "EvolutionAmorphousFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionamorphousfeature.description",
+    "enGB": "EvolutionAmorphousFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionblindsightfeature.name",
+    "enGB": "EvolutionBlindsightFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionblindsightfeature.description",
+    "enGB": "EvolutionBlindsightFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponacidfeature.name",
+    "enGB": "EvolutionBreathWeaponAcidFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponacidfeature.description",
+    "enGB": "EvolutionBreathWeaponAcidFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponcoldfeature.name",
+    "enGB": "EvolutionBreathWeaponColdFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponcoldfeature.description",
+    "enGB": "EvolutionBreathWeaponColdFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponelectricityfeature.name",
+    "enGB": "EvolutionBreathWeaponElectricityFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponelectricityfeature.description",
+    "enGB": "EvolutionBreathWeaponElectricityFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponfirefeature.name",
+    "enGB": "EvolutionBreathWeaponFireFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponfirefeature.description",
+    "enGB": "EvolutionBreathWeaponFireFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionfasthealingfeature.name",
+    "enGB": "EvolutionFastHealingFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionfasthealingfeature.description",
+    "enGB": "EvolutionFastHealingFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlargefeature.name",
+    "enGB": "EvolutionLargeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlargefeature.description",
+    "enGB": "EvolutionLargeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspellresistancefeature.name",
+    "enGB": "EvolutionSpellResistanceFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspellresistancefeature.description",
+    "enGB": "EvolutionSpellResistanceFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbaseabilitiesfeature.name",
+    "enGB": "EvolutionBaseAbilitiesFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbaseabilitiesfeature.description",
+    "enGB": "EvolutionBaseAbilitiesFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangefinefeature.name",
+    "enGB": "EvolutionSizeChangeFineFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangefinefeature.description",
+    "enGB": "EvolutionSizeChangeFineFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangediminutivefeature.name",
+    "enGB": "EvolutionSizeChangeDiminutiveFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangediminutivefeature.description",
+    "enGB": "EvolutionSizeChangeDiminutiveFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangetinyfeature.name",
+    "enGB": "EvolutionSizeChangeTinyFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangetinyfeature.description",
+    "enGB": "EvolutionSizeChangeTinyFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangesmallfeature.name",
+    "enGB": "EvolutionSizeChangeSmallFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangesmallfeature.description",
+    "enGB": "EvolutionSizeChangeSmallFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangemediumfeature.name",
+    "enGB": "EvolutionSizeChangeMediumFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangemediumfeature.description",
+    "enGB": "EvolutionSizeChangeMediumFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangelargefeature.name",
+    "enGB": "EvolutionSizeChangeLargeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangelargefeature.description",
+    "enGB": "EvolutionSizeChangeLargeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangehugefeature.name",
+    "enGB": "EvolutionSizeChangeHugeFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangehugefeature.description",
+    "enGB": "EvolutionSizeChangeHugeFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangegargantuanfeature.name",
+    "enGB": "EvolutionSizeChangeGargantuanFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangegargantuanfeature.description",
+    "enGB": "EvolutionSizeChangeGargantuanFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangecolossalfeature.name",
+    "enGB": "EvolutionSizeChangeColossalFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsizechangecolossalfeature.description",
+    "enGB": "EvolutionSizeChangeColossalFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.addmaxattacksfeature.name",
+    "enGB": "AddMaxAttacksFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.addmaxattacksfeature.description",
+    "enGB": "AddMaxAttacksFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstartingevolutionsfeature.name",
+    "enGB": "EidolonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstartingevolutionsfeature.description",
+    "enGB": "EidolonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.abberantaberrantstartingevolutionsfeature.name",
+    "enGB": "AbberantAberrantStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.abberantaberrantstartingevolutionsfeature.description",
+    "enGB": "AbberantAberrantStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedaberrantstartingevolutionsfeature.name",
+    "enGB": "QuadrupedAberrantStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedaberrantstartingevolutionsfeature.description",
+    "enGB": "QuadrupedAberrantStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineaberrantstartingevolutionsfeature.name",
+    "enGB": "SerpentineAberrantStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineaberrantstartingevolutionsfeature.description",
+    "enGB": "SerpentineAberrantStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedaeonstartingevolutionsfeature.name",
+    "enGB": "BipedAeonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedaeonstartingevolutionsfeature.description",
+    "enGB": "BipedAeonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineaeonstartingevolutionsfeature.name",
+    "enGB": "SerpentineAeonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineaeonstartingevolutionsfeature.description",
+    "enGB": "SerpentineAeonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedagathionstartingevolutionsfeature.name",
+    "enGB": "BipedAgathionStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedagathionstartingevolutionsfeature.description",
+    "enGB": "BipedAgathionStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedagathionstartingevolutionsfeature.name",
+    "enGB": "QuadrupedAgathionStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedagathionstartingevolutionsfeature.description",
+    "enGB": "QuadrupedAgathionStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedancestorstartingevolutionsfeature.name",
+    "enGB": "BipedAncestorStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedancestorstartingevolutionsfeature.description",
+    "enGB": "BipedAncestorStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedangelstartingevolutionsfeature.name",
+    "enGB": "BipedAngelStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedangelstartingevolutionsfeature.description",
+    "enGB": "BipedAngelStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedarchonstartingevolutionsfeature.name",
+    "enGB": "BipedArchonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedarchonstartingevolutionsfeature.description",
+    "enGB": "BipedArchonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedastralstartingevolutionsfeature.name",
+    "enGB": "BipedAstralStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedastralstartingevolutionsfeature.description",
+    "enGB": "BipedAstralStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineastralstartingevolutionsfeature.name",
+    "enGB": "SerpentineAstralStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineastralstartingevolutionsfeature.description",
+    "enGB": "SerpentineAstralStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedazatastartingevolutionsfeature.name",
+    "enGB": "BipedAzataStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedazatastartingevolutionsfeature.description",
+    "enGB": "BipedAzataStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineazatastartingevolutionsfeature.name",
+    "enGB": "SerpentineAzataStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineazatastartingevolutionsfeature.description",
+    "enGB": "SerpentineAzataStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddaemonstartingevolutionsfeature.name",
+    "enGB": "BipedDaemonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddaemonstartingevolutionsfeature.description",
+    "enGB": "BipedDaemonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.abberantdaemonstartingevolutionsfeature.name",
+    "enGB": "AbberantDaemonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.abberantdaemonstartingevolutionsfeature.description",
+    "enGB": "AbberantDaemonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinedaemonstartingevolutionsfeature.name",
+    "enGB": "SerpentineDaemonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinedaemonstartingevolutionsfeature.description",
+    "enGB": "SerpentineDaemonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinedeepwaterstartingevolutionsfeature.name",
+    "enGB": "SerpentineDeepwaterStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinedeepwaterstartingevolutionsfeature.description",
+    "enGB": "SerpentineDeepwaterStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.abberantdemonstartingevolutionsfeature.name",
+    "enGB": "AbberantDemonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.abberantdemonstartingevolutionsfeature.description",
+    "enGB": "AbberantDemonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddemonstartingevolutionsfeature.name",
+    "enGB": "BipedDemonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddemonstartingevolutionsfeature.description",
+    "enGB": "BipedDemonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupeddemonstartingevolutionsfeature.name",
+    "enGB": "QuadrupedDemonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupeddemonstartingevolutionsfeature.description",
+    "enGB": "QuadrupedDemonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinedemonstartingevolutionsfeature.name",
+    "enGB": "SerpentineDemonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinedemonstartingevolutionsfeature.description",
+    "enGB": "SerpentineDemonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddevilstartingevolutionsfeature.name",
+    "enGB": "BipedDevilStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddevilstartingevolutionsfeature.description",
+    "enGB": "BipedDevilStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddivstartingevolutionsfeature.name",
+    "enGB": "BipedDivStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipeddivstartingevolutionsfeature.description",
+    "enGB": "BipedDivStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.abberantelementalstartingevolutionsfeature.name",
+    "enGB": "AbberantElementalStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.abberantelementalstartingevolutionsfeature.description",
+    "enGB": "AbberantElementalStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedelementalstartingevolutionsfeature.name",
+    "enGB": "BipedElementalStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedelementalstartingevolutionsfeature.description",
+    "enGB": "BipedElementalStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineelementalstartingevolutionsfeature.name",
+    "enGB": "SerpentineElementalStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineelementalstartingevolutionsfeature.description",
+    "enGB": "SerpentineElementalStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedgeniestartingevolutionsfeature.name",
+    "enGB": "BipedGenieStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedgeniestartingevolutionsfeature.description",
+    "enGB": "BipedGenieStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedinevitablestartingevolutionsfeature.name",
+    "enGB": "BipedInevitableStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedinevitablestartingevolutionsfeature.description",
+    "enGB": "BipedInevitableStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedkamistartingevolutionsfeature.name",
+    "enGB": "BipedKamiStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedkamistartingevolutionsfeature.description",
+    "enGB": "BipedKamiStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedkytonstartingevolutionsfeature.name",
+    "enGB": "BipedKytonStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedkytonstartingevolutionsfeature.description",
+    "enGB": "BipedKytonStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineproteanstartingevolutionsfeature.name",
+    "enGB": "SerpentineProteanStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineproteanstartingevolutionsfeature.description",
+    "enGB": "SerpentineProteanStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedpsychopompstartingevolutionsfeature.name",
+    "enGB": "BipedPsychopompStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedpsychopompstartingevolutionsfeature.description",
+    "enGB": "BipedPsychopompStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedpsychopompstartingevolutionsfeature.name",
+    "enGB": "QuadrupedPsychopompStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedpsychopompstartingevolutionsfeature.description",
+    "enGB": "QuadrupedPsychopompStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinepsychopompstartingevolutionsfeature.name",
+    "enGB": "SerpentinePsychopompStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinepsychopompstartingevolutionsfeature.description",
+    "enGB": "SerpentinePsychopompStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedradiantstartingevolutionsfeature.name",
+    "enGB": "BipedRadiantStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedradiantstartingevolutionsfeature.description",
+    "enGB": "BipedRadiantStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedradiantstartingevolutionsfeature.name",
+    "enGB": "QuadrupedRadiantStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedradiantstartingevolutionsfeature.description",
+    "enGB": "QuadrupedRadiantStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedshadowstartingevolutionsfeature.name",
+    "enGB": "BipedShadowStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedshadowstartingevolutionsfeature.description",
+    "enGB": "BipedShadowStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineshadowstartingevolutionsfeature.name",
+    "enGB": "SerpentineShadowStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentineshadowstartingevolutionsfeature.description",
+    "enGB": "SerpentineShadowStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedstorykinstartingevolutionsfeature.name",
+    "enGB": "BipedStorykinStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedstorykinstartingevolutionsfeature.description",
+    "enGB": "BipedStorykinStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedstorykinstartingevolutionsfeature.name",
+    "enGB": "QuadrupedStorykinStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.quadrupedstorykinstartingevolutionsfeature.description",
+    "enGB": "QuadrupedStorykinStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinestorykinstartingevolutionsfeature.name",
+    "enGB": "SerpentineStorykinStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.serpentinestorykinstartingevolutionsfeature.description",
+    "enGB": "SerpentineStorykinStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedtwinnedstartingevolutionsfeature.name",
+    "enGB": "BipedTwinnedStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedtwinnedstartingevolutionsfeature.description",
+    "enGB": "BipedTwinnedStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.bipedvoidstartingevolutionsfeature.name",
+    "enGB": "BipedVoidStartingEvolutionsFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.bipedvoidstartingevolutionsfeature.description",
+    "enGB": "BipedVoidStartingEvolutionsFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.summoneraspectfeature.name",
+    "enGB": "SummonerAspectFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.summoneraspectfeature.description",
+    "enGB": "SummonerAspectFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.summoneraspectgreaterfeature.name",
+    "enGB": "SummonerAspectGreaterFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.summoneraspectgreaterfeature.description",
+    "enGB": "SummonerAspectGreaterFeature.Description"
   }
 ]

@@ -1,2 +1,618 @@
 [
+  {
+    "Key": "wotr-making-friends.evolutionbiteability.name",
+    "enGB": "EvolutionBiteAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbiteability.description",
+    "enGB": "EvolutionBiteAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiongoreability.name",
+    "enGB": "EvolutionGoreAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiongoreability.description",
+    "enGB": "EvolutionGoreAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsability.name",
+    "enGB": "EvolutionClawsAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsability.description",
+    "enGB": "EvolutionClawsAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionmagicattacksability.name",
+    "enGB": "EvolutionMagicAttacksAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionmagicattacksability.description",
+    "enGB": "EvolutionMagicAttacksAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionnaturalarmorability.name",
+    "enGB": "EvolutionNaturalArmorAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionnaturalarmorability.description",
+    "enGB": "EvolutionNaturalArmorAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersability.name",
+    "enGB": "EvolutionPincersAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersability.description",
+    "enGB": "EvolutionPincersAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceacidability.name",
+    "enGB": "EvolutionResistanceAcidAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceacidability.description",
+    "enGB": "EvolutionResistanceAcidAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancecoldability.name",
+    "enGB": "EvolutionResistanceColdAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancecoldability.description",
+    "enGB": "EvolutionResistanceColdAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceelectricityability.name",
+    "enGB": "EvolutionResistanceElectricityAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistanceelectricityability.description",
+    "enGB": "EvolutionResistanceElectricityAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancefireability.name",
+    "enGB": "EvolutionResistanceFireAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancefireability.description",
+    "enGB": "EvolutionResistanceFireAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancesonicability.name",
+    "enGB": "EvolutionResistanceSonicAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionresistancesonicability.description",
+    "enGB": "EvolutionResistanceSonicAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionscentability.name",
+    "enGB": "EvolutionScentAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionscentability.description",
+    "enGB": "EvolutionScentAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillperceptionability.name",
+    "enGB": "EvolutionSkilledSkillPerceptionAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillperceptionability.description",
+    "enGB": "EvolutionSkilledSkillPerceptionAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillthieveryability.name",
+    "enGB": "EvolutionSkilledSkillThieveryAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillthieveryability.description",
+    "enGB": "EvolutionSkilledSkillThieveryAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillusemagicdeviceability.name",
+    "enGB": "EvolutionSkilledSkillUseMagicDeviceAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionskilledskillusemagicdeviceability.description",
+    "enGB": "EvolutionSkilledSkillUseMagicDeviceAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamability.name",
+    "enGB": "EvolutionSlamAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamability.description",
+    "enGB": "EvolutionSlamAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspikeability.name",
+    "enGB": "EvolutionSpikeAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspikeability.description",
+    "enGB": "EvolutionSpikeAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailability.name",
+    "enGB": "EvolutionTailAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailability.description",
+    "enGB": "EvolutionTailAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailslapability.name",
+    "enGB": "EvolutionTailSlapAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontailslapability.description",
+    "enGB": "EvolutionTailSlapAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentacleability.name",
+    "enGB": "EvolutionTentacleAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentacleability.description",
+    "enGB": "EvolutionTentacleAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassability.name",
+    "enGB": "EvolutionTentacleMassAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassability.description",
+    "enGB": "EvolutionTentacleMassAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwingbuffetability.name",
+    "enGB": "EvolutionWingBuffetAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwingbuffetability.description",
+    "enGB": "EvolutionWingBuffetAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasestrengthability.name",
+    "enGB": "EvolutionAbilityIncreaseStrengthAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasestrengthability.description",
+    "enGB": "EvolutionAbilityIncreaseStrengthAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasedexterityability.name",
+    "enGB": "EvolutionAbilityIncreaseDexterityAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasedexterityability.description",
+    "enGB": "EvolutionAbilityIncreaseDexterityAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseconstitutionability.name",
+    "enGB": "EvolutionAbilityIncreaseConstitutionAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseconstitutionability.description",
+    "enGB": "EvolutionAbilityIncreaseConstitutionAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseintelligenceability.name",
+    "enGB": "EvolutionAbilityIncreaseIntelligenceAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreaseintelligenceability.description",
+    "enGB": "EvolutionAbilityIncreaseIntelligenceAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasewisdomability.name",
+    "enGB": "EvolutionAbilityIncreaseWisdomAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasewisdomability.description",
+    "enGB": "EvolutionAbilityIncreaseWisdomAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasecharismaability.name",
+    "enGB": "EvolutionAbilityIncreaseCharismaAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionabilityincreasecharismaability.description",
+    "enGB": "EvolutionAbilityIncreaseCharismaAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzyability.name",
+    "enGB": "EvolutionBloodFrenzyAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzyability.description",
+    "enGB": "EvolutionBloodFrenzyAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksacidability.name",
+    "enGB": "EvolutionEnergyAttacksAcidAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksacidability.description",
+    "enGB": "EvolutionEnergyAttacksAcidAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackscoldability.name",
+    "enGB": "EvolutionEnergyAttacksColdAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackscoldability.description",
+    "enGB": "EvolutionEnergyAttacksColdAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackselectricityability.name",
+    "enGB": "EvolutionEnergyAttacksElectricityAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattackselectricityability.description",
+    "enGB": "EvolutionEnergyAttacksElectricityAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksfireability.name",
+    "enGB": "EvolutionEnergyAttacksFireAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionenergyattacksfireability.description",
+    "enGB": "EvolutionEnergyAttacksFireAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionflightability.name",
+    "enGB": "EvolutionFlightAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionflightability.description",
+    "enGB": "EvolutionFlightAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbsarmsability.name",
+    "enGB": "EvolutionLimbsArmsAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbsarmsability.description",
+    "enGB": "EvolutionLimbsArmsAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsability.name",
+    "enGB": "EvolutionLimbsLegsAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsability.description",
+    "enGB": "EvolutionLimbsLegsAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionrendability.name",
+    "enGB": "EvolutionRendAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionrendability.description",
+    "enGB": "EvolutionRendAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontrampleability.name",
+    "enGB": "EvolutionTrampleAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontrampleability.description",
+    "enGB": "EvolutionTrampleAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontripability.name",
+    "enGB": "EvolutionTripAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontripability.description",
+    "enGB": "EvolutionTripAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbullrushability.name",
+    "enGB": "EvolutionBullrushAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbullrushability.description",
+    "enGB": "EvolutionBullrushAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsunderarmorability.name",
+    "enGB": "EvolutionSunderarmorAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionsunderarmorability.description",
+    "enGB": "EvolutionSunderarmorAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiondamagereductionability.name",
+    "enGB": "EvolutionDamageReductionAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiondamagereductionability.description",
+    "enGB": "EvolutionDamageReductionAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpounceability.name",
+    "enGB": "EvolutionPounceAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpounceability.description",
+    "enGB": "EvolutionPounceAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwebability.name",
+    "enGB": "EvolutionWebAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionwebability.description",
+    "enGB": "EvolutionWebAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimproveddamageability.name",
+    "enGB": "EvolutionImprovedDamageAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimproveddamageability.description",
+    "enGB": "EvolutionImprovedDamageAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionreachability.name",
+    "enGB": "EvolutionReachAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionreachability.description",
+    "enGB": "EvolutionReachAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawslimbsability.name",
+    "enGB": "EvolutionClawsLimbsAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawslimbsability.description",
+    "enGB": "EvolutionClawsLimbsAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincerslimbsability.name",
+    "enGB": "EvolutionPincersLimbsAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincerslimbsability.description",
+    "enGB": "EvolutionPincersLimbsAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamlimbsability.name",
+    "enGB": "EvolutionSlamLimbsAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamlimbsability.description",
+    "enGB": "EvolutionSlamLimbsAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionamorphousability.name",
+    "enGB": "EvolutionAmorphousAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionamorphousability.description",
+    "enGB": "EvolutionAmorphousAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionblindsightability.name",
+    "enGB": "EvolutionBlindsightAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionblindsightability.description",
+    "enGB": "EvolutionBlindsightAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponacidability.name",
+    "enGB": "EvolutionBreathWeaponAcidAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponacidability.description",
+    "enGB": "EvolutionBreathWeaponAcidAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponcoldability.name",
+    "enGB": "EvolutionBreathWeaponColdAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponcoldability.description",
+    "enGB": "EvolutionBreathWeaponColdAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponelectricityability.name",
+    "enGB": "EvolutionBreathWeaponElectricityAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponelectricityability.description",
+    "enGB": "EvolutionBreathWeaponElectricityAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponfireability.name",
+    "enGB": "EvolutionBreathWeaponFireAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponfireability.description",
+    "enGB": "EvolutionBreathWeaponFireAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionfasthealingability.name",
+    "enGB": "EvolutionFastHealingAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionfasthealingability.description",
+    "enGB": "EvolutionFastHealingAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlargeability.name",
+    "enGB": "EvolutionLargeAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlargeability.description",
+    "enGB": "EvolutionLargeAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiononeabilitybase.name",
+    "enGB": "EvolutionOneAbilityBase.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiononeabilitybase.description",
+    "enGB": "EvolutionOneAbilityBase.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontwoabilitybase.name",
+    "enGB": "EvolutionTwoAbilityBase.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontwoabilitybase.description",
+    "enGB": "EvolutionTwoAbilityBase.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionthreeabilitybase.name",
+    "enGB": "EvolutionThreeAbilityBase.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionthreeabilitybase.description",
+    "enGB": "EvolutionThreeAbilityBase.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionfourabilitybase.name",
+    "enGB": "EvolutionFourAbilityBase.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionfourabilitybase.description",
+    "enGB": "EvolutionFourAbilityBase.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsactivatableability.name",
+    "enGB": "EvolutionClawsActivatableAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsactivatableability.description",
+    "enGB": "EvolutionClawsActivatableAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsbuff.name",
+    "enGB": "EvolutionClawsBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionclawsbuff.description",
+    "enGB": "EvolutionClawsBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersactivatableability.name",
+    "enGB": "EvolutionPincersActivatableAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersactivatableability.description",
+    "enGB": "EvolutionPincersActivatableAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersbuff.name",
+    "enGB": "EvolutionPincersBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionpincersbuff.description",
+    "enGB": "EvolutionPincersBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamactivatableability.name",
+    "enGB": "EvolutionSlamActivatableAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslamactivatableability.description",
+    "enGB": "EvolutionSlamActivatableAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslambuff.name",
+    "enGB": "EvolutionSlamBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionslambuff.description",
+    "enGB": "EvolutionSlamBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassactivatableability.name",
+    "enGB": "EvolutionTentacleMassActivatableAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassactivatableability.description",
+    "enGB": "EvolutionTentacleMassActivatableAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassbuff.name",
+    "enGB": "EvolutionTentacleMassBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutiontentaclemassbuff.description",
+    "enGB": "EvolutionTentacleMassBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzyactivatableability.name",
+    "enGB": "EvolutionBloodFrenzyActivatableAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzyactivatableability.description",
+    "enGB": "EvolutionBloodFrenzyActivatableAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzybuff.name",
+    "enGB": "EvolutionBloodFrenzyBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbloodfrenzybuff.description",
+    "enGB": "EvolutionBloodFrenzyBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsactivatableability.name",
+    "enGB": "EvolutionLimbsLegsActivatableAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsactivatableability.description",
+    "enGB": "EvolutionLimbsLegsActivatableAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsbuff.name",
+    "enGB": "EvolutionLimbsLegsBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionlimbslegsbuff.description",
+    "enGB": "EvolutionLimbsLegsBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponacidbreathability.name",
+    "enGB": "EvolutionBreathWeaponAcidBreathAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponacidbreathability.description",
+    "enGB": "EvolutionBreathWeaponAcidBreathAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponcoldbreathability.name",
+    "enGB": "EvolutionBreathWeaponColdBreathAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponcoldbreathability.description",
+    "enGB": "EvolutionBreathWeaponColdBreathAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponelectricitybreathability.name",
+    "enGB": "EvolutionBreathWeaponElectricityBreathAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponelectricitybreathability.description",
+    "enGB": "EvolutionBreathWeaponElectricityBreathAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponfirebreathability.name",
+    "enGB": "EvolutionBreathWeaponFireBreathAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionbreathweaponfirebreathability.description",
+    "enGB": "EvolutionBreathWeaponFireBreathAbility.Description"
+  }
 ]

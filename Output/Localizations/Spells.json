@@ -214,5 +214,133 @@
   {
     "Key": "wotr-making-friends.overstimulatespell.description",
     "enGB": "You deprive a creature of the blissful oblivion of unconsciousness, either to keep it going despite grievous injuries or to prolong its suffering. For the duration of the spell, the target gains the ferocity ability, allowing it to remain conscious and continue fighting even if its hit point total is below 0. The target is still staggered and loses 1 hit point each round, and the target still dies when its hit point total reaches a negative amount equal to its Constitution score."
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbaneability.name",
+    "enGB": "EidolonAddSpellBaneAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbaneability.description",
+    "enGB": "EidolonAddSpellBaneAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblinkability.name",
+    "enGB": "EidolonAddSpellBlinkAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblinkability.description",
+    "enGB": "EidolonAddSpellBlinkAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblurability.name",
+    "enGB": "EidolonAddSpellBlurAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellblurability.description",
+    "enGB": "EidolonAddSpellBlurAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbreathoflifeability.name",
+    "enGB": "EidolonAddSpellBreathOfLifeAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellbreathoflifeability.description",
+    "enGB": "EidolonAddSpellBreathOfLifeAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcrushingdespairability.name",
+    "enGB": "EidolonAddSpellCrushingDespairAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcrushingdespairability.description",
+    "enGB": "EidolonAddSpellCrushingDespairAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcureseriouswoundsability.name",
+    "enGB": "EidolonAddSpellCureSeriousWoundsAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellcureseriouswoundsability.description",
+    "enGB": "EidolonAddSpellCureSeriousWoundsAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelldimensiondoorability.name",
+    "enGB": "EidolonAddSpellDimensionDoorAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelldimensiondoorability.description",
+    "enGB": "EidolonAddSpellDimensionDoorAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellgoodhopeability.name",
+    "enGB": "EidolonAddSpellGoodHopeAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellgoodhopeability.description",
+    "enGB": "EidolonAddSpellGoodHopeAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellhasteability.name",
+    "enGB": "EidolonAddSpellHasteAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellhasteability.description",
+    "enGB": "EidolonAddSpellHasteAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellinvisibilityability.name",
+    "enGB": "EidolonAddSpellInvisibilityAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellinvisibilityability.description",
+    "enGB": "EidolonAddSpellInvisibilityAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellslowability.name",
+    "enGB": "EidolonAddSpellSlowAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspellslowability.description",
+    "enGB": "EidolonAddSpellSlowAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltrueseeingability.name",
+    "enGB": "EidolonAddSpellTrueSeeingAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltrueseeingability.description",
+    "enGB": "EidolonAddSpellTrueSeeingAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltruestrikeability.name",
+    "enGB": "EidolonAddSpellTrueStrikeAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltruestrikeability.description",
+    "enGB": "EidolonAddSpellTrueStrikeAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddbreathoflifespellbuff.name",
+    "enGB": "EidolonAddBreathOfLifeSpellBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddbreathoflifespellbuff.description",
+    "enGB": "EidolonAddBreathOfLifeSpellBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspellresistanceability.name",
+    "enGB": "EvolutionSpellResistanceAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionspellresistanceability.description",
+    "enGB": "EvolutionSpellResistanceAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.transmogrifyspell.name",
+    "enGB": "TransmogrifySpell.Name"
+  },
+  {
+    "Key": "wotr-making-friends.transmogrifyspell.description",
+    "enGB": "TransmogrifySpell.Description"
   }
 ]

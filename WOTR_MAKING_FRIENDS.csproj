@@ -15,29 +15,29 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Output\Localization\CharacterClasses.json" />
-    <None Remove="Output\Localization\Features.json" />
-    <None Remove="Output\Localization\Other.json" />
-    <None Remove="Output\Localization\Progression.json" />
-    <None Remove="Output\Localization\Scrolls.json" />
-    <None Remove="Output\Localization\Settings.json" />
-    <None Remove="Output\Localization\Spells.json" />
-    <None Remove="Output\Localization\SummonerClass.json" />
-    <None Remove="Output\Localization\SummonerSpellbook.json" />
-    <None Remove="Output\Localization\Units.json" />
+    <None Remove="Output\Localizations\CharacterClasses.json" />
+    <None Remove="Output\Localizations\Features.json" />
+    <None Remove="Output\Localizations\Other.json" />
+    <None Remove="Output\Localizations\Progression.json" />
+    <None Remove="Output\Localizations\Scrolls.json" />
+    <None Remove="Output\Localizations\Settings.json" />
+    <None Remove="Output\Localizations\Spells.json" />
+    <None Remove="Output\Localizations\SummonerClass.json" />
+    <None Remove="Output\Localizations\SummonerSpellbook.json" />
+    <None Remove="Output\Localizations\Units.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Output\Localization\CharacterClasses.json" />
-    <EmbeddedResource Include="Output\Localization\Features.json" />
-    <EmbeddedResource Include="Output\Localization\Other.json" />
-    <EmbeddedResource Include="Output\Localization\Progression.json" />
-    <EmbeddedResource Include="Output\Localization\Scrolls.json" />
-    <EmbeddedResource Include="Output\Localization\Settings.json" />
-    <EmbeddedResource Include="Output\Localization\Spells.json" />
-    <EmbeddedResource Include="Output\Localization\SummonerClass.json" />
-    <EmbeddedResource Include="Output\Localization\SummonerSpellbook.json" />
-    <EmbeddedResource Include="Output\Localization\Units.json" />
+    <EmbeddedResource Include="Output\Localizations\CharacterClasses.json" />
+    <EmbeddedResource Include="Output\Localizations\Features.json" />
+    <EmbeddedResource Include="Output\Localizations\Other.json" />
+    <EmbeddedResource Include="Output\Localizations\Progression.json" />
+    <EmbeddedResource Include="Output\Localizations\Scrolls.json" />
+    <EmbeddedResource Include="Output\Localizations\Settings.json" />
+    <EmbeddedResource Include="Output\Localizations\Spells.json" />
+    <EmbeddedResource Include="Output\Localizations\SummonerClass.json" />
+    <EmbeddedResource Include="Output\Localizations\SummonerSpellbook.json" />
+    <EmbeddedResource Include="Output\Localizations\Units.json" />
   </ItemGroup>
 
   <ItemGroup>

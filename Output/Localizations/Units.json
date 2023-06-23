@@ -26,5 +26,149 @@
   {
     "Key": "wotr-making-friends.eidolonunit.name",
     "enGB": "Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstatbonus.name",
+    "enGB": "EidolonStatBonus.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonstatbonus.description",
+    "enGB": "EidolonStatBonus.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityconsumefearability.name",
+    "enGB": "EidolonAddAbilityConsumeFearAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityconsumefearability.description",
+    "enGB": "EidolonAddAbilityConsumeFearAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilitydivinetrothability.name",
+    "enGB": "EidolonAddAbilityDivineTrothAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilitydivinetrothability.description",
+    "enGB": "EidolonAddAbilityDivineTrothAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityincoporealability.name",
+    "enGB": "EidolonAddAbilityIncoporealAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityincoporealability.description",
+    "enGB": "EidolonAddAbilityIncoporealAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityincoporealbuff.name",
+    "enGB": "EidolonAddAbilityIncoporealBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityincoporealbuff.description",
+    "enGB": "EidolonAddAbilityIncoporealBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeability.name",
+    "enGB": "EidolonAddAbilityUnnervingGazeAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeability.description",
+    "enGB": "EidolonAddAbilityUnnervingGazeAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazecooldownbuff.name",
+    "enGB": "EidolonAddAbilityUnnervingGazeCooldownBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazecooldownbuff.description",
+    "enGB": "EidolonAddAbilityUnnervingGazeCooldownBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareaability.name",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareaability.description",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareastaggerability.name",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaStaggerAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareastaggerability.description",
+    "enGB": "EidolonAddAbilityUnnervingGazeAreaStaggerAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonenergydrainbitebuff.name",
+    "enGB": "EidolonEnergyDrainBiteBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonenergydrainbitebuff.description",
+    "enGB": "EidolonEnergyDrainBiteBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfrightfulpresencebuff.name",
+    "enGB": "EidolonFrightfulPresenceBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfrightfulpresencebuff.description",
+    "enGB": "EidolonFrightfulPresenceBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonghosttouchbuff.name",
+    "enGB": "EidolonGhostTouchBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonghosttouchbuff.description",
+    "enGB": "EidolonGhostTouchBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmagelightbuff.name",
+    "enGB": "EidolonMageLightBuff.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonmagelightbuff.description",
+    "enGB": "EidolonMageLightBuff.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityacidability.name",
+    "enGB": "EvolutionImmunityAcidAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityacidability.description",
+    "enGB": "EvolutionImmunityAcidAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitycoldability.name",
+    "enGB": "EvolutionImmunityColdAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitycoldability.description",
+    "enGB": "EvolutionImmunityColdAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityelectricityability.name",
+    "enGB": "EvolutionImmunityElectricityAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityelectricityability.description",
+    "enGB": "EvolutionImmunityElectricityAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityfireability.name",
+    "enGB": "EvolutionImmunityFireAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunityfireability.description",
+    "enGB": "EvolutionImmunityFireAbility.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitysonicability.name",
+    "enGB": "EvolutionImmunitySonicAbility.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutionimmunitysonicability.description",
+    "enGB": "EvolutionImmunitySonicAbility.Description"
   }
 ]
