@@ -201,59 +201,59 @@
   },
   {
     "Key": "wotr-making-friends.eidolonrankfeature.name",
-    "enGB": "EidolonRankFeature.Name"
+    "enGB": "Eidolon Rank"
   },
   {
     "Key": "wotr-making-friends.eidolonrankfeature.description",
-    "enGB": "EidolonRankFeature.Description"
+    "enGB": "Eidolon Rank"
   },
   {
     "Key": "wotr-making-friends.addevolutionpointsfeature.name",
-    "enGB": "AddEvolutionPointsFeature.Name"
+    "enGB": "Add Evolution Points"
   },
   {
     "Key": "wotr-making-friends.addevolutionpointsfeature.description",
-    "enGB": "AddEvolutionPointsFeature.Description"
+    "enGB": "Add Evolution Points"
   },
   {
     "Key": "wotr-making-friends.extraevolutionpoolfeature.name",
-    "enGB": "ExtraEvolutionPoolFeature.Name"
+    "enGB": "Extra Evolution Pool"
   },
   {
     "Key": "wotr-making-friends.extraevolutionpoolfeature.description",
-    "enGB": "ExtraEvolutionPoolFeature.Description"
+    "enGB": "The eidolon gains an extra point in its evolution pool."
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityconsumefearfeature.name",
-    "enGB": "EidolonAddAbilityConsumeFearFeature.Name"
+    "enGB": "Consume Fear"
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityconsumefearfeature.description",
-    "enGB": "EidolonAddAbilityConsumeFearFeature.Description"
+    "enGB": "The eidolon gains the ability to cast Consume Fear at will.\n You make the target appear more intimidating, while making it possible to feed on fear. The target gains a bonus on Persuasion checks made to intimidate equal to your caster level. Every round the target is healed for 1 hp for every shaken or frightened enemy in 30 feet radius.\nWhen the spell is cast, every enemy in 10 feet around the target must make a Will saving throw or be frightened for 1d4 rounds."
   },
   {
     "Key": "wotr-making-friends.eidolonancestorbonusfeatfeature.name",
-    "enGB": "EidolonAncestorBonusFeatFeature.Name"
+    "enGB": "Increase Stat"
   },
   {
     "Key": "wotr-making-friends.eidolonancestorbonusfeatfeature.description",
-    "enGB": "EidolonAncestorBonusFeatFeature.Description"
+    "enGB": "The eidolon gains a choice of increase a single stat by 2."
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilitydivinetrothfeature.name",
-    "enGB": "EidolonAddAbilityDivineTrothFeature.Name"
+    "enGB": "Divine Troth"
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilitydivinetrothfeature.description",
-    "enGB": "EidolonAddAbilityDivineTrothFeature.Description"
+    "enGB": "The eidolon gains the Divine Troth and Courageous Defense feats."
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityincoporealfeature.name",
-    "enGB": "EidolonAddAbilityIncoporealFeature.Name"
+    "enGB": "Incoporeal Form"
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityincoporealfeature.description",
-    "enGB": "EidolonAddAbilityIncoporealFeature.Description"
+    "enGB": "The eidolon gains the ability to become incoporeal. Attacking breaks this effect."
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityunnervinggazefeature.name",
