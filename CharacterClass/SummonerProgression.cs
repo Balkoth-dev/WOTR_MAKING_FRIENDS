@@ -1,11 +1,8 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
-using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
     internal class SummonerProgression

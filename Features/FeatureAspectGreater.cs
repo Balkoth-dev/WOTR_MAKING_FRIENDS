@@ -3,10 +3,8 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
-using Kingmaker.UnitLogic;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureAspectGreater
@@ -27,7 +25,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDisplayName(IClass.Name)
                 .SetDescription(IClass.Description)
                 .SetIcon(FeatureRefs.GreaterChimericAspectFeature.Reference.Get().m_Icon)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionThreeAbilityBase")), 
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionThreeAbilityBase")),
                                   BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionFourAbilityBase")),
                                   BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("ExtraEvolutionPoolFeature4")) })
                 .ConfigureWithLogging();

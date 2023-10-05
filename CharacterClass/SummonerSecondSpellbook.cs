@@ -8,7 +8,6 @@ using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Localization;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
     internal class SummonerSecondSpellbook

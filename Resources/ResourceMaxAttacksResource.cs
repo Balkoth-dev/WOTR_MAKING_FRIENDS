@@ -1,7 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Resources
 {
     internal class ResourceMaxAttacksResource

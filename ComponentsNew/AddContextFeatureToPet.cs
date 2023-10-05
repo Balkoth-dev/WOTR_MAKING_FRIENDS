@@ -1,20 +1,15 @@
-﻿using Kingmaker.Blueprints.Classes;
+﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.Blueprints;
-using Kingmaker.EntitySystem.Entities;
 using Kingmaker.EntitySystem;
+using Kingmaker.EntitySystem.Entities;
 using Kingmaker.Enums;
-using Kingmaker.PubSubSystem;
-using Kingmaker.UnitLogic.Parts;
 using Kingmaker.UnitLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.UnitLogic.Parts;
+using System;
+using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
@@ -45,7 +40,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public override void RunAction()
         {
-            if(base.Target.Unit.IsPet || base.Target.Unit.IsReallyInFactPet)
+            if (base.Target.Unit.IsPet || base.Target.Unit.IsReallyInFactPet)
             {
                 return;
             }

@@ -1,15 +1,7 @@
 ﻿using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.ElementsSystem;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Mechanics.Actions;
-using Owlcat.QA.Validation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -27,13 +19,13 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public override void RunAction()
         {
-            if(originalBlueprints.Length != newBlueprints.Length)
+            if (originalBlueprints.Length != newBlueprints.Length)
             {
                 return;
             }
 
             FeatureCollection features = base.Target.Unit.Descriptor.Progression.Features;
-            for (var i = 0;  i < originalBlueprints.Length; i++)
+            for (var i = 0; i < originalBlueprints.Length; i++)
             {
                 if (base.Target.Unit.Progression.Features.HasFact(originalBlueprints[i]))
                 {
@@ -41,7 +33,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                 }
             }
 
-            if(affectCaster)
+            if (affectCaster)
             {
                 FeatureCollection casterFeatures = base.AbilityContext.Caster.Descriptor.Progression.Features;
                 for (var i = 0; i < originalBlueprints.Length; i++)

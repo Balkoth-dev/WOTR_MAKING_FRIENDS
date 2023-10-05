@@ -9,7 +9,6 @@ using Kingmaker.Localization;
 using Kingmaker.RuleSystem;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.CharacterClass
 {
     internal class SummonerClass

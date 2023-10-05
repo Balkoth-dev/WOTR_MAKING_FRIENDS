@@ -257,43 +257,43 @@
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityunnervinggazefeature.name",
-    "enGB": "EidolonAddAbilityUnnervingGazeFeature.Name"
+    "enGB": "Unnerving Gaze"
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityunnervinggazefeature.description",
-    "enGB": "EidolonAddAbilityUnnervingGazeFeature.Description"
+    "enGB": "A kyton eidolon gains an unnerving gaze that manipulates the perceptions of those who look upon it. Unlike typical gaze weapons, a kyton eidolon’s unnerving gaze can affect only one creature per round when the kyton directs its gaze at the target on its turn as a free action. An unnerving gaze has a range of 30 feet, and can be negated by a successful Will save. Any creature that fails the save becomes sickened by the kyton’s grisly modifications for 1 round."
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareafeature.name",
-    "enGB": "EidolonAddAbilityUnnervingGazeAreaFeature.Name"
+    "enGB": "Improved Unnerving Gaze"
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareafeature.description",
-    "enGB": "EidolonAddAbilityUnnervingGazeAreaFeature.Description"
+    "enGB": "A kyton eidolon's gaze will now chain to one other target in 15 feet."
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareastaggerfeature.name",
-    "enGB": "EidolonAddAbilityUnnervingGazeAreaStaggerFeature.Name"
+    "enGB": "Staggering Unnerving Gaze"
   },
   {
     "Key": "wotr-making-friends.eidolonaddabilityunnervinggazeareastaggerfeature.description",
-    "enGB": "EidolonAddAbilityUnnervingGazeAreaStaggerFeature.Description"
+    "enGB": "A kyton eidolon's gaze can stagger a target for one round and chain to two other targets within 15 feet."
   },
   {
     "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsfeature.name",
-    "enGB": "EidolonAddFeatureLayOnHandsFeature.Name"
+    "enGB": "Lay On Hands"
   },
   {
     "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsfeature.description",
-    "enGB": "EidolonAddFeatureLayOnHandsFeature.Description"
+    "enGB": "The eidolon gains the ability to Lay on Hands up to three times per day."
   },
   {
     "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsaddedfeature.name",
-    "enGB": "EidolonAddFeatureLayOnHandsAddedFeature.Name"
+    "enGB": "Lay On Hands"
   },
   {
     "Key": "wotr-making-friends.eidolonaddfeaturelayonhandsaddedfeature.description",
-    "enGB": "EidolonAddFeatureLayOnHandsAddedFeature.Description"
+    "enGB": "A paladin can heal the wounds of others by touch. With one use of this ability, a paladin can heal 1d6 hit points of damage for every two paladin levels she possesses. Using this ability is a standard action.\nAlternatively, a paladin can use this healing power to deal damage to undead creatures, dealing 1d6 points of damage for every two levels the paladin possesses. Using lay on hands in this way requires a successful melee touch attack and doesn't provoke an attack of opportunity. Undead do not receive a saving throw against this damage."
   },
   {
     "Key": "wotr-making-friends.eidolonaddspellbanefeature.name",

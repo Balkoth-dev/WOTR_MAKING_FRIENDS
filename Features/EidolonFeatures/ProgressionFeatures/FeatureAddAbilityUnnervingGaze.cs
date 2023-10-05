@@ -9,15 +9,11 @@ using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Enums;
-using Kingmaker.UnitLogic.Mechanics.Components;
-using System;
+using Kingmaker.Localization;
 using UnityEngine;
-using WOTR_MAKING_FRIENDS.Buffs;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 {
     public static class FeatureAddAbilityUnnervingGaze
@@ -27,8 +23,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string ProgressionFeature = "Eidolon" + "AddAbilityUnnervingGaze";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
-            internal static string Name = Helpers.ObtainString(Feature + ".Name");
-            internal static string Description = Helpers.ObtainString(Feature + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
             internal static Sprite Icon = AbilityRefs.WitchHexEvilEyeAbility.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
@@ -37,8 +33,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             internal static string Ability = IClass.ProgressionFeature + "Ability";
             internal static string Guid = GetGUID.GUIDByName(Ability);
-            internal static string Name = Helpers.ObtainString(Ability + ".Name");
-            internal static string Description = Helpers.ObtainString(Ability + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Ability + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Ability + ".Description");
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
@@ -46,8 +42,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             internal static string Buff = IClass.ProgressionFeature + "CooldownBuff";
             internal static string Guid = GetGUID.GUIDByName(Buff);
-            internal static string Name = Helpers.ObtainString(Buff + ".Name");
-            internal static string Description = Helpers.ObtainString(Buff + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Buff + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Buff + ".Description");
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
@@ -63,7 +59,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
                     .SetDisplayName(IClass.Name)
-                    .SetDisplayName(IClass.Description)
+                    .SetDescription(IClass.Description)
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassAbility.Guid) })
@@ -78,7 +74,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         internal static void CreateAbility()
         {
             var failedEffect = ActionsBuilder.New().ApplyBuffWithDurationSeconds(BuffRefs.Sickened.Cast<BlueprintBuffReference>(), 6).Build();
-            var sickenEffect = ActionsBuilder.New().ConditionalSaved(failed: failedEffect).ApplyBuffWithDurationSeconds(BlueprintTool.GetRef<BlueprintBuffReference>(IClassBuff.Guid),6,toCaster:true).Build();
+            var sickenEffect = ActionsBuilder.New().ConditionalSaved(failed: failedEffect).ApplyBuffWithDurationSeconds(BlueprintTool.GetRef<BlueprintBuffReference>(IClassBuff.Guid), 6, toCaster: true).Build();
 
             AbilityConfigurator.New(IClassAbility.Ability, IClassAbility.Guid)
                 .SetIcon(IClassAbility.Icon)

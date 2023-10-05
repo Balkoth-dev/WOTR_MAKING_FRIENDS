@@ -23,7 +23,6 @@ using WOTR_MAKING_FRIENDS.Spells;
 using WOTR_MAKING_FRIENDS.SummonPools;
 using WOTR_MAKING_FRIENDS.Units;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Settings
 {
     public static class Settings
@@ -80,7 +79,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
 
             SettingsUI.Initialize();
             Main.Log("Settings Initialized");
-            
+
             CreateBlueprintPatches.CreateAllBlueprintPatches();
             CreateFeatures.CreateAllFeatures();
             SummonerClass.CreateSummonerClass();

@@ -4,7 +4,6 @@ using Kingmaker.Blueprints;
 using Kingmaker.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Units
 {
     public static class UnitSummons

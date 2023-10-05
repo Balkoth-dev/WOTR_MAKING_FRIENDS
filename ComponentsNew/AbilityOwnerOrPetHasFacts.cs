@@ -1,23 +1,19 @@
-﻿using Kingmaker.Blueprints.Facts;
+﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Blueprints.Root;
-using Kingmaker.Blueprints;
+using Kingmaker.EntitySystem;
 using Kingmaker.EntitySystem.Entities;
+using Kingmaker.Enums;
+using Kingmaker.UI.Models.Log;
+using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components.Base;
-using System;
+using Kingmaker.UnitLogic.Parts;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Serialization;
 using UnityEngine;
-using Kingmaker.UnitLogic;
-using Kingmaker.UI.Models.Log;
-using Kingmaker.EntitySystem;
-using Kingmaker.UnitLogic.Parts;
-using WOTR_MAKING_FRIENDS.Enums;
-using Kingmaker.Enums;
+using UnityEngine.Serialization;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -81,7 +77,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public bool IsCasterRestrictionPassed(UnitEntityData caster)
         {
-            if(petType != null && CheckPetFacts(caster))
+            if (petType != null && CheckPetFacts(caster))
             { return true; }
 
             m_FactsMissingCache?.Clear();

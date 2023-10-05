@@ -9,7 +9,6 @@ using Kingmaker.Localization;
 using System.Collections.Generic;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
     internal class SpellInfernalHealing

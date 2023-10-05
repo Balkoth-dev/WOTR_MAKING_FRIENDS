@@ -5,7 +5,6 @@ using Kingmaker.Localization;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureShieldAllyGreater

@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 if (caster.Progression.Features.HasFact(m_Feature))
                 {
-                    if(caster.Progression.Features.GetRank(m_Feature) >= featureRank-1)
+                    if (caster.Progression.Features.GetRank(m_Feature) >= featureRank - 1)
                     {
                         costBonus = costMultiplierByRank;
                     }

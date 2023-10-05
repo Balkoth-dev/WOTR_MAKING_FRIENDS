@@ -4,6 +4,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.Localization;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -18,8 +19,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string ProgressionFeature = "Eidolon" + "Elemental20";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
-            internal static string Name = Helpers.ObtainString(Feature + ".Name");
-            internal static string Description = Helpers.ObtainString(Feature + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
             internal static Sprite Icon = FeatureRefs.ElementalBarrage.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
@@ -34,7 +35,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             FeatureSelectionConfigurator.New(IClass.Feature, IClass.Guid)
                 .SetDisplayName(IClass.Name)
-                .SetDisplayName(IClass.Description)
+                .SetDescription(IClass.Description)
                 .SetIcon(IClass.Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroup(IClass.featureGroup)
@@ -50,7 +51,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             FeatureConfigurator.New("EidolonFireElementalCapstoneFeature", GetGUID.GUIDByName("EidolonFireElementalCapstoneFeature"))
                 .SetDisplayName(IClass.Name)
-                .SetDisplayName(IClass.Description)
+                .SetDescription(IClass.Description)
                 .SetIcon(IClass.Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
@@ -59,7 +60,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .ConfigureWithLogging();
             FeatureConfigurator.New("EidolonEarthElementalCapstoneFeature", GetGUID.GUIDByName("EidolonEarthElementalCapstoneFeature"))
                 .SetDisplayName(IClass.Name)
-                .SetDisplayName(IClass.Description)
+                .SetDescription(IClass.Description)
                 .SetIcon(IClass.Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
@@ -68,7 +69,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .ConfigureWithLogging();
             FeatureConfigurator.New("EidolonAirElementalCapstoneFeature", GetGUID.GUIDByName("EidolonAirElementalCapstoneFeature"))
                 .SetDisplayName(IClass.Name)
-                .SetDisplayName(IClass.Description)
+                .SetDescription(IClass.Description)
                 .SetIcon(IClass.Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
@@ -77,7 +78,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .ConfigureWithLogging();
             FeatureConfigurator.New("EidolonWaterElementalCapstoneFeature", GetGUID.GUIDByName("EidolonWaterElementalCapstoneFeature"))
                 .SetDisplayName(IClass.Name)
-                .SetDisplayName(IClass.Description)
+                .SetDescription(IClass.Description)
                 .SetIcon(IClass.Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)

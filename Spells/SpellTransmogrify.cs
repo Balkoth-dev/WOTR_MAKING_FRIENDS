@@ -1,23 +1,18 @@
 ﻿using BlueprintCore.Actions.Builder;
-using BlueprintCore.Actions.Builder.BasicEx;
 using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
-using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
-using Kingmaker.Designers.Mechanics.Buffs;
+using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Enums;
 using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
-using System.Collections;
 using System;
 using System.Collections.Generic;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-using Kingmaker.Blueprints.Classes.Spells;
 
 namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 {
@@ -37,7 +32,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 }
         };
 
-        internal static BlueprintFeatureReference[] originalBlueprintUnitFactReferences = new BlueprintFeatureReference[Enum.GetValues(typeof(Size)).Length+1];
+        internal static BlueprintFeatureReference[] originalBlueprintUnitFactReferences = new BlueprintFeatureReference[Enum.GetValues(typeof(Size)).Length + 1];
         internal static BlueprintFeatureReference[] newBlueprintUnitFactReferences = new BlueprintFeatureReference[Enum.GetValues(typeof(Size)).Length + 1];
         public static void Create()
         {
@@ -70,8 +65,8 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .SetCanTargetSelf(true)
                 .SetRange(AbilityRange.Touch)
                 .AddSpellComponent(SpellSchool.Transmutation)
-                .AddPureRecommendation(priority:Kingmaker.Designers.Mechanics.Recommendations.RecommendationPriority.Good)
-                
+                .AddPureRecommendation(priority: Kingmaker.Designers.Mechanics.Recommendations.RecommendationPriority.Good)
+
                 .AddAbilityEffectRunAction(
                 ActionsBuilder.New().Add<RemoveFactWithGroup>(c => { c.featureGroup = FeatureGroupExtension.EvolutionTransmogrifiable; c.affectCaster = true; })
                                     .Add<AddFactsOnArray>(c => { c.originalBlueprints = originalBlueprintUnitFactReferences; c.newBlueprints = newBlueprintUnitFactReferences; c.affectCaster = true; })

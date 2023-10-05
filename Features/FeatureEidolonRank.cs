@@ -1,10 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.References;
-using Kingmaker.Blueprints;
 using Kingmaker.Localization;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features
 {
     internal class FeatureEidolonRank

@@ -1,15 +1,15 @@
 ﻿using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
-using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using static UnityModManagerNet.UnityModManager;
-using System.Linq;
 
 namespace WOTR_MAKING_FRIENDS.Utilities
 {
@@ -67,6 +67,7 @@ namespace WOTR_MAKING_FRIENDS.Utilities
             string key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
             try
             {
+                Main.Log(key);
                 return LocalizationTool.GetString(key);
             }
             catch

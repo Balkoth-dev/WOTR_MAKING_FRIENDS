@@ -3,7 +3,6 @@ using BlueprintCore.Blueprints.References;
 using Kingmaker.Localization;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     public static class FeatureAddMaxAttacks
@@ -33,7 +32,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .SetRanks(40)
                 .ConfigureWithLogging();
 
-            FeatureConfigurator.New(IClass.Feature+"Aspect", GetGUID.GUIDByName(IClass.Feature + "Aspect"))
+            FeatureConfigurator.New(IClass.Feature + "Aspect", GetGUID.GUIDByName(IClass.Feature + "Aspect"))
                 .SetDisplayName(IClass.Name)
                 .SetDescription(IClass.Description)
                 .SetIcon(AbilityRefs.MagicFangGreater.Reference.Get().m_Icon)

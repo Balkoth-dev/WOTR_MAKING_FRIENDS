@@ -5,6 +5,7 @@ using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Designers.Mechanics.Buffs;
+using Kingmaker.Localization;
 using Kingmaker.UnitLogic.Buffs;
 using Kingmaker.UnitLogic.FactLogic;
 using UnityEngine;
@@ -21,8 +22,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string ProgressionFeature = "Eidolon" + "FrightfulPresence";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
-            internal static string Name = Helpers.ObtainString(Feature + ".Name");
-            internal static string Description = Helpers.ObtainString(Feature + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
             internal static Sprite Icon = AbilityRefs.FrightfulAspect.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
@@ -31,8 +32,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             internal static string Buff = IClass.ProgressionFeature + "Buff";
             internal static string Guid = GetGUID.GUIDByName(Buff);
-            internal static string Name = Helpers.ObtainString(Buff + ".Name");
-            internal static string Description = Helpers.ObtainString(Buff + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Buff + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Buff + ".Description");
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
@@ -46,7 +47,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 
             FeatureConfigurator.New(IClass.Feature, IClass.Guid)
                     .SetDisplayName(IClass.Name)
-                    .SetDisplayName(IClass.Description)
+                    .SetDescription(IClass.Description)
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassBuff.Guid) })
@@ -59,7 +60,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             BuffConfigurator.New(IClassBuff.Buff, IClassBuff.Guid)
                 .CopyFrom(BuffRefs.FrightfulAspectBuff, c => c is not (ChangeUnitSize or AddStatBonus or AddDamageResistancePhysical or AddSpellResistance or PolymorphBonuses))
                     .SetDisplayName(IClass.Name)
-                    .SetDisplayName(IClass.Description)
+                    .SetDescription(IClass.Description)
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .ConfigureWithLogging();

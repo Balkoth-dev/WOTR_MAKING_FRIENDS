@@ -7,12 +7,10 @@ using Kingmaker.Blueprints;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
-using Kingmaker.UnitLogic.Mechanics;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolutions
 {
     internal class EvolutionSpellResistance
@@ -36,7 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                 .SetIcon(IClass.icon)
                 .AddSpellResistance(value: ContextValues.Shared(AbilitySharedValue.StatBonus))
                 .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
-                .AddContextCalculateSharedValue(1, valueType: AbilitySharedValue.StatBonus, value: ContextDice.Value(DiceType.One,ContextValues.Rank(),ContextValues.Constant(10)))
+                .AddContextCalculateSharedValue(1, valueType: AbilitySharedValue.StatBonus, value: ContextDice.Value(DiceType.One, ContextValues.Rank(), ContextValues.Constant(10)))
                 .ConfigureWithLogging(true);
         }
 

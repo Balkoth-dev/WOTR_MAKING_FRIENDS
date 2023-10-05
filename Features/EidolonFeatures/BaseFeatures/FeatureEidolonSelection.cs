@@ -4,7 +4,6 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Enums;
 using System;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.Enums;
@@ -96,7 +95,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                     var feature = FeatureConfigurator.New(eidolonFeatureName, eidolonFeatureGuid)
                                                         .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
                                                         .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
-                                                        .AddPrerequisitePet(false,GroupType.All,false,true, PetTypeExtensions.Eidolon)
+                                                        .AddPrerequisitePet(false, GroupType.All, false, true, PetTypeExtensions.Eidolon)
                                                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                                                         .SetRanks(1)
                                                         .SetReapplyOnLevelUp(true)

@@ -16,7 +16,6 @@ using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.Utility;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Buffs
 {
     internal class BuffSummonStampede

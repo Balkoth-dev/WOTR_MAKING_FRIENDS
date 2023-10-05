@@ -7,7 +7,6 @@ using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components.Base;
 using Kingmaker.UnitLogic.Parts;
 using System;
-using System.Linq;
 using WOTR_MAKING_FRIENDS.Enums;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
@@ -49,12 +48,12 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
             foreach (EntityPartRef<UnitEntityData, UnitPartPet> pet in caster.Pets)
             {
-               UnitPartPet entityPart = pet.EntityPart;
-               bool flag = entityPart != null && entityPart.Type == PetTypeExtensions.Eidolon;
-               if (flag)
-               {
-                   return pet.Entity.Descriptor.Resources.HasEnoughResource(m_Resource, resourceAmount + costBonus);
-               }
+                UnitPartPet entityPart = pet.EntityPart;
+                bool flag = entityPart != null && entityPart.Type == PetTypeExtensions.Eidolon;
+                if (flag)
+                {
+                    return pet.Entity.Descriptor.Resources.HasEnoughResource(m_Resource, resourceAmount + costBonus);
+                }
             }
             return false;
         }

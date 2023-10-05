@@ -2,13 +2,11 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
-using Epic.OnlineServices;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Microsoft.Build.Framework.XamlTypes;
+using Kingmaker.Localization;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -25,8 +23,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string ProgressionFeature = "EidolonStartingEvolutions";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
-            internal static string Name = Helpers.ObtainString(Feature + ".Name");
-            internal static string Description = Helpers.ObtainString(Feature + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
             internal static Sprite Icon = AbilityRefs.MagicFangGreater.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
@@ -49,7 +47,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             var allfeatures = new List<Blueprint<BlueprintFeatureReference>>();
 
-            foreach(var subtype in EidolonSubtypes.eidolonSubtypes)
+            foreach (var subtype in EidolonSubtypes.eidolonSubtypes)
             {
                 foreach (var baseform in subtype.baseForms)
                 {
@@ -59,7 +57,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
 
             FeatureSelectionConfigurator.New(IClass.Feature, IClass.Guid)
                 .SetDisplayName(IClass.Name)
-                .SetDisplayName(IClass.Description)
+                .SetDescription(IClass.Description)
                 .SetIcon(IClass.Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroup(IClass.featureGroup)
@@ -81,8 +79,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("Eidolon" + baseFormName + "BaseFormFeature")));
 
             var addFacts = new List<Blueprint<BlueprintUnitFactReference>>();
-            
-            if(baseForm == EnumsEidolonBaseForm.Biped)
+
+            if (baseForm == EnumsEidolonBaseForm.Biped)
             {
                 addFacts.Add(evolutionLimbsArms);
                 addFacts.Add(evolutionBaseLimbsArms);
@@ -90,7 +88,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 {
                     addFacts.Add(evolutionSlam);
                 }
-                else if(subtype == EnumsEidolonSubtype.Aeon)
+                else if (subtype == EnumsEidolonSubtype.Aeon)
                 {
                     addFacts.Add(evolutionClaws);
                 }

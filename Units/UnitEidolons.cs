@@ -1,5 +1,4 @@
-﻿using BlueprintCore.Blueprints.Configurators;
-using BlueprintCore.Blueprints.References;
+﻿using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.ResourceLinks;

@@ -8,7 +8,6 @@ using Kingmaker.UnitLogic.Abilities.Components;
 using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Abilities
 {
     internal class AbilityMakersCall

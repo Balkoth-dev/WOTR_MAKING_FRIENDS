@@ -1,9 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.References;
 using Kingmaker.Localization;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 {
     public static class FeatureAddEvolutionPoints
@@ -39,7 +37,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .SetRanks(100)
                 .ConfigureWithLogging();
 
-            FeatureConfigurator.New(IClassAddFeature.Feature+"4", GetGUID.GUIDByName(IClassAddFeature.Feature+"4"))
+            FeatureConfigurator.New(IClassAddFeature.Feature + "4", GetGUID.GUIDByName(IClassAddFeature.Feature + "4"))
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), 4)
                 .SetDisplayName(IClassAddFeature.Name)
                 .SetDescription(IClassAddFeature.Description)

@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.Localization;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -15,8 +16,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string ProgressionFeature = "Eidolon" + "ImmunityPetrification";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
-            internal static string Name = Helpers.ObtainString(Feature + ".Name");
-            internal static string Description = Helpers.ObtainString(Feature + ".Description");
+            internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
             internal static Sprite Icon = FeatureRefs.CombatCasting.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
@@ -32,7 +33,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .CopyFrom(FeatureRefs.ImmunityToPetrification, c => true)
                     .SetGroups(IClass.featureGroup)
                     .SetDisplayName(IClass.Name)
-                    .SetDisplayName(IClass.Description)
+                    .SetDescription(IClass.Description)
                     .ConfigureWithLogging();
         }
     }

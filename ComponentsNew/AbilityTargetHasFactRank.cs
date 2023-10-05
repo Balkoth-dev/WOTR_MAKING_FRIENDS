@@ -26,7 +26,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 return false;
             }
-            int nextRankLevel = (1 + currentRank * numLevelsBetweenRanks)+ startLevel;
+            int nextRankLevel = (1 + currentRank * numLevelsBetweenRanks) + startLevel;
 
             return currentLevel >= nextRankLevel;
         }

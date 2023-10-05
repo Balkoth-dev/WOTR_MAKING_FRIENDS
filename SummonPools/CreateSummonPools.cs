@@ -1,7 +1,6 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.SummonPools
 {
     internal class CreateSummonPools

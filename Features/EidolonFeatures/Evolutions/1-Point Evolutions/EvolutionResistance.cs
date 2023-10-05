@@ -10,7 +10,6 @@ using System;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
-
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
 {
     internal class EvolutionResistance
@@ -47,7 +46,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
                 FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "Feature"))
                     .SetIcon(IClass.icons[i])
                     .SetRanks(1)
-                    .AddContextRankConfig(ContextRankConfigs.CharacterLevel(min:10,max:15))
+                    .AddContextRankConfig(ContextRankConfigs.CharacterLevel(min: 10, max: 15))
                     .AddDamageResistanceEnergy(type: skillType, value: ContextValues.Rank())
                     .ConfigureWithLogging(true);
             }
