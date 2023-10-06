@@ -3418,5 +3418,13 @@
   {
     "name": "GrandEidolonFeature",
     "guid": "e675c4b3-5ce2-43a4-9459-ed280055ac97"
+  },
+  {
+    "name": "EidolonAddFeatureLayOnHandsSelfAbility",
+    "guid": "346dc8c5-ee64-4c28-96b5-39d90b5d308a"
+  },
+  {
+    "name": "EidolonAddFeatureLayOnHandsOthersAbility",
+    "guid": "b4593390-fc47-4725-a71a-483d29326a9f"
   }
 ]

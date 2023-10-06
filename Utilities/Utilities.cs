@@ -67,7 +67,6 @@ namespace WOTR_MAKING_FRIENDS.Utilities
             string key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
             try
             {
-                Main.Log(key);
                 return LocalizationTool.GetString(key);
             }
             catch

@@ -27,7 +27,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             CreateEnumFeature("BaseFormFeature", new EnumsEidolonBaseForm());
             CreateSubtypeSelectionFeature();
             CreateEnumFeature("SubtypeFeature", new EnumsEidolonSubtype());
-            CreateEnumFeature("VariantFeature", new EnumsEidolonVariant());
+            //CreateEnumFeature("VariantFeature", new EnumsEidolonVariant());
             CreateSubtypeFeatures("SubtypeFeature");
         }
         internal static void CreateBaseFeature()

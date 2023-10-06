@@ -1,9 +1,13 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
+using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Localization;
+using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
+using Kingmaker.UnitLogic.Mechanics.Components;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
@@ -23,19 +27,25 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }
-        public static class IClassFeature
+        public static class IClassAbilitySelf
         {
-            internal static string Ability = IClass.ProgressionFeature + "AddedFeature";
+            internal static string Ability = IClass.ProgressionFeature + "SelfAbility";
             internal static string Guid = GetGUID.GUIDByName(Ability);
-            internal static LocalizedString Name = Helpers.ObtainString(Ability + ".Name");
-            internal static LocalizedString Description = Helpers.ObtainString(Ability + ".Description");
+            internal static Sprite Icon = IClass.Icon;
+            internal static int Ranks = 1;
+        }
+        public static class IClassAbilityOthers
+        {
+            internal static string Ability = IClass.ProgressionFeature + "OthersAbility";
+            internal static string Guid = GetGUID.GUIDByName(Ability);
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }
         public static void Create()
         {
             CreateFeature();
-            CreateAbility();
+            CreateAbilitySelf();
+            CreateAbilityOthers();
         }
         internal static void CreateFeature()
         {
@@ -44,16 +54,26 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetDescription(IClass.Description)
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
-                    .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassFeature.Guid) })
+                    .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassAbilitySelf.Guid), BlueprintTool.GetRef<BlueprintUnitFactReference>(IClassAbilityOthers.Guid) })
+                    .AddAbilityResources(resource: AbilityResourceRefs.LayOnHandsResource.Cast<BlueprintAbilityResourceReference>())
+                    .AddIncreaseResourceAmount(AbilityResourceRefs.LayOnHandsResource.Cast<BlueprintAbilityResourceReference>(), 2)
                     .SetGroups(IClass.featureGroup)
                     .ConfigureWithLogging();
         }
-        internal static void CreateAbility()
+        internal static void CreateAbilitySelf()
         {
-            FeatureConfigurator.New(IClassFeature.Ability, IClassFeature.Guid)
-                .CopyFrom(FeatureRefs.LayOnHandsFeature, c => true)
-                .AddAbilityResources(3, AbilityResourceRefs.LayOnHandsResource.Cast<BlueprintAbilityResourceReference>(), true, true, true)
+            AbilityConfigurator.New(IClassAbilitySelf.Ability, IClassAbilitySelf.Guid)
+                .CopyFrom(AbilityRefs.LayOnHandsSelf, c => c is not (ContextRankConfig or AbilityCasterAlignment))
+                .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
+                .ConfigureWithLogging();
+        }
+        internal static void CreateAbilityOthers()
+        {
+            AbilityConfigurator.New(IClassAbilityOthers.Ability, IClassAbilityOthers.Guid)
+                .CopyFrom(AbilityRefs.LayOnHandsOthers, c => c is not (ContextRankConfig or AbilityCasterAlignment))
+                .AddContextRankConfig(ContextRankConfigs.CharacterLevel().WithDiv2Progression())
                 .ConfigureWithLogging();
         }
     }
 }
+
