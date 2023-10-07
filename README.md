@@ -1,6 +1,6 @@
 # MAKING FRIENDS (Summoner Mod)
 
-## [![Download zip](https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS/blob/master/DownloadButton.png?raw=true "Download zip")](https://github.com/Balkoth-dev/WOTR_PATH_OF_HELL/releases/latest/download/WOTR_PATH_OF_HELL.zip)
+## [![Download zip](https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS/blob/master/DownloadButton.png?raw=true "Download zip")](https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS/releases/latest/download/WOTR_MAKING_FRIENDS.zip)
 
 Requires ModMenu:
 https://github.com/WittleWolfie/ModMenu
