@@ -19,7 +19,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
             internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
-            internal static Sprite Icon = FeatureRefs.ElementalBarrage.Reference.Get().m_Icon;
+            internal static Sprite Icon = AbilityRefs.RainbowPattern.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 1;
         }

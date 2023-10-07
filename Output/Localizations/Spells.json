@@ -232,6 +232,14 @@
     "enGB": "You deprive a creature of the blissful oblivion of unconsciousness, either to keep it going despite grievous injuries or to prolong its suffering. For the duration of the spell, the target gains the ferocity ability, allowing it to remain conscious and continue fighting even if its hit point total is below 0. The target is still staggered and loses 1 hit point each round, and the target still dies when its hit point total reaches a negative amount equal to its Constitution score."
   },
   {
+    "Key": "wotr-making-friends.transmogrifyspell.name",
+    "enGB": "Transmogrify"
+  },
+  {
+    "Key": "wotr-making-friends.transmogrifyspell.description",
+    "enGB": "Your eidolon’s form shifts and transforms. This spell allows you to change any of the eidolon’s evolutions by allocating its evolution pool on new evolutions. If you have the aspect or greater aspect ability, this spell also allows you to change the evolution points spent to modify you, including removing or adding points as allowed by those abilities."
+  },
+  {
     "Key": "wotr-making-friends.eidolonaddspellbaneability.name",
     "enGB": "EidolonAddSpellBaneAbility.Name"
   },
@@ -342,21 +350,5 @@
   {
     "Key": "wotr-making-friends.eidolonaddbreathoflifespellbuff.description",
     "enGB": "EidolonAddBreathOfLifeSpellBuff.Description"
-  },
-  {
-    "Key": "wotr-making-friends.evolutionspellresistanceability.name",
-    "enGB": "EvolutionSpellResistanceAbility.Name"
-  },
-  {
-    "Key": "wotr-making-friends.evolutionspellresistanceability.description",
-    "enGB": "EvolutionSpellResistanceAbility.Description"
-  },
-  {
-    "Key": "wotr-making-friends.transmogrifyspell.name",
-    "enGB": "TransmogrifySpell.Name"
-  },
-  {
-    "Key": "wotr-making-friends.transmogrifyspell.description",
-    "enGB": "TransmogrifySpell.Description"
   }
 ]

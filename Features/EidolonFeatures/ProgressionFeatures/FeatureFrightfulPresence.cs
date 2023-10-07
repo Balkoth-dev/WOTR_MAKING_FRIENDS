@@ -32,8 +32,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             internal static string Buff = IClass.ProgressionFeature + "Buff";
             internal static string Guid = GetGUID.GUIDByName(Buff);
-            internal static LocalizedString Name = Helpers.ObtainString(Buff + ".Name");
-            internal static LocalizedString Description = Helpers.ObtainString(Buff + ".Description");
+            internal static LocalizedString Name = IClass.Name;
+            internal static LocalizedString Description = IClass.Description;
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }

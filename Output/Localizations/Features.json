@@ -681,11 +681,11 @@
   },
   {
     "Key": "wotr-making-friends.eidolonelemental1feature.name",
-    "enGB": "Fire Elemental"
+    "enGB": "Elemental Plane"
   },
   {
     "Key": "wotr-making-friends.eidolonelemental1feature.description",
-    "enGB": "Your eidolon is from the plane of fire. At first level, they gain immunity to fire. At level 8 they add 20ft to their movement. At level 20 they gain the fire energy attack evolution and Mobility as a feat."
+    "enGB": "Choose which Elemental plane your Eidolon comes from, this determines their starting immunity and the bonus feat they get at level 20."
   },
   {
     "Key": "wotr-making-friends.eidolonelemental8feature.name",
@@ -697,7 +697,7 @@
   },
   {
     "Key": "wotr-making-friends.eidolonelemental20feature.name",
-    "enGB": "Elemental Body"
+    "enGB": "Elemental Ability"
   },
   {
     "Key": "wotr-making-friends.eidolonelemental20feature.description",
@@ -1149,7 +1149,7 @@
   },
   {
     "Key": "wotr-making-friends.eidolonshadecompanionfeature.description",
-    "enGB": "This spell functions like shadow conjuration, except that it mimics conjuration spells of 8th level or lower. The illusory conjurations created deal four-fifths (80%) damage to nonbelievers, and nondamaging effects are 80% likely to work against nonbelievers."
+    "enGB": "The mysterious undead known as shadows lurk in dark places and feed on those who stray too far from the light. Those who parley with shadows, typically by keeping them at bay with a glowing weapon, may learn great secrets, for they are ideal spies."
   },
   {
     "Key": "wotr-making-friends.eidolonkeketarcompanionfeature.name",
@@ -1933,7 +1933,7 @@
   },
   {
     "Key": "wotr-making-friends.abberantaberrantstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Abberant/Aberrant"
   },
   {
     "Key": "wotr-making-friends.quadrupedaberrantstartingevolutionsfeature.name",
@@ -1941,7 +1941,7 @@
   },
   {
     "Key": "wotr-making-friends.quadrupedaberrantstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Quadruped/Aberrant"
   },
   {
     "Key": "wotr-making-friends.serpentineaberrantstartingevolutionsfeature.name",
@@ -1949,7 +1949,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentineaberrantstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Aberrant"
   },
   {
     "Key": "wotr-making-friends.bipedaeonstartingevolutionsfeature.name",
@@ -1957,7 +1957,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedaeonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Aeon"
   },
   {
     "Key": "wotr-making-friends.serpentineaeonstartingevolutionsfeature.name",
@@ -1965,7 +1965,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentineaeonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Aeon"
   },
   {
     "Key": "wotr-making-friends.bipedagathionstartingevolutionsfeature.name",
@@ -1973,7 +1973,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedagathionstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Agathion"
   },
   {
     "Key": "wotr-making-friends.quadrupedagathionstartingevolutionsfeature.name",
@@ -1981,7 +1981,7 @@
   },
   {
     "Key": "wotr-making-friends.quadrupedagathionstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Quadruped/Agathion"
   },
   {
     "Key": "wotr-making-friends.bipedancestorstartingevolutionsfeature.name",
@@ -1989,7 +1989,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedancestorstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Ancestor"
   },
   {
     "Key": "wotr-making-friends.bipedangelstartingevolutionsfeature.name",
@@ -1997,7 +1997,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedangelstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Angel"
   },
   {
     "Key": "wotr-making-friends.bipedarchonstartingevolutionsfeature.name",
@@ -2005,7 +2005,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedarchonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Archon"
   },
   {
     "Key": "wotr-making-friends.bipedastralstartingevolutionsfeature.name",
@@ -2013,7 +2013,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedastralstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Astral"
   },
   {
     "Key": "wotr-making-friends.serpentineastralstartingevolutionsfeature.name",
@@ -2021,7 +2021,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentineastralstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Astral"
   },
   {
     "Key": "wotr-making-friends.bipedazatastartingevolutionsfeature.name",
@@ -2029,7 +2029,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedazatastartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Azata"
   },
   {
     "Key": "wotr-making-friends.serpentineazatastartingevolutionsfeature.name",
@@ -2037,7 +2037,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentineazatastartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Azata"
   },
   {
     "Key": "wotr-making-friends.bipeddaemonstartingevolutionsfeature.name",
@@ -2045,7 +2045,7 @@
   },
   {
     "Key": "wotr-making-friends.bipeddaemonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Daemon"
   },
   {
     "Key": "wotr-making-friends.abberantdaemonstartingevolutionsfeature.name",
@@ -2053,7 +2053,7 @@
   },
   {
     "Key": "wotr-making-friends.abberantdaemonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Abberant/Daemon"
   },
   {
     "Key": "wotr-making-friends.serpentinedaemonstartingevolutionsfeature.name",
@@ -2061,7 +2061,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentinedaemonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Daemon"
   },
   {
     "Key": "wotr-making-friends.serpentinedeepwaterstartingevolutionsfeature.name",
@@ -2069,7 +2069,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentinedeepwaterstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Deepwater"
   },
   {
     "Key": "wotr-making-friends.abberantdemonstartingevolutionsfeature.name",
@@ -2077,7 +2077,7 @@
   },
   {
     "Key": "wotr-making-friends.abberantdemonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Abberant/Demon"
   },
   {
     "Key": "wotr-making-friends.bipeddemonstartingevolutionsfeature.name",
@@ -2085,7 +2085,7 @@
   },
   {
     "Key": "wotr-making-friends.bipeddemonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Demon"
   },
   {
     "Key": "wotr-making-friends.quadrupeddemonstartingevolutionsfeature.name",
@@ -2093,7 +2093,7 @@
   },
   {
     "Key": "wotr-making-friends.quadrupeddemonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Quadruped/Demon"
   },
   {
     "Key": "wotr-making-friends.serpentinedemonstartingevolutionsfeature.name",
@@ -2101,7 +2101,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentinedemonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Demon"
   },
   {
     "Key": "wotr-making-friends.bipeddevilstartingevolutionsfeature.name",
@@ -2109,7 +2109,7 @@
   },
   {
     "Key": "wotr-making-friends.bipeddevilstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Devil"
   },
   {
     "Key": "wotr-making-friends.bipeddivstartingevolutionsfeature.name",
@@ -2117,7 +2117,7 @@
   },
   {
     "Key": "wotr-making-friends.bipeddivstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Div"
   },
   {
     "Key": "wotr-making-friends.abberantelementalstartingevolutionsfeature.name",
@@ -2125,7 +2125,7 @@
   },
   {
     "Key": "wotr-making-friends.abberantelementalstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Abberant/Elemental"
   },
   {
     "Key": "wotr-making-friends.bipedelementalstartingevolutionsfeature.name",
@@ -2133,7 +2133,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedelementalstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Elemental"
   },
   {
     "Key": "wotr-making-friends.serpentineelementalstartingevolutionsfeature.name",
@@ -2141,7 +2141,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentineelementalstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Elemental"
   },
   {
     "Key": "wotr-making-friends.bipedgeniestartingevolutionsfeature.name",
@@ -2149,7 +2149,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedgeniestartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Genie"
   },
   {
     "Key": "wotr-making-friends.bipedinevitablestartingevolutionsfeature.name",
@@ -2157,7 +2157,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedinevitablestartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Inevitable"
   },
   {
     "Key": "wotr-making-friends.bipedkamistartingevolutionsfeature.name",
@@ -2165,7 +2165,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedkamistartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Kami"
   },
   {
     "Key": "wotr-making-friends.bipedkytonstartingevolutionsfeature.name",
@@ -2173,7 +2173,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedkytonstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Kyton"
   },
   {
     "Key": "wotr-making-friends.serpentineproteanstartingevolutionsfeature.name",
@@ -2181,7 +2181,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentineproteanstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Protean"
   },
   {
     "Key": "wotr-making-friends.bipedpsychopompstartingevolutionsfeature.name",
@@ -2189,7 +2189,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedpsychopompstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Psychopomp"
   },
   {
     "Key": "wotr-making-friends.quadrupedpsychopompstartingevolutionsfeature.name",
@@ -2197,7 +2197,7 @@
   },
   {
     "Key": "wotr-making-friends.quadrupedpsychopompstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Quadruped/Psychopomp"
   },
   {
     "Key": "wotr-making-friends.serpentinepsychopompstartingevolutionsfeature.name",
@@ -2213,7 +2213,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedradiantstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Radiant"
   },
   {
     "Key": "wotr-making-friends.quadrupedradiantstartingevolutionsfeature.name",
@@ -2221,7 +2221,7 @@
   },
   {
     "Key": "wotr-making-friends.quadrupedradiantstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Quadruped/Radiant"
   },
   {
     "Key": "wotr-making-friends.bipedshadowstartingevolutionsfeature.name",
@@ -2229,7 +2229,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedshadowstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Shadow"
   },
   {
     "Key": "wotr-making-friends.serpentineshadowstartingevolutionsfeature.name",
@@ -2237,7 +2237,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentineshadowstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Shadow"
   },
   {
     "Key": "wotr-making-friends.bipedstorykinstartingevolutionsfeature.name",
@@ -2245,7 +2245,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedstorykinstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Storykin"
   },
   {
     "Key": "wotr-making-friends.quadrupedstorykinstartingevolutionsfeature.name",
@@ -2253,7 +2253,7 @@
   },
   {
     "Key": "wotr-making-friends.quadrupedstorykinstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Quadruped/Storykin"
   },
   {
     "Key": "wotr-making-friends.serpentinestorykinstartingevolutionsfeature.name",
@@ -2261,7 +2261,7 @@
   },
   {
     "Key": "wotr-making-friends.serpentinestorykinstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Serpentine/Storykin"
   },
   {
     "Key": "wotr-making-friends.bipedtwinnedstartingevolutionsfeature.name",
@@ -2269,7 +2269,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedtwinnedstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Twinned"
   },
   {
     "Key": "wotr-making-friends.bipedvoidstartingevolutionsfeature.name",
@@ -2277,7 +2277,7 @@
   },
   {
     "Key": "wotr-making-friends.bipedvoidstartingevolutionsfeature.description",
-    "enGB": ""
+    "enGB": "Biped/Void"
   },
   {
     "Key": "wotr-making-friends.summoneraspectfeature.name",
@@ -2296,11 +2296,51 @@
     "enGB": "At 18th level, a summoner can divert more of his eidolon’s evolutions to himself. This ability functions as the aspect ability, but the maximum number of evolution points the summoner can divert increases to 6. In addition, the eidolon loses 1 point from its evolution pool for every 2 points (or fraction thereof ) diverted to the summoner instead of losing 1 point from the evolution pool for each point diverted."
   },
   {
-    "Key": "wotr-making-friends.evolutioncost0feature.name",
-    "enGB": "evolutioncost0feature.Name"
+    "Key": "wotr-making-friends.eidolonfireelementalvariantfeature.name",
+    "enGB": "Fire"
   },
   {
-    "Key": "wotr-making-friends.evolutioncost0feature.description",
-    "enGB": "evolutioncost0feature.Description"
+    "Key": "wotr-making-friends.eidolonairelementalvariantfeature.name",
+    "enGB": "Air"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwaterelementalvariantfeature.name",
+    "enGB": "Water"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonearthelementalvariantfeature.name",
+    "enGB": "Earth"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfireelementalcapstonefeature.name",
+    "enGB": "Fire"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonfireelementalcapstonefeature.description",
+    "enGB": "The eidolon gains Mobility."
+  },
+  {
+    "Key": "wotr-making-friends.eidolonearthelementalcapstonefeature.name",
+    "enGB": "Earth"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonearthelementalcapstonefeature.description",
+    "enGB": "The eidolon gains the Energy Attacks, Acid evolution."
+  },
+  {
+    "Key": "wotr-making-friends.eidolonairelementalcapstonefeature.name",
+    "enGB": "Air"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonairelementalcapstonefeature.description",
+    "enGB": "The eidolon gains the Whirlwind ability."
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwaterelementalcapstonefeature.name",
+    "enGB": "Water"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonwaterelementalcapstonefeature.description",
+    "enGB": "The eidolon gains the Whirlwind ability."
   }
 ]
