@@ -4,7 +4,7 @@
 
 Requires ModMenu:
 https://github.com/WittleWolfie/ModMenu
-![alt text]([https://github.com/Balkoth-dev/WOTR_PATH_OF_HELL/blob/1.0.0/pathofhellmenu.png](https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS/blob/master/modmenumakingfriends.png))
+![alt text]([https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS/blob/master/modmenumakingfriends.png])
 
 
 
