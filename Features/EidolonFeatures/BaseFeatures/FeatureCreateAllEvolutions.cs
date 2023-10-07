@@ -153,7 +153,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
                     if (baseFeatureName.Contains("EvolutionLimbsArms"))
                     {
-                        feature.CopyFrom(BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName(featureName)));
+                        feature.CopyFrom(BlueprintTool.GetRef<BlueprintFeatureBaseReference>(GetGUID.GUIDByName(featureName))).SetHideInUI(true);
                     }
                     else
                     {

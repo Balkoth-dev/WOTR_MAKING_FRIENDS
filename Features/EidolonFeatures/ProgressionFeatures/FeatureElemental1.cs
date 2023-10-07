@@ -55,7 +55,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetIcon(AbilityRefs.ElementalBodyIFire.Reference.Get().m_Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityFireFeature")) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityFireBaseFeature")) })
                 .ConfigureWithLogging(true);
             FeatureConfigurator.New("EidolonAirElementalVariantFeature", GetGUID.GUIDByName("EidolonAirElementalVariantFeature"))
                 .SetDisplayName(Helpers.ObtainString("EidolonAirElementalVariantFeature.Name"))
@@ -63,7 +63,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityElectricityFeature")) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityElectricityBaseFeature")) })
                 .ConfigureWithLogging(true);
             FeatureConfigurator.New("EidolonWaterElementalVariantFeature", GetGUID.GUIDByName("EidolonWaterElementalVariantFeature"))
                 .SetDisplayName(Helpers.ObtainString("EidolonWaterElementalVariantFeature.Name"))
@@ -71,7 +71,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetIcon(AbilityRefs.ElementalBodyIWater.Reference.Get().m_Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityColdFeature")) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityColdBaseFeature")) })
                 .ConfigureWithLogging(true);
             FeatureConfigurator.New("EidolonEarthElementalVariantFeature", GetGUID.GUIDByName("EidolonEarthElementalVariantFeature"))
                 .SetDisplayName(Helpers.ObtainString("EidolonEarthElementalVariantFeature.Name"))
@@ -79,7 +79,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetIcon(AbilityRefs.ElementalBodyIEarth.Reference.Get().m_Icon)
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityAcidFeature")) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionImmunityAcidBaseFeature")) })
                 .ConfigureWithLogging(true);
         }
 

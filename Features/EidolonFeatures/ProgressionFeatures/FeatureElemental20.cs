@@ -56,7 +56,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
                 .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonFireElementalVariantFeature")))
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksFireFeature")), FeatureRefs.Mobility.Cast<BlueprintUnitFactReference>() })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksFireBaseFeature")), FeatureRefs.Mobility.Cast<BlueprintUnitFactReference>() })
                 .ConfigureWithLogging();
             FeatureConfigurator.New("EidolonEarthElementalCapstoneFeature", GetGUID.GUIDByName("EidolonEarthElementalCapstoneFeature"))
                 .SetDisplayName(Helpers.ObtainString("EidolonEarthElementalCapstoneFeature.Name"))
@@ -65,7 +65,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
                 .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonEarthElementalVariantFeature")))
-                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksAcidFeature")), BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDR5Feature")) })
+                .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksAcidBaseFeature")), BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EidolonDR5Feature")) })
                 .ConfigureWithLogging();
             FeatureConfigurator.New("EidolonAirElementalCapstoneFeature", GetGUID.GUIDByName("EidolonAirElementalCapstoneFeature"))
                 .SetDisplayName(Helpers.ObtainString("EidolonAirElementalCapstoneFeature.Name"))
@@ -74,7 +74,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
                 .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonAirElementalVariantFeature")))
-                .AddFacts(new() { AbilityRefs.AirElementalLargeWhirlwindAbility.Cast<BlueprintUnitFactReference>(), BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksElectricityFeature")) })
+                .AddFacts(new() { AbilityRefs.AirElementalLargeWhirlwindAbility.Cast<BlueprintUnitFactReference>(), BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksElectricityBaseFeature")) })
                 .ConfigureWithLogging();
             FeatureConfigurator.New("EidolonWaterElementalCapstoneFeature", GetGUID.GUIDByName("EidolonWaterElementalCapstoneFeature"))
                 .SetDisplayName(Helpers.ObtainString("EidolonWaterElementalCapstoneFeature.Name"))
@@ -83,7 +83,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                 .SetRanks(IClass.Ranks)
                 .SetGroups(IClass.featureGroup)
                 .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName("EidolonWaterElementalVariantFeature")))
-                .AddFacts(new() { AbilityRefs.AirElementalLargeWhirlwindAbility.Cast<BlueprintUnitFactReference>(), BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksColdFeature")) })
+                .AddFacts(new() { AbilityRefs.AirElementalLargeWhirlwindAbility.Cast<BlueprintUnitFactReference>(), BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionEnergyAttacksColdBaseFeature")) })
                 .ConfigureWithLogging();
         }
 

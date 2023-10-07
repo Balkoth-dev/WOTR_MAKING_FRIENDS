@@ -10,7 +10,7 @@ namespace WOTR_MAKING_FRIENDS.Portraits
         public static void Create()
         {
             var portrait = PortraitConfigurator.New("EidolonAstradaemonPortrait", GetGUID.GUIDByName("EidolonAstradaemonPortrait"))
-                .CopyFrom(BlueprintTool.GetRef<BlueprintPortraitReference>("507f0248c7a4e2b4bada154861c374b1"))
+                .SetData(new PortraitData())
                 .ConfigureWithLogging();
 
             SmallPortraitInjector.Replacements[portrait.Data] = AssetLoader.LoadInternal("Portraits", "AstradaemonSmall.png", 185, 242);

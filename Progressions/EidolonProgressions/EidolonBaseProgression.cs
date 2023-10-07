@@ -31,7 +31,8 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                          GetGUID.GUIDByName("AddMaxAttacksFeature"),
                                          GetGUID.GUIDByName("EvolutionBaseAbilitiesFeature"),
                                          GetGUID.GUIDByName("EidolonSubtypeSelectionFeature"),
-                                         GetGUID.GUIDByName("EidolonStartingEvolutionsFeature")
+                                         GetGUID.GUIDByName("EidolonStartingEvolutionsFeature"),
+                                         FeatureRefs.ImprovedUnarmedStrike.Reference.Get().AssetGuid
                                          )
                                 .AddEntry(2, IClass.ExtraEvolutionPoolFeature, IClass.EvolutionStatBonus)
                                 .AddEntry(3, FeatureRefs.Evasion.Cast<BlueprintFeatureBaseReference>().Reference, IClass.ExtraEvolutionPoolFeature)

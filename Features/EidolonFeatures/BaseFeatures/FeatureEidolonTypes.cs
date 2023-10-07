@@ -66,6 +66,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
                     var feature = FeatureConfigurator.New(eidolonFeatureName, eidolonFeatureGuid)
                                                             .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
+                                                            .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
                                                             .SetHideInUI(true)
                                                             .SetHideInCharacterSheetAndLevelUp(true)
                                                             .SetGroups(FeatureGroup.CreatureType)

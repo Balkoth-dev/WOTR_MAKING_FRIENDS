@@ -19,12 +19,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
     {
         public static class IClass
         {
-            internal static string ProgressionFeature = "Eidolon" + "AddBreathOfLifeSpell";
+            internal static string ProgressionFeature = "Eidolon" + "BonusHealing";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
             internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
-            internal static Sprite Icon = FeatureRefs.CelestialTotemFeature.Reference.Get().m_Icon;
+            internal static Sprite Icon = FeatureRefs.FastHealing.Reference.Get().m_Icon;
             internal static FeatureGroup featureGroup = FeatureGroupExtension.EvolutionBase;
             internal static int Ranks = 2;
         }
@@ -32,8 +32,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
         {
             internal static string Ability = IClass.ProgressionFeature + "Buff";
             internal static string Guid = GetGUID.GUIDByName(Ability);
-            internal static LocalizedString Name = Helpers.ObtainString(Ability + ".Name");
-            internal static LocalizedString Description = Helpers.ObtainString(Ability + ".Description");
+            internal static LocalizedString Name = IClass.Name;
+            internal static LocalizedString Description = IClass.Description;
             internal static Sprite Icon = IClass.Icon;
             internal static int Ranks = 1;
         }

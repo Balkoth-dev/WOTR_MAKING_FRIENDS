@@ -23,6 +23,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(IClass.Description)
                 .SetRanks(20)
                 .SetIsClassFeature(true)
+                .SetHideInUI(true)
                 .ConfigureWithLogging();
 
         }

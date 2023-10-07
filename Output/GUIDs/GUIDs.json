@@ -3426,5 +3426,17 @@
   {
     "name": "EidolonAddFeatureLayOnHandsOthersAbility",
     "guid": "b4593390-fc47-4725-a71a-483d29326a9f"
+  },
+  {
+    "name": "GrandEidolonFeatureFeature",
+    "guid": "b6c22390-eabe-4175-88d9-00b1acfab83f"
+  },
+  {
+    "name": "EidolonBonusHealingFeature",
+    "guid": "88335b5e-c8b0-4b33-9f94-0d0f472e72c2"
+  },
+  {
+    "name": "EidolonBonusHealingBuff",
+    "guid": "8726466d-27da-40e8-b3af-3f58ee0ed14a"
   }
 ]

@@ -30,7 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
         {
             FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
                 .SetIcon(IClass.icon)
-                .AddSecondaryAttacks(weapon: ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
+                .AddAdditionalLimb(weapon: ItemWeaponRefs.Bite1d6.Cast<BlueprintItemWeaponReference>().Reference)
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("EidolonMaxAttacksResource"), -1)
                 .ConfigureWithLogging(true);
         }

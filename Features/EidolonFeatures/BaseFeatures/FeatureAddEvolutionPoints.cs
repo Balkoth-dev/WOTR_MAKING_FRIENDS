@@ -18,6 +18,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
             internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
         }
+        internal static class IClassGrandEidolonFeature
+        {
+            internal const string Feature = "GrandEidolonFeatureFeature";
+            internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
+            internal static LocalizedString Description = Helpers.ObtainString(Feature + ".Description");
+        }
 
         public static void Create()
         {
@@ -45,10 +51,10 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 .SetRanks(100)
                 .ConfigureWithLogging();
 
-            FeatureConfigurator.New("GrandEidolonFeature", GetGUID.GUIDByName("GrandEidolonFeature"))
+            FeatureConfigurator.New(IClassGrandEidolonFeature.Feature, GetGUID.GUIDByName(IClassGrandEidolonFeature.Feature))
                 .AddIncreaseResourceAmount(GetGUID.GUIDByName("SummonerEvolutionPointsResource"), 4)
-                .SetDisplayName(IClassAddFeature.Name)
-                .SetDescription(IClassAddFeature.Description)
+                .SetDisplayName(IClassGrandEidolonFeature.Name)
+                .SetDescription(IClassGrandEidolonFeature.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "GrandEidolon.png"))
                 .SetRanks(100)
                 .ConfigureWithLogging();
