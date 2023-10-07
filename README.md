@@ -4,7 +4,7 @@
 
 Requires ModMenu:
 https://github.com/WittleWolfie/ModMenu
-![alt text]([https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS/blob/master/modmenumakingfriends.png])
+![alt text](https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS/blob/master/modmenumakingfriends.png)
 
 
 
