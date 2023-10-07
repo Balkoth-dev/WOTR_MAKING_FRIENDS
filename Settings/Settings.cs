@@ -67,9 +67,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             // Load Localizations
             LocalizationTool.LoadEmbeddedLocalizationPacks(
               "WOTR_MAKING_FRIENDS.Output.Localizations.Settings.json",
-              "WOTR_MAKING_FRIENDS.Output.Localizations.SummonerClass.json",
               "WOTR_MAKING_FRIENDS.Output.Localizations.CharacterClasses.json",
-              "WOTR_MAKING_FRIENDS.Output.Localizations.SummonerSpellbook.json",
               "WOTR_MAKING_FRIENDS.Output.Localizations.Spells.json",
               "WOTR_MAKING_FRIENDS.Output.Localizations.Scrolls.json",
               "WOTR_MAKING_FRIENDS.Output.Localizations.Units.json",
