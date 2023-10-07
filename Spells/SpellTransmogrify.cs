@@ -29,7 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
         private static Dictionary<string, int> spellListComponents = new()
         {
-            { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 }
+            { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 1 }
         };
 
         internal static BlueprintFeatureReference[] originalBlueprintUnitFactReferences = new BlueprintFeatureReference[Enum.GetValues(typeof(Size)).Length + 1];

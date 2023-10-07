@@ -102,73 +102,80 @@ namespace WOTR_MAKING_FRIENDS.Utilities
 
         public static LocalizedString LocalizationByName(string key, string value)
         {
-            var filePath = "";
+            try
+            {
+                var filePath = "";
 
-            if (key.ToLower().Contains("class"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\CharacterClasses.json");
-            }
-            else if (key.ToLower().Contains("feature"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\Features.json");
-            }
-            else if (key.ToLower().Contains("progression"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\Progression.json");
-            }
-            else if (key.ToLower().Contains("scroll"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\Scrolls.json");
-            }
-            else if (key.ToLower().Contains("setting"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\Settings.json");
-            }
-            else if (key.ToLower().Contains("spell"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\Spells.json");
-            }
-            else if (key.ToLower().Contains("spellbook"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\SummonerSpellbook.json");
-            }
-            else if (key.ToLower().Contains("unit") || key.ToLower().Contains("eidolon"))
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\Units.json");
-            }
-            else
-            {
-                filePath = Path.Combine(ModEntry.Path, @"Localizations\Other.json");
-            }
-
-            if (File.Exists(filePath))
-            {
-                var json = File.ReadAllText(filePath);
-
-                var oba = JArray.Parse(json).ToList();
-                var valueString = (string)oba.FirstOrDefault(j => (string)j["Key"] == key)?["enGB"] ?? string.Empty;
-
-                if (valueString != string.Empty)
+                if (key.ToLower().Contains("class"))
                 {
-                    return CreateString(key, valueString);
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\CharacterClasses.json");
+                }
+                else if (key.ToLower().Contains("feature"))
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\Features.json");
+                }
+                else if (key.ToLower().Contains("progression"))
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\Progression.json");
+                }
+                else if (key.ToLower().Contains("scroll"))
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\Scrolls.json");
+                }
+                else if (key.ToLower().Contains("setting"))
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\Settings.json");
+                }
+                else if (key.ToLower().Contains("spell"))
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\Spells.json");
+                }
+                else if (key.ToLower().Contains("spellbook"))
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\SummonerSpellbook.json");
+                }
+                else if (key.ToLower().Contains("unit") || key.ToLower().Contains("eidolon"))
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\Units.json");
+                }
+                else
+                {
+                    filePath = Path.Combine(ModEntry.Path, @"Localizations\Other.json");
                 }
 
-                var newObject = new JObject();
-                newObject["Key"] = key;
-                newObject["enGB"] = value;
-
-                oba.Add(newObject);
-                var settings = new JsonSerializerSettings
+                if (File.Exists(filePath))
                 {
-                    Formatting = Formatting.Indented
-                };
-                var newJson = JsonConvert.SerializeObject(oba, settings);
+                    var json = File.ReadAllText(filePath);
 
-                File.WriteAllText(filePath, newJson);
+                    var oba = JArray.Parse(json).ToList();
+                    var valueString = (string)oba.FirstOrDefault(j => (string)j["Key"] == key)?["enGB"] ?? string.Empty;
 
-                return CreateString(key, value);
+                    if (valueString != string.Empty)
+                    {
+                        return CreateString(key, valueString);
+                    }
+
+                    var newObject = new JObject();
+                    newObject["Key"] = key;
+                    newObject["enGB"] = value;
+
+                    oba.Add(newObject);
+                    var settings = new JsonSerializerSettings
+                    {
+                        Formatting = Formatting.Indented
+                    };
+                    var newJson = JsonConvert.SerializeObject(oba, settings);
+
+                    File.WriteAllText(filePath, newJson);
+
+                    return CreateString(key, value);
+                }
+                Main.Log("File : " + filePath + "not found.");
             }
-            Main.Log("File : " + filePath + "not found.");
+            catch (Exception ex)
+            {
+                Main.Log(ex.ToString());
+            }
             return null;
         }
     }

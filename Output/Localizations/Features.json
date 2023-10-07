@@ -1297,51 +1297,51 @@
   },
   {
     "Key": "wotr-making-friends.evolutioncost1feature.name",
-    "enGB": "EvolutionCost1Feature.Name"
+    "enGB": "1 Point Evolutions"
   },
   {
     "Key": "wotr-making-friends.evolutioncost1feature.description",
-    "enGB": "EvolutionCost1Feature.Description"
+    "enGB": "Eidolons, mystical companions summoned by skilled summoners, possess an evolution pool that allows them to gain new abilities, powers, and enhancements. These abilities, known as evolutions, define the eidolon’s unique traits and capabilities. As the summoner gains levels, they can modify these evolutions to suit their needs."
   },
   {
     "Key": "wotr-making-friends.evolutionbitefeature.name",
-    "enGB": "EvolutionBiteFeature.Name"
+    "enGB": "Bite"
   },
   {
     "Key": "wotr-making-friends.evolutionbitefeature.description",
-    "enGB": "EvolutionBiteFeature.Description"
+    "enGB": "The eidolon gains a bite attack. They may only select this feature once. \nRequirements: Agathion, daemon, demon, devil, div, elemental, protean, or psychopomp subtype."
   },
   {
     "Key": "wotr-making-friends.evolutiongorefeature.name",
-    "enGB": "EvolutionGoreFeature.Name"
+    "enGB": "Gore"
   },
   {
     "Key": "wotr-making-friends.evolutiongorefeature.description",
-    "enGB": "EvolutionGoreFeature.Description"
+    "enGB": "The eidolon gains a gore attack. They may only select this feature once. \nRequirements: Agathion, daemon, demon, devil, div, elemental, protean, or psychopomp subtype."
   },
   {
     "Key": "wotr-making-friends.evolutionclawsfeature.name",
-    "enGB": "EvolutionClawsFeature.Name"
+    "enGB": "Claws, Primary"
   },
   {
     "Key": "wotr-making-friends.evolutionclawsfeature.description",
-    "enGB": "EvolutionClawsFeature.Description"
+    "enGB": "The eidolon gains two claws as part of their primary attack. These do not stack with weapon attacks or oher natural primary attacks. \nRequirements: Agathion, daemon, demon, devil, div, elemental, protean, or psychopomp subtype."
   },
   {
     "Key": "wotr-making-friends.evolutionmagicattacksfeature.name",
-    "enGB": "EvolutionMagicAttacksFeature.Name"
+    "enGB": "Magic Attacks"
   },
   {
     "Key": "wotr-making-friends.evolutionmagicattacksfeature.description",
-    "enGB": "EvolutionMagicAttacksFeature.Description"
+    "enGB": "The eidolon's attacks are considered magical for the purpose of bypassing DR."
   },
   {
     "Key": "wotr-making-friends.evolutionnaturalarmorfeature.name",
-    "enGB": "EvolutionNaturalArmorFeature.Name"
+    "enGB": "Improved Natural Armor"
   },
   {
     "Key": "wotr-making-friends.evolutionnaturalarmorfeature.description",
-    "enGB": "EvolutionNaturalArmorFeature.Description"
+    "enGB": "The eidolon’s hide grows thick fur, rigid scales, or bony plates, giving it a +2 bonus to its natural armor. This evolution can be taken once, plus one additional time for every 5 levels the summoner possesses. Each additional time it’s taken, the bonus increases by 2."
   },
   {
     "Key": "wotr-making-friends.evolutionpincersfeature.name",
@@ -1349,950 +1349,958 @@
   },
   {
     "Key": "wotr-making-friends.evolutionpincersfeature.description",
-    "enGB": "EvolutionPincersFeature.Description"
+    "enGB": "The eidolon grows large pincers at the ends of one pair of its limbs, giving it two pincer attacks as their primary attack. These do not stack with weapon attacks or oher natural primary attacks. \nRequirements: Agathion, daemon, demon, devil, div, elemental, protean, or psychopomp subtype."
   },
   {
     "Key": "wotr-making-friends.evolutionresistanceacidfeature.name",
-    "enGB": "EvolutionResistanceAcidFeature.Name"
+    "enGB": "Resistance, Acid"
   },
   {
     "Key": "wotr-making-friends.evolutionresistanceacidfeature.description",
-    "enGB": "EvolutionResistanceAcidFeature.Description"
+    "enGB": "The eidolon gains Resistance 10 to Acid, this scales an additional 1 resistance every level up to 15."
   },
   {
     "Key": "wotr-making-friends.evolutionresistancecoldfeature.name",
-    "enGB": "EvolutionResistanceColdFeature.Name"
+    "enGB": "Resistance, Cold"
   },
   {
     "Key": "wotr-making-friends.evolutionresistancecoldfeature.description",
-    "enGB": "EvolutionResistanceColdFeature.Description"
+    "enGB": "The eidolon gains Resistance 10 to Acid, this scales an additional 1 resistance every level up to 15."
   },
   {
     "Key": "wotr-making-friends.evolutionresistanceelectricityfeature.name",
-    "enGB": "EvolutionResistanceElectricityFeature.Name"
+    "enGB": "Resistance, Electricity"
   },
   {
     "Key": "wotr-making-friends.evolutionresistanceelectricityfeature.description",
-    "enGB": "EvolutionResistanceElectricityFeature.Description"
+    "enGB": "The eidolon gains Resistance 10 to Acid, this scales an additional 1 resistance every level up to 15."
   },
   {
     "Key": "wotr-making-friends.evolutionresistancefirefeature.name",
-    "enGB": "EvolutionResistanceFireFeature.Name"
+    "enGB": "Resistance, Fire"
   },
   {
     "Key": "wotr-making-friends.evolutionresistancefirefeature.description",
-    "enGB": "EvolutionResistanceFireFeature.Description"
+    "enGB": "The eidolon gains Resistance 10 to Acid, this scales an additional 1 resistance every level up to 15."
   },
   {
     "Key": "wotr-making-friends.evolutionresistancesonicfeature.name",
-    "enGB": "EvolutionResistanceSonicFeature.Name"
+    "enGB": "Resistance, Sonic"
   },
   {
     "Key": "wotr-making-friends.evolutionresistancesonicfeature.description",
-    "enGB": "EvolutionResistanceSonicFeature.Description"
+    "enGB": "The eidolon gains Resistance 10 to Acid, this scales an additional 1 resistance every level up to 15."
   },
   {
     "Key": "wotr-making-friends.evolutionscentfeature.name",
-    "enGB": "EvolutionScentFeature.Name"
+    "enGB": "Scent"
   },
   {
     "Key": "wotr-making-friends.evolutionscentfeature.description",
-    "enGB": "EvolutionScentFeature.Description"
+    "enGB": "The eidolon’s sense of smell becomes quite acute. The eidolon gains the scent special quality, allowing it to detect opponents within 30 feet by sense of smell."
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillperceptionfeature.name",
-    "enGB": "EvolutionSkilledSkillPerceptionFeature.Name"
+    "enGB": "Skilled, Perception"
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillperceptionfeature.description",
-    "enGB": "EvolutionSkilledSkillPerceptionFeature.Description"
+    "enGB": " The eidolon becomes especially adept at a specific skill, gaining a +8 racial bonus on that skill. This evolution can be selected more than once. Its effects do not stack. Each time the eidolon selects this evolution, it applies to a different skill."
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillthieveryfeature.name",
-    "enGB": "EvolutionSkilledSkillThieveryFeature.Name"
+    "enGB": "Skilled, Thievery"
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillthieveryfeature.description",
-    "enGB": "EvolutionSkilledSkillThieveryFeature.Description"
+    "enGB": " The eidolon becomes especially adept at a specific skill, gaining a +8 racial bonus on that skill. This evolution can be selected more than once. Its effects do not stack. Each time the eidolon selects this evolution, it applies to a different skill."
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillusemagicdevicefeature.name",
-    "enGB": "EvolutionSkilledSkillUseMagicDeviceFeature.Name"
+    "enGB": "Skilled, Use Magic Device"
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillusemagicdevicefeature.description",
-    "enGB": "EvolutionSkilledSkillUseMagicDeviceFeature.Description"
+    "enGB": "The eidolon becomes especially adept at a specific skill, gaining a +8 racial bonus on that skill. This evolution can be selected more than once. Its effects do not stack. Each time the eidolon selects this evolution, it applies to a different skill."
   },
   {
     "Key": "wotr-making-friends.evolutionslamfeature.name",
-    "enGB": "EvolutionSlamFeature.Name"
+    "enGB": "Slam"
   },
   {
     "Key": "wotr-making-friends.evolutionslamfeature.description",
-    "enGB": "EvolutionSlamFeature.Description"
+    "enGB": "The eidolon can deliver a devastating slam attack, giving it two slam attacks as their primary attack. These do not stack with weapon attacks or oher natural primary attacks."
   },
   {
     "Key": "wotr-making-friends.evolutionspikefeature.name",
-    "enGB": "EvolutionSpikeFeature.Name"
+    "enGB": "Spike"
   },
   {
     "Key": "wotr-making-friends.evolutionspikefeature.description",
-    "enGB": "EvolutionSpikeFeature.Description"
+    "enGB": "The eidolon can throw a spike from its tail. An eidolon can select this as many times as they have tails."
   },
   {
     "Key": "wotr-making-friends.evolutiontailfeature.name",
-    "enGB": "EvolutionTailFeature.Name"
+    "enGB": "Tail"
   },
   {
     "Key": "wotr-making-friends.evolutiontailfeature.description",
-    "enGB": "EvolutionTailFeature.Description"
+    "enGB": "The eidolon grows a tail, giving it +2 to Mobility checks. They can select this evolution multiple times, increasing that bonus by 2. \nRequirements: Agathion, daemon, demon, devil, div, elemental, protean, or psychopomp subtype."
   },
   {
     "Key": "wotr-making-friends.evolutiontailslapfeature.name",
-    "enGB": "EvolutionTailSlapFeature.Name"
+    "enGB": "Tail Slap"
   },
   {
     "Key": "wotr-making-friends.evolutiontailslapfeature.description",
-    "enGB": "EvolutionTailSlapFeature.Description"
+    "enGB": "An eidolon gains the Tail Slap attack. They may only take this evolution if they have a tail or have a serpentine base form."
   },
   {
     "Key": "wotr-making-friends.evolutiontentaclefeature.name",
-    "enGB": "EvolutionTentacleFeature.Name"
+    "enGB": "Tentacle"
   },
   {
     "Key": "wotr-making-friends.evolutiontentaclefeature.description",
-    "enGB": "EvolutionTentacleFeature.Description"
+    "enGB": "An eidolon grows a tentacle from its body, giving it an additional tentacle attack. These stack, with each tentacle giving a bonus attack.  \nRequirements: Daemon, demon, abberant, or protean subtype."
   },
   {
     "Key": "wotr-making-friends.evolutiontentaclemassfeature.name",
-    "enGB": "EvolutionTentacleMassFeature.Name"
+    "enGB": "Tentacle, Mass"
   },
   {
     "Key": "wotr-making-friends.evolutiontentaclemassfeature.description",
-    "enGB": "EvolutionTentacleMassFeature.Description"
+    "enGB": "The eidolon grows tentacles from its body, giving it two tentacle attacks as their primary attack. These do not stack with weapon attacks or oher natural primary attacks. \nRequirements: Daemon, demon, abberant, or protean subtype."
   },
   {
     "Key": "wotr-making-friends.evolutionwingbuffetfeature.name",
-    "enGB": "EvolutionWingBuffetFeature.Name"
+    "enGB": "Wing Buffet"
   },
   {
     "Key": "wotr-making-friends.evolutionwingbuffetfeature.description",
-    "enGB": "EvolutionWingBuffetFeature.Description"
+    "enGB": "The eidolon can use its wings for two extra attacks. The eidolon can only take this evolution once."
   },
   {
     "Key": "wotr-making-friends.evolutioncost2feature.name",
-    "enGB": "EvolutionCost2Feature.Name"
+    "enGB": "2 Point Evolutions"
   },
   {
     "Key": "wotr-making-friends.evolutioncost2feature.description",
-    "enGB": "EvolutionCost2Feature.Description"
+    "enGB": "Eidolons, mystical companions summoned by skilled summoners, possess an evolution pool that allows them to gain new abilities, powers, and enhancements. These abilities, known as evolutions, define the eidolon’s unique traits and capabilities. As the summoner gains levels, they can modify these evolutions to suit their needs."
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasestrengthfeature.name",
-    "enGB": "EvolutionAbilityIncreaseStrengthFeature.Name"
+    "enGB": "Ability Increase, Strength"
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasestrengthfeature.description",
-    "enGB": "EvolutionAbilityIncreaseStrengthFeature.Description"
+    "enGB": "The eidolon grows larger muscles, gains faster reflexes, achieves greater intelligence, or acquires another increase to one of its abilities. Increase one of the eidolon’s ability scores by 2. This evolution can be selected more than once. It can be applied only once to an individual ability score, plus one additional time for every 6 levels the summoner possesses."
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasedexterityfeature.name",
-    "enGB": "EvolutionAbilityIncreaseDexterityFeature.Name"
+    "enGB": "Ability Increase, Dexterity"
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasedexterityfeature.description",
-    "enGB": "EvolutionAbilityIncreaseDexterityFeature.Description"
+    "enGB": "The eidolon grows larger muscles, gains faster reflexes, achieves greater intelligence, or acquires another increase to one of its abilities. Increase one of the eidolon’s ability scores by 2. This evolution can be selected more than once. It can be applied only once to an individual ability score, plus one additional time for every 6 levels the summoner possesses."
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreaseconstitutionfeature.name",
-    "enGB": "EvolutionAbilityIncreaseConstitutionFeature.Name"
+    "enGB": "Ability Increase, Constitution"
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreaseconstitutionfeature.description",
-    "enGB": "EvolutionAbilityIncreaseConstitutionFeature.Description"
+    "enGB": "The eidolon grows larger muscles, gains faster reflexes, achieves greater intelligence, or acquires another increase to one of its abilities. Increase one of the eidolon’s ability scores by 2. This evolution can be selected more than once. It can be applied only once to an individual ability score, plus one additional time for every 6 levels the summoner possesses."
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreaseintelligencefeature.name",
-    "enGB": "EvolutionAbilityIncreaseIntelligenceFeature.Name"
+    "enGB": "Ability Increase, Intelligence"
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreaseintelligencefeature.description",
-    "enGB": "EvolutionAbilityIncreaseIntelligenceFeature.Description"
+    "enGB": "The eidolon grows larger muscles, gains faster reflexes, achieves greater intelligence, or acquires another increase to one of its abilities. Increase one of the eidolon’s ability scores by 2. This evolution can be selected more than once. It can be applied only once to an individual ability score, plus one additional time for every 6 levels the summoner possesses."
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasewisdomfeature.name",
-    "enGB": "EvolutionAbilityIncreaseWisdomFeature.Name"
+    "enGB": "Ability Increase, Wisdom"
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasewisdomfeature.description",
-    "enGB": "EvolutionAbilityIncreaseWisdomFeature.Description"
+    "enGB": "The eidolon grows larger muscles, gains faster reflexes, achieves greater intelligence, or acquires another increase to one of its abilities. Increase one of the eidolon’s ability scores by 2. This evolution can be selected more than once. It can be applied only once to an individual ability score, plus one additional time for every 6 levels the summoner possesses."
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasecharismafeature.name",
-    "enGB": "EvolutionAbilityIncreaseCharismaFeature.Name"
+    "enGB": "Ability Increase, Charisma"
   },
   {
     "Key": "wotr-making-friends.evolutionabilityincreasecharismafeature.description",
-    "enGB": "EvolutionAbilityIncreaseCharismaFeature.Description"
+    "enGB": "The eidolon grows larger muscles, gains faster reflexes, achieves greater intelligence, or acquires another increase to one of its abilities. Increase one of the eidolon’s ability scores by 2. This evolution can be selected more than once. It can be applied only once to an individual ability score, plus one additional time for every 6 levels the summoner possesses."
   },
   {
     "Key": "wotr-making-friends.evolutionbloodfrenzyfeature.name",
-    "enGB": "EvolutionBloodFrenzyFeature.Name"
+    "enGB": "Blood Frenzy"
   },
   {
     "Key": "wotr-making-friends.evolutionbloodfrenzyfeature.description",
-    "enGB": "EvolutionBloodFrenzyFeature.Description"
+    "enGB": "When the eidolon is dealt damage, it enters a blood frenzy. It gains a +2 morale bonus on attack rolls and weapon damage rolls and attacks the nearest creature each round. \nRequirements: Aberrant, daemon, or demon subtype; summoner level 7th."
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattacksacidfeature.name",
-    "enGB": "EvolutionEnergyAttacksAcidFeature.Name"
+    "enGB": "Energy Attacks, Acid"
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattacksacidfeature.description",
-    "enGB": "EvolutionEnergyAttacksAcidFeature.Description"
+    "enGB": "The eidolon’s attacks become charged with energy. Select one energy type: acid, cold, electricity, or fire. All of the eidolon’s natural attacks deal 1d6 points of energy damage of the chosen type on a successful hit. \nRequirements: Summoner level 5th."
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattackscoldfeature.name",
-    "enGB": "EvolutionEnergyAttacksColdFeature.Name"
+    "enGB": "Energy Attacks, Cold"
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattackscoldfeature.description",
-    "enGB": "EvolutionEnergyAttacksColdFeature.Description"
+    "enGB": "The eidolon’s attacks become charged with energy. Select one energy type: acid, cold, electricity, or fire. All of the eidolon’s natural attacks deal 1d6 points of energy damage of the chosen type on a successful hit. \nRequirements: Summoner level 5th."
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattackselectricityfeature.name",
-    "enGB": "EvolutionEnergyAttacksElectricityFeature.Name"
+    "enGB": "Energy Attacks, Electricity"
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattackselectricityfeature.description",
-    "enGB": "EvolutionEnergyAttacksElectricityFeature.Description"
+    "enGB": "The eidolon’s attacks become charged with energy. Select one energy type: acid, cold, electricity, or fire. All of the eidolon’s natural attacks deal 1d6 points of energy damage of the chosen type on a successful hit. \nRequirements: Summoner level 5th."
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattacksfirefeature.name",
-    "enGB": "EvolutionEnergyAttacksFireFeature.Name"
+    "enGB": "Energy Attacks, Fire"
   },
   {
     "Key": "wotr-making-friends.evolutionenergyattacksfirefeature.description",
-    "enGB": "EvolutionEnergyAttacksFireFeature.Description"
+    "enGB": "The eidolon’s attacks become charged with energy. Select one energy type: acid, cold, electricity, or fire. All of the eidolon’s natural attacks deal 1d6 points of energy damage of the chosen type on a successful hit. \nRequirements: Summoner level 5th."
   },
   {
     "Key": "wotr-making-friends.evolutionflightfeature.name",
-    "enGB": "EvolutionFlightFeature.Name"
+    "enGB": "Flight"
   },
   {
     "Key": "wotr-making-friends.evolutionflightfeature.description",
-    "enGB": "EvolutionFlightFeature.Description"
+    "enGB": "The eidolon grows large wings, like those of a bat, bird, insect, or dragon, gaining the ability to fly. Making it immune to ground effects. \nRequirements: Summoner level 5th."
   },
   {
     "Key": "wotr-making-friends.evolutionimmunityacidfeature.name",
-    "enGB": "EvolutionImmunityAcidFeature.Name"
+    "enGB": "Immunity, Acid"
   },
   {
     "Key": "wotr-making-friends.evolutionimmunityacidfeature.description",
-    "enGB": "EvolutionImmunityAcidFeature.Description"
+    "enGB": "The eidolon’s body becomes extremely resilient to one energy type. Select one energy type: acid, cold, electricity, fire, or sonic. The eidolon gains immunity to that energy type. This evolution can be selected more than once. Its effects do not stack. Each time it applies to a different energy type. \nRequirements: Summoner level 7th."
   },
   {
     "Key": "wotr-making-friends.evolutionimmunitycoldfeature.name",
-    "enGB": "EvolutionImmunityColdFeature.Name"
+    "enGB": "Immunity, Cold"
   },
   {
     "Key": "wotr-making-friends.evolutionimmunitycoldfeature.description",
-    "enGB": "EvolutionImmunityColdFeature.Description"
+    "enGB": "The eidolon’s body becomes extremely resilient to one energy type. Select one energy type: acid, cold, electricity, fire, or sonic. The eidolon gains immunity to that energy type. This evolution can be selected more than once. Its effects do not stack. Each time it applies to a different energy type. \nRequirements: Summoner level 7th."
   },
   {
     "Key": "wotr-making-friends.evolutionimmunityelectricityfeature.name",
-    "enGB": "EvolutionImmunityElectricityFeature.Name"
+    "enGB": "Immunity, Electricity"
   },
   {
     "Key": "wotr-making-friends.evolutionimmunityelectricityfeature.description",
-    "enGB": "EvolutionImmunityElectricityFeature.Description"
+    "enGB": "The eidolon’s body becomes extremely resilient to one energy type. Select one energy type: acid, cold, electricity, fire, or sonic. The eidolon gains immunity to that energy type. This evolution can be selected more than once. Its effects do not stack. Each time it applies to a different energy type. \nRequirements: Summoner level 7th."
   },
   {
     "Key": "wotr-making-friends.evolutionimmunityfirefeature.name",
-    "enGB": "EvolutionImmunityFireFeature.Name"
+    "enGB": "Immunity, Fire"
   },
   {
     "Key": "wotr-making-friends.evolutionimmunityfirefeature.description",
-    "enGB": "EvolutionImmunityFireFeature.Description"
+    "enGB": "The eidolon’s body becomes extremely resilient to one energy type. Select one energy type: acid, cold, electricity, fire, or sonic. The eidolon gains immunity to that energy type. This evolution can be selected more than once. Its effects do not stack. Each time it applies to a different energy type. \nRequirements: Summoner level 7th."
   },
   {
     "Key": "wotr-making-friends.evolutionimmunitysonicfeature.name",
-    "enGB": "EvolutionImmunitySonicFeature.Name"
+    "enGB": "Immunity, Sonic"
   },
   {
     "Key": "wotr-making-friends.evolutionimmunitysonicfeature.description",
-    "enGB": "EvolutionImmunitySonicFeature.Description"
+    "enGB": "The eidolon’s body becomes extremely resilient to one energy type. Select one energy type: acid, cold, electricity, fire, or sonic. The eidolon gains immunity to that energy type. This evolution can be selected more than once. Its effects do not stack. Each time it applies to a different energy type. \nRequirements: Summoner level 7th."
   },
   {
     "Key": "wotr-making-friends.evolutionlimbsarmsfeature.name",
-    "enGB": "EvolutionLimbsArmsFeature.Name"
+    "enGB": "Limbs, Arms"
   },
   {
     "Key": "wotr-making-friends.evolutionlimbsarmsfeature.description",
-    "enGB": "EvolutionLimbsArmsFeature.Description"
+    "enGB": "The eidolon gains a pair of arms, allowing it to wield weapons. When the eidolon select this power multiple times they gain an extra attack for each limb. This counts as two attacks for its maximum attack limit, even if the eidolon is using a two-handed weapon."
   },
   {
     "Key": "wotr-making-friends.evolutionlimbslegsfeature.name",
-    "enGB": "EvolutionLimbsLegsFeature.Name"
+    "enGB": "Limbs, Legs"
   },
   {
     "Key": "wotr-making-friends.evolutionlimbslegsfeature.description",
-    "enGB": "EvolutionLimbsLegsFeature.Description"
+    "enGB": "The eidolon gains an extra 10 feet of movement. This evolution can be selected multiple times."
   },
   {
     "Key": "wotr-making-friends.evolutionrendfeature.name",
-    "enGB": "EvolutionRendFeature.Name"
+    "enGB": "Rend"
   },
   {
     "Key": "wotr-making-friends.evolutionrendfeature.description",
-    "enGB": "EvolutionRendFeature.Description"
+    "enGB": "Whenever the eidolon hits an opponent twice with a claw attack, they deal an additional 1d6+Strength damage. \nRequirements: Summoner level 6th, claws evolution."
   },
   {
     "Key": "wotr-making-friends.evolutiontramplefeature.name",
-    "enGB": "EvolutionTrampleFeature.Name"
+    "enGB": "Trample"
   },
   {
     "Key": "wotr-making-friends.evolutiontramplefeature.description",
-    "enGB": "EvolutionTrampleFeature.Description"
+    "enGB": "The eidolon gains the ability to trample their opponents. This can only be selected by Bipeds or Quadrupeds base forms even if the eidolon has the Limbs, Legs evolution."
   },
   {
     "Key": "wotr-making-friends.evolutiontripfeature.name",
-    "enGB": "EvolutionTripFeature.Name"
+    "enGB": "Trip"
   },
   {
     "Key": "wotr-making-friends.evolutiontripfeature.description",
-    "enGB": "EvolutionTripFeature.Description"
+    "enGB": "When the eidolon uses a bite attack, they may also attempt to trip their opponent. \nRequirements: Daemon, demon, devil, elemental, or protean subtype; bite evolution."
   },
   {
     "Key": "wotr-making-friends.evolutionbullrushfeature.name",
-    "enGB": "EvolutionBullrushFeature.Name"
+    "enGB": "Bull Rush"
   },
   {
     "Key": "wotr-making-friends.evolutionbullrushfeature.description",
-    "enGB": "EvolutionBullrushFeature.Description"
+    "enGB": "When the eidolon uses a slam attack, they may also attempt to push their opponent 5ft."
   },
   {
     "Key": "wotr-making-friends.evolutionsunderarmorfeature.name",
-    "enGB": "EvolutionSunderarmorFeature.Name"
+    "enGB": "Sundering Pincers"
   },
   {
     "Key": "wotr-making-friends.evolutionsunderarmorfeature.description",
-    "enGB": "EvolutionSunderarmorFeature.Description"
+    "enGB": "When the eidolon uses Pincers, they may attempt to sunder the armor of their opponent."
   },
   {
     "Key": "wotr-making-friends.evolutioncost3feature.name",
-    "enGB": "EvolutionCost3Feature.Name"
+    "enGB": "3 Point Evolutions"
   },
   {
     "Key": "wotr-making-friends.evolutioncost3feature.description",
-    "enGB": "EvolutionCost3Feature.Description"
+    "enGB": "Eidolons, mystical companions summoned by skilled summoners, possess an evolution pool that allows them to gain new abilities, powers, and enhancements. These abilities, known as evolutions, define the eidolon’s unique traits and capabilities. As the summoner gains levels, they can modify these evolutions to suit their needs."
   },
   {
     "Key": "wotr-making-friends.evolutiondamagereductionfeature.name",
-    "enGB": "EvolutionDamageReductionFeature.Name"
+    "enGB": "Damage Reduction"
   },
   {
     "Key": "wotr-making-friends.evolutiondamagereductionfeature.description",
-    "enGB": "EvolutionDamageReductionFeature.Description"
+    "enGB": "The eidolon’s body becomes more resistant to harm. Increase the damage reduction granted by the eidolon’s subtype by 5. \nRequirements: Summoner level 15th."
   },
   {
     "Key": "wotr-making-friends.evolutionpouncefeature.name",
-    "enGB": "EvolutionPounceFeature.Name"
+    "enGB": "Pounce"
   },
   {
     "Key": "wotr-making-friends.evolutionpouncefeature.description",
-    "enGB": "EvolutionPounceFeature.Description"
+    "enGB": "The eidolon gains quick reflexes, allowing it to make a full attack after a charge. \nRequirements: Summoner level 7th, quadruped base form."
   },
   {
     "Key": "wotr-making-friends.evolutionwebfeature.name",
-    "enGB": "EvolutionWebFeature.Name"
+    "enGB": "Web"
   },
   {
     "Key": "wotr-making-friends.evolutionwebfeature.description",
-    "enGB": "EvolutionWebFeature.Description"
+    "enGB": "The eidolon can cast the Web spell at-will. The save scales with the eidolon's level. \nRequirements: Summoner level 7th; daemon, demon, or protean subtype"
   },
   {
     "Key": "wotr-making-friends.evolutionimproveddamagefeature.name",
-    "enGB": "EvolutionImprovedDamageFeature.Name"
+    "enGB": "Improved Damage"
   },
   {
     "Key": "wotr-making-friends.evolutionimproveddamagefeature.description",
-    "enGB": "EvolutionImprovedDamageFeature.Description"
+    "enGB": "The eidolon's natural attacks' damage dice go up by one step."
   },
   {
     "Key": "wotr-making-friends.evolutionreachfeature.name",
-    "enGB": "EvolutionReachFeature.Name"
+    "enGB": "Reach"
   },
   {
     "Key": "wotr-making-friends.evolutionreachfeature.description",
-    "enGB": "EvolutionReachFeature.Description"
+    "enGB": "The eidolon's Reach increases by 5ft."
   },
   {
     "Key": "wotr-making-friends.evolutionclawslimbsfeature.name",
-    "enGB": "EvolutionClawsLimbsFeature.Name"
+    "enGB": "Limbs, Claws"
   },
   {
     "Key": "wotr-making-friends.evolutionclawslimbsfeature.description",
-    "enGB": "EvolutionClawsLimbsFeature.Description"
+    "enGB": "The eidolon gains two secondary claw attacks."
   },
   {
     "Key": "wotr-making-friends.evolutionpincerslimbsfeature.name",
-    "enGB": "EvolutionPincersLimbsFeature.Name"
+    "enGB": "Limbs, Pincers"
   },
   {
     "Key": "wotr-making-friends.evolutionpincerslimbsfeature.description",
-    "enGB": "EvolutionPincersLimbsFeature.Description"
+    "enGB": "The eidolon gains two secondary pincer attacks."
   },
   {
     "Key": "wotr-making-friends.evolutionslamlimbsfeature.name",
-    "enGB": "EvolutionSlamLimbsFeature.Name"
+    "enGB": "Limbs, Slams"
   },
   {
     "Key": "wotr-making-friends.evolutionslamlimbsfeature.description",
-    "enGB": "EvolutionSlamLimbsFeature.Description"
+    "enGB": "The eidolon gains two secondary slam attacks."
   },
   {
     "Key": "wotr-making-friends.evolutioncost4feature.name",
-    "enGB": "EvolutionCost4Feature.Name"
+    "enGB": "4 Point Evolutions"
   },
   {
     "Key": "wotr-making-friends.evolutioncost4feature.description",
-    "enGB": "EvolutionCost4Feature.Description"
+    "enGB": "Eidolons, mystical companions summoned by skilled summoners, possess an evolution pool that allows them to gain new abilities, powers, and enhancements. These abilities, known as evolutions, define the eidolon’s unique traits and capabilities. As the summoner gains levels, they can modify these evolutions to suit their needs."
   },
   {
     "Key": "wotr-making-friends.evolutionamorphousfeature.name",
-    "enGB": "EvolutionAmorphousFeature.Name"
+    "enGB": "Amorphous"
   },
   {
     "Key": "wotr-making-friends.evolutionamorphousfeature.description",
-    "enGB": "EvolutionAmorphousFeature.Description"
+    "enGB": "The eidolon’s biology lacks discernible weak points. It is not subject to critical hits and sneak attacks. \nRequirements: Aberrant or elemental subtype; summoner level 9th."
   },
   {
     "Key": "wotr-making-friends.evolutionblindsightfeature.name",
-    "enGB": "EvolutionBlindsightFeature.Name"
+    "enGB": "Blindsight"
   },
   {
     "Key": "wotr-making-friends.evolutionblindsightfeature.description",
-    "enGB": "EvolutionBlindsightFeature.Description"
+    "enGB": "The eidolon’s biology lacks discernible weak points. It is not subject to critical hits and sneak attacks. \nRequirements: Aberrant or elemental subtype; summoner level 9th."
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponacidfeature.name",
-    "enGB": "EvolutionBreathWeaponAcidFeature.Name"
+    "enGB": "Breath Weapon, Acid"
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponacidfeature.description",
-    "enGB": "EvolutionBreathWeaponAcidFeature.Description"
+    "enGB": "The eidolon learns to exhale a cone or line of magical energy, gaining a breath weapon. Select acid, cold, electricity, or fire. The eidolon can breathe a 30-foot cone (or 60-foot line) that deals 1d6 points of damage of the selected type per Hit Dice it possesses. Those caught in the breath weapon can attempt a Reflex save for half damage."
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponcoldfeature.name",
-    "enGB": "EvolutionBreathWeaponColdFeature.Name"
+    "enGB": "Breath Weapon, Cold"
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponcoldfeature.description",
-    "enGB": "EvolutionBreathWeaponColdFeature.Description"
+    "enGB": "The eidolon learns to exhale a cone or line of magical energy, gaining a breath weapon. Select acid, cold, electricity, or fire. The eidolon can breathe a 30-foot cone (or 60-foot line) that deals 1d6 points of damage of the selected type per Hit Dice it possesses. Those caught in the breath weapon can attempt a Reflex save for half damage."
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponelectricityfeature.name",
-    "enGB": "EvolutionBreathWeaponElectricityFeature.Name"
+    "enGB": "Breath Weapon, Electricity"
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponelectricityfeature.description",
-    "enGB": "EvolutionBreathWeaponElectricityFeature.Description"
+    "enGB": "The eidolon learns to exhale a cone or line of magical energy, gaining a breath weapon. Select acid, cold, electricity, or fire. The eidolon can breathe a 30-foot cone (or 60-foot line) that deals 1d6 points of damage of the selected type per Hit Dice it possesses. Those caught in the breath weapon can attempt a Reflex save for half damage."
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponfirefeature.name",
-    "enGB": "EvolutionBreathWeaponFireFeature.Name"
+    "enGB": "Breath Weapon, Fire"
   },
   {
     "Key": "wotr-making-friends.evolutionbreathweaponfirefeature.description",
-    "enGB": "EvolutionBreathWeaponFireFeature.Description"
+    "enGB": "The eidolon learns to exhale a cone or line of magical energy, gaining a breath weapon. Select acid, cold, electricity, or fire. The eidolon can breathe a 30-foot cone (or 60-foot line) that deals 1d6 points of damage of the selected type per Hit Dice it possesses. Those caught in the breath weapon can attempt a Reflex save for half damage."
   },
   {
     "Key": "wotr-making-friends.evolutionfasthealingfeature.name",
-    "enGB": "EvolutionFastHealingFeature.Name"
+    "enGB": "Fast Healing, 5"
   },
   {
     "Key": "wotr-making-friends.evolutionfasthealingfeature.description",
-    "enGB": "EvolutionFastHealingFeature.Description"
+    "enGB": "The eidolon gains Fast Healing 5. \nRequirements: Summoner level 11th."
   },
   {
     "Key": "wotr-making-friends.evolutionlargefeature.name",
-    "enGB": "EvolutionLargeFeature.Name"
+    "enGB": "Growth"
   },
   {
     "Key": "wotr-making-friends.evolutionlargefeature.description",
-    "enGB": "EvolutionLargeFeature.Description"
+    "enGB": "The eidolon grows in size, becoming Large. The eidolon gains a +4 bonus to Strength, a +2 bonus to Constitution, and a +2 bonus to its natural armor. It takes a –2 penalty to Dexterity. This size change also gives the creature a –1 size penalty to AC and on attack rolls, a +1 bonus on combat maneuver checks and to CMD, a –2 penalty on Mobility checks, and a –4 penalty on Thievery checks. If the eidolon has the biped base form, it also gains a reach of 10 feet. Any reach evolutions the eidolon possesses are added to this total.\nIf 6 additional evolution points are spent, the eidolon instead becomes Huge. The eidolon gains a +8 bonus to Strength, a +4 bonus to Constitution, and a +5 bonus to its natural armor. It takes a –4 penalty to Dexterity. This size change also gives the creature a –2 size penalty to AC and on attack rolls, a +2 bonus on combat maneuver checks and to CMD, a 10-foot reach, a –4 penalty on Mobility checks, and a –8 penalty on Thievery checks. If the eidolon has the biped base form, its reach increases to 15 feet instead of 10 feet. Any reach evolutions the eidolon possesses are added to this total. These bonuses and penalties replace, and do not stack with, those gained from becoming Large.\nThe ability increase evolution costs twice as much (4 evolution points) when adding to the Strength or Constitution scores of a Large or Huge eidolon. \nRequirements: Summoner level 8th (13th for Huge), Medium size."
   },
   {
     "Key": "wotr-making-friends.evolutionspellresistancefeature.name",
-    "enGB": "EvolutionSpellResistanceFeature.Name"
+    "enGB": "Spell Resistance"
   },
   {
     "Key": "wotr-making-friends.evolutionspellresistancefeature.description",
-    "enGB": "EvolutionSpellResistanceFeature.Description"
+    "enGB": "The eidolon is protected against magic, gaining spell resistance. The eidolon’s spell resistance is equal to 11 + the eidolon's level. This spell resistance does not apply to spells cast by the summoner. \nRequirements: Summoner level 9th."
   },
   {
     "Key": "wotr-making-friends.evolutionbaseabilitiesfeature.name",
-    "enGB": "EvolutionBaseAbilitiesFeature.Name"
+    "enGB": "Base Evolutions"
   },
   {
     "Key": "wotr-making-friends.evolutionbaseabilitiesfeature.description",
-    "enGB": "EvolutionBaseAbilitiesFeature.Description"
+    "enGB": "Some eidolons gain features as part of their base subtype. These features are not removed when using Transmogrify."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangefinefeature.name",
-    "enGB": "EvolutionSizeChangeFineFeature.Name"
+    "enGB": "Eidolon Size Change, Fine"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangefinefeature.description",
-    "enGB": "EvolutionSizeChangeFineFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangediminutivefeature.name",
-    "enGB": "EvolutionSizeChangeDiminutiveFeature.Name"
+    "enGB": "Eidolon Size Change, Diminutive"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangediminutivefeature.description",
-    "enGB": "EvolutionSizeChangeDiminutiveFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangetinyfeature.name",
-    "enGB": "EvolutionSizeChangeTinyFeature.Name"
+    "enGB": "Eidolon Size Change, Tiny"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangetinyfeature.description",
-    "enGB": "EvolutionSizeChangeTinyFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangesmallfeature.name",
-    "enGB": "EvolutionSizeChangeSmallFeature.Name"
+    "enGB": "Eidolon Size Change, Small"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangesmallfeature.description",
-    "enGB": "EvolutionSizeChangeSmallFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangemediumfeature.name",
-    "enGB": "EvolutionSizeChangeMediumFeature.Name"
+    "enGB": "Eidolon Size Change, Medium"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangemediumfeature.description",
-    "enGB": "EvolutionSizeChangeMediumFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangelargefeature.name",
-    "enGB": "EvolutionSizeChangeLargeFeature.Name"
+    "enGB": "Eidolon Size Change, Large"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangelargefeature.description",
-    "enGB": "EvolutionSizeChangeLargeFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangehugefeature.name",
-    "enGB": "EvolutionSizeChangeHugeFeature.Name"
+    "enGB": "Eidolon Size Change, Huge"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangehugefeature.description",
-    "enGB": "EvolutionSizeChangeHugeFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangegargantuanfeature.name",
-    "enGB": "EvolutionSizeChangeGargantuanFeature.Name"
+    "enGB": "Eidolon Size Change, Gargantuan"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangegargantuanfeature.description",
-    "enGB": "EvolutionSizeChangeGargantuanFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangecolossalfeature.name",
-    "enGB": "EvolutionSizeChangeColossalFeature.Name"
+    "enGB": "Eidolon Size Change, Colossal"
   },
   {
     "Key": "wotr-making-friends.evolutionsizechangecolossalfeature.description",
-    "enGB": "EvolutionSizeChangeColossalFeature.Description"
+    "enGB": "Some creatures are normally larger or smaller than normal for an eidolon. This ability changes their base damage and weapon size modifiers to Medium, if the Large or Huge evolutions are taken, then those evolutions will take precidence."
   },
   {
     "Key": "wotr-making-friends.addmaxattacksfeature.name",
-    "enGB": "AddMaxAttacksFeature.Name"
+    "enGB": "Maximum Attacks"
   },
   {
     "Key": "wotr-making-friends.addmaxattacksfeature.description",
-    "enGB": "AddMaxAttacksFeature.Description"
+    "enGB": "The eidolon's attack evolutions are restricted by a maximum number of attacks. This increases that maximum by 1."
   },
   {
     "Key": "wotr-making-friends.eidolonstartingevolutionsfeature.name",
-    "enGB": "EidolonStartingEvolutionsFeature.Name"
+    "enGB": "Starting Evolutions"
   },
   {
     "Key": "wotr-making-friends.eidolonstartingevolutionsfeature.description",
-    "enGB": "EidolonStartingEvolutionsFeature.Description"
+    "enGB": "Some eidolons are given evolutions based on their base form and their subtype."
   },
   {
     "Key": "wotr-making-friends.abberantaberrantstartingevolutionsfeature.name",
-    "enGB": "AbberantAberrantStartingEvolutionsFeature.Name"
+    "enGB": "Abberant/Aberrant"
   },
   {
     "Key": "wotr-making-friends.abberantaberrantstartingevolutionsfeature.description",
-    "enGB": "AbberantAberrantStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.quadrupedaberrantstartingevolutionsfeature.name",
-    "enGB": "QuadrupedAberrantStartingEvolutionsFeature.Name"
+    "enGB": "Quadruped/Aberrant"
   },
   {
     "Key": "wotr-making-friends.quadrupedaberrantstartingevolutionsfeature.description",
-    "enGB": "QuadrupedAberrantStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentineaberrantstartingevolutionsfeature.name",
-    "enGB": "SerpentineAberrantStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Aberrant"
   },
   {
     "Key": "wotr-making-friends.serpentineaberrantstartingevolutionsfeature.description",
-    "enGB": "SerpentineAberrantStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedaeonstartingevolutionsfeature.name",
-    "enGB": "BipedAeonStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Aeon"
   },
   {
     "Key": "wotr-making-friends.bipedaeonstartingevolutionsfeature.description",
-    "enGB": "BipedAeonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentineaeonstartingevolutionsfeature.name",
-    "enGB": "SerpentineAeonStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Aeon"
   },
   {
     "Key": "wotr-making-friends.serpentineaeonstartingevolutionsfeature.description",
-    "enGB": "SerpentineAeonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedagathionstartingevolutionsfeature.name",
-    "enGB": "BipedAgathionStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Agathion"
   },
   {
     "Key": "wotr-making-friends.bipedagathionstartingevolutionsfeature.description",
-    "enGB": "BipedAgathionStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.quadrupedagathionstartingevolutionsfeature.name",
-    "enGB": "QuadrupedAgathionStartingEvolutionsFeature.Name"
+    "enGB": "Quadruped/Agathion"
   },
   {
     "Key": "wotr-making-friends.quadrupedagathionstartingevolutionsfeature.description",
-    "enGB": "QuadrupedAgathionStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedancestorstartingevolutionsfeature.name",
-    "enGB": "BipedAncestorStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Ancestor"
   },
   {
     "Key": "wotr-making-friends.bipedancestorstartingevolutionsfeature.description",
-    "enGB": "BipedAncestorStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedangelstartingevolutionsfeature.name",
-    "enGB": "BipedAngelStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Angel"
   },
   {
     "Key": "wotr-making-friends.bipedangelstartingevolutionsfeature.description",
-    "enGB": "BipedAngelStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedarchonstartingevolutionsfeature.name",
-    "enGB": "BipedArchonStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Archon"
   },
   {
     "Key": "wotr-making-friends.bipedarchonstartingevolutionsfeature.description",
-    "enGB": "BipedArchonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedastralstartingevolutionsfeature.name",
-    "enGB": "BipedAstralStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Astral"
   },
   {
     "Key": "wotr-making-friends.bipedastralstartingevolutionsfeature.description",
-    "enGB": "BipedAstralStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentineastralstartingevolutionsfeature.name",
-    "enGB": "SerpentineAstralStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Astral"
   },
   {
     "Key": "wotr-making-friends.serpentineastralstartingevolutionsfeature.description",
-    "enGB": "SerpentineAstralStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedazatastartingevolutionsfeature.name",
-    "enGB": "BipedAzataStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Azata"
   },
   {
     "Key": "wotr-making-friends.bipedazatastartingevolutionsfeature.description",
-    "enGB": "BipedAzataStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentineazatastartingevolutionsfeature.name",
-    "enGB": "SerpentineAzataStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Azata"
   },
   {
     "Key": "wotr-making-friends.serpentineazatastartingevolutionsfeature.description",
-    "enGB": "SerpentineAzataStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipeddaemonstartingevolutionsfeature.name",
-    "enGB": "BipedDaemonStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Daemon"
   },
   {
     "Key": "wotr-making-friends.bipeddaemonstartingevolutionsfeature.description",
-    "enGB": "BipedDaemonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.abberantdaemonstartingevolutionsfeature.name",
-    "enGB": "AbberantDaemonStartingEvolutionsFeature.Name"
+    "enGB": "Abberant/Daemon"
   },
   {
     "Key": "wotr-making-friends.abberantdaemonstartingevolutionsfeature.description",
-    "enGB": "AbberantDaemonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentinedaemonstartingevolutionsfeature.name",
-    "enGB": "SerpentineDaemonStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Daemon"
   },
   {
     "Key": "wotr-making-friends.serpentinedaemonstartingevolutionsfeature.description",
-    "enGB": "SerpentineDaemonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentinedeepwaterstartingevolutionsfeature.name",
-    "enGB": "SerpentineDeepwaterStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Deepwater"
   },
   {
     "Key": "wotr-making-friends.serpentinedeepwaterstartingevolutionsfeature.description",
-    "enGB": "SerpentineDeepwaterStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.abberantdemonstartingevolutionsfeature.name",
-    "enGB": "AbberantDemonStartingEvolutionsFeature.Name"
+    "enGB": "Abberant/Demon"
   },
   {
     "Key": "wotr-making-friends.abberantdemonstartingevolutionsfeature.description",
-    "enGB": "AbberantDemonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipeddemonstartingevolutionsfeature.name",
-    "enGB": "BipedDemonStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Demon"
   },
   {
     "Key": "wotr-making-friends.bipeddemonstartingevolutionsfeature.description",
-    "enGB": "BipedDemonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.quadrupeddemonstartingevolutionsfeature.name",
-    "enGB": "QuadrupedDemonStartingEvolutionsFeature.Name"
+    "enGB": "Quadruped/Demon"
   },
   {
     "Key": "wotr-making-friends.quadrupeddemonstartingevolutionsfeature.description",
-    "enGB": "QuadrupedDemonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentinedemonstartingevolutionsfeature.name",
-    "enGB": "SerpentineDemonStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Demon"
   },
   {
     "Key": "wotr-making-friends.serpentinedemonstartingevolutionsfeature.description",
-    "enGB": "SerpentineDemonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipeddevilstartingevolutionsfeature.name",
-    "enGB": "BipedDevilStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Devil"
   },
   {
     "Key": "wotr-making-friends.bipeddevilstartingevolutionsfeature.description",
-    "enGB": "BipedDevilStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipeddivstartingevolutionsfeature.name",
-    "enGB": "BipedDivStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Div"
   },
   {
     "Key": "wotr-making-friends.bipeddivstartingevolutionsfeature.description",
-    "enGB": "BipedDivStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.abberantelementalstartingevolutionsfeature.name",
-    "enGB": "AbberantElementalStartingEvolutionsFeature.Name"
+    "enGB": "Abberant/Elemental"
   },
   {
     "Key": "wotr-making-friends.abberantelementalstartingevolutionsfeature.description",
-    "enGB": "AbberantElementalStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedelementalstartingevolutionsfeature.name",
-    "enGB": "BipedElementalStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Elemental"
   },
   {
     "Key": "wotr-making-friends.bipedelementalstartingevolutionsfeature.description",
-    "enGB": "BipedElementalStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentineelementalstartingevolutionsfeature.name",
-    "enGB": "SerpentineElementalStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Elemental"
   },
   {
     "Key": "wotr-making-friends.serpentineelementalstartingevolutionsfeature.description",
-    "enGB": "SerpentineElementalStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedgeniestartingevolutionsfeature.name",
-    "enGB": "BipedGenieStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Genie"
   },
   {
     "Key": "wotr-making-friends.bipedgeniestartingevolutionsfeature.description",
-    "enGB": "BipedGenieStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedinevitablestartingevolutionsfeature.name",
-    "enGB": "BipedInevitableStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Inevitable"
   },
   {
     "Key": "wotr-making-friends.bipedinevitablestartingevolutionsfeature.description",
-    "enGB": "BipedInevitableStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedkamistartingevolutionsfeature.name",
-    "enGB": "BipedKamiStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Kami"
   },
   {
     "Key": "wotr-making-friends.bipedkamistartingevolutionsfeature.description",
-    "enGB": "BipedKamiStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedkytonstartingevolutionsfeature.name",
-    "enGB": "BipedKytonStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Kyton"
   },
   {
     "Key": "wotr-making-friends.bipedkytonstartingevolutionsfeature.description",
-    "enGB": "BipedKytonStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentineproteanstartingevolutionsfeature.name",
-    "enGB": "SerpentineProteanStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Protean"
   },
   {
     "Key": "wotr-making-friends.serpentineproteanstartingevolutionsfeature.description",
-    "enGB": "SerpentineProteanStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedpsychopompstartingevolutionsfeature.name",
-    "enGB": "BipedPsychopompStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Psychopomp"
   },
   {
     "Key": "wotr-making-friends.bipedpsychopompstartingevolutionsfeature.description",
-    "enGB": "BipedPsychopompStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.quadrupedpsychopompstartingevolutionsfeature.name",
-    "enGB": "QuadrupedPsychopompStartingEvolutionsFeature.Name"
+    "enGB": "Quadruped/Psychopomp"
   },
   {
     "Key": "wotr-making-friends.quadrupedpsychopompstartingevolutionsfeature.description",
-    "enGB": "QuadrupedPsychopompStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentinepsychopompstartingevolutionsfeature.name",
-    "enGB": "SerpentinePsychopompStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Psychopomp"
   },
   {
     "Key": "wotr-making-friends.serpentinepsychopompstartingevolutionsfeature.description",
-    "enGB": "SerpentinePsychopompStartingEvolutionsFeature.Description"
+    "enGB": "Serpentine/Psychopomp"
   },
   {
     "Key": "wotr-making-friends.bipedradiantstartingevolutionsfeature.name",
-    "enGB": "BipedRadiantStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Radiant"
   },
   {
     "Key": "wotr-making-friends.bipedradiantstartingevolutionsfeature.description",
-    "enGB": "BipedRadiantStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.quadrupedradiantstartingevolutionsfeature.name",
-    "enGB": "QuadrupedRadiantStartingEvolutionsFeature.Name"
+    "enGB": "Quadruped/Radiant"
   },
   {
     "Key": "wotr-making-friends.quadrupedradiantstartingevolutionsfeature.description",
-    "enGB": "QuadrupedRadiantStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedshadowstartingevolutionsfeature.name",
-    "enGB": "BipedShadowStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Shadow"
   },
   {
     "Key": "wotr-making-friends.bipedshadowstartingevolutionsfeature.description",
-    "enGB": "BipedShadowStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentineshadowstartingevolutionsfeature.name",
-    "enGB": "SerpentineShadowStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Shadow"
   },
   {
     "Key": "wotr-making-friends.serpentineshadowstartingevolutionsfeature.description",
-    "enGB": "SerpentineShadowStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedstorykinstartingevolutionsfeature.name",
-    "enGB": "BipedStorykinStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Storykin"
   },
   {
     "Key": "wotr-making-friends.bipedstorykinstartingevolutionsfeature.description",
-    "enGB": "BipedStorykinStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.quadrupedstorykinstartingevolutionsfeature.name",
-    "enGB": "QuadrupedStorykinStartingEvolutionsFeature.Name"
+    "enGB": "Quadruped/Storykin"
   },
   {
     "Key": "wotr-making-friends.quadrupedstorykinstartingevolutionsfeature.description",
-    "enGB": "QuadrupedStorykinStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.serpentinestorykinstartingevolutionsfeature.name",
-    "enGB": "SerpentineStorykinStartingEvolutionsFeature.Name"
+    "enGB": "Serpentine/Storykin"
   },
   {
     "Key": "wotr-making-friends.serpentinestorykinstartingevolutionsfeature.description",
-    "enGB": "SerpentineStorykinStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedtwinnedstartingevolutionsfeature.name",
-    "enGB": "BipedTwinnedStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Twinned"
   },
   {
     "Key": "wotr-making-friends.bipedtwinnedstartingevolutionsfeature.description",
-    "enGB": "BipedTwinnedStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.bipedvoidstartingevolutionsfeature.name",
-    "enGB": "BipedVoidStartingEvolutionsFeature.Name"
+    "enGB": "Biped/Void"
   },
   {
     "Key": "wotr-making-friends.bipedvoidstartingevolutionsfeature.description",
-    "enGB": "BipedVoidStartingEvolutionsFeature.Description"
+    "enGB": ""
   },
   {
     "Key": "wotr-making-friends.summoneraspectfeature.name",
-    "enGB": "SummonerAspectFeature.Name"
+    "enGB": "Aspect"
   },
   {
     "Key": "wotr-making-friends.summoneraspectfeature.description",
-    "enGB": "SummonerAspectFeature.Description"
+    "enGB": "At 10th level, a summoner can divert up to 2 points from his eidolon’s evolution pool to add evolutions to himself. He cannot select any evolution that the eidolon could not possess, and he must be able to meet the requirements as well (except for subtype requirements, so long as his eidolon meets the subtype requirement). He cannot select the ability increase evolution through this ability. Any points spent in this way are taken from the eidolon’s evolution pool (reducing the total number available to the eidolon). The summoner can change the evolutions granted by these points anytime he can change the eidolon’s evolutions."
   },
   {
     "Key": "wotr-making-friends.summoneraspectgreaterfeature.name",
-    "enGB": "SummonerAspectGreaterFeature.Name"
+    "enGB": "Greater Aspect"
   },
   {
     "Key": "wotr-making-friends.summoneraspectgreaterfeature.description",
-    "enGB": "SummonerAspectGreaterFeature.Description"
+    "enGB": "At 18th level, a summoner can divert more of his eidolon’s evolutions to himself. This ability functions as the aspect ability, but the maximum number of evolution points the summoner can divert increases to 6. In addition, the eidolon loses 1 point from its evolution pool for every 2 points (or fraction thereof ) diverted to the summoner instead of losing 1 point from the evolution pool for each point diverted."
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost0feature.name",
+    "enGB": "evolutioncost0feature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.evolutioncost0feature.description",
+    "enGB": "evolutioncost0feature.Description"
   }
 ]

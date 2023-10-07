@@ -72,8 +72,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                 var energyType = (DamageEnergyType)Enum.Parse(typeof(DamageEnergyType), IClass.abilities[i]);
                 AbilityConfigurator.New(IClass.Evolution + IClass.abilities[i] + "BreathAbility", GetGUID.GUIDByName(IClass.Evolution + IClass.abilities[i] + "BreathAbility"))
                     .CopyFrom(IClass.copiedAbilities[i], c => c is not (AbilityResourceLogic or ContextRankConfig))
-                    .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Name"))
-                    .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "BreathAbility.Description"))
+                    .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "Feature.Name"))
+                    .SetDescription(Helpers.ObtainString(IClass.Evolution + IClass.abilities[i] + "Feature.Description"))
                     .SetIcon(IClass.icons[i])
                     .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
                     .AddContextRankConfig(ContextRankConfigs.CharacterLevel(AbilityRankType.DamageDice).WithDiv2Progression())

@@ -38,7 +38,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                                     .SetDescription(Helpers.ObtainString(IClass.BaseFeatureSelection + ".Description"))
                                                     .SetHideInUI(false)
                                                     .SetHideInCharacterSheetAndLevelUp(false)
-                                                    .SetGroups(FeatureGroup.AnimalCompanion)
+                                                    .SetGroups(FeatureGroupExtension.EidolonAnimalCompanion)
                                                     .SetRanks(1)
                                                     .SetIsClassFeature(true)
                                                     .ConfigureWithLogging();
@@ -58,7 +58,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                                             .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
                                                             .SetHideInUI(false)
                                                             .SetHideInCharacterSheetAndLevelUp(false)
-                                                            .SetGroups(FeatureGroup.AnimalCompanion)
+                                                            .SetGroups(FeatureGroupExtension.EidolonAnimalCompanion)
                                                             .SetRanks(1)
                                                             .SetIsClassFeature(true)
                                                             .ConfigureWithLogging();
@@ -100,7 +100,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                                         .SetRanks(1)
                                                         .SetReapplyOnLevelUp(true)
                                                         .SetIsClassFeature(true)
-                                                        .SetGroups(FeatureGroup.AnimalCompanion)
+                                                        .SetGroups(FeatureGroupExtension.EidolonAnimalCompanion)
                                                         .ConfigureWithLogging();
 
                     feature.AddComponents(new[] { addEidolon });

@@ -75,8 +75,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
 
                     var abilityName = evolution + "Ability";
                     AbilityConfigurator.New(abilityName, GetGUID.GUIDByName(abilityName))
-                        .SetDisplayName(Helpers.ObtainString(abilityName + ".Name"))
-                        .SetDescription(Helpers.ObtainString(abilityName + ".Description"))
+                        .SetDisplayName(Helpers.ObtainString(featureName + ".Name"))
+                        .SetDescription(Helpers.ObtainString(featureName + ".Description"))
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetType(AbilityType.Special)
                         .SetRange(AbilityRange.Personal)
@@ -97,12 +97,14 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
         }
         internal static void CreateAllEvolutionBaseAbilities()
         {
+            int i = 1;
             foreach (var level in Evolutions)
             {
                 var name = "Evolution" + level.Key + "AbilityBase";
+                var display = $"evolutioncost{i++}feature";
                 var abilityBase = AbilityConfigurator.New(name, GetGUID.GUIDByName(name))
-                    .SetDisplayName(Helpers.ObtainString(name + ".Name"))
-                    .SetDescription(Helpers.ObtainString(name + ".Description"))
+                    .SetDisplayName(Helpers.ObtainString(display + ".Name"))
+                    .SetDescription(Helpers.ObtainString(display + ".Description"))
                     .SetIcon(AssetLoader.LoadInternal("Abilities", $"Evolutions{level.Key}.png"))
                     .SetType(AbilityType.Special)
                     .SetRange(AbilityRange.Touch)

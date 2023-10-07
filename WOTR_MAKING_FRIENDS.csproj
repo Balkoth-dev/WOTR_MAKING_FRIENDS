@@ -22,8 +22,6 @@
     <None Remove="Output\Localizations\Scrolls.json" />
     <None Remove="Output\Localizations\Settings.json" />
     <None Remove="Output\Localizations\Spells.json" />
-    <None Remove="Output\Localizations\SummonerClass.json" />
-    <None Remove="Output\Localizations\SummonerSpellbook.json" />
     <None Remove="Output\Localizations\Units.json" />
   </ItemGroup>
 
@@ -35,8 +33,6 @@
     <EmbeddedResource Include="Output\Localizations\Scrolls.json" />
     <EmbeddedResource Include="Output\Localizations\Settings.json" />
     <EmbeddedResource Include="Output\Localizations\Spells.json" />
-    <EmbeddedResource Include="Output\Localizations\SummonerClass.json" />
-    <EmbeddedResource Include="Output\Localizations\SummonerSpellbook.json" />
     <EmbeddedResource Include="Output\Localizations\Units.json" />
   </ItemGroup>
 

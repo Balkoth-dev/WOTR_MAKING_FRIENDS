@@ -11,25 +11,18 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
     [AllowMultipleComponents]
     public class AbilityCasterRankIsHigherThanFeatureAmount : BlueprintComponent, IAbilityCasterRestriction
     {
-        public BlueprintFeatureReference[] hasFeatures;
-        public BlueprintUnitFactReference greaterThanFact;
+        public BlueprintFeatureReference prerequisiteFact;
+        public BlueprintFeatureReference compareFact;
 
         public bool IsCasterRestrictionPassed(UnitEntityData caster)
         {
-            if (hasFeatures == null || greaterThanFact == null)
+            if (caster.Progression.Features.HasFact(prerequisiteFact))
             {
-                return false;
+                if(caster.Progression.Features.HasFact(compareFact))
+                    return caster.Progression.Features.GetFact(prerequisiteFact).GetRank() > caster.Progression.Features.GetFact(compareFact).GetRank();
+                return true;
             }
-            if (!caster.Progression.Features.HasFact(greaterThanFact))
-            {
-                return false;
-            }
-            var i = 0;
-            foreach (var feature in hasFeatures)
-            {
-                if (caster.Progression.Features.HasFact(feature)) { i++; }
-            }
-            return i < caster.Progression.Features.GetFact(greaterThanFact).GetRank();
+            return false;
         }
 
         public string GetAbilityCasterRestrictionUIText()
