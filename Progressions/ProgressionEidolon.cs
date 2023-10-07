@@ -26,6 +26,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions
                 .SetClasses(GetGUID.GUIDByName("SummonerClass"))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
+                .SetHideInUI(true)
                 .ConfigureWithLogging();
 
         }
