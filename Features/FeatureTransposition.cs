@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 namespace WOTR_MAKING_FRIENDS.Features
@@ -27,6 +28,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(IClass.Description)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerTranspositionAbility")) })
                 .SetIcon(FeatureRefs.SpellDanceFeature.Reference.Get().m_Icon)
+                .SetGroups(FeatureGroupExtension.SummonerFeatureGroup)
                 .ConfigureWithLogging();
         }
     }

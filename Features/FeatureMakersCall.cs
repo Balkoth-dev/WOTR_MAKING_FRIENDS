@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
+using WOTR_MAKING_FRIENDS.Enums;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 namespace WOTR_MAKING_FRIENDS.Features
@@ -28,6 +29,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .AddAbilityResources(amount: 1, resource: BlueprintTool.GetRef<BlueprintAbilityResourceReference>(GetGUID.GUIDByName("SummonerMakersCallResource")), true)
                 .AddFacts(new() { BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("SummonerMakersCallAbility")) })
                 .SetIcon(FeatureRefs.DimensionalRideFeature.Reference.Get().m_Icon)
+                .SetGroups(FeatureGroupExtension.SummonerFeatureGroup)
                 .ConfigureWithLogging();
         }
     }

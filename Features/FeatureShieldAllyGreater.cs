@@ -30,6 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .AddRemoveFeatureOnApply(GetGUID.GUIDByName("SummonerShieldAllyFeature"))
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddFeatureToPet(GetGUID.GUIDByName("SummonerShieldAllyGreaterAuraFeature"), PetTypeExtensions.Eidolon)
+                .SetGroups(FeatureGroupExtension.SummonerFeatureGroup)
                 .ConfigureWithLogging();
 
         }
@@ -41,6 +42,7 @@ namespace WOTR_MAKING_FRIENDS.Features
                 .SetDescription(IClass.Description)
                 .SetIcon(AssetLoader.LoadInternal("Abilities", "ShieldAlly.png"))
                 .AddAuraFeatureComponent(GetGUID.GUIDByName("SummonerShieldAllyGreaterAuraBuff"))
+                .SetGroups(FeatureGroupExtension.SummonerFeatureGroup)
                 .ConfigureWithLogging();
         }
     }
