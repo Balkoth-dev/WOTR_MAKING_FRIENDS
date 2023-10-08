@@ -36,6 +36,8 @@ https://github.com/WittleWolfie/ModMenu
 * If a character has more than 2 companions (such as an Eidolon+Aivu+Animal Companion), the UI breaks.
 * If a party has more than 13 units in total, the game breaks.
 * Attack animations won't play for certain body-types. This is because they don't have an animation for that attack, but the attack will still happen.
+* Sometimes even if your Eidolon has arms the game will lock the equipment slots, reloading your game fixes this issue.
+* Bonded Senses doesn't refresh when the eidolon changes their perception ranks, reloading your game fixes this issue.
 ```
 ## Special Thanks
 Thanks to @Vek17#1898, @bubbles#0538, @WittleWolfie#8477, and everyone else on the [Discord](https://discord.gg/owlcat). Without their assistance this project would not have been possible.
