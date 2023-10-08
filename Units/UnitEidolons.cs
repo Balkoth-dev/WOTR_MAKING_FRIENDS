@@ -629,7 +629,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                 {
                     Name = "EidolonWerewolf",
                     m_DisplayName = Helpers.ObtainString("eidolonunit.Name"),
-                    copiedUnit = UnitRefs.CR2_WerewolfStandard.Cast<BlueprintUnitReference>().Reference,
+                    copiedUnit = UnitRefs.DLC3_CR2_WerewolfStandard.Cast<BlueprintUnitReference>().Reference,
                     isEidolon = true,
                     eidolonBaseForm = EnumsEidolonBaseForm.Biped,
                 },
