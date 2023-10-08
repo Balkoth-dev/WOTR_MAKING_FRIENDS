@@ -13,7 +13,7 @@ https://github.com/WittleWolfie/ModMenu
 ```
 1. Download and install Unity Mod Manager, make sure it is at least version 0.23.0
 2. Run Unity Mod Manger and set it up to find Wrath of the Righteous
-3. Download the WOTR_PATH_OF_HELL mod
+3. Download the WOTR_MAKING_FRIENDS mod
 4. Install the mod by dragging the zip file from step 3 into the Unity Mod Manager window under the Mods tab
 ```
 ## Added Content
