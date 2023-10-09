@@ -5,6 +5,7 @@ using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components.CasterCheckers;
 using UnityEngine;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolutions
@@ -29,6 +30,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._1_Point_Evolu
             FeatureConfigurator.For(GetGUID.GUIDByName(IClass.Feature))
                 .SetIcon(IClass.icon)
                 .AddOutgoingPhysicalDamageProperty(addMagic: true, naturalAttacks: true)
+                .AddComponent<AddOutgoingPhysicalDamagePropertyMasterAlignment>(c => { c.levelRequirement = 10; c.AddAlignment = true; c.MastersAlignment = true; c.NaturalAttacks = true; })
                 .ConfigureWithLogging(true);
         }
         public static void AdjustAbility()

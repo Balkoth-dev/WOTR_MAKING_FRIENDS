@@ -3438,5 +3438,9 @@
   {
     "name": "EidolonBonusHealingBuff",
     "guid": "8726466d-27da-40e8-b3af-3f58ee0ed14a"
+  },
+  {
+    "name": "EidolonAddSpellTransmogrifyFeature",
+    "guid": "f7b0a6a3-b687-418c-95ea-bc0dba072e87"
   }
 ]

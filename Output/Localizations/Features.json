@@ -1333,7 +1333,7 @@
   },
   {
     "Key": "wotr-making-friends.evolutionmagicattacksfeature.description",
-    "enGB": "The eidolon's attacks are considered magical for the purpose of bypassing DR."
+    "enGB": "The eidolon's attacks are considered magical for the purpose of bypassing DR. If the eidolon is 10th level or higher, all of the eidolon’s natural attacks are treated as the alignment of the eidolon's master for the purpose of overcoming damage reduction."
   },
   {
     "Key": "wotr-making-friends.evolutionnaturalarmorfeature.name",
@@ -1409,7 +1409,7 @@
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillthieveryfeature.name",
-    "enGB": "Skilled, Thievery"
+    "enGB": "Skilled, Trickery"
   },
   {
     "Key": "wotr-making-friends.evolutionskilledskillthieveryfeature.description",
@@ -2478,5 +2478,13 @@
   {
     "Key": "wotr-making-friends.eidolonvoidsubtypefeature.description",
     "enGB": "Like the sharp-angled sceaduinars they resemble, void eidolons exult in entropy and resent anything bearing even a hint of life—including their summoners."
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltransmogrifyfeature.name",
+    "enGB": "EidolonAddSpellTransmogrifyFeature.Name"
+  },
+  {
+    "Key": "wotr-making-friends.eidolonaddspelltransmogrifyfeature.description",
+    "enGB": "EidolonAddSpellTransmogrifyFeature.Description"
   }
 ]
