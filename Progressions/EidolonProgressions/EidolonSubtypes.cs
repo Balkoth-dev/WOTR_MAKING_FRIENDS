@@ -21,7 +21,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                     .AddEntry(8, FeatureImmunityMind.IClass.Guid)
                                     .AddEntry(12, FeatureDR5Slashing.IClass.Guid,GetGUID.GUIDByName("EvolutionScentBaseFeature"))
                                     .AddEntry(16, GetGUID.GUIDByName("EvolutionBlindsightBaseFeature"))
-                                    .AddEntry(20, GetGUID.GUIDByName("dummyBuff")),
+                                    .AddEntry(20, FeatureAddSpellTransmogrify.IClass.Guid),
                     baseForms = new()
                     {
                         EnumsEidolonBaseForm.Abberant,
@@ -140,7 +140,7 @@ namespace WOTR_MAKING_FRIENDS.Progressions.EidolonProgressions
                                     .AddEntry(8, GetGUID.GUIDByName("EvolutionFlightBaseFeature"))
                                     .AddEntry(12, FeatureSuperiorSummoningMaster.IClass.Guid)
                                     .AddEntry(16, FeatureImmunityCurse.IClass.Guid,FeatureImmunityDisease.IClass.Guid,FeatureImmunityPoison.IClass.Guid)
-                                    .AddEntry(20, GetGUID.GUIDByName("dummyBuff")),
+                                    .AddEntry(20, FeatureAscendantSummonsMaster.IClass.Guid),
                     baseForms = new()
                     {
                         EnumsEidolonBaseForm.Biped,

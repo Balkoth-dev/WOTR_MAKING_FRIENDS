@@ -94,7 +94,8 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Daze.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Guidance.ToString()),
                 BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.MageLight.ToString()),
-                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Resistance.ToString())
+                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.Resistance.ToString()),
+                BlueprintTool.GetRef<BlueprintAbilityReference>(AbilityRefs.DismissAreaEffect.ToString())
             };
             return spelllist;
         }

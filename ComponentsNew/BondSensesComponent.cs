@@ -22,7 +22,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public override void OnTurnOn()
         {
-            int statValue = Owner.Stats.SkillPerception.BaseValue;
+            int statValue = Owner.Stats.SkillPerception.ModifiedValue;
             if (Owner.Pets.Count > 0)
             {
                 foreach (EntityPartRef<Kingmaker.EntitySystem.Entities.UnitEntityData, UnitPartPet> pet in Owner.Pets)
@@ -30,12 +30,12 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                     PetType? type = pet.Entity.Get<UnitPartPet>()?.Type;
                     if (type == PetTypeExtensions.Eidolon && pet.Entity.Stats.SkillPerception.BaseValue > statValue)
                     {
-                        statValue = pet.Entity.Stats.SkillPerception.BaseValue;
+                        statValue = pet.Entity.Stats.SkillPerception.ModifiedValue;
                     }
                 }
             }
 
-            Owner.Stats.GetStat(Stat).BaseValue = statValue;
+            Owner.Stats.GetStat(Stat).ModifiedValue = statValue;
             //Owner.Stats.GetStat(Stat).(statValue, Runtime, Descriptor);
         }
 
