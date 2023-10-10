@@ -69,7 +69,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                         .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
                         .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
                         .SetRanks(1)
-                        .SetGroups(FeatureGroupExtension.EvolutionTransmogrifiable)
+                        .SetGroups(FeatureGroupExtension.EvolutionTransmogrifiable, FeatureGroupExtension.EvolutionSizeChangeGroup)
                         .AddChangeUnitSize(size: enumValue, type: ChangeUnitSize.ChangeType.Value);
 
                     if (diff > 0)
@@ -94,7 +94,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._4_Point_Evolu
                     var eidolonOriginalFeatureGuid = GetGUID.GUIDByName(eidolonOriginalFeatureName);
                     FeatureConfigurator.New(eidolonOriginalFeatureName, eidolonOriginalFeatureGuid)
                         .CopyFrom(eidolonOriginalFeatureGuid, c => c is not ChangeUnitSize)
-                        .SetGroups(FeatureGroupExtension.EvolutionBase)
+                        .SetGroups(FeatureGroupExtension.EvolutionBase, FeatureGroupExtension.EvolutionSizeChangeGroup)
                         .ConfigureWithLogging();
 
                     blueprintUnitFactReferences[arrayInt] = BlueprintTool.GetRef<BlueprintFeatureReference>(GetGUID.GUIDByName(eidolonFeatureName));

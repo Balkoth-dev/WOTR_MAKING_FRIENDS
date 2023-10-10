@@ -3442,5 +3442,9 @@
   {
     "name": "EidolonAddSpellTransmogrifyFeature",
     "guid": "f7b0a6a3-b687-418c-95ea-bc0dba072e87"
+  },
+  {
+    "name": "EvolvedSummonsFeature",
+    "guid": "773dcb33-afbd-4417-af89-c9038c12b0a3"
   }
 ]

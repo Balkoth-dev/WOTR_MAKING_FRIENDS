@@ -17,5 +17,6 @@ namespace WOTR_MAKING_FRIENDS.Enums
         public const FeatureGroup EvolutionBase = (FeatureGroup)111428;
         public const FeatureGroup EidolonAnimalCompanion = (FeatureGroup)123325;
         public const FeatureGroup SummonerFeatureGroup = (FeatureGroup)7755223;
+        public const FeatureGroup EvolutionSizeChangeGroup = (FeatureGroup)551234;
     }
 }

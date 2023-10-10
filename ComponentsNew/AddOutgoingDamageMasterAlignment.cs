@@ -3,16 +3,20 @@ using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Blueprints.JsonSystem;
+using Kingmaker.Blueprints.Root;
+using Kingmaker.EntitySystem.Entities;
 using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
 using Kingmaker.Items;
 using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules.Damage;
 using Kingmaker.UnitLogic;
+using Kingmaker.UnitLogic.Buffs;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.Utility;
 using UnityEngine;
 using UnityEngine.Serialization;
+using static Kingmaker.UI.CanvasScalerWorkaround;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
 {
@@ -113,8 +117,18 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public void ApplyProperties([CanBeNull] PhysicalDamage damage)
         {
-            if (base.Owner.Progression.CharacterLevel < levelRequirement)
-            { return; }
+            UnitEntityData caster = base.Owner.Descriptor.GetFact(BlueprintRoot.Instance.SystemMechanics.SummonedUnitBuff) is Buff fact ? fact.Context.MaybeCaster : null;
+            if (caster != null)
+            {
+                if(caster.Progression.CharacterLevel < levelRequirement)
+                {
+                    return;
+                }
+            }
+            else if (base.Owner.Progression.CharacterLevel < levelRequirement)
+            {
+                return; 
+            }
             if (damage == null)
             {
                 return;
@@ -130,34 +144,81 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 damage.AddMaterial(Material);
             }
-
             if (AddForm)
             {
                 damage.AddForm(Form);
             }
 
             if (AddAlignment)
-            {
+            {               
                 if (MastersAlignment)
                 {
-                    if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Lawful))
+                    if (base.Owner.IsPet || base.Owner.IsReallyInFactPet)
                     {
-                        damage.AddAlignment(DamageAlignment.Lawful);
-                    }
+                        if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Lawful))
+                        {
+                            damage.AddAlignment(DamageAlignment.Lawful);
+                        }
 
-                    if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Chaotic))
-                    {
-                        damage.AddAlignment(DamageAlignment.Chaotic);
-                    }
+                        if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Chaotic))
+                        {
+                            damage.AddAlignment(DamageAlignment.Chaotic);
+                        }
 
-                    if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Good))
-                    {
-                        damage.AddAlignment(DamageAlignment.Good);
-                    }
+                        if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Good))
+                        {
+                            damage.AddAlignment(DamageAlignment.Good);
+                        }
 
-                    if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Evil))
+                        if (base.Owner.Master.Alignment.ValueRaw.HasComponent(AlignmentComponent.Evil))
+                        {
+                            damage.AddAlignment(DamageAlignment.Evil);
+                        }
+                    }
+                    else if(caster != null)
                     {
-                        damage.AddAlignment(DamageAlignment.Evil);
+                        Main.Log(caster.CharacterName);
+                        if (caster.Alignment.ValueRaw.HasComponent(AlignmentComponent.Lawful))
+                        {
+                            damage.AddAlignment(DamageAlignment.Lawful);
+                        }
+
+                        if (caster.Alignment.ValueRaw.HasComponent(AlignmentComponent.Chaotic))
+                        {
+                            damage.AddAlignment(DamageAlignment.Chaotic);
+                        }
+
+                        if (caster.Alignment.ValueRaw.HasComponent(AlignmentComponent.Good))
+                        {
+                            damage.AddAlignment(DamageAlignment.Good);
+                        }
+
+                        if (caster.Alignment.ValueRaw.HasComponent(AlignmentComponent.Evil))
+                        {
+                            damage.AddAlignment(DamageAlignment.Evil);
+                        }
+                    }
+                    else
+                    {
+                        if (base.Owner.Alignment.ValueRaw.HasComponent(AlignmentComponent.Lawful))
+                        {
+                            damage.AddAlignment(DamageAlignment.Lawful);
+                        }
+
+                        if (base.Owner.Alignment.ValueRaw.HasComponent(AlignmentComponent.Chaotic))
+                        {
+                            damage.AddAlignment(DamageAlignment.Chaotic);
+                        }
+
+                        if (base.Owner.Alignment.ValueRaw.HasComponent(AlignmentComponent.Good))
+                        {
+                            damage.AddAlignment(DamageAlignment.Good);
+                        }
+
+                        if (base.Owner.Alignment.ValueRaw.HasComponent(AlignmentComponent.Evil))
+                        {
+                            damage.AddAlignment(DamageAlignment.Evil);
+                        }
                     }
                 }
                 else

@@ -26,6 +26,7 @@ namespace WOTR_MAKING_FRIENDS.Features
             FeatureStartingEvolutions.Create();
             FeatureAspect.Create();
             FeatureAspectGreater.Create();
+            FeatureEvolvedSummons.Create();
         }
     }
 }

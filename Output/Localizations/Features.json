@@ -2486,5 +2486,13 @@
   {
     "Key": "wotr-making-friends.eidolonaddspelltransmogrifyfeature.description",
     "enGB": "EidolonAddSpellTransmogrifyFeature.Description"
+  },
+  {
+    "Key": "wotr-making-friends.evolvedsummonsfeature.name",
+    "enGB": "Evolved Summons"
+  },
+  {
+    "Key": "wotr-making-friends.evolvedsummonsfeature.description",
+    "enGB": "Whenever you summon any creature they share all evolutions that your eidolon has.\nNote: Summons will not change size, but will share the stat increases from the Large evolutions."
   }
 ]

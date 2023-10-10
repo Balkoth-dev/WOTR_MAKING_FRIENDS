@@ -46,7 +46,7 @@ namespace WOTR_MAKING_FRIENDS
         public static void Log(string msg = null, Exception e = null)
         {
 #if DEBUG
-            //modInfo.Logger.Log(msg != null && e != null ? $"{msg}, Exception: {e}" : msg != null ? $"{msg}" : e != null ? $"Exception: {e}" : "");
+            modInfo.Logger.Log(msg != null && e != null ? $"{msg}, Exception: {e}" : msg != null ? $"{msg}" : e != null ? $"Exception: {e}" : "");
 #endif
         }
 
