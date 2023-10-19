@@ -104,7 +104,8 @@ namespace WOTR_MAKING_FRIENDS.Settings
             {
                 sb.AddImage(AssetLoader.LoadInternal("Settings", "makingfriends.png", 200, 200), 200);
 
-                CreateSubHeader("hotkeysubheader");
+                CreateSubHeader("rulechangesheader");
+                CreateToggle("sharespellspatch", true);
                 ModMenu.ModMenu.AddSettings(sb);
             }
             private static void CreateSubHeader(string key)

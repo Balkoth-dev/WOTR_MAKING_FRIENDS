@@ -14,5 +14,17 @@
   {
     "Key": "wotr-making-friends.settings.reloadsetting.longdescription",
     "enGB": ""
+  },
+  {
+    "Key": "wotr-making-friends.settings.rulechangesheader",
+    "enGB": "(Optional) Rule Changes"
+  },
+  {
+    "Key": "wotr-making-friends.settings.sharespellspatch.description",
+    "enGB": "Enable Share Spells Eidolon"
+  },
+  {
+    "Key": "wotr-making-friends.settings.sharespellspatch.longdescription",
+    "enGB": "A summoner can cast spells from the summoner spellbook with a range of personal on their eidolon."
   }
 ]
