@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Designers.Mechanics.Facts;
+using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Localization;
 using UnityEngine;
 using WOTR_MAKING_FRIENDS.Enums;
@@ -38,7 +39,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
                     .SetIcon(IClass.Icon)
                     .SetRanks(IClass.Ranks)
                     .SetGroups(IClass.featureGroup)
-                    .AddModifyD20(rule: RuleType.SavingThrow, savingThrowType: InnerSavingThrowType.Fortitude, replace: true, rollResult: ContextValues.Constant(20))
+                    .AddModifyD20(rule: RuleType.SavingThrow, savingThrowType: Kingmaker.RuleSystem.Rules.FlaggedSavingThrowType.Fortitude, replace: true, rollResult: ContextValues.Constant(20))
                     .ConfigureWithLogging();
         }
     }

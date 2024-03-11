@@ -58,8 +58,12 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                                                             .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
                                                             .SetHideInUI(false)
                                                             .SetHideInCharacterSheetAndLevelUp(false)
+                                                            .SetHideNotAvailibleInUI(false)
+                                                            .SetReapplyOnLevelUp(false)
+                                                            .SetAllowNonContextActions(false)
                                                             .SetGroups(FeatureGroupExtension.EidolonAnimalCompanion)
                                                             .SetRanks(1)
+                                                            .SetMode(Kingmaker.Blueprints.Classes.Selection.SelectionMode.Default)
                                                             .SetIsClassFeature(true)
                                                             .ConfigureWithLogging();
 
@@ -95,7 +99,6 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                     var feature = FeatureConfigurator.New(eidolonFeatureName, eidolonFeatureGuid)
                                                         .SetDisplayName(Helpers.ObtainString(eidolonFeatureName + ".Name"))
                                                         .SetDescription(Helpers.ObtainString(eidolonFeatureName + ".Description"))
-                                                        .AddPrerequisitePet(false, GroupType.All, false, true, PetTypeExtensions.Eidolon)
                                                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                                                         .SetRanks(1)
                                                         .SetReapplyOnLevelUp(true)

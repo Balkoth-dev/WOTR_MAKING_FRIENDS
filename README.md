@@ -27,7 +27,8 @@ https://github.com/WittleWolfie/ModMenu
 ```
 ## Change Log
 ```
-
+* 03/10/2024 (0.1.8) Fixed equipment slots being locked even if you have the arms evolution.
+* 10/21/2023 (0.1.5) @ifarmpandas Addition of share spells 
 ```
 
 ## Known Issues
@@ -36,7 +37,7 @@ https://github.com/WittleWolfie/ModMenu
 * If a character has more than 2 companions (such as an Eidolon+Aivu+Animal Companion), the UI breaks.
 * If a party has more than 13 units in total, the game breaks.
 * Attack animations won't play for certain body-types. This is because they don't have an animation for that attack, but the attack will still happen.
-* Sometimes even if your Eidolon has arms the game will lock the equipment slots, reloading your game fixes this issue.
+* FIXED: Sometimes even if your Eidolon has arms the game will lock the equipment slots, reloading your game fixes this issue.
 * Bonded Senses doesn't refresh when the eidolon changes their perception ranks, reloading your game fixes this issue.
 * Some eidolons are either too big or don't show at all in the inventory screen.
 ```

@@ -13,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using WOTR_MAKING_FRIENDS.ComponentsNew;
+using WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolutions;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
 using static Kingmaker.Designers.Mechanics.Buffs.ChangeUnitSize;
@@ -137,16 +139,16 @@ namespace WOTR_MAKING_FRIENDS.Units
                             .AddClassLevels(null, BlueprintTool.GetRef<BlueprintCharacterClassReference>(GetGUID.GUIDByName("EidolonBaseClass")), null, 0, StatType.Unknown, null, StatType.Constitution, skills: new StatType[] { StatType.SkillPerception })
                             .AddEmptyHandWeaponOverride(weapon: ItemWeaponRefs.Unarmed1d3.Cast<BlueprintItemWeaponReference>().Reference)
                             .SetSkills(new BlueprintUnit.UnitSkills())
-                            .AddLockEquipmentSlot(slotType: SlotType.MainHand)
-                            .AddLockEquipmentSlot(slotType: SlotType.OffHand)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon1)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon2)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon3)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon4)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon5)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon6)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon7)
-                            .AddLockEquipmentSlot(slotType: SlotType.Weapon8);
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.MainHand; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.OffHand; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon1; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon2; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon3; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon4; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon5; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon6; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon7; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); })
+                            .AddComponent<LockEquipmentSlotFactException>(c => { c.m_SlotType = (LockEquipmentSlotFactException.SlotType)SlotType.Weapon8; c.m_Fact = BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionLimbsArmsFeature")); });
 
             if (eidolonUnit.eidolonBaseForm == EnumsEidolonBaseForm.Abberant)
             {

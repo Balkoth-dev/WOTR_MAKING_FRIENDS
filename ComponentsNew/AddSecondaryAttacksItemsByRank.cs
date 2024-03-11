@@ -29,7 +29,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 for (var l = 1; l <= limbCount; l++)
                 {
-                    base.Data.Added.Add(base.Owner.Body.AddAdditionalLimbItem(m_Weapon, isSecondary: true));
+                    base.Data.Added.Add(base.Owner.Body.AddAdditionalLimbItem(m_Weapon, this.Fact, isSecondary: true));
                 }
             }
             base.Owner.Body.FixAdditionalLimbs();
