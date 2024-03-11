@@ -29,7 +29,10 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             {
                 if (base.Target.Unit.Progression.Features.HasFact(originalBlueprints[i]))
                 {
-                    features.AddFeature(newBlueprints[i]);
+                    if (!base.Target.Unit.Progression.Features.HasFact(newBlueprints[i]))
+                    { 
+                        features.AddFeature(newBlueprints[i]); 
+                    }
                 }
             }
 
@@ -40,7 +43,10 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
                 {
                     if (base.AbilityContext.Caster.Progression.Features.HasFact(originalBlueprints[i]))
                     {
-                        casterFeatures.AddFeature(newBlueprints[i]);
+                        if (!base.Target.Unit.Progression.Features.HasFact(newBlueprints[i]))
+                        {
+                            casterFeatures.AddFeature(newBlueprints[i]);
+                        }
                     }
                 }
             }
