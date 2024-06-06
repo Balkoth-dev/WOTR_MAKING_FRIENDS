@@ -3446,5 +3446,17 @@
   {
     "name": "EvolvedSummonsFeature",
     "guid": "773dcb33-afbd-4417-af89-c9038c12b0a3"
+  },
+  {
+    "name": "EvolutionBiteBiteFeature",
+    "guid": "a60a4406-c3cb-4cc0-bfa2-0d7952456c77"
+  },
+  {
+    "name": "EvolutionBiteActivatableAbility",
+    "guid": "d0f3774c-b32b-4d1d-8f7c-f47f235e38a8"
+  },
+  {
+    "name": "EvolutionBiteBuff",
+    "guid": "7d2d12c0-2a9f-4f64-886e-2010ccda27f7"
   }
 ]

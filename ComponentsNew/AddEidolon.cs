@@ -299,17 +299,6 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
             _this.Progression.Features.AddFeature(UpgradeFeature);
         }
 
-        public override void ApplyValidation(ValidationContext context, int parentIndex)
-        {
-            base.ApplyValidation(context, parentIndex);
-            if ((bool)(SimpleBlueprint)Pet)
-            {
-                return;
-            }
-
-            context.AddError("Pet is not specified");
-        }
-
         public class DeactivateAction : ContextData<AddEidolon.DeactivateAction>
         {
             public Action<UnitEntityData> Action { get; private set; }

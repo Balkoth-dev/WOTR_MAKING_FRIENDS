@@ -5,6 +5,7 @@ using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Items.Slots;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.FactLogic;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace WOTR_MAKING_FRIENDS.ComponentsNew
@@ -15,7 +16,7 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
     public class LockEquipmentSlotFactException : UnitFactComponentDelegate<LockEquipmentSlotData>
     {
         //Acts as LockEquipmentSlot but adds an exception if the unit has a certain fact
-        public BlueprintUnitFactReference m_Fact;
+        public List<BlueprintUnitFactReference> m_Fact;
         public enum SlotType
         {
             Armor,
@@ -52,9 +53,12 @@ namespace WOTR_MAKING_FRIENDS.ComponentsNew
 
         public override void OnTurnOn()
         {
-            if(base.Owner.Progression.Features.HasFact(m_Fact))
+            foreach (var f in m_Fact)
             {
-                return;
+                if (base.Owner.Progression.Features.HasFact(f))
+                {
+                    return;
+                }
             }
             base.Data.Slot = GetSlot();
             if (base.Data.Slot != null)
