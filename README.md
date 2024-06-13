@@ -31,6 +31,8 @@ https://github.com/WittleWolfie/ModMenu
 * 03/10/2024 (0.1.9) Fixed Transmogrify to no longer give additional attacks.
 * 03/10/2024 (0.1.9) Fixed equipment slots being locked even if you have the arms evolution.
 * 10/21/2023 (0.1.8) @ifarmpandas Addition of share spells 
+* 06/06/2024 (0.2.0) Bite attack now toggleable as a primary or secondary attack
+* 06/06/2024 (0.2.0) 1 evolution point natural attacks will now properly override empty slots. 
 ```
 
 ## Known Issues

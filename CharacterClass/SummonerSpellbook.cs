@@ -60,7 +60,7 @@ namespace WOTR_MAKING_FRIENDS.CharacterClass
         {
             SpellsTableConfigurator.New(IClass.SummonerSpellbook + ".SpellKnownTable", GetGUID.GUIDByName("SummonerSpellbookSpellsKnown"))
                 .SetLevels(new SpellsLevelEntry[] {
-                        CreateSpellLevelEntry(6),
+                        CreateSpellLevelEntry(0),
                         CreateSpellLevelEntry(0,2),
                         CreateSpellLevelEntry(0,3),
                         CreateSpellLevelEntry(0,4),
