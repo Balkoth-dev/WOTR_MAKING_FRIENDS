@@ -37,8 +37,9 @@ namespace WOTR_MAKING_FRIENDS.Utilities
     public static class Helpers
     {
         public static ModEntry ModEntry;
-        private static Dictionary<string, LocalizedString> textToLocalizedString = new Dictionary<string, LocalizedString>();
         public static readonly Dictionary<BlueprintGuid, SimpleBlueprint> ModBlueprints = new Dictionary<BlueprintGuid, SimpleBlueprint>();
+        private static Dictionary<string, LocalizedString> textToLocalizedString = new Dictionary<string, LocalizedString>();
+        private static readonly Regex rgx = new("[^a-z0-9-.]");
 
         private static readonly Dictionary<string, Guid> GuidsByName = new();
 
@@ -63,7 +64,6 @@ namespace WOTR_MAKING_FRIENDS.Utilities
         public static LocalizedString ObtainString(string name, string seperator = ".")
         {
             string partialKey = Settings.Settings.PartialKey;
-            Regex rgx = new("[^a-z0-9-.]");
             string key = rgx.Replace(partialKey.ToLower() + seperator + name.ToLower(), "");
             try
             {
