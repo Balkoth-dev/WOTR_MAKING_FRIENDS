@@ -35,8 +35,8 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.BaseFeatures
                 amount++;
 
                 FeatureConfigurator.New("EvolutionCost" + amount + "Feature", GetGUID.GUIDByName("EvolutionCost" + amount + "Feature"))
-                        .SetDisplayName(Helpers.ObtainString("EvolutionCost" + amount + "Feature" + ".Name"))
-                        .SetDescription(Helpers.ObtainString("EvolutionCost" + amount + "Feature" + ".Description"))
+                        .SetDisplayName(Helpers.ObtainString("EvolutionCost" + amount + "Feature.Name"))
+                        .SetDescription(Helpers.ObtainString("EvolutionCost" + amount + "Feature.Description"))
                         .SetIcon(AbilityRefs.ElementalBodyIAir.Reference.Get().m_Icon)
                         .SetRanks(100)
                         .SetGroups(FeatureGroupExtension.EvolutionTransmogrifiable)

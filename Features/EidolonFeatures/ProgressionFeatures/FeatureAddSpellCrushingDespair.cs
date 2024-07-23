@@ -18,7 +18,7 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.ProgressionFeatures
     {
         public static class IClass
         {
-            internal static string ProgressionFeature = "Eidolon" + "AddSpellCrushingDespair";
+            internal static string ProgressionFeature = "EidolonAddSpellCrushingDespair";
             internal static string Feature = ProgressionFeature + "Feature";
             internal static string Guid = GetGUID.GUIDByName(Feature);
             internal static LocalizedString Name = Helpers.ObtainString(Feature + ".Name");
