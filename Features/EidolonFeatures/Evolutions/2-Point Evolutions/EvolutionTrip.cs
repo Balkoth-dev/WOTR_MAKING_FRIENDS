@@ -56,7 +56,9 @@ namespace WOTR_MAKING_FRIENDS.Features.EidolonFeatures.Evolutions._2_Point_Evolu
                     c.m_Facts = new BlueprintUnitFactReference[]
                     {
                         BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionBiteFeature")),
+                        BlueprintTool.GetRef<BlueprintUnitFactReference>(GetGUID.GUIDByName("EvolutionBiteBaseFeature"))
                     };
+                    c.NeedsAll = false;
                 })
                 .AddComponent<AbilityCasterHasNoFacts>(c =>
                 {

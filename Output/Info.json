@@ -6,10 +6,10 @@
   "GameVersion": "1.4.0",
   "HomePage": "https://github.com/Balkoth-dev/WOTR_MAKING_FRIENDS",
   "Id": "WOTR_MAKING_FRIENDS",
-  "ManagerVersion": "0.23.0",
+  "ManagerVersion": "0.27.14.0",
   "Repository": "",
   "Requirements": [
     "ModMenu-1.3.0"
   ],
-  "Version": "0.2.1"
+  "Version": "0.2.2"
 }

@@ -29,7 +29,6 @@ namespace WOTR_MAKING_FRIENDS.Settings
     {
         public static readonly string RootKey = "wotr-making-friends.settings";
         public static readonly string PartialKey = "wotr-making-friends";
-        private static readonly Regex rgx = new("[^a-z0-9-.]");
         public static T GetSetting<T>(string key)
         {
             try
@@ -44,7 +43,8 @@ namespace WOTR_MAKING_FRIENDS.Settings
         }
         private static string GetKey(string partialKey)
         {
-            partialKey = rgx.Replace(partialKey.ToLower(), "");
+         Regex rgx = new("[^a-z0-9-.]");
+        partialKey = rgx.Replace(partialKey.ToLower(), "");
             return $"{RootKey}.{partialKey}";
         }
     }
@@ -100,7 +100,6 @@ namespace WOTR_MAKING_FRIENDS.Settings
         {
             private static readonly string RootKey = Settings.RootKey;
             private static readonly SettingsBuilder sb = SettingsBuilder.New(RootKey, GetString("title"));
-            private static readonly Regex rgx = new("[^a-z0-9-.]");
             public static void Initialize()
             {
                 sb.AddImage(AssetLoader.LoadInternal("Settings", "makingfriends.png", 200, 200), 200);
@@ -161,6 +160,7 @@ namespace WOTR_MAKING_FRIENDS.Settings
             }
             private static string GetKey(string partialKey)
             {
+                Regex rgx = new("[^a-z0-9-.]");
                 partialKey = rgx.Replace(partialKey.ToLower(), "");
                 return $"{RootKey}.{partialKey}";
             }
