@@ -43,8 +43,8 @@ namespace WOTR_MAKING_FRIENDS.Settings
         }
         private static string GetKey(string partialKey)
         {
-            Regex rgx = new("[^a-z0-9-.]");
-            partialKey = rgx.Replace(partialKey.ToLower(), "");
+         Regex rgx = new("[^a-z0-9-.]");
+        partialKey = rgx.Replace(partialKey.ToLower(), "");
             return $"{RootKey}.{partialKey}";
         }
     }
