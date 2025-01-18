@@ -25,15 +25,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
         private static Dictionary<string, int> infernalHealingSpellListComponents = new()
         {
-            { CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.MagusClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 1 },
-            { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 1 },
+            { SpellListRefs.WizardSpellList.Reference.Guid.ToString(), 1 },
+            { SpellListRefs.BloodragerSpellList.Reference.Guid.ToString(), 1 },
+            { SpellListRefs.ClericSpellList.Reference.Guid.ToString(), 1 },
+            { SpellListRefs.MagusSpellList.Reference.Guid.ToString(), 1 },
+            { SpellListRefs.WarpriestSpelllist.Reference.Guid.ToString(), 1 },
+            { SpellListRefs.WitchSpellList.Reference.Guid.ToString(), 1 },
             { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 1 }
         };
         private static Dictionary<string, int> greaterInfernalHealingSpellListComponents = new()

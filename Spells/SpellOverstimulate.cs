@@ -25,18 +25,16 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
 
         private static Dictionary<string, int> overstimulateSpellListComponents = new()
         {
-            { CharacterClassRefs.AlchemistClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.BardClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.DruidClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.HunterClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.RangerClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.ShamanClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.SkaldClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 2 },
-            { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.AlchemistSpellList.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.BardSpellList.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.BloodragerSpellList.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.ClericSpellList.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.DruidSpellList.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.HunterSpelllist.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.RangerSpellList.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.ShamanSpelllist.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.WarpriestSpelllist.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.WitchSpellList.Reference.Guid.ToString(), 2 },
             { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 2 }
         };
         public static void CreateOverstimulate()

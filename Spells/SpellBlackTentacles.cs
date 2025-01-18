@@ -35,12 +35,10 @@ namespace WOTR_MAKING_FRIENDS.Spells
 
         private static Dictionary<string, int> spellListComponents = new()
         {
-            { CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.BloodragerClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.MagusClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.WizardSpellList.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.BloodragerSpellList.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.MagusSpellList.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.WitchSpellList.Reference.Guid.ToString(), 4 },
             { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 }
         };
         public static void CreateBlackTentaclesSpell()
