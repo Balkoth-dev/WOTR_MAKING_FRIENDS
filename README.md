@@ -33,6 +33,9 @@ https://github.com/WittleWolfie/ModMenu
 * 10/21/2023 (0.1.8) @ifarmpandas Addition of share spells 
 * 06/06/2024 (0.2.1) Bite attack now toggleable as a primary or secondary attack
 * 06/06/2024 (0.2.1) 1 evolution point natural attacks will now properly override empty slots. 
+* 01/18/2025 (0.2.4) Fixed spell lists being added to other classes.
+* 01/18/2025 (0.2.4) TTT Compatability.
+* 01/18/2025 (0.2.4) Fixed bite attack to properly work with tripping.
 ```
 
 ## Known Issues
