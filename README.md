@@ -27,6 +27,9 @@ https://github.com/WittleWolfie/ModMenu
 ```
 ## Change Log
 ```
+* 01/18/2025 (0.2.4) Fixed spell lists being added to other classes.
+* 01/18/2025 (0.2.4) TTT Compatability.
+* 01/18/2025 (0.2.4) Fixed bite attack to properly work with tripping.
 * 03/10/2024 (0.1.9) Added localization for the Pincers evolution.
 * 03/10/2024 (0.1.9) Fixed Transmogrify to no longer give additional attacks.
 * 03/10/2024 (0.1.9) Fixed equipment slots being locked even if you have the arms evolution.
