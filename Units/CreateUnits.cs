@@ -77,6 +77,7 @@ namespace WOTR_MAKING_FRIENDS.Units
                         .SetWisdom(newUnit.wisdom ?? copiedUnit.Wisdom)
                         .SetCharisma(newUnit.charisma ?? copiedUnit.Charisma)
                         .SetSize(newUnit.size ?? copiedUnit.Size)
+                        .SetStartingInventory(startingInventory: [])
                         .SetFaction(FactionRefs.Neutrals.Cast<BlueprintFactionReference>().Reference);
 
                     if (newUnit.isSummon)

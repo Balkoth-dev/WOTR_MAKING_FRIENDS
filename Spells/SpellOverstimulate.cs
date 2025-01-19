@@ -34,7 +34,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
             { SpellListRefs.RangerSpellList.Reference.Guid.ToString(), 2 },
             { SpellListRefs.ShamanSpelllist.Reference.Guid.ToString(), 2 },
             { SpellListRefs.WarpriestSpelllist.Reference.Guid.ToString(), 2 },
-            { SpellListRefs.WitchSpellList.Reference.Guid.ToString(), 2 },
+            { SpellListRefs.WitchSpellList.Reference.Guid.ToString(), 2 }, 
             { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 2 }
         };
         public static void CreateOverstimulate()

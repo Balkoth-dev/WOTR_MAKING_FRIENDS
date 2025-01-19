@@ -3,9 +3,11 @@ using BlueprintCore.Actions.Builder.ContextEx;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
+using BlueprintCore.Utils.Types;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Localization;
+using Kingmaker.UnitLogic.Mechanics;
 using System.Collections.Generic;
 using WOTR_MAKING_FRIENDS.GUIDs;
 using WOTR_MAKING_FRIENDS.Utilities;
@@ -35,14 +37,12 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
         };
         private static Dictionary<string, int> greaterInfernalHealingSpellListComponents = new()
         {
-            { CharacterClassRefs.ArcanistClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.ClericClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.MagusClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.OracleClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.SorcererClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.WarpriestClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.WitchClass.Reference.Guid.ToString(), 4 },
-            { CharacterClassRefs.WizardClass.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.WizardSpellList.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.BloodragerSpellList.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.ClericSpellList.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.MagusSpellList.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.WarpriestSpelllist.Reference.Guid.ToString(), 4 },
+            { SpellListRefs.WitchSpellList.Reference.Guid.ToString(), 4 },
             { GetGUID.GUIDByName("SummonerSpellbookSpellList"), 4 }
         };
         public static void CreateInfernalHealing()
@@ -55,7 +55,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .AddSpellComponent(SpellSchool.Conjuration)
                 .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
-                .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing1.Cast<BlueprintBuffReference>().Reference, 60)
+                .ApplyBuff(BuffRefs.FastHealing1.Cast<BlueprintBuffReference>().Reference,ContextDuration.Fixed(1,DurationRate.Minutes))
                 .Build()
             );
 
@@ -78,7 +78,7 @@ namespace WOTR_MAKING_FRIENDS.Spells.Summoning
                 .AddSpellComponent(SpellSchool.Conjuration)
                 .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
-                .ApplyBuffWithDurationSeconds(BuffRefs.FastHealing4.Cast<BlueprintBuffReference>().Reference, 60)
+                .ApplyBuff(BuffRefs.FastHealing4.Cast<BlueprintBuffReference>().Reference, ContextDuration.Fixed(1, DurationRate.Minutes))
                 .Build()
             );
 
